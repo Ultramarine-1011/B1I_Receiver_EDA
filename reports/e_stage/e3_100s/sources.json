@@ -1,0 +1,108 @@
+{
+  "backpressure": false,
+  "driver": "direct clock RTL; IF2/record transport only",
+  "sources": [
+    {
+      "sha256": "A178180332E9FEC6E5E5E6EC38255C730EA68BE4C2206166C1CF03F95DAC2303",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\receiver_contract_pkg.sv"
+    },
+    {
+      "sha256": "D27960E9131C00BDA9A66AF674D0FA10945B0C0CDC98A460A4085D579CE78C3E",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\acquisition_pcps.sv"
+    },
+    {
+      "sha256": "CB616C4AC71990B32E14B084717DAF0EC57865DF0DC8F2C509BC71A7454E94EC",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\acquisition_refine.sv"
+    },
+    {
+      "sha256": "A8D9067D0B3445710622E33EC71ABD9ADEF0FC4812942A8A6A45950C020F0667",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\acquisition_serial.sv"
+    },
+    {
+      "sha256": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\b1i_prn_gen.sv"
+    },
+    {
+      "sha256": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\carrier_nco_mixer.sv"
+    },
+    {
+      "sha256": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\code_nco.sv"
+    },
+    {
+      "sha256": "1EC33691E6830A2CBB4B3AC2E47D5E6BD5665DA1B738CFEDDD7FB71A409E93AF",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\d1_word_sync.sv"
+    },
+    {
+      "sha256": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\epl_correlator.sv"
+    },
+    {
+      "sha256": "6EE4DD81C770D8072C69C64148D519DEAEBF4EA3C16B69B0A23F70191B20E388",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\fft4096_serial.sv"
+    },
+    {
+      "sha256": "6FE9233F4B2B769A0A40F4C79AABA5CCF77FA0C6259D8498984BA5B7A50A90A5",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\navigation_d1.sv"
+    },
+    {
+      "sha256": "0520DAED58C8C06D0107292BBEF81918C29F52BD2564D469B0AC74AFCD25E454",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\nh20_sync.sv"
+    },
+    {
+      "sha256": "6B6FDAC0971385DF4EB25C71275D8F74A334825B4115F5A2893EAE9D7F2D6D3F",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\receiver_channel.sv"
+    },
+    {
+      "sha256": "5EFCEA15BD5CA468BE8B92FB35AC833E40AF7D02555E824AB01E852333C4B816",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\receiver_multichannel.sv"
+    },
+    {
+      "sha256": "0DA2427739AE689F5D84C8DE47BC2DE02B92924D3DE96AC45EEA2E0B5A1D72FE",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\receiver_single.sv"
+    },
+    {
+      "sha256": "86085A362B15BF80694DEC2DB55CB4FE6E06C0C2E206987CDBAF17AE7FC7DA5C",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\stream_unpacker.sv"
+    },
+    {
+      "sha256": "1EA14352603645863977503BD01776888D49D4753CD8CB946837D54E07891C83",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\student_receiver_core.sv"
+    },
+    {
+      "sha256": "A8D22CD15752E1305908D1769434C6C78ED9460093062A4AD1D6FB81BB74F9CF",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\tracking_channel_minimal.sv"
+    },
+    {
+      "sha256": "34FE7AB1AB76F65542817E37E25AB8679D2A07C7202B94FC7D0A28FB2C20AB0B",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\tracking_frontend_spaced.sv"
+    },
+    {
+      "sha256": "5F1EBDCD6869FA63AF6E14B223155F4F7677DD51348780D7C035850B15C18BD4",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\tracking_frontend.sv"
+    },
+    {
+      "sha256": "E173FD4EA453C040049797F72D319A811532E71A0D04C981F8A3ADABCEB16A94",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\tracking_record_framer.sv"
+    },
+    {
+      "sha256": "B7E8595471E7EBC01DE0B0476D48BF5B48D5C27931091690AE6EDD56679A7D0C",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\carrier_quarter_lut.svh"
+    },
+    {
+      "sha256": "0356A896D3A7B5CA543AE0C129F0EDB234BBA9E7BD2721E24BD870FA34D102ED",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rom\\fft_cos_q30.mem"
+    },
+    {
+      "sha256": "C5F0D413C3D1C0F8871BBE3F7D7D2BA2F314456092A4F70390586ED5981586F8",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rom\\fft_sin_q30.mem"
+    },
+    {
+      "sha256": "92BA5ABBACEA55673A22F754736FAB1657C16F59A96378DCE93FAF1680A9FF46",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\scripts\\receiver_fast.cpp"
+    }
+  ],
+  "duration": 100.0,
+  "timestamp_utc": "2026-10-13T14:44:46.9612736Z"
+}

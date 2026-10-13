@@ -1,17 +1,13 @@
 # CURRENT STATUS
 
-更新时间：2026-10-13 22:52（Asia/Singapore）。状态：E0_COMPLETE / E1_COMPLETE；E2实收单星字已核对，最终四星边界时间版本验证中；E3_100S_RUNNING；E4未完成。长期目标未完成。
+更新时间：2026-10-13 23:21（Asia/Singapore）。状态：E0–E4_COMPLETE；教师公开100秒最低端到端功能与Route A定位均实际PASS。当前目标完成后停止，不自动扩展。
 
-当前main最近已推送eb0ca7e；E1/E2/E3后续实现待阶段提交。教师公共文件未编辑；scenario.if2仍409200000字节且Git忽略，无VMware/SSH/EDA后端访问。
+最终交付：student_release/student_release/output/receiver_records.bin，12830112字节，SHA256 c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501。输入1636800000样本、最终唯一end且错误flags=0。IF原文件409200000字节未上传/进入Git。
 
-已实际通过：E0三例合成捕获→移交→跟踪、decoder浮点评分、短/整窗/尾字与backpressure；最新边界framer版 -Task e0退出0，最大码误差0.07617chip、尾频差<0.009Hz。NH/D1旧9字、两例导航封装/双帧确认/时间锚/失锁清除、旧两例1s跟踪均最新源码回归0，reports/e_stage/final_modules。
+PRN8/11/13/21由RTL自主搜索/精修分配，真实跟踪每星99995 Prompt、尾锁1；每星140条导航字及81条有效共同观测。560个NAV字与独立教师Prompt解码逐项一致；原始check_records/self_check均退出0。Route A退出0，4星历/99个实际定位历元（1–99），中位位置纬29.99985499°、经110.00015265°、高119.536m。没有隐藏位置真值，不宣称实际定位精度。
 
-E1：真实1s/2s重复自主检出PRN8，尾锁均1，FLL只从Prompt，软件答案不进DUT。FFT 12288输出位精确，PCPS全32PRN/4096首格与32候选integer golden PASS。原PLL0锁定FAIL、初版FFT精度、CORDIC保留字编译及WSL并发故障证据保留。
+全部最终证据与复现命令：reports/e_stage/final/FINAL_REPORT.md、check_records.log、self_check.log、independent_score.log、route_a.log、delivery_summary.json。100s运行2038.942秒；源/ROM/driver与当前哈希匹配，e3_100s/final_source_audit.json。教师公开文件与原9.28基础RTL哈希不变。模块/集成回归证据e0_boundary与final_modules；历史失败保留。
 
-E2：首版真实20s单星生成10条有效type2，SFID3/SOW261012及全部raw/information/word_number与教师prompt_d1逐条一致。后续补充了bit元数据关联并将type1从首时刻修正为本地码周期结束边界，匹配教师自动软件导航的时间约定；最新真实长场景正在验证，不能将旧20s日志混作最终源PASS。
+工程仅Windows + WSL2 Verilator/Python，不访问VMware/SSH/EDA后端。详细BIN/JSONL/CSV留本地且忽略，轻量源码/报告/日志/manifest分阶段Git提交与正常推送；源码实现commit fe9fbfb，最终验收由本次最后提交固化。工作区不覆盖用户修改，不强推。
 
-E3：默认四槽，RTL顺序搜索自主分配8/11/13/21（不预设身份）。真实2s原player/writer回归每星1995 Prompt，尾锁1.0，4路逐样本接受事件和公共ref一致，4条epoch1观测均measurement_valid=0，未编造导航。g++ -O3 1s333s；C++纯握手驱动1s228s，与原player/writer3984记录除cycle计数外逐bit一致，背压1s实际PASS。CPU不算捕获/解调答案。
-
-当前100s进程：scripts/run_fast_verilator.ps1 -DurationSeconds 100 -EvidenceDirectory reports/e_stage/e3_100s；shell session 36414。截至本状态处理约9s。日志reports/e_stage/e3_100s/run.log，源/ROM/driver hashes sources.json；最终BIN在student_release/student_release/output/receiver_records.bin，完成前为部分数据。正常段约18.2s墙钟/1s信号，预计总约34分钟（估算，不是完成时间）。禁止在该进程运行时另一个真实输入任务覆盖其output BIN。
-
-唯一下一可执行任务：读取100s run.log进度，完成后先原始check_records/self_check，再model/receiver_multi_score.py --require-navigation与原始route_a_position.py，分别记录退出码；原始self_check尚未PASS。
+唯一下一可执行任务：需要演示复现时运行 .\scripts\validate_receiver_delivery.ps1；目标已完成，此处仅是复验入口。

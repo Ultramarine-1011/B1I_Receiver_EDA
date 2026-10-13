@@ -1,0 +1,128 @@
+[
+  {
+    "path": "student_release\\student_release\\README.md",
+    "expected": "C355F85695278B4BB744339D886047152BA404AB2134DFB31E3F2A7A0BCB5D0E",
+    "actual": "C355F85695278B4BB744339D886047152BA404AB2134DFB31E3F2A7A0BCB5D0E",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\input\\input_contract.json",
+    "expected": "6F6516485A22C7B76CD7CD24DA9F1B8A8FD84214419C649ED9CE738E080E97A5",
+    "actual": "6F6516485A22C7B76CD7CD24DA9F1B8A8FD84214419C649ED9CE738E080E97A5",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\input\\scenario.if2",
+    "expected": "2C47D1533FA54316952496FFB7905742C34A989B0A6276B867FE69566C5027DA",
+    "actual": "2C47D1533FA54316952496FFB7905742C34A989B0A6276B867FE69566C5027DA",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\interface\\receiver_input_if.sv",
+    "expected": "7CA32668F62FBE016DFE311D3576CD8CCB2FB05B91D03AA8A4CA1499AB4698B1",
+    "actual": "7CA32668F62FBE016DFE311D3576CD8CCB2FB05B91D03AA8A4CA1499AB4698B1",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\scripts\\run_student_sim.ps1",
+    "expected": "470B0019AE991B8F479BA46166E2F13451ADB3512CA862E46562B63128343224",
+    "actual": "470B0019AE991B8F479BA46166E2F13451ADB3512CA862E46562B63128343224",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\sim\\if2_file_player.sv",
+    "expected": "2F9086FE9E154F1CB9819093C9330B292C3E4CB6B52C17424B490CB305CB5CA1",
+    "actual": "2F9086FE9E154F1CB9819093C9330B292C3E4CB6B52C17424B490CB305CB5CA1",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\sim\\receiver_tb_template.sv",
+    "expected": "18171FF5F1B17ED72F018076EDA485AC9894EFCACD3239FC0986317DE383B2CA",
+    "actual": "18171FF5F1B17ED72F018076EDA485AC9894EFCACD3239FC0986317DE383B2CA",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\submission\\OUTPUT_REQUIREMENTS.md",
+    "expected": "F2FB46696957CE810A9B284099DC3E6CC08F4BD4E19ABF128A51CE72BC938C8E",
+    "actual": "F2FB46696957CE810A9B284099DC3E6CC08F4BD4E19ABF128A51CE72BC938C8E",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\submission\\RECORD_FORMAT.md",
+    "expected": "8A6A8ED08417BD4B65ECAFD62AC0D02A24460181F7D0BE256E613092234A83DC",
+    "actual": "8A6A8ED08417BD4B65ECAFD62AC0D02A24460181F7D0BE256E613092234A83DC",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\tools\\check_input_package.py",
+    "expected": "6622FA9C8769D49538161799530BB873D0CAA0FE6FB4E396CA576D3927B1C7C2",
+    "actual": "6622FA9C8769D49538161799530BB873D0CAA0FE6FB4E396CA576D3927B1C7C2",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\tools\\check_records.py",
+    "expected": "2DFE9A2ACF37ED5E9AEF997690C7D8510A319959FC5DBA795FC17A7DD31C3606",
+    "actual": "2DFE9A2ACF37ED5E9AEF997690C7D8510A319959FC5DBA795FC17A7DD31C3606",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\tools\\decode_records.py",
+    "expected": "1A81CB9FFA31775CA82A58D0184E9A4CAD362DCDC22C6B9D750BDBC0447E57F4",
+    "actual": "1A81CB9FFA31775CA82A58D0184E9A4CAD362DCDC22C6B9D750BDBC0447E57F4",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\tools\\prompt_d1.py",
+    "expected": "956B7AE51D6C79FA503BDB064F8C1383821564E7EE54CC670B86EB54D55D1771",
+    "actual": "956B7AE51D6C79FA503BDB064F8C1383821564E7EE54CC670B86EB54D55D1771",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\tools\\route_a_position.py",
+    "expected": "592B5B6A030B4317AA84F48C4695FB8852BFE0194E085E9368F1641AEC7FB4CB",
+    "actual": "592B5B6A030B4317AA84F48C4695FB8852BFE0194E085E9368F1641AEC7FB4CB",
+    "match": true
+  },
+  {
+    "path": "student_release\\student_release\\tools\\self_check.py",
+    "expected": "0799FA9A506C536984EF50CE406CBFEA6D57AA02DCD1410FEBF944F57F001DC2",
+    "actual": "0799FA9A506C536984EF50CE406CBFEA6D57AA02DCD1410FEBF944F57F001DC2",
+    "match": true
+  },
+  {
+    "path": "rtl\\b1i_prn_gen.sv",
+    "expected": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475",
+    "actual": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475",
+    "match": true
+  },
+  {
+    "path": "rtl\\code_nco.sv",
+    "expected": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1",
+    "actual": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1",
+    "match": true
+  },
+  {
+    "path": "rtl\\epl_correlator.sv",
+    "expected": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786",
+    "actual": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786",
+    "match": true
+  },
+  {
+    "path": "rtl\\carrier_nco_mixer.sv",
+    "expected": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC",
+    "actual": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC",
+    "match": true
+  },
+  {
+    "path": "rtl\\carrier_quarter_lut.svh",
+    "expected": "B7E8595471E7EBC01DE0B0476D48BF5B48D5C27931091690AE6EDD56679A7D0C",
+    "actual": "B7E8595471E7EBC01DE0B0476D48BF5B48D5C27931091690AE6EDD56679A7D0C",
+    "match": true
+  },
+  {
+    "path": "rtl\\tracking_frontend.sv",
+    "expected": "5F1EBDCD6869FA63AF6E14B223155F4F7677DD51348780D7C035850B15C18BD4",
+    "actual": "5F1EBDCD6869FA63AF6E14B223155F4F7677DD51348780D7C035850B15C18BD4",
+    "match": true
+  }
+]

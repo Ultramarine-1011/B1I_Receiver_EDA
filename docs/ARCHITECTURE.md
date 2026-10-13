@@ -1,6 +1,6 @@
 # GNSS 基带接收机架构基线
 
-> 2026-10-13：以下为9.28历史系统架构，当前状态只见根目录STATUS.md。近期采用教师student_release顶层/输入/输出契约，纯仿真无需SRAM；不开展12通道/后端。旧RTL算法保持，新增接口桥接见STREAM_BRIDGE.md。
+> 2026-10-13：以下为9.28历史系统架构，当前状态只见根目录STATUS.md。E阶段教师契约、四通道集成、记录时间、实际验证见[RECEIVER_INTEGRATION.md](RECEIVER_INTEGRATION.md)。纯仿真无需SRAM，不开展12通道/后端；原9.28基础RTL保留。
 
 本文整理 `plan.md` 已确定的系统架构，并链接后续有模型与回归证据的实现 baseline，方便 Codex/Cursor 继续工作。系统职责、接口、时间语义与状态所有权以 `plan.md` 为准；其中早期保留的算法/定点 TBD 以本文链接的后续设计决策和 [TBD.md](TBD.md) 的 resolved 记录了解当前状态，不应反复撤回已经验证的选择。当前开发范围与执行状态见根目录 [GOAL.md](../GOAL.md)，不能把完整系统框图视为本 milestone 的全部实现范围。
 

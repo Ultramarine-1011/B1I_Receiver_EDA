@@ -1,0 +1,60 @@
+{
+  "status": "MULTI_REAL_SCORE_PASS",
+  "samples": 1636800000,
+  "records": 400941,
+  "channels": [
+    {
+      "prn": 8,
+      "channel": 0,
+      "acquisition_lag": 12603,
+      "acquisition_fcw": 131200,
+      "prompts": 99995,
+      "locked": 99720,
+      "tail_lock": 1.0,
+      "tail_median_doppler_hz": 579.5611850917339,
+      "navigation": 140,
+      "observations": 99,
+      "valid_observations": 81
+    },
+    {
+      "prn": 11,
+      "channel": 1,
+      "acquisition_lag": 2024,
+      "acquisition_fcw": -747840,
+      "prompts": 99995,
+      "locked": 99783,
+      "tail_lock": 1.0,
+      "tail_median_doppler_hz": -2764.41428437829,
+      "navigation": 140,
+      "observations": 99,
+      "valid_observations": 81
+    },
+    {
+      "prn": 13,
+      "channel": 2,
+      "acquisition_lag": 1563,
+      "acquisition_fcw": 183680,
+      "prompts": 99995,
+      "locked": 99788,
+      "tail_lock": 1.0,
+      "tail_median_doppler_hz": 690.4490366578102,
+      "navigation": 140,
+      "observations": 99,
+      "valid_observations": 81
+    },
+    {
+      "prn": 21,
+      "channel": 3,
+      "acquisition_lag": 6099,
+      "acquisition_fcw": -406720,
+      "prompts": 99995,
+      "locked": 99768,
+      "tail_lock": 1.0,
+      "tail_median_doppler_hz": -1583.1044353544712,
+      "navigation": 140,
+      "observations": 99,
+      "valid_observations": 81
+    }
+  ],
+  "navigation_required": true
+}

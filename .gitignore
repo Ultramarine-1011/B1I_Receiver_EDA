@@ -18,3 +18,14 @@
 # Python caches
 __pycache__/
 *.py[cod]
+
+# Detailed derived run data stays local; lightweight logs/metrics/manifests commit.
+/reports/e_stage/**/receiver_records.bin
+/reports/e_stage/**/receiver_records.jsonl
+/reports/e_stage/**/*tracking_loop.csv
+/reports/e_stage/tracking_pull.csv
+/reports/e_stage/pcps_first_grid.csv
+/reports/e_stage/pcps_real_candidates*.csv
+/reports/e_stage/partial_position.jsonl
+/reports/e_stage/multi_tracking_loop.csv
+/reports/e_stage/real_tracking_loop.csv

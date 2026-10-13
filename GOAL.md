@@ -27,24 +27,26 @@
 
 ### E2：真实NH/D1导航恢复
 
-- [ ] 实际Prompt贯通nh20_sync/d1_word_sync/BCH；核对NH相位、位边界/极性、连续子帧确认及失步处理。
-- [ ] 从真实解码恢复subframe_id/SOW/字与导航时间，诚实维护locked/nh_valid/frame_valid/time_valid/bch_valid并输出type2。
-- [ ] 至少一星连续真实D1字和可靠时间可独立核对；prompt_d1.py仅诊断。
+- [x] 实际Prompt贯通nh20_sync/d1_word_sync/BCH；核对NH相位、位边界/极性、连续子帧确认及失步处理。
+- [x] 从真实解码恢复subframe_id/SOW/字与导航时间，诚实维护locked/nh_valid/frame_valid/time_valid/bch_valid并输出type2。
+- [x] 至少一星连续真实D1字和可靠时间可独立核对；prompt_d1.py仅诊断。
 
 ### E3：最小四星与共同历元
 
-- [ ] 复用单通道，最低PRN搜索/分配/generation管理，同一IF时间轴至少四星实际捕获/跟踪。
-- [ ] 真实码周期/码片/分数与导航锚点，一秒共同接收历元type4；有效性条件齐全，不重复/不混旧generation/失锁后撤销。
-- [ ] 真实100秒原始check_records.py、self_check.py退出0；完整样本数1,636,800,000，唯一最后end，数据关联正确。
-- [ ] 原始route_a_position.py实际运行并分别报告定位PASS/FAIL；有效定位是争取项，结构PASS不能冒充定位成功。
+- [x] 复用单通道，最低PRN搜索/分配/generation管理，同一IF时间轴至少四星实际捕获/跟踪。
+- [x] 真实码周期/码片/分数与导航锚点，一秒共同接收历元type4；有效性条件齐全，不重复/不混旧generation/失锁后撤销。
+- [x] 真实100秒原始check_records.py、self_check.py退出0；完整样本数1,636,800,000，唯一最后end，数据关联正确。
+- [x] 原始route_a_position.py实际运行并分别报告定位PASS/FAIL；有效定位是争取项，结构PASS不能冒充定位成功。
 
 ### E4：固化交付
 
-- [ ] 最终receiver_records.bin及必要回归、命令/配置/退出码/报告可复现。
-- [ ] STATUS/WORKLOG/设计/GOAL同步；教师公共文件哈希不变，无大型IF/构建/缓存提交。
-- [ ] 分阶段Git提交，正常权限和远端同步下推送；不强推/覆盖已有修改。
-- [ ] 最终简报列实际通过/未通过、复现入口、交付路径和commit。
+- [x] 最终receiver_records.bin及必要回归、命令/配置/退出码/报告可复现。
+- [x] STATUS/WORKLOG/设计/GOAL同步；教师公共文件哈希不变，无大型IF/构建/缓存提交。
+- [x] 分阶段Git提交，正常权限和远端同步下推送；不强推/覆盖已有修改。
+- [x] 最终简报列实际通过/未通过、复现入口、交付路径和commit。
 
 ## 停止条件
 
 完成最低交付后停止，不主动扩展架构。仅缺必需文件/权限、超范围不可逆决策、合理诊断仍不可解决的实际技术阻塞，或量化证明超出本地计算资源/可用执行时间时请求介入。会话/工具限额不是完成，必须保存证据、唯一下一任务和断点。
+
+最终验收：2026-10-13完整100s、原始self_check退出0、Route A实际99个定位历元；报告见[FINAL_REPORT](reports/e_stage/final/FINAL_REPORT.md)。目标完成后停止。

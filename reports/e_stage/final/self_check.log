@@ -1,0 +1,6 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\run_teacher_tool.py C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\tools\self_check.py C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\output\receiver_records.bin --expected-samples 1636800000 --minimum-acquisitions 4 --require-tracking --require-navigation --require-common-observation
+PASS student self-check
+records=400941 types={'acquisition': 4, 'tracking': 399980, 'common_observation': 396, 'navigation': 560, 'end': 1}
+detected_prns=[8, 11, 13, 21]
+locked_tracking=399059 navigation=560 common=396 measurement_valid=324
+EXIT_CODE: 0

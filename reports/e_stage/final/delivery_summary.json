@@ -1,0 +1,15 @@
+{
+  "status": "DELIVERY_POSITION_SANITY_PASS",
+  "position_epochs": 99,
+  "first_epoch": 1,
+  "last_epoch": 99,
+  "median_geodetic": {
+    "latitude_deg": 29.999854992861778,
+    "longitude_deg": 110.00015264784012,
+    "height_m": 119.53639058023691
+  },
+  "binary_path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\output\\receiver_records.bin",
+  "binary_bytes": 12830112,
+  "binary_sha256": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501",
+  "limitation": "No hidden position truth. Four-satellite equation residual is not position accuracy."
+}

@@ -1,0 +1,3 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\run_teacher_tool.py C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\tools\check_records.py C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\output\receiver_records.bin --expected-samples 1636800000 --minimum-acquisitions 4 --require-tracking --require-navigation --require-common-observation
+PASS records=400941 bytes=12830112 types={'acquisition': 4, 'tracking': 399980, 'common_observation': 396, 'navigation': 560, 'end': 1}
+EXIT_CODE: 0
