@@ -1,0 +1,79 @@
+{
+  "real2": {
+    "status": "RUN_AND_AVAILABILITY_AUDIT_PASS",
+    "bin_bytes": 255648,
+    "bin_sha256": "e26d00b7b8951c1d6815a35c3c95cbf014d83a7c6a49bc49cff52896c15bd73d",
+    "records": 7989,
+    "time_domains": {
+      "signal_seconds": 2.0,
+      "hardware_cycles": 304349619,
+      "assumed_clock_hz": 100000000,
+      "processing_seconds": 3.04349619,
+      "host_wall_seconds": 315.872,
+      "minimum_average_clock_hz": 152174809.5
+    },
+    "first_nav": [],
+    "timing_limit": "100MHz is an explicit arithmetic assumption, not the course target clock. No online TTFF claimed."
+  },
+  "real20": {
+    "status": "RUN_AND_AVAILABILITY_AUDIT_PASS",
+    "bin_bytes": 2563232,
+    "bin_sha256": "1a223dc04a817d51f443bd70b7fe3fa65099429fd2ac529edc0c742ea3d55649",
+    "records": 80101,
+    "time_domains": {
+      "signal_seconds": 20.0,
+      "hardware_cycles": 617603738,
+      "assumed_clock_hz": 100000000,
+      "processing_seconds": 6.17603738,
+      "host_wall_seconds": 710.908,
+      "minimum_average_clock_hz": 30880186.9
+    },
+    "first_nav": [
+      {
+        "prn": 11,
+        "generation": 1,
+        "word_source_seconds": 12.681146016617792,
+        "first_nav_output_available_seconds": 18.081124144672533,
+        "hardware_cycle": 584209468
+      },
+      {
+        "prn": 21,
+        "generation": 1,
+        "word_source_seconds": 12.683385447214077,
+        "first_nav_output_available_seconds": 18.0833734115347,
+        "hardware_cycle": 584248618
+      },
+      {
+        "prn": 8,
+        "generation": 1,
+        "word_source_seconds": 12.72176527370479,
+        "first_nav_output_available_seconds": 18.12177028347996,
+        "hardware_cycle": 584916855
+      },
+      {
+        "prn": 13,
+        "generation": 1,
+        "word_source_seconds": 12.722089870478984,
+        "first_nav_output_available_seconds": 18.12209579667644,
+        "hardware_cycle": 584922530
+      }
+    ],
+    "timing_limit": "100MHz is an explicit arithmetic assumption, not the course target clock. No online TTFF claimed."
+  },
+  "driver_tail64": {
+    "status": "RUN_AND_AVAILABILITY_AUDIT_PASS",
+    "bin_bytes": 32,
+    "bin_sha256": "c61c979d4b4861b2411e2db3d8b328fa495119008d3df0e5606e1d526f757f61",
+    "records": 1,
+    "time_domains": {
+      "signal_seconds": 3.910068426197458e-06,
+      "hardware_cycles": 104,
+      "assumed_clock_hz": 100000000,
+      "processing_seconds": 1.04e-06,
+      "host_wall_seconds": 0.019,
+      "minimum_average_clock_hz": 26598000.0
+    },
+    "first_nav": [],
+    "timing_limit": "100MHz is an explicit arithmetic assumption, not the course target clock. No online TTFF claimed."
+  }
+}

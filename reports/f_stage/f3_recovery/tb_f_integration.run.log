@@ -1,0 +1,46 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_f_integration/Vtb_f_integration'
+F_ACQUISITION prn=6 ref=0 channel=0 lag=0
+F_INPUT_PROGRESS ms=100 cycles=3525978
+F_INPUT_PROGRESS ms=200 cycles=5265378
+F_ACQUISITION prn=7 ref=2428800 channel=1 lag=10032
+F_INPUT_PROGRESS ms=300 cycles=7005075
+F_LOST prn=6 ref=5990688 generation=1
+F_INPUT_PROGRESS ms=400 cycles=8744728
+F_ACQUISITION prn=6 ref=6092383 channel=0 lag=2737
+F_INPUT_PROGRESS ms=500 cycles=10484341
+F_INPUT_PROGRESS ms=600 cycles=12224041
+F_INPUT_PROGRESS ms=700 cycles=13963741
+F_INPUT_PROGRESS ms=800 cycles=15703441
+F_INPUT_PROGRESS ms=900 cycles=17443141
+F_INPUT_PROGRESS ms=1000 cycles=19182841
+F_INPUT_PROGRESS ms=1100 cycles=20922559
+F_INPUT_PROGRESS ms=1200 cycles=22662259
+F_INPUT_PROGRESS ms=1300 cycles=24401959
+F_INPUT_PROGRESS ms=1400 cycles=26141659
+F_INPUT_PROGRESS ms=1500 cycles=27881359
+F_INPUT_PROGRESS ms=1600 cycles=29621059
+F_INPUT_PROGRESS ms=1700 cycles=31360759
+F_INPUT_PROGRESS ms=1800 cycles=33100459
+F_INPUT_PROGRESS ms=1900 cycles=34840159
+F_INPUT_PROGRESS ms=2000 cycles=36579859
+F_INPUT_PROGRESS ms=2100 cycles=38319563
+F_INPUT_PROGRESS ms=2200 cycles=40059263
+F_INPUT_PROGRESS ms=2300 cycles=41798963
+F_INPUT_PROGRESS ms=2400 cycles=43538663
+F_LOST prn=6 ref=39740410 generation=2
+F_INPUT_PROGRESS ms=2500 cycles=45278148
+F_ACQUISITION prn=6 ref=40721349 channel=0 lag=2235
+F_INPUT_PROGRESS ms=2600 cycles=47017768
+F_INPUT_PROGRESS ms=2700 cycles=48757540
+F_INPUT_PROGRESS ms=2800 cycles=50497329
+F_INPUT_PROGRESS ms=2900 cycles=52237118
+F_INPUT_PROGRESS ms=3000 cycles=53976890
+F_INPUT_PROGRESS ms=3100 cycles=55716679
+F_INPUT_PROGRESS ms=3200 cycles=57456468
+F_INTEGRATION_PASS synthetic_primary_NH=1 channels=12 samples=52377600 cycles=57456502 acq6=3 acq7=1 lost6=2 tracks6=3016 tracks7=2979
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_f_integration.sv:101: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 575ms; walltime 182.724 s; speed 3.145 ms/s
+- Verilator: cpu 182.686 s on 1 threads; alloced 250 MB
+EXIT_CODE: 0
+WALL_SECONDS: 182.8406347

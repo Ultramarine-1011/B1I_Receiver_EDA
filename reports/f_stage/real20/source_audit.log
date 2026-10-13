@@ -1,0 +1,4 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/f_integrity_audit.py --final
+F_FROZEN_SOURCE_AND_LINK_AUDIT_PASS frozen_files=23 links=6
+EXIT_CODE: 0
+WALL_SECONDS: 0.54216

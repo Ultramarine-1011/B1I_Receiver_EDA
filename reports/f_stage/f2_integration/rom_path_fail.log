@@ -1,0 +1,10 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_f_integration/Vtb_f_integration'
+%Warning: rom/fft_cos_q30.mem:0: $readmem file not found
+%Warning: rom/fft_sin_q30.mem:0: $readmem file not found
+%Warning: rom/fft_cos_q30.mem:0: $readmem file not found
+%Warning: rom/fft_sin_q30.mem:0: $readmem file not found
+[145436130000] %Fatal: tb_f_integration.sv:85: Assertion failed in tb_f_integration: coverage acq=0/0 lost6=0 tracks=0/0 after7=0 bg=0/0
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_f_integration.sv:85: Verilog $stop
+Aborting...
+EXIT_CODE: 6
+WALL_SECONDS: 48.6778612

@@ -1,0 +1,26 @@
+{
+  "status": "PARTIAL_SAMPLE_COUNT",
+  "detection": {
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+      0.20654931437723745,
+      1
+    ]
+  },
+  "false_alarm": {
+    "n": 0,
+    "rate": null,
+    "ci95": null
+  },
+  "working_point_observed": false,
+  "trials": [
+    {
+      "id": "rtl_probe",
+      "completed": true,
+      "queue_cycles": 14,
+      "processing_and_verification_cycles": 962024,
+      "censored_lower_bound_seconds": null
+    }
+  ]
+}

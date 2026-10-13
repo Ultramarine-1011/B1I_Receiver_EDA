@@ -1,0 +1,7 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_f_bad_config/Vtb_f_bad_config'
+[0] %Fatal: student_receiver_core.sv:29: Assertion failed in tb_f_bad_config.dut: Supported independent-channel configurations are 1/2/4/12
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/student_receiver_core.sv:29: Verilog $stop
+Aborting...
+EXIT_CODE: 6
+WALL_SECONDS: 0.1063123
+EXPECTED_CONFIGURATION_REJECTION_PASS

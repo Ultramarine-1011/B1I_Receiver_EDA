@@ -1,0 +1,222 @@
+{
+  "scope": "source/static risk inventory, no DC/PPA/STA/DRC/LVS",
+  "items": [
+    {
+      "file": "student_release\\student_release\\rtl\\acquisition_pcps.sv",
+      "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+      "declared_array_bits": 1768768,
+      "evidence": [
+        {
+          "line": 30,
+          "text": "logic signed [2:0] raw[0:65471];"
+        },
+        {
+          "line": 31,
+          "text": "logic signed [15:0] base_r[0:16367],base_i[0:16367];"
+        },
+        {
+          "line": 36,
+          "text": "logic signed [31:0] code_r[0:4095],code_i[0:4095],signal_r[0:4095],signal_i[0:4095];"
+        },
+        {
+          "line": 37,
+          "text": "logic signed [31:0] cosine[0:4095],sine[0:4095];"
+        },
+        {
+          "line": 38,
+          "text": "logic [63:0] accumulated_power[0:4095];"
+        },
+        {
+          "line": 53,
+          "text": "assign replay_data=raw[replay_address];"
+        },
+        {
+          "line": 102,
+          "text": "raw[capture_count]<=sample_data;"
+        },
+        {
+          "line": 184,
+          "text": "initial begin $readmemh(\"rom/fft_cos_q30.mem\",cosine);$readmemh(\"rom/fft_sin_q30.mem\",sine);end"
+        }
+      ]
+    },
+    {
+      "file": "student_release\\student_release\\rtl\\fft4096_serial.sv",
+      "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+      "declared_array_bits": 524288,
+      "evidence": [
+        {
+          "line": 16,
+          "text": "logic signed [31:0] re[0:4095],im[0:4095],cosine[0:4095],sine[0:4095];"
+        },
+        {
+          "line": 30,
+          "text": "product_rr=$signed(br)*$signed(wr);product_ii=$signed(bi)*$signed(wi);"
+        },
+        {
+          "line": 44,
+          "text": "re[a_address]<=32'((ar64+tr) >>> 1);im[a_address]<=32'((ai64+ti) >>> 1);"
+        },
+        {
+          "line": 45,
+          "text": "re[b_address]<=32'((ar64-tr) >>> 1);im[b_address]<=32'((ai64-ti) >>> 1);"
+        },
+        {
+          "line": 57,
+          "text": "initial begin $readmemh(COS_FILE,cosine);$readmemh(SIN_FILE,sine);end"
+        }
+      ]
+    },
+    {
+      "file": "student_release\\student_release\\rtl\\tracking_channel_minimal.sv",
+      "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+      "instances_at_12_channels": 12,
+      "evidence": [
+        {
+          "line": 72,
+          "text": "for(integer k=0;k<16;k=k+1) begin"
+        },
+        {
+          "line": 100,
+          "text": "dcode=!window_done || den_code==0 ? 64'sd0 : 64'(code_numerator / 80'($signed(den_code)));"
+        },
+        {
+          "line": 102,
+          "text": "dphase=!window_done || (abs_i+abs_q)==0 ? 64'sd0 : 64'(phase_numerator / 80'($signed(abs_i+abs_q)));"
+        },
+        {
+          "line": 119,
+          "text": "carrier_delta_word=(carrier_command*65536)/16368000;"
+        },
+        {
+          "line": 166,
+          "text": "code_step_q<=33'(64'sh20000000+(ENABLE_CARRIER_AID ? 64'($signed(init_doppler_word))/763 : 64'sd0));"
+        },
+        {
+          "line": 193,
+          "text": "(ENABLE_CARRIER_AID ? (64'($signed(base_doppler))+carrier_delta_word)/763 : 64'sd0));"
+        }
+      ]
+    },
+    {
+      "file": "student_release\\student_release\\rtl\\receiver_channel.sv",
+      "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+      "instances_at_12_channels": 12,
+      "evidence": [
+        {
+          "line": 20,
+          "text": "output logic [255:0] record_data,"
+        },
+        {
+          "line": 34,
+          "text": "logic [255:0] nav_data,prompt_payload,observation_payload;"
+        },
+        {
+          "line": 35,
+          "text": "logic [255:0] framed_prompt;"
+        },
+        {
+          "line": 37,
+          "text": "logic [255:0] lost_payload;"
+        },
+        {
+          "line": 44,
+          "text": "assign channel_reset_n=reset_n && !release_valid;"
+        },
+        {
+          "line": 46,
+          "text": "assign sample_ready=!active || sample_ref<effective_ref || (tracker_ready && !prompt_pending && !observation_pending &&"
+        },
+        {
+          "line": 66,
+          "text": "navigation_d1 navigation(.clk(clk),.reset_n(channel_reset_n && !assign_valid),.locked(locked),.prompt_valid(window_done),"
+        }
+      ]
+    },
+    {
+      "file": "student_release\\student_release\\rtl\\navigation_d1.sv",
+      "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+      "evidence": [
+        {
+          "line": 28,
+          "text": "logic [255:0] words[0:9],word_record;"
+        },
+        {
+          "line": 41,
+          "text": "assign sync_reset_n=reset_n && locked;"
+        },
+        {
+          "line": 62,
+          "text": "samples_from_boundary=64'(bit_meta_phase)/64'(bit_meta_step);"
+        },
+        {
+          "line": 66,
+          "text": "samples_from_boundary=(MODULUS-64'(bit_meta_phase)+64'(bit_meta_step)-1)/64'(bit_meta_step);"
+        }
+      ]
+    },
+    {
+      "file": "student_release\\student_release\\rtl\\tracking_record_framer.sv",
+      "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+      "evidence": [
+        {
+          "line": 28,
+          "text": "samples=64'(end_code_phase)/64'(end_code_step);"
+        },
+        {
+          "line": 31,
+          "text": "samples=(MODULUS-64'(end_code_phase)+64'(end_code_step)-1)/64'(end_code_step);"
+        }
+      ]
+    },
+    {
+      "file": "student_release\\student_release\\rtl\\receiver_multichannel.sv",
+      "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+      "evidence": [
+        {
+          "line": 63,
+          "text": "if(state==RUN) sample_ready=&slot_ready;"
+        },
+        {
+          "line": 70,
+          "text": "handover_ref=state==RUN ? processed_samples+64'd4096 : processed_samples;"
+        },
+        {
+          "line": 71,
+          "text": "code_advance=(64'((16368-int'(fine_lag))%16368)<<29)+(handover_ref-coarse_ref)*"
+        },
+        {
+          "line": 73,
+          "text": "initial_code_phase=43'(code_advance%64'h7fe00000000);"
+        },
+        {
+          "line": 76,
+          "text": "epoch_id=32'(sample_ref/64'd16368000);"
+        },
+        {
+          "line": 77,
+          "text": "epoch_event=state==RUN && sample_valid && sample_ready && sample_ref!=0 && sample_ref%64'd16368000==0;"
+        }
+      ]
+    },
+    {
+      "file": "student_release\\student_release\\rtl\\satellite_manager.sv",
+      "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+      "evidence": [
+        {
+          "line": 27,
+          "text": "logic [63:0] window_floor,assigned_ref[0:CHANNELS-1],recovery_floor[0:63];"
+        },
+        {
+          "line": 39,
+          "text": "if(!free_found && !slot_active[c] && slot_available[c] && slot_generation[c]<63) begin"
+        },
+        {
+          "line": 68,
+          "text": "if(|release_event) released_total<=released_total+32'($countones(release_event));"
+        }
+      ]
+    }
+  ],
+  "pcps_plus_fft_declared_array_bits": 2293056
+}

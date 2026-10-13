@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_satellite_manager/Vtb_satellite_manager'
+SATELLITE_MANAGER_PASS control_only=1 slots=12 duplicate/full/stale/generation/backpressure/loss/timeout/reset
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_satellite_manager.sv:70: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 685ns; walltime 0.003 s; speed 138.652 us/s
+- Verilator: cpu 0.005 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.1216538

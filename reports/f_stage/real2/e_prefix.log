@@ -1,0 +1,1 @@
+{"status": "E_PREFIX_BIT_EXACT_PASS", "current_signal_seconds": 2.0, "non_end_records": 7988, "exact_non_cycle_bits": true, "counts": {"acquisition": 4, "tracking": 7980, "common_observation": 4}, "baseline_100s_post_lock_drops": {}, "limitation": "Current prefix only; E original 100s remains frozen, not a new current-source 100s validation."}

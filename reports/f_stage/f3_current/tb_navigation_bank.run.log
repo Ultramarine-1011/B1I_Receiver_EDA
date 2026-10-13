@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_navigation_bank/Vtb_navigation_bank'
+NAVIGATION_BANK_PASS prompt_level=1 independent_channels=12 words=120 phase=0/7/19 polarity=both identity/generation/backpressure/loss
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_navigation_bank.sv:51: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 771us; walltime 0.323 s; speed 3.191 ms/s
+- Verilator: cpu 0.242 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.4303602

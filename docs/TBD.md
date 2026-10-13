@@ -9,7 +9,14 @@
 - 固定student_receiver_core端口与256 bit小端记录已发布；type6唯一且最后，排空后提交。无需猜测这些接口。
 - 本机WSL2 Ubuntu/Verilator/g++/make/Python现已实际可用。根9.28五个关键RTL哈希匹配历史manifest。A与C1运行事实见STATUS/WORKLOG，旧VCS不代替新验证。
 
-## E阶段当前未决（2026-10-13）
+## F阶段当前未决（2026-10-14）
+
+- E100秒/check_records/self_check/Route A均已完成，原证据在reports/e_stage/final；E归档不覆盖F新代码。没有教师位置真值，不能宣称定位精度。
+- F数字/控制/3.2s合成双星恢复/12路NAV隔离已PASS，默认4公开20s NAV/OBS/Route A PASS且E前缀逐bit匹配。正式12星D1/40dB-Hz/合法动态和2s信号中断场景仍缺失；合成130ms中断不能算正式P08。
+- P03每档100+100、P04/05每档10冷启/180s窗/PDOP≤4、P06/07码频/字真值、P09位置真值/完整60s窗待输入。F4建立可执行基础，不填造统计。
+- 正式ASIC标准单元/宏/工艺角/电气/clk/IO约束未提供，本轮代码风险审查；DC/ICC/PT/DRC/LVS禁止，G/H/I未授权。
+
+## E阶段历史未决（最终已完成，保留当时描述）
 
 E0单星真实记录与移交、E1真实单星捕获/FLL拉入、E2真实导航字和E3四星短窗已有实跑证据，见STATUS/WORKLOG与RECEIVER_INTEGRATION。下列A–D历史未覆盖项只描述当时范围。
 
@@ -29,6 +36,6 @@ E0单星真实记录与移交、E1真实单星捕获/FLL拉入、E2真实导航�
 | 教师40dB-Hz场景检测/拉入 | 有实际数据与结果后评分，不能仅凭高SNR合成测试推定 | 正式receiver_records有效性仍未证明 |
 | tracking记录schema | RECORD_FORMAT的24bit Prompt字段与decode_records默认legacy 32bit解释不同，schema3需额外标志 | 目前只输出end不受影响；接type1前须核对实际decoder，不猜测或改公共工具 |
 
-## 后移，不阻塞近期模块前仿
+## 旧阶段后移事项（不驱动当前F范围）
 
 目标ASIC时钟/PPA、工艺角、SRAM、12通道、复杂失锁/冷启动、高灵敏度、正式DC/ICC/PT和远端SSH修复均后移。完整100s/隐藏动态场景尚未覆盖；不以短仿真代替。WindowsApps的python仅为占位入口，自有runner使用WSL python3，不改教师公共脚本或系统PATH。

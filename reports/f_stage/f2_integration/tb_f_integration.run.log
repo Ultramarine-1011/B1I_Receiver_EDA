@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_f_integration/Vtb_f_integration'
+F_INTEGRATION_PASS synthetic_primary_NH=1 channels=12 samples=13094400 cycles=15744475 acq6=2 acq7=1 lost6=1 tracks6=730 tracks7=651
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_f_integration.sv:87: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 157ms; walltime 53.518 s; speed 2.944 ms/s
+- Verilator: cpu 53.481 s on 1 threads; alloced 250 MB
+EXIT_CODE: 0
+WALL_SECONDS: 53.6313628

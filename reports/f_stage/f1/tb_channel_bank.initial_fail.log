@@ -1,0 +1,6 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_channel_bank/Vtb_channel_bank'
+[2064440000] %Fatal: tb_channel_bank.sv:112: Assertion failed in tb_channel_bank.unnamedblk6: missing records ch=1 prompt=11 obs=47
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_channel_bank.sv:112: Verilog $stop
+Aborting...
+EXIT_CODE: 6
+WALL_SECONDS: 1.3327472

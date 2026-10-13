@@ -4,7 +4,7 @@
 
 ## 当前结构
 
-学生公共顶层student_receiver_core保持教师端口，默认四通道receiver_multichannel；USE_PCPS=0或CHANNELS=1选择保留的receiver_single用于最小单星回归。stream_unpacker仍为单字16→1、LSB最早、样本引用+0..15；所有在用通道对同一接纳事件消费同一个真实样本。搜索/预置/记录反压不推进信号时间。
+学生公共顶层student_receiver_core保持教师端口；F现支持1/2/4/12独立槽，默认4，USE_PCPS=0保留receiver_single作原串行单星回归。F后台/释放/未来样本预置与当前验证见[F_MULTICHANNEL_DESIGN](F_MULTICHANNEL_DESIGN.md)。下文保留E算法与时间契约：stream_unpacker单字16→1、LSB最早、引用+0..15；运行槽消费同一真实样本，计算等待不推进信号时间。
 
 捕获：公开IF前4ms → quarter-IF正交解调和/4抽取 → 4096点定点FFT/相关/IFFT → 四窗非相干功率 → PRN6..37顺序、±10kHz/500Hz全粗网格。峰均比门限8为本工程baseline。4092有效点补零到4096有循环码失配，因此RTL候选再用原始65472个IF样本、精确16368点码周期做±16sample/1sample和±250Hz/50Hz局部精搜，四窗非相干峰/能量门限4。两级判决后分配首四个成功PRN；没有场景ID/频率/位置真值输入。
 
@@ -30,6 +30,9 @@ schema3由bit23=1且bits31:30=3识别；generation占低6bit。signed28 Prompt�
 
 每槽独立Prompt与观测pending槽，导航缓存ready/valid；公共输入在任何槽有积压时反压，Root轮询仲裁寄存输出，valid&&!ready保持256bit。EOF等最后lane、至少4拍相关/NH/D1流水和所有槽/根记录排空，再发唯一type6；部分未完成积分/子帧不会被伪装为有效结果。
 
-## 仿真成本与入口
+## E阶段历史仿真成本与入口（当时快照）
 
 串行31格点0.194s推估旧全32PRN约8小时，未盲跑。PCPS模块全32PRN345073499拍/102.305s。四星真实2s教师player/writer入口实跑433s，g++ -O3版本1s333s。直接C++时钟入口仅负责公开IF2握手/2bit重排和原样32字节LE记录，全部捕获/环路/导航/观测在同一RTL；1s与未改教师player/writer3984个非end记录非cycle字段逐bit一致，实跑228s。新type1 framer的合成数值回归PASS。长场景用scripts/run_fast_verilator.ps1，source/ROM/SVH/driver SHA256随运行保存；SkipBuild必须匹配已编译源码manifest。原始教师文件保持不变。实际100s结果只以最终日志为准，正在运行不构成PASS。
+
+## F当前验证补充
+E100s已经完成PASS，原证据reports/e_stage/final保留。F默认4实跑2s背压及20s NAV/OBS/Route A复验，输出前缀逐bit匹配E；F未重复100s，不宣称当前源码新100s验收。C++driver只传输IF/record并另存输出availability，不给DUT真值。详见reports/f_stage/FINAL_REPORT.md。

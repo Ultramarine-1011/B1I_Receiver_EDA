@@ -1,0 +1,3 @@
+F_PREFIX_SCORER_INITIAL_FAIL: missing prefix records 12.
+Cause: clipped E NAV by source sample_index, although E publishes a complete subframe later; 12 words from the next batch have source<20s but become available>20s.
+Receiver independent NAV score was PASS. Corrected reference comparison uses output record prefix rather than source-time clipping. This is a scoring-tool failure, not evidence of a receiver regression.

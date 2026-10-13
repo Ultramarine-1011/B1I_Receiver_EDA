@@ -1,0 +1,11 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/e0' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_e0/Vtb_receiver_e0' 
+E0_CASE_PASS case=0 samples=4092000 tracks=249 locked=56
+E0_CASE_PASS case=1 samples=4092000 tracks=248 locked=55
+E0_CASE_PASS case=2 samples=4092000 tracks=248 locked=55
+RECEIVER_E0_PASS cases=3 samples_per_case=4092000 backpressure=1
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_receiver_e0.sv:118: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 46ms; walltime 5.578 s; speed 8.222 ms/s
+- Verilator: cpu 5.560 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 5.701

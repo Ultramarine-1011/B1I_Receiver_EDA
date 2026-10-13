@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && python3 tools/check_records.py '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/f_stage/driver_tail64/receiver_records.bin' --expected-samples 64 --minimum-acquisitions 0 
+PASS records=1 bytes=32 types={'end': 1}
+EXIT_CODE: 0
+WALL_SECONDS: 0.1887295

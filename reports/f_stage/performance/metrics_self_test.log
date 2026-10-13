@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/performance_metrics.py --self-test
+PERFORMANCE_METRICS_SELF_TEST_PASS hand_examples=times/wilson/censoring/causal_TTFF/ENU/60s/D03; not_receiver_performance
+EXIT_CODE: 0
+WALL_SECONDS: 2.7000296

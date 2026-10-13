@@ -1,0 +1,12 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_f_transport/Vtb_f_transport'
+F_TRANSPORT_CASE_PASS channels=1 gap=0 reset/partial_EOF/end_backpressure
+F_TRANSPORT_CASE_PASS channels=4 gap=0 reset/partial_EOF/end_backpressure
+F_TRANSPORT_CASE_PASS channels=12 gap=0 reset/partial_EOF/end_backpressure
+F_TRANSPORT_CASE_PASS channels=4 gap=1 reset/partial_EOF/end_backpressure
+F_TRANSPORT_PASS 1/4/12 EOF/reset/input_gap/error_flags/stable_end/no_false_observation
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_f_transport.sv:49: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 1us; walltime 0.102 s; speed 46.174 us/s
+- Verilator: cpu 0.024 s on 1 threads; alloced 252 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.2160049

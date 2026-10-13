@@ -269,3 +269,6 @@ Design Compiler 初始化文件 `/home/IC/.synopsys_dc.setup` 已确认设置：
 # 2026-10-13 个人本机前仿追加记录
 
 当前近期交付使用Windows + WSL2 Ubuntu26.04（ultramarine）、Verilator5.032、g++15.2.0、make4.4.1、Python3.14.4。初始缺Verilator；wsl.exe -d Ubuntu -u root -- bash -lc 'apt-get install -y --no-install-recommends verilator' 实际安装退出0，仅新增必要包，未升级发行版。版本日志reports/local/environment.log。桥接、0.01s文件冒烟及9.28前端已在本机实跑，结果范围见STATUS/WORKLOG。当前完整接收机self_check仍FAIL。未调用或修复VMware/SSH/VCS/DC/ICC/PT。前文9.28远端可用性为历史事实，不能当作今天确认。
+
+# 2026-10-14 F阶段环境边界追加
+E阶段已在本机WSL2/Verilator完成100秒真实四星与原始检查/Route A，前一追加段的FAIL是当时快照。F继续使用相同现有本地工具，不重新扫描/访问VMware、SSH、Synopsys/license；F新增代码以本轮reports/f_stage实际日志为准。正式ASIC仍未执行。

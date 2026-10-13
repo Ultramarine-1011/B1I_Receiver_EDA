@@ -1,0 +1,77 @@
+[
+  {
+    "command": [
+      "C:\\Users\\26255\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "model/receiver_multi_score.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20",
+      "--require-navigation"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 4.3228936,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\score.log"
+  },
+  {
+    "command": [
+      "C:\\Users\\26255\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "model/f_reference_score.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 3.0931694,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\e_prefix.log"
+  },
+  {
+    "command": [
+      "C:\\Users\\26255\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "student_release/student_release/tools/check_records.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\receiver_records.bin",
+      "--expected-samples",
+      "327360000",
+      "--minimum-acquisitions",
+      "4",
+      "--require-tracking"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.5387076,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\structure_final.log"
+  },
+  {
+    "command": [
+      "C:\\Users\\26255\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "student_release/student_release/tools/self_check.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\receiver_records.bin",
+      "--expected-samples",
+      "327360000",
+      "--minimum-acquisitions",
+      "4",
+      "--require-tracking",
+      "--require-navigation",
+      "--require-common-observation"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.5493148,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\self_check.log"
+  },
+  {
+    "command": [
+      "C:\\Users\\26255\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "student_release/student_release/tools/route_a_position.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\receiver_records.bin",
+      "-o",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\positions.jsonl"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 4.3460231,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\route_a.log"
+  },
+  {
+    "command": [
+      "C:\\Users\\26255\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "model/f_integrity_audit.py",
+      "--final"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.5483708,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\f_stage\\real20\\source_audit.log"
+  }
+]

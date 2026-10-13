@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_channel_bank/Vtb_channel_bank'
+CHANNEL_BANK_PASS configurations=1/2/4/12 samples=196416 cycles=206440 common_prompt_windows=12 observations_per_channel=47
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_channel_bank.sv:119: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 2ms; walltime 1.178 s; speed 1.765 ms/s
+- Verilator: cpu 1.169 s on 1 threads; alloced 250 MB
+EXIT_CODE: 0
+WALL_SECONDS: 1.2909167

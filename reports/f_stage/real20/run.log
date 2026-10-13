@@ -1,0 +1,32 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/receiver_fast_c4/Vstudent_receiver_core' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/input/scenario.if2' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/f_stage/real20/receiver_records.bin' 81840000 
+FAST_RTL_ACQUISITION prn=8 channel=0 detected=1 cycles=56354739
+FAST_RTL_ACQUISITION prn=11 channel=1 detected=1 cycles=113119989
+FAST_RTL_ACQUISITION prn=13 channel=2 detected=1 cycles=159124731
+FAST_RTL_ACQUISITION prn=21 channel=3 detected=1 cycles=269611902
+FAST_RTL_INPUT_PROGRESS seconds=1 cycles=286946557 wall=286.814 records=3984
+FAST_RTL_INPUT_PROGRESS seconds=2 cycles=304349562 wall=309.154 records=7988
+FAST_RTL_INPUT_PROGRESS seconds=3 cycles=321752567 wall=331.478 records=11992
+FAST_RTL_INPUT_PROGRESS seconds=4 cycles=339155572 wall=353.811 records=15996
+FAST_RTL_INPUT_PROGRESS seconds=5 cycles=356558577 wall=376.214 records=20000
+FAST_RTL_INPUT_PROGRESS seconds=6 cycles=373961582 wall=398.561 records=24004
+FAST_RTL_INPUT_PROGRESS seconds=7 cycles=391364587 wall=420.899 records=28008
+FAST_RTL_INPUT_PROGRESS seconds=8 cycles=408767592 wall=443.185 records=32012
+FAST_RTL_INPUT_PROGRESS seconds=9 cycles=426170597 wall=465.510 records=36016
+FAST_RTL_INPUT_PROGRESS seconds=10 cycles=443573602 wall=487.862 records=40020
+FAST_RTL_INPUT_PROGRESS seconds=11 cycles=460976607 wall=510.175 records=44024
+FAST_RTL_INPUT_PROGRESS seconds=12 cycles=478379612 wall=532.498 records=48028
+FAST_RTL_INPUT_PROGRESS seconds=13 cycles=495782617 wall=554.807 records=52032
+FAST_RTL_INPUT_PROGRESS seconds=14 cycles=513185622 wall=577.053 records=56036
+FAST_RTL_INPUT_PROGRESS seconds=15 cycles=530588627 wall=599.374 records=60040
+FAST_RTL_INPUT_PROGRESS seconds=16 cycles=547991632 wall=621.691 records=64044
+FAST_RTL_INPUT_PROGRESS seconds=17 cycles=565394637 wall=644.006 records=68048
+FAST_RTL_INPUT_PROGRESS seconds=18 cycles=582797642 wall=666.340 records=72052
+FAST_RTL_NAV prn=11 word1_sample=207564998
+FAST_RTL_NAV prn=21 word1_sample=207601653
+FAST_RTL_NAV prn=8 word1_sample=208229854
+FAST_RTL_NAV prn=13 word1_sample=208235167
+FAST_RTL_INPUT_PROGRESS seconds=19 cycles=600200691 wall=688.657 records=76096
+FAST_RTL_INPUT_PROGRESS seconds=20 cycles=617603696 wall=710.905 records=80100
+FAST_RTL_PASS samples=327360000 records=80101 cycles=617603738 wall_seconds=710.908
+EXIT_CODE: 0
+WALL_SECONDS: 713.2949243

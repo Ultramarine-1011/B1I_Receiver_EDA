@@ -1,0 +1,18 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_f_integration/Vtb_f_integration'
+F_ACQUISITION prn=6 ref=0 channel=0 lag=0
+F_INPUT_PROGRESS ms=100 cycles=3525978
+F_INPUT_PROGRESS ms=200 cycles=5265378
+F_ACQUISITION prn=7 ref=2428800 channel=1 lag=10032
+F_INPUT_PROGRESS ms=300 cycles=7005075
+F_LOST prn=6 ref=5990688 generation=1
+F_INPUT_PROGRESS ms=400 cycles=8744728
+F_ACQUISITION prn=6 ref=6092383 channel=0 lag=2737
+F_INPUT_PROGRESS ms=500 cycles=10484341
+F_INPUT_PROGRESS ms=600 cycles=12224041
+F_INPUT_PROGRESS ms=700 cycles=13963741
+F_INPUT_PROGRESS ms=800 cycles=15703441
+[157034780000] %Fatal: tb_f_integration.sv:100: Assertion failed in tb_f_integration: coverage acq=2/1 lost6=1 tracks=732/579 after7=516 bg=1/1 tail_lock=0/201
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_f_integration.sv:100: Verilog $stop
+Aborting...
+EXIT_CODE: 6
+WALL_SECONDS: 51.3594162

@@ -1,0 +1,113 @@
+COMMAND: verilator --binary --timing -j 2 -O2 -CFLAGS '-O3' -Wno-fatal -Wno-TIMESCALEMOD -I'/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl' --top-module tb_f_integration --Mdir '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_f_integration' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/receiver_contract_pkg.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/acquisition_pcps.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/acquisition_refine.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/acquisition_serial.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/b1i_prn_gen.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/carrier_nco_mixer.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/d1_word_sync.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/epl_correlator.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/fft4096_serial.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/navigation_d1.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/nh20_sync.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/receiver_channel.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/receiver_multichannel.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/receiver_single.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/satellite_manager.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/stream_unpacker.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/student_receiver_core.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_record_framer.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_f_integration.sv'
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:45:49: Operator DIV expects 43 bits on the RHS, but RHS's VARREF 'EPL_HALF_SPACING_DENOMINATOR' generates 32 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+   45 |       (ONE_CHIP_Q * EPL_HALF_SPACING_NUMERATOR) / EPL_HALF_SPACING_DENOMINATOR;
+      |                                                 ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.032
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:96:21: Operator ASSIGN expects 43 bits on the Assign RHS, but Assign RHS's SUB generates 44 bits.
+                                                                                                                                                                   : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+   96 |         add_spacing = sum - {1'b0, CODE_MODULUS_Q};
+      |                     ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:117:18: Operator ASSIGN expects 43 bits on the Assign RHS, but Assign RHS's SUB generates 44 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  117 |       phase_next = phase_sum - {1'b0, CODE_MODULUS_Q};
+      |                  ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:129:22: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  129 |     prompt_index_now = phase_acc >> PHASE_FRAC;
+      |                      ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:130:21: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  130 |     early_index_now = early_phase >> PHASE_FRAC;
+      |                     ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:131:20: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  131 |     late_index_now = late_phase >> PHASE_FRAC;
+      |                    ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:132:23: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  132 |     prompt_index_next = phase_next >> PHASE_FRAC;
+      |                       ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:133:22: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  133 |     early_index_next = early_phase_next >> PHASE_FRAC;
+      |                      ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:134:21: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  134 |     late_index_next = late_phase_next >> PHASE_FRAC;
+      |                     ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:142:23: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  142 |     init_prompt_index = init_phase_normalized >> PHASE_FRAC;
+      |                       ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:143:22: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  143 |     init_early_index = init_early_phase >> PHASE_FRAC;
+      |                      ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:144:21: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.code_source'
+  144 |     init_late_index = init_late_phase >> PHASE_FRAC;
+      |                     ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/epl_correlator.sv:122:33: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'window_sample_count' generates 14 bits.
+                                                                                                                                                                           : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.correlator'
+  122 |         if (window_sample_count == WINDOW_SAMPLES - 1) begin
+      |                                 ^~
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/carrier_nco_mixer.sv:59:18: Operator ASSIGN expects 10 bits on the Assign RHS, but Assign RHS's SHIFTR generates 32 bits.
+                                                                                                                                                                            : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend.carrier'
+   59 |     sine_address = rounded_phase >> (PHASE_WIDTH-ADDRESS_BITS);
+      |                  ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:94:29: Operator ADD expects 42 bits on the RHS, but RHS's VARREF 'sample_energy' generates 29 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend'
+   94 |     energy_sum = energy_acc + sample_energy;
+      |                             ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:128:30: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'ALIGN_FIRST_WINDOW' generates 32 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend'
+  128 |       integration_started <= !ALIGN_FIRST_WINDOW || init_code_phase_q == 0
+      |                              ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:147:26: Operator ASSIGNDLY expects 43 bits on the Assign RHS, but Assign RHS's COND generates 44 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend'
+  147 |         end_phase_delayed<=code_next_sum>={1'b0,CODE_MODULUS_Q} ?
+      |                          ^~
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:162:26: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'energy_count' generates 14 bits.
+                                                                                                                                                                                     : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking.frontend'
+  162 |         if (energy_count == WINDOW_SAMPLES-1) begin
+      |                          ^~
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/nh20_sync.sv:37:79: Operator NEGATE expects 64 bits on the LHS, but LHS's VARREF 'total' generates 34 bits.
+                                                                                                                                                                     : ... note: In instance 'tb_f_integration.dut.channels[11].slot.navigation.nh'
+   37 |                 if(training_count>=20) scores_next[h]=scores[h]+64'(total<0 ? -total : total);
+      |                                                                               ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:166:64: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'ENABLE_CARRIER_AID' generates 32 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking'
+  166 |             code_step_q<=33'(64'sh20000000+(ENABLE_CARRIER_AID ? 64'($signed(init_doppler_word))/763 : 64'sd0));
+      |                                                                ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:193:45: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'ENABLE_CARRIER_AID' generates 32 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_f_integration.dut.channels[11].slot.tracking'
+  193 |                         (ENABLE_CARRIER_AID ? (64'($signed(base_doppler))+carrier_delta_word)/763 : 64'sd0));
+      |                                             ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend.sv:75:29: Operator ADD expects 42 bits on the RHS, but RHS's VARREF 'sample_energy' generates 29 bits.
+                                                                                                                                                                             : ... note: In instance 'tb_f_integration.dut.refine.correlator'
+   75 |     energy_sum = energy_acc + sample_energy;
+      |                             ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend.sv:102:30: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'ALIGN_FIRST_WINDOW' generates 32 bits.
+                                                                                                                                                                             : ... note: In instance 'tb_f_integration.dut.refine.correlator'
+  102 |       integration_started <= !ALIGN_FIRST_WINDOW || init_code_phase_q == 0
+      |                              ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend.sv:117:26: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'energy_count' generates 14 bits.
+                                                                                                                                                                              : ... note: In instance 'tb_f_integration.dut.refine.correlator'
+  117 |         if (energy_count == WINDOW_SAMPLES-1) begin
+      |                          ^~
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/acquisition_refine.sv:41:38: Operator SUB expects 43 bits on the RHS, but RHS's CASTWRAP generates 32 bits.
+                                                                                                                                                                              : ... note: In instance 'tb_f_integration.dut.refine'
+   41 |         initial_code_phase=43'((16368-int'(current_lag))%16368)<<29;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/receiver_multichannel.sv:71:33: Operator SUB expects 64 bits on the RHS, but RHS's CASTWRAP generates 32 bits.
+                                                                                                                                                                                 : ... note: In instance 'tb_f_integration.dut'
+   71 |         code_advance=(64'((16368-int'(fine_lag))%16368)<<29)+(handover_ref-coarse_ref)*
+      |                                 ^
+%Error: Internal Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_f_integration.sv:35:34: ../V3Width.cpp:2449: EnumItemRef can't deref back to an Enum
+                                                                                                                                             : ... note: In instance 'tb_f_integration'
+   35 |             if(dut.bg_state==dut.BG_CAPTURE && dut.active[0]) seen_background_samples=1;
+      |                                  ^~~~~~~~~~
+EXIT_CODE: 1
+WALL_SECONDS: 0.5742706

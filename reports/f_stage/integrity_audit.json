@@ -1,0 +1,349 @@
+{
+  "status": "F_FROZEN_SOURCE_AND_LINK_AUDIT_PASS",
+  "head": "1b9505e5b82cf2d0c88bb058fcbe755d1f90a945",
+  "integrity": [
+    {
+      "path": "student_release\\student_release\\README.md",
+      "sha256": "c355f85695278b4bb744339d886047152ba404ab2134dfb31e3f2a7a0bcb5d0e",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\input\\input_contract.json",
+      "sha256": "6f6516485a22c7b76cd7cd24da9f1b8a8fd84214419c649ed9ce738e080e97a5",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\input\\scenario.if2",
+      "sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\interface\\receiver_input_if.sv",
+      "sha256": "7ca32668f62fbe016dfe311d3576cd8ccb2fb05b91d03aa8a4ca1499ab4698b1",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\scripts\\run_student_sim.ps1",
+      "sha256": "470b0019ae991b8f479ba46166e2f13451adb3512ca862e46562b63128343224",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\sim\\if2_file_player.sv",
+      "sha256": "2f9086fe9e154f1cb9819093c9330b292c3e4cb6b52c17424b490cb305cb5ca1",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\sim\\receiver_tb_template.sv",
+      "sha256": "18171ff5f1b17ed72f018076eda485ac9894efcacd3239fc0986317de383b2ca",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\submission\\OUTPUT_REQUIREMENTS.md",
+      "sha256": "f2fb46696957ce810a9b284099dc3e6cc08f4bd4e19abf128a51ce72bc938c8e",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\submission\\RECORD_FORMAT.md",
+      "sha256": "8a6a8ed08417bd4b65ecafd62ac0d02a24460181f7d0be256e613092234a83dc",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\check_input_package.py",
+      "sha256": "6622fa9c8769d49538161799530bb873d0caa0fe6fb4e396ca576d3927b1c7c2",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\check_records.py",
+      "sha256": "2dfe9a2acf37ed5e9aef997690c7d8510a319959fc5dba795fc17a7dd31c3606",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\decode_records.py",
+      "sha256": "1a81cb9ffa31775ca82a58d0184e9a4cad362dcdc22c6b9d750bdbc0447e57f4",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\prompt_d1.py",
+      "sha256": "956b7ae51d6c79fa503bdb064f8c1383821564e7ee54cc670b86eb54d55d1771",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\route_a_position.py",
+      "sha256": "592b5b6a030b4317aa84f48c4695fb8852bfe0194e085e9368f1641aec7fb4cb",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\self_check.py",
+      "sha256": "0799fa9a506c536984ef50ce406cbfea6d57aa02dcd1410febf944f57f001dc2",
+      "e_baseline_match": true
+    },
+    {
+      "path": "rtl\\b1i_prn_gen.sv",
+      "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+      "e_baseline_match": true
+    },
+    {
+      "path": "rtl\\code_nco.sv",
+      "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+      "e_baseline_match": true
+    },
+    {
+      "path": "rtl\\epl_correlator.sv",
+      "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+      "e_baseline_match": true
+    },
+    {
+      "path": "rtl\\carrier_nco_mixer.sv",
+      "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+      "e_baseline_match": true
+    },
+    {
+      "path": "rtl\\carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+      "e_baseline_match": true
+    },
+    {
+      "path": "rtl\\tracking_frontend.sv",
+      "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+      "e_baseline_match": true
+    },
+    {
+      "path": "student_release\\student_release\\output\\receiver_records.bin",
+      "sha256": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501",
+      "e_baseline_match": true
+    },
+    {
+      "path": "reports\\e_stage\\final\\receiver_records.bin",
+      "sha256": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501",
+      "e_baseline_match": true
+    }
+  ],
+  "links_checked": 8,
+  "current_rtl": [
+    {
+      "path": "student_release\\student_release\\rtl\\acquisition_pcps.sv",
+      "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\acquisition_refine.sv",
+      "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\acquisition_serial.sv",
+      "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\b1i_prn_gen.sv",
+      "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\carrier_nco_mixer.sv",
+      "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\code_nco.sv",
+      "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\d1_word_sync.sv",
+      "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\epl_correlator.sv",
+      "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\fft4096_serial.sv",
+      "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\navigation_d1.sv",
+      "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\nh20_sync.sv",
+      "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_channel.sv",
+      "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_contract_pkg.sv",
+      "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_multichannel.sv",
+      "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_single.sv",
+      "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\satellite_manager.sv",
+      "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\stream_unpacker.sv",
+      "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\student_receiver_core.sv",
+      "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_channel_minimal.sv",
+      "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_frontend.sv",
+      "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_frontend_spaced.sv",
+      "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b"
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_record_framer.sv",
+      "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94"
+    }
+  ],
+  "real20_runtime_sources": [
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_contract_pkg.sv",
+      "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\acquisition_pcps.sv",
+      "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\acquisition_refine.sv",
+      "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\acquisition_serial.sv",
+      "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\b1i_prn_gen.sv",
+      "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\carrier_nco_mixer.sv",
+      "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\code_nco.sv",
+      "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\d1_word_sync.sv",
+      "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\epl_correlator.sv",
+      "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\fft4096_serial.sv",
+      "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\navigation_d1.sv",
+      "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\nh20_sync.sv",
+      "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_channel.sv",
+      "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_multichannel.sv",
+      "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\receiver_single.sv",
+      "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\satellite_manager.sv",
+      "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\stream_unpacker.sv",
+      "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\student_receiver_core.sv",
+      "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_channel_minimal.sv",
+      "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_frontend_spaced.sv",
+      "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_frontend.sv",
+      "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\tracking_record_framer.sv",
+      "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rtl\\carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rom\\fft_cos_q30.mem",
+      "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "student_release\\student_release\\rom\\fft_sin_q30.mem",
+      "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+      "real20_compiled_match": true
+    },
+    {
+      "path": "reports\\f_stage\\real20\\driver_snapshot.cpp",
+      "sha256": "809f7b8b676e2120fd99b9d2dc97bcaf99e5125fc954bb392b154d701c37d250",
+      "real20_compiled_match": true
+    }
+  ],
+  "limits": "Integrity and document links only. RTL behavior needs per-test current source manifests."
+}

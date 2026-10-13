@@ -1,0 +1,11 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/e0' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_tail/Vtb_receiver_tail' 
+RECEIVER_TAIL_CASE_PASS total=48 acquisition=0 reset=1
+RECEIVER_TAIL_CASE_PASS total=16368 acquisition=1 reset=1
+RECEIVER_TAIL_CASE_PASS total=16384 acquisition=1 reset=1
+RECEIVER_TAIL_PASS cases=3
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_receiver_tail.sv:51: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 718us; walltime 0.024 s; speed 28.584 ms/s
+- Verilator: cpu 0.025 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.140

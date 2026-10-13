@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/f_stage' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_channel_reuse/Vtb_channel_reuse'
+CHANNEL_REUSE_PASS control_only=1 held_record/lost/drain/reassignment/generation/effective_sample/reset
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_channel_reuse.sv:58: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 369us; walltime 0.013 s; speed 25.280 ms/s
+- Verilator: cpu 0.015 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.114201

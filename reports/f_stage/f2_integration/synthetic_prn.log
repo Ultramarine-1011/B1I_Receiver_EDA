@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/f_signal_vectors.py
+F_SIGNAL_VECTORS_PASS PRN6/7 primary codes only; no DUT truth path
+EXIT_CODE: 0
+WALL_SECONDS: 0.2038309

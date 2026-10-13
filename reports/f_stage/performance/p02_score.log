@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/performance_metrics.py --input '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/f_stage/performance/p02_probe.json' --output '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/f_stage/performance/p02_metrics.json'
+{"status": "PARTIAL_SAMPLE_COUNT", "detection": {"n": 1, "rate": 1.0, "ci95": [0.20654931437723745, 1]}, "false_alarm": {"n": 0, "rate": null, "ci95": null}, "working_point_observed": false, "trials": [{"id": "rtl_probe", "completed": true, "queue_cycles": 14, "processing_and_verification_cycles": 962024, "censored_lower_bound_seconds": null}]}
+EXIT_CODE: 0
+WALL_SECONDS: 0.2245556

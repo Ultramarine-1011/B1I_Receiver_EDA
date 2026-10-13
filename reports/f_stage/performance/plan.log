@@ -1,0 +1,3 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/performance_plan.py --output '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/f_stage/performance'
+PERFORMANCE_PLAN_CREATED official_input_sha256=2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da formal_receiver_tests=NOT_RUN/BLOCKED_INPUT
+EXIT_CODE: 0
