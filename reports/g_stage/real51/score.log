@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/g_run_score.py --folder '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/g_stage/real51'
+G_ACTUAL_RTL_DATA_PATH_AUDIT_PASS records=204425 samples=834768000 task_results=16 bin_sha256=ebd3b493a21261dc0ec4b32acdcec33ac25d053f0308c8b83e280b46b0b9804d
+EXIT_CODE: 0
+WALL_SECONDS: 1.8652367

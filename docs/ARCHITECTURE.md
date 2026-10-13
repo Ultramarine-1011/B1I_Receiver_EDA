@@ -1,5 +1,7 @@
 # GNSS 基带接收机架构基线
 
+> G0–G7于2026-10-14另行授权，F/E成果保留。新增评价设计见[G_PERFORMANCE_DESIGN](G_PERFORMANCE_DESIGN.md)。以下F/9.28段落保留其历史范围；当前状态只见STATUS。
+
 > 2026-10-14：以下为9.28历史架构，唯一当前状态见根STATUS.md。E已完成四星100秒；本轮F授权12通道/后台管理/性能基础及综合风险检查，见[F_MULTICHANNEL_DESIGN](F_MULTICHANNEL_DESIGN.md)与[COURSE_MASTER_PLAN](COURSE_MASTER_PLAN.md)。教师契约/记录时间见[RECEIVER_INTEGRATION](RECEIVER_INTEGRATION.md)。本次纯仿真无需SRAM；禁止正式后端，保留原9.28基础RTL。
 
 本文整理 `plan.md` 已确定的系统架构，并链接后续有模型与回归证据的实现 baseline，方便 Codex/Cursor 继续工作。系统职责、接口、时间语义与状态所有权以 `plan.md` 为准；其中早期保留的算法/定点 TBD 以本文链接的后续设计决策和 [TBD.md](TBD.md) 的 resolved 记录了解当前状态，不应反复撤回已经验证的选择。当前开发范围与执行状态见根目录 [GOAL.md](../GOAL.md)，不能把完整系统框图视为本 milestone 的全部实现范围。

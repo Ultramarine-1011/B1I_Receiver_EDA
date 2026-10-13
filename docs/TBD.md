@@ -11,6 +11,8 @@
 
 ## F阶段当前未决（2026-10-14）
 
+G0–G7现已授权，场景缺口正在按reports/g_stage/resource_audit.json审计；H/I未授权。F下面的“本轮”表述保留历史范围，不再驱动当前G。
+
 - E100秒/check_records/self_check/Route A均已完成，原证据在reports/e_stage/final；E归档不覆盖F新代码。没有教师位置真值，不能宣称定位精度。
 - F数字/控制/3.2s合成双星恢复/12路NAV隔离已PASS，默认4公开20s NAV/OBS/Route A PASS且E前缀逐bit匹配。正式12星D1/40dB-Hz/合法动态和2s信号中断场景仍缺失；合成130ms中断不能算正式P08。
 - P03每档100+100、P04/05每档10冷启/180s窗/PDOP≤4、P06/07码频/字真值、P09位置真值/完整60s窗待输入。F4建立可执行基础，不填造统计。

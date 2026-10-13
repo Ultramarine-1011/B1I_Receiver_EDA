@@ -44,9 +44,11 @@ def acquisition_statistics(trials):
                       'processing_and_verification_cycles':None if end is None or accept is None else end-accept,
                       'censored_lower_bound_seconds':None if t.get('verified_success') else t.get('observation_seconds',10)})
     independent=all(t.get('seed') is not None for t in trials) and all(len({t['seed'] for t in group})==len(group) for group in (present,absent))
-    enough=len(present)==100 and len(absent)==100 and independent
+    complete_windows=all(t.get('observation_seconds',0)>=10 for t in trials)
+    enough=len(present)==100 and len(absent)==100 and independent and complete_windows
     return {'status':'MEASURED' if enough else 'PARTIAL_SAMPLE_COUNT','detection':detection,'false_alarm':false_alarm,
-            'working_point_observed':enough and detection['rate']>=0.9 and false_alarm['rate']<=0.01,'trials':costs}
+            'working_point_observed':enough and detection['rate']>=0.9 and false_alarm['rate']<=0.01,
+            'independent_seeds':independent,'complete_10s_windows':complete_windows,'trials':costs}
 
 def cold_start_statistics(trials):
     independent=all(t.get('seed') is not None for t in trials) and len({t['seed'] for t in trials})==len(trials)
@@ -61,6 +63,8 @@ def cold_start_statistics(trials):
                    all(t.get('followup_observed_epochs')==60 and r>=0.95 for t,r in zip(completed,followups))}
 
 def tracking_quality(rows,reacquisitions=0,duration_s=60,fs=FS):
+    if len({r['sample_ref'] for r in rows})!=len(rows):raise ValueError('duplicate tracking sample reference')
+    if any(b['sample_ref']<=a['sample_ref'] for a,b in zip(rows,rows[1:])):raise ValueError('tracking time moved backwards')
     if any(r.get('code_error_chip') is None or r.get('frequency_error_hz') is None for r in rows):
         return {'status':'BLOCKED_INPUT','reason':'independent code/frequency truth missing'}
     expected=duration_s*1000;valid=[r for r in rows if r.get('valid')];bins={}
@@ -122,9 +126,10 @@ def causal_ttff(records,solutions,fs=FS,start_sample=0,window_s=180):
         identities={(r['prn'],r['generation']) for r in obs if r.get('valid')}
         reason=None
         if not s.get('valid') or len(identities)<4:reason='invalid_solution_or_insufficient_observations'
-        elif not obs or not nav or any(r['kind']!='obs' or r['epoch_sample']!=epoch for r in obs):reason='wrong_epoch_or_record_kind'
+        elif not obs or not nav or any(r['kind']!='obs' or r['epoch_sample']!=epoch or not r.get('valid') for r in obs):reason='wrong_epoch_or_record_kind'
         elif any(r['kind']!='nav' or not r.get('valid') or not r.get('ephemeris_ready') for r in nav):reason='invalid_or_incomplete_ephemeris'
         elif any(r['available_sample']>out for r in obs+nav) or out<epoch:reason='future_information'
+        elif len(set(s['used_obs']))!=len(s['used_obs']) or len({r['prn'] for r in obs})!=len(obs):reason='duplicate_or_reused_observation'
         elif any(not any((n['prn'],n['generation'])==(o['prn'],o['generation']) and
                                         n['available_sample']<=o['available_sample'] for n in nav) for o in obs):reason='retrospective_ephemeris_backfill'
         if reason:
@@ -161,7 +166,9 @@ def position_statistics(epochs,truth_ecef,latitude_deg,longitude_deg,confirmatio
     for name,v in [('horizontal_m',[math.hypot(e,n) for e,n,u in enu]),('vertical_abs_m',[abs(u) for e,n,u in enu]),
                    ('three_dimensional_m',[math.sqrt(e*e+n*n+u*u) for e,n,u in enu])]:
         metric[name]={'rms':math.sqrt(sum(x*x for x in v)/len(v)) if v else None,'p95':quantile95(v)}
-    return {'status':'MEASURED' if len(rows)==60 else 'PARTIAL_WINDOW','expected_epochs':60,'recorded_epochs':len(rows),
+    expected=set(range(start,stop,fs));missing=sorted(expected-{r['epoch_sample'] for r in rows})
+    return {'status':'MEASURED' if len(rows)==60 and not missing else 'PARTIAL_WINDOW','expected_epochs':60,'recorded_epochs':len(rows),
+            'missing_epoch_samples':missing,
             'valid_epochs':len(valid),'valid_ratio':len(valid)/60,'errors':metric,
             'enu_bias_m':[statistics.mean(v[k] for v in enu) for k in range(3)] if enu else None}
 
@@ -178,8 +185,8 @@ def dynamic_d03():
 def self_test():
     assert time_domains(20,40,2,10,10)['processing_seconds']==4
     assert wilson(0,0)['rate'] is None and wilson(90,100)['ci95'][0]<0.9<wilson(90,100)['ci95'][1]
-    trials=[{'id':f'p{i}','seed':i,'target_present':True,'verified_success':i<90} for i in range(100)]+[
-            {'id':f'a{i}','seed':i,'target_present':False,'detected':i==0} for i in range(100)]
+    trials=[{'id':f'p{i}','seed':i,'observation_seconds':10,'target_present':True,'verified_success':i<90} for i in range(100)]+[
+            {'id':f'a{i}','seed':i,'observation_seconds':10,'target_present':False,'detected':i==0} for i in range(100)]
     assert acquisition_statistics(trials)['working_point_observed']
     records=[{'sequence':p,'kind':'nav','prn':6+p,'generation':1,'valid':True,'ephemeris_ready':True,'available_sample':1} for p in range(4)]
     solutions=[]
@@ -221,7 +228,7 @@ def main():
     elif kind=='tracking':result=tracking_quality(data['rows'],data.get('reacquisitions',0),data.get('duration_s',60),data.get('fs',FS))
     elif kind=='words':result=word_quality(data['words'])
     elif kind=='recovery':result=recovery_quality(data['trace'],data.get('fs',FS))
-    elif kind=='ttff':result=causal_ttff(data['records'],data['solutions'],data.get('fs',FS),data.get('start_sample',0))
+    elif kind=='ttff':result=causal_ttff(data['records'],data['solutions'],data.get('fs',FS),data.get('start_sample',0),data.get('window_s',180))
     elif kind=='position':result=position_statistics(data['epochs'],data.get('truth_ecef'),data['latitude_deg'],data['longitude_deg'],data['confirmation_epoch_sample'],data.get('fs',FS),data.get('confirmation_available_sample'))
     elif kind=='timing':result=time_domains(**data['timing'])
     else:raise ValueError(f'unknown metric {kind}')
