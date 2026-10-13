@@ -1,7 +1,9 @@
 `timescale 1ns/1ps
 // Exact 16368-point code correlation, four noncoherent windows, local grid.
 // Initial candidate must come from the RTL PCPS detector, no host inputs.
-module acquisition_refine (
+module acquisition_refine #(
+    parameter integer LAG_RADIUS=16,FREQUENCY_RADIUS=5
+) (
     input logic clk,reset_n,request,
     input logic [5:0] prn,
     input logic [13:0] coarse_lag,
@@ -63,7 +65,8 @@ module acquisition_refine (
             if(state!=IDLE && state!=RESULT) cycles<=cycles+1'b1;
             case(state)
                 IDLE: if(request) begin
-                    candidate_prn<=prn;base_lag<=32'(coarse_lag)-16;base_doppler<=coarse_doppler-65600;
+                    candidate_prn<=prn;base_lag<=32'(coarse_lag)-32'(LAG_RADIUS);
+                    base_doppler<=coarse_doppler-32'(FREQUENCY_RADIUS*13120);
                     ref_sample<=reference_sample;lag_offset<=0;frequency_offset<=0;window_number<=0;
                     sample_number<=0;candidate_power<=0;candidate_energy<=0;peak_power<=0;
                     best_energy<=0;cycles<=0;state<=INIT;
@@ -83,11 +86,11 @@ module acquisition_refine (
                             peak_power<=power_sum;best_energy<=energy_sum;
                             result_lag<=current_lag;result_doppler<=current_doppler;
                         end
-                        if(lag_offset==32 && frequency_offset==10) begin
+                        if(lag_offset==6'(2*LAG_RADIUS) && frequency_offset==4'(2*FREQUENCY_RADIUS)) begin
                             detected<=power_sum>peak_power ? power_sum>energy_sum*4 : peak_power>best_energy*4;
                             search_cycles<=cycles+1'b1;result_valid<=1;state<=RESULT;
                         end else begin
-                            if(lag_offset==32) begin lag_offset<=0;frequency_offset<=frequency_offset+1'b1;end
+                            if(lag_offset==6'(2*LAG_RADIUS)) begin lag_offset<=0;frequency_offset<=frequency_offset+1'b1;end
                             else lag_offset<=lag_offset+1'b1;
                             sample_number<=0;window_number<=0;candidate_power<=0;candidate_energy<=0;state<=INIT;
                         end
@@ -98,4 +101,6 @@ module acquisition_refine (
             endcase
         end
     end
+    initial if(LAG_RADIUS<0 || LAG_RADIUS>16 || FREQUENCY_RADIUS<0 || FREQUENCY_RADIUS>5)
+        $fatal(1,"Invalid refinement grid configuration");
 endmodule

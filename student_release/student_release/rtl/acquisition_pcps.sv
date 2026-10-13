@@ -173,7 +173,10 @@ module acquisition_pcps #(
                     if(prn==6'(LAST_PRN)) begin state<=FINISHED;finished<=1;end
                     else begin prn<=prn+1'b1;state<=CODE_INIT;end
                 end
-                FINISHED: begin end
+                FINISHED: if(request) begin
+                    capture_count<=0;cycles<=0;finished<=0;result_valid<=0;
+                    prn<=6'(FIRST_PRN);state<=CAPTURE;
+                end
                 default: state<=IDLE;
             endcase
         end

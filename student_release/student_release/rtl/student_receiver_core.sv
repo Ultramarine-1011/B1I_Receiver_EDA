@@ -17,13 +17,14 @@ module student_receiver_core #(
     output logic record_valid,
     input logic record_ready
 );
-    generate if(USE_PCPS==0 || CHANNELS==1) begin: single
+    generate if(USE_PCPS==0) begin: single
         receiver_single #(.USE_PCPS(USE_PCPS),.SEARCH_PRN(SEARCH_PRN),
             .SEARCH_LAG_FIRST(SEARCH_LAG_FIRST),.SEARCH_LAG_LAST(SEARCH_LAG_LAST),.SEARCH_LAG_STEP(SEARCH_LAG_STEP),
             .SEARCH_DOPPLER_FIRST(SEARCH_DOPPLER_FIRST),.SEARCH_DOPPLER_LAST(SEARCH_DOPPLER_LAST),
             .SEARCH_DOPPLER_STEP(SEARCH_DOPPLER_STEP)) receiver(.*);
     end else begin: multi
-        receiver_multichannel receiver(.*);
+        receiver_multichannel #(.CHANNELS(CHANNELS)) receiver(.*);
     end endgenerate
-    initial if(CHANNELS!=1 && CHANNELS!=4) $fatal(1,"Only minimum one/four-channel configurations are implemented");
+    initial if(CHANNELS!=1 && CHANNELS!=2 && CHANNELS!=4 && CHANNELS!=12)
+        $fatal(1,"Supported independent-channel configurations are 1/2/4/12");
 endmodule

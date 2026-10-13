@@ -37,6 +37,7 @@ $studentDatapath+=@('student_release/student_release/rtl/fft4096_serial.sv','stu
 $studentDatapath+=@('student_release/student_release/rtl/nh20_sync.sv','student_release/student_release/rtl/d1_word_sync.sv','student_release/student_release/rtl/navigation_d1.sv')
 $studentDatapath+=@('student_release/student_release/rtl/receiver_single.sv','student_release/student_release/rtl/receiver_channel.sv','student_release/student_release/rtl/receiver_multichannel.sv')
 $studentDatapath+=@('student_release/student_release/rtl/tracking_record_framer.sv')
+$studentDatapath+=@('student_release/student_release/rtl/satellite_manager.sv')
 if($Task -eq 'bridge') {
     Sim 'tb_stream_unpacker' @($student[1],'tb/tb_stream_unpacker.sv') $root
     Sim 'tb_student_transport' @($student + $studentDatapath + 'tb/tb_student_transport.sv') $root
