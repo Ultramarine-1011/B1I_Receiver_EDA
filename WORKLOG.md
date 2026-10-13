@@ -24,3 +24,4 @@
 | 2026-10-13 18:32 | 最終源完整性 | baseline/teacher public/plan | Get-FileHash检查15教师公共文件、6原RTL/LUT均与初始manifest一致 PASS；plan本轮未改，现有hash与旧GOAL历史不同，记录现有值不强制回滚 | reports/local/final_integrity.json | 更新唯一STATUS与可复现断点 |
 | 2026-10-13 18:33 | 本轮停止/最低交付交接 | GOAL/STATUS/WORKLOG、三份报告与源码/证据 | 最终官方所有学生RTL编译/TB0.01s PASS；完整功能自检由自有wrapper如实返回1 FAIL，未凑记录。最终源码一致性/链接检查PASS：12个文档链接、8份当前PASS日志均退出0；delivery_manifest保存哈希。当前GOAL最低模块/报告验收完成，接收机集成仍INCOMPLETE，不扩展全系统 | reports/local/official_runner_current.log、official_functional_current.log、delivery_consistency.log、delivery_manifest.json | 下一条复现命令：scripts/run_local_verilator.ps1 -Task nhd1（已有模块演示）；停止捕获优化/全系统扩展 |
 
+| 2026-10-13 20:26 | E启动/范围归档 | GOAL/AGENTS/STATUS、docs/archive/GOAL_ABCD* | git fetch origin main退出0；main/origin/main均3d09daf、ahead/behind=0/0、启动工作区干净；教师契约/schema3已核对，本地IF409200000字节忽略。RTL尚未修改/NOT_RUN | 原A–D日志保留；GOAL当前E0–E4验收 | E0合成端到端 |

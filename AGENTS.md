@@ -13,7 +13,7 @@
 - `EDA_ENV_STATUS.md`：已验证环境事实；按时间读取追加记录，不能把早期“尚未验证”当作当前状态。
 - `rtl/`、`model/`、`tb/`、`reports/`：实现和验证证据。
 
-用户当前指令优先于仓库中的执行计划。“只整理文档”“审查”“暂停”不授权继续实现。当前执行状态以 `STATUS.md` 为准。2026-10-13 授权按 A→B/C→D 完成10/16捕获、10/18跟踪和10/25 NH/D1最低交付；教师student_release为最新顶层/输入/输出契约，9.28 RTL为唯一设计起点，保留10.13 Skills/环境记录。
+用户当前指令优先于仓库中的执行计划。“只整理文档”“审查”“暂停”不授权继续实现。当前执行状态以 `STATUS.md` 为准。2026-10-13新授权E0→E4最小端到端集成、教师100秒真实场景功能验收、分阶段Git提交与正常推送；原A/B/C/D目标已归档。教师student_release为顶层/输入/输出契约，复用9.28及已验证A–D模块，保留10.13 Skills/环境记录。
 
 ## 启动顺序
 
@@ -60,7 +60,7 @@
 ## EDA 与工作区边界
 
 - Windows 编辑，当前使用个人 WSL Ubuntu + Verilator/Python；VCS/DC/ICC/PT仅保留历史环境，当前不执行。
-- 复用 `7901_15@192.168.159.128`、现有 RSA key、`~/eda_env.sh` 和 `~/eda_project/`；具体命令见 `docs/NEXT_STEPS.md`。
+- 本轮仅现有本地WSL2 Ubuntu与Verilator/Python。历史SSH/VMware环境记录保留，不访问、不启动、不修复。
 - 不重新扫描已确认的 VMware、SSH、EDA、license、PDK/库环境；只有实际测试与记录矛盾时才做针对性排查。
 - 不修改 `/home/IC/.bashrc`、license 文件/daemon、系统网络或系统 EDA 安装。
 - Windows 工作区为编辑源；同步本次需要的源文件、配置和向量到 Linux，回收日志。保留用户已有修改与历史证据。

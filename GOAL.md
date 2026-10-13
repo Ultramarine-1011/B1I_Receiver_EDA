@@ -1,48 +1,50 @@
-# 近期实验交付目标（2026-10-13）
+# E阶段：B1I最小端到端集成与教师功能验收
 
-目标与验收由本文件定义；**唯一当前执行状态为 [STATUS.md](STATUS.md)**，实际命令、退出码、证据及断点追加到 [WORKLOG.md](WORKLOG.md)。旧目标留存于 `docs/archive/GOAL_2026-09-28.md`，不再约束本轮。
+2026-10-13用户授权E0→E1→E2→E3→E4连续自主设计、实现、测试、修复、分阶段Git提交及正常推送。唯一状态见[STATUS.md](STATUS.md)，实际命令和证据见[WORKLOG.md](WORKLOG.md)。A–D目标归档于[原文](docs/archive/GOAL_ABCD_2026-10-13_original.md)，原日志和已验证模块保留。
 
-## 基线与范围
+## 执行边界
 
-- 唯一设计起点：根目录 2026-09-28 RTL/model/TB，不引入之后的算法设计；新增内容只服务近期交付。
-- 保留 2026-10-13 `.agents/`、`SKILLS_STATUS.md`、`EDA_ENV_STATUS.md` 和历史日志。
-- 教师 `student_release/student_release/` 是最新顶层/输入/输出契约。公共 `input/sim/interface/scripts/tools/submission` 保持原样；学生实现放其 `rtl/`，自有验证入口放根目录 `scripts/`、`tb/`。
-- `plan.md` 保持历史冻结版，其 SRAM、12 通道和旧禁令不覆盖本次纯仿真接口。
-- Windows 编辑，WSL Ubuntu + Verilator 功能仿真。暂不运行、修复 VMware/SSH/VCS/DC/ICC/PT；不做 SRAM、架构重构、额外模型参数扫描、极限压力测试或参数过度优化。
-- 常规可逆实现选择自主完成；真值仅用于独立激励和评分，不进入被测接收机反馈。禁止伪造记录、硬编码卫星真值或修改教师自检凑 PASS。
+- 启动实查最新main；本轮起点3d09daf，远端同提交，工作区干净。
+- Windows源码/PowerShell入口，现有WSL2 Ubuntu、Verilator、g++、make、Python仿真；复用scripts/run_local_verilator.ps1及教师仿真入口。不访问/启动/修复VMware、远程EDA、SSH或VCS/DC/ICC/PT/DRC/LVS及其库/license。
+- 复用已验证RTL/模型/TB，学生实现主要在student_release/student_release/rtl；自有验证在model/tb/scripts/reports。plan.md历史冻结版保留，教师公开接口优先。不提前扩展12通道/ASIC后端。
+- 教师公共input/sim/interface/scripts/tools/submission及README保持不变。scenario.if2不进Git，不上传数据；构建/缓存忽略。真值仅供激励/独立评分，不供DUT；禁止硬编码卫星答案、伪造记录或以软件后处理替代RTL。
+- 验证先短后长；性能问题先量化，不盲跑全网格。保留FAIL原因，不放宽评分凑PASS。结构检查、导航恢复、定位分别报告。
 
-## 依赖与最低交付
+## 验收清单
 
-按 **A → B/C → D** 推进，先真实运行，再完善报告。模块、前端、闭环和完整接收机通过必须分别陈述。
+### E0：合成单星端到端
 
-### A：本机桥接与冒烟
+- [ ] E0.1 解包→捕获→跟踪在同一学生顶层协作，16→1握手、反压和真实样本编号无丢失/重复。
+- [ ] E0.2 按lag_samples/result_ref/Doppler移交，推进到实际跟踪首样本；覆盖正负码偏、频偏、计算延迟及初始化边界。
+- [ ] E0.3 真实type5/type1、32字节小端、28→24bit Prompt缩位/量纲/schema3、仲裁和背压稳定；实际流水与待发记录排空后唯一type6。
+- [ ] E0.4 原模块及新增端到端TB实际PASS，教师decode_records回读，独立核对捕获/连续Prompt/码与载波/样本时间/end。E0不要求四星self_check PASS。
 
-- [x] A1 实测 WSL Ubuntu、Verilator、C++、Python；只补必要依赖。
-- [x] A2 记录 9.28 源文件和教师公共文件 SHA256，复用旧 RTL 保持算法/时间语义。
-- [x] A3 16→1 解包自检：32 bit=16×2 bit、LSB lane 最早，握手 +16，样本引用 +0..15，输入空拍、后级等待、最后16点完整处理。
-- [x] A4 官方新顶层实际编译并运行 0.01 s（163680 样本/40920 字节）。最后输入传输后 drain，唯一且最后的 type=6，输出背压时保持。没有真实捕获/导航时完整自检应 FAIL，明确保留。
+### E1：真实单星捕获与稳定跟踪
 
-### B：捕获报告，2026-10-16 23:59
+- [ ] 本地教师40dB-Hz IF由短窗口扩大，真实PRN/Doppler搜索且可重复type5检出。
+- [ ] 诊断频差拉入；必要的最小FLL/细频搜索有依据，稳定锁定type1与连续Prompt。
+- [ ] 实测逻辑周期/墙钟，按需要改进搜索；软件捕获答案不得初始化DUT。
 
-- [x] B1 一个最小可解释的码相位×频率搜索，设计覆盖全2046 chip、±10 kHz；写明预算。
-- [x] B2 复用旧 PRN/carrier，完成可运行的单 PRN 捕获 RTL/TB：单格点、正负频偏、错误 PRN、码偏、时间戳和判决（4用例31格点，未全范围）。
-- [x] B3 交 `docs/ACQUISITION_REPORT.md`：框图、状态、端口、公式、位宽、预算、实际命令/结果、问题与未覆盖范围。子集验证不能冒充全范围测试。
-- 满足报告最低可验证交付后停止捕获优化。
+### E2：真实NH/D1导航恢复
 
-### C：跟踪报告，2026-10-18 23:59
+- [ ] 实际Prompt贯通nh20_sync/d1_word_sync/BCH；核对NH相位、位边界/极性、连续子帧确认及失步处理。
+- [ ] 从真实解码恢复subframe_id/SOW/字与导航时间，诚实维护locked/nh_valid/frame_valid/time_valid/bch_valid并输出type2。
+- [ ] 至少一星连续真实D1字和可靠时间可独立核对；prompt_d1.py仅诊断。
 
-- [x] C1 9.28 frontend 在本机 Verilator 实际回归。
-- [x] C2 简化 DLL 与 Costas PLL（必要时 FLL→PLL）反馈闭环，复用既有模型研究；静态正负误差与 NH 翻转验证（两例各1s，非完整场景）。
-- [x] C3 可复现 Prompt/E/L、误差、修正量和码/载波状态，证明上一窗口反馈至 NCO。
-- [x] C4 交 `docs/TRACKING_REPORT.md`，区分前端与闭环证据；动态、12路及未覆盖情形明确列出。
+### E3：最小四星与共同历元
 
-### D：NH/位同步/D1 实验，2026-10-25 23:59
+- [ ] 复用单通道，最低PRN搜索/分配/generation管理，同一IF时间轴至少四星实际捕获/跟踪。
+- [ ] 真实码周期/码片/分数与导航锚点，一秒共同接收历元type4；有效性条件齐全，不重复/不混旧generation/失锁后撤销。
+- [ ] 真实100秒原始check_records.py、self_check.py退出0；完整样本数1,636,800,000，唯一最后end，数据关联正确。
+- [ ] 原始route_a_position.py实际运行并分别报告定位PASS/FAIL；有效定位是争取项，结构PASS不能冒充定位成功。
 
-- [x] D1 从可靠1 ms Prompt 搜索 NH20 相位，恢复20 ms位边界和软/硬位；覆盖起始相位和位反相（实际RTL Prompt999窗/29恒定位；模块测试3相位）。
-- [x] D2 前导码、30 bit字边界、去交织、BCH(15,11)、D1字，保留原始/解码位对照（合成Prompt模块测试9字，非实收导航/完整帧确认）。
-- [x] D3 教师 `prompt_d1.py` 仅作独立软件诊断，不能冒充 RTL 完成（decode_word独立核对9字）。
-- [x] D4 至少一个真实运行的 Prompt→位→帧/字实验及 `docs/NH_D1_REPORT.md`；集成未成时交模块与实际限制。
+### E4：固化交付
 
-## 证据与停止
+- [ ] 最终receiver_records.bin及必要回归、命令/配置/退出码/报告可复现。
+- [ ] STATUS/WORKLOG/设计/GOAL同步；教师公共文件哈希不变，无大型IF/构建/缓存提交。
+- [ ] 分阶段Git提交，正常权限和远端同步下推送；不强推/覆盖已有修改。
+- [ ] 最终简报列实际通过/未通过、复现入口、交付路径和commit。
 
-每步保存命令、配置、源哈希、退出状态和自动 PASS/FAIL；未运行标 NOT_RUN，旧 VCS 只作历史依据。STATUS只留一条下一任务。停止前写本轮文件、实际命令/结果及下一可执行入口。全部验收满足才完成；工具限额断点不算完成。不扩大范围。
+## 停止条件
+
+完成最低交付后停止，不主动扩展架构。仅缺必需文件/权限、超范围不可逆决策、合理诊断仍不可解决的实际技术阻塞，或量化证明超出本地计算资源/可用执行时间时请求介入。会话/工具限额不是完成，必须保存证据、唯一下一任务和断点。
