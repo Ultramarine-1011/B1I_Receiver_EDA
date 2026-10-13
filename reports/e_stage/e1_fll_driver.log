@@ -1,0 +1,21 @@
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:63:88: syntax error, unexpected cross, expecting ')'
+   63 |     function automatic logic signed [31:0] atan_turn_q16(input logic signed [63:0] dot,cross);
+      |                                                                                        ^~~~~
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:67:14: syntax error, unexpected '=', expecting '('
+   67 |             x=dot<0 ? -dot : dot;y=dot<0 ? -cross : cross;z=0;
+      |              ^
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:68:17: syntax error, unexpected integer, expecting IDENTIFIER or genvar or randomize
+   68 |             for(integer k=0;k<16;k=k+1) begin
+      |                 ^~~~~~~
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:95:33: syntax error, unexpected '=', expecting '('
+   95 |         if(ip<0) phase_numerator=-phase_numerator;
+      |                                 ^
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:108:27: syntax error, unexpected '=', expecting '('
+  108 |             fll_adjustment=(fll_frequency*3277) >>> 16;  
+      |                           ^
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:122:32: syntax error, unexpected '=', expecting '('
+  122 |             frequency_mean_next=frequency_mean_next+(((1000*(dphase-64'($signed(previous_phase_q16)))-frequency_mean_next)*3277) >>> 16);
+      |                                ^
+%Error: Internal Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:4:8: ../V3ParseSym.h:124: Symbols suggest ending FUNC 'atan_turn_q16' but parser thinks ending MODULE 'tracking_channel_minimal'
+    4 | module tracking_channel_minimal #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~

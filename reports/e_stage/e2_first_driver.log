@@ -1,0 +1,178 @@
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:45:49: Operator DIV expects 43 bits on the RHS, but RHS's VARREF 'EPL_HALF_SPACING_DENOMINATOR' generates 32 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+   45 |       (ONE_CHIP_Q * EPL_HALF_SPACING_NUMERATOR) / EPL_HALF_SPACING_DENOMINATOR;
+      |                                                 ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.032
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:96:21: Operator ASSIGN expects 43 bits on the Assign RHS, but Assign RHS's SUB generates 44 bits.
+                                                                                                                                                                   : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+   96 |         add_spacing = sum - {1'b0, CODE_MODULUS_Q};
+      |                     ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:117:18: Operator ASSIGN expects 43 bits on the Assign RHS, but Assign RHS's SUB generates 44 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  117 |       phase_next = phase_sum - {1'b0, CODE_MODULUS_Q};
+      |                  ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:129:22: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  129 |     prompt_index_now = phase_acc >> PHASE_FRAC;
+      |                      ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:130:21: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  130 |     early_index_now = early_phase >> PHASE_FRAC;
+      |                     ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:131:20: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  131 |     late_index_now = late_phase >> PHASE_FRAC;
+      |                    ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:132:23: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  132 |     prompt_index_next = phase_next >> PHASE_FRAC;
+      |                       ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:133:22: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  133 |     early_index_next = early_phase_next >> PHASE_FRAC;
+      |                      ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:134:21: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  134 |     late_index_next = late_phase_next >> PHASE_FRAC;
+      |                     ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:142:23: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  142 |     init_prompt_index = init_phase_normalized >> PHASE_FRAC;
+      |                       ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:143:22: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  143 |     init_early_index = init_early_phase >> PHASE_FRAC;
+      |                      ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/code_nco.sv:144:21: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SHIFTR generates 43 bits.
+                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.code_source'
+  144 |     init_late_index = init_late_phase >> PHASE_FRAC;
+      |                     ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/epl_correlator.sv:122:33: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'window_sample_count' generates 14 bits.
+                                                                                                                                                                           : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.correlator'
+  122 |         if (window_sample_count == WINDOW_SAMPLES - 1) begin
+      |                                 ^~
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/carrier_nco_mixer.sv:59:18: Operator ASSIGN expects 10 bits on the Assign RHS, but Assign RHS's SHIFTR generates 32 bits.
+                                                                                                                                                                            : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend.carrier'
+   59 |     sine_address = rounded_phase >> (PHASE_WIDTH-ADDRESS_BITS);
+      |                  ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:92:29: Operator ADD expects 42 bits on the RHS, but RHS's VARREF 'sample_energy' generates 29 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend'
+   92 |     energy_sum = energy_acc + sample_energy;
+      |                             ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:125:30: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'ALIGN_FIRST_WINDOW' generates 32 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend'
+  125 |       integration_started <= !ALIGN_FIRST_WINDOW || init_code_phase_q == 0
+      |                              ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:143:26: Operator ASSIGNDLY expects 43 bits on the Assign RHS, but Assign RHS's COND generates 44 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend'
+  143 |         end_phase_delayed<=code_next_sum>={1'b0,CODE_MODULUS_Q} ?
+      |                          ^~
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend_spaced.sv:157:26: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'energy_count' generates 14 bits.
+                                                                                                                                                                                     : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking.frontend'
+  157 |         if (energy_count == WINDOW_SAMPLES-1) begin
+      |                          ^~
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend.sv:75:29: Operator ADD expects 42 bits on the RHS, but RHS's VARREF 'sample_energy' generates 29 bits.
+                                                                                                                                                                             : ... note: In instance 'tb_receiver_real.public_tb.dut.pcps_search.fine.correlator'
+   75 |     energy_sum = energy_acc + sample_energy;
+      |                             ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend.sv:102:30: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'ALIGN_FIRST_WINDOW' generates 32 bits.
+                                                                                                                                                                             : ... note: In instance 'tb_receiver_real.public_tb.dut.pcps_search.fine.correlator'
+  102 |       integration_started <= !ALIGN_FIRST_WINDOW || init_code_phase_q == 0
+      |                              ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_frontend.sv:117:26: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'energy_count' generates 14 bits.
+                                                                                                                                                                              : ... note: In instance 'tb_receiver_real.public_tb.dut.pcps_search.fine.correlator'
+  117 |         if (energy_count == WINDOW_SAMPLES-1) begin
+      |                          ^~
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/nh20_sync.sv:35:79: Operator NEGATE expects 64 bits on the LHS, but LHS's VARREF 'total' generates 34 bits.
+                                                                                                                                                                     : ... note: In instance 'tb_receiver_real.public_tb.dut.navigation.nh'
+   35 |                 if(training_count>=20) scores_next[h]=scores[h]+64'(total<0 ? -total : total);
+      |                                                                               ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:162:64: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'ENABLE_CARRIER_AID' generates 32 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking'
+  162 |             code_step_q<=33'(64'sh20000000+(ENABLE_CARRIER_AID ? 64'($signed(init_doppler_word))/763 : 64'sd0));
+      |                                                                ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:189:45: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'ENABLE_CARRIER_AID' generates 32 bits.
+                                                                                                                                                                                    : ... note: In instance 'tb_receiver_real.public_tb.dut.tracking'
+  189 |                         (ENABLE_CARRIER_AID ? (64'($signed(base_doppler))+carrier_delta_word)/763 : 64'sd0));
+      |                                             ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/acquisition_refine.sv:41:38: Operator SUB expects 43 bits on the RHS, but RHS's CASTWRAP generates 32 bits.
+                                                                                                                                                                              : ... note: In instance 'tb_receiver_real.public_tb.dut.pcps_search.fine'
+   41 |         initial_code_phase=43'((16368-int'(current_lag))%16368)<<29;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/student_receiver_core.sv:63:49: Operator SUB expects 64 bits on the RHS, but RHS's CASTWRAP generates 32 bits.
+                                                                                                                                                                                 : ... note: In instance 'tb_receiver_real.public_tb.dut'
+   63 |         phase_samples=advance_samples+64'((16368-int'(acq_lag))%16368);
+      |                                                 ^
+%Warning-WIDTHEXPAND: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/student_receiver_core.sv:64:33: Operator SUB expects 64 bits on the RHS, but RHS's CASTWRAP generates 32 bits.
+                                                                                                                                                                                 : ... note: In instance 'tb_receiver_real.public_tb.dut'
+   64 |         code_advance=(64'((16368-int'(acq_lag))%16368)<<29)+advance_samples*
+      |                                 ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/student_receiver_core.sv:65:41: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'USE_PCPS' generates 32 bits.
+                                                                                                                                                                                : ... note: In instance 'tb_receiver_real.public_tb.dut'
+   65 |             64'(64'sh20000000+(USE_PCPS ? 64'($signed(acq_doppler))/763 : 64'sd0));
+      |                                         ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/student_receiver_core.sv:188:56: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'USE_PCPS' generates 32 bits.
+                                                                                                                                                                                 : ... note: In instance 'tb_receiver_real.public_tb.dut'
+  188 |                     if(processed_samples==64'(USE_PCPS ? 65471 : 16367)) state<=SEARCH;
+      |                                                        ^
+%Warning-WIDTHTRUNC: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/student_receiver_core.sv:191:25: Logical operator IF expects 1 bit on the If, but If's VARREF 'USE_PCPS' generates 32 bits.
+                                                                                                                                                                                 : ... note: In instance 'tb_receiver_real.public_tb.dut'
+  191 |                 SEARCH: if(USE_PCPS) begin
+      |                         ^~
+make: Entering directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_real'
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /usr/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -x c++-header Vtb_receiver_real__pch.h -o Vtb_receiver_real__pch.h.fast.gch
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -x c++-header Vtb_receiver_real__pch.h -o Vtb_receiver_real__pch.h.slow.gch
+echo "" > Vtb_receiver_real__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.fast -c -o Vtb_receiver_real.o Vtb_receiver_real.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.fast -c -o Vtb_receiver_real___024root__DepSet_hb40e9618__0.o Vtb_receiver_real___024root__DepSet_hb40e9618__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.fast -c -o Vtb_receiver_real___024root__DepSet_h34ee367d__0.o Vtb_receiver_real___024root__DepSet_h34ee367d__0.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.fast -c -o Vtb_receiver_real___024root__DepSet_h34ee367d__1.o Vtb_receiver_real___024root__DepSet_h34ee367d__1.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.fast -c -o Vtb_receiver_real__main.o Vtb_receiver_real__main.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.slow -c -o Vtb_receiver_real__ConstPool_0.o Vtb_receiver_real__ConstPool_0.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.slow -c -o Vtb_receiver_real___024root__Slow.o Vtb_receiver_real___024root__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.slow -c -o Vtb_receiver_real___024root__DepSet_hb40e9618__0__Slow.o Vtb_receiver_real___024root__DepSet_hb40e9618__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.slow -c -o Vtb_receiver_real___024root__DepSet_h34ee367d__0__Slow.o Vtb_receiver_real___024root__DepSet_h34ee367d__0__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.slow -c -o Vtb_receiver_real___024root__DepSet_h34ee367d__1__Slow.o Vtb_receiver_real___024root__DepSet_h34ee367d__1__Slow.cpp
+g++   -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_receiver_real__pch.h.slow -c -o Vtb_receiver_real__Syms.o Vtb_receiver_real__Syms.cpp
+g++    verilated.o verilated_timing.o verilated_threads.o Vtb_receiver_real__ALL.a    -pthread -lpthread -latomic   -o Vtb_receiver_real
+rm Vtb_receiver_real__ALL.verilator_deplist.tmp
+make: Leaving directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_real'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 1.752 MB sources in 21 modules, into 2.543 MB in 11 C++ files needing 0.006 MB
+- Verilator: Walltime 14.779 s (elab=0.017, cvt=0.159, bld=14.227); cpu 0.257 s on 2 threads; alloced 29.434 MB
+REAL_RTL_ACQUISITION prn=8 detected=1 lag=12603 fcw=131200 cycles=56354731
+REAL_D1_WORD number=1 raw=389023f0 info=389023f bch=1 start=100201131 frame=0 time=0
+REAL_D1_WORD number=2 raw=22a43a3c info=02e3824 bch=1 start=110021931 frame=0 time=0
+REAL_D1_WORD number=3 raw=016bfe99 info=003f99e bch=1 start=119842731 frame=0 time=0
+REAL_D1_WORD number=4 raw=2bc95b88 info=03d199d bch=1 start=129663531 frame=0 time=0
+REAL_D1_WORD number=5 raw=2aa83561 info=03f2007 bch=1 start=139484331 frame=0 time=0
+REAL_D1_WORD number=6 raw=1dff8540 info=017c7f3 bch=1 start=149305131 frame=0 time=0
+REAL_D1_WORD number=7 raw=2bbf2318 info=03fa971 bch=1 start=159125931 frame=0 time=0
+REAL_D1_WORD number=8 raw=02d74e47 info=00c98fa bch=1 start=168946731 frame=0 time=0
+REAL_D1_WORD number=9 raw=1264d650 info=00a4cae bch=1 start=178767531 frame=0 time=0
+REAL_D1_WORD number=10 raw=365e2a15 info=029bee0 bch=1 start=188588331 frame=0 time=0
+REAL_D1_WORD number=1 raw=389033ff info=389033f bch=1 start=198409131 frame=0 time=0
+REAL_D1_WORD number=2 raw=27f59848 info=02e53f4 bch=1 start=208229931 frame=0 time=0
+REAL_D1_WORD number=3 raw=2011df2a info=020585f bch=1 start=218050731 frame=0 time=0
+REAL_D1_WORD number=4 raw=273fdf40 info=02bdb7f bch=1 start=227871531 frame=0 time=0
+REAL_D1_WORD number=5 raw=3dd7d77f info=034cfff bch=1 start=237692331 frame=0 time=0
+REAL_D1_WORD number=6 raw=17d5d5dd info=00c47ff bch=1 start=247513131 frame=0 time=0
+REAL_D1_WORD number=7 raw=02668529 info=00ac0a3 bch=1 start=257333931 frame=0 time=0
+REAL_D1_WORD number=8 raw=0fadb904 info=01f7335 bch=1 start=267154731 frame=0 time=0
+REAL_D1_WORD number=9 raw=3002d07e info=020c40c bch=1 start=276975531 frame=0 time=0
+REAL_D1_WORD number=10 raw=0b8a64ae info=01da10a bch=1 start=286796331 frame=0 time=0
+REAL_D1_WORD number=1 raw=389043f4 info=389043f bch=1 start=296617131 frame=1 time=1
+REAL_D1_WORD number=2 raw=22a5b28f info=02e6834 bch=1 start=306437931 frame=1 time=1
+REAL_D1_WORD number=3 raw=00000000 info=0000000 bch=1 start=316258731 frame=1 time=1
+END record sample_index=327360000
+REAL_RTL_STREAM_PASS samples=327360000
+PASS receiver_records.bin records=20007
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/sim/receiver_tb_template.sv:125: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 25s; walltime 361.924 s; speed 68.916 ms/s
+- Verilator: cpu 358.292 s on 1 threads; alloced 249 MB
+PASS records=20007 bytes=640224 types={'acquisition': 1, 'tracking': 19995, 'navigation': 10, 'end': 1}

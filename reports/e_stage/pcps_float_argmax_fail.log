@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\model\pcps_fixed_score.py", line 47, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\model\pcps_fixed_score.py", line 39, in main
+    assert int(row['lag_samples'])==r['lag_samples'],(row,r)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ({'prn': '16', 'lag_samples': '8588', 'doppler_word': '1574400', 'peak': '33569457', 'mean': '6667008', 'detected': '0', 'cycles': '118664666'}, {'prn': 16, 'hz': -4500, 'fft_index': 1008, 'lag_samples': 4032, 'peak': 523434.22296307585, 'mean': 104115.6982006286, 'ratio': 5.027428447479936})

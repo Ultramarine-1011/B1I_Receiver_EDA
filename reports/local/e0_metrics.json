@@ -6,9 +6,9 @@
     "hz": 0,
     "tracking": 249,
     "locked": 56,
-    "max_code_error_chip": 0.07608985900878906,
+    "max_code_error_chip": 0.07616221904754639,
     "tail_max_frequency_error_hz": 0.007621943950653076,
-    "tail_max_phase_error_turn": 0.010937451384961605,
+    "tail_max_phase_error_turn": 0.010929829441010952,
     "first_prompt_float_relative_error": 2.1356101671694692e-07,
     "acquisition_cycles": 183151
   },
@@ -21,7 +21,7 @@
     "locked": 55,
     "max_code_error_chip": 0.0629381537437439,
     "tail_max_frequency_error_hz": 0.008575618267059326,
-    "tail_max_phase_error_turn": 0.00043472088873386383,
+    "tail_max_phase_error_turn": 0.0004356745630502701,
     "first_prompt_float_relative_error": 1.3370772303001946e-05,
     "acquisition_cycles": 238399
   },

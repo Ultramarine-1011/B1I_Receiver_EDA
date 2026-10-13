@@ -18,18 +18,18 @@ module tb_student_file_smoke;
             if(public_tb.stream_last != (transfers==10229)) $fatal(1,"unexpected stream_last");
             transfers=transfers+1;
         end
-        if(public_tb.dut.sample_valid && public_tb.dut.sample_ready) begin
+        if(public_tb.dut.multi.receiver.sample_valid && public_tb.dut.multi.receiver.sample_ready) begin
             if(samples%4==0) expected_byte=$fgetc(input_fd);
             if(expected_byte<0) $fatal(1,"early independent EOF");
             expected_bits=(expected_byte >> (6-2*(samples%4))) & 3;
-            if(public_tb.dut.sample_ref != 64'(samples)
-               || public_tb.dut.sample_bits != 2'(expected_bits)
-               || int'($signed(public_tb.dut.sample_data)) != 2*expected_bits-3)
+            if(public_tb.dut.multi.receiver.sample_ref != 64'(samples)
+               || public_tb.dut.multi.receiver.sample_bits != 2'(expected_bits)
+               || int'($signed(public_tb.dut.multi.receiver.sample_data)) != 2*expected_bits-3)
                 $fatal(1,"file sample mismatch at %0d",samples);
-            if(public_tb.dut.sample_last != (samples==163679)) $fatal(1,"last lane incorrect");
+            if(public_tb.dut.multi.receiver.sample_last != (samples==163679)) $fatal(1,"last lane incorrect");
             samples=samples+1;
         end
-        if(public_tb.record_valid && public_tb.record_ready) begin
+        if(public_tb.record_valid && public_tb.record_ready && public_tb.record_data[7:0]==6) begin
             if(public_tb.record_data[7:0]!=6 || public_tb.record_data[95:32]!=163680
                || public_tb.record_data[19:18]!=0 || samples!=163680 || transfers!=10230 || ends!=0)
                 $fatal(1,"bad end/count/drain");

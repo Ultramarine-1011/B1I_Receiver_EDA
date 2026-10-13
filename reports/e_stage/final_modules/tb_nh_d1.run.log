@@ -1,0 +1,11 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/nh_d1' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_nh_d1/Vtb_nh_d1' 
+NH_D1_CASE_PASS case=0 phase=0 inverted=0 bits=111 words=3
+NH_D1_CASE_PASS case=1 phase=7 inverted=1 bits=110 words=3
+NH_D1_CASE_PASS case=2 phase=19 inverted=0 bits=110 words=3
+NH_D1_MODULE_PASS cases=3 words=9 phases=0,7,19 polarity=normal,inverted
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_nh_d1.sv:72: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 80us; walltime 0.021 s; speed 9.932 ms/s
+- Verilator: cpu 0.008 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.150

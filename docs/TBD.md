@@ -9,7 +9,16 @@
 - 固定student_receiver_core端口与256 bit小端记录已发布；type6唯一且最后，排空后提交。无需猜测这些接口。
 - 本机WSL2 Ubuntu/Verilator/g++/make/Python现已实际可用。根9.28五个关键RTL哈希匹配历史manifest。A与C1运行事实见STATUS/WORKLOG，旧VCS不代替新验证。
 
-## 近期仍需落实
+## E阶段当前未决（2026-10-13）
+
+E0单星真实记录与移交、E1真实单星捕获/FLL拉入、E2真实导航字和E3四星短窗已有实跑证据，见STATUS/WORKLOG与RECEIVER_INTEGRATION。下列A–D历史未覆盖项只描述当时范围。
+
+- 完整100秒与最终check_records/self_check/Route A正在运行；未结束不算PASS。当前部分数据Route A实际给出四星星历和33个定位历元，只作为中途诊断。
+- 最终输出完整性、当前源/教师公共文件SHA256、轻量Git交付：结束后固化。
+- 没有隐藏真值，不能把四星位置方程的小残差当成定位精度证明；报告实际解与内部时间一致性。
+- 隐藏/动态/低CNR/失锁重捕未覆盖；本轮不扩展12通道、ASIC后端或SRAM。
+
+## A–D阶段历史未覆盖项（当时记录）
 
 | 事项 | 最小工作 | 实际影响 |
 |---|---|---|

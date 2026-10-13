@@ -25,6 +25,8 @@ module nh20_sync (
     always_comb begin
         best=0;second=0;best_phase=0;term=0;total=0;position=0;
         for(integer h=0;h<20;h=h+1) begin
+            sums_next[h]=0;scores_next[h]=0;
+            if(prompt_valid && !nh_locked) begin
             position=(int'(tick_mod)+h)%20;
             term=34'($signed(prompt_i));
             if(NH[19-position]) term=-term;
@@ -36,6 +38,7 @@ module nh20_sync (
             end
             if(scores_next[h]>best) begin second=best;best=scores_next[h];best_phase=5'(h);end
             else if(scores_next[h]>second) second=scores_next[h];
+            end
         end
     end
     always_ff @(posedge clk or negedge reset_n) begin

@@ -1,0 +1,36 @@
+{
+  "plusargs": "",
+  "timestamp_utc": "2026-10-13T14:45:09.9541664Z",
+  "cwd": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\tracking",
+  "top": "tb_tracking_minimal",
+  "sources": [
+    {
+      "path": "rtl/b1i_prn_gen.sv",
+      "sha256": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475"
+    },
+    {
+      "path": "rtl/code_nco.sv",
+      "sha256": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1"
+    },
+    {
+      "path": "rtl/carrier_nco_mixer.sv",
+      "sha256": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC"
+    },
+    {
+      "path": "rtl/epl_correlator.sv",
+      "sha256": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+      "sha256": "34FE7AB1AB76F65542817E37E25AB8679D2A07C7202B94FC7D0A28FB2C20AB0B"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+      "sha256": "A8D22CD15752E1305908D1769434C6C78ED9460093062A4AD1D6FB81BB74F9CF"
+    },
+    {
+      "path": "tb/tb_tracking_minimal.sv",
+      "sha256": "87AAD86D083CC119607FC05E07D32A42DC3853F20EF0C935E2D1B7F888914700"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "E1_RECORD_SCORE_PASS",
+  "samples": 32736000,
+  "records": 1997,
+  "channels": [
+    {
+      "prn": 8,
+      "lag": 12603,
+      "acquisition_hz": 499.9995231628418,
+      "tracking_windows": 1995,
+      "locked_windows": 1720,
+      "tail_lock": 1.0,
+      "tail_median_hz": 581.1084397137165,
+      "independent_prompt_frequency_hz": 581.0858275259166,
+      "independent_nh_phase": 3,
+      "independent_nh_coherence": 0.9809018300742153
+    }
+  ],
+  "limitation": "No signal-source truth. Teacher frequency/NH diagnostics do not replace RTL navigation."
+}

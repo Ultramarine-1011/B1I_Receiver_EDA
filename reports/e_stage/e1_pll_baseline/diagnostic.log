@@ -1,0 +1,2 @@
+RECORD_ONLY_DIAG frequency_hz 581.1012858913126 nh_phase 3 coherence 0.9772326573191503 locked 0 prompts 995
+TAIL {'usable': 0.99, 'phase_rms_turn': 0.09060552879610269, 'code_mean': 0.007262496948242187, 'freq_mean_hz': 499.5939214155078}

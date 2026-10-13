@@ -1,0 +1,15 @@
+make: Entering directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_real'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_real'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.260 s (elab=0.000, cvt=0.000, bld=0.087); cpu 0.015 s on 2 threads; alloced 7.004 MB
+REAL_RTL_ACQUISITION prn=8 detected=1 lag=12603 fcw=131200 cycles=56354731
+END record sample_index=32736000
+REAL_RTL_STREAM_PASS samples=32736000
+PASS receiver_records.bin records=1997
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/sim/receiver_tb_template.sv:125: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 6s; walltime 57.103 s; speed 98.081 ms/s
+- Verilator: cpu 56.729 s on 1 threads; alloced 249 MB
+PASS records=1997 bytes=63904 types={'acquisition': 1, 'tracking': 1995, 'end': 1}

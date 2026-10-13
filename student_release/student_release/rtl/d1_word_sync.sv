@@ -40,9 +40,12 @@ module d1_word_sync (
         left=0;right=0;
         for(integer k=0;k<15;k=k+1) begin left[14-k]=assembled[29-2*k];right[14-k]=assembled[28-2*k];end
         if(current_word==1) right=assembled[14:0];
-        syndrome_left=syndrome(left);syndrome_right=syndrome(right);
+        syndrome_left=0;syndrome_right=0;
+        if(bit_valid && aligned && bit_count==29) begin
+            syndrome_left=syndrome(left);syndrome_right=syndrome(right);
+        end
         left_fixed=left;right_fixed=right;fix_left=0;fix_right=0;
-        for(integer k=0;k<15;k=k+1) begin
+        if(bit_valid && aligned && bit_count==29) for(integer k=0;k<15;k=k+1) begin
             if(syndrome_left!=0 && syndrome(15'b1<<k)==syndrome_left) begin left_fixed[k]=!left[k];fix_left=1;end
             if(syndrome_right!=0 && syndrome(15'b1<<k)==syndrome_right) begin right_fixed[k]=!right[k];fix_right=1;end
         end

@@ -1,0 +1,22 @@
+FFT_FIXED_MODEL_PASS [{'case': 0, 'inverse': False, 'max_float_absolute_error': 0.0, 'limit': 16}, {'case': 1, 'inverse': False, 'max_float_absolute_error': 7.07297094426561, 'limit': 16}, {'case': 2, 'inverse': True, 'max_float_absolute_error': 7.163327370754708, 'limit': 16}]
+make: Entering directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_fft4096'
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /usr/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+python3 /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtb_fft4096.cpp Vtb_fft4096___024root__DepSet_heb0e2f0c__0.cpp Vtb_fft4096___024root__DepSet_h375a27e2__0.cpp Vtb_fft4096__main.cpp Vtb_fft4096__ConstPool_0.cpp Vtb_fft4096___024root__Slow.cpp Vtb_fft4096___024root__DepSet_heb0e2f0c__0__Slow.cpp Vtb_fft4096___024root__DepSet_h375a27e2__0__Slow.cpp Vtb_fft4096__Syms.cpp > Vtb_fft4096__ALL.cpp
+echo "" > Vtb_fft4096__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o Vtb_fft4096__ALL.o Vtb_fft4096__ALL.cpp
+g++    verilated.o verilated_timing.o verilated_threads.o Vtb_fft4096__ALL.a    -pthread -lpthread -latomic   -o Vtb_fft4096
+rm Vtb_fft4096__ALL.verilator_deplist.tmp
+make: Leaving directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_fft4096'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.038 MB sources in 3 modules, into 0.096 MB in 9 C++ files needing 0.000 MB
+- Verilator: Walltime 3.826 s (elab=0.005, cvt=0.042, bld=3.650); cpu 0.044 s on 2 threads; alloced 12.914 MB
+FFT_CASE_PASS case=0 cycles=24576
+FFT_CASE_PASS case=1 cycles=24576
+FFT_CASE_PASS case=2 cycles=24576
+FFT4096_PASS outputs=12288 bit_exact=1
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_fft4096.sv:32: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 873us; walltime 0.075 s; speed 23.181 ms/s
+- Verilator: cpu 0.038 s on 1 threads; alloced 249 MB

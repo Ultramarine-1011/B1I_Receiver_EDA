@@ -1,0 +1,18 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_multi/Vtb_receiver_multi' +MAX_BYTES=8184000
+MULTI_ACQUISITION prn=8 channel=0 detected=1 lag=12603 fcw=131200 cycles=56354739
+MULTI_ACQUISITION prn=11 channel=1 detected=1 lag=2024 fcw=-747840 cycles=113119989
+MULTI_ACQUISITION prn=13 channel=2 detected=1 lag=1563 fcw=183680 cycles=159124731
+MULTI_ACQUISITION prn=21 channel=3 detected=1 lag=6099 fcw=-406720 cycles=269611902
+END record sample_index=32736000
+MULTI_CHANNEL_SUMMARY channel=0 prompts=1995 locked=1720 nav=0 obs=1
+MULTI_CHANNEL_SUMMARY channel=1 prompts=1995 locked=1783 nav=0 obs=1
+MULTI_CHANNEL_SUMMARY channel=2 prompts=1995 locked=1788 nav=0 obs=1
+MULTI_CHANNEL_SUMMARY channel=3 prompts=1995 locked=1768 nav=0 obs=1
+MULTI_REAL_STREAM_PASS samples=32736000 transfers=2046000
+PASS receiver_records.bin records=7989
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/sim/receiver_tb_template.sv:125: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 19s; walltime 433.157 s; speed 42.967 ms/s
+- Verilator: cpu 432.745 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 433.289

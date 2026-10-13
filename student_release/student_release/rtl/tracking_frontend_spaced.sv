@@ -38,6 +38,10 @@ module tracking_frontend_spaced #(
   output logic [10+CODE_FRAC:0] window_code_phase_q,
   output logic [PERIOD_COUNT_WIDTH-1:0] window_code_period_count,
   output logic [CARRIER_PHASE_WIDTH-1:0] window_carrier_phase_word,
+  output logic [10+CODE_FRAC:0] window_end_code_phase_q,
+  output logic [PERIOD_COUNT_WIDTH-1:0] window_end_code_period_count,
+  output logic [CODE_FRAC:0] window_end_code_step_q,
+  output logic [CARRIER_PHASE_WIDTH-1:0] window_end_carrier_phase_word,
   output logic [ENERGY_WIDTH-1:0] window_energy
 );
   localparam logic [10+CODE_FRAC:0] CODE_MODULUS_Q = {11'd2046,{CODE_FRAC{1'b0}}};
@@ -56,6 +60,11 @@ module tracking_frontend_spaced #(
   logic [10+CODE_FRAC:0] code_phase_delayed, first_code_phase;
   logic [PERIOD_COUNT_WIDTH-1:0] period_delayed, first_period;
   logic [CARRIER_PHASE_WIDTH-1:0] carrier_phase_delayed, first_carrier_phase;
+  logic [11+CODE_FRAC:0] code_next_sum;
+  logic [10+CODE_FRAC:0] end_phase_delayed;
+  logic [PERIOD_COUNT_WIDTH-1:0] end_period_delayed;
+  logic [CODE_FRAC:0] end_step_delayed;
+  logic [CARRIER_PHASE_WIDTH-1:0] end_carrier_delayed;
 
   code_nco #(.PHASE_FRAC(CODE_FRAC), .PERIOD_COUNT_WIDTH(PERIOD_COUNT_WIDTH),
              .EPL_HALF_SPACING_NUMERATOR(EPL_HALF_SPACING_NUMERATOR),
@@ -83,6 +92,7 @@ module tracking_frontend_spaced #(
     q_square = $signed(q_sample) * $signed(q_sample);
     sample_energy = {1'b0,i_square} + {1'b0,q_square};
     energy_sum = energy_acc + sample_energy;
+    code_next_sum={1'b0,code_phase_q}+{{11{1'b0}},code_step_q};
   end
 
   epl_correlator #(.IQ_WIDTH(IQ_WIDTH), .WINDOW_SAMPLES(WINDOW_SAMPLES),
@@ -107,6 +117,9 @@ module tracking_frontend_spaced #(
       code_phase_delayed <= 0; period_delayed <= 0; carrier_phase_delayed <= 0;
       first_code_phase <= 0; first_period <= 0; first_carrier_phase <= 0;
       window_code_phase_q <= 0; window_code_period_count <= 0; window_carrier_phase_word <= 0;
+      end_phase_delayed<=0;end_period_delayed<=0;end_step_delayed<=0;
+      window_end_code_phase_q<=0;window_end_code_period_count<=0;window_end_code_step_q<=0;
+      end_carrier_delayed<=0;window_end_carrier_phase_word<=0;
     end else if (init_valid) begin
       early_delayed <= 0;
       prompt_delayed <= 0;
@@ -120,6 +133,9 @@ module tracking_frontend_spaced #(
       code_phase_delayed <= 0; period_delayed <= 0; carrier_phase_delayed <= 0;
       first_code_phase <= 0; first_period <= 0; first_carrier_phase <= 0;
       window_code_phase_q <= 0; window_code_period_count <= 0; window_carrier_phase_word <= 0;
+      end_phase_delayed<=0;end_period_delayed<=0;end_step_delayed<=0;
+      window_end_code_phase_q<=0;window_end_code_period_count<=0;window_end_code_step_q<=0;
+      end_carrier_delayed<=0;window_end_carrier_phase_word<=0;
     end else begin
       if (code_epoch)
         integration_started <= 1'b1;
@@ -128,6 +144,11 @@ module tracking_frontend_spaced #(
         code_phase_delayed <= code_phase_q;
         period_delayed <= code_period_count;
         carrier_phase_delayed <= carrier_phase_word;
+        end_phase_delayed<=code_next_sum>={1'b0,CODE_MODULUS_Q} ?
+            (code_next_sum-{1'b0,CODE_MODULUS_Q}) : code_next_sum;
+        end_period_delayed<=code_period_count+PERIOD_COUNT_WIDTH'(code_next_sum>={1'b0,CODE_MODULUS_Q});
+        end_step_delayed<=code_step_q;
+        end_carrier_delayed<=carrier_phase_word+carrier_step_word;
         early_delayed <= early_code;
         prompt_delayed <= prompt_code;
         late_delayed <= late_code;
@@ -143,6 +164,10 @@ module tracking_frontend_spaced #(
           window_code_phase_q <= first_code_phase;
           window_code_period_count <= first_period;
           window_carrier_phase_word <= first_carrier_phase;
+          window_end_code_phase_q<=end_phase_delayed;
+          window_end_code_period_count<=end_period_delayed;
+          window_end_code_step_q<=end_step_delayed;
+          window_end_carrier_phase_word<=end_carrier_delayed;
           energy_acc <= 0;
           energy_count <= 0;
         end else begin

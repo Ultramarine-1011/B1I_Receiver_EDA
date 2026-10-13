@@ -1,0 +1,88 @@
+{
+  "plusargs": "+MAX_BYTES=4092000",
+  "timestamp_utc": "2026-10-13T13:23:13.9659509Z",
+  "top": "tb_receiver_real",
+  "cwd": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release",
+  "sources": [
+    {
+      "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+      "sha256": "A178180332E9FEC6E5E5E6EC38255C730EA68BE4C2206166C1CF03F95DAC2303"
+    },
+    {
+      "path": "student_release/student_release/rtl/stream_unpacker.sv",
+      "sha256": "86085A362B15BF80694DEC2DB55CB4FE6E06C0C2E206987CDBAF17AE7FC7DA5C"
+    },
+    {
+      "path": "student_release/student_release/rtl/student_receiver_core.sv",
+      "sha256": "524F8ED85CA20E23494B1339F3044F425DBF16F30829B6621E23F7CC251FFED8"
+    },
+    {
+      "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+      "sha256": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475"
+    },
+    {
+      "path": "student_release/student_release/rtl/code_nco.sv",
+      "sha256": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1"
+    },
+    {
+      "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+      "sha256": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC"
+    },
+    {
+      "path": "student_release/student_release/rtl/epl_correlator.sv",
+      "sha256": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_frontend.sv",
+      "sha256": "5F1EBDCD6869FA63AF6E14B223155F4F7677DD51348780D7C035850B15C18BD4"
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_serial.sv",
+      "sha256": "A8D9067D0B3445710622E33EC71ABD9ADEF0FC4812942A8A6A45950C020F0667"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+      "sha256": "C93A51CFE2347E82CBED833417BDA595A79E03A7CBE4879B91A1AC3D906BD091"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+      "sha256": "B076FE5C977CFEDFB5ABFFCD0FFC67C08F582EF765C7199850EEA45A593240C7"
+    },
+    {
+      "path": "student_release/student_release/rtl/fft4096_serial.sv",
+      "sha256": "6EE4DD81C770D8072C69C64148D519DEAEBF4EA3C16B69B0A23F70191B20E388"
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+      "sha256": "D27960E9131C00BDA9A66AF674D0FA10945B0C0CDC98A460A4085D579CE78C3E"
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_refine.sv",
+      "sha256": "CB616C4AC71990B32E14B084717DAF0EC57865DF0DC8F2C509BC71A7454E94EC"
+    },
+    {
+      "path": "student_release/student_release/rtl/nh20_sync.sv",
+      "sha256": "0520DAED58C8C06D0107292BBEF81918C29F52BD2564D469B0AC74AFCD25E454"
+    },
+    {
+      "path": "student_release/student_release/rtl/d1_word_sync.sv",
+      "sha256": "1EC33691E6830A2CBB4B3AC2E47D5E6BD5665DA1B738CFEDDD7FB71A409E93AF"
+    },
+    {
+      "path": "student_release/student_release/rtl/navigation_d1.sv",
+      "sha256": "6FE9233F4B2B769A0A40F4C79AABA5CCF77FA0C6259D8498984BA5B7A50A90A5"
+    },
+    {
+      "path": "student_release/student_release/sim/if2_file_player.sv",
+      "sha256": "2F9086FE9E154F1CB9819093C9330B292C3E4CB6B52C17424B490CB305CB5CA1"
+    },
+    {
+      "path": "student_release/student_release/sim/receiver_tb_template.sv",
+      "sha256": "18171FF5F1B17ED72F018076EDA485AC9894EFCACD3239FC0986317DE383B2CA"
+    },
+    {
+      "path": "tb/tb_receiver_real.sv",
+      "sha256": "330AA1DC12315394503D71E943924593DF6AAA42B4B65777CC71B63B41330DB6"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "plusargs": "",
+  "timestamp_utc": "2026-10-13T14:44:57.4215590Z",
+  "cwd": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\nh_d1",
+  "top": "tb_nh_d1",
+  "sources": [
+    {
+      "path": "student_release/student_release/rtl/nh20_sync.sv",
+      "sha256": "0520DAED58C8C06D0107292BBEF81918C29F52BD2564D469B0AC74AFCD25E454"
+    },
+    {
+      "path": "student_release/student_release/rtl/d1_word_sync.sv",
+      "sha256": "1EC33691E6830A2CBB4B3AC2E47D5E6BD5665DA1B738CFEDDD7FB71A409E93AF"
+    },
+    {
+      "path": "tb/tb_nh_d1.sv",
+      "sha256": "AAAD9A6A431A7A9196B6D29A269E89FC10A65D4BBC0876891B832F5FE49005C4"
+    }
+  ]
+}

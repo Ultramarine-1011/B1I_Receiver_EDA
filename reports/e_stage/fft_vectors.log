@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/fft_fixed.py
+FFT_FIXED_MODEL_PASS [{'case': 0, 'inverse': False, 'max_float_absolute_error': 0.0, 'limit': 16}, {'case': 1, 'inverse': False, 'max_float_absolute_error': 7.07297094426561, 'limit': 16}, {'case': 2, 'inverse': True, 'max_float_absolute_error': 7.163327370754708, 'limit': 16}]
+EXIT_CODE: 0
+WALL_SECONDS: 4.658

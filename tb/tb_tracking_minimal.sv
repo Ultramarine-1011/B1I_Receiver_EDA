@@ -1,5 +1,8 @@
 `timescale 1ns/1ps
-module tb_tracking_minimal;
+module tb_tracking_minimal #(
+    parameter integer FLL_TEST=0,
+    parameter OUTPUT_CSV="../../reports/local/tracking_loop.csv"
+);
     logic clk=0;
     always #5 clk=~clk;
     logic reset_n=0,init_valid=0;
@@ -26,8 +29,11 @@ module tb_tracking_minimal;
     logic [32:0] previous_code_step;
     logic [31:0] previous_carrier_step;
     integer changed=0;
-    tracking_channel_minimal dut(.init_code_period_count(32'd0),.init_carrier_phase_word(32'd0),
-        .window_code_phase_q(),.window_code_period_count(),.window_carrier_phase_word(),.*);
+    tracking_channel_minimal #(.ENABLE_FLL(FLL_TEST)) dut(.init_code_period_count(32'd0),.init_carrier_phase_word(32'd0),
+        .fll_active(),.fll_error_q16(),
+        .window_code_phase_q(),.window_code_period_count(),.window_carrier_phase_word(),
+        .window_end_code_phase_q(),.window_end_code_period_count(),.window_end_code_step_q(),.window_end_carrier_phase_word(),.*);
+    // Extra receiver snapshot ports are intentionally open in this loop-only TB.
     function automatic real fold(input real value,input real period);
         fold=value-period*$floor(value/period+0.5);
     endfunction
@@ -81,14 +87,14 @@ module tb_tracking_minimal;
     endtask
     initial begin
         $readmemh("../../tb/vectors/b1i_prn_06.mem",prn);
-        fd=$fopen("../../reports/local/tracking_loop.csv","w");
+        fd=$fopen(OUTPUT_CSV,"w");
         if(fd==0) $fatal(1,"CSV open failure");
         $fwrite(fd,"case,window_ref,feedback_ref,ip,qp,ie,qe,il,ql,dll_error_q16,pll_error_q16,code_step,carrier_step,code_correction_q16,carrier_correction_q16,locked,code_phase_q,carrier_phase_word,code_period_count,window_energy\n");
         repeat(4) @(negedge clk); reset_n=1;
-        run_case(0,0.04,5.0,43'h040000000); // local code +0.25 chip
-        run_case(1,-0.04,-5.0,(43'd2046<<32)-43'h040000000); // -0.25 chip modulo period
+        run_case(0,FLL_TEST ? 0.13 : 0.04,FLL_TEST ? 125.0 : 5.0,43'h040000000);
+        run_case(1,FLL_TEST ? -0.13 : -0.04,FLL_TEST ? -125.0 : -5.0,(43'd2046<<32)-43'h040000000);
         $fclose(fd);
-        $display("TRACKING_MINIMAL_PASS cases=2 seconds_per_case=1 NH20_flips=1");
+        $display("TRACKING_MINIMAL_PASS cases=2 seconds_per_case=1 NH20_flips=1 FLL_TEST=%0d",FLL_TEST);
         $finish;
     end
     initial begin #400000000; $fatal(1,"TRACKING_REGRESSION_TIMEOUT"); end

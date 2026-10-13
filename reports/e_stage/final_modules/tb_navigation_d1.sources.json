@@ -1,0 +1,24 @@
+{
+  "plusargs": "",
+  "timestamp_utc": "2026-10-13T14:45:03.4731676Z",
+  "cwd": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\navigation",
+  "top": "tb_navigation_d1",
+  "sources": [
+    {
+      "path": "student_release/student_release/rtl/nh20_sync.sv",
+      "sha256": "0520DAED58C8C06D0107292BBEF81918C29F52BD2564D469B0AC74AFCD25E454"
+    },
+    {
+      "path": "student_release/student_release/rtl/d1_word_sync.sv",
+      "sha256": "1EC33691E6830A2CBB4B3AC2E47D5E6BD5665DA1B738CFEDDD7FB71A409E93AF"
+    },
+    {
+      "path": "student_release/student_release/rtl/navigation_d1.sv",
+      "sha256": "6FE9233F4B2B769A0A40F4C79AABA5CCF77FA0C6259D8498984BA5B7A50A90A5"
+    },
+    {
+      "path": "tb/tb_navigation_d1.sv",
+      "sha256": "CF7DA22FCAB878AAB14FE61474C66A8CDF07DD6A9F6D8FA2D87C799D41B7C992"
+    }
+  ]
+}

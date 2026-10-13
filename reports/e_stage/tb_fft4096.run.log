@@ -1,0 +1,11 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/fft' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_fft4096/Vtb_fft4096' 
+FFT_CASE_PASS case=0 cycles=24576
+FFT_CASE_PASS case=1 cycles=24576
+FFT_CASE_PASS case=2 cycles=24576
+FFT4096_PASS outputs=12288 bit_exact=1
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_fft4096.sv:32: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 873us; walltime 0.075 s; speed 23.181 ms/s
+- Verilator: cpu 0.038 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.189

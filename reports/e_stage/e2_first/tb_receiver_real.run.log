@@ -1,0 +1,34 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_receiver_real/Vtb_receiver_real' +MAX_BYTES=81840000
+REAL_RTL_ACQUISITION prn=8 detected=1 lag=12603 fcw=131200 cycles=56354731
+REAL_D1_WORD number=1 raw=389023f0 info=389023f bch=1 start=100201131 frame=0 time=0
+REAL_D1_WORD number=2 raw=22a43a3c info=02e3824 bch=1 start=110021931 frame=0 time=0
+REAL_D1_WORD number=3 raw=016bfe99 info=003f99e bch=1 start=119842731 frame=0 time=0
+REAL_D1_WORD number=4 raw=2bc95b88 info=03d199d bch=1 start=129663531 frame=0 time=0
+REAL_D1_WORD number=5 raw=2aa83561 info=03f2007 bch=1 start=139484331 frame=0 time=0
+REAL_D1_WORD number=6 raw=1dff8540 info=017c7f3 bch=1 start=149305131 frame=0 time=0
+REAL_D1_WORD number=7 raw=2bbf2318 info=03fa971 bch=1 start=159125931 frame=0 time=0
+REAL_D1_WORD number=8 raw=02d74e47 info=00c98fa bch=1 start=168946731 frame=0 time=0
+REAL_D1_WORD number=9 raw=1264d650 info=00a4cae bch=1 start=178767531 frame=0 time=0
+REAL_D1_WORD number=10 raw=365e2a15 info=029bee0 bch=1 start=188588331 frame=0 time=0
+REAL_D1_WORD number=1 raw=389033ff info=389033f bch=1 start=198409131 frame=0 time=0
+REAL_D1_WORD number=2 raw=27f59848 info=02e53f4 bch=1 start=208229931 frame=0 time=0
+REAL_D1_WORD number=3 raw=2011df2a info=020585f bch=1 start=218050731 frame=0 time=0
+REAL_D1_WORD number=4 raw=273fdf40 info=02bdb7f bch=1 start=227871531 frame=0 time=0
+REAL_D1_WORD number=5 raw=3dd7d77f info=034cfff bch=1 start=237692331 frame=0 time=0
+REAL_D1_WORD number=6 raw=17d5d5dd info=00c47ff bch=1 start=247513131 frame=0 time=0
+REAL_D1_WORD number=7 raw=02668529 info=00ac0a3 bch=1 start=257333931 frame=0 time=0
+REAL_D1_WORD number=8 raw=0fadb904 info=01f7335 bch=1 start=267154731 frame=0 time=0
+REAL_D1_WORD number=9 raw=3002d07e info=020c40c bch=1 start=276975531 frame=0 time=0
+REAL_D1_WORD number=10 raw=0b8a64ae info=01da10a bch=1 start=286796331 frame=0 time=0
+REAL_D1_WORD number=1 raw=389043f4 info=389043f bch=1 start=296617131 frame=1 time=1
+REAL_D1_WORD number=2 raw=22a5b28f info=02e6834 bch=1 start=306437931 frame=1 time=1
+REAL_D1_WORD number=3 raw=00000000 info=0000000 bch=1 start=316258731 frame=1 time=1
+END record sample_index=327360000
+REAL_RTL_STREAM_PASS samples=327360000
+PASS receiver_records.bin records=20007
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/sim/receiver_tb_template.sv:125: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 25s; walltime 361.924 s; speed 68.916 ms/s
+- Verilator: cpu 358.292 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 362.034

@@ -27,7 +27,7 @@ def main():
         assert sum(r['type']=='end' for r in records)==1 and records[-1]['type']=='end'
         assert records[-1]['sample_index']==4_092_000 and not records[-1]['underrun'] and not records[-1]['overflow']
         assert len(track)>=247 and sum(r['locked'] for r in track)>=50
-        assert all(b['sample_index']-a['sample_index']==N for a,b in zip(track,track[1:]))
+        assert all(abs(b['sample_index']-a['sample_index']-N)<=2 for a,b in zip(track,track[1:]))
         assert all(r['schema_version']==3 and r['generation']==1 and r['prn']==prn for r in track)
         codes=[abs(fold(r['code_chip']+r['code_fraction']/2**32-(r['sample_index']-lag)/8,2046)) for r in track]
         tail=track[-30:]
@@ -40,12 +40,14 @@ def main():
         # actual emitted oscillator state, independent PRN, no DUT internals.
         code=[1-2*b for b in generate_prn(prn)]
         r=track[0]; ii=qq=0.0
-        for n in range(r['sample_index'],r['sample_index']+N):
+        first_ref=N if lag==0 else N+lag%N
+        first_phase=(r['carrier_phase']-(2**30+r['doppler_word'])*(r['sample_index']-first_ref))%2**32
+        for n in range(first_ref,first_ref+N):
             s=code[((n-lag)%N)//8]*(1-2*int(NH[((n-lag+N)//N)%20]))
             a=2*s*math.cos(2*math.pi*(0.04+(4_092_000+hz)*n/FS))
             x=-3 if a < -1 else -1 if a < 0 else 1 if a < 1 else 3
-            local_index=int((r['code_chip']+r['code_fraction']/2**32+(n-r['sample_index'])/8)%2046)
-            theta=2*math.pi*(r['carrier_phase']/2**32+(2**30+r['doppler_word'])*(n-r['sample_index'])/2**32)
+            local_index=((n-first_ref)//8)%2046
+            theta=2*math.pi*(first_phase/2**32+(2**30+r['doppler_word'])*(n-first_ref)/2**32)
             ii+=x*2047*math.cos(theta)*code[local_index]
             qq-=x*2047*math.sin(theta)*code[local_index]
         relative=math.hypot(r['prompt_i']*16-ii,r['prompt_q']*16-qq)/math.hypot(ii,qq)

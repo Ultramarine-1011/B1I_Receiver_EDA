@@ -1,0 +1,12 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/tracking' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_tracking_minimal/Vtb_tracking_minimal' 
+TRACKING_CASE_METRIC case=0 code_rms=0.062345 phase_rms_turn=0.002678 frequency_rms_hz=0.847095 tail_lock=1.000000 windows=999 feedbacks=999 changes=998
+TRACKING_CASE_PASS case=0
+TRACKING_CASE_METRIC case=1 code_rms=0.063487 phase_rms_turn=0.002674 frequency_rms_hz=0.847133 tail_lock=1.000000 windows=999 feedbacks=999 changes=999
+TRACKING_CASE_PASS case=1
+TRACKING_MINIMAL_PASS cases=2 seconds_per_case=1 NH20_flips=1 FLL_TEST=0
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_tracking_minimal.sv:98: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 327ms; walltime 7.704 s; speed 42.659 ms/s
+- Verilator: cpu 7.675 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 7.818

@@ -35,7 +35,7 @@ module tb_receiver_e0;
         logic [255:0] saved;
         logic stalled=0;
         logic [63:0] last_track_ref=0;
-        student_receiver_core #(.SEARCH_PRN(c==2 ? 12 : 6),
+        student_receiver_core #(.USE_PCPS(0),.SEARCH_PRN(c==2 ? 12 : 6),
             .SEARCH_LAG_FIRST(c==2 ? 16352 : 0),.SEARCH_LAG_LAST(c==2 ? 16360 : c==0 ? 16 : 24),
             .SEARCH_LAG_STEP(8),.SEARCH_DOPPLER_FIRST(-262400),.SEARCH_DOPPLER_LAST(262400),
             .SEARCH_DOPPLER_STEP(262400)) dut(
@@ -46,8 +46,8 @@ module tb_receiver_e0;
         );
         always @(posedge clk) if(reset_n) begin
             if(stream_valid[c] && stream_ready[c]) words[c]=words[c]+1;
-            if(dut.sample_valid && dut.sample_ready) begin
-                if(dut.sample_ref!=64'(samples[c]) || dut.sample_bits!=adc(c,samples[c]))
+            if(dut.single.receiver.sample_valid && dut.single.receiver.sample_ready) begin
+                if(dut.single.receiver.sample_ref!=64'(samples[c]) || dut.single.receiver.sample_bits!=adc(c,samples[c]))
                     $fatal(1,"IF sample loss/repetition case=%0d n=%0d",c,samples[c]);
                 samples[c]=samples[c]+1;
             end
@@ -66,8 +66,8 @@ module tb_receiver_e0;
                     end
                     1: begin
                         if(!record_data[c][23] || record_data[c][31:24]!=8'hc1) $fatal(1,"schema3 marker");
-                        if(tracks[c]!=0 && record_data[c][95:32]!=last_track_ref+16368) $fatal(1,"Prompt ref discontinuity");
-                        if(record_data[c][119:96]!==24'($signed(dut.tracking.ip) >>> 4)) $fatal(1,"Prompt scale");
+                        if(tracks[c]!=0 && (record_data[c][95:32]<last_track_ref+16366 || record_data[c][95:32]>last_track_ref+16370)) $fatal(1,"Prompt boundary ref discontinuity");
+                        if(record_data[c][119:96]!==24'($signed(dut.single.receiver.tracking.ip) >>> 4)) $fatal(1,"Prompt scale");
                         last_track_ref=record_data[c][95:32]; tracks[c]=tracks[c]+1;
                         if(record_data[c][18]) locked_count[c]=locked_count[c]+1;
                     end

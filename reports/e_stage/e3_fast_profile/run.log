@@ -1,0 +1,9 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/receiver_fast/Vstudent_receiver_core' input/scenario.if2 '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/output/receiver_records.bin' 4092000
+FAST_RTL_ACQUISITION prn=8 channel=0 detected=1 cycles=56354739
+FAST_RTL_ACQUISITION prn=11 channel=1 detected=1 cycles=113119989
+FAST_RTL_ACQUISITION prn=13 channel=2 detected=1 cycles=159124731
+FAST_RTL_ACQUISITION prn=21 channel=3 detected=1 cycles=269611902
+FAST_RTL_INPUT_PROGRESS seconds=1 cycles=286946558 wall=227.899 records=3984
+FAST_RTL_PASS samples=16368000 records=3985 cycles=286946600 wall_seconds=227.901
+EXIT_CODE: 0
+WALL_SECONDS: 228.0252923

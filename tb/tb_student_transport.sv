@@ -10,15 +10,15 @@ module tb_student_transport;
     logic record_valid,record_ready=0;
     integer transfers=0,samples=0,ends=0;
     logic [255:0] saved_record;
-    student_receiver_core dut (.*);
+    student_receiver_core #(.USE_PCPS(0)) dut (.*);
     always @(posedge clk) if(reset_n) begin
         if(stream_valid && stream_ready) begin
             if(sample_index!=64'(transfers*16)) $fatal(1,"input index not +16");
             transfers=transfers+1;
         end
-        if(dut.sample_valid && dut.sample_ready) begin
-            if(dut.sample_ref!=64'(samples)) $fatal(1,"lost sample reference");
-            if(dut.sample_bits!=2'(samples%4)) $fatal(1,"wrong lane order");
+        if(dut.single.receiver.sample_valid && dut.single.receiver.sample_ready) begin
+            if(dut.single.receiver.sample_ref!=64'(samples)) $fatal(1,"lost sample reference");
+            if(dut.single.receiver.sample_bits!=2'(samples%4)) $fatal(1,"wrong lane order");
             samples=samples+1;
         end
         if(record_valid) begin

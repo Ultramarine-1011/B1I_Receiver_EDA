@@ -1,0 +1,40 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_pcps_real/Vtb_pcps_real' +MAX_BYTES=16368
+PCPS_REAL_CANDIDATE prn=6 lag=768 fcw=1574400 ratio=5.537214 detected=0 cycles=10850936
+PCPS_REAL_CANDIDATE prn=7 lag=1280 fcw=1836800 ratio=4.862086 detected=0 cycles=21632309
+PCPS_REAL_CANDIDATE prn=8 lag=12604 fcw=131200 ratio=12.353998 detected=1 cycles=32413682
+PCPS_REAL_CANDIDATE prn=9 lag=1412 fcw=-918400 ratio=5.131381 detected=0 cycles=43195055
+PCPS_REAL_CANDIDATE prn=10 lag=12572 fcw=2624000 ratio=4.657206 detected=0 cycles=53976428
+PCPS_REAL_CANDIDATE prn=11 lag=2024 fcw=-787200 ratio=19.754866 detected=1 cycles=64757801
+PCPS_REAL_CANDIDATE prn=12 lag=4016 fcw=-131200 ratio=4.815803 detected=0 cycles=75539174
+PCPS_REAL_CANDIDATE prn=13 lag=1564 fcw=131200 ratio=16.109453 detected=1 cycles=86320547
+PCPS_REAL_CANDIDATE prn=14 lag=9448 fcw=1180800 ratio=4.785289 detected=0 cycles=97101920
+PCPS_REAL_CANDIDATE prn=15 lag=7588 fcw=-656000 ratio=4.883264 detected=0 cycles=107883293
+PCPS_REAL_CANDIDATE prn=16 lag=8588 fcw=1574400 ratio=5.027218 detected=0 cycles=118664666
+PCPS_REAL_CANDIDATE prn=17 lag=13956 fcw=-524800 ratio=5.602208 detected=0 cycles=129446039
+PCPS_REAL_CANDIDATE prn=18 lag=10972 fcw=393600 ratio=5.159446 detected=0 cycles=140227412
+PCPS_REAL_CANDIDATE prn=19 lag=4404 fcw=-262400 ratio=4.611302 detected=0 cycles=151008785
+PCPS_REAL_CANDIDATE prn=20 lag=856 fcw=131200 ratio=4.678554 detected=0 cycles=161790158
+PCPS_REAL_CANDIDATE prn=21 lag=6096 fcw=-393600 ratio=8.413064 detected=1 cycles=172571531
+PCPS_REAL_CANDIDATE prn=22 lag=12276 fcw=131200 ratio=4.546392 detected=0 cycles=183352904
+PCPS_REAL_CANDIDATE prn=23 lag=5416 fcw=2624000 ratio=4.515149 detected=0 cycles=194134277
+PCPS_REAL_CANDIDATE prn=24 lag=11264 fcw=1836800 ratio=4.915365 detected=0 cycles=204915650
+PCPS_REAL_CANDIDATE prn=25 lag=6232 fcw=-131200 ratio=5.170017 detected=0 cycles=215697023
+PCPS_REAL_CANDIDATE prn=26 lag=12568 fcw=-2624000 ratio=5.308613 detected=0 cycles=226478396
+PCPS_REAL_CANDIDATE prn=27 lag=12528 fcw=131200 ratio=4.822499 detected=0 cycles=237259769
+PCPS_REAL_CANDIDATE prn=28 lag=6612 fcw=131200 ratio=8.452258 detected=1 cycles=248041142
+PCPS_REAL_CANDIDATE prn=29 lag=8088 fcw=0 ratio=5.984336 detected=0 cycles=258822515
+PCPS_REAL_CANDIDATE prn=30 lag=276 fcw=-656000 ratio=4.689766 detected=0 cycles=269603888
+PCPS_REAL_CANDIDATE prn=31 lag=7840 fcw=-524800 ratio=6.451686 detected=0 cycles=280385261
+PCPS_REAL_CANDIDATE prn=32 lag=944 fcw=-1968000 ratio=4.517876 detected=0 cycles=291166634
+PCPS_REAL_CANDIDATE prn=33 lag=4304 fcw=-1574400 ratio=5.549908 detected=0 cycles=301948007
+PCPS_REAL_CANDIDATE prn=34 lag=8636 fcw=918400 ratio=5.048300 detected=0 cycles=312729380
+PCPS_REAL_CANDIDATE prn=35 lag=100 fcw=-918400 ratio=5.222383 detected=0 cycles=323510753
+PCPS_REAL_CANDIDATE prn=36 lag=3492 fcw=-1180800 ratio=4.776748 detected=0 cycles=334292126
+PCPS_REAL_CANDIDATE prn=37 lag=2360 fcw=-1180800 ratio=4.879383 detected=0 cycles=345073499
+PCPS_REAL_SEARCH_PASS prns=32 samples=65472 detected_candidates=5
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_pcps_real.sv:46: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 3s; walltime 101.953 s; speed 33.852 ms/s
+- Verilator: cpu 101.936 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 102.073

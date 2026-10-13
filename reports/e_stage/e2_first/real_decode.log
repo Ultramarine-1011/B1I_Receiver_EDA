@@ -1,0 +1,3 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && python3 tools/decode_records.py output/receiver_records.bin -o output/receiver_records.jsonl
+EXIT_CODE: 0
+WALL_SECONDS: 0.343

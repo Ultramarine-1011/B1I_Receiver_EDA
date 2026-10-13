@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/nh_d1_vectors.py
+NH_D1_VECTORS_PASS words=3 BCH_errors_per_word=0,1,2 phases=0,7,19
+EXIT_CODE: 0
+WALL_SECONDS: 0.200

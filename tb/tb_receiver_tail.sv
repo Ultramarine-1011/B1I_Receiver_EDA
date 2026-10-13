@@ -12,7 +12,7 @@ module tb_receiver_tail;
     integer total=0,ends=0,acqs=0,cycles=0;
     logic stalled=0;
     logic [255:0] saved=0;
-    student_receiver_core #(.SEARCH_LAG_LAST(0),.SEARCH_DOPPLER_FIRST(0),
+    student_receiver_core #(.USE_PCPS(0),.SEARCH_LAG_LAST(0),.SEARCH_DOPPLER_FIRST(0),
         .SEARCH_DOPPLER_LAST(0)) dut(.*);
     always @(negedge clk) begin cycles=cycles+1; record_ready=(cycles%41>=17); end
     always @(posedge clk) if(reset_n) begin
@@ -25,7 +25,7 @@ module tb_receiver_tail;
                     acqs=acqs+1;
                 end
                 6: begin
-                    if(ends!=0 || record_data[95:32]!=64'(total) || record_data[19:18]!=0 || dut.processed_samples!=64'(total))
+                    if(ends!=0 || record_data[95:32]!=64'(total) || record_data[19:18]!=0 || dut.single.receiver.processed_samples!=64'(total))
                         $fatal(1,"tail count/end");
                     ends=ends+1;
                 end
