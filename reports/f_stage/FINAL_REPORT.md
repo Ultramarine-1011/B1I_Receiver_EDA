@@ -48,6 +48,6 @@ real20全部RTL/ROM/SVH SHA匹配当前实现，当时C++快照real20/driver_sna
 .\scripts\run_performance.ps1 -Mode plan
 ```
 
-本地需教师scenario.if2，409200000字节，SHA256 2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da。IF/BIN/JSONL/构建不上传，只有源码/轻量日志/manifest/报告正常Git提交推送，不强推。
+本地需教师scenario.if2，409200000字节，SHA256 2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da。IF/BIN/JSONL/构建不上传。实现1b9505e及报告/轻量证据1dc0e20已正常推送main，HEAD=origin/main实查一致，无强推；最终纯文档完成标记见Git最新提交。
 
 唯一下一任务：登记教师统一12星、动态、中断场景及评分真值；具备输入后另行授权G。本轮不自动进入G/H/I。
