@@ -5,6 +5,7 @@ module tracking_channel_minimal (
     input logic clk, reset_n, init_valid,
     input logic [5:0] init_prn,
     input logic [42:0] init_code_phase_q,
+    input logic [31:0] init_code_period_count, init_carrier_phase_word,
     input logic signed [31:0] init_doppler_word,
     input logic sample_valid,
     output logic sample_ready,
@@ -17,6 +18,8 @@ module tracking_channel_minimal (
     output logic signed [27:0] ie,qe,ip,qp,il,ql,
     output logic window_done,
     output logic [63:0] window_ref,
+    output logic [42:0] window_code_phase_q,
+    output logic [31:0] window_code_period_count, window_carrier_phase_word,
     output logic [41:0] window_energy,
     output logic feedback_valid, usable, locked,
     output logic signed [31:0] dll_error_q16, pll_error_q16,
@@ -86,13 +89,15 @@ module tracking_channel_minimal (
     end
     tracking_frontend_spaced #(.EPL_HALF_SPACING_NUMERATOR(5),.EPL_HALF_SPACING_DENOMINATOR(16)) frontend (
         .clk(clk),.rst_n(reset_n),.init_valid(init_valid),.init_prn(init_prn),
-        .init_code_phase_q(init_code_phase_q),.init_code_period_count(32'd0),
-        .init_carrier_phase_word(32'd0),.code_step_q(code_step_q),.carrier_step_word(carrier_step_word),
+        .init_code_phase_q(init_code_phase_q),.init_code_period_count(init_code_period_count),
+        .init_carrier_phase_word(init_carrier_phase_word),.code_step_q(code_step_q),.carrier_step_word(carrier_step_word),
         .sample_valid(sample_valid && enabled),.sample_data(sample_data),.sample_ref(sample_ref),
         .sample_accepted(accepted),.code_valid(code_valid),.init_done(),.code_epoch(),
         .code_phase_q(code_phase_q),.code_period_count(code_period_count),.carrier_phase_word(carrier_phase_word),
         .ie(ie),.qe(qe),.ip(ip),.qp(qp),.il(il),.ql(ql),.window_done(window_done),
         .window_ref(window_ref),.window_energy(window_energy)
+        ,.window_code_phase_q(window_code_phase_q),.window_code_period_count(window_code_period_count),
+        .window_carrier_phase_word(window_carrier_phase_word)
     );
     // Keep the 9.28 source unchanged. At 8 samples/chip, delta=2.5 samples
     // centers the rectangular-code detector's discrete dead zone about zero.

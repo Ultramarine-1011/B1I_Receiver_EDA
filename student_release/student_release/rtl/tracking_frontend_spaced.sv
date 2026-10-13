@@ -35,6 +35,9 @@ module tracking_frontend_spaced #(
   output logic signed [ACC_WIDTH-1:0] ie, qe, ip, qp, il, ql,
   output logic window_done,
   output logic [SAMPLE_REF_WIDTH-1:0] window_ref,
+  output logic [10+CODE_FRAC:0] window_code_phase_q,
+  output logic [PERIOD_COUNT_WIDTH-1:0] window_code_period_count,
+  output logic [CARRIER_PHASE_WIDTH-1:0] window_carrier_phase_word,
   output logic [ENERGY_WIDTH-1:0] window_energy
 );
   localparam logic [10+CODE_FRAC:0] CODE_MODULUS_Q = {11'd2046,{CODE_FRAC{1'b0}}};
@@ -50,6 +53,9 @@ module tracking_frontend_spaced #(
   logic [2*IQ_WIDTH:0] sample_energy;
   logic [ENERGY_WIDTH-1:0] energy_acc, energy_sum;
   logic [COUNT_WIDTH-1:0] energy_count;
+  logic [10+CODE_FRAC:0] code_phase_delayed, first_code_phase;
+  logic [PERIOD_COUNT_WIDTH-1:0] period_delayed, first_period;
+  logic [CARRIER_PHASE_WIDTH-1:0] carrier_phase_delayed, first_carrier_phase;
 
   code_nco #(.PHASE_FRAC(CODE_FRAC), .PERIOD_COUNT_WIDTH(PERIOD_COUNT_WIDTH),
              .EPL_HALF_SPACING_NUMERATOR(EPL_HALF_SPACING_NUMERATOR),
@@ -98,6 +104,9 @@ module tracking_frontend_spaced #(
       energy_acc <= 0;
       energy_count <= 0;
       window_energy <= 0;
+      code_phase_delayed <= 0; period_delayed <= 0; carrier_phase_delayed <= 0;
+      first_code_phase <= 0; first_period <= 0; first_carrier_phase <= 0;
+      window_code_phase_q <= 0; window_code_period_count <= 0; window_carrier_phase_word <= 0;
     end else if (init_valid) begin
       early_delayed <= 0;
       prompt_delayed <= 0;
@@ -108,18 +117,32 @@ module tracking_frontend_spaced #(
       energy_acc <= 0;
       energy_count <= 0;
       window_energy <= 0;
+      code_phase_delayed <= 0; period_delayed <= 0; carrier_phase_delayed <= 0;
+      first_code_phase <= 0; first_period <= 0; first_carrier_phase <= 0;
+      window_code_phase_q <= 0; window_code_period_count <= 0; window_carrier_phase_word <= 0;
     end else begin
       if (code_epoch)
         integration_started <= 1'b1;
       integrate_delayed <= sample_accepted && (integration_started || code_epoch);
       if (sample_accepted) begin
+        code_phase_delayed <= code_phase_q;
+        period_delayed <= code_period_count;
+        carrier_phase_delayed <= carrier_phase_word;
         early_delayed <= early_code;
         prompt_delayed <= prompt_code;
         late_delayed <= late_code;
       end
       if (correlator_valid) begin
+        if (energy_count == 0) begin
+          first_code_phase <= code_phase_delayed;
+          first_period <= period_delayed;
+          first_carrier_phase <= carrier_phase_delayed;
+        end
         if (energy_count == WINDOW_SAMPLES-1) begin
           window_energy <= energy_sum;
+          window_code_phase_q <= first_code_phase;
+          window_code_period_count <= first_period;
+          window_carrier_phase_word <= first_carrier_phase;
           energy_acc <= 0;
           energy_count <= 0;
         end else begin

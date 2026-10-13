@@ -26,7 +26,8 @@ module tb_tracking_minimal;
     logic [32:0] previous_code_step;
     logic [31:0] previous_carrier_step;
     integer changed=0;
-    tracking_channel_minimal dut(.*);
+    tracking_channel_minimal dut(.init_code_period_count(32'd0),.init_carrier_phase_word(32'd0),
+        .window_code_phase_q(),.window_code_period_count(),.window_carrier_phase_word(),.*);
     function automatic real fold(input real value,input real period);
         fold=value-period*$floor(value/period+0.5);
     endfunction

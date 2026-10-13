@@ -1,0 +1,21 @@
+ACQUISITION_VECTOR_PASS aligned cells 3 best 0 0 power/energy 8184.000000000063
+ACQUISITION_VECTOR_PASS positive cells 15 best 16 1000 power/energy 7818.097182454005
+ACQUISITION_VECTOR_PASS negative cells 12 best 8 -1000 power/energy 7818.097182454154
+ACQUISITION_VECTOR_PASS wrong_prn cells 1 best 0 0 power/energy 5.122383933271986e-25
+ACQUISITION_VECTORS_PASS cases=4
+make: Entering directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_acquisition_serial'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_acquisition_serial'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.138 s (elab=0.000, cvt=0.000, bld=0.064); cpu 0.008 s on 2 threads; alloced 7.004 MB
+ACQUISITION_CASE_PASS name=aligned detected=1 lag=0 doppler_word=0 cells=3 peak=5051721870214272 cycles=71629
+ACQUISITION_CASE_PASS name=positive detected=1 lag=16 doppler_word=262400 cells=15 peak=3395887876265897 cycles=292628
+ACQUISITION_CASE_PASS name=negative detected=1 lag=8 doppler_word=-262400 cells=12 peak=3395892747410962 cycles=237383
+ACQUISITION_CASE_PASS name=wrong_prn detected=0 lag=0 doppler_word=0 cells=1 peak=0 cycles=34794
+ACQUISITION_SERIAL_PASS cases=4 cells=31
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_acquisition_serial.sv:86: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 6ms; walltime 0.194 s; speed 36.249 ms/s
+- Verilator: cpu 0.176 s on 1 threads; alloced 249 MB
+ACQUISITION_FLOAT_SCORE_PASS cells=31 max_normalized_power_error=0.0018028901 limit=0.02

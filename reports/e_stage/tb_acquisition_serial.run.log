@@ -1,0 +1,12 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/acquisition' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_acquisition_serial/Vtb_acquisition_serial' 
+ACQUISITION_CASE_PASS name=aligned detected=1 lag=0 doppler_word=0 cells=3 peak=5051721870214272 cycles=71629
+ACQUISITION_CASE_PASS name=positive detected=1 lag=16 doppler_word=262400 cells=15 peak=3395887876265897 cycles=292628
+ACQUISITION_CASE_PASS name=negative detected=1 lag=8 doppler_word=-262400 cells=12 peak=3395892747410962 cycles=237383
+ACQUISITION_CASE_PASS name=wrong_prn detected=0 lag=0 doppler_word=0 cells=1 peak=0 cycles=34794
+ACQUISITION_SERIAL_PASS cases=4 cells=31
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_acquisition_serial.sv:86: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 6ms; walltime 0.194 s; speed 36.249 ms/s
+- Verilator: cpu 0.176 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.310

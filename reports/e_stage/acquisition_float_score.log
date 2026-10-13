@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/acquisition_vectors.py --check
+ACQUISITION_FLOAT_SCORE_PASS cells=31 max_normalized_power_error=0.0018028901 limit=0.02
+EXIT_CODE: 0
+WALL_SECONDS: 0.195
