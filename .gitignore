@@ -34,3 +34,9 @@ __pycache__/
 /reports/f_stage/**/*.bin
 /reports/f_stage/**/*.jsonl
 /reports/f_stage/**/*_detail.csv
+
+# Detailed G traces/signals remain local; commit small reproducible evidence.
+/reports/g_stage/**/*.bin
+/reports/g_stage/**/*.if2
+/reports/g_stage/**/*.jsonl
+/reports/g_stage/**/*_detail.csv

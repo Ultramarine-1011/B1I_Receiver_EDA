@@ -1,0 +1,548 @@
+{
+  "status": "G0_FROZEN_BASELINE_AUDIT_PASS",
+  "head": "fe9f1ba240efd71cd92c5193c8dc97498b59ffe8",
+  "frozen": [
+    {
+      "path": "student_release/student_release/README.md",
+      "sha256": "c355f85695278b4bb744339d886047152ba404ab2134dfb31e3f2a7a0bcb5d0e",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/input/input_contract.json",
+      "sha256": "6f6516485a22c7b76cd7cd24da9f1b8a8fd84214419c649ed9ce738e080e97a5",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/input/scenario.if2",
+      "sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/interface/receiver_input_if.sv",
+      "sha256": "7ca32668f62fbe016dfe311d3576cd8ccb2fb05b91d03aa8a4ca1499ab4698b1",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/scripts/run_student_sim.ps1",
+      "sha256": "470b0019ae991b8f479ba46166e2f13451adb3512ca862e46562b63128343224",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/sim/if2_file_player.sv",
+      "sha256": "2f9086fe9e154f1cb9819093c9330b292c3e4cb6b52c17424b490cb305cb5ca1",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/sim/receiver_tb_template.sv",
+      "sha256": "18171ff5f1b17ed72f018076eda485ac9894efcacd3239fc0986317de383b2ca",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/submission/OUTPUT_REQUIREMENTS.md",
+      "sha256": "f2fb46696957ce810a9b284099dc3e6cc08f4bd4e19abf128a51ce72bc938c8e",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/submission/RECORD_FORMAT.md",
+      "sha256": "8a6a8ed08417bd4b65ecafd62ac0d02a24460181f7d0be256e613092234a83dc",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/tools/check_input_package.py",
+      "sha256": "6622fa9c8769d49538161799530bb873d0caa0fe6fb4e396ca576d3927b1c7c2",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/tools/check_records.py",
+      "sha256": "2dfe9a2acf37ed5e9aef997690c7d8510a319959fc5dba795fc17a7dd31c3606",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/tools/decode_records.py",
+      "sha256": "1a81cb9ffa31775ca82a58d0184e9a4cad362dcdc22c6b9d750bdbc0447e57f4",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/tools/prompt_d1.py",
+      "sha256": "956b7ae51d6c79fa503bdb064f8c1383821564e7ee54cc670b86eb54d55d1771",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/tools/route_a_position.py",
+      "sha256": "592b5b6a030b4317aa84f48c4695fb8852bfe0194e085e9368f1641aec7fb4cb",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/tools/self_check.py",
+      "sha256": "0799fa9a506c536984ef50ce406cbfea6d57aa02dcd1410febf944f57f001dc2",
+      "match": true
+    },
+    {
+      "path": "rtl/b1i_prn_gen.sv",
+      "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+      "match": true
+    },
+    {
+      "path": "rtl/code_nco.sv",
+      "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+      "match": true
+    },
+    {
+      "path": "rtl/epl_correlator.sv",
+      "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+      "match": true
+    },
+    {
+      "path": "rtl/carrier_nco_mixer.sv",
+      "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+      "match": true
+    },
+    {
+      "path": "rtl/carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+      "match": true
+    },
+    {
+      "path": "rtl/tracking_frontend.sv",
+      "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+      "match": true
+    },
+    {
+      "path": "student_release/student_release/output/receiver_records.bin",
+      "sha256": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501",
+      "match": true
+    },
+    {
+      "path": "reports/e_stage/final/receiver_records.bin",
+      "sha256": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501",
+      "match": true
+    }
+  ],
+  "f_compiled_rtl": [
+    {
+      "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+      "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+      "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_refine.sv",
+      "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_serial.sv",
+      "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+      "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+      "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/code_nco.sv",
+      "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/d1_word_sync.sv",
+      "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/epl_correlator.sv",
+      "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/fft4096_serial.sv",
+      "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/navigation_d1.sv",
+      "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/nh20_sync.sv",
+      "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/receiver_channel.sv",
+      "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+      "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/receiver_single.sv",
+      "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/satellite_manager.sv",
+      "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/stream_unpacker.sv",
+      "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/student_receiver_core.sv",
+      "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+      "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+      "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_frontend.sv",
+      "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+      "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rom/fft_cos_q30.mem",
+      "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+      "f_compiled_match": true
+    },
+    {
+      "path": "student_release/student_release/rom/fft_sin_q30.mem",
+      "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+      "f_compiled_match": true
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "B1I_PUBLIC_STATIC_SIX_40DBHZ_V1",
+      "origin": "teacher_public_development",
+      "path": "student_release/student_release/input/scenario.if2",
+      "sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+      "fs_hz": 16368000,
+      "if_hz": 4092000,
+      "duration_s": 100,
+      "visible_d1_satellites": 6,
+      "prns": null,
+      "cn0_db_hz": 40,
+      "prequantization_power": null,
+      "noise_seed": null,
+      "pdop": null,
+      "ephemeris_truth": null,
+      "time_truth": null,
+      "code_phase_truth": null,
+      "doppler_truth": null,
+      "nav_word_truth": null,
+      "receiver_ecef_truth": null,
+      "dynamic_truth": null,
+      "metadata": "teacher README + input_contract.json",
+      "formal_suite_qualification": false
+    }
+  ],
+  "local_resource_inventory": [
+    {
+      "path": "student_release/student_release/input/input_contract.json",
+      "bytes": 896
+    },
+    {
+      "path": "student_release/student_release/input/scenario.if2",
+      "bytes": 409200000
+    },
+    {
+      "path": "model/acquisition_vectors.py",
+      "bytes": 3927
+    },
+    {
+      "path": "model/b1i_prn_golden.py",
+      "bytes": 4821
+    },
+    {
+      "path": "model/carrier_model.py",
+      "bytes": 10330
+    },
+    {
+      "path": "model/code_nco_epl_model.py",
+      "bytes": 16707
+    },
+    {
+      "path": "model/delivery_summary.py",
+      "bytes": 1475
+    },
+    {
+      "path": "model/export_tracking_prompt.py",
+      "bytes": 992
+    },
+    {
+      "path": "model/f_integrity_audit.py",
+      "bytes": 4507
+    },
+    {
+      "path": "model/f_reference_score.py",
+      "bytes": 2668
+    },
+    {
+      "path": "model/f_run_summary.py",
+      "bytes": 2822
+    },
+    {
+      "path": "model/f_signal_vectors.py",
+      "bytes": 495
+    },
+    {
+      "path": "model/fft_fixed.py",
+      "bytes": 2844
+    },
+    {
+      "path": "model/frontend_golden.py",
+      "bytes": 3150
+    },
+    {
+      "path": "model/g_resource_audit.py",
+      "bytes": 4347
+    },
+    {
+      "path": "model/make_delivery_artifacts.py",
+      "bytes": 5139
+    },
+    {
+      "path": "model/navigation_vectors.py",
+      "bytes": 1368
+    },
+    {
+      "path": "model/nh_d1_validate.py",
+      "bytes": 1039
+    },
+    {
+      "path": "model/nh_d1_vectors.py",
+      "bytes": 1607
+    },
+    {
+      "path": "model/pcps_design.py",
+      "bytes": 1905
+    },
+    {
+      "path": "model/pcps_exact_candidates.py",
+      "bytes": 2602
+    },
+    {
+      "path": "model/pcps_fixed_score.py",
+      "bytes": 2679
+    },
+    {
+      "path": "model/performance_metrics.py",
+      "bytes": 16834
+    },
+    {
+      "path": "model/performance_plan.py",
+      "bytes": 3620
+    },
+    {
+      "path": "model/quality_model.py",
+      "bytes": 3078
+    },
+    {
+      "path": "model/receiver_e0_score.py",
+      "bytes": 3855
+    },
+    {
+      "path": "model/receiver_multi_score.py",
+      "bytes": 3628
+    },
+    {
+      "path": "model/receiver_real_score.py",
+      "bytes": 2523
+    },
+    {
+      "path": "model/receiver_transport_equivalence.py",
+      "bytes": 1358
+    },
+    {
+      "path": "model/synthesis_inventory.py",
+      "bytes": 2403
+    },
+    {
+      "path": "model/tracking_reference.py",
+      "bytes": 19309
+    },
+    {
+      "path": "model/tracking_validation.py",
+      "bytes": 4514
+    },
+    {
+      "path": "tb/tb_acquisition_serial.sv",
+      "bytes": 4548
+    },
+    {
+      "path": "tb/tb_b1i_prn_gen.sv",
+      "bytes": 4709
+    },
+    {
+      "path": "tb/tb_carrier_nco_mixer.sv",
+      "bytes": 2812
+    },
+    {
+      "path": "tb/tb_channel_bank.sv",
+      "bytes": 6730
+    },
+    {
+      "path": "tb/tb_channel_reuse.sv",
+      "bytes": 3185
+    },
+    {
+      "path": "tb/tb_code_nco_epl.sv",
+      "bytes": 14781
+    },
+    {
+      "path": "tb/tb_f_bad_config.sv",
+      "bytes": 366
+    },
+    {
+      "path": "tb/tb_f_integration.sv",
+      "bytes": 6092
+    },
+    {
+      "path": "tb/tb_f_transport.sv",
+      "bytes": 2630
+    },
+    {
+      "path": "tb/tb_fft4096.sv",
+      "bytes": 1927
+    },
+    {
+      "path": "tb/tb_navigation_bank.sv",
+      "bytes": 3068
+    },
+    {
+      "path": "tb/tb_navigation_d1.sv",
+      "bytes": 3620
+    },
+    {
+      "path": "tb/tb_nh_actual_prompt.sv",
+      "bytes": 1789
+    },
+    {
+      "path": "tb/tb_nh_d1.sv",
+      "bytes": 3739
+    },
+    {
+      "path": "tb/tb_p02_probe.sv",
+      "bytes": 3414
+    },
+    {
+      "path": "tb/tb_pcps_real.sv",
+      "bytes": 3252
+    },
+    {
+      "path": "tb/tb_receiver_e0.sv",
+      "bytes": 6662
+    },
+    {
+      "path": "tb/tb_receiver_multi.sv",
+      "bytes": 4702
+    },
+    {
+      "path": "tb/tb_receiver_real.sv",
+      "bytes": 2525
+    },
+    {
+      "path": "tb/tb_receiver_tail.sv",
+      "bytes": 2441
+    },
+    {
+      "path": "tb/tb_satellite_manager.sv",
+      "bytes": 4237
+    },
+    {
+      "path": "tb/tb_stream_unpacker.sv",
+      "bytes": 2936
+    },
+    {
+      "path": "tb/tb_student_file_smoke.sv",
+      "bytes": 2387
+    },
+    {
+      "path": "tb/tb_student_transport.sv",
+      "bytes": 2455
+    },
+    {
+      "path": "tb/tb_tracking_frontend.sv",
+      "bytes": 6654
+    },
+    {
+      "path": "tb/tb_tracking_minimal.sv",
+      "bytes": 6179
+    },
+    {
+      "path": "tb/tb_tracking_pull.sv",
+      "bytes": 161
+    },
+    {
+      "path": "tb/vectors/acquisition/manifest.json",
+      "bytes": 5638
+    },
+    {
+      "path": "tb/vectors/manifest.json",
+      "bytes": 1202
+    },
+    {
+      "path": "tb/vectors/nh_d1/actual_tracking_prompt.json",
+      "bytes": 260
+    },
+    {
+      "path": "tb/vectors/nh_d1/manifest.json",
+      "bytes": 487
+    },
+    {
+      "path": "EDA_CONTEXT_COMPRESSED/\u5317\u6597_B1I_B2I_ICD_2.1\u7248_\u4e2d\u6587\u7248.pdf",
+      "bytes": 1897940
+    },
+    {
+      "path": "EDA_CONTEXT_COMPRESSED/\u96c6\u6210\u7535\u8defEDA\u5b9e\u9a8c\u6307\u5bfc\u4e66_V1.7(1).pdf",
+      "bytes": 4113240
+    }
+  ],
+  "formal_gaps": {
+    "P01": "independent phase/frequency/NH truth and qualified 40dB-Hz coverage cases",
+    "P02": "no input block for measured diagnostics; per-task instrumentation required",
+    "P03": "per-CN0 100 present + 100 absent independent seeded 10s cases, target/candidate truth",
+    "P04": "10 independent cold starts, >=180s, >=6D1, PDOP<=4, different frame starts",
+    "P05": "CN0 sweep with independent cold starts and full 60s post-confirmation followup",
+    "P06": "60s seeded CN0 sweep with independent code/doppler/transmitted-word truth",
+    "P07": "12D1 40dB-Hz IF and continuous D01-D04 truth, >=30s after sync",
+    "P08": "qualified nominal IF with real 2s RF interruption and valid NAV/OBS recovery",
+    "P09": "independent fixed ECEF truth, consistent geometry/model and complete 60s window"
+  },
+  "generator_audit": "No complete GNSS IF/navigation/geometry generator exists locally. Primary/NH and Prompt generators can be reused for isolated diagnostics only."
+}

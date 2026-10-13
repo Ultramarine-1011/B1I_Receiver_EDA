@@ -1,15 +1,9 @@
 # CURRENT STATUS
 
-2026-10-14（Asia/Singapore）。**F0–F6可执行目标完成，停止本轮开发**；G/H/I仅规划。实现commit **1b9505e**，报告/证据1dc0e20已正常推送main，HEAD=origin/main已实查一致；F0计划729858f，起点E f8e8de7。最终完成标记为随后纯文档提交，当前Git HEAD可用git log -1查询。
+2026-10-14（Asia/Singapore），G0–G7已授权，G0完成，G1/G3执行中。启动HEAD=origin/main=fe9f1ba，ahead/behind=0/0，启动工作区干净。F目标/状态归档于docs/archive；完整G授权已保存。resource_audit.json：23冻结项及25份F编译RTL/ROM匹配，E成功BIN/备份SHA不变。指导书7.3–7.9核对完成；正式场景/真值缺口逐项登记。
 
-当前源PASS：1/2/4/12数字bank（196416样本/206440拍/同PRN12窗一致），reuse/12槽manager/transport/预期非法配置拒绝，十二路NAV120字，3.2s双星主码NH12槽后台/失锁/拉入失败2s释放/重搜后两星末段锁定（52377600样本/57456502拍/182.724s），原E0三例及tail。失败原因和修后日志保留。
+E100s历史560 NAV/324有效OBS/99 Route A解保留，不算G当前源重新验证。F实现1b9505e/完成fe9f1ba；默认4公开20s、12逻辑槽/双星恢复/120 NAV证据保留，正式性能仍缺场景/真值。禁止VMware/SSH/Synopsys/H后端。
 
-默认4公开IF：2s输入停顿+输出反压0 PASS，20s仿真/结构/self_check/独立40NAV/4有效OBS/Route A均0，Route19定位历元；20s327360000样本/80101记录/617603738拍/710.908s，80100非end与E前缀逐bit同（仅acq周期排除）。Source/ROM与当前RTL匹配，20s当时driver快照保留；其后只改EOF watchdog预算且新driver64样本尾部0 PASS。首次可用sidecar审计0，不将事后Route结果当TTFF。
+F20因果NAV/OBS重放实际读取80101记录，完整星历不足，0解/20s截尾；不是G当前复跑。已识别tracking源时刻是局部码边界投影，可比接纳样本计数超前1点；因果性按真实输出握手核查，不把投影误判成读取未来数据。
 
-原E成功100s BIN及备份SHA256 **c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501**不变；560 NAV/324有效OBS/99定位历元历史保留。F未重复100s，不宣称当前源码新100s通过。教师公共文件/原9.28RTL/plan冻结项23份哈希一致。
-
-F4 P01–P09/D01–D04场景/运行/报告/指标计算基础与手算PASS；缩网格RTL计时probe排队14拍、处理/复核962024拍PASS，正式统计NOT_RUN/BLOCKED_INPUT。12星完整IF/D1/PVT、合法动态/2s信号中断、独立种子/PDOP及码频/字/位置真值尚缺。持续实时吞吐未验证，目标clk未定。F5源码存储/端口/宽算术/复位/吞吐风险完成，正式DC/ICC/PT/DRC/LVS全NOT_RUN，禁止VMware/SSH/远程EDA。
-
-报告：[reports/f_stage/FINAL_REPORT.md](reports/f_stage/FINAL_REPORT.md)；复验：`.\scripts\validate_f_delivery.ps1`；完整短回归：`.\scripts\run_f_stage.ps1 -Task all`。IF/BIN/JSONL/构建只留本地，源码/轻量日志/manifest提交。
-
-唯一下一任务：登记教师统一12星、动态、中断场景及评分真值；具备输入后另行授权G。本轮不自动执行G/H/I。
+唯一下一任务：完成性能采集wrapper、独立统计/在线适配器边界检查及当前真实IF定向复跑。
