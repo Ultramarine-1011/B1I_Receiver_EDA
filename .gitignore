@@ -29,3 +29,8 @@ __pycache__/
 /reports/e_stage/partial_position.jsonl
 /reports/e_stage/multi_tracking_loop.csv
 /reports/e_stage/real_tracking_loop.csv
+
+# Detailed F runs stay local; only lightweight evidence is committed.
+/reports/f_stage/**/*.bin
+/reports/f_stage/**/*.jsonl
+/reports/f_stage/**/*_detail.csv
