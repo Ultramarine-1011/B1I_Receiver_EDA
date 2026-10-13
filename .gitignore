@@ -1,0 +1,20 @@
+# Local work areas and generated scratch files
+/work/
+/tmp/
+/outputs/
+/.agents/.validation-deps/
+/.agents/skills/
+
+# Generated build trees
+/student_release/student_release/build/
+/student_release/student_release/logs/
+/student_release/student_release/output/
+/student_release/student_release/tools/__pycache__/
+/student_release/student_release/sim/__pycache__/
+
+# The 409 MB teacher signal capture is not redistributed in this repository.
+/student_release/student_release/input/scenario.if2
+
+# Python caches
+__pycache__/
+*.py[cod]

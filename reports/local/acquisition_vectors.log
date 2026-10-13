@@ -1,0 +1,7 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/acquisition_vectors.py
+ACQUISITION_VECTOR_PASS aligned cells 3 best 0 0 power/energy 8184.000000000063
+ACQUISITION_VECTOR_PASS positive cells 15 best 16 1000 power/energy 7818.097182454005
+ACQUISITION_VECTOR_PASS negative cells 12 best 8 -1000 power/energy 7818.097182454154
+ACQUISITION_VECTOR_PASS wrong_prn cells 1 best 0 0 power/energy 5.122383933271986e-25
+ACQUISITION_VECTORS_PASS cases=4
+EXIT_CODE: 0

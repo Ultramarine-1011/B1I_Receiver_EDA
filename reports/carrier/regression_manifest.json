@@ -1,0 +1,159 @@
+{
+  "date": "2026-09-28",
+  "plan_sha256": "BE227D7C9F062301A809B5D57F45EABFA21F5D846BB3C71106DAE42A219E8CD8",
+  "host": "7901_15@192.168.159.128",
+  "directory": "/home/7901_15/eda_project",
+  "tool": "VCS I-2014.03",
+  "command": "source ~/eda_env.sh && cd ~/eda_project && make prn-regression code-nco-epl-regression carrier-regression",
+  "exit_code": 0,
+  "pass_markers": [
+    "B1I_PRN_REGRESSION_PASS",
+    "RELOAD_COLLISION_PASS: init priority, busy sample and asynchronous reset",
+    "CODE_NCO_EPL_REGRESSION_PASS events=36451 windows=4",
+    "CARRIER_REGRESSION_PASS events=29775 accepted=22043"
+  ],
+  "remote_sha256_matches": [
+    {
+      "path": "Makefile",
+      "sha256": "611bec197a8af73e0308989f101e5e00941d22b3a2d2be2d7d0f27eb11041cec"
+    },
+    {
+      "path": "rtl/b1i_prn_gen.sv",
+      "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475"
+    },
+    {
+      "path": "rtl/code_nco.sv",
+      "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1"
+    },
+    {
+      "path": "rtl/epl_correlator.sv",
+      "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786"
+    },
+    {
+      "path": "rtl/carrier_nco_mixer.sv",
+      "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc"
+    },
+    {
+      "path": "rtl/carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c"
+    },
+    {
+      "path": "tb/tb_b1i_prn_gen.sv",
+      "sha256": "75532b9f7a708f118773e9f3352b2d4ad66632301d419efbaf69db0b678e8aeb"
+    },
+    {
+      "path": "tb/tb_code_nco_epl.sv",
+      "sha256": "aa766edf18f29555bfdd381ef14c4dbf27339aea65f89c3b7222fdfaa2239208"
+    },
+    {
+      "path": "tb/tb_carrier_nco_mixer.sv",
+      "sha256": "021cae999b0e67c9370e3f667d9fb9566d0c5d3ce116df862ac60c76d308819d"
+    },
+    {
+      "path": "tb/vectors/carrier/carrier.vec",
+      "sha256": "df248018253815abdd371cfdca3a6f4c0abbf341c6b3fd2ca93511a65abc18e4"
+    },
+    {
+      "path": "tb/vectors/b1i_prn_06_37.mem",
+      "sha256": "5d40ad61e94a926318460236ebb5f3dfacbaffe75f2cbcfc1753b42f3e7a2220"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_midstream_reload.vec",
+      "sha256": "709affdfd7329afd3448c3822aa18dedb47c720ab2fb3ebb236a219748ef312d"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_negative_adjust.vec",
+      "sha256": "5bbb8d6887de85d520e8f2dcb9e6513667e69c44cf95bea81412521971fd832f"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_nominal.vec",
+      "sha256": "8e4340d16e90b4d8b633f88c199799a1d4c9c970a1e2b903d3c9d1e14241ad9b"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_positive_adjust.vec",
+      "sha256": "d44637c0daff50f4532cb421575032dad6427cccc645879ebe8626b6857f329d"
+    }
+  ],
+  "local_sha256": [
+    {
+      "path": "Makefile",
+      "sha256": "611bec197a8af73e0308989f101e5e00941d22b3a2d2be2d7d0f27eb11041cec"
+    },
+    {
+      "path": "rtl/b1i_prn_gen.sv",
+      "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475"
+    },
+    {
+      "path": "rtl/code_nco.sv",
+      "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1"
+    },
+    {
+      "path": "rtl/epl_correlator.sv",
+      "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786"
+    },
+    {
+      "path": "rtl/carrier_nco_mixer.sv",
+      "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc"
+    },
+    {
+      "path": "rtl/carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c"
+    },
+    {
+      "path": "tb/tb_b1i_prn_gen.sv",
+      "sha256": "75532b9f7a708f118773e9f3352b2d4ad66632301d419efbaf69db0b678e8aeb"
+    },
+    {
+      "path": "tb/tb_code_nco_epl.sv",
+      "sha256": "aa766edf18f29555bfdd381ef14c4dbf27339aea65f89c3b7222fdfaa2239208"
+    },
+    {
+      "path": "tb/tb_carrier_nco_mixer.sv",
+      "sha256": "021cae999b0e67c9370e3f667d9fb9566d0c5d3ce116df862ac60c76d308819d"
+    },
+    {
+      "path": "tb/vectors/carrier/carrier.vec",
+      "sha256": "df248018253815abdd371cfdca3a6f4c0abbf341c6b3fd2ca93511a65abc18e4"
+    },
+    {
+      "path": "tb/vectors/b1i_prn_06_37.mem",
+      "sha256": "5d40ad61e94a926318460236ebb5f3dfacbaffe75f2cbcfc1753b42f3e7a2220"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_midstream_reload.vec",
+      "sha256": "709affdfd7329afd3448c3822aa18dedb47c720ab2fb3ebb236a219748ef312d"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_negative_adjust.vec",
+      "sha256": "5bbb8d6887de85d520e8f2dcb9e6513667e69c44cf95bea81412521971fd832f"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_nominal.vec",
+      "sha256": "8e4340d16e90b4d8b633f88c199799a1d4c9c970a1e2b903d3c9d1e14241ad9b"
+    },
+    {
+      "path": "tb/vectors/code_nco_epl/nco_epl_positive_adjust.vec",
+      "sha256": "d44637c0daff50f4532cb421575032dad6427cccc645879ebe8626b6857f329d"
+    },
+    {
+      "path": "model/carrier_model.py",
+      "sha256": "066ef9cb36473c5304c08e223d676c2a99edc607651718aaedb216d3bf209025"
+    },
+    {
+      "path": "reports/carrier/analysis.json",
+      "sha256": "abc9a58ab1e6b8159cac2b17c81f3c1f0154a69652b95426580a79d551327d04"
+    },
+    {
+      "path": "reports/carrier_vcs.log",
+      "sha256": "fdcd97af38837c922d34d8945b98319433c56f8656ab4707b54c9742706aa80d"
+    },
+    {
+      "path": "reports/b1i_prn_vcs.log",
+      "sha256": "c21bf281c8ba03fe7514d037f3551e0ddb9546dc82c2f28ac6d5aadbaa15d3a6"
+    },
+    {
+      "path": "reports/code_nco_epl_vcs.log",
+      "sha256": "7912299efd8187c33c694ecc10e2fd68a67b5f1fcc0936b944a41935974ccf06"
+    }
+  ]
+}

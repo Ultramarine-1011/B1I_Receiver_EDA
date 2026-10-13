@@ -1,0 +1,10 @@
+{
+  "source": "reports/local/tracking_loop.csv",
+  "source_sha256": "a1e35fa20da5390e7c802f672f5adb39537d51ce734d3ef95954c87ce03303db",
+  "columns": [
+    "ip",
+    "window_ref"
+  ],
+  "count": 999,
+  "kind": "actual_RTL_on_synthetic_IF_not_teacher_scenario"
+}

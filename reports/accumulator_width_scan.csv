@@ -1,0 +1,6 @@
+iq_width,window_samples,max_product_magnitude,worst_sum_magnitude,minimum_signed_accumulator_width,baseline_guard_bits
+3,16368,4,65472,17,0
+4,16368,8,130944,18,0
+8,16368,128,2095104,22,0
+12,16368,2048,33521664,26,0
+16,16368,32768,536346624,30,0

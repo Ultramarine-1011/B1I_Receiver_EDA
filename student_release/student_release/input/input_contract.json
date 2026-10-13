@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "package_id": "B1I_PUBLIC_STATIC_SIX_40DBHZ_V1",
+  "purpose": "simulation_only_receiver_input",
+  "sample_file": "scenario.if2",
+  "sample_rate_hz": 16368000,
+  "if_frequency_hz": 4092000,
+  "sample_type": "real_if",
+  "bits_per_sample": 2,
+  "quantization": {
+    "00": -3,
+    "01": -1,
+    "10": 1,
+    "11": 3
+  },
+  "byte_order": "first_sample_in_bits_7_6",
+  "sample_count": 1636800000,
+  "duration_seconds": 100.0,
+  "public_scenario": {
+    "receiver_motion": "static",
+    "satellite_count": 6,
+    "cn0_dbhz": 40.0,
+    "interference": false,
+    "signal_outage": false
+  },
+  "stream_player_contract": {
+    "samples_per_transfer": 16,
+    "stream_data_width_bits": 32,
+    "stream_data_bit_1_0_is_earliest_sample": true,
+    "stream_valid_ready_handshake": true,
+    "stream_last_marks_last_sixteen_samples": true
+  },
+  "truth_is_not_in_this_file": true
+}

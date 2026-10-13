@@ -1,0 +1,32 @@
+{
+  "all_meo_igso_vector": {
+    "file": "b1i_prn_06_37.mem",
+    "layout": "PRN-major, PRN 6 through 37, 2046 chips per PRN",
+    "sha256_of_chip_bytes": "1cbd20745aa309d8f1d5c502e64f52b93b9e295f886b7cb4a4f831d466cddfce"
+  },
+  "initial_phase": "01010101010",
+  "length_chips": 2046,
+  "source": "BDS-SIS-ICD-2.1 section 4.3, figure 4-1, table 4-2",
+  "vectors": {
+    "12": {
+      "file": "b1i_prn_12.mem",
+      "first_32_chips": "10100100100001110100001100101011",
+      "sha256_of_chip_bytes": "8715561f9f5ea2e1a5a70acc96210db762b373747562214d9a500c7dd0945c14"
+    },
+    "23": {
+      "file": "b1i_prn_23.mem",
+      "first_32_chips": "10101000101110011100110000000010",
+      "sha256_of_chip_bytes": "15232964952becef820b989906d0b80a0fca488711bae3530d5e42b1f492a615"
+    },
+    "37": {
+      "file": "b1i_prn_37.mem",
+      "first_32_chips": "10101010101000110101100010011010",
+      "sha256_of_chip_bytes": "a5de9b776ddb74fb63c87f298bdd253383c0926eee5435f21bc23111b7fc843d"
+    },
+    "6": {
+      "file": "b1i_prn_06.mem",
+      "first_32_chips": "01101010010001000000100111000101",
+      "sha256_of_chip_bytes": "a6bfb512d98d1fd51dda231156851172cbaed62f70eed3edc9cd0f30b95ad3ab"
+    }
+  }
+}

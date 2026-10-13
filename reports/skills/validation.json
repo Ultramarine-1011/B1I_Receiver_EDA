@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-13",
+  "skills": [
+    {
+      "name": "eda-autonomous-workflow",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\eda-autonomous-workflow\\SKILL.md",
+      "description": "用户要求继续当前 EDA milestone 时，按工程基线自主执行模型、RTL、SSH 回归与文档交接；整理或安装请求仅处理授权范围。"
+    },
+    {
+      "name": "gnss-b1i-design",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\gnss-b1i-design\\SKILL.md",
+      "description": "设计与审查当前北斗 B1I 单通道码/载波跟踪算法、reference/golden 模型和逐样本 RTL 时间语义。"
+    },
+    {
+      "name": "nature-writing",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\nature-writing\\SKILL.md",
+      "description": "撰写、忠实润色或排版本工程 GNSS/EDA 技术报告，核对单位、实验条件、证据与引用。"
+    },
+    {
+      "name": "rtl-vcs-verification",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\rtl-vcs-verification\\SKILL.md",
+      "description": "在 Windows 编辑源与 Linux SSH VCS 环境中执行本工程 RTL 自检回归、同步文件并回收可追溯证据。"
+    },
+    {
+      "name": "synopsys-asic-flow",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\synopsys-asic-flow\\SKILL.md",
+      "description": "在既有 Linux SSH 环境中准备或审查 VCS、Design Compiler、ICC 和 PrimeTime 流程与报告；正式后端执行需在用户范围内。"
+    },
+    {
+      "name": "systematic-debugging",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\systematic-debugging\\SKILL.md",
+      "description": "定位本 EDA 工程模型、RTL、testbench、VCS/DC 日志或 SSH 执行失败的根因。"
+    },
+    {
+      "name": "systemverilog",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\systemverilog\\SKILL.md",
+      "description": "编写或审查本工程 SystemVerilog RTL，检查位宽、signed 运算、组合完整性和 VCS/DC 兼容性。"
+    },
+    {
+      "name": "tb-best-practices",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\.agents\\skills\\tb-best-practices\\SKILL.md",
+      "description": "设计本工程自检 SystemVerilog testbench、事件 scoreboard、边界激励和超时判据。"
+    }
+  ],
+  "count": 8,
+  "errors": [],
+  "model_dependencies": [
+    {
+      "file": "model/b1i_prn_golden.py",
+      "import": "PASS"
+    },
+    {
+      "file": "model/code_nco_epl_model.py",
+      "import": "PASS"
+    },
+    {
+      "file": "model/carrier_model.py",
+      "import": "PASS"
+    },
+    {
+      "file": "model/tracking_reference.py",
+      "import": "PASS"
+    }
+  ],
+  "python": "C:\\Users\\26255\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+}

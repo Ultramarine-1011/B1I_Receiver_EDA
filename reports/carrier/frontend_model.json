@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tb\\vectors\\frontend\\aligned.vec",
+    "prn": 6,
+    "events": 36000,
+    "accepted": 33229,
+    "windows": 2,
+    "sha256": "a41c6ccf4440c290f77273505ed87fb8e1800c6997195bc25f87b763baa1be01"
+  },
+  {
+    "file": "tb\\vectors\\frontend\\wrap.vec",
+    "prn": 12,
+    "events": 18000,
+    "accepted": 16613,
+    "windows": 1,
+    "sha256": "0c65a16b0d2f35d0a28f69abc863c1c6781f71d9d76f93a8207f2c34b92e9be1"
+  },
+  {
+    "file": "tb\\vectors\\frontend\\negative.vec",
+    "prn": 23,
+    "events": 36000,
+    "accepted": 33229,
+    "windows": 1,
+    "sha256": "f3a3d1fadf07675020ec2c44507fd3a02cfd7af7504c2277ad22a464af3b72fe"
+  }
+]

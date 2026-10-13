@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/frontend' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_tracking_frontend/Vtb_tracking_frontend' 
+FRONTEND_RELOAD_RESET_PASS
+FRONTEND_REGRESSION_PASS events=90000 windows=4
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_tracking_frontend.sv:168: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 963us; walltime 0.894 s; speed 1.787 ms/s
+- Verilator: cpu 0.539 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0

@@ -1,0 +1,27 @@
+[
+  {
+    "path": "rtl/b1i_prn_gen.sv",
+    "match": true,
+    "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475"
+  },
+  {
+    "path": "rtl/code_nco.sv",
+    "match": true,
+    "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1"
+  },
+  {
+    "path": "rtl/epl_correlator.sv",
+    "match": true,
+    "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786"
+  },
+  {
+    "path": "rtl/carrier_nco_mixer.sv",
+    "match": true,
+    "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc"
+  },
+  {
+    "path": "rtl/carrier_quarter_lut.svh",
+    "match": true,
+    "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c"
+  }
+]

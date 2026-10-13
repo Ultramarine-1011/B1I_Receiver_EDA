@@ -1,0 +1,32 @@
+[
+  {
+    "name": "b1i_prn_gen.sv",
+    "match": true,
+    "sha256": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475"
+  },
+  {
+    "name": "code_nco.sv",
+    "match": true,
+    "sha256": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1"
+  },
+  {
+    "name": "epl_correlator.sv",
+    "match": true,
+    "sha256": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786"
+  },
+  {
+    "name": "carrier_nco_mixer.sv",
+    "match": true,
+    "sha256": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC"
+  },
+  {
+    "name": "tracking_frontend.sv",
+    "match": true,
+    "sha256": "5F1EBDCD6869FA63AF6E14B223155F4F7677DD51348780D7C035850B15C18BD4"
+  },
+  {
+    "name": "carrier_quarter_lut.svh",
+    "match": true,
+    "sha256": "B7E8595471E7EBC01DE0B0476D48BF5B48D5C27931091690AE6EDD56679A7D0C"
+  }
+]

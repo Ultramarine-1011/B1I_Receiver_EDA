@@ -1,0 +1,2 @@
+FAIL: detected PRNs []; need at least 4
+FUNCTIONAL_EXIT_CODE: 1

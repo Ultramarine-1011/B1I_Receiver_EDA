@@ -1,0 +1,16 @@
+make: Entering directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_student_file_smoke'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_student_file_smoke'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.134 s (elab=0.000, cvt=0.000, bld=0.050); cpu 0.009 s on 2 threads; alloced 7.004 MB
+END record sample_index=163680
+STUDENT_FILE_SMOKE_PASS seconds=0.01 transfers=10230 samples=163680 ends=1 file_order=MSB_first bus_order=LSB_first
+PASS receiver_records.bin records=1
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/sim/receiver_tb_template.sv:125: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 11ms; walltime 0.068 s; speed 175.247 ms/s
+- Verilator: cpu 0.061 s on 1 threads; alloced 249 MB
+PASS records=1 bytes=32 types={'end': 1}
+FAIL: detected PRNs []; need at least 4
+Transport finished. Receiver functional check exit=1 (acquisition/tracking/navigation remain incomplete).

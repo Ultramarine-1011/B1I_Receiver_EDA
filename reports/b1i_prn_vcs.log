@@ -1,0 +1,69 @@
+                         Chronologic VCS (TM)
+            Version I-2014.03 -- Mon Sep 28 16:53:53 2026
+               Copyright (c) 1991-2014 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '../../rtl/b1i_prn_gen.sv'
+Parsing design file '../../tb/tb_b1i_prn_gen.sv'
+Top Level Modules:
+       tb_b1i_prn_gen
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory `/home/7901_15/eda_project/work/prn/csrc'
+rm -f _csrc*.so linux_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -m elf_i386 -shared -o .//../simv.daidir//_csrc0.so SIM_l.o 5NrI_d.o 5NrIB_d.o  
+ld -m elf_i386 -shared -o .//../simv.daidir//pre_vcsobj_1_1.so --whole-archive pre_vcsobj_1_1.a --no-whole-archive
+ld -m elf_i386 -shared -o .//../simv.daidir//pre_vcsobj_1_2.so --whole-archive pre_vcsobj_1_2.a --no-whole-archive
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv  -m32 -m32   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  _csrc0.so   pre_vcsobj_1_1.so pre_vcsobj_1_2.so  rmapats_mop.o rmapats.o rmar.o           /opt/Synopsys/VCS2014/linux/lib/libzerosoft_rt_stubs.so /opt/Synopsys/VCS2014/linux/lib/libvirsim.so /opt/Synopsys/VCS2014/linux/lib/librterrorinf.so /opt/Synopsys/VCS2014/linux/lib/libsnpsmalloc.so    /opt/Synopsys/VCS2014/linux/lib/libvcsnew.so /opt/Synopsys/VCS2014/linux/lib/libuclinative.so   -Wl,-whole-archive /opt/Synopsys/VCS2014/linux/lib/libvcsucli.so -Wl,-no-whole-archive          /opt/Synopsys/VCS2014/linux/lib/vcs_save_restore_new.o /opt/Synopsys/VCS2014/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/7901_15/eda_project/work/prn/csrc'
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03; Runtime version I-2014.03;  Sep 28 16:53 2026
+PRN 6: 2046 chips and wrap verified
+PRN 7: 2046 chips and wrap verified
+PRN 8: 2046 chips and wrap verified
+PRN 9: 2046 chips and wrap verified
+PRN 10: 2046 chips and wrap verified
+PRN 11: 2046 chips and wrap verified
+PRN 12: 2046 chips and wrap verified
+PRN 13: 2046 chips and wrap verified
+PRN 14: 2046 chips and wrap verified
+PRN 15: 2046 chips and wrap verified
+PRN 16: 2046 chips and wrap verified
+PRN 17: 2046 chips and wrap verified
+PRN 18: 2046 chips and wrap verified
+PRN 19: 2046 chips and wrap verified
+PRN 20: 2046 chips and wrap verified
+PRN 21: 2046 chips and wrap verified
+PRN 22: 2046 chips and wrap verified
+PRN 23: 2046 chips and wrap verified
+PRN 24: 2046 chips and wrap verified
+PRN 25: 2046 chips and wrap verified
+PRN 26: 2046 chips and wrap verified
+PRN 27: 2046 chips and wrap verified
+PRN 28: 2046 chips and wrap verified
+PRN 29: 2046 chips and wrap verified
+PRN 30: 2046 chips and wrap verified
+PRN 31: 2046 chips and wrap verified
+PRN 32: 2046 chips and wrap verified
+PRN 33: 2046 chips and wrap verified
+PRN 34: 2046 chips and wrap verified
+PRN 35: 2046 chips and wrap verified
+PRN 36: 2046 chips and wrap verified
+PRN 37: 2046 chips and wrap verified
+B1I_PRN_REGRESSION_PASS
+$finish called from file "../../tb/tb_b1i_prn_gen.sv", line 149.
+$finish at simulation time            655406000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 655406000 ps
+CPU Time:      0.130 seconds;       Data structure size:   0.1Mb
+Mon Sep 28 16:53:54 2026
+CPU time: .056 seconds to compile + .014 seconds to elab + .054 seconds to link + .190 seconds in simulation

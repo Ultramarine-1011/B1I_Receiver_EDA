@@ -1,0 +1,198 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set_app_var search_path [concat $search_path /home/IC/Foundry_Library/Digital]
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Foundry_Library/Digital
+set_app_var target_library [list saed90nm_typ.db]
+saed90nm_typ.db
+set_app_var synthetic_library [list saed90nm_typ.db]
+saed90nm_typ.db
+set_app_var link_library [list * saed90nm_typ.db]
+* saed90nm_typ.db
+analyze -format verilog ../../rtl/counter.v
+Running PRESTO HDLC
+Compiling source file ../../rtl/counter.v
+Presto compilation completed successfully.
+Loading db file '/home/IC/Foundry_Library/Digital/saed90nm_typ.db'
+1
+elaborate counter
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine counter line 6 in file
+		'../../rtl/counter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'counter'.
+1
+current_design counter
+Current design is 'counter'.
+{counter}
+link
+
+  Linking design 'counter'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  counter                     /home/7901_15/eda_project/work/dc/counter.db
+  saed90nm_typ (library)      /home/IC/Foundry_Library/Digital/saed90nm_typ.db
+
+1
+source ../../constraints/counter.sdc
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Using operating conditions 'TYPICAL' found in library 'saed90nm_typ'.
+Current design is 'counter'.
+Current design is 'counter'.
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Mon Sep 21 17:02:00 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'counter', cell 'B_2' does not drive any nets. (LINT-1)
+1
+compile -exact_map
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+| saed90nm_typ                       | updated 30.Sep.2011     |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'counter'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     262.3      0.00       0.0       3.2                          
+    0:00:00     262.3      0.00       0.0       3.2                          
+    0:00:00     262.3      0.00       0.0       3.2                          
+    0:00:00     262.3      0.00       0.0       3.2                          
+    0:00:00     262.3      0.00       0.0       3.2                          
+    0:00:00     241.1      0.00       0.0       2.7                          
+    0:00:00     241.1      0.00       0.0       2.7                          
+    0:00:00     241.1      0.00       0.0       2.7                          
+    0:00:00     241.1      0.00       0.0       2.7                          
+    0:00:00     241.1      0.00       0.0       2.7                          
+    0:00:00     264.1      0.00       0.0       1.3                          
+    0:00:00     279.9      0.00       0.0       0.0                          
+    0:00:00     279.9      0.00       0.0       0.0                          
+    0:00:00     279.9      0.00       0.0       0.0                          
+    0:00:00     279.9      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     279.9      0.00       0.0       0.0                          
+    0:00:00     279.9      0.00       0.0       0.0                          
+    0:00:00     279.9      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     279.9      0.00       0.0       0.0                          
+    0:00:00     279.9      0.00       0.0       0.0                          
+    0:00:00     266.8      0.00       0.0       0.0                          
+    0:00:00     266.8      0.00       0.0       0.0                          
+    0:00:00     266.8      0.00       0.0       0.0                          
+    0:00:00     266.8      0.00       0.0       0.0                          
+    0:00:00     266.8      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+    0:00:00     249.3      0.00       0.0       0.0                          
+Loading db file '/home/IC/Foundry_Library/Digital/saed90nm_typ.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+redirect ../../reports/dc_area.rpt { report_area }
+redirect ../../reports/dc_timing.rpt { report_timing }
+write -format verilog -hierarchy -output ../../reports/counter_after_dc.v
+Writing verilog file '/home/7901_15/eda_project/reports/counter_after_dc.v'.
+1
+write_sdc ../../reports/counter_after_dc.sdc
+1
+exit
+
+Memory usage for main task 87 Mbytes.
+Memory usage for this session 87 Mbytes.
+CPU usage for this session 1 seconds ( 0.00 hours ).
+
+Thank you...

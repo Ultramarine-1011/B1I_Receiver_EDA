@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/tracking' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_tracking_minimal/Vtb_tracking_minimal' 
+TRACKING_CASE_METRIC case=0 code_rms=0.000307 phase_rms_turn=0.003516 frequency_rms_hz=0.835909 tail_lock=1.000000 windows=999 feedbacks=999 changes=999
+TRACKING_CASE_PASS case=0
+TRACKING_CASE_METRIC case=1 code_rms=0.125094 phase_rms_turn=0.004229 frequency_rms_hz=0.832622 tail_lock=1.000000 windows=999 feedbacks=999 changes=999
+[327380650000] %Fatal: tb_tracking_minimal.sv:77: Assertion failed in tb_tracking_minimal.run_case: TRACKING_CASE_FAIL case=1
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_tracking_minimal.sv:77: Verilog $stop
+Aborting...
+EXIT_CODE: 6

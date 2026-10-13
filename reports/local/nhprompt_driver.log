@@ -1,0 +1,12 @@
+TRACKING_PROMPT_EXPORT_PASS windows=999 fields=ip,window_ref truth_fields=none
+make: Entering directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_nh_actual_prompt'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_nh_actual_prompt'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 0.103 s (elab=0.000, cvt=0.000, bld=0.055); cpu 0.006 s on 2 threads; alloced 7.000 MB
+NH_ACTUAL_RTL_PROMPT_PASS windows=999 phase=1 bits=29 constant_data_polarity=0
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_nh_actual_prompt.sv:37: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 10us; walltime 0.008 s; speed 1.778 ms/s
+- Verilator: cpu 0.006 s on 1 threads; alloced 249 MB

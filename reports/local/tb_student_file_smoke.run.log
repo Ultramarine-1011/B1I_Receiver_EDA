@@ -1,0 +1,9 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_student_file_smoke/Vtb_student_file_smoke' +MAX_BYTES=40920
+END record sample_index=163680
+STUDENT_FILE_SMOKE_PASS seconds=0.01 transfers=10230 samples=163680 ends=1 file_order=MSB_first bus_order=LSB_first
+PASS receiver_records.bin records=1
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/sim/receiver_tb_template.sv:125: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 11ms; walltime 0.068 s; speed 175.247 ms/s
+- Verilator: cpu 0.061 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0

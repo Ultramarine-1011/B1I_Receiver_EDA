@@ -1,0 +1,27 @@
+{
+  "kind": "actual_RTL_on_synthetic_IF",
+  "metrics": [
+    {
+      "case": 0.0,
+      "code_rms": 0.062345,
+      "phase_rms_turn": 0.002678,
+      "frequency_rms_hz": 0.847095,
+      "tail_lock": 1.0,
+      "windows": 999.0,
+      "feedbacks": 999.0,
+      "changes": 998.0
+    },
+    {
+      "case": 1.0,
+      "code_rms": 0.063487,
+      "phase_rms_turn": 0.002674,
+      "frequency_rms_hz": 0.847133,
+      "tail_lock": 1.0,
+      "windows": 999.0,
+      "feedbacks": 999.0,
+      "changes": 999.0
+    }
+  ],
+  "feedback_delay_to_effective_sample": 3,
+  "source_csv": "tracking_loop.csv"
+}

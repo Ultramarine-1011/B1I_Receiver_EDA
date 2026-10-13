@@ -1,0 +1,91 @@
+{
+  "teacher_unchanged": [
+    {
+      "path": "student_release\\student_release\\README.md",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\input\\input_contract.json",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\input\\scenario.if2",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\interface\\receiver_input_if.sv",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\scripts\\run_student_sim.ps1",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\sim\\if2_file_player.sv",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\sim\\receiver_tb_template.sv",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\submission\\OUTPUT_REQUIREMENTS.md",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\submission\\RECORD_FORMAT.md",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\check_input_package.py",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\check_records.py",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\decode_records.py",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\prompt_d1.py",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\route_a_position.py",
+      "match": true
+    },
+    {
+      "path": "student_release\\student_release\\tools\\self_check.py",
+      "match": true
+    }
+  ],
+  "baseline_unchanged": [
+    {
+      "path": "rtl\\b1i_prn_gen.sv",
+      "match": true
+    },
+    {
+      "path": "rtl\\code_nco.sv",
+      "match": true
+    },
+    {
+      "path": "rtl\\epl_correlator.sv",
+      "match": true
+    },
+    {
+      "path": "rtl\\carrier_nco_mixer.sv",
+      "match": true
+    },
+    {
+      "path": "rtl\\carrier_quarter_lut.svh",
+      "match": true
+    },
+    {
+      "path": "rtl\\tracking_frontend.sv",
+      "match": true
+    }
+  ],
+  "plan_sha256": "0B471B4DDE961E6ADC6309A54126E5148F3C74390FF48D0597F21324CD3F6A28"
+}

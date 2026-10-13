@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : counter
+Version: K-2015.06
+Date   : Mon Sep 21 17:02:01 2026
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: clear (input port clocked by clock)
+  Endpoint: out_reg[3] (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  counter            tc8000000             saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     8.00       8.00 r
+  clear (in)                               0.00       8.00 r
+  U27/ZN (INVX0)                           1.19       9.19 f
+  U14/Q (AND2X1)                           0.83      10.02 f
+  U19/QN (NAND3X0)                         1.14      11.16 r
+  U25/QN (NAND2X1)                         1.06      12.22 f
+  out_reg[3]/D (DFFX1)                     0.60      12.82 f
+  data arrival time                                  12.82
+
+  clock clock (rise edge)                 20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  out_reg[3]/CLK (DFFX1)                   0.00      20.00 r
+  library setup time                      -0.04      19.96
+  data required time                                 19.96
+  -----------------------------------------------------------
+  data required time                                 19.96
+  data arrival time                                 -12.82
+  -----------------------------------------------------------
+  slack (MET)                                         7.14
+
+
+1

@@ -1,0 +1,50 @@
+                         Chronologic VCS (TM)
+            Version I-2014.03 -- Mon Sep 28 16:53:55 2026
+               Copyright (c) 1991-2014 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '../../rtl/b1i_prn_gen.sv'
+Parsing design file '../../rtl/code_nco.sv'
+Parsing design file '../../rtl/epl_correlator.sv'
+Parsing design file '../../tb/tb_code_nco_epl.sv'
+Top Level Modules:
+       tb_code_nco_epl
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+	However, due to incremental compilation, only 2 modules need to be compiled.
+recompiling module epl_correlator because:
+	Cross module references have been changed, added or deleted.
+recompiling module tb_code_nco_epl because:
+	This module or some inlined child module(s) has/have been modified.
+Both modules done.
+make[1]: Entering directory `/home/7901_15/eda_project/work/code_nco_epl/csrc'
+rm -f _csrc*.so linux_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -m elf_i386 -shared -o .//../simv.daidir//_csrc1.so --whole-archive _vcsobj_1_1.a  --no-whole-archive
+ld -m elf_i386 -shared -o .//../simv.daidir//_csrc0.so 5NrI_d.o 5NrIB_d.o SIM_l.o  
+ld -m elf_i386 -shared -o .//../simv.daidir//pre_vcsobj_0_1.so --whole-archive pre_vcsobj_0_1.a --no-whole-archive
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv  -m32 -m32   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  _csrc1.so _csrc0.so   pre_vcsobj_0_1.so  rmapats_mop.o rmapats.o rmar.o           /opt/Synopsys/VCS2014/linux/lib/libzerosoft_rt_stubs.so /opt/Synopsys/VCS2014/linux/lib/libvirsim.so /opt/Synopsys/VCS2014/linux/lib/librterrorinf.so /opt/Synopsys/VCS2014/linux/lib/libsnpsmalloc.so    /opt/Synopsys/VCS2014/linux/lib/libvcsnew.so /opt/Synopsys/VCS2014/linux/lib/libuclinative.so   -Wl,-whole-archive /opt/Synopsys/VCS2014/linux/lib/libvcsucli.so -Wl,-no-whole-archive          /opt/Synopsys/VCS2014/linux/lib/vcs_save_restore_new.o /opt/Synopsys/VCS2014/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/7901_15/eda_project/work/code_nco_epl/csrc'
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03; Runtime version I-2014.03;  Sep 28 16:53 2026
+VECTOR CASE PASS: ../../tb/vectors/code_nco_epl/nco_epl_nominal.vec (36027 events, init wait 2046 cycles)
+VECTOR CASE PASS: ../../tb/vectors/code_nco_epl/nco_epl_positive_adjust.vec (149 events, init wait 2046 cycles)
+VECTOR CASE PASS: ../../tb/vectors/code_nco_epl/nco_epl_negative_adjust.vec (160 events, init wait 2046 cycles)
+VECTOR CASE PASS: ../../tb/vectors/code_nco_epl/nco_epl_midstream_reload.vec (115 events, init wait 124 cycles)
+ACCUMULATOR EXTREME PASS: +/-65472 in 17 signed bits
+RELOAD_COLLISION_PASS: init priority, busy sample and asynchronous reset
+CODE_NCO_EPL_REGRESSION_PASS events=36451 windows=4
+$finish called from file "../../tb/tb_code_nco_epl.sv", line 416.
+$finish at simulation time            754680000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 754680000 ps
+CPU Time:      0.300 seconds;       Data structure size:   0.0Mb
+Mon Sep 28 16:53:55 2026
+CPU time: .092 seconds to compile + .009 seconds to elab + .051 seconds to link + .342 seconds in simulation

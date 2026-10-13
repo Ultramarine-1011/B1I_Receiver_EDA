@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-13",
+  "sources": {
+    "systemverilog": {
+      "repository": "babyworm/rtl-agent-team",
+      "revision": "56c02875d77bd7b6d44fe9c5acd27d7d03f34b12",
+      "path": "skills/systemverilog",
+      "upstream_sha256": "8fdcf154eba3011a0ea638c73966a590e12bf3e2667161ebfb51baa2d7edeb89",
+      "license_path": "LICENSE"
+    },
+    "tb-best-practices": {
+      "repository": "codejunkie99/Gateflow-Plugin",
+      "revision": "bf7e94c002eab8ce8ea76365a7490daaaba3b102",
+      "path": "plugins/gateflow/skills/tb-best-practices",
+      "upstream_sha256": "fce8ffdf39e217ad0c44d59f35ddcdcf2c15e38413d533528ec50fbc6fde928e",
+      "license_path": "LICENSE"
+    },
+    "systematic-debugging": {
+      "repository": "openai/plugins",
+      "revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "path": "plugins/superpowers/skills/systematic-debugging",
+      "upstream_sha256": "23f249e47a3a4b06c3a5030e37aaf3ced12a54f406782766b384ed127d21eca4",
+      "license_path": "plugins/superpowers/LICENSE"
+    },
+    "nature-writing": {
+      "repository": "Mubuky/nature-skills",
+      "revision": "f792de121632744e32f8ebcf858fc57e52b4678a",
+      "path": "skills/nature-writing",
+      "upstream_sha256": "633c00f92a60c92bcf829377ca44b702aa028035a724de4701f788f14929a13a",
+      "license_path": "LICENSE"
+    }
+  },
+  "adaptation": "Project entrypoints adapted; upstream materials are reference-only.",
+  "files": {
+    "eda-autonomous-workflow/SKILL.md": "b86c083c0c31d47c8a24e9ac10b64a55f3dfa7b51e76b2135a199f75aa35cea7",
+    "gnss-b1i-design/SKILL.md": "192e793366d912efc5b08bde7a2b873e3b0f1c2986642db5f3a9b5b66f29fa59",
+    "nature-writing/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "nature-writing/NOTICE": "d5956bf6431e50db907e6f59038242ddf9b544b7a8026c476de5ae26b59cad02",
+    "nature-writing/SKILL.md": "b006430750c2e93ba88bbf2e245177c2bfe29377197ee2a9051cd7c9c5f027b7",
+    "rtl-vcs-verification/SKILL.md": "44acac4b213762829bf92c525c7f382f583dec003ce43c10f2695ea890cc8cdc",
+    "synopsys-asic-flow/SKILL.md": "bf925a6c67b793372f3354d7c5b0451b2b5fff68a121d3a176431b076de12dab",
+    "systematic-debugging/LICENSE": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+    "systematic-debugging/root-cause-tracing.md": "cb00878f1b5b79442dc474f0e0d67b44f8175e741ba90abbf5e9778b67ba4854",
+    "systematic-debugging/SKILL.md": "9db96887c407083da20b6fec5678e4adcbc8a8e40a7c457dacc73aec0778cb4d",
+    "systemverilog/LICENSE": "3a702e918059429ec605c9c54e3af5aa1fcd31cdc7dc6c85b730d27a25144406",
+    "systemverilog/SKILL.md": "913397b45cbcf452cc0e193cb022ddd84800262c74313bf097bcba8fe2a0a7ca",
+    "tb-best-practices/LICENSE": "61e53754f4a42c3e26575bf6dbc06642b4f128f326950c2c4f7b95588d0a29b4",
+    "tb-best-practices/SKILL.md": "be13a351a1e27c17a46b21c69928a8aa40f4eaeadf3df9a012c201fd1199da35",
+    "eda-autonomous-workflow/references/environment.md": "24eaec50e9122c04da5587471cff075cabdf8ab03c199821d1bb7b1361d0d75d",
+    "nature-writing/references/ethics.md": "df521c8aea558f4db69119359df65c3c1fb71ce10e9dd0bbe8391e6b3533d5d3",
+    "nature-writing/references/experiments.md": "c006493e48996121af46332af8a833b6607508773668ade35b374cb5081a8812",
+    "nature-writing/references/latex-layout.md": "a774c140bca9c202883f199ec0f149d0996003df44b2084cc728081a7ff6c6b1",
+    "nature-writing/references/polishing-workflow.md": "a4495eb57719be62c826c675b3b34d5c20f307848536fc43a221edc673cdf785",
+    "nature-writing/references/terminology-ledger.md": "c8ff387fc55439dbec9835d624fb1c1e544cca06ae8d007f8e4f726f68080784",
+    "nature-writing/references/upstream.txt": "633c00f92a60c92bcf829377ca44b702aa028035a724de4701f788f14929a13a",
+    "systematic-debugging/references/upstream.txt": "23f249e47a3a4b06c3a5030e37aaf3ced12a54f406782766b384ed127d21eca4",
+    "systemverilog/references/upstream.txt": "8fdcf154eba3011a0ea638c73966a590e12bf3e2667161ebfb51baa2d7edeb89",
+    "tb-best-practices/references/upstream.txt": "fce8ffdf39e217ad0c44d59f35ddcdcf2c15e38413d533528ec50fbc6fde928e"
+  }
+}

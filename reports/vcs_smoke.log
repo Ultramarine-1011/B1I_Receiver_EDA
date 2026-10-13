@@ -1,0 +1,35 @@
+                         Chronologic VCS (TM)
+            Version I-2014.03 -- Mon Sep 21 17:01:05 2026
+               Copyright (c) 1991-2014 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '../../rtl/counter.v'
+Parsing design file '../../tb/testbench.v'
+Top Level Modules:
+       counter_testbench
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory `/home/7901_15/eda_project/work/vcs/csrc'
+rm -f _csrc*.so linux_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -m elf_i386 -shared -o .//../simv.daidir//_csrc0.so SIM_l.o 5NrI_d.o 5NrIB_d.o  
+ld -m elf_i386 -shared -o .//../simv.daidir//pre_vcsobj_1_1.so --whole-archive pre_vcsobj_1_1.a --no-whole-archive
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv  -m32 -m32   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  _csrc0.so   pre_vcsobj_1_1.so  rmapats_mop.o rmapats.o rmar.o           /opt/Synopsys/VCS2014/linux/lib/libzerosoft_rt_stubs.so /opt/Synopsys/VCS2014/linux/lib/libvirsim.so /opt/Synopsys/VCS2014/linux/lib/librterrorinf.so /opt/Synopsys/VCS2014/linux/lib/libsnpsmalloc.so    /opt/Synopsys/VCS2014/linux/lib/libvcsnew.so /opt/Synopsys/VCS2014/linux/lib/libuclinative.so   -Wl,-whole-archive /opt/Synopsys/VCS2014/linux/lib/libvcsucli.so -Wl,-no-whole-archive          /opt/Synopsys/VCS2014/linux/lib/vcs_save_restore_new.o /opt/Synopsys/VCS2014/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/7901_15/eda_project/work/vcs/csrc'
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03; Runtime version I-2014.03;  Sep 21 17:01 2026
+$finish called from file "../../tb/testbench.v", line 30.
+$finish at simulation time                  500
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 500
+CPU Time:      0.130 seconds;       Data structure size:   0.0Mb
+Mon Sep 21 17:01:06 2026
+CPU time: .077 seconds to compile + .010 seconds to elab + .059 seconds to link + .175 seconds in simulation

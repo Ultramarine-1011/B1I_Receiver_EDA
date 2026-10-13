@@ -1,0 +1,5 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_student_file_smoke/Vtb_student_file_smoke' 
+[10624460000] %Fatal: tb_student_file_smoke.sv:18: Assertion failed in tb_student_file_smoke: unexpected stream_last
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_student_file_smoke.sv:18: Verilog $stop
+Aborting...
+EXIT_CODE: 6

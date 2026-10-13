@@ -1,0 +1,7 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/nh_d1' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_nh_actual_prompt/Vtb_nh_actual_prompt' 
+NH_ACTUAL_RTL_PROMPT_PASS windows=999 phase=1 bits=29 constant_data_polarity=0
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_nh_actual_prompt.sv:37: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 10us; walltime 0.008 s; speed 1.778 ms/s
+- Verilator: cpu 0.006 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0

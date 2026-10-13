@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-13",
+  "design_source": "Existing root RTL dated no later than 2026-09-28; historical carrier manifest cross-check pending",
+  "baseline": [
+    {
+      "path": "rtl\\b1i_prn_gen.sv",
+      "size": 5046,
+      "last_write": "2026-09-21T17:19:10",
+      "sha256": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475"
+    },
+    {
+      "path": "rtl\\code_nco.sv",
+      "size": 8509,
+      "last_write": "2026-09-28T16:29:32",
+      "sha256": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1"
+    },
+    {
+      "path": "rtl\\epl_correlator.sv",
+      "size": 5208,
+      "last_write": "2026-09-21T17:37:20",
+      "sha256": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786"
+    },
+    {
+      "path": "rtl\\carrier_nco_mixer.sv",
+      "size": 3613,
+      "last_write": "2026-09-28T16:45:08",
+      "sha256": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC"
+    },
+    {
+      "path": "rtl\\carrier_quarter_lut.svh",
+      "size": 10392,
+      "last_write": "2026-09-28T16:43:06",
+      "sha256": "B7E8595471E7EBC01DE0B0476D48BF5B48D5C27931091690AE6EDD56679A7D0C"
+    },
+    {
+      "path": "rtl\\tracking_frontend.sv",
+      "size": 5771,
+      "last_write": "2026-09-28T17:13:20",
+      "sha256": "5F1EBDCD6869FA63AF6E14B223155F4F7677DD51348780D7C035850B15C18BD4"
+    }
+  ],
+  "teacher_public": [
+    {
+      "path": "student_release\\student_release\\README.md",
+      "size": 9266,
+      "sha256": "C355F85695278B4BB744339D886047152BA404AB2134DFB31E3F2A7A0BCB5D0E"
+    },
+    {
+      "path": "student_release\\student_release\\input\\input_contract.json",
+      "size": 896,
+      "sha256": "6F6516485A22C7B76CD7CD24DA9F1B8A8FD84214419C649ED9CE738E080E97A5"
+    },
+    {
+      "path": "student_release\\student_release\\input\\scenario.if2",
+      "size": 409200000,
+      "sha256": "2C47D1533FA54316952496FFB7905742C34A989B0A6276B867FE69566C5027DA"
+    },
+    {
+      "path": "student_release\\student_release\\interface\\receiver_input_if.sv",
+      "size": 1071,
+      "sha256": "7CA32668F62FBE016DFE311D3576CD8CCB2FB05B91D03AA8A4CA1499AB4698B1"
+    },
+    {
+      "path": "student_release\\student_release\\scripts\\run_student_sim.ps1",
+      "size": 4048,
+      "sha256": "470B0019AE991B8F479BA46166E2F13451ADB3512CA862E46562B63128343224"
+    },
+    {
+      "path": "student_release\\student_release\\sim\\if2_file_player.sv",
+      "size": 4523,
+      "sha256": "2F9086FE9E154F1CB9819093C9330B292C3E4CB6B52C17424B490CB305CB5CA1"
+    },
+    {
+      "path": "student_release\\student_release\\sim\\receiver_tb_template.sv",
+      "size": 4295,
+      "sha256": "18171FF5F1B17ED72F018076EDA485AC9894EFCACD3239FC0986317DE383B2CA"
+    },
+    {
+      "path": "student_release\\student_release\\submission\\OUTPUT_REQUIREMENTS.md",
+      "size": 1109,
+      "sha256": "F2FB46696957CE810A9B284099DC3E6CC08F4BD4E19ABF128A51CE72BC938C8E"
+    },
+    {
+      "path": "student_release\\student_release\\submission\\RECORD_FORMAT.md",
+      "size": 2378,
+      "sha256": "8A6A8ED08417BD4B65ECAFD62AC0D02A24460181F7D0BE256E613092234A83DC"
+    },
+    {
+      "path": "student_release\\student_release\\tools\\check_input_package.py",
+      "size": 1264,
+      "sha256": "6622FA9C8769D49538161799530BB873D0CAA0FE6FB4E396CA576D3927B1C7C2"
+    },
+    {
+      "path": "student_release\\student_release\\tools\\check_records.py",
+      "size": 3599,
+      "sha256": "2DFE9A2ACF37ED5E9AEF997690C7D8510A319959FC5DBA795FC17A7DD31C3606"
+    },
+    {
+      "path": "student_release\\student_release\\tools\\decode_records.py",
+      "size": 5180,
+      "sha256": "1A81CB9FFA31775CA82A58D0184E9A4CAD362DCDC22C6B9D750BDBC0447E57F4"
+    },
+    {
+      "path": "student_release\\student_release\\tools\\prompt_d1.py",
+      "size": 13332,
+      "sha256": "956B7AE51D6C79FA503BDB064F8C1383821564E7EE54CC670B86EB54D55D1771"
+    },
+    {
+      "path": "student_release\\student_release\\tools\\route_a_position.py",
+      "size": 23884,
+      "sha256": "592B5B6A030B4317AA84F48C4695FB8852BFE0194E085E9368F1641AEC7FB4CB"
+    },
+    {
+      "path": "student_release\\student_release\\tools\\self_check.py",
+      "size": 3157,
+      "sha256": "0799FA9A506C536984EF50CE406CBFEA6D57AA02DCD1410FEBF944F57F001DC2"
+    }
+  ]
+}

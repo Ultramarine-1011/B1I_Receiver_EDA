@@ -1,0 +1,3 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br' && python3 model/export_tracking_prompt.py
+TRACKING_PROMPT_EXPORT_PASS windows=999 fields=ip,window_ref truth_fields=none
+EXIT_CODE: 0

@@ -1,0 +1,6 @@
+ForEach-Object: C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\scripts\run_student_sim.ps1:50
+Line |
+  50 |  …  = ($sources | ForEach-Object { "'$(Convert-ToWslPath $_)'" }) -join  …
+     |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Exception calling "GetFullPath" with "1" argument(s): "The path is empty. (Parameter 'path')"
+SCRIPT_EXIT_CODE: 1

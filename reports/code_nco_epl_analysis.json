@@ -1,0 +1,200 @@
+{
+  "accumulator_scan": [
+    {
+      "baseline_guard_bits": 0,
+      "iq_width": 3,
+      "max_product_magnitude": 4,
+      "minimum_signed_accumulator_width": 17,
+      "window_samples": 16368,
+      "worst_sum_magnitude": 65472
+    },
+    {
+      "baseline_guard_bits": 0,
+      "iq_width": 4,
+      "max_product_magnitude": 8,
+      "minimum_signed_accumulator_width": 18,
+      "window_samples": 16368,
+      "worst_sum_magnitude": 130944
+    },
+    {
+      "baseline_guard_bits": 0,
+      "iq_width": 8,
+      "max_product_magnitude": 128,
+      "minimum_signed_accumulator_width": 22,
+      "window_samples": 16368,
+      "worst_sum_magnitude": 2095104
+    },
+    {
+      "baseline_guard_bits": 0,
+      "iq_width": 12,
+      "max_product_magnitude": 2048,
+      "minimum_signed_accumulator_width": 26,
+      "window_samples": 16368,
+      "worst_sum_magnitude": 33521664
+    },
+    {
+      "baseline_guard_bits": 0,
+      "iq_width": 16,
+      "max_product_magnitude": 32768,
+      "minimum_signed_accumulator_width": 30,
+      "window_samples": 16368,
+      "worst_sum_magnitude": 536346624
+    }
+  ],
+  "fixed_inputs": {
+    "b1i_carrier_hz": 1561098000,
+    "conservative_max_code_rate_offset_hz": 13.106159895150721,
+    "fs_hz": 16368000,
+    "max_total_carrier_offset_hz": 10000,
+    "rc_hz": 2046000
+  },
+  "nco_scan": [
+    {
+      "endpoint_error_at_max_offset_chips_per_s": 13.106159895192832,
+      "fractional_bits": 16,
+      "phase_state_bits": 27,
+      "rate_lsb_chips_per_s": 249.755859375,
+      "worst_drift_180s_chips": 22478.02734375,
+      "worst_drift_1ms_chips": 0.1248779296875,
+      "worst_drift_1s_chips": 124.8779296875,
+      "worst_rounding_error_chips_per_s": 124.8779296875
+    },
+    {
+      "endpoint_error_at_max_offset_chips_per_s": 2.5035813157446682,
+      "fractional_bits": 20,
+      "phase_state_bits": 31,
+      "rate_lsb_chips_per_s": 15.6097412109375,
+      "worst_drift_180s_chips": 1404.876708984375,
+      "worst_drift_1ms_chips": 0.00780487060546875,
+      "worst_drift_1s_chips": 7.80487060546875,
+      "worst_rounding_error_chips_per_s": 7.80487060546875
+    },
+    {
+      "endpoint_error_at_max_offset_chips_per_s": 0.423245161306113,
+      "fractional_bits": 24,
+      "phase_state_bits": 35,
+      "rate_lsb_chips_per_s": 0.9756088256835938,
+      "worst_drift_180s_chips": 87.80479431152344,
+      "worst_drift_1ms_chips": 0.0004878044128417969,
+      "worst_drift_1s_chips": 0.4878044128417969,
+      "worst_rounding_error_chips_per_s": 0.4878044128417969
+    },
+    {
+      "endpoint_error_at_max_offset_chips_per_s": 0.003583699930459261,
+      "fractional_bits": 28,
+      "phase_state_bits": 39,
+      "rate_lsb_chips_per_s": 0.06097555160522461,
+      "worst_drift_180s_chips": 5.487799644470215,
+      "worst_drift_1ms_chips": 3.0487775802612305e-05,
+      "worst_drift_1s_chips": 0.030487775802612305,
+      "worst_rounding_error_chips_per_s": 0.030487775802612305
+    },
+    {
+      "endpoint_error_at_max_offset_chips_per_s": 0.00022727204486727715,
+      "fractional_bits": 32,
+      "phase_state_bits": 43,
+      "rate_lsb_chips_per_s": 0.003810971975326538,
+      "worst_drift_180s_chips": 0.3429874777793884,
+      "worst_drift_1ms_chips": 1.905485987663269e-06,
+      "worst_drift_1s_chips": 0.001905485987663269,
+      "worst_rounding_error_chips_per_s": 0.001905485987663269
+    },
+    {
+      "endpoint_error_at_max_offset_chips_per_s": 1.0913703590631485e-05,
+      "fractional_bits": 36,
+      "phase_state_bits": 47,
+      "rate_lsb_chips_per_s": 0.00023818574845790863,
+      "worst_drift_180s_chips": 0.021436717361211777,
+      "worst_drift_1ms_chips": 1.1909287422895432e-07,
+      "worst_drift_1s_chips": 0.00011909287422895432,
+      "worst_rounding_error_chips_per_s": 0.00011909287422895432
+    }
+  ],
+  "selected_baseline": {
+    "accumulator_guard_bits": 0,
+    "accumulator_width_formula": "IQ_WIDTH + ceil(log2(WINDOW_SAMPLES + 1))",
+    "epl_delta_half_spacing_chips": 0.25,
+    "epl_total_spacing_chips": 0.5,
+    "phase_format": "unsigned Q11.32 chips modulo 2046",
+    "phase_fractional_bits": 32,
+    "window_samples": 16368
+  },
+  "spacing_summary": [
+    {
+      "both_arms_nonzero_half_range_chips": 0.875,
+      "delta_half_spacing_chips": 0.125,
+      "discrete_near_zero_slope_per_chip": -2.2424025182008025,
+      "el_total_spacing_chips": 0.25,
+      "ideal_near_zero_slope_per_chip": -2.2857142857142856,
+      "sample_phase_quantization_half_lsb_chips": 0.0625,
+      "sign_correct_pull_in_half_range_chips": 1.125,
+      "spacing_samples_at_8_samples_per_chip": 1.0
+    },
+    {
+      "both_arms_nonzero_half_range_chips": 0.75,
+      "delta_half_spacing_chips": 0.25,
+      "discrete_near_zero_slope_per_chip": -2.59779417966405,
+      "el_total_spacing_chips": 0.5,
+      "ideal_near_zero_slope_per_chip": -2.6666666666666665,
+      "sample_phase_quantization_half_lsb_chips": 0.0625,
+      "sign_correct_pull_in_half_range_chips": 1.25,
+      "spacing_samples_at_8_samples_per_chip": 2.0
+    },
+    {
+      "both_arms_nonzero_half_range_chips": 0.5,
+      "delta_half_spacing_chips": 0.5,
+      "discrete_near_zero_slope_per_chip": -3.7712041224482444,
+      "el_total_spacing_chips": 1.0,
+      "ideal_near_zero_slope_per_chip": -4.0,
+      "sample_phase_quantization_half_lsb_chips": 0.0625,
+      "sign_correct_pull_in_half_range_chips": 1.5,
+      "spacing_samples_at_8_samples_per_chip": 4.0
+    }
+  ],
+  "vector_cases": [
+    {
+      "accepted_samples": 32752,
+      "desired_code_rate_hz": 2046000.0,
+      "events": 36027,
+      "file": "nco_epl_nominal.vec",
+      "init_period_count": 0,
+      "init_phase_chips": 0.0,
+      "max_fixed_vs_exact_phase_error_chips": 0.0,
+      "prn": 6,
+      "step_q": 536870912
+    },
+    {
+      "accepted_samples": 128,
+      "desired_code_rate_hz": 2046013.1061598952,
+      "events": 149,
+      "file": "nco_epl_positive_adjust.vec",
+      "init_period_count": 7,
+      "init_phase_chips": 2045.75,
+      "max_fixed_vs_exact_phase_error_chips": 1.6298145055770874e-09,
+      "prn": 12,
+      "step_q": 536874351
+    },
+    {
+      "accepted_samples": 128,
+      "desired_code_rate_hz": 2045986.8938401048,
+      "events": 160,
+      "file": "nco_epl_negative_adjust.vec",
+      "init_period_count": 21,
+      "init_phase_chips": 0.125,
+      "max_fixed_vs_exact_phase_error_chips": 1.862645149230957e-09,
+      "prn": 23,
+      "step_q": 536867473
+    },
+    {
+      "accepted_samples": 96,
+      "desired_code_rate_hz": 2046000.0,
+      "events": 115,
+      "file": "nco_epl_midstream_reload.vec",
+      "init_period_count": 99,
+      "init_phase_chips": 123.375,
+      "max_fixed_vs_exact_phase_error_chips": 0.0,
+      "prn": 37,
+      "step_q": 536870912
+    }
+  ]
+}

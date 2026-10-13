@@ -1,0 +1,436 @@
+{
+  "kind": "full_precision_research_not_rtl_validation",
+  "source_sha256": "c4694a6b3ff3117885b71d9bca1f9433c3906d89bb47e585666539fb297a600f",
+  "linearized_pi_poles": [
+    {
+      "bandwidth_hz": 1,
+      "delay_samples": 128,
+      "gain": 1.0,
+      "kp_per_s": 2.6666666666666665,
+      "ki_per_s2": 3.5555555555555545,
+      "poles": [
+        [
+          0.9986639800357142,
+          0.0013324565828244607
+        ],
+        [
+          0.9986639800357142,
+          -0.0013324565828244607
+        ],
+        [
+          0.0014154879461536934,
+          0.0
+        ],
+        [
+          -5.775927359456275e-05,
+          0.0
+        ]
+      ],
+      "max_magnitude": 0.9986648689431897
+    },
+    {
+      "bandwidth_hz": 2,
+      "delay_samples": 128,
+      "gain": 1.0,
+      "kp_per_s": 5.333333333333333,
+      "ki_per_s2": 14.222222222222218,
+      "poles": [
+        [
+          0.9973225623653965,
+          0.002663152566910882
+        ],
+        [
+          0.9973225623653965,
+          -0.002663152566910882
+        ],
+        [
+          0.0027816930974702138,
+          0.0
+        ],
+        [
+          -5.8940503420976836e-05,
+          0.0
+        ]
+      ],
+      "max_magnitude": 0.9973261180700499
+    },
+    {
+      "bandwidth_hz": 5,
+      "delay_samples": 128,
+      "gain": 1.0,
+      "kp_per_s": 13.333333333333332,
+      "ki_per_s2": 88.88888888888886,
+      "poles": [
+        [
+          0.993265548905592,
+          0.006644568880168083
+        ],
+        [
+          0.993265548905592,
+          -0.006644568880168083
+        ],
+        [
+          0.00692204135600887,
+          0.0
+        ],
+        [
+          -5.969707858035645e-05,
+          0.0
+        ]
+      ],
+      "max_magnitude": 0.9932877734767152
+    },
+    {
+      "bandwidth_hz": 10,
+      "delay_samples": 128,
+      "gain": 1.0,
+      "kp_per_s": 26.666666666666664,
+      "ki_per_s2": 355.55555555555543,
+      "poles": [
+        [
+          0.9863923181598342,
+          0.01324402263208998
+        ],
+        [
+          0.9863923181598342,
+          -0.01324402263208998
+        ],
+        [
+          0.013974701794042229,
+          0.0
+        ],
+        [
+          -5.995801477936535e-05,
+          0.0
+        ]
+      ],
+      "max_magnitude": 0.9864812261063112
+    },
+    {
+      "bandwidth_hz": 15,
+      "delay_samples": 128,
+      "gain": 1.0,
+      "kp_per_s": 40.0,
+      "ki_per_s2": 799.9999999999999,
+      "poles": [
+        [
+          0.9793751778382549,
+          0.019796917495714533
+        ],
+        [
+          0.9793751778382549,
+          -0.019796917495714533
+        ],
+        [
+          0.02122750436552987,
+          0.0
+        ],
+        [
+          -6.004601108609642e-05,
+          0.0
+        ]
+      ],
+      "max_magnitude": 0.9795752431069528
+    }
+  ],
+  "suite": "stress",
+  "host_elapsed_s": 186.10371319996193,
+  "results": [
+    {
+      "scenario": {
+        "name": "noisy_corner_behind",
+        "prn": 6,
+        "seconds": 3,
+        "true_code_phase": 0.0,
+        "initial_code_error": -0.375,
+        "true_carrier_phase_turns": 0.249,
+        "total_offset_hz": 9700,
+        "motion_offset_hz": 5000,
+        "initial_frequency_error_hz": 200,
+        "initial_code_rate_error_cps": 7,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 0.0,
+        "jerk_hz_s2": 0.0,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260928
+      },
+      "result": {
+        "name": "noisy_corner_behind",
+        "dll_bw_hz": 5,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 4,
+        "code_rms_chips": 0.005665133361368038,
+        "carrier_rms_turns": 0.004199385385391512,
+        "frequency_rms_hz": 0.8980137406179152,
+        "first_lock_time_s": 0.5985002443792766,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 0.946,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    },
+    {
+      "scenario": {
+        "name": "noisy_corner_ahead",
+        "prn": 12,
+        "seconds": 3,
+        "true_code_phase": 0.0,
+        "initial_code_error": 0.375,
+        "true_carrier_phase_turns": -0.249,
+        "total_offset_hz": -9700,
+        "motion_offset_hz": -5000,
+        "initial_frequency_error_hz": -200,
+        "initial_code_rate_error_cps": -7,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 0.0,
+        "jerk_hz_s2": 0.0,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260929
+      },
+      "result": {
+        "name": "noisy_corner_ahead",
+        "dll_bw_hz": 5,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 16365,
+        "code_rms_chips": 0.00571077446496503,
+        "carrier_rms_turns": 0.003116936106989833,
+        "frequency_rms_hz": 0.8753965729370681,
+        "first_lock_time_s": 0.5984998167155425,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 0.941,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    },
+    {
+      "scenario": {
+        "name": "oscillator_only",
+        "prn": 23,
+        "seconds": 3,
+        "true_code_phase": 0.0,
+        "initial_code_error": 0.3,
+        "true_carrier_phase_turns": 0.49,
+        "total_offset_hz": 9000,
+        "motion_offset_hz": 0,
+        "initial_frequency_error_hz": 200,
+        "initial_code_rate_error_cps": 0.2,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 0.0,
+        "jerk_hz_s2": 0.0,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260930
+      },
+      "result": {
+        "name": "oscillator_only",
+        "dll_bw_hz": 5,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 16366,
+        "code_rms_chips": 0.046217137547528306,
+        "carrier_rms_turns": 0.003769868235908051,
+        "frequency_rms_hz": 0.9135401708252011,
+        "first_lock_time_s": 0.3724998778103617,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 0.9996666666666667,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    },
+    {
+      "scenario": {
+        "name": "bounded_dynamic",
+        "prn": 37,
+        "seconds": 4,
+        "true_code_phase": 0.0,
+        "initial_code_error": 0.3,
+        "true_carrier_phase_turns": 0.19,
+        "total_offset_hz": 3000.0,
+        "motion_offset_hz": 2000.0,
+        "initial_frequency_error_hz": 100.0,
+        "initial_code_rate_error_cps": 0.2,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 26.036,
+        "jerk_hz_s2": -26.036,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260931
+      },
+      "result": {
+        "name": "bounded_dynamic",
+        "dll_bw_hz": 5,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 16366,
+        "code_rms_chips": 0.006442266611732137,
+        "carrier_rms_turns": 0.0034549921598423174,
+        "frequency_rms_hz": 0.8353645304093993,
+        "first_lock_time_s": 0.2834998778103617,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 1.0,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    },
+    {
+      "scenario": {
+        "name": "noisy_corner_behind",
+        "prn": 6,
+        "seconds": 3,
+        "true_code_phase": 0.0,
+        "initial_code_error": -0.375,
+        "true_carrier_phase_turns": 0.249,
+        "total_offset_hz": 9700,
+        "motion_offset_hz": 5000,
+        "initial_frequency_error_hz": 200,
+        "initial_code_rate_error_cps": 7,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 0.0,
+        "jerk_hz_s2": 0.0,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260928
+      },
+      "result": {
+        "name": "noisy_corner_behind",
+        "dll_bw_hz": 10,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 4,
+        "code_rms_chips": 0.007457554072530855,
+        "carrier_rms_turns": 0.004211165421573404,
+        "frequency_rms_hz": 0.8985432612538291,
+        "first_lock_time_s": 0.30250024437927664,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 0.999,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    },
+    {
+      "scenario": {
+        "name": "noisy_corner_ahead",
+        "prn": 12,
+        "seconds": 3,
+        "true_code_phase": 0.0,
+        "initial_code_error": 0.375,
+        "true_carrier_phase_turns": -0.249,
+        "total_offset_hz": -9700,
+        "motion_offset_hz": -5000,
+        "initial_frequency_error_hz": -200,
+        "initial_code_rate_error_cps": -7,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 0.0,
+        "jerk_hz_s2": 0.0,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260929
+      },
+      "result": {
+        "name": "noisy_corner_ahead",
+        "dll_bw_hz": 10,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 16365,
+        "code_rms_chips": 0.007703072299400514,
+        "carrier_rms_turns": 0.003198412425383286,
+        "frequency_rms_hz": 0.8765887351304508,
+        "first_lock_time_s": 0.3094998167155425,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 0.999,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    },
+    {
+      "scenario": {
+        "name": "oscillator_only",
+        "prn": 23,
+        "seconds": 3,
+        "true_code_phase": 0.0,
+        "initial_code_error": 0.3,
+        "true_carrier_phase_turns": 0.49,
+        "total_offset_hz": 9000,
+        "motion_offset_hz": 0,
+        "initial_frequency_error_hz": 200,
+        "initial_code_rate_error_cps": 0.2,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 0.0,
+        "jerk_hz_s2": 0.0,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260930
+      },
+      "result": {
+        "name": "oscillator_only",
+        "dll_bw_hz": 10,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 16366,
+        "code_rms_chips": 0.05588555048218013,
+        "carrier_rms_turns": 0.00377012181316145,
+        "frequency_rms_hz": 0.9147269182876205,
+        "first_lock_time_s": 0.4064998778103617,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 0.9996666666666667,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    },
+    {
+      "scenario": {
+        "name": "bounded_dynamic",
+        "prn": 37,
+        "seconds": 4,
+        "true_code_phase": 0.0,
+        "initial_code_error": 0.3,
+        "true_carrier_phase_turns": 0.19,
+        "total_offset_hz": 3000.0,
+        "motion_offset_hz": 2000.0,
+        "initial_frequency_error_hz": 100.0,
+        "initial_code_rate_error_cps": 0.2,
+        "cn0_dbhz": 45,
+        "acceleration_hz_s": 26.036,
+        "jerk_hz_s2": -26.036,
+        "dynamic_start_s": 0.5,
+        "symbol_flip": true,
+        "seed": 20260931
+      },
+      "result": {
+        "name": "bounded_dynamic",
+        "dll_bw_hz": 10,
+        "pll_bw_hz": 15,
+        "fll_gain": 0.2,
+        "use_fll": true,
+        "feedback_delay_samples": 128,
+        "warmup_samples": 16366,
+        "code_rms_chips": 0.01013299423701765,
+        "carrier_rms_turns": 0.0034742689293761927,
+        "frequency_rms_hz": 0.8401357341656915,
+        "first_lock_time_s": 0.2984998778103617,
+        "tail_lock_fraction": 1.0,
+        "valid_window_fraction": 1.0,
+        "mode_switches": 1,
+        "screen_pass": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+COMMAND: verilator --binary --timing -j 2 -O2 -Wno-fatal -Wno-TIMESCALEMOD -I'/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/rtl' -I'/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl' --top-module tb_tracking_minimal --Mdir '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_tracking_minimal' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/rtl/b1i_prn_gen.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/rtl/code_nco.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/rtl/carrier_nco_mixer.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/rtl/epl_correlator.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/rtl/tracking_frontend.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_tracking_minimal.sv'
+%Error-UNSUPPORTED: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:101:34: Unsupported: defparam with more than one dot
+  101 |     defparam frontend.code_source.EPL_HALF_SPACING_NUMERATOR=5;
+      |                                  ^
+                    ... For error description see https://verilator.org/warn/UNSUPPORTED?v=5.032
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:101:35: syntax error, unexpected IDENTIFIER, expecting ',' or ';'
+  101 |     defparam frontend.code_source.EPL_HALF_SPACING_NUMERATOR=5;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error-UNSUPPORTED: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:102:34: Unsupported: defparam with more than one dot
+  102 |     defparam frontend.code_source.EPL_HALF_SPACING_DENOMINATOR=16;
+      |                                  ^
+%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl/tracking_channel_minimal.sv:102:35: syntax error, unexpected IDENTIFIER, expecting ',' or ';'
+  102 |     defparam frontend.code_source.EPL_HALF_SPACING_DENOMINATOR=16;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 4 error(s)
+        ... See the manual at https://verilator.org/verilator_doc.html for more assistance.
+EXIT_CODE: 1
