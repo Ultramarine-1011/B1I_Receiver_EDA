@@ -9,9 +9,13 @@
 - 固定student_receiver_core端口与256 bit小端记录已发布；type6唯一且最后，排空后提交。无需猜测这些接口。
 - 本机WSL2 Ubuntu/Verilator/g++/make/Python现已实际可用。根9.28五个关键RTL哈希匹配历史manifest。A与C1运行事实见STATUS/WORKLOG，旧VCS不代替新验证。
 
-## F阶段当前未决（2026-10-14）
+## G阶段剩余正式缺口（2026-10-14）
 
-G0–G7现已授权，场景缺口正在按reports/g_stage/resource_audit.json审计；H/I未授权。F下面的“本轮”表述保留历史范围，不再驱动当前G。
+G0–G7当前可执行工作已完成，分类/实测FAIL及最小正式输入见[G报告](../reports/g_stage/FINAL_REPORT.md)与reports/g_stage/scenario_registry.json。正式全覆盖/100+100/10独立冷启180s/12D1动态/独立ECEF尚缺合格场景和真值；持续实时尚缺clk/SRAM/服务边界/持续12星负载。P02当前周期测量已完成，无统一达标时间上限。真实2s RF自生成恢复通过不替代正式P08。H/I另行授权，当前停止条件不要求缺输入的全部正式PASS。
+
+## F阶段历史未决（2026-10-14当时记录）
+
+以下F当时“本轮/未授权/缺失”表述保持历史范围；G结果以上述段及最终报告为准，不据此重复已完成任务。
 
 - E100秒/check_records/self_check/Route A均已完成，原证据在reports/e_stage/final；E归档不覆盖F新代码。没有教师位置真值，不能宣称定位精度。
 - F数字/控制/3.2s合成双星恢复/12路NAV隔离已PASS，默认4公开20s NAV/OBS/Route A PASS且E前缀逐bit匹配。正式12星D1/40dB-Hz/合法动态和2s信号中断场景仍缺失；合成130ms中断不能算正式P08。

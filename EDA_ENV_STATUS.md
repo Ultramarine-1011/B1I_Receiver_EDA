@@ -272,3 +272,6 @@ Design Compiler 初始化文件 `/home/IC/.synopsys_dc.setup` 已确认设置：
 
 # 2026-10-14 F阶段环境边界追加
 E阶段已在本机WSL2/Verilator完成100秒真实四星与原始检查/Route A，前一追加段的FAIL是当时快照。F继续使用相同现有本地工具，不重新扫描/访问VMware、SSH、Synopsys/license；F新增代码以本轮reports/f_stage实际日志为准。正式ASIC仍未执行。
+
+# 2026-10-14 G阶段与会话恢复追加
+G0–G7当前可执行评价均在既有本机WSL2 Ubuntu/Verilator及Windows bundled Python执行。恢复时Get-CimInstance和WSL ps未发现遗留仿真/脚本；没有访问、启动、修复VMware/SSH/VCS/DC/ICC/PT或系统/许可证配置。16份最终仿真日志退出0与一个有限FIFO容量失败按reports/g_stage/delivery_audit审计，评分/纯文档修复只读取原始结果，不重复长仿真。当前正式性能输入与持续实时clk/SRAM/服务条件仍缺，G功能证据不构成ASIC环境验证。旧版本记录保持历史范围。

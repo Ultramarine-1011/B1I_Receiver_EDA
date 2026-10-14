@@ -1,5 +1,7 @@
 # 综合准备与架构风险
 
+G只新增实际周期/服务/FIFO预算，学生RTL及下列F源码风险基线未改。当前没有正式综合/物理结果，H仍须另行授权。G默认4/52s实测平均clk下界22.586541MHz、RUN17.403010MHz、最大冷阻塞269543639拍；假定100MHz约2.695s停顿，原文件调度算术积压约11016200字节。1/4/12数字槽稳态下界17.394/17.403/17.427MHz，不能作为真实12D1持续实时通过。64word有限FIFO实际溢出、102400word仅0.1s有界通过。完整时间域/输入输出服务边界见[G报告](../reports/g_stage/FINAL_REPORT.md)；clk/宏/端口/背压上界及物理时序仍缺。
+
 本轮仅源码/本地Verilator检查，不运行DC/ICC/PT/DRC/LVS，也不把解析/仿真PASS称为ASIC验收。正式宏/工艺/角/clk/IO负载/约束未提供；GNSS尚无正式综合结果。代码证据由 `python3 model/synthesis_inventory.py` 保存文件SHA256和行号到reports/f_stage/synthesis/source_inventory.json。
 
 | 风险与直接代码对象 | 可能影响 | 后续DC阻塞性质 | 最低代价措施/本轮状态 |

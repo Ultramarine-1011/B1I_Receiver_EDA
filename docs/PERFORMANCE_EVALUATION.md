@@ -1,6 +1,6 @@
 # P01–P09 执行与统计契约
 
-来源：V1.7 §7.4–7.7（印刷pp65–68）。统一判据见 [COURSE_MASTER_PLAN](COURSE_MASTER_PLAN.md)，实际状态见STATUS；本轮创建执行基础，未将手算/控制注入/无噪声合成测试算作正式性能。
+来源：V1.7 §7.4–7.7（印刷pp65–68）。统一判据见 [COURSE_MASTER_PLAN](COURSE_MASTER_PLAN.md)，实际状态见STATUS。G当前可执行评价已完成，[G最终报告](../reports/g_stage/FINAL_REPORT.md)逐项保留PARTIAL/FAIL/自生成PASS及正式缺口；没有把手算/控制注入/无噪声诊断算作正式性能。下述契约保留，F历史入口不覆盖G证据。
 
 ## 场景登记与运行
 
@@ -32,10 +32,12 @@
 
 评分trace的kind=nav必须标ephemeris_ready（当时已恢复完整可用星历），由在线适配器记录所用原始NAV序号；单个type2字的bch_valid不等于完整星历。计算器只核查给定trace，不能证明适配器的广播参数恢复本身正确。
 
-教师Route A全文件运行仍可验证定位功能，但会用后续Prompt/NAV回溯早期历元；它的第一个解不能直接进入TTFF。当前未提供经上述契约验证的实时定位适配器，正式P04/P05仍BLOCKED_INPUT/NOT_RUN。
+教师Route A全文件运行仍可验证定位功能，但会用后续Prompt/NAV回溯早期历元；它的第一个解不能直接进入TTFF。G已实现并审计model/online_navigation.py流式适配器，只用实际RTL NAV/OBS；公开52s离线因果重放49/50/51三解、最终依赖TTFF51.0000009775s。每星同帧30字星历、同代及OBS当时可用raw NAV序号核查见reports/g_stage/delivery_audit.json。CPU服务另计，未调度真正实时PVT；4跟踪星/PDOP9.32/单公开短场景不满足正式P04/P05，仍BLOCKED_INPUT。
 
 ## 指标入口与模板
 
 `python3 model/performance_metrics.py --self-test`运行独立手算算例（时间、CI、截尾、因果TTFF拒绝、ENU、60s、D03），只验证计算器。实际JSON trace可用`--input TRACE.json --output METRICS.json`，metric=acquisition/cold_start/ttff/tracking/words/recovery/position/timing。跟踪频误先按完整1s的1000个Prompt求均值再取RMS，不能用逐msRMS替代；缺真值/字/完整窗不强行资格化。
 
 报告逐项填：场景类别/版本/哈希/种子/CN0/通道/搜索范围/真值与模型 → 信号秒/硬件周期/假定clk处理秒/主机墙钟 → 成功定义/次数分母/失败/未完成下界/CI → 实测值/通过覆盖/尚缺依赖。`reports/f_stage/performance/PERFORMANCE_REPORT_TEMPLATE.md`由计划入口生成，未执行项保留状态与原因。
+
+G复验优先scripts/rescore_g_evidence.ps1和scripts/validate_g_delivery.ps1，仅读取既有本地原始文件，不启动仿真。长IF入口scripts/run_g_rtl.ps1，定向scripts/run_g_tests.ps1，有限FIFO scripts/run_g_fifo.ps1；输入/源hash、原始退出码、覆盖和失败见G报告及scenario_registry。短4ms/6+2、单环路60s、双星无噪声RF中断各自限定，不合并为正式工作点。

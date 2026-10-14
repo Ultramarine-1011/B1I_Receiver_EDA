@@ -1,0 +1,873 @@
+{
+  "status": "G_DOCUMENT_AND_STAGED_ARTIFACT_AUDIT_PASS",
+  "local_links_checked": 30,
+  "links": [
+    {
+      "file": "GOAL.md",
+      "target": "docs/archive/G_AUTHORIZATION_2026-10-14.md"
+    },
+    {
+      "file": "GOAL.md",
+      "target": "STATUS.md"
+    },
+    {
+      "file": "GOAL.md",
+      "target": "docs/COURSE_MASTER_PLAN.md"
+    },
+    {
+      "file": "docs/G_PERFORMANCE_DESIGN.md",
+      "target": "archive/G_AUTHORIZATION_2026-10-14.md"
+    },
+    {
+      "file": "docs/G_PERFORMANCE_DESIGN.md",
+      "target": "../STATUS.md"
+    },
+    {
+      "file": "docs/COURSE_MASTER_PLAN.md",
+      "target": "../STATUS.md"
+    },
+    {
+      "file": "docs/COURSE_MASTER_PLAN.md",
+      "target": "../reports/f_stage/FINAL_REPORT.md"
+    },
+    {
+      "file": "docs/PERFORMANCE_EVALUATION.md",
+      "target": "COURSE_MASTER_PLAN.md"
+    },
+    {
+      "file": "docs/TBD.md",
+      "target": "../STATUS.md"
+    },
+    {
+      "file": "docs/TBD.md",
+      "target": "archive/TBD_2026-09-28.md"
+    },
+    {
+      "file": "docs/NEXT_STEPS.md",
+      "target": "G_PERFORMANCE_DESIGN.md"
+    },
+    {
+      "file": "docs/NEXT_STEPS.md",
+      "target": "../STATUS.md"
+    },
+    {
+      "file": "docs/NEXT_STEPS.md",
+      "target": "../GOAL.md"
+    },
+    {
+      "file": "docs/NEXT_STEPS.md",
+      "target": "../WORKLOG.md"
+    },
+    {
+      "file": "docs/NEXT_STEPS.md",
+      "target": "archive/NEXT_STEPS_2026-09-28.md"
+    },
+    {
+      "file": "docs/NEXT_STEPS.md",
+      "target": "../reports/f_stage/FINAL_REPORT.md"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "../../docs/archive/G_AUTHORIZATION_2026-10-14.md"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "../../STATUS.md"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "../../docs/archive/STATUS_G_INTERRUPTED_2026-10-14.md"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "session_recovery.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "final_resource_audit.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "scenario_registry.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "real52/validation_commands.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "real52/causal/key_positions.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "delivery_audit.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "acquisition_cn50/nh_frequency_objective_diagnostic.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "dynamics/trajectory_validation.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "recovery/recovery_metrics.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "service/summary.json"
+    },
+    {
+      "file": "reports/g_stage/FINAL_REPORT.md",
+      "target": "delivery_audit.json"
+    }
+  ],
+  "staged_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1442
+    },
+    {
+      "path": "GOAL.md",
+      "bytes": 2643
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 1852
+    },
+    {
+      "path": "WORKLOG.md",
+      "bytes": 21477
+    },
+    {
+      "path": "docs/G_PERFORMANCE_DESIGN.md",
+      "bytes": 5548
+    },
+    {
+      "path": "docs/archive/STATUS_G_INTERRUPTED_2026-10-14.md",
+      "bytes": 1435
+    },
+    {
+      "path": "model/g_acquisition_score.py",
+      "bytes": 2784
+    },
+    {
+      "path": "model/g_acquisition_vectors.py",
+      "bytes": 3929
+    },
+    {
+      "path": "model/g_capture_diagnostic.py",
+      "bytes": 1882
+    },
+    {
+      "path": "model/g_delivery_audit.py",
+      "bytes": 12178
+    },
+    {
+      "path": "model/g_document_audit.py",
+      "bytes": 2115
+    },
+    {
+      "path": "model/g_recovery_score.py",
+      "bytes": 7121
+    },
+    {
+      "path": "model/g_resource_audit.py",
+      "bytes": 4658
+    },
+    {
+      "path": "model/g_rf_recovery_vectors.py",
+      "bytes": 2254
+    },
+    {
+      "path": "model/g_run_score.py",
+      "bytes": 5651
+    },
+    {
+      "path": "model/g_service_summary.py",
+      "bytes": 1769
+    },
+    {
+      "path": "model/g_signal_scenarios.py",
+      "bytes": 7411
+    },
+    {
+      "path": "model/g_tracking_score.py",
+      "bytes": 2974
+    },
+    {
+      "path": "model/online_navigation.py",
+      "bytes": 12661
+    },
+    {
+      "path": "model/test_g_evaluation.py",
+      "bytes": 7982
+    },
+    {
+      "path": "reports/g_stage/D01_vectors.log",
+      "bytes": 133
+    },
+    {
+      "path": "reports/g_stage/D02_vectors.log",
+      "bytes": 134
+    },
+    {
+      "path": "reports/g_stage/FINAL_REPORT.md",
+      "bytes": 18122
+    },
+    {
+      "path": "reports/g_stage/acquisition/acquisition_results.jsonl",
+      "bytes": 3174
+    },
+    {
+      "path": "reports/g_stage/acquisition/build.log",
+      "bytes": 4413
+    },
+    {
+      "path": "reports/g_stage/acquisition/metrics.json",
+      "bytes": 7810
+    },
+    {
+      "path": "reports/g_stage/acquisition/missing_rom_initial_fail.log",
+      "bytes": 1091
+    },
+    {
+      "path": "reports/g_stage/acquisition/run.log",
+      "bytes": 1358
+    },
+    {
+      "path": "reports/g_stage/acquisition/scenarios.json",
+      "bytes": 8106
+    },
+    {
+      "path": "reports/g_stage/acquisition/score.log",
+      "bytes": 1541
+    },
+    {
+      "path": "reports/g_stage/acquisition/score_final.log",
+      "bytes": 1541
+    },
+    {
+      "path": "reports/g_stage/acquisition/score_input.json",
+      "bytes": 2275
+    },
+    {
+      "path": "reports/g_stage/acquisition/sources.json",
+      "bytes": 7072
+    },
+    {
+      "path": "reports/g_stage/acquisition/tb_snapshot.sv",
+      "bytes": 3785
+    },
+    {
+      "path": "reports/g_stage/acquisition/vectors.log",
+      "bytes": 248
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/acquisition_results.jsonl",
+      "bytes": 3966
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/build.log",
+      "bytes": 18786
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/diagnostic.log",
+      "bytes": 139
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/metrics.json",
+      "bytes": 8463
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/nh_frequency_objective_diagnostic.json",
+      "bytes": 2769
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/run.log",
+      "bytes": 1363
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/scenarios.json",
+      "bytes": 8573
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/score.log",
+      "bytes": 1787
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/score_final.log",
+      "bytes": 1531
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/score_input.json",
+      "bytes": 2266
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/sources.json",
+      "bytes": 7072
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/vectors.log",
+      "bytes": 290
+    },
+    {
+      "path": "reports/g_stage/acquisition_vectors.log",
+      "bytes": 103
+    },
+    {
+      "path": "reports/g_stage/delivery_audit.json",
+      "bytes": 91470
+    },
+    {
+      "path": "reports/g_stage/delivery_audit.log",
+      "bytes": 7798
+    },
+    {
+      "path": "reports/g_stage/document_audit.json",
+      "bytes": 3345
+    },
+    {
+      "path": "reports/g_stage/dynamics/trajectory_validation.json",
+      "bytes": 1341
+    },
+    {
+      "path": "reports/g_stage/evaluation_tests.log",
+      "bytes": 2157
+    },
+    {
+      "path": "reports/g_stage/final_resource_audit.json",
+      "bytes": 18317
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/metrics.json",
+      "bytes": 11511
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/receiver_records.bin.service.json",
+      "bytes": 724
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/run.log",
+      "bytes": 844
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/score.log",
+      "bytes": 169
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/score_final.log",
+      "bytes": 332
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/sources.json",
+      "bytes": 7706
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/status.json",
+      "bytes": 241
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo64/receiver_records.bin.service.json",
+      "bytes": 0
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo64/run.log",
+      "bytes": 816
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo64/sources.json",
+      "bytes": 7702
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo64/status.json",
+      "bytes": 285
+    },
+    {
+      "path": "reports/g_stage/frozen_final.log",
+      "bytes": 323
+    },
+    {
+      "path": "reports/g_stage/holding/build.log",
+      "bytes": 4528
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn40.metrics.json",
+      "bytes": 1440
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn40.run.log",
+      "bytes": 714
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn40.score.log",
+      "bytes": 1605
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn40.score_final.log",
+      "bytes": 1664
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn40.truth.json",
+      "bytes": 4605
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn40.vectors.log",
+      "bytes": 360
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn50.metrics.json",
+      "bytes": 1435
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn50.run.log",
+      "bytes": 714
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn50.score.log",
+      "bytes": 1600
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn50.score_final.log",
+      "bytes": 1659
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn50.truth.json",
+      "bytes": 4602
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn50.vectors.log",
+      "bytes": 360
+    },
+    {
+      "path": "reports/g_stage/holding/sources.json",
+      "bytes": 7305
+    },
+    {
+      "path": "reports/g_stage/powershell_parse.log",
+      "bytes": 33
+    },
+    {
+      "path": "reports/g_stage/python_syntax.log",
+      "bytes": 31
+    },
+    {
+      "path": "reports/g_stage/real51/build.log",
+      "bytes": 39714
+    },
+    {
+      "path": "reports/g_stage/real51/causal/key_positions.json",
+      "bytes": 7498
+    },
+    {
+      "path": "reports/g_stage/real51/causal/summary.json",
+      "bytes": 13368
+    },
+    {
+      "path": "reports/g_stage/real51/causal_final.log",
+      "bytes": 380
+    },
+    {
+      "path": "reports/g_stage/real51/metrics.json",
+      "bytes": 11485
+    },
+    {
+      "path": "reports/g_stage/real51/receiver_records.bin.service.json",
+      "bytes": 738
+    },
+    {
+      "path": "reports/g_stage/real51/score.log",
+      "bytes": 174
+    },
+    {
+      "path": "reports/g_stage/real51/score_final.log",
+      "bytes": 327
+    },
+    {
+      "path": "reports/g_stage/real52/causal/key_positions.json",
+      "bytes": 11251
+    },
+    {
+      "path": "reports/g_stage/real52/causal/summary.json",
+      "bytes": 13388
+    },
+    {
+      "path": "reports/g_stage/real52/causal_final.log",
+      "bytes": 381
+    },
+    {
+      "path": "reports/g_stage/real52/causal_replay.log",
+      "bytes": 660
+    },
+    {
+      "path": "reports/g_stage/real52/e_prefix.log",
+      "bytes": 646
+    },
+    {
+      "path": "reports/g_stage/real52/e_prefix_equivalence.json",
+      "bytes": 422
+    },
+    {
+      "path": "reports/g_stage/real52/frozen_integrity.log",
+      "bytes": 347
+    },
+    {
+      "path": "reports/g_stage/real52/independent_NAV.log",
+      "bytes": 1386
+    },
+    {
+      "path": "reports/g_stage/real52/independent_prompt_diagnostic.json",
+      "bytes": 1540
+    },
+    {
+      "path": "reports/g_stage/real52/metrics.json",
+      "bytes": 11474
+    },
+    {
+      "path": "reports/g_stage/real52/receiver_records.bin.service.json",
+      "bytes": 738
+    },
+    {
+      "path": "reports/g_stage/real52/receiver_validation.json",
+      "bytes": 1469
+    },
+    {
+      "path": "reports/g_stage/real52/route_a_diagnostic.log",
+      "bytes": 650
+    },
+    {
+      "path": "reports/g_stage/real52/run.log",
+      "bytes": 6239
+    },
+    {
+      "path": "reports/g_stage/real52/score.log",
+      "bytes": 436
+    },
+    {
+      "path": "reports/g_stage/real52/score_final.log",
+      "bytes": 327
+    },
+    {
+      "path": "reports/g_stage/real52/self_check.log",
+      "bytes": 687
+    },
+    {
+      "path": "reports/g_stage/real52/sources.json",
+      "bytes": 7702
+    },
+    {
+      "path": "reports/g_stage/real52/structure_final.log",
+      "bytes": 531
+    },
+    {
+      "path": "reports/g_stage/real52/validation_commands.json",
+      "bytes": 4242
+    },
+    {
+      "path": "reports/g_stage/recovery/build.log",
+      "bytes": 39714
+    },
+    {
+      "path": "reports/g_stage/recovery/metrics.json",
+      "bytes": 20057
+    },
+    {
+      "path": "reports/g_stage/recovery/receiver_records.bin.service.json",
+      "bytes": 740
+    },
+    {
+      "path": "reports/g_stage/recovery/recovery_metrics.initial_milestone_error.json",
+      "bytes": 5158
+    },
+    {
+      "path": "reports/g_stage/recovery/recovery_metrics.json",
+      "bytes": 5436
+    },
+    {
+      "path": "reports/g_stage/recovery/recovery_score.log",
+      "bytes": 112
+    },
+    {
+      "path": "reports/g_stage/recovery/recovery_score_final.log",
+      "bytes": 238
+    },
+    {
+      "path": "reports/g_stage/recovery/run.log",
+      "bytes": 4466
+    },
+    {
+      "path": "reports/g_stage/recovery/score.log",
+      "bytes": 175
+    },
+    {
+      "path": "reports/g_stage/recovery/score_final.log",
+      "bytes": 330
+    },
+    {
+      "path": "reports/g_stage/recovery/sources.json",
+      "bytes": 7694
+    },
+    {
+      "path": "reports/g_stage/recovery/truth.json",
+      "bytes": 3362
+    },
+    {
+      "path": "reports/g_stage/recovery/vectors.log",
+      "bytes": 290
+    },
+    {
+      "path": "reports/g_stage/scenario_registry.json",
+      "bytes": 36682
+    },
+    {
+      "path": "reports/g_stage/service/c1/build.log",
+      "bytes": 25641
+    },
+    {
+      "path": "reports/g_stage/service/c1/metrics.json",
+      "bytes": 1647
+    },
+    {
+      "path": "reports/g_stage/service/c1/run.log",
+      "bytes": 712
+    },
+    {
+      "path": "reports/g_stage/service/c1/sources.json",
+      "bytes": 7309
+    },
+    {
+      "path": "reports/g_stage/service/c12/build.log",
+      "bytes": 39700
+    },
+    {
+      "path": "reports/g_stage/service/c12/metrics.json",
+      "bytes": 1650
+    },
+    {
+      "path": "reports/g_stage/service/c12/run.log",
+      "bytes": 715
+    },
+    {
+      "path": "reports/g_stage/service/c12/sources.json",
+      "bytes": 7310
+    },
+    {
+      "path": "reports/g_stage/service/c4/build.log",
+      "bytes": 31460
+    },
+    {
+      "path": "reports/g_stage/service/c4/metrics.json",
+      "bytes": 1648
+    },
+    {
+      "path": "reports/g_stage/service/c4/run.log",
+      "bytes": 712
+    },
+    {
+      "path": "reports/g_stage/service/c4/sources.json",
+      "bytes": 7309
+    },
+    {
+      "path": "reports/g_stage/service/summary.json",
+      "bytes": 5241
+    },
+    {
+      "path": "reports/g_stage/service/summary.log",
+      "bytes": 258
+    },
+    {
+      "path": "reports/g_stage/session_recovery.json",
+      "bytes": 707
+    },
+    {
+      "path": "reports/g_stage/static_vectors.log",
+      "bytes": 136
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.metrics.json",
+      "bytes": 1431
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.run.log",
+      "bytes": 694
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.score.log",
+      "bytes": 953
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.score_final.log",
+      "bytes": 1640
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.truth.json",
+      "bytes": 4129
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.usable_filter_initial_error.json",
+      "bytes": 891
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.vectors.log",
+      "bytes": 178
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.metrics.json",
+      "bytes": 1418
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.run.log",
+      "bytes": 697
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.score.log",
+      "bytes": 940
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.score_final.log",
+      "bytes": 1627
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.truth.json",
+      "bytes": 4224
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.usable_filter_initial_error.json",
+      "bytes": 891
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.vectors.log",
+      "bytes": 178
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.metrics.json",
+      "bytes": 1420
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.run.log",
+      "bytes": 697
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.score.log",
+      "bytes": 1042
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.score_final.log",
+      "bytes": 1629
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.truth.json",
+      "bytes": 4432
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.usable_filter_initial_error.json",
+      "bytes": 892
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.vectors.log",
+      "bytes": 320
+    },
+    {
+      "path": "reports/g_stage/tracking/D04.metrics.json",
+      "bytes": 1423
+    },
+    {
+      "path": "reports/g_stage/tracking/D04.run.log",
+      "bytes": 697
+    },
+    {
+      "path": "reports/g_stage/tracking/D04.score.log",
+      "bytes": 1045
+    },
+    {
+      "path": "reports/g_stage/tracking/D04.score_final.log",
+      "bytes": 1632
+    },
+    {
+      "path": "reports/g_stage/tracking/D04.truth.json",
+      "bytes": 3954
+    },
+    {
+      "path": "reports/g_stage/tracking/D04.vectors.log",
+      "bytes": 319
+    },
+    {
+      "path": "reports/g_stage/tracking/build.log",
+      "bytes": 19648
+    },
+    {
+      "path": "reports/g_stage/tracking/sources.json",
+      "bytes": 7305
+    },
+    {
+      "path": "reports/g_stage/tracking/static.metrics.json",
+      "bytes": 1423
+    },
+    {
+      "path": "reports/g_stage/tracking/static.run.log",
+      "bytes": 700
+    },
+    {
+      "path": "reports/g_stage/tracking/static.score.log",
+      "bytes": 945
+    },
+    {
+      "path": "reports/g_stage/tracking/static.score_final.log",
+      "bytes": 1641
+    },
+    {
+      "path": "reports/g_stage/tracking/static.truth.json",
+      "bytes": 3402
+    },
+    {
+      "path": "reports/g_stage/tracking/static.usable_filter_initial_error.json",
+      "bytes": 894
+    },
+    {
+      "path": "reports/g_stage/tracking/static.vectors.log",
+      "bytes": 325
+    },
+    {
+      "path": "reports/g_stage/trajectory_test.log",
+      "bytes": 85
+    },
+    {
+      "path": "scripts/g_bank.cpp",
+      "bytes": 4088
+    },
+    {
+      "path": "scripts/g_tracking.cpp",
+      "bytes": 2966
+    },
+    {
+      "path": "scripts/rescore_g_evidence.ps1",
+      "bytes": 2430
+    },
+    {
+      "path": "scripts/run_g_fifo.ps1",
+      "bytes": 1962
+    },
+    {
+      "path": "scripts/run_g_tests.ps1",
+      "bytes": 8474
+    },
+    {
+      "path": "scripts/validate_g_delivery.ps1",
+      "bytes": 2605
+    },
+    {
+      "path": "tb/g_bank_service.sv",
+      "bytes": 2837
+    },
+    {
+      "path": "tb/g_tracking_probe.sv",
+      "bytes": 1472
+    },
+    {
+      "path": "tb/tb_g_acquisition.sv",
+      "bytes": 3849
+    }
+  ],
+  "source_sha256": "52324ec843909d12051edf141559b646e38bc22fb950e511e25f4c1d1e01ade2"
+}

@@ -1,6 +1,6 @@
 # GNSS 基带接收机架构基线
 
-> G0–G7于2026-10-14另行授权，F/E成果保留。新增评价设计见[G_PERFORMANCE_DESIGN](G_PERFORMANCE_DESIGN.md)。以下F/9.28段落保留其历史范围；当前状态只见STATUS。
+> G0–G7于2026-10-14授权并完成当前可执行评价；F/E源码/成果保持。新增采集/因果/独立评分边界见[G_PERFORMANCE_DESIGN](G_PERFORMANCE_DESIGN.md)，真实结果见[G报告](../reports/g_stage/FINAL_REPORT.md)。没有改模块职责、逐样本接口或状态所有权；没有正式性能全PASS或持续实时声明。以下F/9.28段落保留历史范围，当前状态只见STATUS。
 
 > 2026-10-14：以下为9.28历史架构，唯一当前状态见根STATUS.md。E已完成四星100秒；本轮F授权12通道/后台管理/性能基础及综合风险检查，见[F_MULTICHANNEL_DESIGN](F_MULTICHANNEL_DESIGN.md)与[COURSE_MASTER_PLAN](COURSE_MASTER_PLAN.md)。教师契约/记录时间见[RECEIVER_INTEGRATION](RECEIVER_INTEGRATION.md)。本次纯仿真无需SRAM；禁止正式后端，保留原9.28基础RTL。
 
