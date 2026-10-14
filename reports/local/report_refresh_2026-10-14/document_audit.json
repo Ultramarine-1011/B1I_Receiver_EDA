@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "reports": [
+    {
+      "name": "ACQUISITION_REPORT",
+      "sha256": "206120c6d3845b711034b5d2547a4927399fe7be358d4ec4dc8f86dbc85ca846",
+      "sections": [
+        "1. 实验目的与设计要求",
+        "2. 设计思路与方案选择",
+        "3. 核心算法与 RTL 实现",
+        "4. 仿真环境、测试条件与结果分析",
+        "5. 问题修复、结论及当前限制"
+      ],
+      "links": 26,
+      "images": [
+        "report_assets/acquisition_pcps_refine.png",
+        "report_assets/acquisition_serial_cells.svg"
+      ],
+      "tables": [
+        {
+          "columns": 2,
+          "rows": 8
+        },
+        {
+          "columns": 2,
+          "rows": 8
+        },
+        {
+          "columns": 3,
+          "rows": 6
+        },
+        {
+          "columns": 7,
+          "rows": 4
+        },
+        {
+          "columns": 5,
+          "rows": 2
+        }
+      ],
+      "mermaid": 1,
+      "display_equations": 4,
+      "inline_equations": 20
+    },
+    {
+      "name": "TRACKING_REPORT",
+      "sha256": "f843b08fe9957825d651b771d988bf96cfd97fd72182eacccbcfb66e05c3411f",
+      "sections": [
+        "1. 实验目的与设计要求",
+        "2. 设计思路与方案选择",
+        "3. 核心算法与 RTL 实现",
+        "4. 仿真环境、测试条件与结果分析",
+        "5. 问题修复、结论及当前限制"
+      ],
+      "links": 31,
+      "images": [
+        "report_assets/tracking_feedback_timing.png",
+        "report_assets/tracking_diagnostics.svg"
+      ],
+      "tables": [
+        {
+          "columns": 2,
+          "rows": 7
+        },
+        {
+          "columns": 2,
+          "rows": 6
+        },
+        {
+          "columns": 6,
+          "rows": 4
+        },
+        {
+          "columns": 4,
+          "rows": 4
+        },
+        {
+          "columns": 5,
+          "rows": 2
+        },
+        {
+          "columns": 6,
+          "rows": 4
+        }
+      ],
+      "mermaid": 1,
+      "display_equations": 6,
+      "inline_equations": 17
+    },
+    {
+      "name": "NH_D1_REPORT",
+      "sha256": "8b463813e6ad4fd150f605e6c2f843e832f9cb2bf6effc19f00c216b7544246b",
+      "sections": [
+        "1. 实验目的与设计要求",
+        "2. 设计思路与方案选择",
+        "3. 核心算法与 RTL 实现",
+        "4. 仿真环境、测试条件与结果分析",
+        "5. 问题修复、结论及当前限制"
+      ],
+      "links": 29,
+      "images": [
+        "report_assets/nh_d1_words.png",
+        "report_assets/navigation_confirmation.png"
+      ],
+      "tables": [
+        {
+          "columns": 2,
+          "rows": 7
+        },
+        {
+          "columns": 2,
+          "rows": 7
+        },
+        {
+          "columns": 3,
+          "rows": 6
+        },
+        {
+          "columns": 4,
+          "rows": 3
+        },
+        {
+          "columns": 6,
+          "rows": 3
+        }
+      ],
+      "mermaid": 1,
+      "display_equations": 2,
+      "inline_equations": 4
+    }
+  ],
+  "failures": [],
+  "preview": "work/report_preview",
+  "note": "Preview uses installed Marked17.0.5 plus pinned Mermaid11.4.1 and MathJax3.2.2; source reports and assets are the final artifacts."
+}

@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-14 Asia/Singapore",
+  "source_baseline_main": "7dfa40b",
+  "rtl_changed": false,
+  "archive_changed": false,
+  "simulator": "ModelSim SE-64 10.5 (2016.02)",
+  "scope": {
+    "acquisition": "tb_p02_probe full reduced-grid self-check PASS (not formal P02 coverage)",
+    "nh_d1": "tb_nh_d1 full 3 cases / 9 words PASS",
+    "navigation": "tb_navigation_d1 full 2 cases / 20 type2 words PASS",
+    "tracking": "original tb_tracking_minimal stopped at 30000us / 182 feedbacks / sample_ref2997948 / locked0; NOT full regression"
+  },
+  "testbench_isolation": "Four original TB copies changed only ../../tb/vectors/ and ../../reports/local/ paths. No test criteria or receiver sources changed. Other TB inputs copied byte-for-byte to isolated directory.",
+  "gui_capture": {
+    "count": 0,
+    "attempt": "ModelSim GUI and WLF were opened and inspected before interruption; no screenshot PNG was saved. After network interruption node_repl initialization failed twice (including reset) with failed to write kernel assets / system cannot find the path / os error3. No runtime/security/license configuration was changed.",
+    "fallback": "These four PNGs are standard plots of actual exported VCD transitions, explicitly marked NOT GUI screenshots; two original CSV-derived SVGs are also reused."
+  },
+  "sources": [
+    {
+      "path": "student_release/student_release/rtl/nh20_sync.sv",
+      "sha256": "0520DAED58C8C06D0107292BBEF81918C29F52BD2564D469B0AC74AFCD25E454"
+    },
+    {
+      "path": "student_release/student_release/rtl/d1_word_sync.sv",
+      "sha256": "1EC33691E6830A2CBB4B3AC2E47D5E6BD5665DA1B738CFEDDD7FB71A409E93AF"
+    },
+    {
+      "path": "student_release/student_release/rtl/navigation_d1.sv",
+      "sha256": "6FE9233F4B2B769A0A40F4C79AABA5CCF77FA0C6259D8498984BA5B7A50A90A5"
+    },
+    {
+      "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+      "sha256": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475"
+    },
+    {
+      "path": "student_release/student_release/rtl/code_nco.sv",
+      "sha256": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1"
+    },
+    {
+      "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+      "sha256": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC"
+    },
+    {
+      "path": "student_release/student_release/rtl/epl_correlator.sv",
+      "sha256": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_frontend.sv",
+      "sha256": "5F1EBDCD6869FA63AF6E14B223155F4F7677DD51348780D7C035850B15C18BD4"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+      "sha256": "34FE7AB1AB76F65542817E37E25AB8679D2A07C7202B94FC7D0A28FB2C20AB0B"
+    },
+    {
+      "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+      "sha256": "A8D22CD15752E1305908D1769434C6C78ED9460093062A4AD1D6FB81BB74F9CF"
+    },
+    {
+      "path": "student_release/student_release/rtl/fft4096_serial.sv",
+      "sha256": "6EE4DD81C770D8072C69C64148D519DEAEBF4EA3C16B69B0A23F70191B20E388"
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+      "sha256": "8B276CB91DE78C976FF40EBDE06CCD33BC190DB732A47D55E6A66C958C76C2D5"
+    },
+    {
+      "path": "student_release/student_release/rtl/acquisition_refine.sv",
+      "sha256": "3226E10A8DCEECFEB9339C9AC8744188DDC87BAC057BF18F0FE8AA2552118B25"
+    },
+    {
+      "path": "work/report_waveforms/tb_nh_d1.sv",
+      "sha256": "A67ED5BBB84E28192909023B1FE20D8397AC7A144B0F2D52E6E6232546CDD49E"
+    },
+    {
+      "path": "work/report_waveforms/tb_navigation_d1.sv",
+      "sha256": "CF7DA22FCAB878AAB14FE61474C66A8CDF07DD6A9F6D8FA2D87C799D41B7C992"
+    },
+    {
+      "path": "work/report_waveforms/tb_p02_probe.sv",
+      "sha256": "E02C053FCFB4BCD93487DAA97E228682EF97C888D74517E3F7C977061021BB4B"
+    },
+    {
+      "path": "work/report_waveforms/tb_tracking_minimal.sv",
+      "sha256": "72EB70F41A318410F8CEAFDB3350B1F9C2BC764B3EE6F4BD57199986AC6E467B"
+    }
+  ],
+  "logs": {
+    "modelsim_compile.log": {
+      "sha256": "d70650712a1761b1e1d4e819de3f7d22a8129d02eb3a6bc3eed8aed3d8a471c5",
+      "exit_code": 0
+    },
+    "modelsim_library.log": {
+      "sha256": "296e07ef2d9326a7df79b0b14bfec9fac4d6a75a73a8ae32fbbbed2cfb99e809",
+      "exit_code": 0
+    },
+    "modelsim_nh_d1.log": {
+      "sha256": "f8568b1e4c13bf474d626d7f09efa37ad592f6ffe426d5850d61bd0cbb54f801",
+      "exit_code": 0
+    },
+    "modelsim_tb_navigation_d1.log": {
+      "sha256": "44855eb6cbb3d4ddda62f9a6486cd706cc35f992232cb0546a41a21ee7a6a88c",
+      "exit_code": 0
+    },
+    "modelsim_tb_p02_probe.log": {
+      "sha256": "2ee20ad21a5e7ffbb9c64624042bc65ef83837be1fc54ee94ccc1cf09ac1705f",
+      "exit_code": 0
+    },
+    "modelsim_tb_tracking_minimal.log": {
+      "sha256": "5c2c197f99df8456d817afdb89fde1955ec25160d9a1efc5d2ffeaecbdf51ed7",
+      "exit_code": 0
+    }
+  },
+  "images": [
+    {
+      "image": "acquisition_pcps_refine.png",
+      "kind": "actual_RTL_VCD_rendered_trace_not_GUI_screenshot",
+      "source_wlf": "work/report_waveforms/acquisition.wlf",
+      "wlf_sha256": "f65cffce96f5d59a2afcc4b0d80b0e277e2c5d7d77b03fd398b36247b6794880",
+      "source_vcd": "work/report_waveforms/acquisition.vcd",
+      "vcd_sha256": "ead807ea3e70ccc293cfc1d76eed911e3e69b56a8b1655bb944ba3175086faf6",
+      "image_sha256": "69170e28a6890f192a1836b1890bc7739eb717887080bba47c8b0a1a31d37d0d",
+      "simulation_window_ns": [
+        9620350,
+        9620460
+      ],
+      "events_csv": "reports/local/report_refresh_2026-10-14/acquisition_pcps_refine_events.csv",
+      "events_sha256": "4220253d16483e92a34f3364bce481a066814d23e36913c4dc1abb8db52ee02a",
+      "signals": [
+        "tb_p02_probe.coarse_valid",
+        "tb_p02_probe.coarse_detected",
+        "tb_p02_probe.prn",
+        "tb_p02_probe.coarse_lag",
+        "tb_p02_probe.coarse_doppler",
+        "tb_p02_probe.coarse_peak",
+        "tb_p02_probe.coarse_mean",
+        "tb_p02_probe.fine_valid",
+        "tb_p02_probe.fine_detected",
+        "tb_p02_probe.fine_lag",
+        "tb_p02_probe.fine_doppler",
+        "tb_p02_probe.fine_peak"
+      ]
+    },
+    {
+      "image": "tracking_feedback_timing.png",
+      "kind": "actual_RTL_VCD_rendered_trace_not_GUI_screenshot",
+      "source_wlf": "work/report_waveforms/tracking.wlf",
+      "wlf_sha256": "d44550733c188c758a8beeedeaa0712b96b77113e45a57dfaf251653c722edcb",
+      "source_vcd": "work/report_waveforms/tracking.vcd",
+      "vcd_sha256": "d6e218bba15e37a4bb0aad39f8361c66df5fb85c95ac07788499be0c7a10f8d3",
+      "image_sha256": "e85f6244af3db3d55c85ba3b5deb4f85c5198c4f8c71c5df0aa8ac0183f41de9",
+      "simulation_window_ns": [
+        29810220,
+        29810300
+      ],
+      "events_csv": "reports/local/report_refresh_2026-10-14/tracking_feedback_timing_events.csv",
+      "events_sha256": "efef7167783e6ace3641682b39e4735bb9f7f72940df1ecc56eee87fab2951fe",
+      "signals": [
+        "tb_tracking_minimal.window_done",
+        "tb_tracking_minimal.feedback_valid",
+        "tb_tracking_minimal.window_ref",
+        "tb_tracking_minimal.feedback_ref",
+        "tb_tracking_minimal.ie",
+        "tb_tracking_minimal.ip",
+        "tb_tracking_minimal.il",
+        "tb_tracking_minimal.qp",
+        "tb_tracking_minimal.dll_error_q16",
+        "tb_tracking_minimal.pll_error_q16",
+        "tb_tracking_minimal.code_step_q",
+        "tb_tracking_minimal.carrier_step_word",
+        "tb_tracking_minimal.locked"
+      ]
+    },
+    {
+      "image": "nh_d1_words.png",
+      "kind": "actual_RTL_VCD_rendered_trace_not_GUI_screenshot",
+      "source_wlf": "work/report_waveforms/nh_d1.wlf",
+      "wlf_sha256": "d3d36368f0c438f282c641161c45cae7a426e7b09fef1fd250c34056ed09cab4",
+      "source_vcd": "work/report_waveforms/nh_d1.vcd",
+      "vcd_sha256": "500e2f2fd3bfc7a860e2f92a1f24a4672e755c9439ab6720b3b78c0b6445824e",
+      "image_sha256": "2eb1b57e7868846062c5081554ed442636edbd05c0a434ee0052939bf4182bb9",
+      "simulation_window_ns": [
+        19500,
+        25000
+      ],
+      "events_csv": "reports/local/report_refresh_2026-10-14/nh_d1_words_events.csv",
+      "events_sha256": "35101ee5a5d9f88d4f6550a03799b279cea9e2a46338e203b6413b1d688ec1b8",
+      "signals": [
+        "tb_nh_d1.nh_locked",
+        "tb_nh_d1.nh_phase",
+        "tb_nh_d1.bit_valid",
+        "tb_nh_d1.data_bit",
+        "tb_nh_d1.word_valid",
+        "tb_nh_d1.word_number",
+        "tb_nh_d1.raw_word",
+        "tb_nh_d1.information",
+        "tb_nh_d1.corrected_bits",
+        "tb_nh_d1.bch_valid"
+      ]
+    },
+    {
+      "image": "navigation_confirmation.png",
+      "kind": "actual_RTL_VCD_rendered_trace_not_GUI_screenshot",
+      "source_wlf": "work/report_waveforms/navigation.wlf",
+      "wlf_sha256": "8f642e6f72b22b2eb248c6113a2b02d1a817e665beb305a82a33d0162911cae9",
+      "source_vcd": "work/report_waveforms/navigation.vcd",
+      "vcd_sha256": "ec861de11f3a7df6fbdb3e6a1eae1f91a349d25383cb27ce3aa600f8bc28f9ef",
+      "image_sha256": "d529d734900cc92b807e4dc2ada96f570584f8d57b9341af9ca492dd0ea969f3",
+      "simulation_window_ns": [
+        1537370,
+        1537660
+      ],
+      "events_csv": "reports/local/report_refresh_2026-10-14/navigation_confirmation_events.csv",
+      "events_sha256": "0b1360ce0c6a65d78f073536465f688a773db6161e26af732d27ac2cfbe522a1",
+      "signals": [
+        "tb_navigation_d1.nh_valid",
+        "tb_navigation_d1.nh_phase",
+        "tb_navigation_d1.dut.word_valid",
+        "tb_navigation_d1.dut.word_number",
+        "tb_navigation_d1.dut.sow",
+        "tb_navigation_d1.frame_valid",
+        "tb_navigation_d1.time_valid",
+        "tb_navigation_d1.bch_valid",
+        "tb_navigation_d1.record_valid",
+        "tb_navigation_d1.record_ready",
+        "tb_navigation_d1.nav_word_number",
+        "tb_navigation_d1.nav_sow"
+      ]
+    }
+  ],
+  "reused_svg": [
+    {
+      "image": "acquisition_serial_cells.svg",
+      "source": "reports/local/acquisition_cells.svg",
+      "sha256": "f914727fe7efd1a2e758ffe31876895cdfb110b481eb99a5bba386765ed2437d",
+      "scope": "A-D serial 4 cases / 31 grid cells; from actual acquisition_cells.csv"
+    },
+    {
+      "image": "tracking_diagnostics.svg",
+      "source": "reports/local/tracking_diagnostics.svg",
+      "sha256": "68dd42a384edec8c13c375d48ad2df820b88fc7a671a66d45cb41399a7324be3",
+      "scope": "A-D static 2x1s loop, from actual tracking_loop.csv"
+    }
+  ],
+  "plot_recipe": "reports/local/report_refresh_2026-10-14/plot_actual_traces.py",
+  "plot_recipe_sha256": "a8bf7d6b7a619fb448ac7524a56d7bc64dc03d1e4b05b62887d520bcf15c0d37",
+  "actual_inputs_and_includes": [
+    {
+      "source": "tb/vectors/b1i_prn_06.mem",
+      "actual_copy": "work/report_waveforms/b1i_prn_06.mem",
+      "sha256": "3dbea507d1724706fda377d33276f83462bdabe81557d0df13ccba96a8912b99"
+    },
+    {
+      "source": "work/navigation/bits.mem",
+      "actual_copy": "work/report_waveforms/bits.mem",
+      "sha256": "036b3a625ffeec35ec1a02c44fba33c1190e9f745315e3dc31a925206263f0cd"
+    },
+    {
+      "source": "work/navigation/raw.mem",
+      "actual_copy": "work/report_waveforms/raw.mem",
+      "sha256": "0edff6dd63d1999cf4d86d01ad0e2a3e17143bbe7061a96555675137edefcd05"
+    },
+    {
+      "source": "work/navigation/info.mem",
+      "actual_copy": "work/report_waveforms/info.mem",
+      "sha256": "d366b5705a3b07390d5ad923264ee61c14ca22b5956473a425edfd9d75e8e2ab"
+    },
+    {
+      "source": "tb/vectors/nh_d1/nav_bits.mem",
+      "sha256": "4810d853bc04b02fc971ab428ade5fcbed122b212a632d677b1c5058315d8425"
+    },
+    {
+      "source": "tb/vectors/nh_d1/expected_words.mem",
+      "sha256": "390a92c33220abc5ec57ada2c43dd01b8d352dcfa1c6f0aed3cc22c4d0bdb4a7"
+    },
+    {
+      "source": "student_release/student_release/rom/fft_cos_q30.mem",
+      "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed"
+    },
+    {
+      "source": "student_release/student_release/rom/fft_sin_q30.mem",
+      "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8"
+    },
+    {
+      "source": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+      "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c"
+    }
+  ],
+  "artifact_hash_audit": "PASS"
+}

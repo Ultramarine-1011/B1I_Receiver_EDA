@@ -1,0 +1,39 @@
+COMMAND: C:\modeltech64_10.5\win64\vsim.exe -c -onfinish stop -voptargs=+acc -wlf navigation.wlf wave_work.tb_navigation_d1 -do log /tb_navigation_d1/nh_valid /tb_navigation_d1/nh_phase /tb_navigation_d1/frame_valid /tb_navigation_d1/time_valid /tb_navigation_d1/bch_valid /tb_navigation_d1/record_valid /tb_navigation_d1/record_ready /tb_navigation_d1/record_data /tb_navigation_d1/dut/word_valid /tb_navigation_d1/dut/word_number /tb_navigation_d1/dut/sow /tb_navigation_d1/dut/publishing; run -all; quit -code 0 -f
+Reading C:/modeltech64_10.5/tcl/vsim/pref.tcl
+
+# 10.5
+
+# vsim -c -onfinish stop -voptargs="+acc" -wlf navigation.wlf wave_work.tb_navigation_d1 -do "log /tb_navigation_d1/nh_valid /tb_navigation_d1/nh_phase /tb_navigation_d1/frame_valid /tb_navigation_d1/time_valid /tb_navigation_d1/bch_valid /tb_navigation_d1/record_valid /tb_navigation_d1/record_ready /tb_navigation_d1/record_data /tb_navigation_d1/dut/word_valid /tb_navigation_d1/dut/word_number /tb_navigation_d1/dut/sow /tb_navigation_d1/dut/publishing; run -all; quit -code 0 -f" 
+# Start time: 18:59:21 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 10.5 Feb 13 2016 
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_navigation_d1(fast)
+# Loading work.navigation_d1(fast)
+# Loading work.nh20_sync(fast)
+# Loading work.d1_word_sync(fast)
+# log /tb_navigation_d1/nh_valid /tb_navigation_d1/nh_phase /tb_navigation_d1/frame_valid /tb_navigation_d1/time_valid /tb_navigation_d1/bch_valid /tb_navigation_d1/record_valid /tb_navigation_d1/record_ready /tb_navigation_d1/record_data /tb_navigation_d1/dut/word_valid /tb_navigation_d1/dut/word_number /tb_navigation_d1/dut/sow /tb_navigation_d1/dut/publishing
+#  run -all
+# NAVIGATION_D1_CASE_PASS case=0 nh_phase=7 inverted=0 records=10
+# NAVIGATION_D1_CASE_PASS case=1 nh_phase=19 inverted=1 records=10
+# NAVIGATION_D1_PASS cases=2 two_frame_confirmation=1 backpressure=1 lost_reset=1
+# ** Note: $finish    : C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/report_waveforms/tb_navigation_d1.sv(60)
+#    Time: 1540420 ns  Iteration: 1  Instance: /tb_navigation_d1
+# Break in Module tb_navigation_d1 at C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/report_waveforms/tb_navigation_d1.sv line 60
+# Stopped at C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/report_waveforms/tb_navigation_d1.sv line 60
+#  quit -code 0 -f
+# End time: 18:59:23 on Oct 14,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+EXIT_CODE: 0

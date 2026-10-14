@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "protected_paths_unchanged": true,
+  "TB_copies_only_path_changes": true,
+  "E100_hashes": {
+    "student_release/student_release/output/receiver_records.bin": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501",
+    "reports/e_stage/final/receiver_records.bin": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501"
+  },
+  "images_checked": 6,
+  "inputs_checked": 9,
+  "run_logs_checked": 4,
+  "real_E_F_G_table_metrics_checked": true,
+  "failures": []
+}

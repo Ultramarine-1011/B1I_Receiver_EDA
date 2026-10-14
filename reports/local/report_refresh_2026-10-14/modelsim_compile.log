@@ -1,0 +1,30 @@
+COMMAND: C:\modeltech64_10.5\win64\vlog.exe -sv -work wave_work +incdir+C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\nh20_sync.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\d1_word_sync.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\navigation_d1.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\b1i_prn_gen.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\code_nco.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\carrier_nco_mixer.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\epl_correlator.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\tracking_frontend.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\tracking_frontend_spaced.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\tracking_channel_minimal.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\fft4096_serial.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\acquisition_pcps.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\acquisition_refine.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_nh_d1.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_navigation_d1.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_p02_probe.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_tracking_minimal.sv
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+Start time: 18:55:47 on Oct 14,2026
+vlog -sv -work wave_work "+incdir+C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/rtl" C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\nh20_sync.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\d1_word_sync.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\navigation_d1.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\b1i_prn_gen.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\code_nco.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\carrier_nco_mixer.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\epl_correlator.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\tracking_frontend.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\tracking_frontend_spaced.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\tracking_channel_minimal.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\fft4096_serial.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\acquisition_pcps.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\student_release\student_release\rtl\acquisition_refine.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_nh_d1.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_navigation_d1.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_p02_probe.sv C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\report_waveforms\tb_tracking_minimal.sv 
+-- Compiling module nh20_sync
+-- Compiling module d1_word_sync
+-- Compiling module navigation_d1
+-- Compiling module b1i_prn_gen
+-- Compiling module code_nco
+-- Compiling module carrier_nco_mixer
+-- Compiling module epl_correlator
+-- Compiling module tracking_frontend
+-- Compiling module tracking_frontend_spaced
+-- Compiling module tracking_channel_minimal
+-- Compiling module fft4096_serial
+-- Compiling module acquisition_pcps
+-- Compiling module acquisition_refine
+-- Compiling module tb_nh_d1
+-- Compiling module tb_navigation_d1
+-- Compiling module tb_p02_probe
+-- Compiling module tb_tracking_minimal
+
+Top level modules:
+	tb_nh_d1
+	tb_navigation_d1
+	tb_p02_probe
+	tb_tracking_minimal
+End time: 18:55:47 on Oct 14,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+EXIT_CODE: 0

@@ -1,0 +1,17 @@
+simulation_time_us,signal,actual_value
+9620.35,tb_p02_probe.coarse_detected,1
+9620.35,tb_p02_probe.coarse_doppler,0
+9620.35,tb_p02_probe.coarse_lag,0
+9620.35,tb_p02_probe.coarse_mean,222921079
+9620.35,tb_p02_probe.coarse_peak,308569539412
+9620.35,tb_p02_probe.coarse_valid,1
+9620.35,tb_p02_probe.fine_detected,0
+9620.35,tb_p02_probe.fine_doppler,0
+9620.35,tb_p02_probe.fine_lag,0
+9620.35,tb_p02_probe.fine_peak,20206887480857088
+9620.35,tb_p02_probe.fine_valid,0
+9620.35,tb_p02_probe.prn,6
+9620.405,tb_p02_probe.fine_detected,1
+9620.405,tb_p02_probe.fine_valid,1
+9620.415,tb_p02_probe.coarse_valid,0
+9620.415,tb_p02_probe.fine_valid,0

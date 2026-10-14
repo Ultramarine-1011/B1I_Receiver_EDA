@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "engine": "Chrome; installed Marked17.0.5 / Mermaid11.4.1 / MathJax3.2.2",
+  "reports": [
+    {
+      "title": "ACQUISITION_REPORT",
+      "status": {
+        "mermaid": "pass",
+        "math": "pass"
+      },
+      "math": 24,
+      "mathErrors": [],
+      "mermaidSvg": 1,
+      "images": [
+        {
+          "src": "assets/acquisition_pcps_refine.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/acquisition_serial_cells.svg",
+          "loaded": true
+        }
+      ],
+      "tables": 5,
+      "bodyOverflow": false,
+      "pageId": 2
+    },
+    {
+      "title": "TRACKING_REPORT",
+      "status": {
+        "mermaid": "pass",
+        "math": "pass"
+      },
+      "math": 23,
+      "mathErrors": [],
+      "mermaidSvg": 1,
+      "images": [
+        {
+          "src": "assets/tracking_feedback_timing.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/tracking_diagnostics.svg",
+          "loaded": true
+        }
+      ],
+      "tables": 6,
+      "bodyOverflow": false,
+      "pageId": 3
+    },
+    {
+      "title": "NH_D1_REPORT",
+      "status": {
+        "mermaid": "pass",
+        "math": "pass"
+      },
+      "math": 6,
+      "mathErrors": [],
+      "mermaidSvg": 1,
+      "images": [
+        {
+          "src": "assets/nh_d1_words.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/navigation_confirmation.png",
+          "loaded": true
+        }
+      ],
+      "tables": 5,
+      "bodyOverflow": false,
+      "pageId": 4
+    }
+  ],
+  "notes": [
+    "Math block and inline counts match source audit (24/23/6); 3 Mermaid and 6 images rendered without formula errors or body overflow.",
+    "ModelSim screenshots are not included; the four PNGs are actual VCD trace plots, explicitly labelled.",
+    "Browser tool could not write its optional filePath due to its separate workspace-root configuration; read results are saved here with the authorized workspace file tool."
+  ]
+}
