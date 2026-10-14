@@ -494,9 +494,9 @@
     }
   },
   "navigation_failures": [],
-  "solver_service_seconds": 0.008050600066781044,
+  "solver_service_seconds": 0.016955200117081404,
   "evaluation_sources": {
-    "model/online_navigation.py": "c3bb4a54a805fa37a2ba1e8447553672610811a9d1468f96d1d1e482c4cfce00",
+    "model/online_navigation.py": "45e405d336cea6fdc79cf517e3a89bd4128c18b913a9ece603998799d432202a",
     "model/performance_metrics.py": "a6660ada1d334b9e8888109d4213ab3140385b88c806a9be344cd639e2ffc3c9",
     "student_release/student_release/tools/decode_records.py": "1a81cb9ffa31775ca82a58d0184e9a4cad362dcdc22c6b9d750bdbc0447e57f4",
     "student_release/student_release/tools/route_a_position.py": "592b5b6a030b4317aa84f48c4695fb8852bfe0194e085e9368f1641aec7fb4cb",

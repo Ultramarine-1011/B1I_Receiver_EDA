@@ -1,0 +1,4 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/g_resource_audit.py --output reports/g_stage/final_resource_audit.json
+G0_FROZEN_BASELINE_AUDIT_PASS frozen=23 rtl=25 resources=80 E_BIN=c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501
+EXIT_CODE: 0
+WALL_SECONDS: 0.8395141

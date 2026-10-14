@@ -1,0 +1,48 @@
+{
+  "status": "PARTIAL",
+  "scope": "all active digital slots, no twelve-D1 qualification",
+  "samples": 1636800,
+  "cycles": 1744725,
+  "ready_cycles": 102302,
+  "records": 1189,
+  "max_input_block_cycles": 2061,
+  "max_no_sample_cycles": 2048,
+  "warm_cycles": 1725284,
+  "warm_samples": 1620433,
+  "minimum_average_clock_hz": 17447250.0,
+  "warm_minimum_clock_hz": 17427100.35651,
+  "wall_seconds": 5.158483,
+  "backlog_samples": [
+    {
+      "clock_hz": 20000000,
+      "samples": 1676
+    },
+    {
+      "clock_hz": 25000000,
+      "samples": 1337
+    },
+    {
+      "clock_hz": 50000000,
+      "samples": 660
+    },
+    {
+      "clock_hz": 100000000,
+      "samples": 322
+    }
+  ],
+  "structural_validation": "ALL_ACTIVE_SAMPLE_CONSUMPTION_AND_DRAIN_PASS",
+  "channels": 12,
+  "input": {
+    "origin": "teacher_public_development_IF_with_artificial_digital_channel_initialization",
+    "path": "student_release/student_release/input/scenario.if2",
+    "whole_file_sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+    "tested_prefix_bytes": 409200,
+    "prefix_sha256": "ad99ea5e072f37e988c9aea40cfa3389adfb53171738a2190536ac20309fb530"
+  },
+  "input_ready_duty": 0.058635028442877817,
+  "records_per_signal_second": 11890.0,
+  "formal_realtime_status": "BLOCKED_INPUT: clock/SRAM/output service assumptions and sustained twelve-D1 load absent",
+  "output_ready_duty": 1.0,
+  "output_service_scope": "record_ready held high; no external stalled output qualification",
+  "evaluation_source_sha256": "963ba7f97482edc46982690f11562323d0e5fcba236a5358c5794a4e5afdb514"
+}

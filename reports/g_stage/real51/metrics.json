@@ -97,6 +97,7 @@
     "records_per_signal_second": 4008.3333333333335,
     "limits": "Measured file-driven ready handshake service. Hypothetical backlog uses its observed service schedule; paced finite-FIFO tests are separate. No physical timing closure or 12D1 proof."
   },
+  "acquisition_task_count": 16,
   "acquisition_tasks": [
     {
       "task_id": 1,
@@ -343,8 +344,9 @@
       "verification_to_output_cycles": 2
     }
   ],
+  "complete_task_trace_sha256": "65793c9afec3b65b13759eb4547babf81c6cac05e5240804046706fd4207e3b1",
   "scoring_sources": {
-    "model/g_run_score.py": "2eff3b41f180b7c74314780524a44f433b18e22fb25a8d5bda5974d0ca43511e",
+    "model/g_run_score.py": "052b7cdc720d5d7b1c5cba530f40a4ffb36fea7d758bc98e8ae447ef330310d5",
     "model/performance_metrics.py": "a6660ada1d334b9e8888109d4213ab3140385b88c806a9be344cd639e2ffc3c9",
     "student_release/student_release/tools/decode_records.py": "1a81cb9ffa31775ca82a58d0184e9a4cad362dcdc22c6b9d750bdbc0447e57f4"
   },

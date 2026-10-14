@@ -1,0 +1,4 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/online_navigation.py --bin C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\reports\g_stage\real52\receiver_records.bin --sidecar C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\reports\g_stage\real52\receiver_records.bin.availability.jsonl --output C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\reports\g_stage\real52\causal
+CAUSAL_RTL_REPLAY_COMPLETE records=208429 positions=3 valid=3 TTFF=COMPLETED
+EXIT_CODE: 0
+WALL_SECONDS: 2.2223271

@@ -1,0 +1,98 @@
+{
+  "classification": "independent_float_diagnostic_not_receiver_PASS",
+  "source_mem_sha256": "7f2342b9b753feb153b9d2a67b34d844c3050d3cb5e2bff11c714fffee1730ac",
+  "truth_doppler_hz": -9750,
+  "truth_lag_samples": 8191,
+  "truth_nh_phase": 7,
+  "float_objective_peak": {
+    "doppler_hz": -9950,
+    "four_window_noncoherent_power": 9969219.443887046
+  },
+  "profile": [
+    {
+      "doppler_hz": -10250,
+      "four_window_noncoherent_power": 9611002.501922783
+    },
+    {
+      "doppler_hz": -10200,
+      "four_window_noncoherent_power": 9749535.641031072
+    },
+    {
+      "doppler_hz": -10150,
+      "four_window_noncoherent_power": 9847315.658612864
+    },
+    {
+      "doppler_hz": -10100,
+      "four_window_noncoherent_power": 9911119.167878948
+    },
+    {
+      "doppler_hz": -10050,
+      "four_window_noncoherent_power": 9948125.693431314
+    },
+    {
+      "doppler_hz": -10000,
+      "four_window_noncoherent_power": 9965370.92187302
+    },
+    {
+      "doppler_hz": -9950,
+      "four_window_noncoherent_power": 9969219.443887046
+    },
+    {
+      "doppler_hz": -9900,
+      "four_window_noncoherent_power": 9964894.024521751
+    },
+    {
+      "doppler_hz": -9850,
+      "four_window_noncoherent_power": 9956094.66873708
+    },
+    {
+      "doppler_hz": -9800,
+      "four_window_noncoherent_power": 9944734.525501426
+    },
+    {
+      "doppler_hz": -9750,
+      "four_window_noncoherent_power": 9930811.434009422
+    },
+    {
+      "doppler_hz": -9700,
+      "four_window_noncoherent_power": 9912424.255014053
+    },
+    {
+      "doppler_hz": -9650,
+      "four_window_noncoherent_power": 9885932.758410305
+    },
+    {
+      "doppler_hz": -9600,
+      "four_window_noncoherent_power": 9846249.520100141
+    },
+    {
+      "doppler_hz": -9550,
+      "four_window_noncoherent_power": 9787242.78620628
+    },
+    {
+      "doppler_hz": -9500,
+      "four_window_noncoherent_power": 9702221.297808083
+    },
+    {
+      "doppler_hz": -9450,
+      "four_window_noncoherent_power": 9584466.229746303
+    },
+    {
+      "doppler_hz": -9400,
+      "four_window_noncoherent_power": 9427772.116526457
+    },
+    {
+      "doppler_hz": -9350,
+      "four_window_noncoherent_power": 9226958.157435682
+    },
+    {
+      "doppler_hz": -9300,
+      "four_window_noncoherent_power": 8978313.63975628
+    },
+    {
+      "doppler_hz": -9250,
+      "four_window_noncoherent_power": 8679946.205468697
+    }
+  ],
+  "interpretation": "If the float objective also peaks away from true frequency, the observed bias comes from the fixed 1ms integration/NH boundary objective rather than a demonstrated RTL arithmetic mismatch. Keep the actual independent truth failure."
+}

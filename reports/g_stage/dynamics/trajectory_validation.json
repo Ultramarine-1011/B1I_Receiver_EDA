@@ -1,0 +1,42 @@
+[
+  {
+    "id": "D01",
+    "duration_s": 30.0,
+    "max_velocity_m_s": 4.5,
+    "max_acceleration_m_s2": 3.0,
+    "final_distance_m": 67.5,
+    "max_total_doppler_hz": 23.432680884854015,
+    "distance_derivative_error_m_s": 1.6669844971062275e-07,
+    "classification": "trajectory_definition_self_test_not_receiver_P07"
+  },
+  {
+    "id": "D02",
+    "duration_s": 32,
+    "max_velocity_m_s": 15.0,
+    "max_acceleration_m_s2": 5.0,
+    "final_distance_m": 240.0,
+    "max_total_doppler_hz": 78.10893628284671,
+    "distance_derivative_error_m_s": 4.1673167316957915e-07,
+    "classification": "trajectory_definition_self_test_not_receiver_P07"
+  },
+  {
+    "id": "D03",
+    "duration_s": 30,
+    "max_velocity_m_s": 5.0,
+    "max_acceleration_m_s2": 5.0,
+    "final_distance_m": 60.0,
+    "max_total_doppler_hz": 26.036312094282238,
+    "distance_derivative_error_m_s": 4.166867944022101e-07,
+    "classification": "trajectory_definition_self_test_not_receiver_P07"
+  },
+  {
+    "id": "D04",
+    "duration_s": 32,
+    "max_velocity_m_s": 49.5,
+    "max_acceleration_m_s2": 4.0,
+    "final_distance_m": 1555.0,
+    "max_total_doppler_hz": 9773.898609617458,
+    "distance_derivative_error_m_s": 1.6740439434670407e-07,
+    "classification": "trajectory_definition_self_test_not_receiver_P07"
+  }
+]

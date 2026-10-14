@@ -1,4 +1,6 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/test_g_evaluation.py
 test_historical_nav_fixture_prefix_and_full_frames (__main__.AdapterTests.test_historical_nav_fixture_prefix_and_full_frames) ... ok
+test_new_unhealthy_sf1_revokes_cached_ephemeris (__main__.AdapterTests.test_new_unhealthy_sf1_revokes_cached_ephemeris) ... ok
 test_reordered_sidecar_rejected (__main__.AdapterTests.test_reordered_sidecar_rejected) ... ok
 test_single_good_word_is_not_ephemeris (__main__.AdapterTests.test_single_good_word_is_not_ephemeris) ... ok
 test_code_epoch_and_week_wrap (__main__.CausalTests.test_code_epoch_and_week_wrap) ... ok
@@ -11,12 +13,13 @@ test_third_actual_output_defines_confirmation (__main__.CausalTests.test_third_a
 test_duplicate_tracking_cannot_fill_window (__main__.StatisticsTests.test_duplicate_tracking_cannot_fill_window) ... ok
 test_empty_truth_and_windows (__main__.StatisticsTests.test_empty_truth_and_windows) ... ok
 test_failed_and_censored_denominator (__main__.StatisticsTests.test_failed_and_censored_denominator) ... ok
+test_measurable_unlocked_state_keeps_errors (__main__.StatisticsTests.test_measurable_unlocked_state_keeps_errors) ... ok
 test_short_200_trials_cannot_qualify (__main__.StatisticsTests.test_short_200_trials_cannot_qualify) ... ok
 test_wrong_grid_cannot_fill_60s (__main__.StatisticsTests.test_wrong_grid_cannot_fill_60s) ... ok
 test_zero_counts_and_wilson (__main__.StatisticsTests.test_zero_counts_and_wilson) ... ok
 
 ----------------------------------------------------------------------
-Ran 16 tests in 1.813s
+Ran 18 tests in 1.569s
 
 OK
 EXIT_CODE: 0

@@ -1,5 +1,5 @@
 """G0: immutable baseline, local resources and exact input gaps. No DUT truth."""
-import hashlib,json,subprocess
+import argparse,hashlib,json,subprocess
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,6 +13,7 @@ def sha(path):
     return h.hexdigest()
 
 def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--output',type=Path,default=OUT/'resource_audit.json');args=ap.parse_args()
     OUT.mkdir(parents=True,exist_ok=True)
     frozen=json.loads((ROOT/'reports/e_stage/final/final_integrity.json').read_text(encoding='utf-8-sig'))
     checks=[]
@@ -56,8 +57,9 @@ def main():
       'P09':'independent fixed ECEF truth, consistent geometry/model and complete 60s window'}
     report={'status':'G0_FROZEN_BASELINE_AUDIT_PASS','head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
             'frozen':checks,'f_compiled_rtl':rtl,'scenarios':[scene], 'local_resource_inventory':resources,
-            'formal_gaps':gaps,'generator_audit':'No complete GNSS IF/navigation/geometry generator exists locally. Primary/NH and Prompt generators can be reused for isolated diagnostics only.'}
-    (OUT/'resource_audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+            'formal_gaps':gaps,'audited_roots':['student_release/student_release/input','model','tb','EDA_CONTEXT_COMPRESSED'],
+            'generator_audit':'No complete GNSS IF/navigation/geometry generator was found in the audited project directories. Primary/NH and Prompt generators can be reused for isolated diagnostics only.'}
+    args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print('G0_FROZEN_BASELINE_AUDIT_PASS',f'frozen={len(checks)} rtl={len(rtl)} resources={len(resources)} E_BIN={E_SHA}')
 
 if __name__=='__main__':main()

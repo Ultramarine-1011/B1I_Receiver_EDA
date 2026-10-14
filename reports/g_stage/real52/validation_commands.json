@@ -1,0 +1,96 @@
+[
+  {
+    "exit_code": 0,
+    "wall_seconds": 1.2624814,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\structure_final.log",
+    "arguments": [
+      "student_release/student_release/tools/check_records.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\receiver_records.bin",
+      "--expected-samples",
+      "851136000",
+      "--minimum-acquisitions",
+      "4",
+      "--require-tracking"
+    ]
+  },
+  {
+    "exit_code": 0,
+    "wall_seconds": 1.2828231,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\self_check.log",
+    "arguments": [
+      "student_release/student_release/tools/self_check.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\receiver_records.bin",
+      "--expected-samples",
+      "851136000",
+      "--minimum-acquisitions",
+      "4",
+      "--require-tracking",
+      "--require-navigation",
+      "--require-common-observation"
+    ]
+  },
+  {
+    "exit_code": 0,
+    "wall_seconds": 4.3204395,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\e_prefix.log",
+    "arguments": [
+      "model/f_reference_score.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52"
+    ]
+  },
+  {
+    "exit_code": 0,
+    "wall_seconds": 12.297989,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\independent_NAV.log",
+    "arguments": [
+      "model/receiver_multi_score.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52",
+      "--require-navigation"
+    ]
+  },
+  {
+    "exit_code": 0,
+    "wall_seconds": 1.7278352,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\score.log",
+    "arguments": [
+      "model/g_run_score.py",
+      "--folder",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52"
+    ]
+  },
+  {
+    "exit_code": 0,
+    "wall_seconds": 11.638256,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\route_a_diagnostic.log",
+    "arguments": [
+      "student_release/student_release/tools/route_a_position.py",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\receiver_records.bin",
+      "-o",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\route_a_positions.jsonl"
+    ]
+  },
+  {
+    "exit_code": 0,
+    "wall_seconds": 2.2302054,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\causal_replay.log",
+    "arguments": [
+      "model/online_navigation.py",
+      "--bin",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\receiver_records.bin",
+      "--sidecar",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\receiver_records.bin.availability.jsonl",
+      "--output",
+      "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\causal"
+    ]
+  },
+  {
+    "exit_code": 0,
+    "wall_seconds": 0.8456679,
+    "log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\g_stage\\real52\\frozen_integrity.log",
+    "arguments": [
+      "model/g_resource_audit.py",
+      "--output",
+      "reports/g_stage/final_resource_audit.json"
+    ]
+  }
+]

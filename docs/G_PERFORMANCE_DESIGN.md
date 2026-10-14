@@ -6,7 +6,7 @@
 
 `g_receiver_probe`仅以观测端口读取原receiver_multichannel状态、PCPS候选、精修、分配、公共样本消费；不写DUT，不改教师top/interface或公共文件。`g_receiver.cpp`只读IF、驱动公开32bit/16样本握手、写实际256bit小端BIN及逐握手sidecar。完整默认搜索与默认4保持F参数；narrow只用于标明范围的定向诊断。
 
-BIN是唯一功能数据源。sidecar保留sequence、hardware_cycle及available_sample（握手当拍已接纳样本量，最多含16样本缓冲），身份/代次/有效性与源参考时刻按原始记录解码。type5公开格式没有generation，不能凭空补造；NAV/OBS/Prompt使用各自已发布代次字段。tracking源时刻指向NCO投影的最近码边界，可比接纳样本计数超前1点；这是已知状态的数值投影，因果性必须按输出握手核查，不能误当未来输入。
+BIN是唯一功能数据源。sidecar保留sequence、hardware_cycle及available_sample（握手当拍已接纳样本量，最多含16样本缓冲），身份/代次/有效性与源参考时刻按原始记录解码。type5公开格式没有generation，不能凭空补造；NAV/OBS/Prompt使用各自已发布代次字段。tracking源时刻指向NCO投影的最近码边界，可比接纳样本计数超前；投影量取决于当时码相位，并非固定上限1点。它只使用已知状态，因果性按输出握手核查；共同OBS的真实接收历元必须不晚于握手已接纳时刻。
 
 事件流分别记录共享捕获请求接纳、每PRN CODE_INIT计算起点、粗候选、精修请求、复核可用、分配与释放。候选在共享请求时进入逻辑搜索队列；CODE_INIT为该PRN计算接纳点，队列部分包含共享4ms窗及前序候选/精修等待。首次输出用实际type5握手绑定复核事件。全局type5 acquisition_cycles不作为各PRN开始/结束时间。排队、PCPS、精修/复核和输出等待分别报；共享窗等待不重复计入信号时间。
 

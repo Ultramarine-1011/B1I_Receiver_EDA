@@ -1,0 +1,4 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/f_reference_score.py C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\reports\g_stage\real52
+{"status": "E_PREFIX_BIT_EXACT_PASS", "current_signal_seconds": 52.0, "non_end_records": 208428, "exact_non_cycle_bits": true, "counts": {"acquisition": 4, "tracking": 207980, "common_observation": 204, "navigation": 240}, "baseline_100s_post_lock_drops": {}, "limitation": "Current prefix only; E original 100s remains frozen, not a new current-source 100s validation."}
+EXIT_CODE: 0
+WALL_SECONDS: 4.3137613

@@ -1,0 +1,2199 @@
+{
+  "status": "G_DELIVERY_EVIDENCE_AUDIT_PASS",
+  "head_at_audit": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+  "scope": "completed run logs, exact compiled source/input hashes, actual NAV/OBS causal dependencies; no official performance qualification",
+  "compiled_source_manifests": [
+    {
+      "manifest": "reports/g_stage/acquisition/sources.json",
+      "manifest_sha256": "e21dafaa4883a565e825b0fbb22d4cbacc08712fe96d752eaef3043786498cc9",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 26,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/tb_g_acquisition.sv",
+          "sha256": "3b15bdf161f5b4ed52c33366fde874604b2055271355656b7c6b1f4043f59af9",
+          "snapshot_used": true
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/acquisition_cn50/sources.json",
+      "manifest_sha256": "81b3e5d7930b56cfa8649c15f51a8c71b15d292025b1ae4434daea67139f09ca",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 26,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/tb_g_acquisition.sv",
+          "sha256": "561976a5ec959785ab3c17121b4df50ff72ef53a5eb6e51dfe33089446198b56",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/fixed_fifo102400/sources.json",
+      "manifest_sha256": "d6fdc8446fbd9abb342f2aeb1497f8de6afc72f3760ce6fcae176532e8832b3e",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_receiver_probe.sv",
+          "sha256": "f4f9c2dd8db576960403d11f42117749015dcdbf10b92343eb2bd8e3bf0d733c",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_receiver.cpp",
+          "sha256": "6da546d82a779041b6a73b741446ae29d14b5c4d2ba2dc07e191b980fbf4c640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/fixed_fifo64/sources.json",
+      "manifest_sha256": "85e6fd9a903356f6806be654844203904b6eab839ff7ce96e00fd4ef7b133814",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_receiver_probe.sv",
+          "sha256": "f4f9c2dd8db576960403d11f42117749015dcdbf10b92343eb2bd8e3bf0d733c",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_receiver.cpp",
+          "sha256": "6da546d82a779041b6a73b741446ae29d14b5c4d2ba2dc07e191b980fbf4c640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/holding/sources.json",
+      "manifest_sha256": "215beb5d5bafa28c2376af671fa4169110495aec28225a4b3872d9a9907db028",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_tracking_probe.sv",
+          "sha256": "d4fbc3c5e389401d8555805801fa76523c622ae1e3f8c6cc24ec86222b6ae184",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_tracking.cpp",
+          "sha256": "916c2f3574ea82e31f5d4c9d0266ffd3ba89d28d55e8988b1670f4cae45fce7f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/real51/sources.json",
+      "manifest_sha256": "0b7e889dd1b235b51c5adedc0588f850f004e51020bf05fde12c62bc04fcef89",
+      "head_at_build": "a0280015dc5cfacd711fac146a428c772f673790",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_receiver_probe.sv",
+          "sha256": "f4f9c2dd8db576960403d11f42117749015dcdbf10b92343eb2bd8e3bf0d733c",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_receiver.cpp",
+          "sha256": "6da546d82a779041b6a73b741446ae29d14b5c4d2ba2dc07e191b980fbf4c640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/real52/sources.json",
+      "manifest_sha256": "77eb5eccef697c5214cb127fae2fec5e42aa578a32868455c46dcaefce4068ef",
+      "head_at_build": "a0280015dc5cfacd711fac146a428c772f673790",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_receiver_probe.sv",
+          "sha256": "f4f9c2dd8db576960403d11f42117749015dcdbf10b92343eb2bd8e3bf0d733c",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_receiver.cpp",
+          "sha256": "6da546d82a779041b6a73b741446ae29d14b5c4d2ba2dc07e191b980fbf4c640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/recovery/sources.json",
+      "manifest_sha256": "d57c96ccca7a873ecb64686667037db5834dcb94d6a78012f1395e7e8d1fa6ce",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_receiver_probe.sv",
+          "sha256": "f4f9c2dd8db576960403d11f42117749015dcdbf10b92343eb2bd8e3bf0d733c",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_receiver.cpp",
+          "sha256": "6da546d82a779041b6a73b741446ae29d14b5c4d2ba2dc07e191b980fbf4c640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/service/c1/sources.json",
+      "manifest_sha256": "8c0128ce2ffa328242453aaba96df1b3a4702b961ef58bc36b64be4314270f92",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_bank_service.sv",
+          "sha256": "91bca122ede285c6bf058331396c60b3edb607773e9c023690c79d4dfdea1561",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_bank.cpp",
+          "sha256": "2626d5032290b929c093f8bba16f3bcb3062dc81125d3f7f60d173c3a4771ce8",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/service/c12/sources.json",
+      "manifest_sha256": "9885eac970f81eb5434daf41d81e42c214f87beeba94a86a9e8698fc299c928b",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_bank_service.sv",
+          "sha256": "91bca122ede285c6bf058331396c60b3edb607773e9c023690c79d4dfdea1561",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_bank.cpp",
+          "sha256": "2626d5032290b929c093f8bba16f3bcb3062dc81125d3f7f60d173c3a4771ce8",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/service/c4/sources.json",
+      "manifest_sha256": "b0d280f58b6391267968631db58127fe9782976f70965b16f488d9af061ca273",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_bank_service.sv",
+          "sha256": "91bca122ede285c6bf058331396c60b3edb607773e9c023690c79d4dfdea1561",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_bank.cpp",
+          "sha256": "2626d5032290b929c093f8bba16f3bcb3062dc81125d3f7f60d173c3a4771ce8",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    },
+    {
+      "manifest": "reports/g_stage/tracking/sources.json",
+      "manifest_sha256": "36e4d1fe224838cef457a227df99ecd8ee2a5d2ac8d2802635c36f5132bb7461",
+      "head_at_build": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+      "source_count": 27,
+      "checks": [
+        {
+          "path": "student_release/student_release/rtl/receiver_contract_pkg.sv",
+          "sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_pcps.sv",
+          "sha256": "8b276cb91de78c976ff40ebde06ccd33bc190db732a47d55e6a66c958c76c2d5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_refine.sv",
+          "sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/acquisition_serial.sv",
+          "sha256": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/b1i_prn_gen.sv",
+          "sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_nco_mixer.sv",
+          "sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/code_nco.sv",
+          "sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/d1_word_sync.sv",
+          "sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/epl_correlator.sv",
+          "sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/fft4096_serial.sv",
+          "sha256": "6ee4dd81c770d8072c69c64148d519deaebf4ea3c16b69b0a23f70191b20e388",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/navigation_d1.sv",
+          "sha256": "6fe9233f4b2b769a0a40f4c79aaba5ccf77fa0c6259d8498984ba5b7a50a90a5",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/nh20_sync.sv",
+          "sha256": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_channel.sv",
+          "sha256": "413a18a8113afe5a76480edb1a48da52cb5e80d4ade69eb881d3887c584b8640",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_multichannel.sv",
+          "sha256": "4dbf81f7df0a10ed278687db94ccb3c3f317ea919379680e9d2acd92315da59f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/receiver_single.sv",
+          "sha256": "0da2427739ae689f5d84c8de47bc2de02b92924d3de96ac45eea2e0b5a1d72fe",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/satellite_manager.sv",
+          "sha256": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/stream_unpacker.sv",
+          "sha256": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/student_receiver_core.sv",
+          "sha256": "b0da3b59610473a533640acc365e37f4533438e97c466f1ce847e1981bb0a144",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_channel_minimal.sv",
+          "sha256": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend_spaced.sv",
+          "sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_frontend.sv",
+          "sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/tracking_record_framer.sv",
+          "sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+          "snapshot_used": false
+        },
+        {
+          "path": "tb/g_tracking_probe.sv",
+          "sha256": "d4fbc3c5e389401d8555805801fa76523c622ae1e3f8c6cc24ec86222b6ae184",
+          "snapshot_used": false
+        },
+        {
+          "path": "scripts/g_tracking.cpp",
+          "sha256": "916c2f3574ea82e31f5d4c9d0266ffd3ba89d28d55e8988b1670f4cae45fce7f",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rtl/carrier_quarter_lut.svh",
+          "sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_cos_q30.mem",
+          "sha256": "0356a896d3a7b5ca543ae0c129f0edb234bba9e7bd2721e24bd870fa34d102ed",
+          "snapshot_used": false
+        },
+        {
+          "path": "student_release/student_release/rom/fft_sin_q30.mem",
+          "sha256": "c5f0d413c3d1c0f8871bbe3f7d7d2ba2f314456092a4f70390586ed5981586f8",
+          "snapshot_used": false
+        }
+      ]
+    }
+  ],
+  "completed_simulations": [
+    {
+      "path": "reports/g_stage/real51/run.log",
+      "sha256": "182a63e633ef760d193f636e1dc965ff74ac2f23f5cc3fb4348b60bf8c4aadb3",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/real52/run.log",
+      "sha256": "4fb9839c4964beee49c411bad92ff47c2fd2b9e53c191340c86d6af570011d1d",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/recovery/run.log",
+      "sha256": "91c9f319a97786ad74d775660f0a3a95ad8232791d63cc2f0d653d589327c1f2",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/fixed_fifo102400/run.log",
+      "sha256": "057c21568f70c6d372a315c7a47af9914fcef779980ee3105f91338be089cce0",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/acquisition/run.log",
+      "sha256": "7bbf6d7229eb24c306bcb7b29adc3c317a9735b2a2945d9497e8ccd32e2472e9",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/acquisition_cn50/run.log",
+      "sha256": "1aa8775a6bc5ba55ec2344fbe455b503cd2090d79b783b4042c146b1034b4101",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/service/c1/run.log",
+      "sha256": "f7821f9fa6333e8be1fdbc2462e4d88f26f7eaf440addc11fff964a91f990317",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/service/c4/run.log",
+      "sha256": "9d90a0b9aa78f9fcb7d4c196e8e674a9874e6045a202fd33fe29f7f19aca950a",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/service/c12/run.log",
+      "sha256": "fd64320e33d8608e755dd7ccb21de7742bfdfa6c6faca58f4261ac167204f9e0",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/tracking/static.run.log",
+      "sha256": "2e1ca358f0e59b46e6914786cff4aca363e7606688df913abb8469d1bc7b3020",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/tracking/D01.run.log",
+      "sha256": "93c7fe98f7840a59a168f8e253b98a75385bfde9797a3a0cd99094aba59ba86c",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/tracking/D02.run.log",
+      "sha256": "dfee31885f530e3a1869af99bb2f0bca5ddf0948320340f4fe2cd871ba8447aa",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/tracking/D03.run.log",
+      "sha256": "0a8100b7eef92a3001f0c908c0e6340752c241957e5d3e42ee9af49ae5dcf5d8",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/tracking/D04.run.log",
+      "sha256": "ccad13a313a4ac2ad88cc5e148037bc364d3426200fff50bb4a36d9497e04f6f",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn50.run.log",
+      "sha256": "9d9d574748325263dabeadee9bbb2a535488c04ecb57e9231204554ca9051473",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g_stage/holding/hold_cn40.run.log",
+      "sha256": "8338317c9c514dc80ecf4b91b4de314bdfbdd70f08fda89bbfda8d7b4968d2ed",
+      "exit_code": 0
+    }
+  ],
+  "actual_record_runs": [
+    {
+      "folder": "real51",
+      "bin_sha256": "ebd3b493a21261dc0ec4b32acdcec33ac25d053f0308c8b83e280b46b0b9804d",
+      "sidecar_sha256": "809512e051f4c21e9e571a733b0dac977cd9cd62f54a3a55c360779c05655200",
+      "record_types": {
+        "acquisition": 4,
+        "tracking": 203980,
+        "common_observation": 200,
+        "navigation": 240,
+        "end": 1
+      },
+      "time_domains": {
+        "signal_seconds": 51.0,
+        "hardware_cycles": 1157097113,
+        "assumed_clock_hz": null,
+        "processing_seconds": null,
+        "host_wall_seconds": 1464.741182,
+        "minimum_average_clock_hz": 22688178.68627451
+      }
+    },
+    {
+      "folder": "real52",
+      "bin_sha256": "b4718f89f9f9dc76cf27f7eef0a1e8fac9908ddf51ef276e713f3256ccc73483",
+      "sidecar_sha256": "842f1f59ccfb8c8e7beb824b2a8943bc67a6ea127ceea6467697eff2e6c770ca",
+      "record_types": {
+        "acquisition": 4,
+        "tracking": 207980,
+        "common_observation": 204,
+        "navigation": 240,
+        "end": 1
+      },
+      "time_domains": {
+        "signal_seconds": 52.0,
+        "hardware_cycles": 1174500118,
+        "assumed_clock_hz": null,
+        "processing_seconds": null,
+        "host_wall_seconds": 1492.004881,
+        "minimum_average_clock_hz": 22586540.730769232
+      }
+    },
+    {
+      "folder": "recovery",
+      "bin_sha256": "0372d1319dc96ed0f5821fdf803db23e3507b3fb93cad0a182f52f98b297d3f5",
+      "sidecar_sha256": "c2ae7b74bfc47ad076c6dde503a812d50e1da8499d2499d11ac51a0195539cea",
+      "record_types": {
+        "acquisition": 5,
+        "tracking": 79819,
+        "common_observation": 78,
+        "navigation": 60,
+        "lost": 2,
+        "end": 1
+      },
+      "time_domains": {
+        "signal_seconds": 40.0,
+        "hardware_cycles": 697600555,
+        "assumed_clock_hz": null,
+        "processing_seconds": null,
+        "host_wall_seconds": 825.474423,
+        "minimum_average_clock_hz": 17440013.875
+      }
+    },
+    {
+      "folder": "fixed_fifo102400",
+      "bin_sha256": "062adb2052daa94bf3d070e736fa99be1bf4b1965589d4ded6f2cbd4557de011",
+      "sidecar_sha256": "94e1593137f82df0d56e3139e0319f71d25a47d8e1c14fa55a9322bd9c9049e7",
+      "record_types": {
+        "acquisition": 2,
+        "tracking": 192,
+        "end": 1
+      },
+      "time_domains": {
+        "signal_seconds": 0.1,
+        "hardware_cycles": 10000055,
+        "assumed_clock_hz": 100000000,
+        "processing_seconds": 0.10000055,
+        "host_wall_seconds": 10.970046,
+        "minimum_average_clock_hz": 100000550.0
+      }
+    }
+  ],
+  "current_public52_validation_checks": 8,
+  "causal_position_epochs": [
+    49,
+    50,
+    51
+  ],
+  "causal_ttff_seconds": 51.000000977517104,
+  "causal_dependency_audit": "all raw NAV precede their own same-generation OBS; complete same-frame 30 words per PRN",
+  "recovery_independent_phase_error_samples": 0,
+  "acquisition_summary": [
+    {
+      "name": "acquisition",
+      "status": "PARTIAL",
+      "subset_status": "FAIL",
+      "detection": {
+        "n": 6,
+        "rate": 0.16666666666666666,
+        "ci95": [
+          0.030053369748306635,
+          0.5635028221864702
+        ]
+      },
+      "false_alarm": {
+        "n": 2,
+        "rate": 0.0,
+        "ci95": [
+          0,
+          0.6576197724933469
+        ]
+      }
+    },
+    {
+      "name": "acquisition_cn50",
+      "status": "PARTIAL",
+      "subset_status": "FAIL",
+      "detection": {
+        "n": 6,
+        "rate": 0.8333333333333334,
+        "ci95": [
+          0.43649717781352987,
+          0.9699466302516935
+        ]
+      },
+      "false_alarm": {
+        "n": 2,
+        "rate": 0.0,
+        "ci95": [
+          0,
+          0.6576197724933469
+        ]
+      }
+    }
+  ],
+  "tracking_summary": [
+    {
+      "case": "D01.truth",
+      "status": "FAIL",
+      "cn0_db_hz": 40.0,
+      "scored_seconds": 3,
+      "quality": {
+        "status": "MEASURED",
+        "code_rms_chip": 0.05551913920391284,
+        "frequency_1s_mean_rms_hz": 0.02514701986084977,
+        "complete_frequency_windows": 3,
+        "expected_prompts": 3000,
+        "valid_prompts": 3000,
+        "reacquisitions": 0,
+        "holding_working_point_observed": false
+      },
+      "locked_ratio": 0.9663333333333334
+    },
+    {
+      "case": "D02.truth",
+      "status": "FAIL",
+      "cn0_db_hz": 40.0,
+      "scored_seconds": 6,
+      "quality": {
+        "status": "MEASURED",
+        "code_rms_chip": 0.03947080187604404,
+        "frequency_1s_mean_rms_hz": 0.05091642423010331,
+        "complete_frequency_windows": 6,
+        "expected_prompts": 6000,
+        "valid_prompts": 6000,
+        "reacquisitions": 0,
+        "holding_working_point_observed": false
+      },
+      "locked_ratio": 0.424
+    },
+    {
+      "case": "D03.truth",
+      "status": "FAIL",
+      "cn0_db_hz": 40.0,
+      "scored_seconds": 5,
+      "quality": {
+        "status": "MEASURED",
+        "code_rms_chip": 0.03325618976010964,
+        "frequency_1s_mean_rms_hz": 0.07038792169176333,
+        "complete_frequency_windows": 5,
+        "expected_prompts": 5000,
+        "valid_prompts": 5000,
+        "reacquisitions": 0,
+        "holding_working_point_observed": false
+      },
+      "locked_ratio": 0.8306
+    },
+    {
+      "case": "D04.truth",
+      "status": "FAIL",
+      "cn0_db_hz": 40.0,
+      "scored_seconds": 4,
+      "quality": {
+        "status": "MEASURED",
+        "code_rms_chip": 0.008772558394087233,
+        "frequency_1s_mean_rms_hz": 0.026892324069790887,
+        "complete_frequency_windows": 4,
+        "expected_prompts": 4000,
+        "valid_prompts": 4000,
+        "reacquisitions": 0,
+        "holding_working_point_observed": false
+      },
+      "locked_ratio": 0.96825
+    },
+    {
+      "case": "static.truth",
+      "status": "FAIL",
+      "cn0_db_hz": 40.0,
+      "scored_seconds": 2,
+      "quality": {
+        "status": "MEASURED",
+        "code_rms_chip": 0.14575558105574052,
+        "frequency_1s_mean_rms_hz": 0.006248250973923381,
+        "complete_frequency_windows": 2,
+        "expected_prompts": 2000,
+        "valid_prompts": 2000,
+        "reacquisitions": 0,
+        "holding_working_point_observed": false
+      },
+      "locked_ratio": 0.943
+    },
+    {
+      "case": "hold_cn40.truth",
+      "status": "FAIL",
+      "cn0_db_hz": 40.0,
+      "scored_seconds": 60,
+      "quality": {
+        "status": "MEASURED",
+        "code_rms_chip": 0.07329060132272627,
+        "frequency_1s_mean_rms_hz": 0.011747145657503344,
+        "complete_frequency_windows": 60,
+        "expected_prompts": 60000,
+        "valid_prompts": 60000,
+        "reacquisitions": 0,
+        "holding_working_point_observed": false
+      },
+      "locked_ratio": 0.9726166666666667
+    },
+    {
+      "case": "hold_cn50.truth",
+      "status": "SELF_GENERATED_PASS",
+      "cn0_db_hz": 50.0,
+      "scored_seconds": 60,
+      "quality": {
+        "status": "MEASURED",
+        "code_rms_chip": 0.0632310359427688,
+        "frequency_1s_mean_rms_hz": 0.0024506172225988738,
+        "complete_frequency_windows": 60,
+        "expected_prompts": 60000,
+        "valid_prompts": 60000,
+        "reacquisitions": 0,
+        "holding_working_point_observed": true
+      },
+      "locked_ratio": 1.0
+    }
+  ],
+  "service": [
+    {
+      "status": "PARTIAL",
+      "scope": "all active digital slots, no twelve-D1 qualification",
+      "samples": 1636800,
+      "cycles": 1741458,
+      "ready_cycles": 102302,
+      "records": 100,
+      "max_input_block_cycles": 2061,
+      "max_no_sample_cycles": 2048,
+      "warm_cycles": 1722017,
+      "warm_samples": 1620433,
+      "minimum_average_clock_hz": 17414580.0,
+      "warm_minimum_clock_hz": 17394100.376875,
+      "wall_seconds": 0.417789,
+      "backlog_samples": [
+        {
+          "clock_hz": 20000000,
+          "samples": 1676
+        },
+        {
+          "clock_hz": 25000000,
+          "samples": 1337
+        },
+        {
+          "clock_hz": 50000000,
+          "samples": 660
+        },
+        {
+          "clock_hz": 100000000,
+          "samples": 322
+        }
+      ],
+      "structural_validation": "ALL_ACTIVE_SAMPLE_CONSUMPTION_AND_DRAIN_PASS",
+      "channels": 1,
+      "input": {
+        "origin": "teacher_public_development_IF_with_artificial_digital_channel_initialization",
+        "path": "student_release/student_release/input/scenario.if2",
+        "whole_file_sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+        "tested_prefix_bytes": 409200,
+        "prefix_sha256": "ad99ea5e072f37e988c9aea40cfa3389adfb53171738a2190536ac20309fb530"
+      },
+      "input_ready_duty": 0.05874502859098525,
+      "records_per_signal_second": 1000.0,
+      "formal_realtime_status": "BLOCKED_INPUT: clock/SRAM/output service assumptions and sustained twelve-D1 load absent",
+      "output_ready_duty": 1.0,
+      "output_service_scope": "record_ready held high; no external stalled output qualification",
+      "evaluation_source_sha256": "963ba7f97482edc46982690f11562323d0e5fcba236a5358c5794a4e5afdb514"
+    },
+    {
+      "status": "PARTIAL",
+      "scope": "all active digital slots, no twelve-D1 qualification",
+      "samples": 1636800,
+      "cycles": 1742349,
+      "ready_cycles": 102302,
+      "records": 397,
+      "max_input_block_cycles": 2061,
+      "max_no_sample_cycles": 2048,
+      "warm_cycles": 1722908,
+      "warm_samples": 1620433,
+      "minimum_average_clock_hz": 17423490.0,
+      "warm_minimum_clock_hz": 17403100.371321,
+      "wall_seconds": 1.835656,
+      "backlog_samples": [
+        {
+          "clock_hz": 20000000,
+          "samples": 1676
+        },
+        {
+          "clock_hz": 25000000,
+          "samples": 1337
+        },
+        {
+          "clock_hz": 50000000,
+          "samples": 660
+        },
+        {
+          "clock_hz": 100000000,
+          "samples": 322
+        }
+      ],
+      "structural_validation": "ALL_ACTIVE_SAMPLE_CONSUMPTION_AND_DRAIN_PASS",
+      "channels": 4,
+      "input": {
+        "origin": "teacher_public_development_IF_with_artificial_digital_channel_initialization",
+        "path": "student_release/student_release/input/scenario.if2",
+        "whole_file_sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+        "tested_prefix_bytes": 409200,
+        "prefix_sha256": "ad99ea5e072f37e988c9aea40cfa3389adfb53171738a2190536ac20309fb530"
+      },
+      "input_ready_duty": 0.058714987640248885,
+      "records_per_signal_second": 3970.0,
+      "formal_realtime_status": "BLOCKED_INPUT: clock/SRAM/output service assumptions and sustained twelve-D1 load absent",
+      "output_ready_duty": 1.0,
+      "output_service_scope": "record_ready held high; no external stalled output qualification",
+      "evaluation_source_sha256": "963ba7f97482edc46982690f11562323d0e5fcba236a5358c5794a4e5afdb514"
+    },
+    {
+      "status": "PARTIAL",
+      "scope": "all active digital slots, no twelve-D1 qualification",
+      "samples": 1636800,
+      "cycles": 1744725,
+      "ready_cycles": 102302,
+      "records": 1189,
+      "max_input_block_cycles": 2061,
+      "max_no_sample_cycles": 2048,
+      "warm_cycles": 1725284,
+      "warm_samples": 1620433,
+      "minimum_average_clock_hz": 17447250.0,
+      "warm_minimum_clock_hz": 17427100.35651,
+      "wall_seconds": 5.158483,
+      "backlog_samples": [
+        {
+          "clock_hz": 20000000,
+          "samples": 1676
+        },
+        {
+          "clock_hz": 25000000,
+          "samples": 1337
+        },
+        {
+          "clock_hz": 50000000,
+          "samples": 660
+        },
+        {
+          "clock_hz": 100000000,
+          "samples": 322
+        }
+      ],
+      "structural_validation": "ALL_ACTIVE_SAMPLE_CONSUMPTION_AND_DRAIN_PASS",
+      "channels": 12,
+      "input": {
+        "origin": "teacher_public_development_IF_with_artificial_digital_channel_initialization",
+        "path": "student_release/student_release/input/scenario.if2",
+        "whole_file_sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+        "tested_prefix_bytes": 409200,
+        "prefix_sha256": "ad99ea5e072f37e988c9aea40cfa3389adfb53171738a2190536ac20309fb530"
+      },
+      "input_ready_duty": 0.058635028442877817,
+      "records_per_signal_second": 11890.0,
+      "formal_realtime_status": "BLOCKED_INPUT: clock/SRAM/output service assumptions and sustained twelve-D1 load absent",
+      "output_ready_duty": 1.0,
+      "output_service_scope": "record_ready held high; no external stalled output qualification",
+      "evaluation_source_sha256": "963ba7f97482edc46982690f11562323d0e5fcba236a5358c5794a4e5afdb514"
+    }
+  ],
+  "finite_fifo102400_peak_words": 18363,
+  "formal_realtime": "UNVERIFIED; missing clock/SRAM/service model and sustained twelve-D1 load",
+  "audit_source_sha256": "3253dea29ed9ff6a91fd7803ceb0fadd86ff7faba99d0281cbbaa6d57e044eb5"
+}

@@ -1,0 +1,93 @@
+{
+  "metric": "acquisition",
+  "trials": [
+    {
+      "id": "present_0",
+      "seed": 4100,
+      "target_present": true,
+      "verified_success": true,
+      "detected": true,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 35022175,
+      "queued_cycle": 1
+    },
+    {
+      "id": "present_1",
+      "seed": 4101,
+      "target_present": true,
+      "verified_success": false,
+      "detected": false,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 10846847,
+      "queued_cycle": 1
+    },
+    {
+      "id": "present_2",
+      "seed": 4102,
+      "target_present": true,
+      "verified_success": false,
+      "detected": false,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 10846847,
+      "queued_cycle": 1
+    },
+    {
+      "id": "present_3",
+      "seed": 4103,
+      "target_present": true,
+      "verified_success": false,
+      "detected": false,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 10846847,
+      "queued_cycle": 1
+    },
+    {
+      "id": "present_4",
+      "seed": 4104,
+      "target_present": true,
+      "verified_success": false,
+      "detected": false,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 10846847,
+      "queued_cycle": 1
+    },
+    {
+      "id": "present_5",
+      "seed": 4105,
+      "target_present": true,
+      "verified_success": false,
+      "detected": false,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 10846847,
+      "queued_cycle": 1
+    },
+    {
+      "id": "absent_0",
+      "seed": 4200,
+      "target_present": false,
+      "verified_success": false,
+      "detected": false,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 10846847,
+      "queued_cycle": 1
+    },
+    {
+      "id": "absent_1",
+      "seed": 4201,
+      "target_present": false,
+      "verified_success": false,
+      "detected": false,
+      "observation_seconds": 0.004,
+      "accepted_cycle": 1,
+      "verified_cycle": 10846847,
+      "queued_cycle": 1
+    }
+  ]
+}

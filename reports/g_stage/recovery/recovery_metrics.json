@@ -1,0 +1,186 @@
+{
+  "status": "SELF_GENERATED_PASS",
+  "scope": "real 2s target RF removal while healthy PRN7 continues; reduced search/noiseless B1I modulation, no geometry/qualified ephemeris",
+  "if_sha256": "6b169f9e319bf8c011660dc98a7988948b709465ecfe9a65cd4642c217018f2b",
+  "truth_sha256": "048d4effb24d944c8275defd7b82761fae78c784ff414e37dad7ab5dd8d30c7a",
+  "bin_sha256": "0372d1319dc96ed0f5821fdf803db23e3507b3fb93cad0a182f52f98b297d3f5",
+  "pre_interruption_valid_obs": 2,
+  "healthy_tracking_rows_during_outage": 2000,
+  "healthy_lock_ratio": 1.0,
+  "invalidly_valid_obs_after_actual_loss": 0,
+  "recovered_generation": 3,
+  "milestone_selection": "same generation as first tracking after the post-RF reacquisition output; excludes the RF-absent candidate generation",
+  "lost_events": [
+    {
+      "type": "lost",
+      "type_id": 3,
+      "prn": 6,
+      "channel": 0,
+      "sample_index": 327621888,
+      "sequence": 40085,
+      "available_sample": 327621904,
+      "hardware_cycle": 349973551
+    },
+    {
+      "type": "lost",
+      "type_id": 3,
+      "prn": 6,
+      "channel": 0,
+      "sample_index": 372639001,
+      "sequence": 45529,
+      "available_sample": 372639008,
+      "hardware_cycle": 397820556
+    }
+  ],
+  "reacquisition_events": [
+    {
+      "type": "acquisition",
+      "type_id": 5,
+      "prn": 6,
+      "channel": 0,
+      "sample_index": 373500725,
+      "detected": true,
+      "incomplete": false,
+      "lag_samples": 667,
+      "doppler_word": 0,
+      "peak_power": 5408743448960948,
+      "acquisition_cycles": 399707801,
+      "sequence": 45639,
+      "available_sample": 374414944,
+      "hardware_cycle": 399707814
+    }
+  ],
+  "first_recovered_locked": {
+    "type": "tracking",
+    "type_id": 1,
+    "prn": 6,
+    "channel": 0,
+    "sample_index": 377986224,
+    "locked": true,
+    "nh_valid": false,
+    "frame_valid": false,
+    "time_valid": false,
+    "generation": 3,
+    "schema_version": 3,
+    "prompt_i": 2340624,
+    "prompt_q": -6138,
+    "doppler_word": -48,
+    "carrier_phase": 2464450992,
+    "code_fraction": 282462464,
+    "code_chip": 0,
+    "code_epoch": 275,
+    "sequence": 46076,
+    "available_sample": 377986240,
+    "hardware_cycle": 403503179
+  },
+  "first_recovered_nav": {
+    "type": "navigation",
+    "type_id": 2,
+    "prn": 6,
+    "channel": 0,
+    "sample_index": 500860800,
+    "locked": true,
+    "nh_valid": true,
+    "frame_valid": true,
+    "time_valid": true,
+    "bch_valid": true,
+    "generation": 3,
+    "raw_word": 948998529,
+    "information": 59312408,
+    "word_number": 1,
+    "subframe_id": 1,
+    "sow": 100030,
+    "corrected_bits": 0,
+    "code_epoch": 7782,
+    "code_chip": 0,
+    "code_fraction": 268287888,
+    "sequence": 71936,
+    "available_sample": 589248016,
+    "hardware_cycle": 628020502
+  },
+  "first_recovered_valid_obs": {
+    "type": "common_observation",
+    "type_id": 4,
+    "prn": 6,
+    "channel": 0,
+    "sample_index": 589248000,
+    "locked": true,
+    "nh_valid": true,
+    "frame_valid": true,
+    "time_valid": true,
+    "measurement_valid": true,
+    "active": true,
+    "schema_version": 1,
+    "common_epoch_id": 36,
+    "generation": 3,
+    "code_epoch": 13182,
+    "code_chip": 0,
+    "code_fraction": 268778928,
+    "doppler_word": -2,
+    "sow": 100030,
+    "bch_valid": true,
+    "sequence": 71956,
+    "available_sample": 589248016,
+    "hardware_cycle": 628020524
+  },
+  "timing": {
+    "status": "MEASURED",
+    "detection_seconds": 0.016,
+    "recovery_seconds": 14.000000977517107
+  },
+  "emitted_word_truth_consistency": {
+    "status": "MEASURED",
+    "correct": {
+      "n": 60,
+      "rate": 1.0,
+      "ci95": [
+        0.93982814785791,
+        0.9999999999999998
+      ]
+    },
+    "bch_passed": 60,
+    "demodulation_working_point_observed": true
+  },
+  "emitted_word_scope": "Only emitted records; not the transmitted-word denominator and not a sensitivity working point",
+  "healthy_demodulation_window": {
+    "source_start_s": 24,
+    "source_end_s": 36,
+    "selection": "next complete 6s source frame after first actual NAV availability, to last complete source frame before EOF",
+    "expected_words": 20,
+    "missing_words": 0,
+    "quality": {
+      "status": "MEASURED",
+      "correct": {
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8388748419471806,
+          1
+        ]
+      },
+      "bch_passed": 20,
+      "demodulation_working_point_observed": true
+    },
+    "scope": "short noiseless healthy-channel diagnostic, not a per-CN0 formal demodulation sweep"
+  },
+  "false_detected_candidates_during_RF_absence": [
+    {
+      "type": "acquisition",
+      "type_id": 5,
+      "prn": 6,
+      "channel": 0,
+      "sample_index": 327700375,
+      "detected": true,
+      "incomplete": false,
+      "lag_samples": 8465,
+      "doppler_word": 0,
+      "peak_power": 27881449555968,
+      "acquisition_cycles": 351019692,
+      "sequence": 40146,
+      "available_sample": 328606352,
+      "hardware_cycle": 351019705
+    }
+  ],
+  "evaluation_source_sha256": "66a4c7d089bf7a683127a610a5455bc1d7afab95b3201dedb6dfeff255262239",
+  "formal_P08": "BLOCKED_INPUT; self-generated waveform lacks qualified nominal scenario metadata/geometry and formal receiver input coverage"
+}

@@ -1,0 +1,3 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/g_run_score.py --folder reports/g_stage/fixed_fifo102400
+G_ACTUAL_RTL_DATA_PATH_AUDIT_PASS records=195 samples=1636800 task_results=18 bin_sha256=062adb2052daa94bf3d070e736fa99be1bf4b1965589d4ded6f2cbd4557de011
+EXIT_CODE: 0

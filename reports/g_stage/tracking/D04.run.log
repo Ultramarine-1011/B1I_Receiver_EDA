@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/g_tracking_probe/Vg_tracking_probe' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/g_stage/signals/D04/scenario.if2' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/g_stage/tracking/D04_detail.csv' 98208000 9750
+G_TRACKING_TRACE_PASS samples=98208000 windows=6000 cycles=98210082 wall_seconds=21.325
+EXIT_CODE: 0
+WALL_SECONDS: 21.4287924

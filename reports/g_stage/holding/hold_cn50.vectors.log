@@ -1,0 +1,3 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/g_signal_scenarios.py --kind static --seconds 62 --seed 4400 --cn0 50 --warm-cn0 50 --name hold_cn50
+G_IF_DIAGNOSTIC_CREATED static samples=1014816000 bytes=253704000 sha256=0d058f8b2bc75ea9a0dde4ade572378866e9cd041d65d1fd557e5767657459bf
+EXIT_CODE: 0

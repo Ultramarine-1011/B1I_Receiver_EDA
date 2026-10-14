@@ -29,6 +29,11 @@ class StatisticsTests(unittest.TestCase):
     def test_empty_truth_and_windows(self):
         self.assertIsNone(tracking_quality([],duration_s=1)['code_rms_chip'])
         self.assertEqual(position_statistics([],None,0,0,0)['status'],'BLOCKED_INPUT')
+    def test_measurable_unlocked_state_keeps_errors(self):
+        rows=[{'sample_ref':i*16368,'valid':True,'locked':i!=500,'code_error_chip':.2 if i==500 else 0,'frequency_error_hz':10 if i==500 else 0} for i in range(1000)]
+        result=tracking_quality(rows,duration_s=1)
+        self.assertEqual(result['valid_prompts'],1000);self.assertEqual(result['complete_frequency_windows'],1)
+        self.assertGreater(result['code_rms_chip'],0);self.assertFalse(result['holding_working_point_observed'])
 
 class CausalTests(unittest.TestCase):
     def fixture(self):
@@ -60,6 +65,24 @@ class CausalTests(unittest.TestCase):
         tx,_,_=transmit_sow(obs,[anchor]);self.assertAlmostEqual(tx,604799.002)
 
 class AdapterTests(unittest.TestCase):
+    def test_new_unhealthy_sf1_revokes_cached_ephemeris(self):
+        from nh_d1_vectors import encode,interleave
+        path=ROOT/'reports/e_stage/final/receiver_records.bin'
+        if not path.exists():self.skipTest('historical local BIN absent')
+        words=[]
+        with path.open('rb') as f:
+            while raw:=f.read(32):
+                r=decode(raw)
+                if r['type']=='navigation' and r['prn']==8 and r['subframe_id']==1:
+                    words.append(r)
+                    if len(words)==10:break
+        self.assertEqual(len(words),10)
+        # D1 SF1 health follows its 38-bit header: bit9 of second information.
+        words[1]=dict(words[1]);payload=words[1]['information']|512
+        words[1]['information']=payload;words[1]['raw_word']=interleave(encode(payload>>11),encode(payload&2047))
+        o=OnlineNavigation();key=(8,1);o.eph[key]=(object(),{})
+        for i,r in enumerate(words):o.consume(r,{'sequence':i,'available_sample':100*16368000,'hardware_cycle':i+1})
+        self.assertEqual(o.frames[key][1]['health'],1);self.assertNotIn(key,o.eph)
     def test_historical_nav_fixture_prefix_and_full_frames(self):
         # Availability below is a TEST fixture, not a measured E sidecar.
         # Nothing from this test is published as RTL TTFF/time evidence.

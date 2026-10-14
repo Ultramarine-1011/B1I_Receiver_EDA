@@ -1,0 +1,7 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe student_release/student_release/tools/self_check.py C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\reports\g_stage\real52\receiver_records.bin --expected-samples 851136000 --minimum-acquisitions 4 --require-tracking --require-navigation --require-common-observation
+PASS student self-check
+records=208429 types={'acquisition': 4, 'tracking': 207980, 'common_observation': 204, 'navigation': 240, 'end': 1}
+detected_prns=[8, 11, 13, 21]
+locked_tracking=207059 navigation=240 common=204 measurement_valid=132
+EXIT_CODE: 0
+WALL_SECONDS: 1.2760666

@@ -1,0 +1,16 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/g_stage/acquisition_cn50' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_g_acquisition/Vtb_g_acquisition'
+G_ACQUISITION_CASE_COMPLETE index=0 cycles=45803551 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=1 cycles=45803551 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=2 cycles=45769473 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=3 cycles=45770199 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=4 cycles=45713703 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=5 cycles=45803551 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=6 cycles=46139370 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=7 cycles=46139370 observed_samples=65472
+G_ACQUISITION_TRACE_PASS cases=8 candidates=16 signal_duration_each_s=0.004 not_formal_statistics=1
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_g_acquisition.sv:53: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 4s; walltime 62.902 s; speed 58.431 ms/s
+- Verilator: cpu 62.800 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 63.0017366

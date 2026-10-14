@@ -1,0 +1,23 @@
+{
+  "origin_main": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+  "active_wsl_tasks": [],
+  "initial_expanded_porcelain_entries": 145,
+  "head": "c0d4d91b038d4998797242dabc56b0d35ff1dba1",
+  "initial_tracked_modified_files": 7,
+  "recovered_completed_simulation_logs": 16,
+  "long_simulations_restarted": false,
+  "session_error_is_test_result": false,
+  "timestamp": "2026-10-14T12:10:17.0624340+08:00",
+  "public52_validation_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "preservation": "No reset, clean, checkout, restore, revert, deletion or long rerun; stale STATUS archived; existing source and failures retained.",
+  "active_windows_tasks": []
+}

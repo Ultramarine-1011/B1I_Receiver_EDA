@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "scope": "short loop-only independent B1I IF diagnostic, no reacquisition manager, no D1/OBS/PVT qualification",
+  "kind": "D03",
+  "signal_sha256": "ae30fe23efbebecda11dfaa6121b9f0dff33ee27a3250b79d642854360612cce",
+  "truth_sha256": "9e387715a93b2854cae7df0f380cd3b8bce050f05449aed6d52c3e99c5e7ace2",
+  "trace_sha256": "049b46cd3e39c104d5d58dbd1e4de60981978cd2fabf9eba48e5ad70a095164e",
+  "cn0_db_hz": 40.0,
+  "noise_seed": 4303,
+  "scored_seconds": 5,
+  "quality": {
+    "status": "PARTIAL_WINDOW",
+    "code_rms_chip": 0.032724611172409386,
+    "frequency_1s_mean_rms_hz": null,
+    "complete_frequency_windows": 0,
+    "expected_prompts": 5000,
+    "valid_prompts": 3244,
+    "reacquisitions": 0,
+    "holding_working_point_observed": false
+  },
+  "formal_P06_P07": "PARTIAL/BLOCKED_INPUT; not a 60s hold or >=30s twelve-D1 dynamic scene"
+}

@@ -1,0 +1,290 @@
+{
+  "status": "PARTIAL",
+  "completed_subset_status": "FAIL",
+  "origin": "SELF_GENERATED",
+  "scope": "P01 boundary diagnostics/P03 short independent seeds; not formal 10s or 100+100 statistics",
+  "coverage": {
+    "discrete_lag_samples": [
+      0,
+      1,
+      8191,
+      8192,
+      16366,
+      16367
+    ],
+    "all_possible_lags": 16368,
+    "nh_phases": [
+      0,
+      1,
+      7,
+      19
+    ],
+    "all_nh_phases": 20,
+    "frequency_test_values_hz": [
+      -10000,
+      -9750,
+      -250,
+      250,
+      9750,
+      10000
+    ],
+    "full_phase_frequency_nh_combinations": 26516160
+  },
+  "statistics": {
+    "status": "PARTIAL_SAMPLE_COUNT",
+    "detection": {
+      "n": 6,
+      "rate": 0.16666666666666666,
+      "ci95": [
+        0.030053369748306635,
+        0.5635028221864702
+      ]
+    },
+    "false_alarm": {
+      "n": 2,
+      "rate": 0.0,
+      "ci95": [
+        0,
+        0.6576197724933469
+      ]
+    },
+    "working_point_observed": false,
+    "independent_seeds": true,
+    "complete_10s_windows": false,
+    "trials": [
+      {
+        "id": "present_0",
+        "completed": true,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 35022174,
+        "censored_lower_bound_seconds": null
+      },
+      {
+        "id": "present_1",
+        "completed": false,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 10846846,
+        "censored_lower_bound_seconds": 0.004
+      },
+      {
+        "id": "present_2",
+        "completed": false,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 10846846,
+        "censored_lower_bound_seconds": 0.004
+      },
+      {
+        "id": "present_3",
+        "completed": false,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 10846846,
+        "censored_lower_bound_seconds": 0.004
+      },
+      {
+        "id": "present_4",
+        "completed": false,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 10846846,
+        "censored_lower_bound_seconds": 0.004
+      },
+      {
+        "id": "present_5",
+        "completed": false,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 10846846,
+        "censored_lower_bound_seconds": 0.004
+      },
+      {
+        "id": "absent_0",
+        "completed": false,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 10846846,
+        "censored_lower_bound_seconds": 0.004
+      },
+      {
+        "id": "absent_1",
+        "completed": false,
+        "queue_cycles": 0,
+        "processing_and_verification_cycles": 10846846,
+        "censored_lower_bound_seconds": 0.004
+      }
+    ]
+  },
+  "scores": [
+    {
+      "id": "present_0",
+      "status": "SELF_GENERATED_PASS",
+      "verified_success": true,
+      "detected": true,
+      "lag_error_samples": 0,
+      "frequency_error_hz": 0.0095367431640625,
+      "observed": {
+        "case_index": 0,
+        "prn": 6,
+        "coarse_detected": 1,
+        "fine_run": 1,
+        "detected": 1,
+        "lag_samples": 0,
+        "doppler_word": -2624000,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 10846847,
+        "verified_cycle": 35022175
+      }
+    },
+    {
+      "id": "present_1",
+      "status": "FAIL",
+      "verified_success": false,
+      "detected": false,
+      "lag_error_samples": -1,
+      "frequency_error_hz": -0.0095367431640625,
+      "observed": {
+        "case_index": 1,
+        "prn": 6,
+        "coarse_detected": 0,
+        "fine_run": 0,
+        "detected": 0,
+        "lag_samples": 0,
+        "doppler_word": 2624000,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 0,
+        "verified_cycle": 10846847
+      }
+    },
+    {
+      "id": "present_2",
+      "status": "FAIL",
+      "verified_success": false,
+      "detected": false,
+      "lag_error_samples": -7,
+      "frequency_error_hz": -249.99046325683594,
+      "observed": {
+        "case_index": 2,
+        "prn": 6,
+        "coarse_detected": 0,
+        "fine_run": 0,
+        "detected": 0,
+        "lag_samples": 8184,
+        "doppler_word": -2624000,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 0,
+        "verified_cycle": 10846847
+      }
+    },
+    {
+      "id": "present_3",
+      "status": "FAIL",
+      "verified_success": false,
+      "detected": false,
+      "lag_error_samples": -16,
+      "frequency_error_hz": 249.99046325683594,
+      "observed": {
+        "case_index": 3,
+        "prn": 6,
+        "coarse_detected": 0,
+        "fine_run": 0,
+        "detected": 0,
+        "lag_samples": 8176,
+        "doppler_word": 2624000,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 0,
+        "verified_cycle": 10846847
+      }
+    },
+    {
+      "id": "present_4",
+      "status": "FAIL",
+      "verified_success": false,
+      "detected": false,
+      "lag_error_samples": -2,
+      "frequency_error_hz": 250.0,
+      "observed": {
+        "case_index": 4,
+        "prn": 6,
+        "coarse_detected": 0,
+        "fine_run": 0,
+        "detected": 0,
+        "lag_samples": 16364,
+        "doppler_word": 0,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 0,
+        "verified_cycle": 10846847
+      }
+    },
+    {
+      "id": "present_5",
+      "status": "FAIL",
+      "verified_success": false,
+      "detected": false,
+      "lag_error_samples": 1,
+      "frequency_error_hz": 249.9995231628418,
+      "observed": {
+        "case_index": 5,
+        "prn": 6,
+        "coarse_detected": 0,
+        "fine_run": 0,
+        "detected": 0,
+        "lag_samples": 0,
+        "doppler_word": 131200,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 0,
+        "verified_cycle": 10846847
+      }
+    },
+    {
+      "id": "absent_0",
+      "status": "SELF_GENERATED_PASS",
+      "verified_success": false,
+      "detected": false,
+      "lag_error_samples": null,
+      "frequency_error_hz": null,
+      "observed": {
+        "case_index": 6,
+        "prn": 6,
+        "coarse_detected": 0,
+        "fine_run": 0,
+        "detected": 0,
+        "lag_samples": 5108,
+        "doppler_word": 1049600,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 0,
+        "verified_cycle": 10846847
+      }
+    },
+    {
+      "id": "absent_1",
+      "status": "SELF_GENERATED_PASS",
+      "verified_success": false,
+      "detected": false,
+      "lag_error_samples": null,
+      "frequency_error_hz": null,
+      "observed": {
+        "case_index": 7,
+        "prn": 6,
+        "coarse_detected": 0,
+        "fine_run": 0,
+        "detected": 0,
+        "lag_samples": 14028,
+        "doppler_word": 918400,
+        "accepted_cycle": 1,
+        "coarse_cycle": 10846847,
+        "refine_cycle": 0,
+        "verified_cycle": 10846847
+      }
+    }
+  ],
+  "raw_results_sha256": "b3b3ed930f2edf1c7b0f3a236ec12ed095f96e9498f22f9f09bf76bc16d70aff",
+  "scenario_manifest_sha256": "700468dfc8726cc2cf2e06db9b025b636ee1d6bce4d35ab47813b8f9448cfb82",
+  "evaluation_sources": {
+    "model/g_acquisition_score.py": "c4a85721bd7a9ba0d050b7cf889b49cbf332efb8839a6e065392f0080c5bdbaa",
+    "model/performance_metrics.py": "a6660ada1d334b9e8888109d4213ab3140385b88c806a9be344cd639e2ffc3c9"
+  },
+  "formal_P01_P03": "BLOCKED_INPUT; short marginal coverage/6+2 independent seeds do not meet full coverage or 100+100/10s criteria"
+}

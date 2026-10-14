@@ -40,3 +40,5 @@ __pycache__/
 /reports/g_stage/**/*.if2
 /reports/g_stage/**/*.jsonl
 /reports/g_stage/**/*_detail.csv
+!/reports/g_stage/acquisition/acquisition_results.jsonl
+!/reports/g_stage/acquisition_cn50/acquisition_results.jsonl

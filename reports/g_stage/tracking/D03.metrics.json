@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "scope": "loop-only independent B1I IF diagnostic, no reacquisition manager, no D1/OBS/PVT qualification",
+  "kind": "D03",
+  "signal_sha256": "ae30fe23efbebecda11dfaa6121b9f0dff33ee27a3250b79d642854360612cce",
+  "truth_sha256": "9e387715a93b2854cae7df0f380cd3b8bce050f05449aed6d52c3e99c5e7ace2",
+  "trace_sha256": "049b46cd3e39c104d5d58dbd1e4de60981978cd2fabf9eba48e5ad70a095164e",
+  "cn0_db_hz": 40.0,
+  "noise_seed": 4303,
+  "scored_seconds": 5,
+  "quality": {
+    "status": "MEASURED",
+    "code_rms_chip": 0.03325618976010964,
+    "frequency_1s_mean_rms_hz": 0.07038792169176333,
+    "complete_frequency_windows": 5,
+    "expected_prompts": 5000,
+    "valid_prompts": 5000,
+    "reacquisitions": 0,
+    "holding_working_point_observed": false
+  },
+  "scored_locked_ratio": 0.8306,
+  "loop_usable_ratio_diagnostic": 0.6488,
+  "warm_cn0_db_hz": null,
+  "evaluation_sources": {
+    "model/g_tracking_score.py": "77bd0a8c53f6c878be2e286779725fb2f27c5b1efcbe900cd8a21bdcf538693f",
+    "model/g_signal_scenarios.py": "519059eb27d5545d890ce48d15cb442c0e7c8b2763675ef2ef5d703f2996098c",
+    "model/performance_metrics.py": "a6660ada1d334b9e8888109d4213ab3140385b88c806a9be344cd639e2ffc3c9"
+  },
+  "formal_P06_P07": "BLOCKED_INPUT; module self-generated holding is not a qualified teacher sensitivity sweep or twelve-D1 scene",
+  "complete_60s_holding_window": false
+}

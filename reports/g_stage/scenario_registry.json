@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "B1I_PUBLIC_STATIC_SIX_40DBHZ_V1",
+    "origin": "teacher_public_development",
+    "path": "student_release/student_release/input/scenario.if2",
+    "sha256": "2c47d1533fa54316952496ffb7905742c34a989b0a6276b867fe69566c5027da",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "duration_s": 100,
+    "visible_d1_satellites": 6,
+    "prns": null,
+    "cn0_db_hz": 40,
+    "prequantization_power": null,
+    "noise_seed": null,
+    "pdop": null,
+    "ephemeris_truth": null,
+    "time_truth": null,
+    "code_phase_truth": null,
+    "doppler_truth": null,
+    "nav_word_truth": null,
+    "receiver_ecef_truth": null,
+    "dynamic_truth": null,
+    "metadata": "teacher README + input_contract.json",
+    "formal_suite_qualification": false
+  },
+  {
+    "id": "acquisition",
+    "origin": "self_generated_module_IF_samples",
+    "cases": [
+      {
+        "id": "present_0",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 0,
+        "doppler_hz": -10000,
+        "nh_phase": 0,
+        "seed": 4100,
+        "index": 0,
+        "mem_sha256": "37125e83516c93e76ebd5c485fa5c569c420c28991041cec0bb3f71bd6fc9025",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "present_1",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 1,
+        "doppler_hz": 10000,
+        "nh_phase": 19,
+        "seed": 4101,
+        "index": 1,
+        "mem_sha256": "0dcb924eae5fbbe3de7d13157dcac16231a60da5227280f3f619e525c4018b91",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "FAIL"
+      },
+      {
+        "id": "present_2",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 8191,
+        "doppler_hz": -9750,
+        "nh_phase": 7,
+        "seed": 4102,
+        "index": 2,
+        "mem_sha256": "2f3ef099c7f7f34884fc483c48529b5db20b8db889d6b364368213cb1501c6b7",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "FAIL"
+      },
+      {
+        "id": "present_3",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 8192,
+        "doppler_hz": 9750,
+        "nh_phase": 1,
+        "seed": 4103,
+        "index": 3,
+        "mem_sha256": "4abd8ec2f993eb87193e7b6c19929e874b08a0b3d826b708bca77cdafaeb92ce",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "FAIL"
+      },
+      {
+        "id": "present_4",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 16366,
+        "doppler_hz": -250,
+        "nh_phase": 19,
+        "seed": 4104,
+        "index": 4,
+        "mem_sha256": "6792a1859aa747d140cb49c43c4e823fe364f3defee4b1da0cb50e7465f215a2",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "FAIL"
+      },
+      {
+        "id": "present_5",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 16367,
+        "doppler_hz": 250,
+        "nh_phase": 7,
+        "seed": 4105,
+        "index": 5,
+        "mem_sha256": "d878bb9898e44adfa1bc937561164951c5bd50faf6769ea4fc45c26e3f80a393",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "FAIL"
+      },
+      {
+        "id": "absent_0",
+        "target_present": false,
+        "source_prn": 7,
+        "lag_samples": 40,
+        "doppler_hz": 0,
+        "nh_phase": 0,
+        "seed": 4200,
+        "index": 6,
+        "mem_sha256": "58abe6438f5bab06cc11347e9fb37125358c258c843737098dabb25b34f2b44b",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "absent_1",
+        "target_present": false,
+        "source_prn": 7,
+        "lag_samples": 41,
+        "doppler_hz": 0,
+        "nh_phase": 1,
+        "seed": 4201,
+        "index": 7,
+        "mem_sha256": "b4efa787df236b53c22f3492ff8dc5f068b5d4e2264a37100aff66f7d401546c",
+        "samples": 65472,
+        "cn0_db_hz": 40,
+        "signal_amplitude": 0.049434732389013816,
+        "prequantization_signal_power": 0.0012218963831867058,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      }
+    ],
+    "scenarios_sha256": "700468dfc8726cc2cf2e06db9b025b636ee1d6bce4d35ab47813b8f9448cfb82",
+    "formal_suite_qualification": false,
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "frequency_kind": "carrier_only_offset; no propagation code-rate offset",
+    "code_generator_at_generation": null,
+    "note": "Missing generation-time source hash remains unknown; stored per-case stimulus and truth hashes are audited."
+  },
+  {
+    "id": "acquisition_cn50",
+    "origin": "self_generated_module_IF_samples",
+    "cases": [
+      {
+        "id": "present_0",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 0,
+        "doppler_hz": -10000,
+        "nh_phase": 0,
+        "seed": 4100,
+        "index": 0,
+        "mem_sha256": "e29b84b4b34753db4a46c765f216b5dddf0fc10315c1961592cb7ee7d9f5f188",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "present_1",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 1,
+        "doppler_hz": 10000,
+        "nh_phase": 19,
+        "seed": 4101,
+        "index": 1,
+        "mem_sha256": "934721d9427ca6cc11c4e57e3e58b13a4f1c85bc181d32741d4f9d68b8b6bf25",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "present_2",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 8191,
+        "doppler_hz": -9750,
+        "nh_phase": 7,
+        "seed": 4102,
+        "index": 2,
+        "mem_sha256": "7f2342b9b753feb153b9d2a67b34d844c3050d3cb5e2bff11c714fffee1730ac",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "FAIL"
+      },
+      {
+        "id": "present_3",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 8192,
+        "doppler_hz": 9750,
+        "nh_phase": 1,
+        "seed": 4103,
+        "index": 3,
+        "mem_sha256": "cf348e67a9f20dccab6742a0744a5917ecd1379c178fe928aaae29b3250de2f0",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "present_4",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 16366,
+        "doppler_hz": -250,
+        "nh_phase": 19,
+        "seed": 4104,
+        "index": 4,
+        "mem_sha256": "34be6d883aa4ce10e1a9ee82ce421c6a297dc3d1bcefee2232bdf50d7703689f",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "present_5",
+        "target_present": true,
+        "source_prn": 6,
+        "lag_samples": 16367,
+        "doppler_hz": 250,
+        "nh_phase": 7,
+        "seed": 4105,
+        "index": 5,
+        "mem_sha256": "276294af6e847924d198c8d31d8569ec87e717b4fa013fe4513b8682374f41fd",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "absent_0",
+        "target_present": false,
+        "source_prn": 7,
+        "lag_samples": 40,
+        "doppler_hz": 0,
+        "nh_phase": 0,
+        "seed": 4200,
+        "index": 6,
+        "mem_sha256": "101ab50d0c3f51acae5a031efdb2539d57226382253ccd0ce17f02a1376f76fb",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      },
+      {
+        "id": "absent_1",
+        "target_present": false,
+        "source_prn": 7,
+        "lag_samples": 41,
+        "doppler_hz": 0,
+        "nh_phase": 1,
+        "seed": 4201,
+        "index": 7,
+        "mem_sha256": "4790eb5db3a5554b55a78cd036985c379baae502ba84783890739fda471811b3",
+        "samples": 65472,
+        "cn0_db_hz": 50.0,
+        "signal_amplitude": 0.1563263498701806,
+        "prequantization_signal_power": 0.012218963831867057,
+        "noise_variance": 1,
+        "noise_psd_w_per_hz": 1.2218963831867057e-07,
+        "fs_hz": 16368000,
+        "if_hz": 4092000,
+        "observation_seconds": 0.004,
+        "candidates": [
+          6,
+          7
+        ],
+        "target_prn": 6,
+        "independent_lag_tolerance_samples": 1,
+        "independent_frequency_tolerance_hz": 100,
+        "frequency_kind": "carrier_only_offset",
+        "origin": "self_generated_short_B1I_modulation_no_geometry_or_full_ephemeris",
+        "observed_status": "SELF_GENERATED_PASS"
+      }
+    ],
+    "scenarios_sha256": "af4739116bcb46b7afdaf5fad293b9d769d851325cd3f01a7d531a8ddd2abb80",
+    "formal_suite_qualification": false,
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "frequency_kind": "carrier_only_offset; no propagation code-rate offset",
+    "code_generator_at_generation": "34c7af0a016f224fac4ef8bac65bafa1dd2b0c7ebb98bf661fa97274a0d7bad0",
+    "note": "Missing generation-time source hash remains unknown; stored per-case stimulus and truth hashes are audited."
+  },
+  {
+    "kind": "D01",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 5.0,
+    "samples": 81840000,
+    "generator_sha256": "f3cc771a218416d737df922af9ca61ee37dd00771269e4c93f2598188afb7e11",
+    "if_path": "work/g_stage/signals/D01/scenario.if2",
+    "if_sha256": "93fc82645ab84b534855dd32f69117f7a8bc7a4d15465cbe7acc98c358c0f28d",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6
+    ],
+    "cn0_db_hz": 40.0,
+    "amplitude": 0.049434732389013816,
+    "prequantization_signal_power": 0.0012218963831867058,
+    "noise_variance": 1,
+    "noise_seed": 4301,
+    "rf_hz": 1561098000,
+    "dynamic_start_s": 2,
+    "base_doppler_hz": 0.0,
+    "code_rate_includes_base_doppler": true,
+    "trajectory_segments": [
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        -2
+      ],
+      [
+        1.5,
+        2
+      ]
+    ],
+    "interruption_start_s": null,
+    "interruption_end_s": null,
+    "limits": "Valid PRN/NH/BCH modulation; arbitrary payloads are not qualified broadcast ephemerides. No orbital/geometry/PDOP/ECEF truth, not a 12D1 formal P07/P08 or PVT scene.",
+    "id": "D01.truth",
+    "truth_manifest": "reports/g_stage/tracking/D01.truth.json",
+    "truth_sha256": "d0f3a265e3854647c0ee606d6f6a1ffd1d34c8147192b660487c05362d90edb7",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "kind": "D02",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 8.0,
+    "samples": 130944000,
+    "generator_sha256": "f3cc771a218416d737df922af9ca61ee37dd00771269e4c93f2598188afb7e11",
+    "if_path": "work/g_stage/signals/D02/scenario.if2",
+    "if_sha256": "1fda8e09da01bab1212898b880bc703b50f230981f8224fda629d58bed42d2bc",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6
+    ],
+    "cn0_db_hz": 40.0,
+    "amplitude": 0.049434732389013816,
+    "prequantization_signal_power": 0.0012218963831867058,
+    "noise_variance": 1,
+    "noise_seed": 4302,
+    "rf_hz": 1561098000,
+    "dynamic_start_s": 2,
+    "base_doppler_hz": 0.0,
+    "code_rate_includes_base_doppler": true,
+    "trajectory_segments": [
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        5
+      ]
+    ],
+    "interruption_start_s": null,
+    "interruption_end_s": null,
+    "limits": "Valid PRN/NH/BCH modulation; arbitrary payloads are not qualified broadcast ephemerides. No orbital/geometry/PDOP/ECEF truth, not a 12D1 formal P07/P08 or PVT scene.",
+    "id": "D02.truth",
+    "truth_manifest": "reports/g_stage/tracking/D02.truth.json",
+    "truth_sha256": "624201aee72e5dbd498da0f1a110c2a1b1e4416d0f4d06a1d74b7fb39afdfa84",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "kind": "D03",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 7.0,
+    "samples": 114576000,
+    "generator_sha256": "f3cc771a218416d737df922af9ca61ee37dd00771269e4c93f2598188afb7e11",
+    "if_path": "work/g_stage/signals/D03/scenario.if2",
+    "if_sha256": "ae30fe23efbebecda11dfaa6121b9f0dff33ee27a3250b79d642854360612cce",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6
+    ],
+    "cn0_db_hz": 40.0,
+    "amplitude": 0.049434732389013816,
+    "prequantization_signal_power": 0.0012218963831867058,
+    "noise_variance": 1,
+    "noise_seed": 4303,
+    "rf_hz": 1561098000,
+    "dynamic_start_s": 2,
+    "base_doppler_hz": 0.0,
+    "code_rate_includes_base_doppler": true,
+    "trajectory_segments": [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        -5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "interruption_start_s": null,
+    "interruption_end_s": null,
+    "limits": "Valid PRN/NH/BCH modulation; arbitrary payloads are not qualified broadcast ephemerides. No orbital/geometry/PDOP/ECEF truth, not a 12D1 formal P07/P08 or PVT scene.",
+    "id": "D03.truth",
+    "truth_manifest": "reports/g_stage/tracking/D03.truth.json",
+    "truth_sha256": "9e387715a93b2854cae7df0f380cd3b8bce050f05449aed6d52c3e99c5e7ace2",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "kind": "D04",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 6.0,
+    "samples": 98208000,
+    "generator_sha256": "f3cc771a218416d737df922af9ca61ee37dd00771269e4c93f2598188afb7e11",
+    "if_path": "work/g_stage/signals/D04/scenario.if2",
+    "if_sha256": "ed41a3ef5d0e933f710c67d60a40dcb9ccaf5f4ff75feb370a00fd370fcd5229",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6
+    ],
+    "cn0_db_hz": 40.0,
+    "amplitude": 0.049434732389013816,
+    "prequantization_signal_power": 0.0012218963831867058,
+    "noise_variance": 1,
+    "noise_seed": 4304,
+    "rf_hz": 1561098000,
+    "dynamic_start_s": 2,
+    "base_doppler_hz": 9990.0,
+    "code_rate_includes_base_doppler": true,
+    "trajectory_segments": [
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        -2
+      ]
+    ],
+    "interruption_start_s": null,
+    "interruption_end_s": null,
+    "limits": "Valid PRN/NH/BCH modulation; arbitrary payloads are not qualified broadcast ephemerides. No orbital/geometry/PDOP/ECEF truth, not a 12D1 formal P07/P08 or PVT scene.",
+    "id": "D04.truth",
+    "truth_manifest": "reports/g_stage/tracking/D04.truth.json",
+    "truth_sha256": "e79712adccce3c0d32cbd646df5a17e6913bb2db463716aab242b5729e102ae4",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "kind": "static",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 4.0,
+    "samples": 65472000,
+    "generator_sha256": "f3cc771a218416d737df922af9ca61ee37dd00771269e4c93f2598188afb7e11",
+    "if_path": "work/g_stage/signals/static/scenario.if2",
+    "if_sha256": "6e59c0a0801149d3804530b3d7f6a201f0d73b02560bd218947c7022f21121cd",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6
+    ],
+    "cn0_db_hz": 40.0,
+    "amplitude": 0.049434732389013816,
+    "prequantization_signal_power": 0.0012218963831867058,
+    "noise_variance": 1,
+    "noise_seed": 4300,
+    "rf_hz": 1561098000,
+    "dynamic_start_s": 2,
+    "base_doppler_hz": 0.0,
+    "code_rate_includes_base_doppler": true,
+    "trajectory_segments": [],
+    "interruption_start_s": null,
+    "interruption_end_s": null,
+    "limits": "Valid PRN/NH/BCH modulation; arbitrary payloads are not qualified broadcast ephemerides. No orbital/geometry/PDOP/ECEF truth, not a 12D1 formal P07/P08 or PVT scene.",
+    "id": "static.truth",
+    "truth_manifest": "reports/g_stage/tracking/static.truth.json",
+    "truth_sha256": "74b3be0f9e589ffbc6c2c468225deca21079e49d4eb598709e1b149fdbc3f5b2",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "kind": "static",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 62.0,
+    "samples": 1014816000,
+    "generator_sha256": "519059eb27d5545d890ce48d15cb442c0e7c8b2763675ef2ef5d703f2996098c",
+    "if_path": "work/g_stage/signals/hold_cn40/scenario.if2",
+    "if_sha256": "ea19951523a415f78e252d63c8c7c30a64afed4debd2d2e8039a23effaf2cfe1",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6
+    ],
+    "cn0_db_hz": 40.0,
+    "warm_cn0_db_hz": 50.0,
+    "amplitude": 0.049434732389013816,
+    "prequantization_signal_power": 0.0012218963831867058,
+    "noise_variance": 1,
+    "noise_seed": 4390,
+    "rf_hz": 1561098000,
+    "dynamic_start_s": 2,
+    "base_doppler_hz": 0.0,
+    "code_rate_includes_base_doppler": true,
+    "trajectory_segments": [],
+    "interruption_start_s": null,
+    "interruption_end_s": null,
+    "limits": "Valid PRN/NH/BCH modulation; arbitrary payloads are not qualified broadcast ephemerides. No orbital/geometry/PDOP/ECEF truth, not a 12D1 formal P07/P08 or PVT scene.",
+    "id": "hold_cn40.truth",
+    "truth_manifest": "reports/g_stage/holding/hold_cn40.truth.json",
+    "truth_sha256": "57472727a844742d0dc655a05bba6071f51d4e824692283b04f056608bdc5d24",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "kind": "static",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 62.0,
+    "samples": 1014816000,
+    "generator_sha256": "519059eb27d5545d890ce48d15cb442c0e7c8b2763675ef2ef5d703f2996098c",
+    "if_path": "work/g_stage/signals/hold_cn50/scenario.if2",
+    "if_sha256": "0d058f8b2bc75ea9a0dde4ade572378866e9cd041d65d1fd557e5767657459bf",
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6
+    ],
+    "cn0_db_hz": 50.0,
+    "warm_cn0_db_hz": 50.0,
+    "amplitude": 0.1563263498701806,
+    "prequantization_signal_power": 0.012218963831867057,
+    "noise_variance": 1,
+    "noise_seed": 4400,
+    "rf_hz": 1561098000,
+    "dynamic_start_s": 2,
+    "base_doppler_hz": 0.0,
+    "code_rate_includes_base_doppler": true,
+    "trajectory_segments": [],
+    "interruption_start_s": null,
+    "interruption_end_s": null,
+    "limits": "Valid PRN/NH/BCH modulation; arbitrary payloads are not qualified broadcast ephemerides. No orbital/geometry/PDOP/ECEF truth, not a 12D1 formal P07/P08 or PVT scene.",
+    "id": "hold_cn50.truth",
+    "truth_manifest": "reports/g_stage/holding/hold_cn50.truth.json",
+    "truth_sha256": "b0f8948e0e07479105da25ad353d02bbcc78e61599c83de74cb89ea3b6c37582",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "kind": "recovery",
+    "origin": "self_generated_B1I_modulation_module_diagnostic",
+    "duration_s": 40,
+    "samples": 654720000,
+    "fs_hz": 16368000,
+    "if_hz": 4092000,
+    "prns": [
+      6,
+      7
+    ],
+    "if_path": "work/g_stage/signals/recovery/scenario.if2",
+    "if_sha256": "6b169f9e319bf8c011660dc98a7988948b709465ecfe9a65cd4642c217018f2b",
+    "generator_sha256": "08615d0b6c77da8a6a6cfba5f90fa0af17d96373efe92f7119f3e1c03f1aa1ae",
+    "amplitude_each_star": 2,
+    "cn0_db_hz": null,
+    "noise_variance": 0,
+    "noise_seed": null,
+    "interruption_start_s": 20,
+    "interruption_end_s": 22,
+    "navigation_start_sow": 100000,
+    "independent_code_truth": "code phase n/8 modulo2046, per-star carrier doppler0; captured relative lag=(-capture_ref)%16368",
+    "limits": "Noiseless two-star primary/NH/BCH modulation. Arbitrary navigation payloads are not qualified ephemerides; no geometry/PDOP/ECEF truth. Not an official nominal P08 scene.",
+    "id": "truth",
+    "truth_manifest": "reports/g_stage/recovery/truth.json",
+    "truth_sha256": "048d4effb24d944c8275defd7b82761fae78c784ff414e37dad7ab5dd8d30c7a",
+    "ephemeris_truth": null,
+    "receiver_ecef_truth": null,
+    "pdop": null,
+    "nav_word_truth": "independent transmitted payload arrays in truth manifest; not qualified ephemerides",
+    "time_truth": "local sample/frame start only; no qualified GNSS propagation time",
+    "code_phase_truth": "continuous generator trajectory, offline scoring only",
+    "doppler_truth": "continuous generator trajectory, offline scoring only",
+    "formal_suite_qualification": false
+  },
+  {
+    "id": "E100",
+    "origin": "historical_actual_RTL",
+    "evidence": "reports/e_stage/final",
+    "current_G_rerun": false,
+    "sha256": "c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501"
+  },
+  {
+    "id": "F20",
+    "origin": "historical_actual_RTL",
+    "evidence": "reports/f_stage/real20",
+    "current_G_rerun": false
+  },
+  {
+    "id": "F12NAV",
+    "origin": "synthetic_Prompt_module_stimulus",
+    "evidence": "reports/f_stage/f3_current/nav",
+    "formal_suite_qualification": false
+  },
+  {
+    "id": "G_bank_1_4_12",
+    "origin": "teacher_public_IF_with_artificial_digital_channel_initialization",
+    "evidence": "reports/g_stage/service/summary.json",
+    "formal_suite_qualification": false
+  }
+]

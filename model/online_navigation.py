@@ -29,12 +29,17 @@ class OnlineNavigation:
     def milestone(self,key,name,event):
         if name not in self.first[key]:self.first[key][name]=dict(event)
 
+    def invalidate(self,key):
+        self.eph.pop(key,None)
+        for bucket in self.epochs.values():
+            if key[0] in bucket and bucket[key[0]][0]==key:bucket.pop(key[0])
+
     def consume(self,r,event):
         seq=event['sequence'];avail=event['available_sample'];cycle=event['hardware_cycle']
         if seq!=self.last_sequence+1 or avail<self.last_sample or cycle<=self.last_cycle:
             raise ValueError('sequence/availability/cycle order violated')
         # Tracking/NAV references name a projected local code boundary, which
-        # can be one sample ahead of accepted_sample. They are not permission
+        # can project ahead of accepted_sample. They are not permission
         # to read future input; causality is determined by the handshake.
         if r['type']=='common_observation' and avail<r['sample_index']:
             raise ValueError('OBS source epoch is in the future')
@@ -47,7 +52,7 @@ class OnlineNavigation:
                 if r.get(flag):self.milestone(key,flag,base)
         if kind=='lost':
             self.retired.add(key);self.partial.pop(key,None);self.frames.pop(key,None)
-            self.eph.pop(key,None);self.anchors.pop(key,None)
+            self.invalidate(key);self.anchors.pop(key,None)
             return
         if kind=='navigation':self.navigation(r,base,key)
         elif kind=='common_observation':self.observation(r,base,key)
@@ -80,6 +85,8 @@ class OnlineNavigation:
             self.failures.append({'sequence':base['sequence'],'reason':'decoded frame metadata mismatch'});return
         sf=frame['subframe_id']
         if sf not in (1,2,3):return
+        if sf==1 and frame['health']!=0:
+            self.invalidate(key)
         # Complete SF1/SF2/SF3 from the same 30s D1 frame; do not combine old
         # SF3 with a new SF1/SF2, even when issue numbers happen to match.
         frame_start=(frame['sow']-6*(sf-1))%604800
@@ -170,6 +177,7 @@ def replay(bin_path,sidecar,output):
            'student_release/student_release/tools/decode_records.py','student_release/student_release/tools/route_a_position.py','student_release/student_release/tools/prompt_d1.py')},
        'time_boundary':'available_sample is the final required RTL handshake. Replay CPU service is separately measured; no scheduled real-time PVT engine or clock target is established.',
        'formal_P04_P05':'BLOCKED_INPUT: one public development scene, <180s, 4 tracked satellites, PDOP qualification and independent trials absent'}
+    (output/'key_positions.json').write_text(json.dumps(online.positions[:3],indent=2,allow_nan=False)+'\n',encoding='utf-8')
     for name,rows in (('positions.jsonl',online.positions),('evaluation_ledger.jsonl',sorted(online.ledger,key=lambda e:e['sequence']))):
         (output/name).write_text(''.join(json.dumps(row,allow_nan=False)+'\n' for row in rows),encoding='utf-8')
     (output/'summary.json').write_text(json.dumps(summary,indent=2,allow_nan=False)+'\n',encoding='utf-8')

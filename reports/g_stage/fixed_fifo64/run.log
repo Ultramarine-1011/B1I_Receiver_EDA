@@ -1,0 +1,5 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/g_receiver_c4_n1/Vg_receiver_probe' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/g_stage/signals/recovery/scenario.if2' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/g_stage/fixed_fifo64/receiver_records.bin' 409200 100000000 64
+G_FIXED_SOURCE_FIFO_OVERFLOW cycle=406462 produced_words=4158 accepted_words=4093 high_water_words=65 capacity_words=64 clock_hz=100000000
+FAST_RTL_FAIL: fixed-rate source FIFO overflow
+EXIT_CODE: 1
+WALL_SECONDS: 3.5875643

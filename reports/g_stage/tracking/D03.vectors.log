@@ -1,0 +1,3 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe model/g_signal_scenarios.py --kind D03 --seconds 7 --seed 4303 --cn0 40
+G_IF_DIAGNOSTIC_CREATED D03 samples=114576000 bytes=28644000 sha256=ae30fe23efbebecda11dfaa6121b9f0dff33ee27a3250b79d642854360612cce
+EXIT_CODE: 0

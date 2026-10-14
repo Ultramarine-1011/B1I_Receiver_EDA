@@ -1,0 +1,14 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/g_stage/acquisition' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_g_acquisition/Vtb_g_acquisition'
+%Warning: rom/fft_cos_q30.mem:0: $readmem file not found
+%Warning: rom/fft_sin_q30.mem:0: $readmem file not found
+%Warning: rom/fft_cos_q30.mem:0: $readmem file not found
+%Warning: rom/fft_sin_q30.mem:0: $readmem file not found
+G_ACQUISITION_CASE_COMPLETE index=0 cycles=21628223 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=1 cycles=21628223 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=2 cycles=21628223 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=3 cycles=21628223 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=4 cycles=21628223 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=5 cycles=21628223 observed_samples=65472
+G_ACQUISITION_CASE_COMPLETE index=6 cycles=21628223 observed_samples=65472
+EXIT_CODE: 2
+WALL_SECONDS: 26.8429529

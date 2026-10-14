@@ -1,0 +1,4 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/g_bank_service-GCHANNELS_12/Vg_bank_service' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/input/scenario.if2' 1636800 '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/g_stage/service/c12/metrics.json'
+G_BANK_SERVICE_PASS samples=1636800 cycles=1744725 records=1189 max_block=2061 wall=5.158
+EXIT_CODE: 0
+WALL_SECONDS: 5.2776212

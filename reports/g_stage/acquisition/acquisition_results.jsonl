@@ -1,0 +1,16 @@
+{"case_index":0,"prn":6,"coarse_detected":1,"fine_run":1,"detected":1,"lag_samples":0,"doppler_word":-2624000,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":10846847,"verified_cycle":35022175}
+{"case_index":0,"prn":7,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":15452,"doppler_word":-524800,"accepted_cycle":1,"coarse_cycle":45803550,"refine_cycle":0,"verified_cycle":45803550}
+{"case_index":1,"prn":6,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":0,"doppler_word":2624000,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":0,"verified_cycle":10846847}
+{"case_index":1,"prn":7,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":4404,"doppler_word":-2361600,"accepted_cycle":1,"coarse_cycle":21628222,"refine_cycle":0,"verified_cycle":21628222}
+{"case_index":2,"prn":6,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":8184,"doppler_word":-2624000,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":0,"verified_cycle":10846847}
+{"case_index":2,"prn":7,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":10860,"doppler_word":-918400,"accepted_cycle":1,"coarse_cycle":21628222,"refine_cycle":0,"verified_cycle":21628222}
+{"case_index":3,"prn":6,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":8176,"doppler_word":2624000,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":0,"verified_cycle":10846847}
+{"case_index":3,"prn":7,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":5424,"doppler_word":1836800,"accepted_cycle":1,"coarse_cycle":21628222,"refine_cycle":0,"verified_cycle":21628222}
+{"case_index":4,"prn":6,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":16364,"doppler_word":0,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":0,"verified_cycle":10846847}
+{"case_index":4,"prn":7,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":12760,"doppler_word":1705600,"accepted_cycle":1,"coarse_cycle":21628222,"refine_cycle":0,"verified_cycle":21628222}
+{"case_index":5,"prn":6,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":0,"doppler_word":131200,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":0,"verified_cycle":10846847}
+{"case_index":5,"prn":7,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":15560,"doppler_word":2099200,"accepted_cycle":1,"coarse_cycle":21628222,"refine_cycle":0,"verified_cycle":21628222}
+{"case_index":6,"prn":6,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":5108,"doppler_word":1049600,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":0,"verified_cycle":10846847}
+{"case_index":6,"prn":7,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":40,"doppler_word":0,"accepted_cycle":1,"coarse_cycle":21628222,"refine_cycle":0,"verified_cycle":21628222}
+{"case_index":7,"prn":6,"coarse_detected":0,"fine_run":0,"detected":0,"lag_samples":14028,"doppler_word":918400,"accepted_cycle":1,"coarse_cycle":10846847,"refine_cycle":0,"verified_cycle":10846847}
+{"case_index":7,"prn":7,"coarse_detected":1,"fine_run":1,"detected":1,"lag_samples":42,"doppler_word":0,"accepted_cycle":1,"coarse_cycle":21628222,"refine_cycle":21628222,"verified_cycle":46139182}

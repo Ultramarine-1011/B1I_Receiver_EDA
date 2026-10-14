@@ -1,0 +1,84 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/g_receiver_c4_n0/Vg_receiver_probe' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release/input/scenario.if2' '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/g_stage/real52/receiver_records.bin' 212784000 0 0
+FAST_RTL_ACQUISITION prn=8 channel=0 detected=1 cycles=56354739
+FAST_RTL_ACQUISITION prn=11 channel=1 detected=1 cycles=113119989
+FAST_RTL_ACQUISITION prn=13 channel=2 detected=1 cycles=159124731
+FAST_RTL_ACQUISITION prn=21 channel=3 detected=1 cycles=269611902
+FAST_RTL_INPUT_PROGRESS seconds=1 cycles=286946557 wall=294.581 records=3984
+FAST_RTL_INPUT_PROGRESS seconds=2 cycles=304349562 wall=317.977 records=7988
+FAST_RTL_INPUT_PROGRESS seconds=3 cycles=321752567 wall=341.522 records=11992
+FAST_RTL_INPUT_PROGRESS seconds=4 cycles=339155572 wall=365.035 records=15996
+FAST_RTL_INPUT_PROGRESS seconds=5 cycles=356558577 wall=388.566 records=20000
+FAST_RTL_INPUT_PROGRESS seconds=6 cycles=373961582 wall=412.085 records=24004
+FAST_RTL_INPUT_PROGRESS seconds=7 cycles=391364587 wall=435.485 records=28008
+FAST_RTL_INPUT_PROGRESS seconds=8 cycles=408767592 wall=458.927 records=32012
+FAST_RTL_INPUT_PROGRESS seconds=9 cycles=426170597 wall=482.459 records=36016
+FAST_RTL_INPUT_PROGRESS seconds=10 cycles=443573602 wall=505.968 records=40020
+FAST_RTL_INPUT_PROGRESS seconds=11 cycles=460976607 wall=529.608 records=44024
+FAST_RTL_INPUT_PROGRESS seconds=12 cycles=478379612 wall=553.359 records=48028
+FAST_RTL_INPUT_PROGRESS seconds=13 cycles=495782617 wall=576.973 records=52032
+FAST_RTL_INPUT_PROGRESS seconds=14 cycles=513185622 wall=600.552 records=56036
+FAST_RTL_INPUT_PROGRESS seconds=15 cycles=530588627 wall=624.037 records=60040
+FAST_RTL_INPUT_PROGRESS seconds=16 cycles=547991632 wall=647.467 records=64044
+FAST_RTL_INPUT_PROGRESS seconds=17 cycles=565394637 wall=670.840 records=68048
+FAST_RTL_INPUT_PROGRESS seconds=18 cycles=582797642 wall=694.238 records=72052
+FAST_RTL_NAV prn=11 word1_sample=207564998
+FAST_RTL_NAV prn=21 word1_sample=207601653
+FAST_RTL_NAV prn=8 word1_sample=208229854
+FAST_RTL_NAV prn=13 word1_sample=208235167
+FAST_RTL_INPUT_PROGRESS seconds=19 cycles=600200691 wall=717.633 records=76096
+FAST_RTL_INPUT_PROGRESS seconds=20 cycles=617603696 wall=741.014 records=80100
+FAST_RTL_INPUT_PROGRESS seconds=21 cycles=635006701 wall=764.402 records=84104
+FAST_RTL_INPUT_PROGRESS seconds=22 cycles=652409706 wall=787.703 records=88108
+FAST_RTL_INPUT_PROGRESS seconds=23 cycles=669812711 wall=811.111 records=92112
+FAST_RTL_INPUT_PROGRESS seconds=24 cycles=687215716 wall=834.438 records=96116
+FAST_RTL_NAV prn=11 word1_sample=305773172
+FAST_RTL_NAV prn=21 word1_sample=305809752
+FAST_RTL_NAV prn=8 word1_sample=306437817
+FAST_RTL_NAV prn=13 word1_sample=306443123
+FAST_RTL_INPUT_PROGRESS seconds=25 cycles=704618765 wall=857.801 records=100160
+FAST_RTL_INPUT_PROGRESS seconds=26 cycles=722021770 wall=881.402 records=104164
+FAST_RTL_INPUT_PROGRESS seconds=27 cycles=739424775 wall=904.879 records=108168
+FAST_RTL_INPUT_PROGRESS seconds=28 cycles=756827780 wall=928.329 records=112172
+FAST_RTL_INPUT_PROGRESS seconds=29 cycles=774230785 wall=951.853 records=116176
+FAST_RTL_INPUT_PROGRESS seconds=30 cycles=791633790 wall=975.382 records=120180
+FAST_RTL_NAV prn=11 word1_sample=403981345
+FAST_RTL_NAV prn=21 word1_sample=404017851
+FAST_RTL_NAV prn=8 word1_sample=404645780
+FAST_RTL_NAV prn=13 word1_sample=404651080
+FAST_RTL_INPUT_PROGRESS seconds=31 cycles=809036839 wall=998.921 records=124224
+FAST_RTL_INPUT_PROGRESS seconds=32 cycles=826439844 wall=1022.432 records=128228
+FAST_RTL_INPUT_PROGRESS seconds=33 cycles=843842849 wall=1045.988 records=132232
+FAST_RTL_INPUT_PROGRESS seconds=34 cycles=861245854 wall=1069.555 records=136236
+FAST_RTL_INPUT_PROGRESS seconds=35 cycles=878648859 wall=1093.108 records=140240
+FAST_RTL_INPUT_PROGRESS seconds=36 cycles=896051864 wall=1116.545 records=144244
+FAST_RTL_NAV prn=11 word1_sample=502189519
+FAST_RTL_NAV prn=21 word1_sample=502225951
+FAST_RTL_NAV prn=8 word1_sample=502853744
+FAST_RTL_NAV prn=13 word1_sample=502859037
+FAST_RTL_INPUT_PROGRESS seconds=37 cycles=913454913 wall=1140.099 records=148288
+FAST_RTL_INPUT_PROGRESS seconds=38 cycles=930857918 wall=1163.622 records=152292
+FAST_RTL_INPUT_PROGRESS seconds=39 cycles=948260923 wall=1187.254 records=156296
+FAST_RTL_INPUT_PROGRESS seconds=40 cycles=965663928 wall=1210.765 records=160300
+FAST_RTL_INPUT_PROGRESS seconds=41 cycles=983066933 wall=1234.152 records=164304
+FAST_RTL_INPUT_PROGRESS seconds=42 cycles=1000469938 wall=1257.539 records=168308
+FAST_RTL_NAV prn=11 word1_sample=600397692
+FAST_RTL_NAV prn=21 word1_sample=600434050
+FAST_RTL_NAV prn=8 word1_sample=601061707
+FAST_RTL_NAV prn=13 word1_sample=601066993
+FAST_RTL_INPUT_PROGRESS seconds=43 cycles=1017872987 wall=1280.951 records=172352
+FAST_RTL_INPUT_PROGRESS seconds=44 cycles=1035275992 wall=1304.348 records=176356
+FAST_RTL_INPUT_PROGRESS seconds=45 cycles=1052678997 wall=1327.768 records=180360
+FAST_RTL_INPUT_PROGRESS seconds=46 cycles=1070082002 wall=1351.190 records=184364
+FAST_RTL_INPUT_PROGRESS seconds=47 cycles=1087485007 wall=1374.563 records=188368
+FAST_RTL_INPUT_PROGRESS seconds=48 cycles=1104888012 wall=1397.968 records=192372
+FAST_RTL_NAV prn=11 word1_sample=698605866
+FAST_RTL_NAV prn=21 word1_sample=698642149
+FAST_RTL_NAV prn=8 word1_sample=699269671
+FAST_RTL_NAV prn=13 word1_sample=699274950
+FAST_RTL_INPUT_PROGRESS seconds=49 cycles=1122291061 wall=1421.429 records=196416
+FAST_RTL_INPUT_PROGRESS seconds=50 cycles=1139694066 wall=1444.920 records=200420
+FAST_RTL_INPUT_PROGRESS seconds=51 cycles=1157097071 wall=1468.500 records=204424
+FAST_RTL_INPUT_PROGRESS seconds=52 cycles=1174500076 wall=1492.003 records=208428
+FAST_RTL_PASS samples=851136000 records=208429 cycles=1174500118 wall_seconds=1492.005
+EXIT_CODE: 0
+WALL_SECONDS: 1494.908197

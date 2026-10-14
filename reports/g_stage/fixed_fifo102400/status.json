@@ -1,0 +1,5 @@
+{
+  "status": "SELF_GENERATED_PASS",
+  "scope": "bounded 0.1s IF, paced source at assumed100MHz, FIFO102400 words",
+  "limitation": "Finite input fits buffer. Completion does not prove sustained real-time or physical timing closure."
+}

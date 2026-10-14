@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "scope": "actual fixed-rate 100MHz-assumed source with finite 64-word FIFO",
+  "expected_overflow_observed": true,
+  "limitation": "This is a measured capacity failure for the specified model, not an official clock or a general real-time qualification"
+}

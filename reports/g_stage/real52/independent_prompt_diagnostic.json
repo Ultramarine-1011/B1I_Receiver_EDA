@@ -1,0 +1,58 @@
+[
+  {
+    "prn": 8,
+    "generation": 1,
+    "status": "complete",
+    "prompt_count": 51995,
+    "bit_count": 2598,
+    "coarse_doppler_hz": 499.9995231628418,
+    "refined_doppler_hz": 580.619016335249,
+    "nh_phase": 3,
+    "nh_coherence": 0.9803200032601928,
+    "carrier_axis_rad": 8.14339615427563e-16,
+    "bit_residual_hz": 0.0,
+    "subframe_count": 8
+  },
+  {
+    "prn": 11,
+    "generation": 1,
+    "status": "complete",
+    "prompt_count": 51995,
+    "bit_count": 2598,
+    "coarse_doppler_hz": -2849.9972820281982,
+    "refined_doppler_hz": -2757.026013987519,
+    "nh_phase": 3,
+    "nh_coherence": 0.9785498235154615,
+    "carrier_axis_rad": 6.838853787439676e-14,
+    "bit_residual_hz": 0.0,
+    "subframe_count": 8
+  },
+  {
+    "prn": 13,
+    "generation": 1,
+    "status": "complete",
+    "prompt_count": 51995,
+    "bit_count": 2598,
+    "coarse_doppler_hz": 699.9993324279785,
+    "refined_doppler_hz": 689.5919003661758,
+    "nh_phase": 2,
+    "nh_coherence": 0.9794117300923707,
+    "carrier_axis_rad": -5.132148520983138e-16,
+    "bit_residual_hz": 0.0,
+    "subframe_count": 8
+  },
+  {
+    "prn": 21,
+    "generation": 1,
+    "status": "complete",
+    "prompt_count": 51995,
+    "bit_count": 2598,
+    "coarse_doppler_hz": -1549.9985218048096,
+    "refined_doppler_hz": -1577.8916027148555,
+    "nh_phase": 1,
+    "nh_coherence": 0.9798704741043127,
+    "carrier_axis_rad": -4.6488295214477444e-14,
+    "bit_residual_hz": 0.0,
+    "subframe_count": 8
+  }
+]

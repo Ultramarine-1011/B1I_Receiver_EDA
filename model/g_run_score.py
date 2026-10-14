@@ -57,9 +57,13 @@ def main():
       output_ready_duty=stats['output_ready_cycles']/sum(stats['state_cycles']),
       records_per_signal_second=seq*FS/stats['samples'],
       limits='Measured file-driven ready handshake service. Hypothetical backlog uses its observed service schedule; paced finite-FIFO tests are separate. No physical timing closure or 12D1 proof.')
+    detailed=p/'acquisition_tasks.jsonl'
+    detailed.write_text(''.join(json.dumps(t)+'\n' for t in trials),encoding='utf-8')
+    kept=trials if len(trials)<=128 else [t for i,t in enumerate(trials) if i<16 or i>=len(trials)-16 or t['verified_result_cycle'] is not None]
     report={'status':'PARTIAL','head':manifest['head'],'input':manifest['input'],'config':{'channels':manifest['channels'],'narrow':manifest['narrow']},
        'bin_sha256':sha(bin),'sidecar_sha256':sha(Path(str(bin)+'.availability.jsonl')),'record_types':dict(counts),
-       'time_domains':time_domains(stats['samples'],stats['cycles'],stats['wall_seconds']), 'service':service,'acquisition_tasks':trials,
+       'time_domains':time_domains(stats['samples'],stats['cycles'],stats['wall_seconds'],stats['fixed_clock_hz'] or None), 'service':service,
+       'acquisition_task_count':len(trials),'acquisition_tasks':kept,'complete_task_trace_sha256':sha(detailed),
        'scoring_sources':{name:sha(ROOT/name) for name in ('model/g_run_score.py','model/performance_metrics.py','student_release/student_release/tools/decode_records.py')},
        'formal_performance':'PARTIAL/BLOCKED_INPUT; structural completion is not a formal performance PASS'}
     (p/'metrics.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')

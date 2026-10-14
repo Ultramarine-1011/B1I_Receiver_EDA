@@ -1,0 +1,4 @@
+COMMAND: C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe student_release/student_release/tools/check_records.py C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\reports\g_stage\real52\receiver_records.bin --expected-samples 851136000 --minimum-acquisitions 4 --require-tracking
+PASS records=208429 bytes=6669728 types={'acquisition': 4, 'tracking': 207980, 'common_observation': 204, 'navigation': 240, 'end': 1}
+EXIT_CODE: 0
+WALL_SECONDS: 1.2530263
