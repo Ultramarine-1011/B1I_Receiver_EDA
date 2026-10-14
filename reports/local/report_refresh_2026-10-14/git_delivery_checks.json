@@ -1,0 +1,10 @@
+{
+  "report_commit": "9ea31ab273ef51cafdea8651cc797717ea2e3809",
+  "excluded_byte_preserved_artifacts": [
+    "docs/report_assets/*.svg",
+    "reports/local/report_refresh_2026-10-14/modelsim*.log"
+  ],
+  "note": "Initial full check reports only whitespace in original SVG and raw stdout. No evidence bytes were stripped. Scoped check includes all report Markdown, JSON, CSV and helper scripts.",
+  "scoped_text_whitespace_exit": 0,
+  "initial_full_whitespace_exit": 2
+}
