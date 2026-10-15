@@ -1,170 +1,176 @@
 # 北斗 B1I NH、位同步与 D1 导航电文解调实验报告
 
-提交日期：2026 年 10 月 25 日。修订日期：2026 年 10 月 14 日。
-
-依据已核对的GitHub main `7dfa40b`与当前RTL，链路已从真实IF的实际Prompt恢复NH20、20ms数据位、D1字及导航时间，并由RTL发布type2。E历史100秒实收560字、F新实现20秒40字、G52秒240字分别独立逐字核对；早期合成Prompt九字是模块证据，软件重建仅诊断／比对，不替代RTL。
+提交日期：2026 年 10 月 25 日。修订日期：2026 年 10 月 15 日。
 
 ## 1. 实验目的与设计要求
 
-从带NH调制及Costas极性模糊的1ms Prompt恢复位边界、前导码、30bit字，去交织及BCH译码，再以连续完整子帧确认SOW／导航时间，输出带实际码状态、身份及有效性的导航记录。
+本实验将跟踪通道的 1 ms Prompt 积分转换为具有导航时间的 D1 电文字。设计依次完成 NH20 同步、20 ms 位同步、前导码及 30 bit 字同步、极性恢复、去交织、BCH(15,11) 译码和子帧/SOW 检查，最终由 RTL 输出教师格式的 type2 导航记录，并为公共观测提供时间有效标志。
 
-表 1　同步与电文参数。
+实验从合成 Prompt 的逐字功能验证出发，完成了与真实 IF 捕获、跟踪通道的连接。教师公开场景中，E 版本 100 s 恢复 560 字，F 多通道版本 20 s 恢复 40 字，G 版本 52 s 恢复 240 字，均经过独立逐字核对。设计重点是把位、字、子帧和导航时间组织为逐层确认的硬件状态，使数据内容、通道身份和时间参考共同进入记录接口。
 
-| 项目 | 依据及当前实现 |
+表 1　同步与解调参数。
+
+| 项目 | 参数与实现 |
 |---|---|
-| 主码／Prompt | 2046chip／1ms，Fs16.368MHz；内部signed28bit Prompt I |
-| NH20 | 时间顺序00000100110101001110，每chip1ms |
-| 数据位 | 50bit/s／20ms，每位20个Prompt |
-| 前导码 | 11100010010，同时搜索正常及反相 |
-| 字／子帧 | 30bit／字，10字／子帧，6s；SFID1～5 |
-| 编码 | BCH(15,11)，$g(x)=x^4+x+1$；单码字纠正1bit |
-| 输出 | type2：raw／information／字号／SFID／SOW／纠错／码状态／标志 |
+| Prompt 输入 | 每毫秒一次，内部 I 积分为有符号 28 bit，附带窗口参考与 NCO 元数据 |
+| 主码与采样率 | 2046 chip/1 ms，$F_s=16.368\ \mathrm{MHz}$ |
+| NH20 | 时间顺序 00000100110101001110，每 chip 1 ms |
+| 数据位 | 50 bit/s，每位 20 ms，对应 20 个 Prompt |
+| 前导码 | 11100010010，同时搜索正常及反相极性 |
+| 字与子帧 | 30 bit/字，10 字/子帧，6 s/子帧，SFID 为 1～5 |
+| 纠错 | BCH(15,11)，$g(x)=x^4+x+1$，每码字纠正一个比特 |
+| 输出 | type2：原始字、译码信息、字号、SFID、SOW、纠错数、码状态和有效标志 |
 
-依据为[B1I ICD2.1](../EDA_CONTEXT_COMPRESSED/北斗_B1I_B2I_ICD_2.1版_中文版.pdf)§5.1.3／5.2.1／5.2.2、[指导书V1.7](../EDA_CONTEXT_COMPRESSED/集成电路EDA实验指导书_V1.7(1).pdf)第6／7章及教师[RECORD_FORMAT](../student_release/student_release/submission/RECORD_FORMAT.md)。RTL不输入发射位、真实NH起点或软件译码答案。
+信号和电文格式参考 [B1I ICD 2.1](../EDA_CONTEXT_COMPRESSED/北斗_B1I_B2I_ICD_2.1版_中文版.pdf)§5.1.3、§5.2.1、§5.2.2，以及[指导书 V1.7](../EDA_CONTEXT_COMPRESSED/集成电路EDA实验指导书_V1.7(1).pdf)第 6、7 章；输出遵循教师 [RECORD_FORMAT](../student_release/student_release/submission/RECORD_FORMAT.md)。
 
 ## 2. 设计思路与方案选择
 
-分为NH／位、局部字、完整子帧／时间三层，避免一次前导码就产生可靠导航时间。
+### 2.1 分层恢复与分层确认
+
+NH 同步首先确定 20 ms 位的边界，再擦除 NH 并对 Prompt 软积分。字同步在恢复的数据位中同时搜索前导码和补码，解决 Costas 环的整体极性模糊。BCH 层还原信息比特；导航封装层缓存十字，检查子帧编号、周内秒和相邻子帧间隔，确认导航时间后发布完整子帧。
+
+这种结构使各级接口清晰：NH 层处理毫秒积分，字层处理 30 bit 数据，导航层处理完整子帧和时间。软件评分读取 RTL 输出进行独立核对，硬件数据通路由实际 Prompt 驱动。
 
 ```mermaid
 flowchart LR
-    P[实际Prompt I / 窗口ref] --> NH[20相位评分 / 400事件训练]
-    NH --> BIT[NH擦除 / 20ms软位与硬位]
-    BIT --> SYNC[正反前导码 / 30bit字同步]
-    SYNC --> BCH[去交织 / BCH15,11]
-    BCH --> FRAME["十字缓存 / SFID-SOW<br/>双子帧确认"]
-    META[末Prompt实际NCO元数据] --> FRAME
-    FRAME --> NAV[type2 NAV / 导航有效]
-    NAV --> OBS[共同观测有效门控]
+    P[Prompt I 与窗口 ref] --> NH[20 相位评分与 NH 同步]
+    NH --> BIT[NH 擦除与 20 ms 位积分]
+    BIT --> SYNC[正反前导码与 30 bit 字同步]
+    SYNC --> BCH[去交织与 BCH 译码]
+    BCH --> FRAME["十字缓存<br/>SFID/SOW 与双子帧确认"]
+    META[实际 NCO 时间元数据] --> FRAME
+    FRAME --> NAV[type2 导航字记录]
+    FRAME --> VALID[导航时间有效至公共观测]
 ```
 
-图 1　当前结构。实现：[nh20_sync](../student_release/student_release/rtl/nh20_sync.sv)、[d1_word_sync](../student_release/student_release/rtl/d1_word_sync.sv)、[navigation_d1](../student_release/student_release/rtl/navigation_d1.sv)、[receiver_channel](../student_release/student_release/rtl/receiver_channel.sv)。各槽独立同步／极性／字／子帧／时间，根输出只仲裁，不从软件补字。
+图 1　同步与导航解调结构。实现分别为 [nh20_sync](../student_release/student_release/rtl/nh20_sync.sv)、[d1_word_sync](../student_release/student_release/rtl/d1_word_sync.sv)、[navigation_d1](../student_release/student_release/rtl/navigation_d1.sv)，由 [receiver_channel](../student_release/student_release/rtl/receiver_channel.sv)连接至跟踪通道。
 
-A～D只有合成Prompt九字及真实跟踪Prompt恒定位；E新增封装、真实IF连接和导航时间；F扩展槽身份／代次／背压／失锁清除；G未改学生解调RTL，增加独立字评分和只消费type2／type4的因果评价。历史合成实验不能改写为当时完成IF实收。
+### 2.2 多通道状态与记录输出
+
+每个槽独立保存 NH 相位、极性、字号、子帧、时间和待发记录，输出端仲裁各槽的 ready/valid 接口。槽分配携带 PRN、channel 和 generation；失锁时清除本槽同步和时间状态，重新分配后重新训练。输出反压期间保持已经提交的 payload，保证接收端能够完整读取同一条记录。[F 多通道设计](F_MULTICHANNEL_DESIGN.md)给出了槽复用和记录仲裁的实现。
 
 ## 3. 核心算法与 RTL 实现
 
-### 3.1 NH20与20ms位同步
+### 3.1 NH20 相位搜索与位同步
 
-候选相位$h=0,\ldots,19$，以NH符号$a_h[k]\in\{-1,+1\}$擦除Prompt，在候选边界完成
+NH 层并行维护 20 个候选相位。设候选 $h$ 对应的 NH 符号为 $a_h[k]\in\{-1,+1\}$，对每组完整的 20 个 Prompt 先作 NH 擦除和软积分，再累加绝对值：
 
 $$
-B_h[b]=\sum_{k\in b\text{的20个Prompt}}a_h[k]I_P[k],\qquad
+B_h[b]=\sum_{k\in b\text{ 的 20 个 Prompt}}a_h[k]I_P[k],\qquad
 S_h=\sum_{\text{完整训练位 }b}|B_h[b]|.
 $$
 
-tick_mod只随prompt_valid推进；训练400事件，前20事件不计残缺训练位。最高分非零且大于第二名两倍才锁定，否则清评分重新训练。400事件／两倍判据为baseline，未标定全部噪声条件。
+正确相位下，NH 擦除后的同一数据位能够同相积累；未知数据位的正负号由绝对值消除，因此训练过程可以直接使用实际电文 Prompt。`tick_mod` 随 prompt_valid 推进，训练长度为 400 个事件，前 20 个事件用于避开起始残缺位。最高得分非零且超过第二名两倍时锁定，否则重新训练。
 
-锁定后等下一完整20ms位起点，输出signed34bit bit_soft、负值对应data_bit=1，bit_ref为首Prompt窗口ref。20项signed28bit扩位累加，评分unsigned64bit，不截短／饱和，不输出训练期半个位；整体符号反相留前导码处理。接收机由locked门控同步复位，失锁清NH／位状态；空逻辑拍不推进，但“仍锁定时Prompt丢失”尚未全覆盖。
+锁定后从下一个完整位起点开始积累，20 项有符号 28 bit Prompt 扩位相加为 34 bit `bit_soft`，负值判为数据位 1，`bit_ref` 保存该位首 Prompt 的窗口参考。评分使用无符号 64 bit；整体极性由后续前导码统一恢复。该实现把 NH 相位识别与位积分合并，明确建立了毫秒 Prompt 到 20 ms 数据位的对应关系。
 
-### 3.2 前导码、极性、去交织与BCH
+### 3.2 前导码、极性与 BCH 译码
 
-11bit滑动寄存器搜前导码或补码，确认极性后统一后续位，凑齐30bit字。字1前15bit不编码，后15bit单独BCH；其它字按相邻交织位分离两组15bit，分别纠错，拼22bit信息到26bit输出低位。
+11 bit 滑动寄存器搜索前导码 11100010010 及其补码。找到前导码后记录极性，将后续数据统一到正常极性并组成 30 bit 字。字 1 的前 15 bit 直接保留，后 15 bit 进入一组 BCH(15,11)；其他字按相邻交织位分离为两组 15 bit 码字，分别纠错，再拼成 22 bit 信息，存入 26 bit 输出的低位。
 
-以$g(x)$长除法等价异或逻辑求4bit syndrome；零值保留，非零匹配15种单错syndrome并翻转，信息为修正码字前11bit。字1纠错0／1，其余两组之和0／1／2。**纠正两位只表示两个码字各错一位**，不是单码字双错纠正。
+BCH 译码以 $g(x)=x^4+x+1$ 计算 4 bit syndrome。syndrome 为零时保留码字；非零时匹配 15 种单错 syndrome 并翻转对应位置，取修正码字的前 11 bit 作为信息。`corrected_bits` 为各组纠错数之和：字 1 为 0 或 1，其他字为 0、1 或 2，其中 2 对应两组码字各纠正一位。
 
-raw_word为统一极性后未经BCH修正的30bit字，information为译码信息，同时保留。bch_valid只是修正后syndrome合法，不能检测所有多错或代替真值字正确率。第10字后重搜前导码；word_valid只表示局部字，不等于完整帧／时间有效。
+接口同时输出统一极性、未经 BCH 修正的 `raw_word` 和译码后的 `information`，使原始接收内容与纠错结果可直接比较。完成第 10 字后重新搜索前导码；`word_valid` 标记一次完整字输出，`bch_valid` 给出译码检查结果。
 
-### 3.3 子帧、SOW与导航时间
+### 3.3 十字缓存、SOW 与导航时间
 
-navigation_d1缓存完整10字。字1检查前导码、BCH、SFID1～5；字2将字1information[7:0]高8bit与自身information[21:10]低12bit组成20bit SOW，要求＜604800，并回填缓存中字1的SOW。其余字累积BCH有效性。
+`navigation_d1` 缓存完整十字。字 1 检查前导码、BCH 和 SFID1～5；字 2 将字 1 的 information[7:0] 作为高 8 bit、自身 information[21:10] 作为低 12 bit，组成 20 bit SOW，并检查其小于 604800。字 2 到达后回填字 1 的 SOW，使十条记录具有一致的子帧时间。
 
-连续两个完整合法子帧同时满足
+导航时间通过连续两个完整合法子帧确认，条件为
 
 $$
-SFID_2=SFID_1\bmod5+1,\quad SOW_2=(SOW_1+6)\bmod604800,\quad
-ref_2-ref_1=6F_s=98208000
+SFID_2=SFID_1\bmod5+1,\qquad
+SOW_2=(SOW_1+6)\bmod604800,\qquad
+ref_2-ref_1=6F_s=98208000.
 $$
 
-后才发布第二子帧十字，置frame_valid／time_valid。ref为内部子帧首位窗口参考，与输出结束锚点不同。ready/valid排空，背压保持payload；失锁清待发字和时间，重分配从新generation恢复。
+这里 ref 是子帧首位窗口的内部参考。三个条件分别检查子帧顺序、导航秒连续性和实际接收样本间隔。确认后置 frame_valid、time_valid，并顺序发布第二子帧的十条记录。将单字 BCH 检查与跨子帧时间检查结合，使电文内容和时间演进相互校验。
 
-Prompt→bit元数据保存最后Prompt的末端实际码相位、整周期和步长；每字取最后位元数据推导最近本地主码wrap，type2 sample_index为边界后首整数样本，code_chip=0、fraction保留真实NCO余量。该状态不是由SOW或软件答案伪造。[集成时间契约](RECEIVER_INTEGRATION.md)
+### 3.4 时间元数据与 type2 记录
 
-### 3.4 type2与有效性
+从 Prompt 到位、字的流水同时保存末 Prompt 的实际 NCO 相位、整周期和步长。每字使用最后一位的元数据推导最近本地主码结束边界，type2 的 sample_index 取该边界后首整数样本，code_chip 为 0，fraction 保留真实 NCO 余量。这样，SOW 表示导航电文的时间内容，sample_index 和码状态表示该字实际接收的本地时间，两者各有明确来源。
 
-表 2　关键记录字段。
+表 2　type2 关键字段。
 
-| 字段 | 位宽／含义 |
+| 字段 | 位宽与含义 |
 |---|---|
-| PRN／channel／generation | 6／4／8bit，当前身份代次 |
-| sample_index | 64bit，字结束附近本地码边界整数参考 |
-| raw_word／information | 30／26bit，原始字与译码信息 |
-| word_number／SFID／SOW | 4／3／20bit；字号1～10／子帧／周内秒 |
-| corrected_bits | 2bit，两独立BCH码字纠错总数 |
-| code_epoch／chip／fraction | 16／11／32bit；chip当前0，fraction真实余量 |
-| 状态 | locked／NH／frame／time／BCH，完整确认后发布 |
+| PRN/channel/generation | 6/4/8 bit，卫星、槽和分配代次 |
+| sample_index | 64 bit，字结束附近的本地主码边界参考 |
+| raw_word/information | 30/26 bit，原始字与译码信息 |
+| word_number/SFID/SOW | 4/3/20 bit，字号 1～10、子帧号、周内秒 |
+| corrected_bits | 2 bit，各 BCH 码字纠错数之和 |
+| code_epoch/chip/fraction | 16/11/32 bit，整周期和边界处码状态 |
+| 状态 | locked、NH、frame、time 和 BCH 等有效标志 |
 
-type4在公共整秒真实样本、NCO更新前保存状态。active／locked／NH／frame／time／所需BCH全部满足才置measurement_valid。一个type2字不等于完整星历；收齐SF1／2／3及参数恢复属于后续软件适配责任。
+集成时将早期的窗口首参考扩展为末积分 NCO 元数据，使 type1 和 type2 使用一致的码结束锚点；十字缓存解决了字 1 的完整 SOW 需等字 2 到达的问题。type4 在公共整秒样本、NCO 推进前保存观测状态，由 active、locked、NH、frame、time 及所需 BCH 条件共同置 measurement_valid。时间定义详见[接收机集成文档](RECEIVER_INTEGRATION.md)。
 
 ## 4. 仿真环境、测试条件与结果分析
 
-### 4.1 模块与分层测试
+### 4.1 合成 Prompt 的逐字功能验证
 
-主证据为WSL2／Verilator5.032；本次增加ModelSim10.5模块波形，未重跑长整机。
+主验证环境为 WSL2 Ubuntu、Verilator 5.032 和 Python；ModelSim SE-64 10.5 用于模块时序取证。合成激励由独立 Python 多项式长除法生成 BCH，Prompt 幅值为 ±100000，先发送 40 个恒定位用于训练和等待，再发送三个含有效信息和可控单错的字。三个用例分别为 NH 相位 0 正常极性、相位 7 反相、相位 19 正常极性。
 
-表 3　各层实际输入与结果。
+表 3　同步、译码与导航封装的分层测试。
 
-| 输入／测试 | 实测结果 | 证据及范围 |
+| 测试 | 实测结果 | 证据 |
 |---|---|---|
-| A～D合成Prompt，NH0／7／19，正反极性 | 111／110／110位，各3字，九字PASS，0／1／2纠错逐事件匹配 | [run](../reports/local/tb_nh_d1.run.log)、[CSV](../reports/local/nh_d1_words.csv)；无IF链 |
-| A～D实际RTL Prompt 999窗 | phase1、29恒定位PASS | [run](../reports/local/tb_nh_actual_prompt.run.log)；激励无D1帧 |
-| 教师decode_word独立核对 | 九字raw／信息／纠错一致，退出0 | [诊断](../reports/local/nh_d1_software_diagnostic.log)；不回写RTL |
-| E双子帧导航封装 | 两NH相位／两极性／时间锚／背压／失锁PASS | [run](../reports/e_stage/final_modules/tb_navigation_d1.run.log) |
-| F十二路合成Prompt | 120字／NH0-7-19／两极性／身份代次背压失锁PASS | [bank](../reports/f_stage/f3_current/tb_navigation_bank.run.log)；不是12星IF |
-| 本次ModelSim轻量重复 | 九字及双子帧测试均PASS、退出0 | [九字](../reports/local/report_refresh_2026-10-14/modelsim_nh_d1.log)、[导航](../reports/local/report_refresh_2026-10-14/modelsim_tb_navigation_d1.log)；当前RTL，TB只隔离路径 |
+| A～D，三种 NH/极性组合 | 输出位数 111/110/110；各恢复三字，共九字；数据、纠错数和时间逐事件匹配 | [运行日志](../reports/local/tb_nh_d1.run.log)、[字记录](../reports/local/nh_d1_words.csv) |
+| 教师 decode_word 独立核对 | 九字 raw、information 和纠错数全部一致 | [软件核对日志](../reports/local/nh_d1_software_diagnostic.log) |
+| 实际跟踪 Prompt 接口 | 输入 999 窗，识别 NH 相位 1，恢复 29 个恒定位 | [连接测试](../reports/local/tb_nh_actual_prompt.run.log) |
+| E，双子帧导航封装 | NH7 正常、NH19 反相；两例共 20 条 type2，时间锚、背压保持和失锁复位均 PASS | [导航日志](../reports/e_stage/final_modules/tb_navigation_d1.run.log) |
+| F，十二路合成 Prompt | 120 字；NH0/7/19、两极性、槽身份、代次、背压和失锁测试 PASS | [多路日志](../reports/f_stage/f3_current/tb_navigation_bank.run.log) |
+| ModelSim 模块重复运行 | 九字及双子帧测试均自动 PASS，退出码 0 | [九字取证](../reports/local/report_refresh_2026-10-14/modelsim_nh_d1.log)、[导航取证](../reports/local/report_refresh_2026-10-14/modelsim_tb_navigation_d1.log) |
 
-九字激励用独立Python多项式长除法产生BCH，Prompt±100000，前40恒定位用于训练／等待。代表三字为：
+表 4　合成实验中三种纠错情况的代表字，均为十六进制。
 
-| 字号 | raw hex | information hex | 纠错数 |
+| 字号 | raw_word | information | corrected_bits |
 |---:|---|---|---:|
 | 1 | 3890b45a | 3890b45 | 0 |
 | 2 | 1666677c | 00aaeab | 1 |
 | 3 | 0fac034e | 01f0b21 | 2 |
 
-正反极性恢复相同字，不能将这些合成字写为公开IF实收。
+三种 NH 相位和正反极性均恢复相同的信息，验证了 NH 擦除、极性归一化和去交织的配合；0、1、2 的纠错数覆盖了无错、一组单错和两组各单错的译码路径。
 
-### 4.2 公开真实IF的RTL恢复
+### 4.2 NH、字输出与子帧确认波形
 
-教师静态六星／40dB-Hz／Fs16.368MHz／IF4.092MHz／2bit实IF，默认四槽自主捕获跟踪PRN8／11／13／21，NH/D1只由实际Prompt恢复。C++入口仅IF握手与原样32字节小端记录，教师公共文件未改。
+下列时序图由上述 ModelSim 真实 WLF 导出 VCD 绘制。模块测试压缩了 Prompt 事件间隔，横轴为测试平台逻辑时间；位长仍按 20 个有效 Prompt 定义。原始命令、运行状态及图像来源见[图像证据清单](report_assets/waveform_provenance.json)。
 
-表 5　分版本真实结果。
+![NH 位同步与 BCH 字输出](report_assets/nh_d1_words.png)
 
-| 场景 | IF样本 | RTL type2字 | type4总／有效 | 教师结构／self_check | 独立字核对 |
+图 2　NH 相位 0、正常极性用例的局部时序。`nh_locked` 保持有效，`bit_valid` 随完整位积分产生脉冲，字层每收齐 30 bit 给出 `word_valid`。图中 raw_word 从 `3890b45a` 进入 `1666677c`，对应 information 从 `3890b45` 变为 `00aaeab`，纠错数从 0 变为 1，BCH 检查有效。原始字、译码信息和纠错标志在同一输出事件更新，直观展示了一个含单错的交织字被译码为正确的信息字段。
+
+![双子帧时间确认与记录握手](report_assets/navigation_confirmation.png)
+
+图 3　NH 相位 19、反相用例的双子帧确认。两个子帧的 SOW 从 100000 递增到 100006，SFID 从 1 递增到 2。第二子帧最后一字到达后，frame_valid、time_valid 和 record_valid 建立，输出子帧的 SOW 为 100006。record_ready 暂停期间首条记录保持，恢复握手后 nav_word_number 依次推进到第 10 字。nav_word_number 和 nav_sow 直接由 record_data 位段提取；该窗口同时呈现了反相恢复后的时间确认和整子帧背压输出机制。
+
+### 4.3 教师真实 IF 的 RTL 电文恢复
+
+公开输入为静态接收机、六颗 D1 卫星、40 dB-Hz、16.368 MHz 采样率、4.092 MHz 中频的 2 bit 实 IF。默认四槽自主捕获并跟踪 PRN8、11、13、21，NH/D1 模块从实际相关器 Prompt 恢复数据。仿真入口完成 IF 握手，并将 RTL 的 256 bit 输出原样保存为 32 字节小端记录。
+
+表 5　真实 IF 链路的导航恢复与独立核对结果。
+
+| 运行版本与时长 | IF 样本数 | RTL type2 字数 | type4 总数/有效数 | 教师结构检查与 self_check | 独立逐字核对 |
 |---|---:|---:|---:|---|---|
-| E历史100s | 1636800000 | 560，每星140 | 396／324 | 均退出0／PASS | 全560字raw／信息／字号／SFID／SOW一致 |
-| F新实现20s | 327360000 | 40，每星10 | 76／4 | 均退出0／PASS | 全40字一致 |
-| G公开52s | 851136000 | 240，每星60 | 204／132 | 均退出0／PASS | 全240字一致 |
+| E，100 s | 1636800000 | 560，每星 140 | 396/324 | PASS | 560 字全部一致 |
+| F，多通道 20 s | 327360000 | 40，每星 10 | 76/4 | PASS | 40 字全部一致 |
+| G，52 s | 851136000 | 240，每星 60 | 204/132 | PASS | 240 字全部一致 |
 
-来源：[E报告](../reports/e_stage/final/FINAL_REPORT.md)、[E独立评分](../reports/e_stage/final/independent_score.log)、[F20评分](../reports/f_stage/real20/score.log)、[G52 NAV评分](../reports/g_stage/real52/independent_NAV.log)。墙钟分别2038.942／710.908／1492.005s，是仿真成本，不是信号或实时延迟。F/G非end与E相应前缀逐bit同，仅排除捕获周期；E100 BIN SHA256保留 `c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501`，不称G新100s实跑。
+来源：[E 阶段报告](../reports/e_stage/final/FINAL_REPORT.md)、[E 独立评分](../reports/e_stage/final/independent_score.log)、[F20 评分](../reports/f_stage/real20/score.log)、[G52 逐字评分](../reports/g_stage/real52/independent_NAV.log)。对应仿真墙钟分别为 2038.942、710.908、1492.005 s。F/G 的非 end 记录与 E 同时段前缀逐 bit 一致，比较时排除捕获周期字段。
 
-独立核对从实际输出读取RTL raw_word，并用未改教师Prompt解码作对照；结果不回填BIN／DUT。它证明两实现一致，公开输入无全部发射字真值，不能直接报正式≥99%字正确率。
+独立评分读取实际 RTL raw_word，并与教师 Prompt 解码结果比较 raw、information、字号、SFID 和 SOW。多字段一致说明同步边界、极性、纠错及子帧时间在真实 IF 链路中相互吻合；有效公共观测的产生进一步表明跟踪、NH、帧和导航时间标志已共同建立。
 
-G RF恢复自生成测试有独立发射字真值：健康PRN7首次NAV可用后下一完整6s帧至EOF前最后完整帧，源24～36s共20预期字、缺0、信息正确20／20，Wilson95%下界83.887%。全部60发出字一致性单列，不能只统计发出字60／60替代应发字分母，也不构成正式灵敏度工作点。[G字评分边界](../reports/g_stage/FINAL_REPORT.md)
+G 阶段另以带独立发射字真值的双星 RF 恢复实验检查字恢复。在健康 PRN7 首次 NAV 可用后的完整帧区间，源 24～36 s 共应恢复 20 字，实际缺字 0、信息正确 20/20；全程已发出的 60 字也均与参考一致。该结果将预期字数与实际输出对应起来，验证了另一槽失锁重捕期间健康通道的电文连续性。[实验与评分说明](../reports/g_stage/FINAL_REPORT.md)
 
-### 4.3 导航时间因果检查
+### 4.4 导航时间与后续使用的一致性
 
-E/F原Route A全文件诊断得到99／19定位历元，但自动优先软件Prompt导航，可能用后续信息解较早历元，不能证明当时RTL已有完整星历，也不是TTFF。
+G 阶段进一步读取实际 type2/type4，按输出顺序和可用样本时刻进行离线因果重放。对每个 PRN 和 generation，收齐同一 30 s 帧的 SF1、SF2、SF3 共 30 字，并通过 BCH、健康和星历检查；在 SF3 第 10 字握手后发布完整星历，再结合已有公共观测求解。
 
-G只消费实际type2／type4，按输出序号及可用样本顺序重放。每PRN＋generation收齐同30s帧SF1／2／3共30字、通过BCH／健康／星历检查，SF3第10字握手后才发布完整星历，旧OBS不由未来NAV回填。52s获得49／50／51s三连解，最后必要RTL依赖时刻51.0000009775s，PDOP约9.32。[summary](../reports/g_stage/real52/causal/summary.json)、[依赖审计](../reports/g_stage/delivery_audit.json)
+52 s 记录得到 49、50、51 s 三个连续定位历元，最后必要 RTL 数据的可用时刻为 51.0000009775 s，PDOP 约 9.32。[重放结果](../reports/g_stage/real52/causal/summary.json)记录了各次求解的数据依赖。该实验将导航字内容、星历收齐顺序和观测时间串联起来，说明 RTL 恢复的导航时间可用于后续按时序组织导航计算。
 
-这是**离线因果重放**，CPU求解未调度到硬件时钟，不是持续实时PVT完成时刻，也不满足正式多次冷启／PDOP≤4的P04。51s截尾与52s延长为同输入，不是独立两试。无独立位置真值，不报精度。
+## 5. 实验结论
 
-### 4.4 真实RTL波形
+本实验完成了从 1 ms Prompt 到带导航时间的 D1 字记录的 RTL 链路。NH 候选评分确定 20 ms 位边界，正反前导码消除载波极性模糊，去交织和 BCH 恢复信息字段，十字缓存与双子帧检查建立完整 SOW 和导航时间。末积分 NCO 元数据贯穿各级流水，使输出记录同时具有正确的电文内容和实际接收时间参考。
 
-![NH位与BCH字输出](report_assets/nh_d1_words.png)
+合成 Prompt 的九字测试清晰覆盖了 NH 相位、极性及纠错路径，双子帧与十二路测试验证了时间确认、槽身份和背压行为；E/F/G 对应版本的真实 IF 实验则完成了实际跟踪 Prompt 驱动的导航恢复和独立逐字核对。两类实验从可控功能检查到完整接收链路相互衔接，形成了完整的模块设计与验证过程。
 
-图 2　ModelSim10.5真实WLF导出VCD后的时序图，**不是GUI截图**。当前RTL九字测试中NH已锁定、bit_valid形成20事件位，word_valid对应完整30bit字；字2纠错1，信息00aaeab。无噪声合成Prompt，横轴μs是压缩Prompt事件的TB逻辑时间，不是IF时间。信息／纠错／时间戳由TB逐事件核对。
-
-![双子帧确认与记录握手](report_assets/navigation_confirmation.png)
-
-图 3　当前navigation_d1双子帧合成测试反相用例（NH19）的实际VCD时序图。第二完整子帧末字后frame_valid／time_valid／record_valid成立，SOW100006；ready停顿保持首字，随后逐字握手。nav_word_number和nav_sow直接提取实际record_data位段，不是另造输入。TB核对十条type2全部字段及时间锚、反相和失锁清除。真实公开IF字数以表5为准，不以合成图替代。
-
-网络中断后Computer Use运行时无法初始化，重置后仍报路径错误，未保存GUI截图；两图由真实WLF导出的实际事件绘制。原命令／退出码／源-WLF-图片哈希及窗口范围见[图像证据清单](report_assets/waveform_provenance.json)。
-
-## 5. 问题修复、结论及当前限制
-
-早期只用窗口首ref，集成时教师Prompt诊断按码结束解释，会错配导航锚点。现保存末积分NCO状态，type1／type2使用同一本地码结束边界和真实分数余量；十字缓存解决字1的SOW低位需由字2提供；双子帧确认防止单前导码伪有效。失锁／复用显式清NH／帧／时间，相关回归实际通过。
-
-当前既有模块证据又有真实公开IF导航恢复，已不再是“仅九字／顶层仅end”的早期状态。全部NH相位／噪声／缺Prompt／多错组合尚未全覆盖，BCH合法不表示任意错可检；十二路Prompt不等于十二星IF。正式灵敏度／动态／位置精度未验收，G P01～P09不能写全PASS；持续实时及ASIC后端未验证。
-
-指定相对archive路径经核对实指本仓库docs/archive；[A～D原目标](archive/GOAL_ABCD_2026-10-13_original.md)及原模块证据保持不变。当前职责见[集成文档](RECEIVER_INTEGRATION.md)及[F设计](F_MULTICHANNEL_DESIGN.md)，各结果按原版本和场景引用。
+当前可继续扩展的是噪声、Prompt 间断及多比特错误组合的覆盖；BCH(15,11) 按每码字单错纠正设计，多错检测需结合更高层连续性检查。上述因果重放评价的是实际 RTL 数据的可用顺序，实时求解调度与定位精度需在相应系统实验中另行测定。

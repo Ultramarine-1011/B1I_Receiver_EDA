@@ -1,176 +1,194 @@
 # 北斗 B1I 捕获模块设计报告
 
-提交日期：2026 年 10 月 16 日。修订日期：2026 年 10 月 14 日。
-
-本报告依据已核对的 GitHub main `7dfa40b`、当前学生 RTL 和实际日志。接收机当前采用 **PCPS/FFT 粗搜索＋原始 IF 局部精搜索**，已在教师公开 IF 中自主捕获 PRN8、11、13、21。E 的完整 100 秒结果是历史功能证据；F20 秒和 G52 秒为后续版本验证，不能写成最新代码重新完成 100 秒测试。G 捕获边界子集仍存在 FAIL，正式 P01～P03 尚未完成验收。
+提交日期：2026 年 10 月 16 日。修订日期：2026 年 10 月 15 日。
 
 ## 1. 实验目的与设计要求
 
-从未知 PRN、码起点和载波频偏的量化实中频中搜索卫星，输出带参考时刻的码延迟与多普勒初值，并交给跟踪通道。设计需要同时保证相关运算、判决、结果保持和时间对齐。
+捕获是接收机建立同步的起点。本实验从量化实中频样本中搜索卫星 PRN、主码延迟和载波多普勒，为后续码环、载波环提供初始状态。设计采用 **PCPS/FFT 粗搜索与原始 IF 局部精搜索相结合**的结构，在教师公开 IF 场景中完成 PRN8、11、13、21 的自主捕获，并将结果移交给四个独立跟踪通道。
 
-表 1　教师输入与当前搜索参数。输入及记录以 [README](../student_release/student_release/README.md)、[input_contract](../student_release/student_release/input/input_contract.json)、[RECORD_FORMAT](../student_release/student_release/submission/RECORD_FORMAT.md) 为准。
+除相关峰搜索外，模块还需要完成四项工作：保存具有明确参考时刻的输入窗口；通过非相干积分提高检测稳定性；在输出反压期间保持结果；将历史窗口上的码、载波状态推进到实际跟踪启动样本。上述功能共同构成捕获到跟踪的完整数据通路。
 
-| 项目 | 当前配置 |
+表 1　输入条件与当前实现参数。
+
+| 项目 | 参数与实现 |
 |---|---|
-| 采样率／中频 | $F_s=16.368\ \mathrm{MHz}$；$f_{IF}=4.092\ \mathrm{MHz}=F_s/4$ |
-| 主码 | PRN6～37，2.046 Mcps，2046 chip／1 ms，每周期 16368 样本 |
-| 输入 | 2 bit 映射 −3／−1／+1／+3，内部 signed 3 bit |
-| 流接口 | 每次握手 16 样本，总线最低 2 bit 最早；解包后引用逐点增加 |
-| 粗搜索 | 默认 PRN6～37，约 ±10 kHz／500 Hz，4096 点 FFT 延迟搜索 |
-| 精搜索 | 粗延迟 ±16 sample／1 sample，粗频偏 ±250 Hz／50 Hz |
-| 积分 | 4×1 ms 非相干功率和，原始历史窗 65472 样本 |
-| 通道 | 默认四槽；支持 1／2／4／12 独立槽，十二星完整 IF 未验收 |
+| 采样率与实中频 | $F_s=16.368\ \mathrm{MHz}$，$f_{IF}=4.092\ \mathrm{MHz}=F_s/4$ |
+| 主码 | 2.046 Mcps，2046 chip/周期，1 ms 对应 16368 样本 |
+| 输入量化 | 2 bit 编码映射为 −3、−1、+1、+3，内部使用有符号 3 bit |
+| 输入握手 | 32 bit 总线每次传递 16 样本，最低 2 bit 对应最早样本 |
+| 粗搜索 | PRN6～37；多普勒约 ±10 kHz、间隔 500 Hz；4096 点 FFT |
+| 精搜索 | 粗延迟附近 ±16 sample、步长 1 sample；粗频偏附近 ±250 Hz、步长 50 Hz |
+| 积分与缓存 | 4 个 1 ms 窗非相干积累，保存 65472 个原始 IF 样本 |
+| 接收机配置 | 默认 4 个跟踪槽，共享捕获计算单元 |
 
-教师公开文件为静态六星、40 dB-Hz、100 秒开发场景，传播时延和多普勒仍随卫星运动变化。默认四槽成功不代表六星全检出。教师纯仿真接口不要求学生实现 SRAM 控制器；公开文件没有独立码／频／位置真值，不能代替全部正式性能输入。
+输入打包和输出记录遵循教师 [README](../student_release/student_release/README.md)、[输入契约](../student_release/student_release/input/input_contract.json)及 [RECORD_FORMAT](../student_release/student_release/submission/RECORD_FORMAT.md)。算法与主码参数参考[指导书 V1.7](../EDA_CONTEXT_COMPRESSED/集成电路EDA实验指导书_V1.7(1).pdf)第 3、7 章及 [B1I ICD 2.1](../EDA_CONTEXT_COMPRESSED/北斗_B1I_B2I_ICD_2.1版_中文版.pdf)§4.3。
 
 ## 2. 设计思路与方案选择
 
-### 2.1 从串行相关到两级搜索
+### 2.1 从串行相关演进到两级搜索
 
-A～D 的 `acquisition_serial.sv` 复用已有 PRN、NCO 和相关前端，逐个重放码延迟×频率格点，完成四个高信噪比用例、31 格点的实际验证。它适合逐点核查，但全范围反复积分成本高，单窗也没有非相干积累。保留该实现作为历史设计起点及旧单星回归，当前默认路径采用 FFT 同时计算每个频点上的全部延迟。
+早期设计复用 PRN 发生器、NCO、混频器和相关器，对每个“码延迟—频率”组合重放 1 ms 样本。串行结构便于逐格检查乘加、积分和门限，四个用例共 31 格点完成了初始功能验证。随着搜索范围扩大，逐个码延迟重复积分成为主要计算开销，因此当前方案在每个频点用 FFT 一次求出所有循环延迟的相关值。
 
-PCPS 利用 IF＝Fs／4，以四样本正交组合下变频、四倍抽取；每个 1 ms 窗得到 4092 复样本，补零到 4096 点使用 radix-2 FFT。补零后的循环周期与真实 B1I 主码不同，所以粗延迟只作候选；精搜回到原始 IF 和精确 16368 样本周期，修正补零失配及频率格点误差。
+PCPS（并行码相位搜索）先利用 $f_{IF}=F_s/4$ 的关系完成正交组合与四倍抽取。每毫秒得到 4092 个复样本，补零到 4096 点后使用基 2 FFT。该结构把主要运算转化为可复用的蝶形和频域复乘，适合串行 FFT 硬件实现。
+
+粗搜负责覆盖整个主码周期和多普勒范围；精搜负责提高估计精度。4096 点补零循环相关的周期与实际 16368 样本主码周期略有差异，粗频率网格也有量化间隔。精搜返回原始 IF，在正确主码周期上对小范围候选直接相关，同时修正这两类误差。
 
 ```mermaid
 flowchart LR
-    IF[16 样本握手] --> U[解包与真实样本编号]
-    U --> BUF[4 ms 原始 IF 缓冲]
-    BUF --> DEC[四样本正交组合与抽取]
-    DEC --> FFT["4096 点 FFT 相关<br/>频域乘积 / IFFT"]
-    PRN[本地 PRN 与频率网格] --> FFT
-    FFT --> P[四窗功率与峰均比]
-    P --> FINE[原始 IF 局部精搜]
+    IN[16 样本输入握手] --> U[解包与样本编号]
+    U --> BUF[4 ms 原始 IF 缓存]
+    BUF --> DEC[正交组合与四倍抽取]
+    DEC --> FFT["4096 点 FFT 相关<br/>频域复乘与 IFFT"]
+    REF[PRN 与候选多普勒] --> FFT
+    FFT --> SUM[四窗功率累加与粗判决]
+    SUM --> FINE[原始 IF 局部精搜]
     BUF --> FINE
-    FINE --> M[管理与时间推进]
-    M --> T[跟踪通道]
+    FINE --> HAND[结果管理与相位推进]
+    HAND --> TRACK[独立跟踪通道]
 ```
 
-图 1　当前结构。实现：[acquisition_pcps](../student_release/student_release/rtl/acquisition_pcps.sv)、[acquisition_refine](../student_release/student_release/rtl/acquisition_refine.sv)、[receiver_multichannel](../student_release/student_release/rtl/receiver_multichannel.sv)。
+图 1　两级捕获结构。主要 RTL 为 [acquisition_pcps](../student_release/student_release/rtl/acquisition_pcps.sv)、[fft4096_serial](../student_release/student_release/rtl/fft4096_serial.sv)、[acquisition_refine](../student_release/student_release/rtl/acquisition_refine.sv)及 [receiver_multichannel](../student_release/student_release/rtl/receiver_multichannel.sv)。
 
-### 2.2 共享捕获与独立跟踪
+### 2.2 共享计算与通道分配
 
-冷启动抓取历史窗后暂停公共样本消费，顺序搜索 PRN／频率；槽分配完成或搜索结束后统一 RUN。F 新增后台抓窗和搜索：FFT／精搜只读独占历史缓存，健康通道继续处理公共样本；满载时延后新搜索，不抢健康星。管理拒绝重复 PRN、旧任务和不合格捕获窗，并负责释放与重搜。这些是功能调度；持续实时能力还需要有限缓存及目标时钟证据。[F 多通道设计](F_MULTICHANNEL_DESIGN.md)
+冷启动时，接收机先取得 4 ms 历史窗口，再顺序搜索 PRN 和频率。公共输入暂停期间，捕获模块反复读取缓存；完成分配与相位预置后，各跟踪槽统一进入运行状态。这样可以复用一套捕获计算资源，并保持各槽输入样本的公共时间基准。
+
+多通道实现进一步加入后台抓窗和搜索：捕获计算读取独占历史缓存，已锁定通道继续处理公共样本。卫星管理器依据 PRN、任务编号、代次及槽状态接纳结果，拒绝重复分配；失锁槽释放后可重新搜索。该调度结构使“发现新星”和“维持已有跟踪”能够协同工作，详见 [F 阶段多通道设计](F_MULTICHANNEL_DESIGN.md)。
 
 ## 3. 核心算法与 RTL 实现
 
-### 3.1 粗相关、非相干积累与判决
+### 3.1 PCPS 粗相关与非相干积累
 
-原始样本 $x[n]$ 的四样本正交组合为
+设原始实样本为 $x[n]$，四样本正交组合为
 
 $$
 z[m]=(x[4m]-x[4m+2])+j(-x[4m+1]+x[4m+3]).
 $$
 
-擦除候选多普勒、补零至 $L=4096$ 后，各窗相关及四窗功率为
+这一组合利用中频每样本转过四分之一周的特点，得到下变频后的 I/Q，并将采样率降至 4.092 MHz。本地码按每 chip 两点形成参考序列。对第 $w$ 个窗口和候选频偏 $f$，相关及非相干功率写为
 
 $$
-r_w[\ell,f]\propto\operatorname{IFFT}\{\operatorname{FFT}(z_w[m]e^{-j2\pi f(4m)/F_s})\operatorname{FFT}(c[m])^*\},\qquad
+r_w[\ell,f]\propto\operatorname{IFFT}\!\left\{
+\operatorname{FFT}\!\left(z_w[m]e^{-j2\pi f(4m)/F_s}\right)
+\operatorname{FFT}(c[m])^*\right\},\qquad
 P[\ell,f]=\sum_{w=0}^{3}|r_w[\ell,f]|^2.
 $$
 
-比例符号表示 RTL FFT/IFFT 的逐级归一化。选全频率网格最大峰，令获胜频点 $S=\sum_{\ell=0}^{4095}P[\ell,f]$，实际粗判决为 $4096P_{max}>8S$。诊断均值为 `S>>12`，判决直接使用未除法的 S。门限 8 是工程 baseline，不是教师门限或已校准的虚警工作点。
+式中的比例系数对应 FFT/IFFT 的逐级缩放。四窗分别相关后累加功率，可保留不同窗口的相关能量，避免窗间数据或 NH 符号改变造成复数相关和相互抵消。
 
-非相干功率和减少不同窗的未知符号互相抵消，但不能消除窗内 NH 翻转损失。FFT 索引先解释为有符号循环延迟：$s(\ell)=\ell$（$\ell<2048$），否则 $s(\ell)=\ell-4096$，粗 lag 为 $(4s(\ell))\bmod16368$；需经过原周期精搜，不能直接当作真实主码相位。
-
-### 3.2 局部精搜索
-
-默认 33×11＝363 格点，每格完整重放 65472 原始 IF 样本。前端 `ALIGN_FIRST_WINDOW=0`，以捕获缓存边界积分四个 1 ms 窗：
+搜索遍历频率网格并保存全局最大峰。设获胜频点各延迟功率之和为 $S$，粗判决采用
 
 $$
-I_w=\sum_n x[n]\cos\theta[n]c[n-lag],\quad Q_w=-\sum_n x[n]\sin\theta[n]c[n-lag],\quad
+4096P_{max}>8S,\qquad S=\sum_{\ell=0}^{4095}P[\ell,f].
+$$
+
+这相当于峰均比大于 8，RTL 通过乘法比较避免除法截断；诊断输出的均值另取 `S>>12`。FFT 索引先映射为有符号延迟：前半区保持正值、后半区减 4096，再乘 4 并按 16368 取模，作为精搜中心。
+
+### 3.2 原始 IF 局部精搜索与判决
+
+精搜默认包含 33 个码延迟、11 个频率，共 363 格点。每格重放同一组 65472 样本，以原始采样率产生本地码和载波。前端设置 `ALIGN_FIRST_WINDOW=0`，使四个积分窗口与捕获缓存边界一致：
+
+$$
+I_w=\sum_n x[n]\cos\theta[n]c[n-lag],\quad
+Q_w=-\sum_n x[n]\sin\theta[n]c[n-lag],\quad
 P_f=\sum_{w=0}^{3}(I_w^2+Q_w^2).
 $$
 
-精判决为 $P_{f,max}>4E_f$，其中 $E_f$ 是同四窗混频后逐样本 $i^2+q^2$ 累计。两级判决均成立才考虑分配；精判决只是能量复核，后续 `locked` 必须由真实跟踪建立。
+精搜选择最大功率格点，并以 $P_{f,max}>4E_f$ 复核，其中 $E_f$ 为四窗混频样本的逐点 I/Q 能量和。粗、精两级判决通过后，管理器将精修 PRN、码延迟、频偏和参考时刻送入槽分配逻辑。
 
-频偏控制字 D 的 Hz 值为 $DF_s/2^{32}$；标称 IF 字 `0x40000000`。粗搜端点 ±2624000、步长131200；精搜步长13120，对应约±10 kHz／500 Hz／50 Hz，有控制字量化误差。
+频偏以有符号 32 bit 控制字 $D$ 表示，其物理频率为 $DF_s/2^{32}$。粗搜端点为 ±2624000，步长 131200；精搜步长 13120，分别对应约 ±10 kHz、500 Hz 和 50 Hz。采用控制字统一搜索和跟踪的频率表示，移交时可直接复用。
 
-### 3.3 位宽、状态机与结果
+### 3.3 定点格式与状态控制
 
-表 2　当前定点实现。无任意输入下的全范围溢出证明，不把已测覆盖外推为通用保证。
+表 2　主要存储和运算位宽。
 
-| 量 | 格式与处理 |
+| 数据 | 格式及实现 |
 |---|---|
-| 原始捕获缓存 | signed 3 bit ×65472，保留量化值 |
-| 抽取 I/Q | 两个 signed 16 bit 数组，各16368项 |
-| FFT 数据／旋转常数 | signed 32 bit 复数据／Q30 sin-cos；signed 64 bit 乘法 |
-| FFT 缩放 | 12级，每级算术右移1；每拍一个蝶形，每次24576蝶形拍 |
-| 幅值 | 信号混频乘2048；参考码±65536，减少归一化截断 |
-| 精搜混频／和／功率 | signed14／signed28；平方56，扩位为 unsigned64 功率 |
-| 延迟／频偏／ref | 14 bit sample／signed32 FCW／64 bit 窗首样本 |
-| 周期 | 32 bit；模块计数与顶层type5全局计数分别解释 |
+| 原始 IF 缓存 | 有符号 3 bit，65472 项 |
+| 抽取 I/Q | 两组有符号 16 bit 数组，各 16368 项 |
+| FFT 数据、旋转因子 | 复数据有符号 32 bit；sin/cos 为 Q30；乘法中间量 64 bit |
+| FFT 蝶形 | 12 级，每级算术右移 1；每拍一个蝶形，共 24576 蝶形拍 |
+| 输入幅度缩放 | 信号乘 2048，参考码幅度 ±65536 |
+| 精搜混频与积分 | 混频 14 bit、积分和 28 bit，均有符号 |
+| 平方与功率 | 56 bit 平方，扩位后以无符号 64 bit 累加 |
+| 输出元数据 | lag 为 14 bit，FCW 为有符号 32 bit，窗口 ref 为 64 bit |
 
-FFT 乘法扩位、算术移位后显式转回32 bit，无饱和器；精搜平方完整保留后扩位相加。粗搜状态包含抓窗、码FFT、逐频信号FFT、乘积、IFFT、功率评价、判决及RESULT；精搜为INIT→PRIME→REPLAY→EVALUATE→RESULT。结果 `valid&&!ready` 时保持，握手后推进。
+FFT 乘法扩位后算术移位，并显式转回 32 bit。初版幅度缩放较小，在逐级归一化时损失了弱分量；将信号幅度系数调整为 2048 后，整数模型逐点核对和浮点误差检查均通过。验证同时保留位精确模型与浮点模型：前者检查实际定点运算，后者评价缩放和截断带来的数值误差。
 
-type5 保存 PRN、捕获 ref、精修 lag／FCW／峰值。顶层 `acquisition_cycles` 不是单PRN执行时间，G probe 另记排队、粗算、精修复核和首次输出。
+粗搜状态机依次完成抓窗、码 FFT、候选频率信号 FFT、频域乘积、IFFT、功率评价和结果输出；精搜通过 INIT、PRIME、REPLAY、EVALUATE、RESULT 重用相关前端。输出采用 ready/valid 握手，`valid&&!ready` 时保存整组结果。顶层 type5 记录包含捕获参考、精修参数及周期计数，便于核查搜索过程。
 
-### 3.4 时间参考与跟踪移交
+### 3.4 捕获参考时刻与跟踪移交
 
-设捕获窗首 $n_r$、实际首跟踪样本 $n_e$，$\Delta n=n_e-n_r$，码模数 $M=2046\times2^{32}$。当前初值为
+捕获估计对应历史窗口首样本 $n_r$，跟踪实际从样本 $n_e$ 开始。令 $\Delta n=n_e-n_r$，码相位模数为 $M=2046\times2^{32}$，初始化计算为
 
 $$
-Q_e=((16368-lag)\bmod16368)2^{29}+\Delta n\left(2^{29}+\operatorname{trunc}(D/763)\right).
+Q_e=((16368-lag)\bmod16368)2^{29}
++\Delta n\left(2^{29}+\operatorname{trunc}(D/763)\right).
 $$
 
-码相位取 $Q_e\bmod M$，整周期取商；763为B1I RF／码率。载波参考零相位推进 $\Delta n(2^{30}+D)$，低32 bit回绕，余相由载波环拉入。冷启动以已处理样本为生效参考；后台预约 `processed_samples+4096`，完成预置后到预约点才接纳样本。计算拍数和墙钟不进入样本差，不能用计算完成时间覆盖捕获 ref。[集成时间契约](RECEIVER_INTEGRATION.md)
+其中 $2^{29}$ 对应每样本 1/8 chip，763 为 B1I 射频与码率之比，用于多普勒码速辅助。$Q_e$ 除以 $M$ 的商和余数分别给出整码周期数与周期内相位；载波从参考零相位推进 $\Delta n(2^{30}+D)$，取低 32 bit 作为启动相位，剩余相差由跟踪环拉入。
+
+冷启动以实际已处理样本为启动参考；后台分配预约 `processed_samples+4096`，为 PRN 预置留出时间，新槽到预约样本才开始接纳。相位推进始终依据真实样本编号，因此输入暂停和计算等待自然得到一致处理。[接收机集成时间契约](RECEIVER_INTEGRATION.md)给出了该接口与跟踪、导航记录的对应关系。
 
 ## 4. 仿真环境、测试条件与结果分析
 
-### 4.1 模块与公开 IF
+### 4.1 验证方法与数值结果
 
-主证据环境为 Windows＋WSL2 Ubuntu／Verilator5.032／g++15.2.0／Python。源、ROM和driver哈希随运行保存。本次只加ModelSim10.5轻量取证，不重跑20／52／100秒整机；真值仅激励和评分，不送DUT。
+模块及整机验证主要采用 Windows、WSL2 Ubuntu、Verilator 5.032、g++ 15.2.0 和 Python。串行相关用独立浮点相关器评分；PCPS 同时与整数、浮点模型核对。教师公开场景包含 100 s、40 dB-Hz、六颗 D1 卫星的 2 bit 实 IF，接收机使用四槽配置。
 
-表 3　实际验证及版本范围。
+表 3　模块数值核对与分版本整机实验结果。
 
-| 测试 | 实测结果 | 证据 |
+| 测试版本与输入 | 实测结果 | 证据 |
 |---|---|---|
-| A～D串行四用例／31格点 | PASS，独立浮点最大归一化功率误差0.0018028901＜0.02 | [run](../reports/local/tb_acquisition_serial.run.log)、[score](../reports/local/acquisition_float_score.log)；高信噪比缩网格 |
-| E公开4ms完整32PRN粗搜 | 345073499拍／102.305s墙钟，5粗候选 | [PCPS log](../reports/e_stage/tb_pcps_real.run.log)；候选不等于有效星 |
-| E整数／浮点核对 | 4096首格功率和32全局候选精确匹配；峰均比相对误差最大1.424%＜3% | [fixed score](../reports/e_stage/pcps_fixed_score.log) |
-| E历史公开100s | 四星自主捕获／跟踪／导航，教师self_check退出0 | [E报告](../reports/e_stage/final/FINAL_REPORT.md) |
-| F新实现公开20s | 功能PASS，80100条非end与E前缀一致，排除捕获周期字段 | [F报告](../reports/f_stage/FINAL_REPORT.md)；未重复100s |
-| G公开52s | 16PRN任务／4可用结果，208428非end与E前缀一致，排除周期字段 | [metrics](../reports/g_stage/real52/metrics.json)、[G报告](../reports/g_stage/FINAL_REPORT.md)；正式性能PARTIAL |
+| A～D，四个串行用例、31 格点 | 全部 PASS；归一化功率最大误差 0.0018028901，容限 0.02 | [运行日志](../reports/local/tb_acquisition_serial.run.log)、[浮点评分](../reports/local/acquisition_float_score.log) |
+| E，公开 IF 前 4 ms、32 PRN 完整粗搜 | 345073499 拍，墙钟 102.305 s，产生 5 个粗候选 | [PCPS 日志](../reports/e_stage/tb_pcps_real.run.log) |
+| E，PCPS 定点核对 | 首格 4096 点功率及 32 个全局候选与整数模型精确一致；峰均比最大相对误差 1.424%，容限 3% | [评分日志](../reports/e_stage/pcps_fixed_score.log) |
+| E，公开 100 s 整机 | 自主捕获四星，后续跟踪和导航恢复通过教师 self_check | [E 阶段报告](../reports/e_stage/final/FINAL_REPORT.md) |
+| F，多通道实现公开 20 s | 功能 PASS；80100 条非 end 记录与 E 同时段前缀一致，比较时排除捕获周期字段 | [F 阶段报告](../reports/f_stage/FINAL_REPORT.md) |
+| G，公开 52 s | 执行 16 个 PRN 任务后分配四星；208428 条非 end 记录保持相应前缀一致性 | [G 阶段报告](../reports/g_stage/FINAL_REPORT.md) |
 
-表 4　G52真实精修输出。ref均0，输出时已接纳样本数均65488，约4ms信号时间。
+粗搜的 5 个候选包含 PRN28，后续精搜和管理过程最终选择了 PRN8、11、13、21。两级结构在此将宽范围候选生成与细致复核分开，四组结果随后支撑了持续跟踪和电文恢复。
 
-| PRN | lag／sample | FCW | Hz | 粗算拍 | 精修复核拍 | 首次输出拍 |
+表 4　G 版本 52 s 运行中的实际捕获输出，数据取自 [real52 metrics](../reports/g_stage/real52/metrics.json)。四组窗口 ref 均为 0，输出时累计接纳 65488 样本。
+
+| PRN | 码延迟/sample | 频偏控制字 | 频偏/Hz | 粗算拍数 | 精修及复核拍数 | 首次输出全局拍 |
 |---:|---:|---:|---:|---:|---:|---:|
 | 8 | 12603 | 131200 | 500.000 | 10781374 | 23941051 | 56354752 |
 | 11 | 2024 | −747840 | −2849.997 | 10781374 | 24421124 | 113120002 |
 | 13 | 1563 | 183680 | 699.999 | 10781374 | 24441991 | 159124744 |
 | 21 | 6099 | −406720 | −1549.999 | 10781374 | 24236170 | 269611915 |
 
-首次输出含共享抓窗和前序任务等待，复核至输出均2拍。单星粗算＋精修约3472～3522万拍，逻辑clk未定，不能写成已达成实时性能。公开码／频真值缺失，正确性由自主输出、独立数值核对及后续跟踪／导航一致性支持。
+单星粗算加精修约需 3472～3522 万拍，首次输出全局拍还包含抓窗和前序任务等待。捕获复核到输出均为 2 拍，说明结果经过固定流水进入记录接口。这里分别保留样本参考和计算拍数，可以同时分析信号状态与硬件计算开销。
 
-### 4.2 G边界失败
+### 4.2 两级结果波形与串行相关图
 
-每档6有目标＋2目标缺失、独立seed、各4ms；候选PRN6／7，41粗频点及33×11精网格。六联合点测试lag0／1／8191／8192／16366／16367，频−10000／+10000／−9750／+9750／−250／+250Hz，NH涉及0／1／7／19。成功预设为身份正确、循环lag误差≤1sample、频误≤100Hz。
+图 2 使用 ModelSim SE-64 10.5 运行当前 RTL 的 `tb_p02_probe`：输入为无噪声 PRN6、0 Hz、4 ms IF，粗搜配置为一颗 PRN、一个频点，精搜为 ±4 sample、0 Hz。测试接纳 65472 样本，接纳任务至复核为 962024 拍，自动判定 `P02_RTL_TIMING_PROBE_PASS`，退出码 0。[原始日志](../reports/local/report_refresh_2026-10-14/modelsim_tb_p02_probe.log)
 
-| C/N0 dB-Hz | 真值成功 | 缺目标虚警 | 检出率Wilson95%区间 | 分类 |
-|---:|---:|---:|---|---|
-| 40 | 1／6 | 0／2 | 3.005%～56.350% | 已执行子集FAIL／整体PARTIAL |
-| 50 | 5／6 | 0／2 | 43.650%～96.995% | 已执行子集FAIL／整体PARTIAL |
+![PCPS 粗搜与精搜结果时序](report_assets/acquisition_pcps_refine.png)
 
-来源：[40 metrics](../reports/g_stage/acquisition/metrics.json)、[50 metrics](../reports/g_stage/acquisition_cn50/metrics.json)及各scenarios／原始结果。退出0表示采集和评分完成，不表示性能PASS；两档复用相同seed集合，不合并为16独立重复。0／2虚警不能证明正式≤1%工作点。
+图 2　真实 WLF 导出 VCD 后绘制的结果时序，横轴为 100 MHz 测试平台的逻辑时间。局部窗口显示粗候选保持期间精搜完成：`fine_detected` 置位，`fine_valid` 给出有效结果，PRN6 的 lag 与频偏均为 0；结果握手后 valid 撤销。粗峰值 308569539412、均值 222921079，对应明显的相关峰；精搜峰值为 20206887480857088。两级功率使用各自的缩放，分别参与本级判决。该时序展示了候选保持、精搜确认和握手结束的完整连接过程。
 
-50档case2真值−9750Hz／NH7，估计约−9950Hz。同一IF、真值码相位的[独立浮点扫频](../reports/g_stage/acquisition_cn50/nh_frequency_objective_diagnostic.json)也在−9950Hz最大，支持固定1ms积分目标受NH边界影响，未证明RTL算术错误。未调容限或门限掩盖失败。正式全覆盖及每档100有＋100缺／10s观察窗缺合格输入。
+![串行搜索格点相关功率](report_assets/acquisition_serial_cells.svg)
 
-### 4.3 真实波形与历史曲线
+图 3　早期串行搜索的实际格点功率，数据来自 `acquisition_cells.csv`。正频偏用例在 lag16、+1000 Hz 附近取得目标峰，负频偏用例在 lag8、−1000 Hz 取得目标峰，说明本地码延迟方向和载波补偿符号设置一致。配合 31 格点的独立功率核对，这一实验为后续复用混频、相关与精搜前端建立了基础。图像来源、绘图区间及原始文件哈希统一保存在[图像证据清单](report_assets/waveform_provenance.json)。
 
-![PCPS及精搜结果](report_assets/acquisition_pcps_refine.png)
+### 4.3 噪声与 NH 边界分析
 
-图 2　由ModelSim SE-64 10.5实际WLF导出VCD绘制的局部时序图，**不是GUI截图**。当前RTL的 `tb_p02_probe` 中，粗候选保持期间精搜完成，输出 `fine_valid/fine_detected`、lag0／FCW0，随后结果握手撤销valid。无噪声PRN6／0Hz，4ms IF；只搜一PRN／一频点，精搜±4sample／0Hz。实际65472样本，任务接纳到复核962024拍，`P02_RTL_TIMING_PROBE_PASS`／退出0。横轴为100MHz TB逻辑时间，不是IF信号时间；它证明两级连接，不证明全网格／弱信号性能。WLF中的枚举状态导出为VCD未知编码，图中不显示或臆造状态值。[本次日志](../reports/local/report_refresh_2026-10-14/modelsim_tb_p02_probe.log)
+G 阶段进一步采用自生成 IF 检查搜索边界。每档包含 6 个有目标、2 个无目标的 4 ms 用例，搜索 PRN6/7、41 个粗频点及完整 33×11 精网格；两档使用相同种子集合。码延迟覆盖 0、1、8191、8192、16366、16367 sample，频偏覆盖 −10000、+10000、−9750、+9750、−250、+250 Hz，NH 相位涉及 0、1、7、19。成功条件为 PRN 正确、循环码延迟误差不超过 1 sample、频率误差不超过 100 Hz。
 
-![早期串行格点功率](report_assets/acquisition_serial_cells.svg)
+表 5　噪声与 NH 联合边界测试结果。
 
-图 3　早期实际 `acquisition_cells.csv` 曲线，保留为方案演进依据，不是PCPS性能图。图片来源、源/WLF哈希及绘图范围见[图像证据清单](report_assets/waveform_provenance.json)。
+| 输入 C/N0 | 满足成功条件 | 无目标误检 | 结果 |
+|---:|---:|---:|---|
+| 40 dB-Hz | 1/6 | 0/2 | 边界测试未通过 |
+| 50 dB-Hz | 5/6 | 0/2 | 边界测试未通过 |
 
-本次曾打开并观察ModelSim真实WLF，网络中断后Computer Use运行时两次报“failed to write kernel assets／系统找不到指定的路径（os error 3）”，重置后仍失败，未取得可归档GUI截图。因此采用真实VCD时序图、已有SVG和原始结果表；未修复软件安装或许可证，也未伪造截图。
+来源：[40 dB-Hz 结果](../reports/g_stage/acquisition/metrics.json)、[50 dB-Hz 结果](../reports/g_stage/acquisition_cn50/metrics.json)。这组测试显示，提高信号强度后成功数由 1 个增加到 5 个。50 dB-Hz 的剩余失败点为真值 −9750 Hz、NH 相位 7，估计约 −9950 Hz；[独立浮点扫频](../reports/g_stage/acquisition_cn50/nh_frequency_objective_diagnostic.json)在同一 IF、真值码相位下也于 −9950 Hz 取得最大值。该现象将问题指向固定 1 ms 窗内 NH 翻转对相关目标的影响，解释了四窗非相干积累与窗内符号变化之间的区别。
 
-## 5. 问题修复、结论及当前限制
+## 5. 实验结论
 
-FFT初版缩放过小造成归一化截断和噪声底偏置，修为上述幅值并重新逐点核对。弱峰浮点argmax不稳定，改用完整整数golden核候选／频偏／功率／均值／判决，另保留浮点误差检查；失败日志保留，门限不放宽。
+本实验完成了从串行相关到 PCPS 粗搜、原始 IF 精搜的两级捕获设计。FFT 同时搜索全部码延迟，局部精搜恢复原始主码周期和细频率分辨率，整数与浮点模型共同验证了定点运算。真实公开场景中，模块输出四颗卫星的码延迟与频偏，经样本参考推进后进入闭环跟踪；E 的 100 s、F 的 20 s 和 G 的 52 s 运行分别提供了对应版本的系统实验结果。
 
-两级捕获已有公开场景四星功能及模块数值、移交和后续前缀一致性证据。G联合边界子集未全部通过，正式统计和全覆盖尚未验收；默认四槽不代表六星全检出或十二星验收。输入反压允许暂停，持续实时未证明。未执行ASIC综合、布局布线或物理验证，不报告面积、功耗或芯片时序。
+设计迭代的关键在于同时处理数值精度和时间语义：幅度缩放改善逐级 FFT 截断，原始 IF 复核修正粗搜索格点误差，真实样本编号使后台搜索与通道启动保持相位一致。这些实现使捕获结果能够直接成为后续跟踪、同步和导航恢复的有效初值。
 
-规范：[指导书V1.7](../EDA_CONTEXT_COMPRESSED/集成电路EDA实验指导书_V1.7(1).pdf)第3／7章、[B1I ICD2.1](../EDA_CONTEXT_COMPRESSED/北斗_B1I_B2I_ICD_2.1版_中文版.pdf)§4.3。历史A～D依据为[archive原目标](archive/GOAL_ABCD_2026-10-13_original.md)和reports/local。指定相对archive路径实指本仓库docs/archive，归档保持原样。
+当前需要继续改善的主要是低信号强度及 NH 窗内翻转条件下的检测稳定性；上述边界测试保留了漏检和约 200 Hz 频偏偏置。后续可围绕积分窗口与 NH 变化的关系优化判决，并增加独立随机样本以评价检出率和误检率。
