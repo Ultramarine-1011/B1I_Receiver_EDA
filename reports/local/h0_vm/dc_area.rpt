@@ -1,0 +1,118 @@
+ 
+****************************************
+Report : area
+Design : b1i_prn_gen
+Version: K-2015.06
+Date   : Fri Oct 16 15:16:41 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed90nm_typ (File: /home/IC/Foundry_Library/Digital/saed90nm_typ.db)
+
+Number of ports:                           46
+Number of nets:                           260
+Number of cells:                          189
+Number of combinational cells:            147
+Number of sequential cells:                41
+Number of macros/black boxes:               0
+Number of buf/inv:                         18
+Number of references:                      25
+
+Combinational area:               1692.979217
+Buf/Inv area:                       99.532803
+Noncombinational area:            1313.280018
+Macro/Black Box area:                0.000000
+Net Interconnect area:             128.208654
+
+Total cell area:                  3006.259234
+Total area:                       3134.467888
+1
+ 
+****************************************
+Report : reference
+Design : b1i_prn_gen
+Version: K-2015.06
+Date   : Fri Oct 16 15:16:41 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             saed90nm_typ
+                                  7.372800       2     14.745600  
+AO21X1             saed90nm_typ
+                                 10.137600       1     10.137600  
+AO22X1             saed90nm_typ
+                                 11.980800      23    275.558393  
+AO221X1            saed90nm_typ
+                                 12.902400      10    129.024000  
+AO222X1            saed90nm_typ
+                                 14.745600       2     29.491199  
+DFFARX1            saed90nm_typ
+                                 32.256001      31    999.936016  n
+DFFASX1            saed90nm_typ
+                                 31.334400      10    313.344002  n
+INVX0              saed90nm_typ
+                                  5.529600      11     60.825602  
+MUX21X1            saed90nm_typ
+                                 11.059200      15    165.888004  
+MUX41X1            saed90nm_typ
+                                 23.040001       1     23.040001  
+NAND3X0            saed90nm_typ
+                                  7.372800       4     29.491199  
+NAND4X0            saed90nm_typ
+                                  8.294400       1      8.294400  
+NBUFFX2            saed90nm_typ
+                                  5.529600       6     33.177601  
+NOR2X0             saed90nm_typ
+                                  5.529600       8     44.236801  
+NOR3X0             saed90nm_typ
+                                  8.294400       1      8.294400  
+NOR4X0             saed90nm_typ
+                                  9.216000       1      9.216000  
+OA22X1             saed90nm_typ
+                                 11.059200       6     66.355202  
+OA221X1            saed90nm_typ
+                                 12.902400       6     77.414400  
+OR2X1              saed90nm_typ
+                                  7.372800       1      7.372800  
+OR3X1              saed90nm_typ
+                                  9.216000       1      9.216000  
+XNOR2X1            saed90nm_typ
+                                 13.824000      12    165.888004  
+XNOR3X1            saed90nm_typ
+                                 22.118401       1     22.118401  
+XOR2X1             saed90nm_typ
+                                 13.824000      20    276.480007  
+XOR3X1             saed90nm_typ
+                                 22.118401       3     66.355202  
+b1i_prn_gen_DW01_inc_0          160.358401       1    160.358401  h
+-----------------------------------------------------------------------------
+Total 25 references                                  3006.259234
+
+****************************************
+Design: b1i_prn_gen_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HADDX1             saed90nm_typ
+                                 15.667200       9    141.004801  r
+INVX0              saed90nm_typ
+                                  5.529600       1      5.529600  
+XOR2X1             saed90nm_typ
+                                 13.824000       1     13.824000  
+-----------------------------------------------------------------------------
+Total 3 references                                    160.358401
+1

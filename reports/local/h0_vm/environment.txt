@@ -1,0 +1,8 @@
+date: 2026-10-16 15:16:36 +0800
+host: IC
+user: 7901_15
+root: /home/7901_15/B1I_Receiver_EDA
+vcs: /opt/Synopsys/VCS2014/bin/vcs
+dc_shell: /opt/Synopsys/Synplify2015/bin/dc_shell
+digital_lib: /home/IC/Foundry_Library/Digital
+license_file_readable: yes

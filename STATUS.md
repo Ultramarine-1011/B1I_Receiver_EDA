@@ -1,5 +1,7 @@
 # CURRENT STATUS
 
+2026-10-16：H0 已在虚拟机解压工程 `/home/7901_15/B1I_Receiver_EDA` 实际完成。未从 GitHub 下载或覆盖该目录，也未改 PRN RTL。VCS I-2014.03 对当前 `rtl/b1i_prn_gen.sv` 与 `tb/tb_b1i_prn_gen.sv` 退出码 0，32 个 PRN 各 2046 chip 通过，日志含 `B1I_PRN_REGRESSION_PASS`。Design Compiler K-2015.06 用 SAED90nm typical 完成 analyze/elaborate/link、check_design、实验性 10 ns 时钟与 14.08528 fF 输出负载下的 compile。单元面积 3006.259234，含线网总面积 3134.467888；关键路径 `active_prn_reg[1]` 到 `chip` 到达 1.650 ns，slack 7.150 ns（MET），无约束违例，网表已导出。重复入口 `scripts/h0_vm_smoke.sh`。证据见 `docs/H0_VM_SMOKE.md` 与 `reports/local/h0_vm/`。本阶段停止，不做完整接收机综合或 ICC。
+
 2026-10-16：线下验收演示准备完成。入口scripts/demo_acceptance.cmd及demo_acceptance.ps1，菜单1→2→3→9→4；捕获3.032s、NH1.993s、导航2.281s实跑PASS，跟踪原双用例完整ModelSim77.324s PASS/WLF保留，重复运行耗时波动后按用户要求固定回放。最终all现场流程退出0、约9s（不含GUI与讲解），菜单/原E100日志读取验证；三模块GUI重点波形已检查，四份do保存信号/进制/时间窗。操作、讲解及8问答见docs/ACCEPTANCE_DEMO.md，真实预演与一次重复超时记录见reports/local/acceptance_demo_2026-10-16。未改RTL/教师/原TB判据/三报告/历史证据，未重跑整机IF。只保存本次入口、轻量证据与交接，项目唯一下一任务仍为本文末条。
 
 2026-10-15：按用户反馈完成三份课程实验报告的全面重写，主体以算法、RTL实现、仿真方法和实际成果为主线，补充六幅原图的信号/数据分析，将必要改进事项集中到各报告末尾一小段。保留E100/F20/G52版本及真实结果对应关系、边界失败数据与来源，删除重复验收免责声明和环境故障叙述。80个引用、六图、16表、三Mermaid及61处公式的解析/浏览器渲染检查PASS；RTL、测试结果、历史证据、图片字节保持不变，未运行仿真。本次只更新三报告及STATUS/WORKLOG，正常Git提交推送main；项目唯一下一任务仍为本文末条。
@@ -16,4 +18,4 @@
 
 18边界检查、8公开52交付检查、12源清单、16最终仿真退出0及因果依赖审计PASS。25项RTL/ROM匹配F，23冻结项及E100成功BIN/备份SHA c9c4d23d...eccdd501保持。完整事实/分类/缺口/复验见reports/g_stage/FINAL_REPORT.md，无OFFICIAL_PASS或新100s实跑声明。
 
-唯一下一任务：取得并登记教师统一合格的正式性能IF场景及独立码/频/字/ECEF/动态真值，再接入现有评价入口；输入未具备前不重复长仿真，不进入H。
+唯一下一任务：等待用户授权后续阶段。未授权前不启动完整接收机综合或 ICC 布局布线。教师正式性能 IF 与独立真值仍缺，不在本阶段补跑。

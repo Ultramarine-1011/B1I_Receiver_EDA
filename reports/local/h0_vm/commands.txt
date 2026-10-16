@@ -1,0 +1,2 @@
+vcs -sverilog -R ../../rtl/b1i_prn_gen.sv ../../tb/tb_b1i_prn_gen.sv
+dc_shell -f ../../scripts/h0_dc_prn.tcl

@@ -1,0 +1,207 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : b1i_prn_gen
+Version: K-2015.06
+Date   : Fri Oct 16 15:16:41 2026
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: active_prn_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: chip (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  b1i_prn_gen        8000                  saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  active_prn_reg[1]/CLK (DFFARX1)         0.000      0.000 r
+  active_prn_reg[1]/Q (DFFARX1)           0.187      0.187 r
+  U255/QN (NOR2X0)                        0.123      0.310 f
+  U237/ZN (INVX0)                         0.109      0.420 r
+  U228/Q (OA22X1)                         0.142      0.562 r
+  U227/Q (OA221X1)                        0.093      0.655 r
+  U226/Q (MUX21X1)                        0.127      0.782 r
+  U199/Q (MUX41X1)                        0.155      0.937 r
+  U198/Q (MUX21X1)                        0.132      1.069 r
+  U197/Q (XOR2X1)                         0.147      1.216 f
+  U196/QN (NOR2X0)                        0.125      1.341 r
+  chip (out)                              0.309      1.650 r
+  data arrival time                                  1.650
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  clock uncertainty                      -0.200      9.800
+  output external delay                  -1.000      8.800
+  data required time                                 8.800
+  -----------------------------------------------------------
+  data required time                                 8.800
+  data arrival time                                 -1.650
+  -----------------------------------------------------------
+  slack (MET)                                        7.150
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  b1i_prn_gen        8000                  saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  input external delay                    1.000      1.000 r
+  load (in)                               0.022      1.022 r
+  U264/ZN (INVX0)                         0.135      1.157 f
+  U263/QN (NAND3X0)                       0.124      1.281 r
+  U189/ZN (INVX0)                         0.136      1.417 f
+  U188/QN (NOR2X0)                        0.183      1.600 r
+  U135/Z (NBUFFX2)                        0.224      1.823 r
+  U154/Q (AO221X1)                        0.207      2.031 r
+  g1_state_reg[3]/D (DFFASX1)             0.035      2.065 r
+  data arrival time                                  2.065
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  clock uncertainty                      -0.200      9.800
+  g1_state_reg[3]/CLK (DFFASX1)           0.000      9.800 r
+  library setup time                     -0.098      9.702
+  data required time                                 9.702
+  -----------------------------------------------------------
+  data required time                                 9.702
+  data arrival time                                 -2.065
+  -----------------------------------------------------------
+  slack (MET)                                        7.637
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  b1i_prn_gen        8000                  saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  input external delay                    1.000      1.000 r
+  load (in)                               0.022      1.022 r
+  U264/ZN (INVX0)                         0.135      1.157 f
+  U263/QN (NAND3X0)                       0.124      1.281 r
+  U189/ZN (INVX0)                         0.136      1.417 f
+  U188/QN (NOR2X0)                        0.183      1.600 r
+  U135/Z (NBUFFX2)                        0.224      1.823 r
+  U152/Q (AO221X1)                        0.207      2.031 r
+  g1_state_reg[1]/D (DFFASX1)             0.035      2.065 r
+  data arrival time                                  2.065
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  clock uncertainty                      -0.200      9.800
+  g1_state_reg[1]/CLK (DFFASX1)           0.000      9.800 r
+  library setup time                     -0.098      9.702
+  data required time                                 9.702
+  -----------------------------------------------------------
+  data required time                                 9.702
+  data arrival time                                 -2.065
+  -----------------------------------------------------------
+  slack (MET)                                        7.637
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  b1i_prn_gen        8000                  saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  input external delay                    1.000      1.000 r
+  load (in)                               0.022      1.022 r
+  U264/ZN (INVX0)                         0.135      1.157 f
+  U263/QN (NAND3X0)                       0.124      1.281 r
+  U189/ZN (INVX0)                         0.136      1.417 f
+  U188/QN (NOR2X0)                        0.183      1.600 r
+  U135/Z (NBUFFX2)                        0.224      1.823 r
+  U158/Q (AO221X1)                        0.207      2.031 r
+  g1_state_reg[7]/D (DFFASX1)             0.035      2.065 r
+  data arrival time                                  2.065
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  clock uncertainty                      -0.200      9.800
+  g1_state_reg[7]/CLK (DFFASX1)           0.000      9.800 r
+  library setup time                     -0.098      9.702
+  data required time                                 9.702
+  -----------------------------------------------------------
+  data required time                                 9.702
+  data arrival time                                 -2.065
+  -----------------------------------------------------------
+  slack (MET)                                        7.637
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  b1i_prn_gen        8000                  saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  input external delay                    1.000      1.000 r
+  load (in)                               0.022      1.022 r
+  U264/ZN (INVX0)                         0.135      1.157 f
+  U263/QN (NAND3X0)                       0.124      1.281 r
+  U189/ZN (INVX0)                         0.136      1.417 f
+  U188/QN (NOR2X0)                        0.183      1.600 r
+  U135/Z (NBUFFX2)                        0.224      1.823 r
+  U156/Q (AO221X1)                        0.207      2.031 r
+  g1_state_reg[5]/D (DFFASX1)             0.035      2.065 r
+  data arrival time                                  2.065
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  clock uncertainty                      -0.200      9.800
+  g1_state_reg[5]/CLK (DFFASX1)           0.000      9.800 r
+  library setup time                     -0.098      9.702
+  data required time                                 9.702
+  -----------------------------------------------------------
+  data required time                                 9.702
+  data arrival time                                 -2.065
+  -----------------------------------------------------------
+  slack (MET)                                        7.637
+
+
+1

@@ -1,0 +1,253 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# H0 experimental Design Compiler run for b1i_prn_gen.
+# Invoke from work/h0_dc so the relative RTL and report paths stay stable.
+# The 10 ns clock is an experiment for this smoke, not a course clock requirement.
+set_app_var sh_enable_page_mode false
+false
+set_app_var search_path [concat $search_path /home/IC/Foundry_Library/Digital]
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Foundry_Library/Digital
+set_app_var target_library [list saed90nm_typ.db]
+saed90nm_typ.db
+set_app_var link_library [list * saed90nm_typ.db]
+* saed90nm_typ.db
+set report_dir ../../reports/local/h0_vm
+../../reports/local/h0_vm
+file mkdir $report_dir
+if {[analyze -format sverilog ../../rtl/b1i_prn_gen.sv] == 0} {
+  puts "H0_DC_ANALYZE_FAIL"
+  exit 1
+}
+Running PRESTO HDLC
+Compiling source file ../../rtl/b1i_prn_gen.sv
+Presto compilation completed successfully.
+Loading db file '/home/IC/Foundry_Library/Digital/saed90nm_typ.db'
+if {[elaborate b1i_prn_gen] == 0} {
+  puts "H0_DC_ELABORATE_FAIL"
+  exit 1
+}
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 82 in file
+	'../../rtl/b1i_prn_gen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine b1i_prn_gen line 98 in file
+		'../../rtl/b1i_prn_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   active_prn_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   chip_index_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   configured_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'b1i_prn_gen'.
+current_design b1i_prn_gen
+Current design is 'b1i_prn_gen'.
+{b1i_prn_gen}
+if {[link] == 0} {
+  puts "H0_DC_LINK_FAIL"
+  exit 1
+}
+
+  Linking design 'b1i_prn_gen'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  b1i_prn_gen                 /home/7901_15/B1I_Receiver_EDA/work/h0_dc/b1i_prn_gen.db
+  saed90nm_typ (library)      /home/IC/Foundry_Library/Digital/saed90nm_typ.db
+
+redirect $report_dir/check_design_pre_constraint.rpt { check_design }
+# Experimental constraint: 100 MHz, 1 ns input/output delay, async reset excluded.
+create_clock -name clk -period 10 [get_ports clk]
+1
+set_clock_uncertainty 0.2 [get_clocks clk]
+1
+set data_inputs [remove_from_collection [all_inputs] [get_ports {clk rst_n}]]
+{load chip_enable prn_select[5] prn_select[4] prn_select[3] prn_select[2] prn_select[1] prn_select[0]}
+set_input_delay -clock clk 1.0 $data_inputs
+1
+set_output_delay -clock clk 1.0 [all_outputs]
+1
+set_driving_cell -lib_cell INVX1 $data_inputs
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+# saed90nm_typ capacitive_load_unit is 1 fF. Use four INVX1 input pins.
+set inv_load [load_of saed90nm_typ/INVX1/INP]
+3.52132
+set_load [expr {4.0 * $inv_load}] [all_outputs]
+1
+puts "H0_INVX1_INP_LOAD_FF $inv_load"
+H0_INVX1_INP_LOAD_FF 3.52132
+puts "H0_OUTPUT_LOAD_FF [expr {4.0 * $inv_load}]"
+H0_OUTPUT_LOAD_FF 14.08528
+set_false_path -from [get_ports rst_n]
+1
+redirect $report_dir/check_design.rpt { check_design }
+if {[compile] == 0} {
+  puts "H0_DC_COMPILE_FAIL"
+  exit 1
+}
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'b1i_prn_gen'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'b1i_prn_gen_DW01_inc_0'
+  Processing 'b1i_prn_gen_DW01_cmp2_0'
+  Processing 'b1i_prn_gen_DW01_cmp2_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    3464.0      0.00       0.0       0.0                          
+    0:00:01    3464.0      0.00       0.0       0.0                          
+    0:00:01    3464.0      0.00       0.0       0.0                          
+    0:00:01    3464.0      0.00       0.0       0.0                          
+    0:00:01    3464.0      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3396.8      0.00       0.0       0.0                          
+    0:00:01    3162.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    3162.2      0.00       0.0       0.0                          
+    0:00:01    3162.2      0.00       0.0       0.0                          
+    0:00:01    3156.6      0.00       0.0       0.0                          
+    0:00:01    3151.2      0.00       0.0       0.0                          
+    0:00:01    3145.5      0.00       0.0       0.0                          
+    0:00:01    3139.9      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+    0:00:01    3134.5      0.00       0.0       0.0                          
+Loading db file '/home/IC/Foundry_Library/Digital/saed90nm_typ.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+redirect $report_dir/check_design_post_compile.rpt { check_design }
+redirect $report_dir/dc_area.rpt { report_area }
+redirect -append $report_dir/dc_area.rpt { report_reference -hierarchy }
+redirect $report_dir/dc_resources.rpt { report_resources }
+redirect $report_dir/dc_qor.rpt { report_qor }
+redirect $report_dir/dc_timing.rpt { report_timing -delay max -max_paths 5 -nworst 1 -significant_digits 3 }
+redirect $report_dir/dc_timing_path.rpt { report_timing -delay max -path full -max_paths 3 -nworst 1 -significant_digits 3 }
+redirect $report_dir/dc_constraint.rpt { report_constraint -all_violators }
+write -format verilog -hierarchy -output $report_dir/b1i_prn_gen_saed90nm.v
+Writing verilog file '/home/7901_15/B1I_Receiver_EDA/reports/local/h0_vm/b1i_prn_gen_saed90nm.v'.
+1
+write_sdc $report_dir/b1i_prn_gen_saed90nm.sdc
+1
+puts "H0_DC_COMPILE_DONE"
+H0_DC_COMPILE_DONE
+exit
+
+Memory usage for main task 91 Mbytes.
+Memory usage for this session 91 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+
+Thank you...
