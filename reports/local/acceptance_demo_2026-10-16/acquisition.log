@@ -1,0 +1,42 @@
+COMMAND: C:\modeltech64_10.5\win64\vsim.exe -c -onfinish stop -voptargs=+acc -wlf wave.wlf C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/acceptance_demo/build/demo_work.tb_p02_probe -do run.do
+Reading C:/modeltech64_10.5/tcl/vsim/pref.tcl
+
+# 10.5
+
+# vsim -c -onfinish stop -voptargs="+acc" -wlf wave.wlf C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/acceptance_demo/build/demo_work.tb_p02_probe -do "run.do" 
+# Start time: 13:05:23 on Oct 16,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  ModelSim SE-64 10.5 Feb 13 2016 
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_p02_probe(fast)
+# Loading work.acquisition_pcps(fast)
+# Loading work.b1i_prn_gen(fast)
+# Loading work.fft4096_serial(fast)
+# Loading work.acquisition_refine(fast)
+# Loading work.tracking_frontend(fast)
+# Loading work.code_nco(fast)
+# Loading work.carrier_nco_mixer(fast)
+# Loading work.epl_correlator(fast)
+# do run.do
+# P02_RTL_TIMING_PROBE_PASS reduced_grid=1 queue=0 accepted=14 verified=962038 samples=65472
+# ** Note: $finish    : C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/acceptance_demo/build/tb_p02_probe.sv(49)
+#    Time: 9620460 ns  Iteration: 1  Instance: /tb_p02_probe
+# Break in Module tb_p02_probe at C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/acceptance_demo/build/tb_p02_probe.sv line 49
+# Stopped at C:/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/acceptance_demo/build/tb_p02_probe.sv line 49
+# End time: 13:05:25 on Oct 16,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+
+EXIT_CODE: 0
+WALL_SECONDS: 3.030

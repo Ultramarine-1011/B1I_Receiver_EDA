@@ -1,0 +1,46 @@
+[
+  {
+    "module": "acquisition",
+    "status": "PASS",
+    "mode": "live_self_check",
+    "simulation_seconds": 3.032,
+    "exit_code": 0,
+    "verified_utc": "2026-10-16T05:05:26.0341993Z",
+    "runtime_log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_130522_937_acquisition\\simulation.log",
+    "runtime_wlf": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_130522_937_acquisition\\wave.wlf",
+    "wlf_sha256": "3486FF4D44A91A7C825ECCC41223FB496AE17D99E35F791F55F469CFD02D4242"
+  },
+  {
+    "module": "tracking",
+    "status": "PASS",
+    "mode": "saved_complete_PASS",
+    "simulation_seconds": 77.324,
+    "exit_code": 0,
+    "verified_utc": "2026-10-16T04:52:28.4789707Z",
+    "runtime_log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_125111_142_tracking\\simulation.log",
+    "runtime_wlf": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_125111_142_tracking\\wave.wlf",
+    "wlf_sha256": "6475B0C6220302B9A9D08E0A6FC51E5149C0DE8B546D1544027B05B42EAFCD07"
+  },
+  {
+    "module": "nh",
+    "status": "PASS",
+    "mode": "live_self_check",
+    "simulation_seconds": 1.993,
+    "exit_code": 0,
+    "verified_utc": "2026-10-16T05:05:28.1653532Z",
+    "runtime_log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_130526_160_nh\\simulation.log",
+    "runtime_wlf": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_130526_160_nh\\wave.wlf",
+    "wlf_sha256": "0CA8D3A44109AD613C187CFC87843419796D1C65B79CC91C91C0991B17D1C696"
+  },
+  {
+    "module": "navigation",
+    "status": "PASS",
+    "mode": "live_self_check",
+    "simulation_seconds": 2.281,
+    "exit_code": 0,
+    "verified_utc": "2026-10-16T05:05:30.5110717Z",
+    "runtime_log": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_130528_213_navigation\\simulation.log",
+    "runtime_wlf": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\work\\acceptance_demo\\runs\\20261016_130528_213_navigation\\wave.wlf",
+    "wlf_sha256": "D6016AB7D409ECC289E8FDD8B0E2296618C5F4E09B71731EE430056B5ACBEF7B"
+  }
+]
