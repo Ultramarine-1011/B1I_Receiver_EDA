@@ -21,8 +21,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\experiments\bdi_capture\pl
 |---|---|
 | 独立RTL / 自检TB | [bdi_sliding_capture.sv](rtl/bdi_sliding_capture.sv)、[tb_bdi_capture.sv](tb/tb_bdi_capture.sv) |
 | 独立ICD列表模型 | [reference.py](model/reference.py) |
-| 完整波形，约161 MB | [capture.vcd](runs/20261019_164411/main/capture.vcd) |
-| 逐窗结果 / 全样点观测CSV | [windows.csv](runs/20261019_164411/main/windows.csv)、[samples.csv](runs/20261019_164411/main/samples.csv) |
+| 完整波形，约161 MB | `runs/20261019_164411/main/capture.vcd` 仅保留在本机，未提交；SHA256 见 [run_summary.json](runs/20261019_164411/run_summary.json) |
+| 逐窗结果 / 全样点观测CSV | [windows.csv](runs/20261019_164411/main/windows.csv) 已提交；约15 MB的 `samples.csv` 仅保留在本机，未提交 |
 | 编译与仿真命令、退出码、评分 | [run_summary.json](runs/20261019_164411/run_summary.json)、[主用例日志](runs/20261019_164411/main/simulation.log)、[build.log](runs/20261019_164411/build.log) |
 | 既有文件保护 / 当前源码核验 | [baseline.json](evidence/baseline.json)、[delivery_audit.json](runs/20261019_164411/delivery_audit.json) |
 
