@@ -1,6 +1,8 @@
 # CURRENT STATUS
 
-2026-10-19：独立简化BDI单星捕获实验完成，待用户检查；入口 [experiments/bdi_capture/README.md](experiments/bdi_capture/README.md)。严格采用新教师默认MEO-6/PRN6源及8192门限，原样复用PRN RTL构建循环表；从相位0逐窗推进，第11窗相位10主峰57288，单拍hit，随后两窗57288复核。全部6项自检/独立评分退出0，13窗212784有效样点，连续dump间隔16368拍，三窗49104样点码逐点一致；停顿/末样点非零/零输入/复位重搜及同一PRN6相位3补充验证通过。完整VCD、五组PNG/SVG、CSV、真实命令/退出码/源hash见 experiments/bdi_capture/runs/20261019_164411。说明示例低值表六处略异，独立模型及实际RTL一致、错误相位最大1848低于8192，差异和首次失败保留。861个既有文件除STATUS/WORKLOG外859个SHA不变；教师源、原H0/PRN/综合脚本/历史证据和用户三报告/PDF均保护。完整接收机/H0回归/DC/ICC NOT_RUN；未提交或推送Git，HEAD仍88e5182。
+2026-10-19：独立简化BDI单星捕获实验完成，待用户检查；入口 [experiments/bdi_capture/README.md](experiments/bdi_capture/README.md)。严格采用新教师默认MEO-6/PRN6源及8192门限，原样复用PRN RTL构建循环表；从相位0逐窗推进，第11窗相位10主峰57288，单拍hit，随后两窗57288复核。全部6项自检/独立评分退出0，13窗212784有效样点，连续dump间隔16368拍，三窗49104样点码逐点一致；停顿/末样点非零/零输入/复位重搜及同一PRN6相位3补充验证通过。完整VCD和全样点CSV留在本机；运行摘要、轻量日志、PNG和源hash见 experiments/bdi_capture/runs/20261019_164411。说明示例低值表六处略异，独立模型及实际RTL一致、错误相位最大1848低于8192，差异和首次失败保留。861个既有文件除状态/日志外859个SHA不变；教师源、PRN源、三报告/PDF均保护。完整接收机/H0整机回归/后端流程NOT_RUN；本地实验提交已创建，正在同步最新main。
+
+2026-10-16：H0 已在虚拟机解压工程 `/home/7901_15/B1I_Receiver_EDA` 实际完成。未从 GitHub 下载或覆盖该目录，也未改 PRN RTL。VCS I-2014.03 对当前 `rtl/b1i_prn_gen.sv` 与 `tb/tb_b1i_prn_gen.sv` 退出码 0，32 个 PRN 各 2046 chip 通过，日志含 `B1I_PRN_REGRESSION_PASS`。Design Compiler K-2015.06 用 SAED90nm typical 完成 analyze/elaborate/link、check_design、实验性 10 ns 时钟与 14.08528 fF 输出负载下的 compile。单元面积 3006.259234，含线网总面积 3134.467888；关键路径 `active_prn_reg[1]` 到 `chip` 到达 1.650 ns，slack 7.150 ns（MET），无约束违例，网表已导出。重复入口 `scripts/h0_vm_smoke.sh`。证据见 `docs/H0_VM_SMOKE.md` 与 `reports/local/h0_vm/`。本阶段停止，不做完整接收机综合或 ICC。
 
 2026-10-16：线下验收演示准备完成。入口scripts/demo_acceptance.cmd及demo_acceptance.ps1，菜单1→2→3→9→4；捕获3.032s、NH1.993s、导航2.281s实跑PASS，跟踪原双用例完整ModelSim77.324s PASS/WLF保留，重复运行耗时波动后按用户要求固定回放。最终all现场流程退出0、约9s（不含GUI与讲解），菜单/原E100日志读取验证；三模块GUI重点波形已检查，四份do保存信号/进制/时间窗。操作、讲解及8问答见docs/ACCEPTANCE_DEMO.md，真实预演与一次重复超时记录见reports/local/acceptance_demo_2026-10-16。未改RTL/教师/原TB判据/三报告/历史证据，未重跑整机IF。只保存本次入口、轻量证据与交接，项目唯一下一任务仍为本文末条。
 
@@ -20,4 +22,4 @@
 
 原G后续条件（本次不执行）：取得教师正式性能IF场景及独立真值。
 
-唯一下一任务：用户检查 experiments/bdi_capture/README.md 及本次完整波形；收到后续明确指示前保持现状，不提交或推送Git。
+唯一下一任务：用户检查 experiments/bdi_capture/README.md 及留存在本机的完整波形；收到后续明确指示前不启动新的实验或后端阶段。

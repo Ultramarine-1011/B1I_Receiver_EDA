@@ -1,0 +1,6 @@
+vcs_exit=0
+vcs_result=VCS_PASS
+dc_exit=0
+dc_result=DC_PASS
+vcs_banner=            Version I-2014.03 -- Fri Oct 16 15:16:37 2026
+dc_banner=                 Version K-2015.06 for linux64 - May 28, 2015 

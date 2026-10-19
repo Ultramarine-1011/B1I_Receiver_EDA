@@ -275,3 +275,11 @@ E阶段已在本机WSL2/Verilator完成100秒真实四星与原始检查/Route A
 
 # 2026-10-14 G阶段与会话恢复追加
 G0–G7当前可执行评价均在既有本机WSL2 Ubuntu/Verilator及Windows bundled Python执行。恢复时Get-CimInstance和WSL ps未发现遗留仿真/脚本；没有访问、启动、修复VMware/SSH/VCS/DC/ICC/PT或系统/许可证配置。16份最终仿真日志退出0与一个有限FIFO容量失败按reports/g_stage/delivery_audit审计，评分/纯文档修复只读取原始结果，不重复长仿真。当前正式性能输入与持续实时clk/SRAM/服务条件仍缺，G功能证据不构成ASIC环境验证。旧版本记录保持历史范围。
+
+# 2026-10-16 H0 虚拟机 VCS 与 DC 追加
+
+- 使用既有 `7901_15@192.168.159.128` 与 `C:\Users\IC\.ssh\id_rsa_eda_codex` 连接。主机名 `IC`，工程为已解压的 `/home/7901_15/B1I_Receiver_EDA`。未改网卡、`/home/IC/.bashrc`、许可证或系统安装。
+- `snpslmd` 进程在运行，`/opt/Synopsys/License/License.dat` 可读。`/home/IC/Foundry_Library/Digital/saed90nm_typ.db` 可读。库时间单位 1 ns，电容单位 1 fF。
+- `bash scripts/h0_vm_smoke.sh` 于 2026-10-16 15:16 +0800 退出 0。VCS I-2014.03 实际编译并仿真当前 PRN，退出码 0，日志含 `B1I_PRN_REGRESSION_PASS`。
+- Design Compiler K-2015.06 实际完成 `b1i_prn_gen` 的 analyze/elaborate/link/compile，目标库 `saed90nm_typ`。实验时钟 10 ns。这是工具可运行的证据，不是签核，也没有运行 ICC 或 PrimeTime。
+- 虚拟机未安装 `git`。提交不在虚拟机内执行，避免用远端版本覆盖解压工程。
