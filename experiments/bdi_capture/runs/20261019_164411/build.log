@@ -1,0 +1,80 @@
+COMMAND_JSON: ["verilator", "--binary", "--timing", "--trace", "--assert", "-Wall", "-Wno-fatal", "-Wno-BLKSEQ", "-Wno-SYNCASYNCNET", "-Wno-UNUSEDSIGNAL", "--top-module", "tb_bdi_capture", "-j", "2", "--Mdir", "/tmp/bdi_capture_jk4_13wb/obj_dir", "bdi_prn_code_pkg.sv", "bdi_signal_source.sv", "b1i_prn_gen.sv", "bdi_sliding_capture.sv", "tb_bdi_capture.sv"]
+CWD: /tmp/bdi_capture_jk4_13wb
+%Warning-WIDTHEXPAND: bdi_prn_code_pkg.sv:12:53: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'index' generates 11 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   12 |             meo6_code_bit = MEO6_CODE[PRN_CODE_LEN-1-index];
+      |                                                     ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.032
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:56:51: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'nav_idx' generates 6 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   56 |             nav_bit = FRAME_HEAD[FRAME_HEAD_BITS-1-nav_idx];
+      |                                                   ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:55:21: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'nav_idx' generates 6 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   55 |         if (nav_idx < FRAME_HEAD_BITS)
+      |                     ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:64:43: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'code_count' generates 11 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   64 |         code_table_sum = PRN_PHASE_OFFSET + code_count;
+      |                                           ^
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:64:24: Operator ASSIGN expects 12 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   64 |         code_table_sum = PRN_PHASE_OFFSET + code_count;
+      |                        ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:66:47: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'code_table_sum' generates 12 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   66 |             code_table_index = code_table_sum - PRN_CODE_LEN;
+      |                                               ^
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:66:30: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   66 |             code_table_index = code_table_sum - PRN_CODE_LEN;
+      |                              ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:65:28: Operator GTE expects 32 bits on the LHS, but LHS's VARREF 'code_table_sum' generates 12 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   65 |         if (code_table_sum >= PRN_CODE_LEN)
+      |                            ^~
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:92:28: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   92 |                 chip_phase <= PRN_PHASE_OFFSET;
+      |                            ^~
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:115:36: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+  115 |                         chip_phase <= PRN_PHASE_OFFSET;
+      |                                    ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:121:40: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'chip_phase' generates 11 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  121 |                         if (chip_phase == PRN_CODE_LEN-1)
+      |                                        ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:113:36: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'warmup_cnt' generates 16 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  113 |                     if (warmup_cnt == PRN_WARMUP_CHIPS-1) begin
+      |                                    ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:128:36: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'chip_phase' generates 11 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  128 |                     if (chip_phase == PRN_CODE_LEN-1)
+      |                                    ^~
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:137:32: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+  137 |                     chip_phase <= PRN_PHASE_OFFSET;
+      |                                ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:142:37: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'nav_idx' generates 6 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  142 |                         if (nav_idx != FRAME_HEAD_BITS + PAYLOAD_BITS - 1) begin
+      |                                     ^~
+make: Entering directory '/tmp/bdi_capture_jk4_13wb/obj_dir'
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /usr/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+python3 /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtb_bdi_capture.cpp Vtb_bdi_capture___024root__DepSet_h11c01b6f__0.cpp Vtb_bdi_capture___024root__DepSet_he09f17f4__0.cpp Vtb_bdi_capture__main.cpp Vtb_bdi_capture__Trace__0.cpp Vtb_bdi_capture__ConstPool_0.cpp Vtb_bdi_capture___024root__Slow.cpp Vtb_bdi_capture___024root__DepSet_h11c01b6f__0__Slow.cpp Vtb_bdi_capture___024root__DepSet_he09f17f4__0__Slow.cpp Vtb_bdi_capture__Syms.cpp Vtb_bdi_capture__Trace__0__Slow.cpp Vtb_bdi_capture__TraceDecls__0__Slow.cpp > Vtb_bdi_capture__ALL.cpp
+echo "" > Vtb_bdi_capture__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o Vtb_bdi_capture__ALL.o Vtb_bdi_capture__ALL.cpp
+g++    verilated.o verilated_vcd_c.o verilated_timing.o verilated_threads.o Vtb_bdi_capture__ALL.a    -pthread -lpthread -latomic   -o Vtb_bdi_capture
+rm Vtb_bdi_capture__ALL.verilator_deplist.tmp
+make: Leaving directory '/tmp/bdi_capture_jk4_13wb/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.134 MB sources in 6 modules, into 0.318 MB in 12 C++ files needing 0.000 MB
+- Verilator: Walltime 5.055 s (elab=0.015, cvt=0.029, bld=4.994); cpu 0.049 s on 2 threads; alloced 14.648 MB
+
+EXIT_CODE: 0

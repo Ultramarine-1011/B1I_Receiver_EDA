@@ -1,0 +1,4 @@
+/runs/*/main/capture.vcd
+/runs/*/main/samples.csv
+/runs/*/figures/*.svg
+__pycache__/

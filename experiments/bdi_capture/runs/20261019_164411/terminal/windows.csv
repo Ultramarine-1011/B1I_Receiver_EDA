@@ -1,0 +1,3 @@
+epoch,window,clock,accepted,result_phase,candidate_phase,i_result,q_result,energy,hit,acquired,captured_phase
+0,1,18415,16368,0,1,-7,-14,21,0,0,0
+0,2,34783,32736,1,2,-14,-7,21,0,0,0

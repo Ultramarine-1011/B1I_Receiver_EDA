@@ -1,0 +1,15 @@
+COMMAND_JSON: ["/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture", "+CASE=phase3"]
+CWD: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/phase3
+WINDOW case=phase3 epoch=0 win=1 phase=0 I=0 Q=1848 energy=1848 hit=0 samples=16368
+WINDOW case=phase3 epoch=0 win=2 phase=1 I=0 Q=56 energy=56 hit=0 samples=32736
+WINDOW case=phase3 epoch=0 win=3 phase=2 I=0 Q=56 energy=56 hit=0 samples=49104
+WINDOW case=phase3 epoch=0 win=4 phase=3 I=0 Q=-57288 energy=57288 hit=1 samples=65472
+WINDOW case=phase3 epoch=0 win=5 phase=3 I=0 Q=-57288 energy=57288 hit=0 samples=81840
+WINDOW case=phase3 epoch=0 win=6 phase=3 I=0 Q=57288 energy=57288 hit=0 samples=98208
+BDI_CAPTURE_PASS case=phase3 windows=6 integrated_samples=98208 hits=1 verified_aligned_samples=49104 mismatched_samples=24832 invalid_clocks=1 epoch=0 trailing_samples=1
+- tb_bdi_capture.sv:345: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 201us; walltime 0.063 s; speed 3.452 ms/s
+- Verilator: cpu 0.058 s on 1 threads; alloced 249 MB
+
+EXIT_CODE: 0

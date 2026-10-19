@@ -1,0 +1,14 @@
+{
+  "source": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\bdi_capture\\runs\\20261019_164411\\main\\samples.csv",
+  "source_sha256": "ef945a0f3d7fe9a945729e045d1e939e5c8c9b62aaafe6c5f0a8e24a71030d71",
+  "accepted_samples_plotted": 212784,
+  "matplotlib": "3.11.2",
+  "figures": [
+    "01_search_overview",
+    "02_wrong_phase_code_products",
+    "03_aligned_phase_code_products",
+    "04_full_window_comparison",
+    "05_dump_hit_detail"
+  ],
+  "axis": "nominal time from counted accepted samples; VCD uses compressed 2ns clocks"
+}

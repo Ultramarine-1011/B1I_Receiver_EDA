@@ -1,0 +1,371 @@
+{
+  "status": "PASS",
+  "time_singapore": "20261019_164411",
+  "output": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411",
+  "build_mirror": "/tmp/bdi_capture_jk4_13wb",
+  "source_sha256": {
+    "work/teacher_bdi_capture/bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "work/teacher_bdi_capture/bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "rtl/b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "experiments/bdi_capture/rtl/bdi_sliding_capture.sv": "b2a0dce3926c34594320c5b5207fdb1642c5f666e6863476164fc7ee386ae8e4",
+    "experiments/bdi_capture/tb/tb_bdi_capture.sv": "86de014037e9957fd9e12ebe271003a2bb7841e80d7f490bbe6b2d6f0161d88a"
+  },
+  "commands": [
+    {
+      "argv": [
+        "verilator",
+        "--version"
+      ],
+      "cwd": "/tmp/bdi_capture_jk4_13wb",
+      "log": "verilator_version.log",
+      "exit_code": 0,
+      "wall_seconds": 0.12
+    },
+    {
+      "argv": [
+        "g++",
+        "--version"
+      ],
+      "cwd": "/tmp/bdi_capture_jk4_13wb",
+      "log": "compiler_version.log",
+      "exit_code": 0,
+      "wall_seconds": 0.013
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/model/reference.py",
+        "--teacher",
+        "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/teacher_bdi_capture",
+        "--output",
+        "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/reference"
+      ],
+      "cwd": "/tmp/bdi_capture_jk4_13wb",
+      "log": "reference.log",
+      "exit_code": 0,
+      "wall_seconds": 0.168
+    },
+    {
+      "argv": [
+        "verilator",
+        "--binary",
+        "--timing",
+        "--trace",
+        "--assert",
+        "-Wall",
+        "-Wno-fatal",
+        "-Wno-BLKSEQ",
+        "-Wno-SYNCASYNCNET",
+        "-Wno-UNUSEDSIGNAL",
+        "--top-module",
+        "tb_bdi_capture",
+        "-j",
+        "2",
+        "--Mdir",
+        "/tmp/bdi_capture_jk4_13wb/obj_dir",
+        "bdi_prn_code_pkg.sv",
+        "bdi_signal_source.sv",
+        "b1i_prn_gen.sv",
+        "bdi_sliding_capture.sv",
+        "tb_bdi_capture.sv"
+      ],
+      "cwd": "/tmp/bdi_capture_jk4_13wb",
+      "log": "build.log",
+      "exit_code": 0,
+      "wall_seconds": 5.133
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture",
+        "+CASE=main",
+        "+TRACE=capture.vcd"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/main",
+      "log": "main/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 2.625
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture",
+        "+CASE=gaps"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/gaps",
+      "log": "gaps/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.168
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture",
+        "+CASE=phase3"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/phase3",
+      "log": "phase3/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.118
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture",
+        "+CASE=terminal"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/terminal",
+      "log": "terminal/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.069
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture",
+        "+CASE=zero"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/zero",
+      "log": "zero/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.17
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture",
+        "+CASE=restart"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/restart",
+      "log": "restart/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.269
+    }
+  ],
+  "cases": {
+    "main": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 57288,
+      "hit_windows": [
+        11
+      ],
+      "csv_sha256": "1a99bd98be364483b89b4ba4ed135c9642c3a19a5690f044be270f6eb4254ff2",
+      "tb_result": "BDI_CAPTURE_PASS case=main windows=13 integrated_samples=212784 hits=1 verified_aligned_samples=49104 mismatched_samples=81648 invalid_clocks=1 epoch=0 trailing_samples=1"
+    },
+    "gaps": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 57288,
+      "hit_windows": [
+        11
+      ],
+      "csv_sha256": "d81ba477e82a083c9f606fb03c2f1b73281d855fd6abbbbe533f107364c8bee7",
+      "tb_result": "BDI_CAPTURE_PASS case=gaps windows=13 integrated_samples=212784 hits=1 verified_aligned_samples=49104 mismatched_samples=81648 invalid_clocks=9166 epoch=0 trailing_samples=0"
+    },
+    "phase3": {
+      "status": "PASS",
+      "windows": 6,
+      "max_energy": 57288,
+      "hit_windows": [
+        4
+      ],
+      "csv_sha256": "6aac732a760360d6796394fef67977f3c6536c00b78d87098648858af0266cc1",
+      "tb_result": "BDI_CAPTURE_PASS case=phase3 windows=6 integrated_samples=98208 hits=1 verified_aligned_samples=49104 mismatched_samples=24832 invalid_clocks=1 epoch=0 trailing_samples=1"
+    },
+    "terminal": {
+      "status": "PASS",
+      "windows": 2,
+      "max_energy": 21,
+      "hit_windows": [],
+      "csv_sha256": "416679884252c29f07791486c72c26f0b30a1c16644d5dc81ef3a6c95ffc50ef",
+      "tb_result": "BDI_CAPTURE_PASS case=terminal windows=2 integrated_samples=32736 hits=0 verified_aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0 trailing_samples=1"
+    },
+    "zero": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 0,
+      "hit_windows": [],
+      "csv_sha256": "66e250ab1e534a0e6c643a53e25ea17d212b6c038f8383fc4edbccf7ef2f1053",
+      "tb_result": "BDI_CAPTURE_PASS case=zero windows=13 integrated_samples=212784 hits=0 verified_aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0 trailing_samples=1"
+    },
+    "restart": {
+      "status": "PASS",
+      "windows": 26,
+      "max_energy": 57288,
+      "hit_windows": [
+        11,
+        11
+      ],
+      "csv_sha256": "0eb0ef2c6e2d80eaa081c6279697680da6659a975e37f3e4571b35a6436f2f52",
+      "tb_result": "BDI_CAPTURE_PASS case=restart windows=13 integrated_samples=212784 hits=1 verified_aligned_samples=49104 mismatched_samples=81648 invalid_clocks=1 epoch=1 trailing_samples=1"
+    }
+  },
+  "mirror_sha256": {
+    "bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "bdi_sliding_capture.sv": "b2a0dce3926c34594320c5b5207fdb1642c5f666e6863476164fc7ee386ae8e4",
+    "tb_bdi_capture.sv": "86de014037e9957fd9e12ebe271003a2bb7841e80d7f490bbe6b2d6f0161d88a"
+  },
+  "reference": {
+    "table_check": "PASS: all 2046 chips",
+    "threshold": 8192,
+    "valid_samples_per_window": 16368,
+    "first_source_20_chips": "00010000001001110001",
+    "reference_windows": [
+      {
+        "window": 1,
+        "phase": 0,
+        "i": 0,
+        "q": -1624,
+        "energy": 1624
+      },
+      {
+        "window": 2,
+        "phase": 1,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 3,
+        "phase": 2,
+        "i": 0,
+        "q": 56,
+        "energy": 56
+      },
+      {
+        "window": 4,
+        "phase": 3,
+        "i": 0,
+        "q": -1736,
+        "energy": 1736
+      },
+      {
+        "window": 5,
+        "phase": 4,
+        "i": 0,
+        "q": 1848,
+        "energy": 1848
+      },
+      {
+        "window": 6,
+        "phase": 5,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 7,
+        "phase": 6,
+        "i": 0,
+        "q": -1848,
+        "energy": 1848
+      },
+      {
+        "window": 8,
+        "phase": 7,
+        "i": 0,
+        "q": 1848,
+        "energy": 1848
+      },
+      {
+        "window": 9,
+        "phase": 8,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 10,
+        "phase": 9,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 11,
+        "phase": 10,
+        "i": 0,
+        "q": -57288,
+        "energy": 57288
+      },
+      {
+        "window": 12,
+        "phase": 10,
+        "i": 0,
+        "q": 57288,
+        "energy": 57288
+      },
+      {
+        "window": 13,
+        "phase": 10,
+        "i": 0,
+        "q": -57288,
+        "energy": 57288
+      }
+    ],
+    "document_wrong_phase_values": [
+      1736,
+      0,
+      56,
+      1736,
+      1792,
+      56,
+      1792,
+      1848,
+      0,
+      0
+    ],
+    "document_low_value_differences": [
+      {
+        "phase": 0,
+        "document_energy": 1736,
+        "cyclic_table_energy": 1624
+      },
+      {
+        "phase": 1,
+        "document_energy": 0,
+        "cyclic_table_energy": 56
+      },
+      {
+        "phase": 4,
+        "document_energy": 1792,
+        "cyclic_table_energy": 1848
+      },
+      {
+        "phase": 6,
+        "document_energy": 1792,
+        "cyclic_table_energy": 1848
+      },
+      {
+        "phase": 8,
+        "document_energy": 0,
+        "cyclic_table_energy": 56
+      },
+      {
+        "phase": 9,
+        "document_energy": 0,
+        "cyclic_table_energy": 56
+      }
+    ]
+  },
+  "build_warnings": [
+    "%Warning-WIDTHEXPAND: bdi_prn_code_pkg.sv:12:53: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'index' generates 11 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:56:51: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'nav_idx' generates 6 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:55:21: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'nav_idx' generates 6 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:64:43: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'code_count' generates 11 bits.",
+    "%Warning-WIDTHTRUNC: bdi_signal_source.sv:64:24: Operator ASSIGN expects 12 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:66:47: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'code_table_sum' generates 12 bits.",
+    "%Warning-WIDTHTRUNC: bdi_signal_source.sv:66:30: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:65:28: Operator GTE expects 32 bits on the LHS, but LHS's VARREF 'code_table_sum' generates 12 bits.",
+    "%Warning-WIDTHTRUNC: bdi_signal_source.sv:92:28: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.",
+    "%Warning-WIDTHTRUNC: bdi_signal_source.sv:115:36: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:121:40: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'chip_phase' generates 11 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:113:36: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'warmup_cnt' generates 16 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:128:36: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'chip_phase' generates 11 bits.",
+    "%Warning-WIDTHTRUNC: bdi_signal_source.sv:137:32: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.",
+    "%Warning-WIDTHEXPAND: bdi_signal_source.sv:142:37: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'nav_idx' generates 6 bits."
+  ],
+  "waveform": {
+    "path": "main/capture.vcd",
+    "bytes": 160961265,
+    "sha256": "9108049c622d7738bbcd9d31065a8fe62ba65e5092dad8e6c502ef78871ea6f8",
+    "required_signals": "PASS"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "baseline_files": 861,
+  "unchanged_protected_files": 859,
+  "intentional_state_log_changes": [
+    "STATUS.md",
+    "WORKLOG.md"
+  ],
+  "missing_files": [],
+  "current_rtl_tb_hash_match": "PASS",
+  "dut_inputs": [
+    "clk",
+    "rst_n",
+    "if_sample",
+    "if_valid"
+  ],
+  "teacher_and_original_prn": "SHA256 unchanged",
+  "head_unchanged": "88e518292ca9671e7176c1ac49195973aa60fe42",
+  "readme_links_checked": 18,
+  "reference_and_runner_sha256_at_audit": {
+    "model\\reference.py": "4100418eb0aad63ee8b345f3d6a95d4cf383997b0d5c565db58697f1d31fa7e2",
+    "scripts\\run.py": "9067dad21daf8653dd1fe1000f87f8679a2d31f03d25f0a402ae57788fef2819",
+    "run.ps1": "7940d3ce7d1226748be2ea6e6abda84e89631a2adbfad1ba734ffa17067c64f3"
+  },
+  "source_whitespace": "PASS",
+  "full_receiver_DC_ICC": "NOT_RUN"
+}

@@ -1,0 +1,11 @@
+COMMAND_JSON: ["/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture", "+CASE=terminal"]
+CWD: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/terminal
+WINDOW case=terminal epoch=0 win=1 phase=0 I=-7 Q=-14 energy=21 hit=0 samples=16368
+WINDOW case=terminal epoch=0 win=2 phase=1 I=-14 Q=-7 energy=21 hit=0 samples=32736
+BDI_CAPTURE_PASS case=terminal windows=2 integrated_samples=32736 hits=0 verified_aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0 trailing_samples=1
+- tb_bdi_capture.sv:345: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 70us; walltime 0.032 s; speed 2.632 ms/s
+- Verilator: cpu 0.026 s on 1 threads; alloced 249 MB
+
+EXIT_CODE: 0

@@ -1,0 +1,659 @@
+COMMAND_JSON: ["verilator", "--binary", "--timing", "--trace", "--assert", "-Wall", "-Wno-fatal", "--top-module", "tb_bdi_capture", "-j", "2", "--Mdir", "/tmp/bdi_capture_85cexw5b/obj_dir", "bdi_prn_code_pkg.sv", "bdi_signal_source.sv", "b1i_prn_gen.sv", "bdi_sliding_capture.sv", "tb_bdi_capture.sv"]
+CWD: /tmp/bdi_capture_85cexw5b
+%Warning-WIDTHEXPAND: bdi_prn_code_pkg.sv:12:53: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'index' generates 11 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   12 |             meo6_code_bit = MEO6_CODE[PRN_CODE_LEN-1-index];
+      |                                                     ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.032
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:56:51: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'nav_idx' generates 6 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   56 |             nav_bit = FRAME_HEAD[FRAME_HEAD_BITS-1-nav_idx];
+      |                                                   ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:55:21: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'nav_idx' generates 6 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   55 |         if (nav_idx < FRAME_HEAD_BITS)
+      |                     ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:64:43: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'code_count' generates 11 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   64 |         code_table_sum = PRN_PHASE_OFFSET + code_count;
+      |                                           ^
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:64:24: Operator ASSIGN expects 12 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   64 |         code_table_sum = PRN_PHASE_OFFSET + code_count;
+      |                        ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:66:47: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'code_table_sum' generates 12 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   66 |             code_table_index = code_table_sum - PRN_CODE_LEN;
+      |                                               ^
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:66:30: Operator ASSIGN expects 11 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   66 |             code_table_index = code_table_sum - PRN_CODE_LEN;
+      |                              ^
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:65:28: Operator GTE expects 32 bits on the LHS, but LHS's VARREF 'code_table_sum' generates 12 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+   65 |         if (code_table_sum >= PRN_CODE_LEN)
+      |                            ^~
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:92:28: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.
+                                               : ... note: In instance 'tb_bdi_capture.source3'
+   92 |                 chip_phase <= PRN_PHASE_OFFSET;
+      |                            ^~
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:115:36: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+  115 |                         chip_phase <= PRN_PHASE_OFFSET;
+      |                                    ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:121:40: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'chip_phase' generates 11 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  121 |                         if (chip_phase == PRN_CODE_LEN-1)
+      |                                        ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:113:36: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'warmup_cnt' generates 16 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  113 |                     if (warmup_cnt == PRN_WARMUP_CHIPS-1) begin
+      |                                    ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:128:36: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'chip_phase' generates 11 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  128 |                     if (chip_phase == PRN_CODE_LEN-1)
+      |                                    ^~
+%Warning-WIDTHTRUNC: bdi_signal_source.sv:137:32: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's VARREF 'PRN_PHASE_OFFSET' generates 32 bits.
+                                                : ... note: In instance 'tb_bdi_capture.source3'
+  137 |                     chip_phase <= PRN_PHASE_OFFSET;
+      |                                ^~
+%Warning-WIDTHEXPAND: bdi_signal_source.sv:142:37: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'nav_idx' generates 6 bits.
+                                                 : ... note: In instance 'tb_bdi_capture.source3'
+  142 |                         if (nav_idx != FRAME_HEAD_BITS + PAYLOAD_BITS - 1) begin
+      |                                     ^~
+%Warning-WIDTHTRUNC: tb_bdi_capture.sv:132:45: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'synth_sign' generates 32 bits.
+                                             : ... note: In instance 'tb_bdi_capture'
+  132 |             injected_sample = 2'(synth_sign ? -synth_carrier : synth_carrier);
+      |                                             ^
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:210:42: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'local_code_index' generates 11 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  210 |                     if (local_code_index != exp_index || local_code !== code_bit ||
+      |                                          ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:211:39: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'carrier_phase' generates 2 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  211 |                         carrier_phase != exp_carrier || local_cos != exp_cos || local_sin != exp_sin)
+      |                                       ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:211:67: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'local_cos' generates 4 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  211 |                         carrier_phase != exp_carrier || local_cos != exp_cos || local_sin != exp_sin)
+      |                                                                   ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:211:91: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'local_sin' generates 4 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  211 |                         carrier_phase != exp_carrier || local_cos != exp_cos || local_sin != exp_sin)
+      |                                                                                           ^~
+%Warning-WIDTHTRUNC: tb_bdi_capture.sv:221:55: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'source_sign' generates 32 bits.
+                                             : ... note: In instance 'tb_bdi_capture'
+  221 |                             0: rx_value = source_sign ? -1 : 1;
+      |                                                       ^
+%Warning-WIDTHTRUNC: tb_bdi_capture.sv:222:55: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'source_sign' generates 32 bits.
+                                             : ... note: In instance 'tb_bdi_capture'
+  222 |                             2: rx_value = source_sign ? 1 : -1;
+      |                                                       ^
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:225:48: Operator NEQ expects 32 bits on the LHS, but LHS's SIGNED generates 2 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  225 |                         if ($signed(if_sample) != rx_value)
+      |                                                ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:236:44: Operator NEQ expects 32 bits on the LHS, but LHS's SIGNED generates 6 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  236 |                     if ($signed(i_product) != exp_ip || $signed(q_product) != exp_qp)
+      |                                            ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:236:76: Operator NEQ expects 32 bits on the LHS, but LHS's SIGNED generates 6 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  236 |                     if ($signed(i_product) != exp_ip || $signed(q_product) != exp_qp)
+      |                                                                            ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:276:24: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'energy' generates 26 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  276 |                 energy != saved_energy || result_phase != saved_phase ||
+      |                        ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:276:56: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'result_phase' generates 11 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  276 |                 energy != saved_energy || result_phase != saved_phase ||
+      |                                                        ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:277:32: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'captured_phase' generates 11 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  277 |                 captured_phase != saved_capture || candidate_phase != expected_candidate ||
+      |                                ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:277:68: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'candidate_phase' generates 11 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  277 |                 captured_phase != saved_capture || candidate_phase != expected_candidate ||
+      |                                                                    ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:278:34: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'sample_in_window' generates 14 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  278 |                 sample_in_window != n || $signed(i_acc) != sum_i || $signed(q_acc) != sum_q ||
+      |                                  ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:278:57: Operator NEQ expects 32 bits on the LHS, but LHS's SIGNED generates 24 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  278 |                 sample_in_window != n || $signed(i_acc) != sum_i || $signed(q_acc) != sum_q ||
+      |                                                         ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:278:84: Operator NEQ expects 32 bits on the LHS, but LHS's SIGNED generates 24 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  278 |                 sample_in_window != n || $signed(i_acc) != sum_i || $signed(q_acc) != sum_q ||
+      |                                                                                    ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:279:35: Operator NEQ expects 32 bits on the LHS, but LHS's SIGNED generates 24 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  279 |                 $signed(i_result) != saved_i || $signed(q_result) != saved_q)
+      |                                   ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:279:67: Operator NEQ expects 32 bits on the LHS, but LHS's SIGNED generates 24 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  279 |                 $signed(i_result) != saved_i || $signed(q_result) != saved_q)
+      |                                                                   ^~
+%Warning-WIDTHEXPAND: tb_bdi_capture.sv:306:54: Operator NEQ expects 32 bits on the LHS, but LHS's VARREF 'captured_phase' generates 11 bits.
+                                              : ... note: In instance 'tb_bdi_capture'
+  306 |                 if (hit_count != 1 || captured_phase != target_phase ||
+      |                                                      ^~
+%Warning-WIDTHTRUNC: tb_bdi_capture.sv:329:13: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'windows_file' generates 32 bits.
+                                             : ... note: In instance 'tb_bdi_capture'
+  329 |         if (!windows_file) $fatal(1, "cannot open windows CSV");
+      |             ^
+%Warning-WIDTHTRUNC: tb_bdi_capture.sv:334:17: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'samples_file' generates 32 bits.
+                                             : ... note: In instance 'tb_bdi_capture'
+  334 |             if (!samples_file) $fatal(1, "cannot open samples CSV");
+      |                 ^
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:18:17: Signal is not used: 'source10_nh_idx'
+                                              : ... note: In instance 'tb_bdi_capture'
+   18 |     logic [4:0] source10_nh_idx, source3_nh_idx;
+      |                 ^~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:18:34: Signal is not used: 'source3_nh_idx'
+                                              : ... note: In instance 'tb_bdi_capture'
+   18 |     logic [4:0] source10_nh_idx, source3_nh_idx;
+      |                                  ^~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:19:17: Signal is not used: 'source10_nav_idx'
+                                              : ... note: In instance 'tb_bdi_capture'
+   19 |     logic [5:0] source10_nav_idx, source3_nav_idx;
+      |                 ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:19:35: Signal is not used: 'source3_nav_idx'
+                                              : ... note: In instance 'tb_bdi_capture'
+   19 |     logic [5:0] source10_nav_idx, source3_nav_idx;
+      |                                   ^~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:21:11: Signal is not used: 'source10_nh_aligned'
+                                              : ... note: In instance 'tb_bdi_capture'
+   21 |     logic source10_nh_aligned, source3_nh_aligned;
+      |           ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:21:32: Signal is not used: 'source3_nh_aligned'
+                                              : ... note: In instance 'tb_bdi_capture'
+   21 |     logic source10_nh_aligned, source3_nh_aligned;
+      |                                ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:22:11: Signal is not used: 'source10_nav_aligned'
+                                              : ... note: In instance 'tb_bdi_capture'
+   22 |     logic source10_nav_aligned, source3_nav_aligned;
+      |           ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:22:33: Signal is not used: 'source3_nav_aligned'
+                                              : ... note: In instance 'tb_bdi_capture'
+   22 |     logic source10_nav_aligned, source3_nav_aligned;
+      |                                 ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:23:18: Signal is not used: 'source10_index_aligned'
+                                              : ... note: In instance 'tb_bdi_capture'
+   23 |     logic [10:0] source10_index_aligned, source3_index_aligned;
+      |                  ^~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:23:42: Signal is not used: 'source3_index_aligned'
+                                              : ... note: In instance 'tb_bdi_capture'
+   23 |     logic [10:0] source10_index_aligned, source3_index_aligned;
+      |                                          ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:35:18: Signal is not used: 'threshold'
+                                              : ... note: In instance 'tb_bdi_capture'
+   35 |     logic [25:0] threshold = 26'd8192;
+      |                  ^~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:105:23: Bits of signal are not used: 'synth_chip'[31:11]
+                                               : ... note: In instance 'tb_bdi_capture'
+  105 |     int synth_window, synth_chip, synth_nav_index, synth_carrier, synth_sign;
+      |                       ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:153:9: Bits of signal are not used: 'expected_rx_index'[31:11]
+                                              : ... note: In instance 'tb_bdi_capture'
+  153 |     int expected_rx_index, rx_value, source_sign;
+      |         ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: tb_bdi_capture.sv:165:34: Signal is not used: 'consumed_local_index'
+                                               : ... note: In instance 'tb_bdi_capture'
+  165 |     logic [10:0] consumed_phase, consumed_local_index;
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: bdi_sliding_capture.sv:30:37: Signal is not used: 'prn_epoch'
+                                                   : ... note: In instance 'tb_bdi_capture.dut'
+   30 |     logic prn_chip, prn_configured, prn_epoch;
+      |                                     ^~~~~~~~~
+%Warning-BLKSEQ: tb_bdi_capture.sv:7:19: Blocking assignment '=' in sequential logic process
+                                       : ... Suggest using delayed assignment '<='
+    7 |     always #1 clk = ~clk;
+      |                   ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:108:50: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  108 |         else if (ready && if_valid) sent_samples = sent_samples + 1;
+      |                                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:107:34: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  107 |         if (!rst_n) sent_samples = 0;
+      |                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:111:23: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  111 |         driver_clocks = driver_clocks + 1;
+      |                       ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:112:23: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  112 |         source_enable = rst_n && ready;
+      |                       ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:116:27: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  116 |             source_enable = 1'b0;
+      |                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:117:24: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  117 |         injected_valid = rst_n && ready;
+      |                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:118:25: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  118 |         injected_sample = 2'sd0;
+      |                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:119:23: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  119 |         injected_code = 1'b0;
+      |                       ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:121:26: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  121 |             synth_window = sent_samples / N;
+      |                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:122:24: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  122 |             synth_chip = (10 + (sent_samples % N)/8) % 2046;
+      |                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:123:29: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  123 |             synth_nav_index = (synth_window/20) % 61;
+      |                             ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:124:27: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  124 |             injected_code = ref7[synth_chip];
+      |                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:125:24: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  125 |             synth_sign = int'(injected_code) ^ int'(nh_bits[19-synth_window%20]) ^
+      |                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:128:34: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  128 |                 0: synth_carrier = 1;
+      |                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:132:29: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  132 |             injected_sample = 2'(synth_sign ? -synth_carrier : synth_carrier);
+      |                             ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:137:33: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  137 |                 injected_sample = (sent_samples / N == 0) ? 2'sb10 : 2'sd1;
+      |                                 ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:139:33: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  139 |                 injected_sample = (sent_samples / N == 0) ? 2'sd1 : 2'sb10;
+      |                                 ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:190:25: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  190 |             clock_count = clock_count + 1;
+      |                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:191:20: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  191 |             e_dump = 0; e_hit = 0;
+      |                    ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:191:31: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  191 |             e_dump = 0; e_hit = 0;
+      |                               ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:192:28: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  192 |             consumed_valid = ready && if_valid;
+      |                            ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:198:35: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  198 |                     table_checked = 1;
+      |                                   ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:201:31: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  201 |                     exp_index = (expected_candidate + n/8) % 2046;
+      |                               ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:202:30: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  202 |                     code_bit = ref6[exp_index];
+      |                              ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:203:33: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  203 |                     exp_carrier = (accepted+1) % 4;
+      |                                 ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:205:42: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  205 |                         0: begin exp_cos = 7; exp_sin = 0; end
+      |                                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:205:55: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  205 |                         0: begin exp_cos = 7; exp_sin = 0; end
+      |                                                       ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:206:42: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  206 |                         1: begin exp_cos = 0; exp_sin = 7; end
+      |                                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:206:55: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  206 |                         1: begin exp_cos = 0; exp_sin = 7; end
+      |                                                       ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:207:42: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  207 |                         2: begin exp_cos = -7; exp_sin = 0; end
+      |                                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:207:56: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  207 |                         2: begin exp_cos = -7; exp_sin = 0; end
+      |                                                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:208:48: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  208 |                         default: begin exp_cos = 0; exp_sin = -7; end
+      |                                                ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:208:61: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  208 |                         default: begin exp_cos = 0; exp_sin = -7; end
+      |                                                             ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:215:43: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  215 |                         expected_rx_index = (target_phase + (accepted % N)/8) % 2046;
+      |                                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:218:37: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  218 |                         source_sign = int'(ref6[expected_rx_index]) ^ int'(nh_bits[19-(accepted/N)%20]) ^
+      |                                     ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:221:41: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  221 |                             0: rx_value = source_sign ? -1 : 1;
+      |                                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:230:45: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  230 |                             aligned_samples = aligned_samples + 1;
+      |                                             ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:232:46: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  232 |                             mismatch_samples = mismatch_samples + 1;
+      |                                              ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:234:28: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  234 |                     exp_ip = int'($signed(if_sample)) * exp_cos * (code_bit ? -1 : 1);
+      |                            ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:235:28: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  235 |                     exp_qp = int'($signed(if_sample)) * exp_sin * (code_bit ? -1 : 1);
+      |                            ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:238:33: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  238 |                     consumed_if = if_sample; consumed_rx_code = rx_code_aligned;
+      |                                 ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:238:63: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  238 |                     consumed_if = if_sample; consumed_rx_code = rx_code_aligned;
+      |                                                               ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:239:41: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  239 |                     consumed_local_code = local_code; consumed_cos = local_cos; consumed_sin = local_sin;
+      |                                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:239:68: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  239 |                     consumed_local_code = local_code; consumed_cos = local_cos; consumed_sin = local_sin;
+      |                                                                    ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:239:94: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  239 |                     consumed_local_code = local_code; consumed_cos = local_cos; consumed_sin = local_sin;
+      |                                                                                              ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:240:40: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  240 |                     consumed_i_product = i_product; consumed_q_product = q_product;
+      |                                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:240:72: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  240 |                     consumed_i_product = i_product; consumed_q_product = q_product;
+      |                                                                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:241:36: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  241 |                     consumed_phase = candidate_phase; consumed_local_index = local_code_index;
+      |                                    ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:241:76: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  241 |                     consumed_phase = candidate_phase; consumed_local_index = local_code_index;
+      |                                                                            ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:242:43: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  242 |                     consumed_sample_index = 14'(n);
+      |                                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:243:40: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  243 |                     energy_before_last = abs_int(sum_i)+abs_int(sum_q);
+      |                                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:244:27: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  244 |                     sum_i = sum_i + exp_ip; sum_q = sum_q + exp_qp;
+      |                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:244:51: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  244 |                     sum_i = sum_i + exp_ip; sum_q = sum_q + exp_qp;
+      |                                                   ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:245:30: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  245 |                     accepted = accepted + 1;
+      |                              ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:246:23: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  246 |                     n = n + 1;
+      |                       ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:248:32: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  248 |                         e_dump = 1;
+      |                                ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:249:33: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  249 |                         saved_i = sum_i; saved_q = sum_q;
+      |                                 ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:249:50: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  249 |                         saved_i = sum_i; saved_q = sum_q;
+      |                                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:250:38: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  250 |                         saved_energy = abs_int(sum_i)+abs_int(sum_q);
+      |                                      ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:251:37: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  251 |                         saved_phase = expected_candidate;
+      |                                     ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:252:31: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  252 |                         e_hit = !expected_acquired && saved_energy >= 8192;
+      |                               ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:254:47: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  254 |                             expected_acquired = 1; saved_capture = expected_candidate;
+      |                                               ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:254:66: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  254 |                             expected_acquired = 1; saved_capture = expected_candidate;
+      |                                                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:255:39: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  255 |                             hit_count = hit_count + 1;
+      |                                       ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:257:48: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  257 |                             expected_candidate = (expected_candidate+1) % 2046;
+      |                                                ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:261:41: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  261 |                         last_dump_clock = clock_count; gaps_at_dump = invalid_clocks;
+      |                                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:261:69: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  261 |                         last_dump_clock = clock_count; gaps_at_dump = invalid_clocks;
+      |                                                                     ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:270:27: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  270 |                         n = 0; sum_i = 0; sum_q = 0; win = win+1;
+      |                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:270:38: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  270 |                         n = 0; sum_i = 0; sum_q = 0; win = win+1;
+      |                                      ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:270:49: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  270 |                         n = 0; sum_i = 0; sum_q = 0; win = win+1;
+      |                                                 ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:270:58: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  270 |                         n = 0; sum_i = 0; sum_q = 0; win = win+1;
+      |                                                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:272:41: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  272 |                 end else invalid_clocks = invalid_clocks+1;
+      |                                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:297:43: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  297 |             if (win == goal_windows) done = 1;
+      |                                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:174:15: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  174 |             n = 0; win = 0; expected_candidate = 0;
+      |               ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:174:24: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  174 |             n = 0; win = 0; expected_candidate = 0;
+      |                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:174:48: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  174 |             n = 0; win = 0; expected_candidate = 0;
+      |                                                ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:175:19: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  175 |             sum_i = 0; sum_q = 0; saved_i = 0; saved_q = 0; saved_energy = 0;
+      |                   ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:175:30: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  175 |             sum_i = 0; sum_q = 0; saved_i = 0; saved_q = 0; saved_energy = 0;
+      |                              ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:175:43: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  175 |             sum_i = 0; sum_q = 0; saved_i = 0; saved_q = 0; saved_energy = 0;
+      |                                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:175:56: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  175 |             sum_i = 0; sum_q = 0; saved_i = 0; saved_q = 0; saved_energy = 0;
+      |                                                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:175:74: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  175 |             sum_i = 0; sum_q = 0; saved_i = 0; saved_q = 0; saved_energy = 0;
+      |                                                                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:176:25: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  176 |             saved_phase = 0; saved_capture = 0; accepted = 0;
+      |                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:176:44: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  176 |             saved_phase = 0; saved_capture = 0; accepted = 0;
+      |                                            ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:176:58: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  176 |             saved_phase = 0; saved_capture = 0; accepted = 0;
+      |                                                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:177:25: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  177 |             clock_count = 0; invalid_clocks = 0; last_dump_clock = 0;
+      |                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:177:45: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  177 |             clock_count = 0; invalid_clocks = 0; last_dump_clock = 0;
+      |                                             ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:177:66: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  177 |             clock_count = 0; invalid_clocks = 0; last_dump_clock = 0;
+      |                                                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:178:26: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  178 |             gaps_at_dump = 0; hit_count = 0; aligned_samples = 0;
+      |                          ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:178:41: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  178 |             gaps_at_dump = 0; hit_count = 0; aligned_samples = 0;
+      |                                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:178:62: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  178 |             gaps_at_dump = 0; hit_count = 0; aligned_samples = 0;
+      |                                                              ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:179:30: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  179 |             mismatch_samples = 0; expected_acquired = 0; table_checked = 0; done = 0;
+      |                              ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:179:53: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  179 |             mismatch_samples = 0; expected_acquired = 0; table_checked = 0; done = 0;
+      |                                                     ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:179:72: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  179 |             mismatch_samples = 0; expected_acquired = 0; table_checked = 0; done = 0;
+      |                                                                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:179:82: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  179 |             mismatch_samples = 0; expected_acquired = 0; table_checked = 0; done = 0;
+      |                                                                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:180:28: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  180 |             consumed_valid = 0; consumed_rx_code = 0; consumed_local_code = 0;
+      |                            ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:180:50: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  180 |             consumed_valid = 0; consumed_rx_code = 0; consumed_local_code = 0;
+      |                                                  ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:180:75: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  180 |             consumed_valid = 0; consumed_rx_code = 0; consumed_local_code = 0;
+      |                                                                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:181:25: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  181 |             consumed_if = 0; consumed_cos = 0; consumed_sin = 0;
+      |                         ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:181:43: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  181 |             consumed_if = 0; consumed_cos = 0; consumed_sin = 0;
+      |                                           ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:181:61: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  181 |             consumed_if = 0; consumed_cos = 0; consumed_sin = 0;
+      |                                                             ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:182:32: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  182 |             consumed_i_product = 0; consumed_q_product = 0;
+      |                                ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:182:56: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  182 |             consumed_i_product = 0; consumed_q_product = 0;
+      |                                                        ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:183:28: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  183 |             consumed_phase = 0; consumed_local_index = 0; consumed_sample_index = 0;
+      |                            ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:183:54: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  183 |             consumed_phase = 0; consumed_local_index = 0; consumed_sample_index = 0;
+      |                                                      ^
+%Warning-BLKSEQ: tb_bdi_capture.sv:183:81: Blocking assignment '=' in sequential logic process
+                                         : ... Suggest using delayed assignment '<='
+  183 |             consumed_phase = 0; consumed_local_index = 0; consumed_sample_index = 0;
+      |                                                                                 ^
+%Warning-SYNCASYNCNET: tb_bdi_capture.sv:4:23: Signal flopped as both synchronous and async: 'tb_bdi_capture.rst_n'
+                       tb_bdi_capture.sv:58:14: ... Location of async usage
+   58 |         if (!rst_n) begin
+      |              ^~~~~
+                       tb_bdi_capture.sv:107:14: ... Location of sync usage
+  107 |         if (!rst_n) sent_samples = 0;
+      |              ^~~~~
+make: Entering directory '/tmp/bdi_capture_85cexw5b/obj_dir'
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /usr/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+python3 /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtb_bdi_capture.cpp Vtb_bdi_capture___024root__DepSet_h11c01b6f__0.cpp Vtb_bdi_capture___024root__DepSet_he09f17f4__0.cpp Vtb_bdi_capture__main.cpp Vtb_bdi_capture__Trace__0.cpp Vtb_bdi_capture__ConstPool_0.cpp Vtb_bdi_capture___024root__Slow.cpp Vtb_bdi_capture___024root__DepSet_h11c01b6f__0__Slow.cpp Vtb_bdi_capture___024root__DepSet_he09f17f4__0__Slow.cpp Vtb_bdi_capture__Syms.cpp Vtb_bdi_capture__Trace__0__Slow.cpp Vtb_bdi_capture__TraceDecls__0__Slow.cpp > Vtb_bdi_capture__ALL.cpp
+echo "" > Vtb_bdi_capture__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o Vtb_bdi_capture__ALL.o Vtb_bdi_capture__ALL.cpp
+g++    verilated.o verilated_vcd_c.o verilated_timing.o verilated_threads.o Vtb_bdi_capture__ALL.a    -pthread -lpthread -latomic   -o Vtb_bdi_capture
+rm Vtb_bdi_capture__ALL.verilator_deplist.tmp
+make: Leaving directory '/tmp/bdi_capture_85cexw5b/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.134 MB sources in 6 modules, into 0.323 MB in 12 C++ files needing 0.000 MB
+- Verilator: Walltime 4.985 s (elab=0.020, cvt=0.048, bld=4.899); cpu 0.048 s on 2 threads; alloced 14.781 MB
+
+EXIT_CODE: 0

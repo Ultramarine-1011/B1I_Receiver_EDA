@@ -1,0 +1,22 @@
+COMMAND_JSON: ["/tmp/bdi_capture_jk4_13wb/obj_dir/Vtb_bdi_capture", "+CASE=gaps"]
+CWD: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/gaps
+WINDOW case=gaps epoch=0 win=1 phase=0 I=0 Q=-1624 energy=1624 hit=0 samples=16368
+WINDOW case=gaps epoch=0 win=2 phase=1 I=0 Q=-56 energy=56 hit=0 samples=32736
+WINDOW case=gaps epoch=0 win=3 phase=2 I=0 Q=56 energy=56 hit=0 samples=49104
+WINDOW case=gaps epoch=0 win=4 phase=3 I=0 Q=-1736 energy=1736 hit=0 samples=65472
+WINDOW case=gaps epoch=0 win=5 phase=4 I=0 Q=1848 energy=1848 hit=0 samples=81840
+WINDOW case=gaps epoch=0 win=6 phase=5 I=0 Q=-56 energy=56 hit=0 samples=98208
+WINDOW case=gaps epoch=0 win=7 phase=6 I=0 Q=-1848 energy=1848 hit=0 samples=114576
+WINDOW case=gaps epoch=0 win=8 phase=7 I=0 Q=1848 energy=1848 hit=0 samples=130944
+WINDOW case=gaps epoch=0 win=9 phase=8 I=0 Q=-56 energy=56 hit=0 samples=147312
+WINDOW case=gaps epoch=0 win=10 phase=9 I=0 Q=-56 energy=56 hit=0 samples=163680
+WINDOW case=gaps epoch=0 win=11 phase=10 I=0 Q=-57288 energy=57288 hit=1 samples=180048
+WINDOW case=gaps epoch=0 win=12 phase=10 I=0 Q=57288 energy=57288 hit=0 samples=196416
+WINDOW case=gaps epoch=0 win=13 phase=10 I=0 Q=-57288 energy=57288 hit=0 samples=212784
+BDI_CAPTURE_PASS case=gaps windows=13 integrated_samples=212784 hits=1 verified_aligned_samples=49104 mismatched_samples=81648 invalid_clocks=9166 epoch=0 trailing_samples=0
+- tb_bdi_capture.sv:345: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 448us; walltime 0.142 s; speed 3.246 ms/s
+- Verilator: cpu 0.138 s on 1 threads; alloced 249 MB
+
+EXIT_CODE: 0

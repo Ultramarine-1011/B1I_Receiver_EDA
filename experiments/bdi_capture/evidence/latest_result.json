@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "run": "runs/20261019_164411",
+  "primary_source": "unmodified teacher default MEO-6 / PRN6",
+  "threshold": 8192,
+  "primary_capture_phase": 10,
+  "first_hit_window": 11,
+  "peak": 57288,
+  "verification_windows": 2,
+  "source_sha256": {
+    "work/teacher_bdi_capture/bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "work/teacher_bdi_capture/bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "rtl/b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "experiments/bdi_capture/rtl/bdi_sliding_capture.sv": "b2a0dce3926c34594320c5b5207fdb1642c5f666e6863476164fc7ee386ae8e4",
+    "experiments/bdi_capture/tb/tb_bdi_capture.sv": "86de014037e9957fd9e12ebe271003a2bb7841e80d7f490bbe6b2d6f0161d88a"
+  },
+  "cases": {
+    "main": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 57288,
+      "hit_windows": [
+        11
+      ],
+      "csv_sha256": "1a99bd98be364483b89b4ba4ed135c9642c3a19a5690f044be270f6eb4254ff2",
+      "tb_result": "BDI_CAPTURE_PASS case=main windows=13 integrated_samples=212784 hits=1 verified_aligned_samples=49104 mismatched_samples=81648 invalid_clocks=1 epoch=0 trailing_samples=1"
+    },
+    "gaps": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 57288,
+      "hit_windows": [
+        11
+      ],
+      "csv_sha256": "d81ba477e82a083c9f606fb03c2f1b73281d855fd6abbbbe533f107364c8bee7",
+      "tb_result": "BDI_CAPTURE_PASS case=gaps windows=13 integrated_samples=212784 hits=1 verified_aligned_samples=49104 mismatched_samples=81648 invalid_clocks=9166 epoch=0 trailing_samples=0"
+    },
+    "phase3": {
+      "status": "PASS",
+      "windows": 6,
+      "max_energy": 57288,
+      "hit_windows": [
+        4
+      ],
+      "csv_sha256": "6aac732a760360d6796394fef67977f3c6536c00b78d87098648858af0266cc1",
+      "tb_result": "BDI_CAPTURE_PASS case=phase3 windows=6 integrated_samples=98208 hits=1 verified_aligned_samples=49104 mismatched_samples=24832 invalid_clocks=1 epoch=0 trailing_samples=1"
+    },
+    "terminal": {
+      "status": "PASS",
+      "windows": 2,
+      "max_energy": 21,
+      "hit_windows": [],
+      "csv_sha256": "416679884252c29f07791486c72c26f0b30a1c16644d5dc81ef3a6c95ffc50ef",
+      "tb_result": "BDI_CAPTURE_PASS case=terminal windows=2 integrated_samples=32736 hits=0 verified_aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0 trailing_samples=1"
+    },
+    "zero": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 0,
+      "hit_windows": [],
+      "csv_sha256": "66e250ab1e534a0e6c643a53e25ea17d212b6c038f8383fc4edbccf7ef2f1053",
+      "tb_result": "BDI_CAPTURE_PASS case=zero windows=13 integrated_samples=212784 hits=0 verified_aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0 trailing_samples=1"
+    },
+    "restart": {
+      "status": "PASS",
+      "windows": 26,
+      "max_energy": 57288,
+      "hit_windows": [
+        11,
+        11
+      ],
+      "csv_sha256": "0eb0ef2c6e2d80eaa081c6279697680da6659a975e37f3e4571b35a6436f2f52",
+      "tb_result": "BDI_CAPTURE_PASS case=restart windows=13 integrated_samples=212784 hits=1 verified_aligned_samples=49104 mismatched_samples=81648 invalid_clocks=1 epoch=1 trailing_samples=1"
+    }
+  },
+  "waveform": {
+    "path": "main/capture.vcd",
+    "bytes": 160961265,
+    "sha256": "9108049c622d7738bbcd9d31065a8fe62ba65e5092dad8e6c502ef78871ea6f8",
+    "required_signals": "PASS"
+  },
+  "document_low_value_differences": [
+    {
+      "phase": 0,
+      "document_energy": 1736,
+      "cyclic_table_energy": 1624
+    },
+    {
+      "phase": 1,
+      "document_energy": 0,
+      "cyclic_table_energy": 56
+    },
+    {
+      "phase": 4,
+      "document_energy": 1792,
+      "cyclic_table_energy": 1848
+    },
+    {
+      "phase": 6,
+      "document_energy": 1792,
+      "cyclic_table_energy": 1848
+    },
+    {
+      "phase": 8,
+      "document_energy": 0,
+      "cyclic_table_energy": 56
+    },
+    {
+      "phase": 9,
+      "document_energy": 0,
+      "cyclic_table_energy": 56
+    }
+  ]
+}

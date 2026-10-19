@@ -1,0 +1,369 @@
+{
+  "status": "PASS",
+  "time_singapore": "20261019_164133",
+  "output": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133",
+  "build_mirror": "/tmp/bdi_capture_85cexw5b",
+  "source_sha256": {
+    "work/teacher_bdi_capture/bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "work/teacher_bdi_capture/bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "rtl/b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "experiments/bdi_capture/rtl/bdi_sliding_capture.sv": "d53abf57ca15cdc32c537cda11dfe891e13270564b96274f79747b66a55cea51",
+    "experiments/bdi_capture/tb/tb_bdi_capture.sv": "34e1e933a3acc52e52a6f2d75caccffd4d587ac18044c9d2c9bf6a9a5fcd826b"
+  },
+  "commands": [
+    {
+      "argv": [
+        "verilator",
+        "--version"
+      ],
+      "cwd": "/tmp/bdi_capture_85cexw5b",
+      "log": "verilator_version.log",
+      "exit_code": 0,
+      "wall_seconds": 0.173
+    },
+    {
+      "argv": [
+        "g++",
+        "--version"
+      ],
+      "cwd": "/tmp/bdi_capture_85cexw5b",
+      "log": "compiler_version.log",
+      "exit_code": 0,
+      "wall_seconds": 0.022
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/model/reference.py",
+        "--teacher",
+        "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/teacher_bdi_capture",
+        "--output",
+        "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/reference"
+      ],
+      "cwd": "/tmp/bdi_capture_85cexw5b",
+      "log": "reference.log",
+      "exit_code": 0,
+      "wall_seconds": 0.168
+    },
+    {
+      "argv": [
+        "verilator",
+        "--binary",
+        "--timing",
+        "--trace",
+        "--assert",
+        "-Wall",
+        "-Wno-fatal",
+        "--top-module",
+        "tb_bdi_capture",
+        "-j",
+        "2",
+        "--Mdir",
+        "/tmp/bdi_capture_85cexw5b/obj_dir",
+        "bdi_prn_code_pkg.sv",
+        "bdi_signal_source.sv",
+        "b1i_prn_gen.sv",
+        "bdi_sliding_capture.sv",
+        "tb_bdi_capture.sv"
+      ],
+      "cwd": "/tmp/bdi_capture_85cexw5b",
+      "log": "build.log",
+      "exit_code": 0,
+      "wall_seconds": 5.033
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_85cexw5b/obj_dir/Vtb_bdi_capture",
+        "+CASE=main",
+        "+TRACE=capture.vcd"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/main",
+      "log": "main/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 2.575
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_85cexw5b/obj_dir/Vtb_bdi_capture",
+        "+CASE=gaps"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/gaps",
+      "log": "gaps/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.219
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_85cexw5b/obj_dir/Vtb_bdi_capture",
+        "+CASE=phase3"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/phase3",
+      "log": "phase3/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.118
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_85cexw5b/obj_dir/Vtb_bdi_capture",
+        "+CASE=terminal"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/terminal",
+      "log": "terminal/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.068
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_85cexw5b/obj_dir/Vtb_bdi_capture",
+        "+CASE=zero"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/zero",
+      "log": "zero/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.169
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_85cexw5b/obj_dir/Vtb_bdi_capture",
+        "+CASE=wrong_prn"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/wrong_prn",
+      "log": "wrong_prn/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.219
+    },
+    {
+      "argv": [
+        "/tmp/bdi_capture_85cexw5b/obj_dir/Vtb_bdi_capture",
+        "+CASE=restart"
+      ],
+      "cwd": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164133/restart",
+      "log": "restart/simulation.log",
+      "exit_code": 0,
+      "wall_seconds": 0.319
+    }
+  ],
+  "cases": {
+    "main": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 57288,
+      "hit_windows": [
+        11
+      ],
+      "csv_sha256": "1a99bd98be364483b89b4ba4ed135c9642c3a19a5690f044be270f6eb4254ff2",
+      "tb_result": "BDI_CAPTURE_PASS case=main windows=13 samples=212785 hits=1 aligned_samples=49105 mismatched_samples=81648 invalid_clocks=1 epoch=0"
+    },
+    "gaps": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 57288,
+      "hit_windows": [
+        11
+      ],
+      "csv_sha256": "d81ba477e82a083c9f606fb03c2f1b73281d855fd6abbbbe533f107364c8bee7",
+      "tb_result": "BDI_CAPTURE_PASS case=gaps windows=13 samples=212784 hits=1 aligned_samples=49104 mismatched_samples=81648 invalid_clocks=9166 epoch=0"
+    },
+    "phase3": {
+      "status": "PASS",
+      "windows": 6,
+      "max_energy": 57288,
+      "hit_windows": [
+        4
+      ],
+      "csv_sha256": "6aac732a760360d6796394fef67977f3c6536c00b78d87098648858af0266cc1",
+      "tb_result": "BDI_CAPTURE_PASS case=phase3 windows=6 samples=98209 hits=1 aligned_samples=49105 mismatched_samples=24832 invalid_clocks=1 epoch=0"
+    },
+    "terminal": {
+      "status": "PASS",
+      "windows": 2,
+      "max_energy": 21,
+      "hit_windows": [],
+      "csv_sha256": "416679884252c29f07791486c72c26f0b30a1c16644d5dc81ef3a6c95ffc50ef",
+      "tb_result": "BDI_CAPTURE_PASS case=terminal windows=2 samples=32737 hits=0 aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0"
+    },
+    "zero": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 0,
+      "hit_windows": [],
+      "csv_sha256": "66e250ab1e534a0e6c643a53e25ea17d212b6c038f8383fc4edbccf7ef2f1053",
+      "tb_result": "BDI_CAPTURE_PASS case=zero windows=13 samples=212785 hits=0 aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0"
+    },
+    "wrong_prn": {
+      "status": "PASS",
+      "windows": 13,
+      "max_energy": 1792,
+      "hit_windows": [],
+      "csv_sha256": "f20e0cf129a98c0f5e3017503bbdb0a323ab8018eab09f864376b30ca2e53394",
+      "tb_result": "BDI_CAPTURE_PASS case=wrong_prn windows=13 samples=212785 hits=0 aligned_samples=0 mismatched_samples=0 invalid_clocks=0 epoch=0"
+    },
+    "restart": {
+      "status": "PASS",
+      "windows": 26,
+      "max_energy": 57288,
+      "hit_windows": [
+        11,
+        11
+      ],
+      "csv_sha256": "0eb0ef2c6e2d80eaa081c6279697680da6659a975e37f3e4571b35a6436f2f52",
+      "tb_result": "BDI_CAPTURE_PASS case=restart windows=13 samples=212785 hits=1 aligned_samples=49105 mismatched_samples=81648 invalid_clocks=1 epoch=1"
+    }
+  },
+  "mirror_sha256": {
+    "bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "bdi_sliding_capture.sv": "d53abf57ca15cdc32c537cda11dfe891e13270564b96274f79747b66a55cea51",
+    "tb_bdi_capture.sv": "34e1e933a3acc52e52a6f2d75caccffd4d587ac18044c9d2c9bf6a9a5fcd826b"
+  },
+  "reference": {
+    "table_check": "PASS: all 2046 chips",
+    "threshold": 8192,
+    "valid_samples_per_window": 16368,
+    "first_source_20_chips": "00010000001001110001",
+    "reference_windows": [
+      {
+        "window": 1,
+        "phase": 0,
+        "i": 0,
+        "q": -1624,
+        "energy": 1624
+      },
+      {
+        "window": 2,
+        "phase": 1,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 3,
+        "phase": 2,
+        "i": 0,
+        "q": 56,
+        "energy": 56
+      },
+      {
+        "window": 4,
+        "phase": 3,
+        "i": 0,
+        "q": -1736,
+        "energy": 1736
+      },
+      {
+        "window": 5,
+        "phase": 4,
+        "i": 0,
+        "q": 1848,
+        "energy": 1848
+      },
+      {
+        "window": 6,
+        "phase": 5,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 7,
+        "phase": 6,
+        "i": 0,
+        "q": -1848,
+        "energy": 1848
+      },
+      {
+        "window": 8,
+        "phase": 7,
+        "i": 0,
+        "q": 1848,
+        "energy": 1848
+      },
+      {
+        "window": 9,
+        "phase": 8,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 10,
+        "phase": 9,
+        "i": 0,
+        "q": -56,
+        "energy": 56
+      },
+      {
+        "window": 11,
+        "phase": 10,
+        "i": 0,
+        "q": -57288,
+        "energy": 57288
+      },
+      {
+        "window": 12,
+        "phase": 10,
+        "i": 0,
+        "q": 57288,
+        "energy": 57288
+      },
+      {
+        "window": 13,
+        "phase": 10,
+        "i": 0,
+        "q": -57288,
+        "energy": 57288
+      }
+    ],
+    "document_wrong_phase_values": [
+      1736,
+      0,
+      56,
+      1736,
+      1792,
+      56,
+      1792,
+      1848,
+      0,
+      0
+    ],
+    "document_low_value_differences": [
+      {
+        "phase": 0,
+        "document_energy": 1736,
+        "cyclic_table_energy": 1624
+      },
+      {
+        "phase": 1,
+        "document_energy": 0,
+        "cyclic_table_energy": 56
+      },
+      {
+        "phase": 4,
+        "document_energy": 1792,
+        "cyclic_table_energy": 1848
+      },
+      {
+        "phase": 6,
+        "document_energy": 1792,
+        "cyclic_table_energy": 1848
+      },
+      {
+        "phase": 8,
+        "document_energy": 0,
+        "cyclic_table_energy": 56
+      },
+      {
+        "phase": 9,
+        "document_energy": 0,
+        "cyclic_table_energy": 56
+      }
+    ]
+  },
+  "waveform": {
+    "path": "main/capture.vcd",
+    "bytes": 160961515,
+    "sha256": "4b8cdc5fd157b8912aacc5b8389dd1581da8868f2c6b675ccc06d6b6c8710e49",
+    "required_signals": "PASS"
+  }
+}

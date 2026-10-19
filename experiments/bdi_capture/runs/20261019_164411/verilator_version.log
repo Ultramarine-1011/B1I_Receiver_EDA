@@ -1,0 +1,5 @@
+COMMAND_JSON: ["verilator", "--version"]
+CWD: /tmp/bdi_capture_jk4_13wb
+Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+
+EXIT_CODE: 0

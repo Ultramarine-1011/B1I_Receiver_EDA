@@ -1,0 +1,44 @@
+{
+  "status": "FAIL",
+  "time_singapore": "20261019_164044",
+  "output": "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164044",
+  "build_mirror": "/tmp/bdi_capture_v86e9e23",
+  "source_sha256": {
+    "work/teacher_bdi_capture/bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "work/teacher_bdi_capture/bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "rtl/b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "experiments/bdi_capture/rtl/bdi_sliding_capture.sv": "d53abf57ca15cdc32c537cda11dfe891e13270564b96274f79747b66a55cea51",
+    "experiments/bdi_capture/tb/tb_bdi_capture.sv": "87d2adcc85671d61a87e818dba3493f6e4696310fe4499104326f58b87121925"
+  },
+  "commands": [
+    {
+      "argv": [
+        "verilator",
+        "--version"
+      ],
+      "cwd": "/tmp/bdi_capture_v86e9e23",
+      "log": "verilator_version.log",
+      "exit_code": 0,
+      "wall_seconds": 0.13
+    },
+    {
+      "argv": [
+        "g++",
+        "--version"
+      ],
+      "cwd": "/tmp/bdi_capture_v86e9e23",
+      "log": "compiler_version.log",
+      "exit_code": 0,
+      "wall_seconds": 0.013
+    }
+  ],
+  "cases": {},
+  "mirror_sha256": {
+    "bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "bdi_sliding_capture.sv": "d53abf57ca15cdc32c537cda11dfe891e13270564b96274f79747b66a55cea51",
+    "tb_bdi_capture.sv": "87d2adcc85671d61a87e818dba3493f6e4696310fe4499104326f58b87121925"
+  },
+  "error": "AssertionError()"
+}

@@ -1,0 +1,6 @@
+COMMAND_JSON: ["/usr/bin/python3", "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/model/reference.py", "--teacher", "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/teacher_bdi_capture", "--output", "/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/bdi_capture/runs/20261019_164411/reference"]
+CWD: /tmp/bdi_capture_jk4_13wb
+BDI_REFERENCE_PASS: ICD=teacher table (2046 chips); full-window golden generated
+DOCUMENT_LOW_VALUE_DIFFERENCES: [{"phase": 0, "document_energy": 1736, "cyclic_table_energy": 1624}, {"phase": 1, "document_energy": 0, "cyclic_table_energy": 56}, {"phase": 4, "document_energy": 1792, "cyclic_table_energy": 1848}, {"phase": 6, "document_energy": 1792, "cyclic_table_energy": 1848}, {"phase": 8, "document_energy": 0, "cyclic_table_energy": 56}, {"phase": 9, "document_energy": 0, "cyclic_table_energy": 56}]
+
+EXIT_CODE: 0
