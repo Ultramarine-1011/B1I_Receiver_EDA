@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\experiments\bdi_capture\scripts\audit_delivery.py", line 75, in <module>
+    main()
+  File "C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\experiments\bdi_capture\scripts\audit_delivery.py", line 31, in main
+    assert set(changed) <= allowed, f'protected files changed: {set(changed)-allowed}'
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: protected files changed: {'docs/NEXT_STEPS.md', 'GOAL.md', 'EDA_ENV_STATUS.md'}

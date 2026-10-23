@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "scope": "current main delivery integrity; no new simulation",
+  "trusted_merged_main": "b17f3d06501a101ec7c5b7f92891514d5b1943c1",
+  "run": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\bdi_capture\\runs\\20261019_164411",
+  "full_receiver_VCS_DC_ICC": "NOT_RUN",
+  "large_local_VCD_samples": "NOT_REQUIRED; historical hashes retained in run evidence",
+  "head": "b17f3d06501a101ec7c5b7f92891514d5b1943c1",
+  "error": "protected SHA256 mismatch against merged main: constraints/counter.sdc",
+  "exit_code": 1
+}

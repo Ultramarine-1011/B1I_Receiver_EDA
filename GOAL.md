@@ -1,4 +1,8 @@
-# H0：虚拟机 VCS 功能回归与 DC 首次综合
+# 本次交付收尾（2026-10-23）
+
+范围仅补齐独立BDI实验的教师依赖/本机大文件说明，修复合并后的只读交付审计，校正文档状态；验收为新审计、文档链接、Python语法、Git空白检查及受保护文件前后SHA256核对通过，随后仅提交本次文件并正常推送main。独立BDI单星捕获已完成六组Verilator测试并提交推送；H0原PRN的VCS/DC也已完成合并。新捕获电路尚未在虚拟机完成DC/ICC验证。本次不重复实验，不进入下一阶段；完成后停止，等待用户授权。当前状态只见[STATUS](STATUS.md)。
+
+# H0：已完成的虚拟机 VCS 功能回归与 DC 首次综合
 
 授权日期 2026-10-16。用户指定以虚拟机内已解压工程为唯一基线，GitHub 只在本阶段实验完成后接收成果。范围仅当前 `b1i_prn_gen`：确认既有 VCS、Design Compiler、许可证和 SAED90nm，跑通完整 PRN 自检，并做一次实验性综合。不授权完整接收机综合或 ICC。
 
@@ -7,9 +11,9 @@
 | VCS 当前 PRN RTL 自检退出码 0，且输出 `B1I_PRN_REGRESSION_PASS` | 完成。I-2014.03，32 路各 2046 chip |
 | DC analyze/elaborate/link、check_design、实验时钟、compile、面积、时序、网表 | 完成。K-2015.06，SAED90nm typical，10 ns 实验时钟，slack 7.150 ns |
 | 可重复脚本与轻量证据 | `scripts/h0_vm_smoke.sh`，`docs/H0_VM_SMOKE.md`，`reports/local/h0_vm/` |
-| 成果推送 main，且不用远端覆盖虚拟机工程 | 见本次 Git 提交 |
+| 成果推送 main，且不用远端覆盖虚拟机工程 | 已完成，H0提交7ce233b经1e0308f合并推送main |
 
-实验条件、哈希、面积和路径见 [H0_VM_SMOKE](docs/H0_VM_SMOKE.md)。下一阶段建议：仍用该解压树，按模块扩展 VCS/DC；完整接收机综合和 ICC 需新的授权。
+实验条件、哈希、面积和路径见 [H0_VM_SMOKE](docs/H0_VM_SMOKE.md)。本节保留已完成的H0目标与证据，不再作为当前待执行任务；扩展VCS/DC、完整接收机综合和ICC需新的授权。
 
 # G 阶段：真实性能证据与因果评价
 

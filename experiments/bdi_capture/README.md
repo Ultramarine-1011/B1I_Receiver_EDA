@@ -6,6 +6,18 @@
 
 ## 运行与交付入口
 
+先将老师提供的 ZIP 解压到工程根目录的 `work/teacher_bdi_capture/`，避免多套一层目录。复现必需文件为：
+
+```text
+work/teacher_bdi_capture/
+  bdi_signal_source.sv
+  bdi_prn_code_pkg.sv
+  README.md
+  简化BDI信号发生器和捕获判断说明.docx
+```
+
+前两份是仿真直接编译的教师源，后两份是参数及捕获判据的原始规范；资料包的 `reference/` 保留为参考。根目录 `.gitignore` 忽略整个 `work/`，GitHub 不分发教师 ZIP、Word、PDF 或源文件。从 GitHub 克隆后，用户须自行提供这份教师资料；审计会检查上述四个文件的真实 SHA256，缺失时报告 `BLOCKED_INPUT` 并以退出码2结束。
+
 在工程根目录执行，使用已有 WSL Ubuntu / Verilator / g++ / Python，不安装或配置系统环境：
 
 ```powershell
@@ -24,7 +36,21 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\experiments\bdi_capture\pl
 | 完整波形，约161 MB | `runs/20261019_164411/main/capture.vcd` 仅保留在本机，未提交；SHA256 见 [run_summary.json](runs/20261019_164411/run_summary.json) |
 | 逐窗结果 / 全样点观测CSV | [windows.csv](runs/20261019_164411/main/windows.csv) 已提交；约15 MB的 `samples.csv` 仅保留在本机，未提交 |
 | 编译与仿真命令、退出码、评分 | [run_summary.json](runs/20261019_164411/run_summary.json)、[主用例日志](runs/20261019_164411/main/simulation.log)、[build.log](runs/20261019_164411/build.log) |
-| 既有文件保护 / 当前源码核验 | [baseline.json](evidence/baseline.json)、[delivery_audit.json](runs/20261019_164411/delivery_audit.json) |
+| 历史运行时的完整性证明 | [baseline.json](evidence/baseline.json)、[delivery_audit.json](runs/20261019_164411/delivery_audit.json)，保留当时HEAD及原结果 |
+
+约161 MB VCD和约15 MB全样点CSV只保存在本机；GitHub的运行证据只包含轻量日志、逐窗数据、摘要/参考数据及PNG，不包含原始大波形或大型构建产物。
+
+### 当前 main 的交付检查
+
+原审计证明2026-10-19运行时HEAD为 `88e5182`、既有文件未被实验改变；该记录不要求后续合并仍停留在旧HEAD。H0及三份Markdown报告已合并到 `b17f3d0`，捕获实验已提交推送。当前审计以此合并提交为祖先及受保护文件基准，接受其后提交；三份报告与H0按合并后版本核对，捕获RTL/TB、原PRN、教师源仍与原仿真SHA256逐项绑定，并检查六组日志、退出码和逐窗CSV的对应关系。
+
+只读复核已有结果，不编译或重新生成VCD（使用现有Python 3）：
+
+```powershell
+python -X utf8 experiments/bdi_capture/scripts/audit_delivery.py --run experiments/bdi_capture/runs/20261019_164411
+```
+
+默认写入新的 `work/bdi_delivery_audit_时间戳.json`；可用 `--output 新路径.json` 指定新文件，拒绝覆盖已有文件。退出码0为当前交付完整性PASS，1为检查失败，2为教师依赖缺失；这不构成新的仿真PASS。历史基线、失败记录、原日志和原 `delivery_audit.json` 不改写。克隆时需保留 `b17f3d0` 的Git历史（浅克隆需补齐该提交）。完整VCD和样点CSV不作为本次轻量审计依赖。
 
 ## RTL及时序
 
@@ -94,4 +120,4 @@ TB在下降沿驱动、上升沿读取被消费值，并在NBA更新后检查；
 
 最大错误相位值1848仍小于8192；捕获相位、主峰及NH变号与教师判据一致。差异细项见 [reference.json](runs/20261019_164411/reference/reference.json)。首次将示例低值当作逐项断言的检查退出1，证据保留于 `runs/20261019_164044/`；并非RTL失败。随后按当前实际源逐点核对，最终验证绑定当前源哈希。`build.log` 保留15条来自未修改教师文件的位宽警告，当前新增RTL/TB无编译警告。
 
-本次完整接收机、原H0回归、DC/ICC均 **NOT_RUN**。861个既有文件的启动哈希已保存，除STATUS/WORKLOG交接文字外均核验未变；原PRN RTL、教师文件、综合脚本、历史证据及用户三份报告/PDF均保留。未执行Git提交或推送。实验限定于教师默认无噪声、零多普勒、从首个有效样点开始的窗口，不外推到噪声、任意NH起点或2046全相位虚警统计。
+2026-10-19捕获实验期间，完整接收机、原H0回归、DC/ICC均 **NOT_RUN**。当时861个既有文件的启动哈希已保存，除STATUS/WORKLOG交接文字外均核验未变；原PRN RTL、教师文件、综合脚本、历史证据及用户三份报告/PDF均保留。随后实验经 `ce39efd` 提交及 `1e0308f` 合并正常推送main，H0原PRN的VCS/DC成果同时保留；新捕获电路尚未在虚拟机完成DC/ICC验证。实验限定于教师默认无噪声、零多普勒、从首个有效样点开始的窗口，不外推到噪声、任意NH起点或2046全相位虚警统计。

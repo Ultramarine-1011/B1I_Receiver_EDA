@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "scope": "current main delivery integrity; no new simulation",
+  "trusted_merged_main": "b17f3d06501a101ec7c5b7f92891514d5b1943c1",
+  "run": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\bdi_capture\\runs\\20261019_164411",
+  "full_receiver_VCS_DC_ICC": "NOT_RUN",
+  "large_local_VCD_samples": "NOT_REQUIRED; historical hashes retained in run evidence",
+  "head": "b17f3d06501a101ec7c5b7f92891514d5b1943c1",
+  "merged_tree_integrity": {
+    "status": "PASS",
+    "files": 195,
+    "checkout_crlf_only": [
+      "docs/H0_VM_SMOKE.md",
+      "experiments/bdi_capture/evidence/COMMANDS.md",
+      "experiments/bdi_capture/evidence/baseline.json",
+      "experiments/bdi_capture/evidence/latest_result.json",
+      "experiments/bdi_capture/evidence/teacher_instructions.txt",
+      "experiments/bdi_capture/runs/20261019_164411/delivery_audit.json",
+      "experiments/bdi_capture/runs/20261019_164411/delivery_audit.log",
+      "experiments/bdi_capture/runs/20261019_164411/figures/provenance.json",
+      "experiments/bdi_capture/runs/20261019_164411/plot_command.json",
+      "reports/local/h0_vm/b1i_prn_gen_saed90nm.sdc",
+      "reports/local/h0_vm/b1i_prn_gen_saed90nm.v",
+      "reports/local/h0_vm/check_design.rpt",
+      "reports/local/h0_vm/check_design_post_compile.rpt",
+      "reports/local/h0_vm/check_design_pre_constraint.rpt",
+      "reports/local/h0_vm/commands.txt",
+      "reports/local/h0_vm/dc_area.rpt",
+      "reports/local/h0_vm/dc_constraint.rpt",
+      "reports/local/h0_vm/dc_exit_code.txt",
+      "reports/local/h0_vm/dc_prn.log",
+      "reports/local/h0_vm/dc_qor.rpt",
+      "reports/local/h0_vm/dc_resources.rpt",
+      "reports/local/h0_vm/dc_result.txt",
+      "reports/local/h0_vm/dc_timing.rpt",
+      "reports/local/h0_vm/dc_timing_path.rpt",
+      "reports/local/h0_vm/environment.txt",
+      "reports/local/h0_vm/source_sha256.txt",
+      "reports/local/h0_vm/summary.txt",
+      "reports/local/h0_vm/vcs_exit_code.txt",
+      "reports/local/h0_vm/vcs_prn.log",
+      "reports/local/h0_vm/vcs_result.txt",
+      "scripts/h0_dc_prn.tcl",
+      "scripts/h0_vm_smoke.sh",
+      "tb/vectors/carrier/carrier.vec",
+      "tb/vectors/frontend/aligned.vec",
+      "tb/vectors/frontend/negative.vec",
+      "tb/vectors/frontend/wrap.vec"
+    ]
+  },
+  "historical_integrity": {
+    "status": "PRESERVED",
+    "head": "88e518292ca9671e7176c1ac49195973aa60fe42",
+    "scope": "2026-10-19 runtime, not current HEAD equality"
+  },
+  "missing_dependencies": [],
+  "teacher_sha256": {
+    "work/teacher_bdi_capture/README.md": "57b387abec927333310720a274fd7e99fedde2477a08dddb60e5abc9cb4a567d",
+    "work/teacher_bdi_capture/bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "work/teacher_bdi_capture/bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "work/teacher_bdi_capture/简化BDI信号发生器和捕获判断说明.docx": "4e4a89fbcc6b02c88504e0ee4ca740fbbc0de7393373453be54432891a8f3630"
+  },
+  "current_source_sha256": {
+    "work/teacher_bdi_capture/bdi_prn_code_pkg.sv": "b7588757c4f68c46f0355cb267183543c1ab2d1b358dd590fcfe20ea2499bb0b",
+    "work/teacher_bdi_capture/bdi_signal_source.sv": "e99124f5f18c1801ec75c0f867ea0c64fb33a114159f254d5b01b33e81604a3b",
+    "rtl/b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "experiments/bdi_capture/rtl/bdi_sliding_capture.sv": "b2a0dce3926c34594320c5b5207fdb1642c5f666e6863476164fc7ee386ae8e4",
+    "experiments/bdi_capture/tb/tb_bdi_capture.sv": "86de014037e9957fd9e12ebe271003a2bb7841e80d7f490bbe6b2d6f0161d88a"
+  },
+  "existing_simulation_evidence": {
+    "status": "PASS",
+    "cases": [
+      "gaps",
+      "main",
+      "phase3",
+      "restart",
+      "terminal",
+      "zero"
+    ],
+    "commands": 10,
+    "rerun": "NOT_RUN"
+  },
+  "dut_inputs": [
+    "clk",
+    "rst_n",
+    "if_sample",
+    "if_valid"
+  ],
+  "readme_links_checked": 17,
+  "exit_code": 0
+}

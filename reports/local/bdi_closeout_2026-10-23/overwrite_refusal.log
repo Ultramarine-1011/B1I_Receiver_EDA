@@ -1,0 +1,2 @@
+usage: audit_delivery.py [-h] --run RUN [--output OUTPUT]
+audit_delivery.py: error: refusing to overwrite existing evidence: C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\experiments\bdi_capture\runs\20261019_164411\delivery_audit.json

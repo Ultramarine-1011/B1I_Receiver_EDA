@@ -1,0 +1,47 @@
+warning: in the working copy of 'experiments/bdi_capture/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/bdi_capture/scripts/audit_delivery.py', LF will be replaced by CRLF the next time Git touches it
+BDI_CURRENT_DELIVERY_BLOCKED_INPUT: C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\delivery_closeout_20261023\cli_BLOCKED_INPUT.json
+injected missing teacher
+BDI_CURRENT_DELIVERY_FAIL: C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\work\delivery_closeout_20261023\cli_FAIL.json
+injected integrity mismatch
+{
+  "python_syntax": {
+    "status": "PASS",
+    "files": 4
+  },
+  "document_links": {
+    "status": "PASS",
+    "links": 32,
+    "documents": [
+      "GOAL.md",
+      "STATUS.md",
+      "docs/NEXT_STEPS.md",
+      "experiments/bdi_capture/README.md"
+    ]
+  },
+  "missing_teacher_read_fault": "teacher dependencies missing; extract ZIP to work/teacher_bdi_capture/: work/teacher_bdi_capture/bdi_signal_source.sv",
+  "reject_read_fault:experiments/bdi_capture/rtl/bdi_sliding_capture.sv": "protected SHA256 mismatch against merged main: experiments/bdi_capture/rtl/bdi_sliding_capture.sv",
+  "reject_read_fault:experiments/bdi_capture/tb/tb_bdi_capture.sv": "protected SHA256 mismatch against merged main: experiments/bdi_capture/tb/tb_bdi_capture.sv",
+  "reject_read_fault:experiments/bdi_capture/runs/20261019_164411/main/windows.csv": "protected SHA256 mismatch against merged main: experiments/bdi_capture/runs/20261019_164411/main/windows.csv",
+  "reject_read_fault:reports/local/h0_vm/dc_area.rpt": "protected SHA256 mismatch against merged main: reports/local/h0_vm/dc_area.rpt",
+  "reject_read_fault:work/teacher_bdi_capture/bdi_signal_source.sv": "teacher SHA256 mismatch: work/teacher_bdi_capture/bdi_signal_source.sv",
+  "cli_BLOCKED_INPUT": {
+    "status": "BLOCKED_INPUT",
+    "exit_code": 2
+  },
+  "cli_FAIL": {
+    "status": "FAIL",
+    "exit_code": 1
+  },
+  "protected_raw_sha256": {
+    "status": "PASS",
+    "files": 994,
+    "changed": [],
+    "includes": "all pre-existing tracked files except six editable docs/script; all local BDI runs including VCD/CSV/SVG; all teacher files; three untracked user PDFs",
+    "before_manifest_sha256": "a2afada52b23b01a4590b53fdc678a1df751b54bfa9fe92069f7b6d4a0714291",
+    "after_manifest_sha256": "a2afada52b23b01a4590b53fdc678a1df751b54bfa9fe92069f7b6d4a0714291",
+    "local_manifests": "work/delivery_closeout_20261023/protected_before.json and protected_after.json"
+  },
+  "git_diff_check_exit_code": 0,
+  "status": "PASS"
+}
