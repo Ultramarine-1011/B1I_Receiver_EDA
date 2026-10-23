@@ -25,8 +25,7 @@ try {
     Check @('student_release/student_release/tools/check_records.py',$bin,'--expected-samples',"$($summary.samples)",'--minimum-acquisitions','4','--require-tracking') 'structure_final.log'
     Check @('student_release/student_release/tools/self_check.py',$bin,'--expected-samples',"$($summary.samples)",'--minimum-acquisitions','4','--require-tracking','--require-navigation','--require-common-observation') 'self_check.log'
     Check @('student_release/student_release/tools/route_a_position.py',$bin,'-o',(Join-Path $report 'positions.jsonl')) 'route_a.log'
-    Check @('model/f_integrity_audit.py','--final') 'source_audit.log'
     $runs | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $report 'validation_commands.json') -Encoding utf8
 } finally {Pop-Location}
-Write-Output 'F_DELIVERY_VERIFICATION_PASS public20_and_frozen_E; not_formal_statistics_or_ASIC'
+Write-Output 'F_PUBLIC20_VERIFICATION_PASS'
 exit 0

@@ -2,6 +2,10 @@
 
 当前状态只见[STATUS.md](../STATUS.md)，任务范围见GOAL.md。历史未决记录保留[archive/TBD_2026-09-28.md](archive/TBD_2026-09-28.md)。
 
+## 维护待办（2026-10-23）
+
+逐字节复核：`rtl/` 与 `student_release/student_release/rtl/` 中 `b1i_prn_gen.sv`、`carrier_nco_mixer.sv`、`carrier_quarter_lut.svh`、`code_nco.sv`、`epl_correlator.sv`、`tracking_frontend.sv` 六份基础文件相同。本轮只登记；统一路径需另评估所有编译入口。`receiver_single` / `receiver_multichannel` 的控制、复位及宽运算后续按功能或综合需求处理，风险见 [综合准备](SYNTHESIS_READINESS.md)。
+
 ## 已由教师发布解决
 
 - 纯仿真无需SRAM控制器。输入为scenario.if2（409200000字节），Fs=16368000 Hz、IF=4092000 Hz、2 bit -3/-1/+1/+3。

@@ -1,4 +1,4 @@
-"""Read-only audit of completed G simulations; writes only lightweight evidence.
+"""Historical G closeout audit; invoke explicitly, outside record validation.
 
 No simulation, input generation, DUT mutation, or truth-assisted reception.
 """

@@ -2,19 +2,17 @@
 
 日期2026-10-14，Asia/Singapore。依据本地V1.7 §7.3–7.9、未修改教师README/RECORD_FORMAT/input_contract与[G授权](../../docs/archive/G_AUTHORIZATION_2026-10-14.md)。当前状态见[STATUS](../../STATUS.md)。
 
-**G全部当前可执行评价能力、低成本真实测试及审计已完成；正式P01–P09尚未完成验收，持续实时未证明。** 新增实际RTL事件采集、独立评分、只消费实际NAV/OBS的流式因果适配器、真实2秒RF恢复、1/4/12服务测量及有限FIFO驱动。未进入H，未使用VMware/SSH/Synopsys。
+实际完成了RTL事件采集、独立评分、NAV/OBS流式因果重放、2秒RF恢复、1/4/12槽服务测量及有限FIFO测试。公开52s获得49/50/51三连解；捕获与低功率连续锁定失败保留在下表。正式性能验收状态和最小输入需求分别见分类表与文末缺口表。
 
-## 恢复、版本与基线
+## 版本与证据
 
-会话`stream disconnected before completion`没有作为测试失败/完成依据。恢复HEAD=origin/main=c0d4d91；7个已跟踪文件有修改，展开路径145条未提交记录，均属G实现/证据。保留全部工作，没有reset/clean/checkout/restore/revert或删除。旧断点保存为[STATUS_G_INTERRUPTED](../../docs/archive/STATUS_G_INTERRUPTED_2026-10-14.md)。[恢复审计](session_recovery.json)确认无遗留仿真/脚本，16份最终仿真日志退出0，52秒交付8项检查退出0。恢复后没有重跑长仿真，只重放已有BIN/trace修正评分、完成报告。
+F基线fe9f1ba、实现1b9505e；G0 a028001、G1 c0d4d91、交付63ea9c5。各 `sources.json` 记录实际编译源与配置；12份G清单中，CN40捕获使用保留的 `acquisition/tb_snapshot.sv`，其余对应当时源码。25份编译RTL/ROM与F20一致。
 
-F基线fe9f1ba、实现1b9505e；G0 a028001及G1 c0d4d91已推送。各sources.json记录仿真启动HEAD和当时未提交probe/driver的精确SHA，不能单凭HEAD推定编译内容。G没有修改学生RTL/ROM/教师top/interface；25份编译RTL/ROM均匹配F真实20秒清单。12份G编译清单逐源匹配，CN40捕获TB后来只加诊断字段，其原版由acquisition/tb_snapshot.sv精确保留。
-
-E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501`。[冻结审计](final_resource_audit.json)核对23冻结项及25 F源项。原E100/F20证据保持历史范围，没有宣称G重新运行100秒。
+历史 [冻结审计](final_resource_audit.json)保存23冻结项及25源项核对；E100 BIN及备份SHA256为 `c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec71c5b1c69aa4eccdd501`。会话恢复过程见 [恢复记录](session_recovery.json)及 [旧断点](../../docs/archive/STATUS_G_INTERRUPTED_2026-10-14.md)，命令与交付经过见 [WORKLOG](../../WORKLOG.md)。
 
 ## P01–P09分类
 
-本报告没有OFFICIAL_PASS。SELF_GENERATED_PASS只限定独立真值的自生成测试；PARTIAL限定覆盖，FAIL保留未满足判据。仿真/评分程序退出0代表执行及数据完整性完成，不改变性能FAIL；脚本自测/数字槽结构/历史Prompt测试单列。
+SELF_GENERATED_PASS 表示有独立真值的自生成测试通过；PARTIAL 表示覆盖不足，FAIL 表示实测未满足判据。程序退出码反映执行结果，性能结论读取指标状态；本阶段没有 OFFICIAL_PASS。
 
 | 项 | 当前实测范围及结果 | 正式验收 |
 |---|---|---|
@@ -44,7 +42,7 @@ E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec7
 
 有噪声IF使用真实白噪声方差1/单边N0=2/Fs；每星实正弦功率A²/2、A²Fs/4=10^(C/N0/10)，ADC门限−1/0/+1、量化−3/−1/+1/+3。量化损失在链路内。捕获诊断只有载波偏移、没有传播码率偏移；动态IF距离/码/载波相位保持连续一致。BCH发射payload有独立字真值，但不是合格广播星历，无轨道/几何/PDOP/ECEF真值。真值只生成/离线评分，不输入DUT。
 
-同一档8个seed独立；两档复用相同seed集合，不合并成16独立重复。早期CN40未保存生成时脚本hash，保留未知项；实际输入mem hash均已核对，不补造版本。完整GNSS IF/导航/几何生成器未在已审计项目目录发现，未重新开发大型模拟器。
+同一档8个seed独立；两档复用相同seed集合，不合并成16独立重复。早期CN40未保存生成时脚本hash，保留未知项；实际输入mem hash均已核对，不补造版本。完整GNSS IF/导航/几何生成器缺失。
 
 ## 默认4真实输出与因果TTFF
 
@@ -83,7 +81,7 @@ E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec7
 | 40 | 1/6 | 3.005%–56.350% | 0/2 | 0%–65.762% |
 | 50 | 5/6 | 43.650%–96.995% | 0/2 | 0%–65.762% |
 
-失败留分母，未在4ms得到真值成功者保留0.004s截尾下界，不外推成正式10s失败/虚警≤1%。50档case2真值−9750/NH7、估计约−9950；[独立浮点目标](acquisition_cn50/nh_frequency_objective_diagnostic.json)同实际输入/真值码相位扫频也在−9950最大，支持NH边界下固定1ms积分目标偏置，未证明RTL算术不一致。保留局限，未调门限/容限掩盖失败。
+失败留分母，未在4ms得到真值成功者保留0.004s截尾下界，不外推成正式10s失败/虚警≤1%。50档case2真值−9750/NH7、估计约−9950；[独立浮点目标](acquisition_cn50/nh_frequency_objective_diagnostic.json)同实际输入/真值码相位扫频也在−9950最大，支持NH边界下固定1ms积分目标偏置，未证明RTL算术不一致。
 
 8用例墙钟40档36.844s、50档63.002s。六联合点边缘覆盖lag6/16368、NH4/20、频6/81，不能相乘声称联合覆盖。全16368×81×20=26516160组合按实测每例4.6–7.9s需约3.9–6.6年，且仅两PRN成本；未运行巨大笛卡尔积。正式100+100/10s输入缺失，不重复同一IF凑次数。
 
@@ -99,9 +97,9 @@ E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec7
 | 保持50 | 60 | 0.063231 | 0.002451 | 100% | SELF_GENERATED_PASS |
 | 保持40 | 60 | 0.073291 | 0.011747 | 97.262% | FAIL连续锁 |
 
-62s保持各1014816000样本/62000窗，50/40档墙钟156.766/158.808s，评分60000状态/60完整1s窗，前2s50档建立环路。probe没有manager/NAV/OBS，不能外推整机无重捕或正式灵敏度。40档码≤0.1chip/频≤5Hz，但锁标志间断；未为PASS修改DUT。
+62s保持各1014816000样本/62000窗，50/40档墙钟156.766/158.808s，评分60000状态/60完整1s窗，前2s50档建立环路。probe没有manager/NAV/OBS，不能外推整机无重捕或正式灵敏度。40档码≤0.1chip/频≤5Hz，但锁标志间断。
 
-[完整轨迹自测](dynamics/trajectory_validation.json)：D01 30s/a±3/j±2；D02 32s/a±5保持2s；D03 30s六圈累计60m；D04 32s/速度49.5m/s/总频约9.77kHz。实际短IF只覆盖上表，D04只正向组合边界；未覆盖12星/完整30s/负向边界/字及OBS比例。数学轨迹自测不算P07 PASS。
+[完整轨迹自测](dynamics/trajectory_validation.json)：D01 30s/a±3/j±2；D02 32s/a±5保持2s；D03 30s六圈累计60m；D04 32s/速度49.5m/s/总频约9.77kHz。实际短IF只覆盖上表，D04只正向组合边界；未覆盖12星/完整30s/负向边界/字及OBS比例。
 
 独立D1字评分来自恢复健康PRN7：首次实际NAV可用后下一完整6s帧至EOF前最后完整帧，源24–36s，20预期字/缺0/信息正确20，Wilson95%下界83.887%。全部60发出字也一致，但发出字60/60不能替代全发射字分母，不是灵敏度工作点。
 
@@ -119,7 +117,7 @@ E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec7
 | 真正恢复锁定 | generation3，握手377986240/23.093000978s |
 | 首次恢复NAV及有效OBS | generation3，握手589248016/36.000000978s，NH/帧/时间全部有效 |
 
-重捕独立核对(capture_ref+lag) mod16368=0、频0符合发射。旧评分按RF恢复后首locked误选generation2，已改真正重捕后同代generation3，初稿留recovery_metrics.initial_milestone_error.json。恢复到有效OBS14.000000978s；NH/帧/时间重新恢复不等于首锁标志。错误候选、两失锁、后台2106候选计算和长NAV恢复延迟均保留；正式P08仍缺标称合格输入。
+重捕独立核对(capture_ref+lag) mod16368=0、频0符合发射。旧评分按RF恢复后首locked误选generation2，已改真正重捕后同代generation3，初稿留recovery_metrics.initial_milestone_error.json。恢复到有效OBS14.000000978s；NH/帧/时间重新恢复不等于首锁标志。后台共2106次候选计算；正式输入缺口见文末。
 
 ## 吞吐与时间预算
 
@@ -146,11 +144,11 @@ E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec7
 
 固定速率驱动用假定100MHz/Fs持续生产：64word FIFO在cycle406462溢出（produced4158/accepted4093/highwater65），退出1及实际容量FAIL；102400word只跑0.1s，峰18363word/73452字节，退出0且样本/end审计通过，SELF_GENERATED_PASS限定有界输入。10000055拍=假定处理0.10000055s、主机10.970s。两次同一恢复IF前缀仅容量比较，不是独立统计。
 
-**持续实时未证明。** 缺目标clk/真实SRAM端口深度/输入输出服务及背压上界/持续12D1负载/物理时序；输入装进大FIFO、Verilator墙钟快或最终全部接收都不能补足。宏/存储/PPA改造留H授权。
+**持续实时未证明。** 尚缺目标clk、真实SRAM端口/深度、输入输出服务及背压上界、持续12D1负载和物理时序。
 
 ## 修复、回归及正式缺口
 
-评价修复含短窗/失败/截尾分母、重复/倒序历元、完整60s及1s窗、同代完整星历/不健康撤销、所有可测NCO误差、同代恢复里程碑、paced时间域。18独立边界检查0。缺ROM初始失败日志保留，runner补路径并拒绝缺文件警告；未改教师检查器/算法门槛/RTL。按影响复验真实52s记录/前缀/hash，未为纯评分文档重跑100s。
+评价修复含短窗/失败/截尾分母、重复/倒序历元、完整60s及1s窗、同代完整星历/不健康撤销、所有可测NCO误差、同代恢复里程碑、paced时间域。18独立边界检查0。缺ROM的初始失败日志保留，runner补齐路径并拒绝缺文件警告；真实52s记录及E前缀复验通过。
 
 [交付审计](delivery_audit.json)核12源清单、16最终仿真0、64FIFO容量失败、BIN/sidecar/hash/end、30字星历及所有三解依赖。性能FAIL仍保留。原始日志主机时间不改，重评分单独写*_final.log。
 
@@ -174,7 +172,7 @@ E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec7
 .\scripts\validate_g_delivery.ps1
 ```
 
-第二条重跑教师检查/独立NAV/因果重放/冻结审计。缺本地BIN/IF/CSV时需要取得大文件或对应重新运行；新输出应另指定证据目录，保留历史：
+第一条批量重评分，第二条检查公开52s记录；均写派生结果，维护时对新副本执行。历史 `model/g_resource_audit.py`、`model/g_delivery_audit.py` 保留作阶段取证工具，默认复验不调用。缺本地BIN/IF/CSV时需补齐大文件；长实验入口如下：
 
 ```powershell
 .\scripts\run_g_rtl.ps1 -DurationSeconds 52 -Channels 4 -EvidenceDirectory reports/g_stage/reproduce_public52
@@ -189,4 +187,4 @@ E100成功BIN及备份SHA256仍为`c9c4d23d1bc53bc44687a65c6473e5169fdedc0601ec7
 
 public52约25min、恢复约14min、保持每档2.6min，依机器负载而变。本轮恢复没有重复这些长任务。FIFO依赖recovery建立的c4_n1构建/IF，SkipBuild核源hash。定向runner默认既有目录，上述默认定向命令只在新checkout或历史证据已另行归档后使用；另建正式批次应隔离目录，不覆盖历史。结论读取metrics/status，不只看runner退出0。
 
-源码/轻量证据提交63ea9c5已正常推送main；本次随后固化G7状态/课程文档，最终提交SHA见Git日志及交接。G到此停止，唯一下一任务见STATUS：取得并登记教师合格性能场景及独立真值后接入正式评价；H不自动执行。
+当前工作与后续授权见 [STATUS](../../STATUS.md)。

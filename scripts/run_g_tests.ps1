@@ -32,7 +32,6 @@ if($Task -in @('acquisition','all')) {
     $folder=Join-Path $root "reports/g_stage/$name";New-Item -ItemType Directory -Force $folder | Out-Null
     Py @('model/g_acquisition_vectors.py','--cn0',"$AcquisitionCn0",'--name',$name) (Join-Path $folder 'vectors.log')
     $build=Build 'tb_g_acquisition' @('tb/tb_g_acquisition.sv') $folder
-    Copy-Item (Join-Path $package 'rom/*.mem') (Join-Path $root "work/g_stage/$name") -Force
     New-Item -ItemType Directory -Force (Join-Path $root "work/g_stage/$name/rom") | Out-Null
     Copy-Item (Join-Path $package 'rom/*.mem') (Join-Path $root "work/g_stage/$name/rom") -Force
     Run "cd '$(LinuxPath (Join-Path $root "work/g_stage/$name"))' && stdbuf -oL -eL '$(LinuxPath $build)/Vtb_g_acquisition'" (Join-Path $folder 'run.log')

@@ -1,6 +1,7 @@
-param([string]$PythonPath='C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe')
+param([string]$PythonPath='C:\Users\26255\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe',
+      [string]$EvidenceDirectory='reports/g_stage/real52')
 $ErrorActionPreference='Stop';$PSNativeCommandUseErrorActionPreference=$false
-$root=Split-Path -Parent $PSScriptRoot;$folder=Join-Path $root 'reports/g_stage/real52'
+$root=Split-Path -Parent $PSScriptRoot;$folder=Join-Path $root $EvidenceDirectory
 $commands=[Collections.Generic.List[object]]::new()
 function Check([string[]]$Arguments,[string]$logName) {
     $log=Join-Path $folder $logName;"COMMAND: $PythonPath $($Arguments -join ' ')" | Set-Content -LiteralPath $log -Encoding utf8
@@ -17,10 +18,8 @@ try {
     Check @('model/receiver_multi_score.py',$folder,'--require-navigation') 'independent_NAV.log'
     Copy-Item -LiteralPath (Join-Path $folder 'metrics.json') -Destination (Join-Path $folder 'receiver_validation.json') -Force
     Check @('model/g_run_score.py','--folder',$folder) 'score.log'
-    Check @('student_release/student_release/tools/route_a_position.py',(Join-Path $folder 'receiver_records.bin'),'-o',(Join-Path $folder 'route_a_positions.jsonl')) 'route_a_diagnostic.log'
     Check @('model/online_navigation.py','--bin',(Join-Path $folder 'receiver_records.bin'),'--sidecar',(Join-Path $folder 'receiver_records.bin.availability.jsonl'),'--output',(Join-Path $folder 'causal')) 'causal_replay.log'
-    Check @('model/g_resource_audit.py','--output','reports/g_stage/final_resource_audit.json') 'frozen_integrity.log'
     $commands | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $folder 'validation_commands.json') -Encoding utf8
 } finally {Pop-Location}
-Write-Output 'G_CURRENT_PUBLIC52_AND_FROZEN_E_VERIFICATION_PASS; formal_performance_remains_per_report'
+Write-Output 'G_PUBLIC52_RECORD_VERIFICATION_PASS'
 exit 0

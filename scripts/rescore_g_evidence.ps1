@@ -28,8 +28,5 @@ try {
     foreach($name in @('real51','real52')) {
         Score @('model/online_navigation.py','--bin',"reports/g_stage/$name/receiver_records.bin",'--sidecar',"reports/g_stage/$name/receiver_records.bin.availability.jsonl",'--output',"reports/g_stage/$name/causal") "reports/g_stage/$name/causal_final.log"
     }
-    Score @('model/test_g_evaluation.py') 'reports/g_stage/evaluation_tests.log'
-    Score @('model/g_resource_audit.py','--output','reports/g_stage/final_resource_audit.json') 'reports/g_stage/frozen_final.log'
-    Score @('model/g_delivery_audit.py') 'reports/g_stage/delivery_audit.log'
 } finally {Pop-Location}
 exit 0
