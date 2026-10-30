@@ -1,0 +1,4 @@
+nh20_sync Design Compiler was stopped on request during Mapping Optimization Phase 14.
+The wrapper result DC_FAIL and exit code 1 record that interrupt.
+They are not a completed synthesis error, and no area, timing, or netlist was produced.
+navigation_d1 synthesis was not started.

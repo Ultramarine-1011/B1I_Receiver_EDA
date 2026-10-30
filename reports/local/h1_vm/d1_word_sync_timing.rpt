@@ -1,0 +1,595 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : d1_word_sync
+Version: K-2015.06
+Date   : Fri Oct 30 13:49:30 2026
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: bit_ref[7] (input port clocked by clk)
+  Endpoint: start_ref_reg[63]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  d1_word_sync       16000                 saed90nm_typ
+  d1_word_sync_DW01_sub_0
+                     8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   1.000      1.000 r
+  bit_ref[7] (in)                                        0.002      1.002 r
+  sub_66_aco/A[7] (d1_word_sync_DW01_sub_0)              0.000      1.002 r
+  sub_66_aco/U96/ZN (INVX0)                              0.064      1.066 f
+  sub_66_aco/U95/QN (NAND2X0)                            0.094      1.159 r
+  sub_66_aco/U2_8/CO (FADDX1)                            0.280      1.440 r
+  sub_66_aco/U2_9/CO (FADDX1)                            0.271      1.711 r
+  sub_66_aco/U16/Q (OR2X1)                               0.139      1.850 r
+  sub_66_aco/U2_12/CO (FADDX1)                           0.267      2.116 r
+  sub_66_aco/U2_13/CO (FADDX1)                           0.271      2.387 r
+  sub_66_aco/U2_14/CO (FADDX1)                           0.271      2.658 r
+  sub_66_aco/U2_15/CO (FADDX1)                           0.271      2.929 r
+  sub_66_aco/U2_16/CO (FADDX1)                           0.266      3.194 r
+  sub_66_aco/U52/ZN (INVX0)                              0.078      3.272 f
+  sub_66_aco/U20/Q (AND2X1)                              0.097      3.369 f
+  sub_66_aco/U21/QN (NAND2X0)                            0.094      3.463 r
+  sub_66_aco/U2_20/CO (FADDX1)                           0.279      3.741 r
+  sub_66_aco/U2_21/CO (FADDX1)                           0.266      4.007 r
+  sub_66_aco/U56/ZN (INVX0)                              0.078      4.085 f
+  sub_66_aco/U10/Q (AND2X1)                              0.096      4.181 f
+  sub_66_aco/U55/QN (NAND2X1)                            0.089      4.270 r
+  sub_66_aco/U54/ZN (INVX0)                              0.077      4.347 f
+  sub_66_aco/U8/Q (AND2X1)                               0.096      4.443 f
+  sub_66_aco/U53/QN (NAND2X1)                            0.089      4.532 r
+  sub_66_aco/U51/ZN (INVX0)                              0.077      4.609 f
+  sub_66_aco/U4/Q (AND2X1)                               0.096      4.705 f
+  sub_66_aco/U49/QN (NAND2X1)                            0.089      4.794 r
+  sub_66_aco/U45/ZN (INVX0)                              0.071      4.865 f
+  sub_66_aco/U25/QN (NAND2X0)                            0.079      4.943 r
+  sub_66_aco/U47/ZN (INVX0)                              0.081      5.024 f
+  sub_66_aco/U40/Q (AND2X1)                              0.097      5.122 f
+  sub_66_aco/U44/QN (NAND2X1)                            0.089      5.211 r
+  sub_66_aco/U48/ZN (INVX0)                              0.071      5.282 f
+  sub_66_aco/U26/QN (NAND2X0)                            0.079      5.360 r
+  sub_66_aco/U50/ZN (INVX0)                              0.081      5.441 f
+  sub_66_aco/U11/Q (AND2X1)                              0.098      5.540 f
+  sub_66_aco/U7/Q (AND2X1)                               0.092      5.632 f
+  sub_66_aco/U30/QN (NAND2X0)                            0.078      5.709 r
+  sub_66_aco/U61/ZN (INVX0)                              0.081      5.790 f
+  sub_66_aco/U5/Q (AND2X1)                               0.095      5.885 f
+  sub_66_aco/U33/QN (NAND2X0)                            0.078      5.963 r
+  sub_66_aco/U62/ZN (INVX0)                              0.074      6.037 f
+  sub_66_aco/U34/QN (NAND2X0)                            0.080      6.117 r
+  sub_66_aco/U63/ZN (INVX0)                              0.074      6.191 f
+  sub_66_aco/U35/QN (NAND2X0)                            0.080      6.271 r
+  sub_66_aco/U65/ZN (INVX0)                              0.074      6.345 f
+  sub_66_aco/U64/QN (NAND2X0)                            0.080      6.425 r
+  sub_66_aco/U67/ZN (INVX0)                              0.074      6.499 f
+  sub_66_aco/U66/QN (NAND2X0)                            0.080      6.579 r
+  sub_66_aco/U69/ZN (INVX0)                              0.074      6.653 f
+  sub_66_aco/U68/QN (NAND2X0)                            0.080      6.733 r
+  sub_66_aco/U71/ZN (INVX0)                              0.074      6.807 f
+  sub_66_aco/U70/QN (NAND2X0)                            0.080      6.887 r
+  sub_66_aco/U73/ZN (INVX0)                              0.074      6.961 f
+  sub_66_aco/U72/QN (NAND2X0)                            0.080      7.041 r
+  sub_66_aco/U75/ZN (INVX0)                              0.074      7.115 f
+  sub_66_aco/U74/QN (NAND2X0)                            0.080      7.195 r
+  sub_66_aco/U77/ZN (INVX0)                              0.074      7.269 f
+  sub_66_aco/U76/QN (NAND2X0)                            0.080      7.349 r
+  sub_66_aco/U79/ZN (INVX0)                              0.074      7.423 f
+  sub_66_aco/U78/QN (NAND2X0)                            0.080      7.503 r
+  sub_66_aco/U81/ZN (INVX0)                              0.074      7.576 f
+  sub_66_aco/U80/QN (NAND2X0)                            0.080      7.657 r
+  sub_66_aco/U83/ZN (INVX0)                              0.074      7.730 f
+  sub_66_aco/U82/QN (NAND2X0)                            0.080      7.811 r
+  sub_66_aco/U85/ZN (INVX0)                              0.074      7.884 f
+  sub_66_aco/U84/QN (NAND2X0)                            0.080      7.965 r
+  sub_66_aco/U87/ZN (INVX0)                              0.074      8.038 f
+  sub_66_aco/U86/QN (NAND2X0)                            0.080      8.119 r
+  sub_66_aco/U89/ZN (INVX0)                              0.074      8.192 f
+  sub_66_aco/U88/QN (NAND2X0)                            0.083      8.276 r
+  sub_66_aco/U3/Q (OR2X1)                                0.133      8.409 r
+  sub_66_aco/U91/ZN (INVX0)                              0.075      8.483 f
+  sub_66_aco/U6/Q (AND2X1)                               0.096      8.579 f
+  sub_66_aco/U9/Q (AND2X1)                               0.095      8.675 f
+  sub_66_aco/U12/Q (AND2X1)                              0.095      8.770 f
+  sub_66_aco/U13/Q (AND2X1)                              0.095      8.865 f
+  sub_66_aco/U18/Q (AND2X1)                              0.095      8.961 f
+  sub_66_aco/U39/Q (AND2X1)                              0.095      9.056 f
+  sub_66_aco/U19/Q (AND2X1)                              0.095      9.152 f
+  sub_66_aco/U14/Q (AND2X1)                              0.095      9.247 f
+  sub_66_aco/U41/Q (AND2X1)                              0.092      9.339 f
+  sub_66_aco/U98/QN (NAND2X0)                            0.070      9.409 r
+  sub_66_aco/U1/Q (XOR2X1)                               0.148      9.557 r
+  sub_66_aco/DIFF[63] (d1_word_sync_DW01_sub_0)          0.000      9.557 r
+  U375/Q (AO22X1)                                        0.110      9.668 r
+  start_ref_reg[63]/D (DFFARX1)                          0.029      9.696 r
+  data arrival time                                                 9.696
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  clock uncertainty                                     -0.200      9.800
+  start_ref_reg[63]/CLK (DFFARX1)                        0.000      9.800 r
+  library setup time                                    -0.085      9.715
+  data required time                                                9.715
+  --------------------------------------------------------------------------
+  data required time                                                9.715
+  data arrival time                                                -9.696
+  --------------------------------------------------------------------------
+  slack (MET)                                                       0.019
+
+
+  Startpoint: bit_ref[7] (input port clocked by clk)
+  Endpoint: start_ref_reg[62]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  d1_word_sync       16000                 saed90nm_typ
+  d1_word_sync_DW01_sub_0
+                     8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   1.000      1.000 r
+  bit_ref[7] (in)                                        0.002      1.002 r
+  sub_66_aco/A[7] (d1_word_sync_DW01_sub_0)              0.000      1.002 r
+  sub_66_aco/U96/ZN (INVX0)                              0.064      1.066 f
+  sub_66_aco/U95/QN (NAND2X0)                            0.094      1.159 r
+  sub_66_aco/U2_8/CO (FADDX1)                            0.280      1.440 r
+  sub_66_aco/U2_9/CO (FADDX1)                            0.271      1.711 r
+  sub_66_aco/U16/Q (OR2X1)                               0.139      1.850 r
+  sub_66_aco/U2_12/CO (FADDX1)                           0.267      2.116 r
+  sub_66_aco/U2_13/CO (FADDX1)                           0.271      2.387 r
+  sub_66_aco/U2_14/CO (FADDX1)                           0.271      2.658 r
+  sub_66_aco/U2_15/CO (FADDX1)                           0.271      2.929 r
+  sub_66_aco/U2_16/CO (FADDX1)                           0.266      3.194 r
+  sub_66_aco/U52/ZN (INVX0)                              0.078      3.272 f
+  sub_66_aco/U20/Q (AND2X1)                              0.097      3.369 f
+  sub_66_aco/U21/QN (NAND2X0)                            0.094      3.463 r
+  sub_66_aco/U2_20/CO (FADDX1)                           0.279      3.741 r
+  sub_66_aco/U2_21/CO (FADDX1)                           0.266      4.007 r
+  sub_66_aco/U56/ZN (INVX0)                              0.078      4.085 f
+  sub_66_aco/U10/Q (AND2X1)                              0.096      4.181 f
+  sub_66_aco/U55/QN (NAND2X1)                            0.089      4.270 r
+  sub_66_aco/U54/ZN (INVX0)                              0.077      4.347 f
+  sub_66_aco/U8/Q (AND2X1)                               0.096      4.443 f
+  sub_66_aco/U53/QN (NAND2X1)                            0.089      4.532 r
+  sub_66_aco/U51/ZN (INVX0)                              0.077      4.609 f
+  sub_66_aco/U4/Q (AND2X1)                               0.096      4.705 f
+  sub_66_aco/U49/QN (NAND2X1)                            0.089      4.794 r
+  sub_66_aco/U45/ZN (INVX0)                              0.071      4.865 f
+  sub_66_aco/U25/QN (NAND2X0)                            0.079      4.943 r
+  sub_66_aco/U47/ZN (INVX0)                              0.081      5.024 f
+  sub_66_aco/U40/Q (AND2X1)                              0.097      5.122 f
+  sub_66_aco/U44/QN (NAND2X1)                            0.089      5.211 r
+  sub_66_aco/U48/ZN (INVX0)                              0.071      5.282 f
+  sub_66_aco/U26/QN (NAND2X0)                            0.079      5.360 r
+  sub_66_aco/U50/ZN (INVX0)                              0.081      5.441 f
+  sub_66_aco/U11/Q (AND2X1)                              0.098      5.540 f
+  sub_66_aco/U7/Q (AND2X1)                               0.092      5.632 f
+  sub_66_aco/U30/QN (NAND2X0)                            0.078      5.709 r
+  sub_66_aco/U61/ZN (INVX0)                              0.081      5.790 f
+  sub_66_aco/U5/Q (AND2X1)                               0.095      5.885 f
+  sub_66_aco/U33/QN (NAND2X0)                            0.078      5.963 r
+  sub_66_aco/U62/ZN (INVX0)                              0.074      6.037 f
+  sub_66_aco/U34/QN (NAND2X0)                            0.080      6.117 r
+  sub_66_aco/U63/ZN (INVX0)                              0.074      6.191 f
+  sub_66_aco/U35/QN (NAND2X0)                            0.080      6.271 r
+  sub_66_aco/U65/ZN (INVX0)                              0.074      6.345 f
+  sub_66_aco/U64/QN (NAND2X0)                            0.080      6.425 r
+  sub_66_aco/U67/ZN (INVX0)                              0.074      6.499 f
+  sub_66_aco/U66/QN (NAND2X0)                            0.080      6.579 r
+  sub_66_aco/U69/ZN (INVX0)                              0.074      6.653 f
+  sub_66_aco/U68/QN (NAND2X0)                            0.080      6.733 r
+  sub_66_aco/U71/ZN (INVX0)                              0.074      6.807 f
+  sub_66_aco/U70/QN (NAND2X0)                            0.080      6.887 r
+  sub_66_aco/U73/ZN (INVX0)                              0.074      6.961 f
+  sub_66_aco/U72/QN (NAND2X0)                            0.080      7.041 r
+  sub_66_aco/U75/ZN (INVX0)                              0.074      7.115 f
+  sub_66_aco/U74/QN (NAND2X0)                            0.080      7.195 r
+  sub_66_aco/U77/ZN (INVX0)                              0.074      7.269 f
+  sub_66_aco/U76/QN (NAND2X0)                            0.080      7.349 r
+  sub_66_aco/U79/ZN (INVX0)                              0.074      7.423 f
+  sub_66_aco/U78/QN (NAND2X0)                            0.080      7.503 r
+  sub_66_aco/U81/ZN (INVX0)                              0.074      7.576 f
+  sub_66_aco/U80/QN (NAND2X0)                            0.080      7.657 r
+  sub_66_aco/U83/ZN (INVX0)                              0.074      7.730 f
+  sub_66_aco/U82/QN (NAND2X0)                            0.080      7.811 r
+  sub_66_aco/U85/ZN (INVX0)                              0.074      7.884 f
+  sub_66_aco/U84/QN (NAND2X0)                            0.080      7.965 r
+  sub_66_aco/U87/ZN (INVX0)                              0.074      8.038 f
+  sub_66_aco/U86/QN (NAND2X0)                            0.080      8.119 r
+  sub_66_aco/U89/ZN (INVX0)                              0.074      8.192 f
+  sub_66_aco/U88/QN (NAND2X0)                            0.083      8.276 r
+  sub_66_aco/U3/Q (OR2X1)                                0.133      8.409 r
+  sub_66_aco/U91/ZN (INVX0)                              0.075      8.483 f
+  sub_66_aco/U6/Q (AND2X1)                               0.096      8.579 f
+  sub_66_aco/U9/Q (AND2X1)                               0.095      8.675 f
+  sub_66_aco/U12/Q (AND2X1)                              0.095      8.770 f
+  sub_66_aco/U13/Q (AND2X1)                              0.095      8.865 f
+  sub_66_aco/U18/Q (AND2X1)                              0.095      8.961 f
+  sub_66_aco/U39/Q (AND2X1)                              0.095      9.056 f
+  sub_66_aco/U19/Q (AND2X1)                              0.095      9.152 f
+  sub_66_aco/U14/Q (AND2X1)                              0.095      9.247 f
+  sub_66_aco/U60/QN (NAND2X0)                            0.077      9.324 r
+  sub_66_aco/U149/Q (XOR2X1)                             0.148      9.472 r
+  sub_66_aco/DIFF[62] (d1_word_sync_DW01_sub_0)          0.000      9.472 r
+  U373/Q (AO22X1)                                        0.110      9.582 r
+  start_ref_reg[62]/D (DFFARX1)                          0.029      9.611 r
+  data arrival time                                                 9.611
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  clock uncertainty                                     -0.200      9.800
+  start_ref_reg[62]/CLK (DFFARX1)                        0.000      9.800 r
+  library setup time                                    -0.085      9.715
+  data required time                                                9.715
+  --------------------------------------------------------------------------
+  data required time                                                9.715
+  data arrival time                                                -9.611
+  --------------------------------------------------------------------------
+  slack (MET)                                                       0.104
+
+
+  Startpoint: bit_ref[7] (input port clocked by clk)
+  Endpoint: start_ref_reg[61]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  d1_word_sync       16000                 saed90nm_typ
+  d1_word_sync_DW01_sub_0
+                     8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   1.000      1.000 r
+  bit_ref[7] (in)                                        0.002      1.002 r
+  sub_66_aco/A[7] (d1_word_sync_DW01_sub_0)              0.000      1.002 r
+  sub_66_aco/U96/ZN (INVX0)                              0.064      1.066 f
+  sub_66_aco/U95/QN (NAND2X0)                            0.094      1.159 r
+  sub_66_aco/U2_8/CO (FADDX1)                            0.280      1.440 r
+  sub_66_aco/U2_9/CO (FADDX1)                            0.271      1.711 r
+  sub_66_aco/U16/Q (OR2X1)                               0.139      1.850 r
+  sub_66_aco/U2_12/CO (FADDX1)                           0.267      2.116 r
+  sub_66_aco/U2_13/CO (FADDX1)                           0.271      2.387 r
+  sub_66_aco/U2_14/CO (FADDX1)                           0.271      2.658 r
+  sub_66_aco/U2_15/CO (FADDX1)                           0.271      2.929 r
+  sub_66_aco/U2_16/CO (FADDX1)                           0.266      3.194 r
+  sub_66_aco/U52/ZN (INVX0)                              0.078      3.272 f
+  sub_66_aco/U20/Q (AND2X1)                              0.097      3.369 f
+  sub_66_aco/U21/QN (NAND2X0)                            0.094      3.463 r
+  sub_66_aco/U2_20/CO (FADDX1)                           0.279      3.741 r
+  sub_66_aco/U2_21/CO (FADDX1)                           0.266      4.007 r
+  sub_66_aco/U56/ZN (INVX0)                              0.078      4.085 f
+  sub_66_aco/U10/Q (AND2X1)                              0.096      4.181 f
+  sub_66_aco/U55/QN (NAND2X1)                            0.089      4.270 r
+  sub_66_aco/U54/ZN (INVX0)                              0.077      4.347 f
+  sub_66_aco/U8/Q (AND2X1)                               0.096      4.443 f
+  sub_66_aco/U53/QN (NAND2X1)                            0.089      4.532 r
+  sub_66_aco/U51/ZN (INVX0)                              0.077      4.609 f
+  sub_66_aco/U4/Q (AND2X1)                               0.096      4.705 f
+  sub_66_aco/U49/QN (NAND2X1)                            0.089      4.794 r
+  sub_66_aco/U45/ZN (INVX0)                              0.071      4.865 f
+  sub_66_aco/U25/QN (NAND2X0)                            0.079      4.943 r
+  sub_66_aco/U47/ZN (INVX0)                              0.081      5.024 f
+  sub_66_aco/U40/Q (AND2X1)                              0.097      5.122 f
+  sub_66_aco/U44/QN (NAND2X1)                            0.089      5.211 r
+  sub_66_aco/U48/ZN (INVX0)                              0.071      5.282 f
+  sub_66_aco/U26/QN (NAND2X0)                            0.079      5.360 r
+  sub_66_aco/U50/ZN (INVX0)                              0.081      5.441 f
+  sub_66_aco/U11/Q (AND2X1)                              0.098      5.540 f
+  sub_66_aco/U7/Q (AND2X1)                               0.092      5.632 f
+  sub_66_aco/U30/QN (NAND2X0)                            0.078      5.709 r
+  sub_66_aco/U61/ZN (INVX0)                              0.081      5.790 f
+  sub_66_aco/U5/Q (AND2X1)                               0.095      5.885 f
+  sub_66_aco/U33/QN (NAND2X0)                            0.078      5.963 r
+  sub_66_aco/U62/ZN (INVX0)                              0.074      6.037 f
+  sub_66_aco/U34/QN (NAND2X0)                            0.080      6.117 r
+  sub_66_aco/U63/ZN (INVX0)                              0.074      6.191 f
+  sub_66_aco/U35/QN (NAND2X0)                            0.080      6.271 r
+  sub_66_aco/U65/ZN (INVX0)                              0.074      6.345 f
+  sub_66_aco/U64/QN (NAND2X0)                            0.080      6.425 r
+  sub_66_aco/U67/ZN (INVX0)                              0.074      6.499 f
+  sub_66_aco/U66/QN (NAND2X0)                            0.080      6.579 r
+  sub_66_aco/U69/ZN (INVX0)                              0.074      6.653 f
+  sub_66_aco/U68/QN (NAND2X0)                            0.080      6.733 r
+  sub_66_aco/U71/ZN (INVX0)                              0.074      6.807 f
+  sub_66_aco/U70/QN (NAND2X0)                            0.080      6.887 r
+  sub_66_aco/U73/ZN (INVX0)                              0.074      6.961 f
+  sub_66_aco/U72/QN (NAND2X0)                            0.080      7.041 r
+  sub_66_aco/U75/ZN (INVX0)                              0.074      7.115 f
+  sub_66_aco/U74/QN (NAND2X0)                            0.080      7.195 r
+  sub_66_aco/U77/ZN (INVX0)                              0.074      7.269 f
+  sub_66_aco/U76/QN (NAND2X0)                            0.080      7.349 r
+  sub_66_aco/U79/ZN (INVX0)                              0.074      7.423 f
+  sub_66_aco/U78/QN (NAND2X0)                            0.080      7.503 r
+  sub_66_aco/U81/ZN (INVX0)                              0.074      7.576 f
+  sub_66_aco/U80/QN (NAND2X0)                            0.080      7.657 r
+  sub_66_aco/U83/ZN (INVX0)                              0.074      7.730 f
+  sub_66_aco/U82/QN (NAND2X0)                            0.080      7.811 r
+  sub_66_aco/U85/ZN (INVX0)                              0.074      7.884 f
+  sub_66_aco/U84/QN (NAND2X0)                            0.080      7.965 r
+  sub_66_aco/U87/ZN (INVX0)                              0.074      8.038 f
+  sub_66_aco/U86/QN (NAND2X0)                            0.080      8.119 r
+  sub_66_aco/U89/ZN (INVX0)                              0.074      8.192 f
+  sub_66_aco/U88/QN (NAND2X0)                            0.083      8.276 r
+  sub_66_aco/U3/Q (OR2X1)                                0.133      8.409 r
+  sub_66_aco/U91/ZN (INVX0)                              0.075      8.483 f
+  sub_66_aco/U6/Q (AND2X1)                               0.096      8.579 f
+  sub_66_aco/U9/Q (AND2X1)                               0.095      8.675 f
+  sub_66_aco/U12/Q (AND2X1)                              0.095      8.770 f
+  sub_66_aco/U13/Q (AND2X1)                              0.095      8.865 f
+  sub_66_aco/U18/Q (AND2X1)                              0.095      8.961 f
+  sub_66_aco/U39/Q (AND2X1)                              0.095      9.056 f
+  sub_66_aco/U19/Q (AND2X1)                              0.095      9.152 f
+  sub_66_aco/U59/QN (NAND2X0)                            0.077      9.228 r
+  sub_66_aco/U178/Q (XOR2X1)                             0.148      9.377 r
+  sub_66_aco/DIFF[61] (d1_word_sync_DW01_sub_0)          0.000      9.377 r
+  U371/Q (AO22X1)                                        0.110      9.487 r
+  start_ref_reg[61]/D (DFFARX1)                          0.029      9.516 r
+  data arrival time                                                 9.516
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  clock uncertainty                                     -0.200      9.800
+  start_ref_reg[61]/CLK (DFFARX1)                        0.000      9.800 r
+  library setup time                                    -0.085      9.715
+  data required time                                                9.715
+  --------------------------------------------------------------------------
+  data required time                                                9.715
+  data arrival time                                                -9.516
+  --------------------------------------------------------------------------
+  slack (MET)                                                       0.199
+
+
+  Startpoint: bit_ref[7] (input port clocked by clk)
+  Endpoint: start_ref_reg[60]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  d1_word_sync       16000                 saed90nm_typ
+  d1_word_sync_DW01_sub_0
+                     8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   1.000      1.000 r
+  bit_ref[7] (in)                                        0.002      1.002 r
+  sub_66_aco/A[7] (d1_word_sync_DW01_sub_0)              0.000      1.002 r
+  sub_66_aco/U96/ZN (INVX0)                              0.064      1.066 f
+  sub_66_aco/U95/QN (NAND2X0)                            0.094      1.159 r
+  sub_66_aco/U2_8/CO (FADDX1)                            0.280      1.440 r
+  sub_66_aco/U2_9/CO (FADDX1)                            0.271      1.711 r
+  sub_66_aco/U16/Q (OR2X1)                               0.139      1.850 r
+  sub_66_aco/U2_12/CO (FADDX1)                           0.267      2.116 r
+  sub_66_aco/U2_13/CO (FADDX1)                           0.271      2.387 r
+  sub_66_aco/U2_14/CO (FADDX1)                           0.271      2.658 r
+  sub_66_aco/U2_15/CO (FADDX1)                           0.271      2.929 r
+  sub_66_aco/U2_16/CO (FADDX1)                           0.266      3.194 r
+  sub_66_aco/U52/ZN (INVX0)                              0.078      3.272 f
+  sub_66_aco/U20/Q (AND2X1)                              0.097      3.369 f
+  sub_66_aco/U21/QN (NAND2X0)                            0.094      3.463 r
+  sub_66_aco/U2_20/CO (FADDX1)                           0.279      3.741 r
+  sub_66_aco/U2_21/CO (FADDX1)                           0.266      4.007 r
+  sub_66_aco/U56/ZN (INVX0)                              0.078      4.085 f
+  sub_66_aco/U10/Q (AND2X1)                              0.096      4.181 f
+  sub_66_aco/U55/QN (NAND2X1)                            0.089      4.270 r
+  sub_66_aco/U54/ZN (INVX0)                              0.077      4.347 f
+  sub_66_aco/U8/Q (AND2X1)                               0.096      4.443 f
+  sub_66_aco/U53/QN (NAND2X1)                            0.089      4.532 r
+  sub_66_aco/U51/ZN (INVX0)                              0.077      4.609 f
+  sub_66_aco/U4/Q (AND2X1)                               0.096      4.705 f
+  sub_66_aco/U49/QN (NAND2X1)                            0.089      4.794 r
+  sub_66_aco/U45/ZN (INVX0)                              0.071      4.865 f
+  sub_66_aco/U25/QN (NAND2X0)                            0.079      4.943 r
+  sub_66_aco/U47/ZN (INVX0)                              0.081      5.024 f
+  sub_66_aco/U40/Q (AND2X1)                              0.097      5.122 f
+  sub_66_aco/U44/QN (NAND2X1)                            0.089      5.211 r
+  sub_66_aco/U48/ZN (INVX0)                              0.071      5.282 f
+  sub_66_aco/U26/QN (NAND2X0)                            0.079      5.360 r
+  sub_66_aco/U50/ZN (INVX0)                              0.081      5.441 f
+  sub_66_aco/U11/Q (AND2X1)                              0.098      5.540 f
+  sub_66_aco/U7/Q (AND2X1)                               0.092      5.632 f
+  sub_66_aco/U30/QN (NAND2X0)                            0.078      5.709 r
+  sub_66_aco/U61/ZN (INVX0)                              0.081      5.790 f
+  sub_66_aco/U5/Q (AND2X1)                               0.095      5.885 f
+  sub_66_aco/U33/QN (NAND2X0)                            0.078      5.963 r
+  sub_66_aco/U62/ZN (INVX0)                              0.074      6.037 f
+  sub_66_aco/U34/QN (NAND2X0)                            0.080      6.117 r
+  sub_66_aco/U63/ZN (INVX0)                              0.074      6.191 f
+  sub_66_aco/U35/QN (NAND2X0)                            0.080      6.271 r
+  sub_66_aco/U65/ZN (INVX0)                              0.074      6.345 f
+  sub_66_aco/U64/QN (NAND2X0)                            0.080      6.425 r
+  sub_66_aco/U67/ZN (INVX0)                              0.074      6.499 f
+  sub_66_aco/U66/QN (NAND2X0)                            0.080      6.579 r
+  sub_66_aco/U69/ZN (INVX0)                              0.074      6.653 f
+  sub_66_aco/U68/QN (NAND2X0)                            0.080      6.733 r
+  sub_66_aco/U71/ZN (INVX0)                              0.074      6.807 f
+  sub_66_aco/U70/QN (NAND2X0)                            0.080      6.887 r
+  sub_66_aco/U73/ZN (INVX0)                              0.074      6.961 f
+  sub_66_aco/U72/QN (NAND2X0)                            0.080      7.041 r
+  sub_66_aco/U75/ZN (INVX0)                              0.074      7.115 f
+  sub_66_aco/U74/QN (NAND2X0)                            0.080      7.195 r
+  sub_66_aco/U77/ZN (INVX0)                              0.074      7.269 f
+  sub_66_aco/U76/QN (NAND2X0)                            0.080      7.349 r
+  sub_66_aco/U79/ZN (INVX0)                              0.074      7.423 f
+  sub_66_aco/U78/QN (NAND2X0)                            0.080      7.503 r
+  sub_66_aco/U81/ZN (INVX0)                              0.074      7.576 f
+  sub_66_aco/U80/QN (NAND2X0)                            0.080      7.657 r
+  sub_66_aco/U83/ZN (INVX0)                              0.074      7.730 f
+  sub_66_aco/U82/QN (NAND2X0)                            0.080      7.811 r
+  sub_66_aco/U85/ZN (INVX0)                              0.074      7.884 f
+  sub_66_aco/U84/QN (NAND2X0)                            0.080      7.965 r
+  sub_66_aco/U87/ZN (INVX0)                              0.074      8.038 f
+  sub_66_aco/U86/QN (NAND2X0)                            0.080      8.119 r
+  sub_66_aco/U89/ZN (INVX0)                              0.074      8.192 f
+  sub_66_aco/U88/QN (NAND2X0)                            0.083      8.276 r
+  sub_66_aco/U3/Q (OR2X1)                                0.133      8.409 r
+  sub_66_aco/U91/ZN (INVX0)                              0.075      8.483 f
+  sub_66_aco/U6/Q (AND2X1)                               0.096      8.579 f
+  sub_66_aco/U9/Q (AND2X1)                               0.095      8.675 f
+  sub_66_aco/U12/Q (AND2X1)                              0.095      8.770 f
+  sub_66_aco/U13/Q (AND2X1)                              0.095      8.865 f
+  sub_66_aco/U18/Q (AND2X1)                              0.095      8.961 f
+  sub_66_aco/U39/Q (AND2X1)                              0.095      9.056 f
+  sub_66_aco/U58/QN (NAND2X0)                            0.077      9.133 r
+  sub_66_aco/U177/Q (XOR2X1)                             0.148      9.281 r
+  sub_66_aco/DIFF[60] (d1_word_sync_DW01_sub_0)          0.000      9.281 r
+  U369/Q (AO22X1)                                        0.110      9.392 r
+  start_ref_reg[60]/D (DFFARX1)                          0.029      9.421 r
+  data arrival time                                                 9.421
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  clock uncertainty                                     -0.200      9.800
+  start_ref_reg[60]/CLK (DFFARX1)                        0.000      9.800 r
+  library setup time                                    -0.085      9.715
+  data required time                                                9.715
+  --------------------------------------------------------------------------
+  data required time                                                9.715
+  data arrival time                                                -9.421
+  --------------------------------------------------------------------------
+  slack (MET)                                                       0.294
+
+
+  Startpoint: bit_ref[7] (input port clocked by clk)
+  Endpoint: start_ref_reg[59]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  d1_word_sync       16000                 saed90nm_typ
+  d1_word_sync_DW01_sub_0
+                     8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   1.000      1.000 r
+  bit_ref[7] (in)                                        0.002      1.002 r
+  sub_66_aco/A[7] (d1_word_sync_DW01_sub_0)              0.000      1.002 r
+  sub_66_aco/U96/ZN (INVX0)                              0.064      1.066 f
+  sub_66_aco/U95/QN (NAND2X0)                            0.094      1.159 r
+  sub_66_aco/U2_8/CO (FADDX1)                            0.280      1.440 r
+  sub_66_aco/U2_9/CO (FADDX1)                            0.271      1.711 r
+  sub_66_aco/U16/Q (OR2X1)                               0.139      1.850 r
+  sub_66_aco/U2_12/CO (FADDX1)                           0.267      2.116 r
+  sub_66_aco/U2_13/CO (FADDX1)                           0.271      2.387 r
+  sub_66_aco/U2_14/CO (FADDX1)                           0.271      2.658 r
+  sub_66_aco/U2_15/CO (FADDX1)                           0.271      2.929 r
+  sub_66_aco/U2_16/CO (FADDX1)                           0.266      3.194 r
+  sub_66_aco/U52/ZN (INVX0)                              0.078      3.272 f
+  sub_66_aco/U20/Q (AND2X1)                              0.097      3.369 f
+  sub_66_aco/U21/QN (NAND2X0)                            0.094      3.463 r
+  sub_66_aco/U2_20/CO (FADDX1)                           0.279      3.741 r
+  sub_66_aco/U2_21/CO (FADDX1)                           0.266      4.007 r
+  sub_66_aco/U56/ZN (INVX0)                              0.078      4.085 f
+  sub_66_aco/U10/Q (AND2X1)                              0.096      4.181 f
+  sub_66_aco/U55/QN (NAND2X1)                            0.089      4.270 r
+  sub_66_aco/U54/ZN (INVX0)                              0.077      4.347 f
+  sub_66_aco/U8/Q (AND2X1)                               0.096      4.443 f
+  sub_66_aco/U53/QN (NAND2X1)                            0.089      4.532 r
+  sub_66_aco/U51/ZN (INVX0)                              0.077      4.609 f
+  sub_66_aco/U4/Q (AND2X1)                               0.096      4.705 f
+  sub_66_aco/U49/QN (NAND2X1)                            0.089      4.794 r
+  sub_66_aco/U45/ZN (INVX0)                              0.071      4.865 f
+  sub_66_aco/U25/QN (NAND2X0)                            0.079      4.943 r
+  sub_66_aco/U47/ZN (INVX0)                              0.081      5.024 f
+  sub_66_aco/U40/Q (AND2X1)                              0.097      5.122 f
+  sub_66_aco/U44/QN (NAND2X1)                            0.089      5.211 r
+  sub_66_aco/U48/ZN (INVX0)                              0.071      5.282 f
+  sub_66_aco/U26/QN (NAND2X0)                            0.079      5.360 r
+  sub_66_aco/U50/ZN (INVX0)                              0.081      5.441 f
+  sub_66_aco/U11/Q (AND2X1)                              0.098      5.540 f
+  sub_66_aco/U7/Q (AND2X1)                               0.092      5.632 f
+  sub_66_aco/U30/QN (NAND2X0)                            0.078      5.709 r
+  sub_66_aco/U61/ZN (INVX0)                              0.081      5.790 f
+  sub_66_aco/U5/Q (AND2X1)                               0.095      5.885 f
+  sub_66_aco/U33/QN (NAND2X0)                            0.078      5.963 r
+  sub_66_aco/U62/ZN (INVX0)                              0.074      6.037 f
+  sub_66_aco/U34/QN (NAND2X0)                            0.080      6.117 r
+  sub_66_aco/U63/ZN (INVX0)                              0.074      6.191 f
+  sub_66_aco/U35/QN (NAND2X0)                            0.080      6.271 r
+  sub_66_aco/U65/ZN (INVX0)                              0.074      6.345 f
+  sub_66_aco/U64/QN (NAND2X0)                            0.080      6.425 r
+  sub_66_aco/U67/ZN (INVX0)                              0.074      6.499 f
+  sub_66_aco/U66/QN (NAND2X0)                            0.080      6.579 r
+  sub_66_aco/U69/ZN (INVX0)                              0.074      6.653 f
+  sub_66_aco/U68/QN (NAND2X0)                            0.080      6.733 r
+  sub_66_aco/U71/ZN (INVX0)                              0.074      6.807 f
+  sub_66_aco/U70/QN (NAND2X0)                            0.080      6.887 r
+  sub_66_aco/U73/ZN (INVX0)                              0.074      6.961 f
+  sub_66_aco/U72/QN (NAND2X0)                            0.080      7.041 r
+  sub_66_aco/U75/ZN (INVX0)                              0.074      7.115 f
+  sub_66_aco/U74/QN (NAND2X0)                            0.080      7.195 r
+  sub_66_aco/U77/ZN (INVX0)                              0.074      7.269 f
+  sub_66_aco/U76/QN (NAND2X0)                            0.080      7.349 r
+  sub_66_aco/U79/ZN (INVX0)                              0.074      7.423 f
+  sub_66_aco/U78/QN (NAND2X0)                            0.080      7.503 r
+  sub_66_aco/U81/ZN (INVX0)                              0.074      7.576 f
+  sub_66_aco/U80/QN (NAND2X0)                            0.080      7.657 r
+  sub_66_aco/U83/ZN (INVX0)                              0.074      7.730 f
+  sub_66_aco/U82/QN (NAND2X0)                            0.080      7.811 r
+  sub_66_aco/U85/ZN (INVX0)                              0.074      7.884 f
+  sub_66_aco/U84/QN (NAND2X0)                            0.080      7.965 r
+  sub_66_aco/U87/ZN (INVX0)                              0.074      8.038 f
+  sub_66_aco/U86/QN (NAND2X0)                            0.080      8.119 r
+  sub_66_aco/U89/ZN (INVX0)                              0.074      8.192 f
+  sub_66_aco/U88/QN (NAND2X0)                            0.083      8.276 r
+  sub_66_aco/U3/Q (OR2X1)                                0.133      8.409 r
+  sub_66_aco/U91/ZN (INVX0)                              0.075      8.483 f
+  sub_66_aco/U6/Q (AND2X1)                               0.096      8.579 f
+  sub_66_aco/U9/Q (AND2X1)                               0.095      8.675 f
+  sub_66_aco/U12/Q (AND2X1)                              0.095      8.770 f
+  sub_66_aco/U13/Q (AND2X1)                              0.095      8.865 f
+  sub_66_aco/U18/Q (AND2X1)                              0.095      8.961 f
+  sub_66_aco/U57/QN (NAND2X0)                            0.077      9.038 r
+  sub_66_aco/U176/Q (XOR2X1)                             0.148      9.186 r
+  sub_66_aco/DIFF[59] (d1_word_sync_DW01_sub_0)          0.000      9.186 r
+  U367/Q (AO22X1)                                        0.110      9.296 r
+  start_ref_reg[59]/D (DFFARX1)                          0.029      9.325 r
+  data arrival time                                                 9.325
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  clock uncertainty                                     -0.200      9.800
+  start_ref_reg[59]/CLK (DFFARX1)                        0.000      9.800 r
+  library setup time                                    -0.085      9.715
+  data required time                                                9.715
+  --------------------------------------------------------------------------
+  data required time                                                9.715
+  data arrival time                                                -9.325
+  --------------------------------------------------------------------------
+  slack (MET)                                                       0.390
+
+
+1

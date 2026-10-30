@@ -1,0 +1,646 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# H1 entry: synthesize nh20_sync alone.
+# Run from work/h1_dc_nh:
+#   dc_shell -f ../../scripts/h1_dc_nh20_sync.tcl
+set H1_TOP nh20_sync
+nh20_sync
+set H1_SOURCES [list ../../student_release/student_release/rtl/nh20_sync.sv]
+../../student_release/student_release/rtl/nh20_sync.sv
+source ../../scripts/h1_dc_common.tcl
+H1_TOP nh20_sync
+H1_SOURCES ../../student_release/student_release/rtl/nh20_sync.sv
+H1_TARGET_LIBRARY saed90nm_typ.db
+H1_CLOCK_NS 10 experimental_not_signoff
+Running PRESTO HDLC
+Compiling source file ../../student_release/student_release/rtl/nh20_sync.sv
+Presto compilation completed successfully.
+Loading db file '/home/IC/Foundry_Library/Digital/saed90nm_typ.db'
+H1_DC_ANALYZE_OK
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../../student_release/student_release/rtl/nh20_sync.sv:37: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../../student_release/student_release/rtl/nh20_sync.sv:39: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine nh20_sync line 44 in file
+		'../../student_release/student_release/rtl/nh20_sync.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      sums_reg       | Flip-flop |  680  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    tick_mod_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| training_count_reg  | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    nh_locked_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    nh_phase_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    bit_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    data_bit_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    bit_soft_reg     | Flip-flop |  34   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     bit_ref_reg     | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     run_sum_reg     | Flip-flop |  34   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   bit_started_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    start_ref_reg    | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     scores_reg      | Flip-flop | 1280  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'nh20_sync'.
+H1_DC_ELABORATE_OK
+Current design is 'nh20_sync'.
+
+  Linking design 'nh20_sync'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  nh20_sync                   /home/7901_15/B1I_Receiver_EDA_H1/work/h1_dc_nh/nh20_sync.db
+  saed90nm_typ (library)      /home/IC/Foundry_Library/Digital/saed90nm_typ.db
+
+H1_DC_LINK_OK
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+H1_INVX1_INP_LOAD_FF 3.52132
+H1_OUTPUT_LOAD_FF 14.08528
+H1_CONSTRAINT experimental_10ns_not_teacher_signoff
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Fri Oct 30 13:50:33 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              86
+    Cells do not drive (LINT-1)                                    86
+--------------------------------------------------------------------------------
+
+Warning: In design 'nh20_sync', cell 'C36469' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36478' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36482' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36493' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36502' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36506' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36517' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36526' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36530' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36541' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36550' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36554' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36565' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36574' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36578' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36589' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36598' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36602' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36613' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36622' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36626' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36637' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36646' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36650' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36661' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36670' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36674' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36685' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36694' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36698' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36709' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36718' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36722' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36733' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36742' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36746' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36757' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36766' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36770' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36781' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36790' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36794' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36805' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36814' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36818' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36829' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36838' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36842' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36853' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36862' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36866' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36877' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36886' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36890' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36901' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36910' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36914' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36925' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36934' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36938' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36951' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36960' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36963' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36967' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36968' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36972' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36977' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36980' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36983' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36986' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36989' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36992' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36995' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C36998' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37001' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37004' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37007' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37010' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37013' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37016' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37019' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37022' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37025' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37028' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37031' does not drive any nets. (LINT-1)
+Warning: In design 'nh20_sync', cell 'C37034' does not drive any nets. (LINT-1)
+H1_CHECK_DESIGN_STATUS 1
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 86 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'nh20_sync'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'nh20_sync_DW01_cmp2_0'
+  Processing 'nh20_sync_DW01_sub_0'
+  Processing 'nh20_sync_DW01_inc_0'
+  Processing 'nh20_sync_DW01_cmp2_1'
+  Processing 'nh20_sync_DW01_cmp2_2'
+  Processing 'nh20_sync_DW01_inc_1'
+  Processing 'nh20_sync_DW01_cmp2_3'
+  Processing 'nh20_sync_DW01_cmp2_4'
+  Processing 'nh20_sync_DW01_sub_1'
+  Processing 'nh20_sync_DW01_cmp2_5'
+  Processing 'nh20_sync_DW01_add_0'
+  Processing 'nh20_sync_DW01_cmp2_6'
+  Processing 'nh20_sync_DW01_cmp2_7'
+  Processing 'nh20_sync_DW01_sub_2'
+  Processing 'nh20_sync_DW01_cmp2_8'
+  Processing 'nh20_sync_DW01_add_1'
+  Processing 'nh20_sync_DW01_cmp2_9'
+  Processing 'nh20_sync_DW01_cmp2_10'
+  Processing 'nh20_sync_DW01_sub_3'
+  Processing 'nh20_sync_DW01_cmp2_11'
+  Processing 'nh20_sync_DW01_add_2'
+  Processing 'nh20_sync_DW01_cmp2_12'
+  Processing 'nh20_sync_DW01_cmp2_13'
+  Processing 'nh20_sync_DW01_sub_4'
+  Processing 'nh20_sync_DW01_cmp2_14'
+  Processing 'nh20_sync_DW01_add_3'
+  Processing 'nh20_sync_DW01_cmp2_15'
+  Processing 'nh20_sync_DW01_cmp2_16'
+  Processing 'nh20_sync_DW01_sub_5'
+  Processing 'nh20_sync_DW01_cmp2_17'
+  Processing 'nh20_sync_DW01_add_4'
+  Processing 'nh20_sync_DW01_cmp2_18'
+  Processing 'nh20_sync_DW01_cmp2_19'
+  Processing 'nh20_sync_DW01_sub_6'
+  Processing 'nh20_sync_DW01_cmp2_20'
+  Processing 'nh20_sync_DW01_add_5'
+  Processing 'nh20_sync_DW01_cmp2_21'
+  Processing 'nh20_sync_DW01_cmp2_22'
+  Processing 'nh20_sync_DW01_sub_7'
+  Processing 'nh20_sync_DW01_cmp2_23'
+  Processing 'nh20_sync_DW01_add_6'
+  Processing 'nh20_sync_DW01_cmp2_24'
+  Processing 'nh20_sync_DW01_cmp2_25'
+  Processing 'nh20_sync_DW01_sub_8'
+  Processing 'nh20_sync_DW01_cmp2_26'
+  Processing 'nh20_sync_DW01_add_7'
+  Processing 'nh20_sync_DW01_cmp2_27'
+  Processing 'nh20_sync_DW01_cmp2_28'
+  Processing 'nh20_sync_DW01_sub_9'
+  Processing 'nh20_sync_DW01_cmp2_29'
+  Processing 'nh20_sync_DW01_add_8'
+  Processing 'nh20_sync_DW01_cmp2_30'
+  Processing 'nh20_sync_DW01_cmp2_31'
+  Processing 'nh20_sync_DW01_sub_10'
+  Processing 'nh20_sync_DW01_cmp2_32'
+  Processing 'nh20_sync_DW01_add_9'
+  Processing 'nh20_sync_DW01_cmp2_33'
+  Processing 'nh20_sync_DW01_cmp2_34'
+  Processing 'nh20_sync_DW01_sub_11'
+  Processing 'nh20_sync_DW01_cmp2_35'
+  Processing 'nh20_sync_DW01_add_10'
+  Processing 'nh20_sync_DW01_cmp2_36'
+  Processing 'nh20_sync_DW01_cmp2_37'
+  Processing 'nh20_sync_DW01_sub_12'
+  Processing 'nh20_sync_DW01_cmp2_38'
+  Processing 'nh20_sync_DW01_add_11'
+  Processing 'nh20_sync_DW01_cmp2_39'
+  Processing 'nh20_sync_DW01_cmp2_40'
+  Processing 'nh20_sync_DW01_sub_13'
+  Processing 'nh20_sync_DW01_cmp2_41'
+  Processing 'nh20_sync_DW01_add_12'
+  Processing 'nh20_sync_DW01_cmp2_42'
+  Processing 'nh20_sync_DW01_cmp2_43'
+  Processing 'nh20_sync_DW01_sub_14'
+  Processing 'nh20_sync_DW01_cmp2_44'
+  Processing 'nh20_sync_DW01_add_13'
+  Processing 'nh20_sync_DW01_cmp2_45'
+  Processing 'nh20_sync_DW01_cmp2_46'
+  Processing 'nh20_sync_DW01_sub_15'
+  Processing 'nh20_sync_DW01_cmp2_47'
+  Processing 'nh20_sync_DW01_add_14'
+  Processing 'nh20_sync_DW01_cmp2_48'
+  Processing 'nh20_sync_DW01_cmp2_49'
+  Processing 'nh20_sync_DW01_sub_16'
+  Processing 'nh20_sync_DW01_cmp2_50'
+  Processing 'nh20_sync_DW01_add_15'
+  Processing 'nh20_sync_DW01_cmp2_51'
+  Processing 'nh20_sync_DW01_cmp2_52'
+  Processing 'nh20_sync_DW01_sub_17'
+  Processing 'nh20_sync_DW01_cmp2_53'
+  Processing 'nh20_sync_DW01_add_16'
+  Processing 'nh20_sync_DW01_cmp2_54'
+  Processing 'nh20_sync_DW01_cmp2_55'
+  Processing 'nh20_sync_DW01_sub_18'
+  Processing 'nh20_sync_DW01_cmp2_56'
+  Processing 'nh20_sync_DW01_add_17'
+  Processing 'nh20_sync_DW01_cmp2_57'
+  Processing 'nh20_sync_DW01_cmp2_58'
+  Processing 'nh20_sync_DW01_sub_19'
+  Processing 'nh20_sync_DW01_cmp2_59'
+  Processing 'nh20_sync_DW01_add_18'
+  Processing 'nh20_sync_DW01_cmp2_60'
+  Processing 'nh20_sync_DW01_cmp2_61'
+  Processing 'nh20_sync_DW01_sub_20'
+  Processing 'nh20_sync_DW01_cmp2_62'
+  Processing 'nh20_sync_DW01_add_19'
+  Processing 'nh20_sync_DW01_add_20'
+  Processing 'nh20_sync_DW01_sub_21'
+  Allocating blocks in 'DW_div_tc_a_width7_b_width6'
+  Processing 'nh20_sync_DW_div_tc_0'
+  Processing 'nh20_sync_DW01_add_21'
+  Processing 'nh20_sync_DW_div_tc_1'
+  Processing 'nh20_sync_DW01_add_22'
+  Processing 'nh20_sync_DW01_cmp2_63'
+  Processing 'nh20_sync_DW01_sub_22'
+  Processing 'nh20_sync_DW01_sub_23'
+  Processing 'nh20_sync_DW_div_tc_2'
+  Processing 'nh20_sync_DW01_add_23'
+  Processing 'nh20_sync_DW01_sub_24'
+  Processing 'nh20_sync_DW_div_tc_3'
+  Processing 'nh20_sync_DW01_add_24'
+  Processing 'nh20_sync_DW01_sub_25'
+  Processing 'nh20_sync_DW_div_tc_4'
+  Processing 'nh20_sync_DW01_add_25'
+  Processing 'nh20_sync_DW01_sub_26'
+  Processing 'nh20_sync_DW_div_tc_5'
+  Processing 'nh20_sync_DW01_add_26'
+  Processing 'nh20_sync_DW01_sub_27'
+  Processing 'nh20_sync_DW_div_tc_6'
+  Processing 'nh20_sync_DW01_add_27'
+  Processing 'nh20_sync_DW01_sub_28'
+  Processing 'nh20_sync_DW_div_tc_7'
+  Processing 'nh20_sync_DW01_add_28'
+  Processing 'nh20_sync_DW01_sub_29'
+  Processing 'nh20_sync_DW_div_tc_8'
+  Processing 'nh20_sync_DW01_add_29'
+  Processing 'nh20_sync_DW01_sub_30'
+  Processing 'nh20_sync_DW_div_tc_9'
+  Processing 'nh20_sync_DW01_add_30'
+  Processing 'nh20_sync_DW01_sub_31'
+  Processing 'nh20_sync_DW_div_tc_10'
+  Processing 'nh20_sync_DW01_add_31'
+  Processing 'nh20_sync_DW01_sub_32'
+  Processing 'nh20_sync_DW_div_tc_11'
+  Processing 'nh20_sync_DW01_add_32'
+  Processing 'nh20_sync_DW01_sub_33'
+  Processing 'nh20_sync_DW_div_tc_12'
+  Processing 'nh20_sync_DW01_add_33'
+  Processing 'nh20_sync_DW01_sub_34'
+  Processing 'nh20_sync_DW_div_tc_13'
+  Processing 'nh20_sync_DW01_add_34'
+  Processing 'nh20_sync_DW01_sub_35'
+  Processing 'nh20_sync_DW_div_tc_14'
+  Processing 'nh20_sync_DW01_add_35'
+  Processing 'nh20_sync_DW01_sub_36'
+  Processing 'nh20_sync_DW_div_tc_15'
+  Processing 'nh20_sync_DW01_add_36'
+  Processing 'nh20_sync_DW01_sub_37'
+  Processing 'nh20_sync_DW_div_tc_16'
+  Processing 'nh20_sync_DW01_add_37'
+  Processing 'nh20_sync_DW01_sub_38'
+  Processing 'nh20_sync_DW_div_tc_17'
+  Processing 'nh20_sync_DW01_add_38'
+  Processing 'nh20_sync_DW01_sub_39'
+  Processing 'nh20_sync_DW_div_tc_18'
+  Processing 'nh20_sync_DW01_add_39'
+  Processing 'nh20_sync_DW01_sub_40'
+  Processing 'nh20_sync_DW_div_tc_19'
+  Processing 'nh20_sync_DW01_add_40'
+  Processing 'nh20_sync_DW01_sub_41'
+  Processing 'nh20_sync_DW_div_tc_20'
+  Processing 'nh20_sync_DW01_inc_2'
+  Processing 'nh20_sync_DW01_sub_42'
+  Allocating blocks in 'DW_div_tc_a_width6_b_width6'
+  Processing 'nh20_sync_DW_div_tc_21'
+  Building model 'DW01_add_width64' (rpl)
+  Processing 'DW01_add_width64'
+  Building model 'DW01_add_width64' (cla)
+  Processing 'DW01_add_width64'
+  Allocating blocks in 'DW02_mult_A_width64_B_width1'
+  Allocating blocks in 'DW01_absval_width64'
+  Building model 'DW01_inc_width64' (cla)
+  Processing 'DW01_inc_width64'
+  Building model 'DW01_absval_width64' (cla)
+  Processing 'DW01_absval_width64'
+  Building model 'DW01_inc_width65' (cla)
+  Processing 'DW01_inc_width65'
+  Building model 'DW02_mult_A_width64_B_width1' (csa)
+  Processing 'DW02_mult_A_width64_B_width1'
+  Allocating blocks in 'DW02_mult_A_width1_B_width64'
+  Building model 'DW02_mult_A_width1_B_width64' (csa)
+  Processing 'DW02_mult_A_width1_B_width64'
+  Processing 'nh20_sync_DW01_add_41'
+  Processing 'nh20_sync_DW02_mult_0'
+  Processing 'nh20_sync_DW01_add_42'
+  Processing 'nh20_sync_DW02_mult_1'
+  Processing 'nh20_sync_DW01_add_43'
+  Processing 'nh20_sync_DW02_mult_2'
+  Processing 'nh20_sync_DW01_add_44'
+  Processing 'nh20_sync_DW02_mult_3'
+  Processing 'nh20_sync_DW01_add_45'
+  Processing 'nh20_sync_DW02_mult_4'
+  Processing 'nh20_sync_DW01_add_46'
+  Processing 'nh20_sync_DW02_mult_5'
+  Processing 'nh20_sync_DW01_add_47'
+  Processing 'nh20_sync_DW02_mult_6'
+  Processing 'nh20_sync_DW01_add_48'
+  Processing 'nh20_sync_DW02_mult_7'
+  Processing 'nh20_sync_DW01_add_49'
+  Processing 'nh20_sync_DW02_mult_8'
+  Processing 'nh20_sync_DW01_add_50'
+  Processing 'nh20_sync_DW02_mult_9'
+  Processing 'nh20_sync_DW01_add_51'
+  Processing 'nh20_sync_DW02_mult_10'
+  Processing 'nh20_sync_DW01_add_52'
+  Processing 'nh20_sync_DW02_mult_11'
+  Processing 'nh20_sync_DW01_add_53'
+  Processing 'nh20_sync_DW02_mult_12'
+  Processing 'nh20_sync_DW01_add_54'
+  Processing 'nh20_sync_DW02_mult_13'
+  Processing 'nh20_sync_DW01_add_55'
+  Processing 'nh20_sync_DW02_mult_14'
+  Processing 'nh20_sync_DW01_add_56'
+  Processing 'nh20_sync_DW02_mult_15'
+  Processing 'nh20_sync_DW01_add_57'
+  Processing 'nh20_sync_DW02_mult_16'
+  Processing 'nh20_sync_DW01_add_58'
+  Processing 'nh20_sync_DW02_mult_17'
+  Processing 'nh20_sync_DW01_add_59'
+  Processing 'nh20_sync_DW02_mult_18'
+  Processing 'nh20_sync_DW01_add_60'
+  Processing 'nh20_sync_DW02_mult_19'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+  Mapping Optimization (Phase 10)
+  Mapping Optimization (Phase 11)
+  Mapping Optimization (Phase 12)
+  Mapping Optimization (Phase 13)
+  Mapping Optimization (Phase 14)
+
+Received Signal 15 from: PID=10149 (UID=502)
+
+
+Process terminated by kill.
+

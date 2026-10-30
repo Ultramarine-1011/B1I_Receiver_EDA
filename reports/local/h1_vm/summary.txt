@@ -1,0 +1,11 @@
+stage=dc-nh
+vcs_nh=VCS_PASS
+vcs_nh_exit=0
+vcs_nav=VCS_PASS
+vcs_nav_exit=0
+dc_d1=DC_COMPILE_WITH_ISSUES
+dc_d1_exit=0
+dc_nh=DC_FAIL
+dc_nh_exit=1
+dc_nav=NOT_RUN
+dc_nav_exit=NA

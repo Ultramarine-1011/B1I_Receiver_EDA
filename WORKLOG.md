@@ -4,6 +4,8 @@
 
 | 时间 | 任务 | 修改/来源 | 实际命令与结果 | 证据 | 下一步 |
 |---|---|---|---|---|---|
+| 2026-10-30 | H1 证据归档 | 只读现有 d1 报告；未重跑 VCS/DC；未改 RTL | black-box 计数 2 没有单元名，`report_cell` 为 0，面积宏/黑盒为 0，对象记 UNKNOWN。状态定为 VCS PASS、d1 映射完成、nh20 INTERRUPTED、navigation 与整机 DC/ICC NOT_RUN。H1 分支一次本地提交，不 push | docs/H1_VM_FRONTEND.md，reports/local/h1_vm/d1_word_sync_blackbox.rpt | 停止，不开展 H2 |
+| 2026-10-30 | H1 前端 VCS 与 d1 综合 | 隔离工作树 h1-frontend；未改正式 RTL；原工作区搬迁文件只备份 | `git fetch origin main` 后 worktree 为 697ebaa。虚拟机 VCS 两次退出 0：`NH_D1_MODULE_PASS`、`NAVIGATION_D1_PASS`。`dc_shell` 对 d1_word_sync 退出 0，slack 0.019 ns。nh20_sync 在 Mapping Optimization Phase 14 被 SIGTERM，navigation_d1 未启动 | docs/H1_VM_FRONTEND.md，reports/local/h1_vm/ | 等待确认后再提交；不开始整机综合 |
 | 2026-10-13 | 启动/范围替换 | GOAL/AGENTS/STATUS；旧GOAL存docs/archive | 读取EDA_2026-10-13.md、教师契约/旧前端；指定长交接名不存在；STATUS/WORKLOG原不存在。文档更新，RTL NOT_RUN | docs/archive/GOAL_2026-09-28.md | A1 |
 | 2026-10-13 | A1初始环境 | 个人WSL Ubuntu | `wsl.exe --list --verbose`：Ubuntu WSL2；`wsl.exe -d Ubuntu -- bash -lc 'verilator --version; g++ --version; python3 --version; command -v make'`：Verilator command not found；g++15.2/Python3.14/make可用。组合shell退出0不代表全部通过，Verilator FAIL | reports/local/verilator_install.log安装进行中 | 只安装缺少的Verilator |
 | 2026-10-13 | A2来源登记 | 根RTL/教师公共包 | `Get-FileHash -Algorithm SHA256`；记录大小/时间/哈希，未改文件 | reports/local/source_manifest.json | 核对9.28历史manifest |

@@ -1,0 +1,134 @@
+ 
+****************************************
+Report : area
+Design : d1_word_sync
+Version: K-2015.06
+Date   : Fri Oct 30 13:49:29 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed90nm_typ (File: /home/IC/Foundry_Library/Digital/saed90nm_typ.db)
+
+Number of ports:                          391
+Number of nets:                          1191
+Number of cells:                          977
+Number of combinational cells:            732
+Number of sequential cells:               244
+Number of macros/black boxes:               0
+Number of buf/inv:                        154
+Number of references:                      28
+
+Combinational area:               7554.355210
+Buf/Inv area:                      853.401622
+Noncombinational area:            7805.030525
+Macro/Black Box area:                0.000000
+Net Interconnect area:             897.032641
+
+Total cell area:                 15359.385736
+Total area:                      16256.418376
+1
+ 
+****************************************
+Report : reference
+Design : d1_word_sync
+Version: K-2015.06
+Date   : Fri Oct 30 13:49:30 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             saed90nm_typ
+                                  7.372800       4     29.491199  
+AND3X1             saed90nm_typ
+                                  8.294400       2     16.588800  
+AND4X1             saed90nm_typ
+                                 10.137600       1     10.137600  
+AO21X1             saed90nm_typ
+                                 10.137600       4     40.550400  
+AO22X1             saed90nm_typ
+                                 11.980800     229   2743.603126  
+AO221X1            saed90nm_typ
+                                 12.902400       8    103.219200  
+AO222X1            saed90nm_typ
+                                 14.745600      11    162.201597  
+AOI22X1            saed90nm_typ
+                                 12.902400       5     64.512000  
+DFFARX1            saed90nm_typ
+                                 32.256001     241   7773.696125  n
+DFFASX1            saed90nm_typ
+                                 31.334400       1     31.334400  n
+HADDX1             saed90nm_typ
+                                 15.667200       3     47.001600  r
+INVX0              saed90nm_typ
+                                  5.529600      37    204.595205  
+NAND2X0            saed90nm_typ
+                                  5.529600       1      5.529600  
+NAND2X1            saed90nm_typ
+                                  5.529600      47    259.891207  
+NAND3X0            saed90nm_typ
+                                  7.372800       4     29.491199  
+NAND4X0            saed90nm_typ
+                                  8.294400      10     82.944002  
+NBUFFX2            saed90nm_typ
+                                  5.529600      42    232.243206  
+NOR2X0             saed90nm_typ
+                                  5.529600      25    138.240004  
+NOR4X0             saed90nm_typ
+                                  9.216000       4     36.863998  
+OA21X1             saed90nm_typ
+                                  9.216000       1      9.216000  
+OR2X1              saed90nm_typ
+                                  7.372800       1      7.372800  
+OR3X1              saed90nm_typ
+                                  9.216000       2     18.431999  
+OR4X1              saed90nm_typ
+                                 10.137600       3     30.412800  
+XNOR2X1            saed90nm_typ
+                                 13.824000      27    373.248010  
+XNOR3X1            saed90nm_typ
+                                 22.118401      15    331.776009  
+XOR2X1             saed90nm_typ
+                                 13.824000      28    387.072010  
+XOR3X1             saed90nm_typ
+                                 22.118401      20    442.368011  
+d1_word_sync_DW01_sub_0        1747.353627       1   1747.353627  h
+-----------------------------------------------------------------------------
+Total 28 references                                 15359.385736
+
+****************************************
+Design: d1_word_sync_DW01_sub_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             saed90nm_typ
+                                  7.372800      18    132.710398  
+FADDX1             saed90nm_typ
+                                 29.491199       9    265.420795  r
+INVX0              saed90nm_typ
+                                  5.529600      73    403.660810  
+INVX1              saed90nm_typ
+                                  6.451200       2     12.902400  
+NAND2X0            saed90nm_typ
+                                  5.529600      42    232.243206  
+NAND2X1            saed90nm_typ
+                                  5.529600       4     22.118401  
+OR2X1              saed90nm_typ
+                                  7.372800       2     14.745600  
+XOR2X1             saed90nm_typ
+                                 13.824000      48    663.552017  
+-----------------------------------------------------------------------------
+Total 8 references                                   1747.353627
+1

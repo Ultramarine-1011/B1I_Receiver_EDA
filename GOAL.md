@@ -1,3 +1,22 @@
+# H1：同步与导航前端的 VCS 复现和增量综合
+
+授权日期 2026-10-30。范围是当前 `nh20_sync`、`d1_word_sync`、`navigation_d1` 的 VCS 自检，以及这三个模块的增量 Design Compiler 综合。不授权完整接收机综合、ICC、PrimeTime 或 DRC/LVS。不改已验收算法。长时间综合按决定跳过并记录，不继续等待。
+
+阶段性完成，存在明确未完成项。不是全 PASS。
+
+| 验收 | 结果 |
+|---|---|
+| 原工作区未提交修改备份，且原目录不被覆盖 | 完成。补丁和 116 个未跟踪文件在仓库外，哈希已核 |
+| H1 使用 GitHub 最新 main，且不整包覆盖搬迁脚本 | 完成。`697ebaaa66b9e513b153a36870abd5f5653e4a10`，搬迁补丁未并入 |
+| NH/D1 VCS | PASS。I-2014.03，退出码 0，`NH_D1_MODULE_PASS` |
+| 双子帧导航 VCS | PASS。退出码 0，`NAVIGATION_D1_PASS` |
+| `d1_word_sync` DC | 映射完成。实验性 10 ns，slack +0.019 ns。black-box 计数 2，对象 UNKNOWN |
+| `nh20_sync` DC | INTERRUPTED。映射优化第 14 阶段被中止，不是设计 FAIL |
+| `navigation_d1` DC | NOT_RUN |
+| 完整接收机 DC / ICC | NOT_RUN |
+
+实验条件、哈希和面积见 [H1 报告](docs/H1_VM_FRONTEND.md)。完整接收机综合仍需新的授权，并且要先有 `nh20_sync` 与 `navigation_d1` 的综合结果。
+
 # 工程精简（2026-10-23）
 
 本轮授权：合并重复文档，减少防御性写作及无收益的审计检查，完成必要验证、文档更新和 main 正常提交推送。基线为 GitHub 最新 main 与本地文件；保留用户未提交内容。

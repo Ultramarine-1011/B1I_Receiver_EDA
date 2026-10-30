@@ -1,0 +1,39 @@
+                         Chronologic VCS (TM)
+            Version I-2014.03 -- Fri Oct 30 13:48:30 2026
+               Copyright (c) 1991-2014 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '../../student_release/student_release/rtl/nh20_sync.sv'
+Parsing design file '../../student_release/student_release/rtl/d1_word_sync.sv'
+Parsing design file '../../student_release/student_release/rtl/navigation_d1.sv'
+Parsing design file '../../tb/tb_navigation_d1.sv'
+Top Level Modules:
+       tb_navigation_d1
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module tb_navigation_d1
+Both modules done.
+rm -f _csrc*.so linux_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -m elf_i386 -shared -o .//../simv.daidir//_csrc1.so --whole-archive _vcsobj_1_1.a  --no-whole-archive
+ld -m elf_i386 -shared -o .//../simv.daidir//_csrc0.so 5NrI_d.o 5NrIB_d.o SIM_l.o  
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv  -m32 -m32   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  _csrc1.so _csrc0.so     rmapats_mop.o rmapats.o rmar.o           /opt/Synopsys/VCS2014/linux/lib/libzerosoft_rt_stubs.so /opt/Synopsys/VCS2014/linux/lib/libvirsim.so /opt/Synopsys/VCS2014/linux/lib/librterrorinf.so /opt/Synopsys/VCS2014/linux/lib/libsnpsmalloc.so    /opt/Synopsys/VCS2014/linux/lib/libvcsnew.so /opt/Synopsys/VCS2014/linux/lib/libuclinative.so   -Wl,-whole-archive /opt/Synopsys/VCS2014/linux/lib/libvcsucli.so -Wl,-no-whole-archive          /opt/Synopsys/VCS2014/linux/lib/vcs_save_restore_new.o /opt/Synopsys/VCS2014/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03; Runtime version I-2014.03;  Oct 30 13:48 2026
+NAVIGATION_D1_CASE_PASS case=0 nh_phase=7 inverted=0 records=10
+NAVIGATION_D1_CASE_PASS case=1 nh_phase=19 inverted=1 records=10
+NAVIGATION_D1_PASS cases=2 two_frame_confirmation=1 backpressure=1 lost_reset=1
+$finish called from file "../../tb/tb_navigation_d1.sv", line 60.
+$finish at simulation time           1540420000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1540420000 ps
+CPU Time:      0.190 seconds;       Data structure size:   0.0Mb
+Fri Oct 30 13:48:31 2026
+CPU time: .128 seconds to compile + .031 seconds to elab + .082 seconds to link + .254 seconds in simulation

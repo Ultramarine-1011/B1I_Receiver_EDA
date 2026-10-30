@@ -1,0 +1,589 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# H1 entry: synthesize d1_word_sync alone.
+# Run from work/h1_dc_d1:
+#   dc_shell -f ../../scripts/h1_dc_d1_word_sync.tcl
+set H1_TOP d1_word_sync
+d1_word_sync
+set H1_SOURCES [list ../../student_release/student_release/rtl/d1_word_sync.sv]
+../../student_release/student_release/rtl/d1_word_sync.sv
+source ../../scripts/h1_dc_common.tcl
+H1_TOP d1_word_sync
+H1_SOURCES ../../student_release/student_release/rtl/d1_word_sync.sv
+H1_TARGET_LIBRARY saed90nm_typ.db
+H1_CLOCK_NS 10 experimental_not_signoff
+Running PRESTO HDLC
+Compiling source file ../../student_release/student_release/rtl/d1_word_sync.sv
+Presto compilation completed successfully.
+Loading db file '/home/IC/Foundry_Library/Digital/saed90nm_typ.db'
+H1_DC_ANALYZE_OK
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine d1_word_sync line 53 in file
+		'../../student_release/student_release/rtl/d1_word_sync.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|     word_ref_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      aligned_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       scan_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       shift_reg       | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     bit_count_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   current_word_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   current_word_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     start_ref_reg     | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    word_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     bch_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| polarity_inverted_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     raw_word_reg      | Flip-flop |  30   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    information_reg    | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    word_number_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  corrected_bits_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'd1_word_sync'.
+H1_DC_ELABORATE_OK
+Current design is 'd1_word_sync'.
+
+  Linking design 'd1_word_sync'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  d1_word_sync                /home/7901_15/B1I_Receiver_EDA_H1/work/h1_dc_d1/d1_word_sync.db
+  saed90nm_typ (library)      /home/IC/Foundry_Library/Digital/saed90nm_typ.db
+
+H1_DC_LINK_OK
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+H1_INVX1_INP_LOAD_FF 3.52132
+H1_OUTPUT_LOAD_FF 14.08528
+H1_CONSTRAINT experimental_10ns_not_teacher_signoff
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Fri Oct 30 13:49:25 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               4
+    Cells do not drive (LINT-1)                                     4
+--------------------------------------------------------------------------------
+
+Warning: In design 'd1_word_sync', cell 'C3719' does not drive any nets. (LINT-1)
+Warning: In design 'd1_word_sync', cell 'C3722' does not drive any nets. (LINT-1)
+Warning: In design 'd1_word_sync', cell 'C3723' does not drive any nets. (LINT-1)
+Warning: In design 'd1_word_sync', cell 'C3724' does not drive any nets. (LINT-1)
+H1_CHECK_DESIGN_STATUS 1
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'd1_word_sync'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'd1_word_sync_DW01_inc_0'
+  Processing 'd1_word_sync_DW01_sub_0'
+  Allocating blocks in 'DW02_mult_A_width4_B_width1'
+  Building model 'DW01_MUX'
+  Processing 'DW01_MUX'
+  Building model 'DW01_mmux_width2'
+  Processing 'DW01_mmux_width2'
+  Building model 'DW01_mmux_width3'
+  Processing 'DW01_mmux_width3'
+  Building model 'DW01_mmux_width4'
+  Processing 'DW01_mmux_width4'
+  Building model 'DW01_mmux_width5'
+  Processing 'DW01_mmux_width5'
+  Allocating blocks in 'DW01_absval_width4'
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_inc_width4' (cla)
+  Processing 'DW01_inc_width4'
+  Building model 'DW01_absval_width4' (cla)
+  Processing 'DW01_absval_width4'
+  Allocating blocks in 'DW01_absval_width1'
+  Building model 'DW01_inc_width1' (cla)
+  Processing 'DW01_inc_width1'
+  Building model 'DW01_absval_width1' (cla)
+  Processing 'DW01_absval_width1'
+  Building model 'DW01_inc_width5' (cla)
+  Processing 'DW01_inc_width5'
+  Building model 'DW02_mult_A_width4_B_width1' (csa)
+  Processing 'DW02_mult_A_width4_B_width1'
+  Building model 'DW01_inc_width4' (rpl)
+  Processing 'DW01_inc_width4'
+  Building model 'DW01_add_width2' (rpl)
+  Processing 'DW01_add_width2'
+  Building model 'DW01_add_width2' (cla)
+  Processing 'DW01_add_width2'
+  Allocating blocks in 'DW02_mult_A_width1_B_width1'
+  Building model 'DW01_inc_width2' (cla)
+  Processing 'DW01_inc_width2'
+  Building model 'DW02_mult_A_width1_B_width1' (csa)
+  Processing 'DW02_mult_A_width1_B_width1'
+  Processing 'DW01_inc_width4'
+  Processing 'd1_word_sync_DW02_mult_0'
+  Processing 'DW01_add_width2'
+  Processing 'DW02_mult_A_width1_B_width1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   17473.9      5.88      71.8       0.0                          
+    0:00:03   17473.9      5.88      71.8       0.0                          
+    0:00:03   17473.9      5.88      71.8       0.0                          
+    0:00:03   17473.9      5.88      71.8       0.0                          
+    0:00:03   17473.9      5.88      71.8       0.0                          
+    0:00:03   16460.8      1.49       8.2       0.0                          
+    0:00:03   16463.1      1.11       5.3       0.0                          
+    0:00:03   16482.7      0.78       3.2       0.0                          
+    0:00:03   16514.1      0.50       1.7       0.0                          
+    0:00:03   16520.2      0.33       0.8       0.0                          
+    0:00:03   16526.4      0.16       0.2       0.0                          
+    0:00:03   16534.3      0.00       0.0       0.0                          
+    0:00:03   16534.3      0.00       0.0       0.0                          
+    0:00:03   16534.3      0.00       0.0       0.0                          
+    0:00:03   16534.3      0.00       0.0       0.0                          
+    0:00:03   16534.3      0.00       0.0       0.0                          
+    0:00:03   16534.3      0.00       0.0       0.0                          
+    0:00:03   16534.3      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   16353.1      0.00       0.0       0.0                          
+    0:00:03   16353.1      0.00       0.0       0.0                          
+    0:00:04   16341.4      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   16341.4      0.00       0.0       0.0                          
+    0:00:04   16341.4      0.00       0.0       0.0                          
+    0:00:04   16278.7      0.00       0.0       0.0                          
+    0:00:04   16270.8      0.00       0.0       0.0                          
+    0:00:04   16266.4      0.00       0.0       0.0                          
+    0:00:04   16264.3      0.00       0.0       0.0                          
+    0:00:04   16263.8      0.00       0.0       0.0                          
+    0:00:04   16263.8      0.00       0.0       0.0                          
+    0:00:04   16260.0      0.00       0.0       0.0                          
+    0:00:04   16258.1      0.00       0.0       0.0                          
+    0:00:04   16258.1      0.00       0.0       0.0                          
+    0:00:04   16258.1      0.00       0.0       0.0                          
+    0:00:04   16258.1      0.00       0.0       0.0                          
+    0:00:04   16258.1      0.00       0.0       0.0                          
+    0:00:04   16258.1      0.00       0.0       0.0                          
+    0:00:04   16256.4      0.00       0.0       0.0                          
+Loading db file '/home/IC/Foundry_Library/Digital/saed90nm_typ.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Fri Oct 30 13:49:29 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     71
+    Unconnected ports (LINT-28)                                    64
+    Feedthrough (LINT-29)                                           7
+
+Cells                                                              58
+    Connected to power or ground (LINT-32)                         55
+    Nets connected to multiple pins on same cell (LINT-33)          3
+--------------------------------------------------------------------------------
+
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[49]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[47]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[46]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[45]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[44]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[43]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[42]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[41]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[35]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[34]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[33]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'd1_word_sync_DW01_sub_0', input port 'A[6]' is connected directly to output port 'DIFF[6]'. (LINT-29)
+Warning: In design 'd1_word_sync_DW01_sub_0', input port 'A[5]' is connected directly to output port 'DIFF[5]'. (LINT-29)
+Warning: In design 'd1_word_sync_DW01_sub_0', input port 'A[4]' is connected directly to output port 'DIFF[4]'. (LINT-29)
+Warning: In design 'd1_word_sync_DW01_sub_0', input port 'A[3]' is connected directly to output port 'DIFF[3]'. (LINT-29)
+Warning: In design 'd1_word_sync_DW01_sub_0', input port 'A[2]' is connected directly to output port 'DIFF[2]'. (LINT-29)
+Warning: In design 'd1_word_sync_DW01_sub_0', input port 'A[1]' is connected directly to output port 'DIFF[1]'. (LINT-29)
+Warning: In design 'd1_word_sync_DW01_sub_0', input port 'A[0]' is connected directly to output port 'DIFF[0]'. (LINT-29)
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[63]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[62]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[61]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[60]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[59]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[58]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[57]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[56]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[55]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[54]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[53]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[52]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[51]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[50]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[49]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[48]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[47]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[46]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[45]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[44]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[43]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[42]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[41]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[40]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[39]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[38]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[37]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[36]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[35]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[34]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[33]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[32]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[31]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[30]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[29]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[28]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[27]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[26]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[25]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[24]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[0]' is connected to logic 0. 
+Warning: In design 'd1_word_sync', a pin on submodule 'sub_66_aco' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'd1_word_sync', the same net is connected to more than one pin on submodule 'sub_66_aco'. (LINT-33)
+   Net 'n1' is connected to pins 'B[63]', 'B[62]'', 'B[61]', 'B[60]', 'B[59]', 'B[58]', 'B[57]', 'B[56]', 'B[55]', 'B[54]', 'B[53]', 'B[52]', 'B[51]', 'B[50]', 'B[49]', 'B[48]', 'B[47]', 'B[46]', 'B[45]', 'B[44]', 'B[43]', 'B[42]', 'B[41]', 'B[40]', 'B[39]', 'B[38]', 'B[37]', 'B[36]', 'B[35]', 'B[34]', 'B[33]', 'B[32]', 'B[31]', 'B[30]', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'CI'.
+Warning: In design 'd1_word_sync', the same net is connected to more than one pin on submodule 'sub_66_aco'. (LINT-33)
+   Net 'n23' is connected to pins 'B[21]', 'B[20]'', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[9]', 'B[8]', 'B[7]'.
+Warning: In design 'd1_word_sync', the same net is connected to more than one pin on submodule 'sub_66_aco'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[19]', 'B[18]'', 'B[17]', 'B[11]', 'B[10]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[1]', 'B[0]'.
+H1_CHECK_DESIGN_POST_STATUS 1
+H1_LATCH_COUNT 0
+H1_BLACKBOX_COUNT 2
+H1_UNMAPPED_COUNT 0
+Writing verilog file '/home/7901_15/B1I_Receiver_EDA_H1/reports/local/h1_vm/d1_word_sync_saed90nm.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+H1_DC_COMPILE_DONE
+
+Memory usage for main task 113 Mbytes.
+Memory usage for this session 113 Mbytes.
+CPU usage for this session 4 seconds ( 0.00 hours ).
+
+Thank you...
