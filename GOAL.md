@@ -1,18 +1,13 @@
-# 工程精简（2026-10-23）
+# 当前授权：后续里程碑规划归档（2026-10-30）
 
-本轮授权：合并重复文档，减少防御性写作及无收益的审计检查，完成必要验证、文档更新和 main 正常提交推送。基线为 GitHub 最新 main 与本地文件；保留用户未提交内容。
+## 范围与验收
 
-## 验收
+用户本轮要求检查工程是否已有后续计划，若不完整则调整并放入仓库。确认现有 [`docs/COURSE_MASTER_PLAN.md`](docs/COURSE_MASTER_PLAN.md) 仅有课程要求索引，没有反映 H1 的 M0–M5 可执行里程碑。
 
-- STATUS 管当前状态，GOAL 管本轮范围，WORKLOG 管历史，AGENTS 管长期规则；技术事实由对应报告维护。
-- 默认启动只读 Git 状态、STATUS、GOAL、AGENTS 及 WORKLOG 最近相关事件，其余按需读取。
-- 默认验证聚焦实际编译源、配置、退出码、断言及输出；历史完整性审计作为独立工具保留。
-- 保留教师判据、真实 PASS/FAIL、必要实验条件和复现入口；登记六份基础 RTL 副本问题。
-- 正式 RTL、ROM、算法、教师文件、原测试及历史原始证据不改；三份正式模块报告以保留为主。
-- 文档引用、受影响脚本语法、轻量成功/失败路径及 Git diff 检查通过，记录实际命令和退出码。
+本轮只允许文档层面：在现有课程规划中补齐现状/缺口、里程碑、依赖、进入条件、真实交付和停止条件；更新 STATUS、NEXT_STEPS 入口，追加 WORKLOG 事实，完成一次不覆盖他人修改的 Git 文档提交。不得修改 RTL、教师文件、模型、验证判据；不得运行 VCS/DC/ICC、重新跑公开 IF、合并 H1 分支或处理原实验室搬迁包。
 
-不运行长接收机仿真，不进入 DC/ICC，不合并 RTL 目录，不新增审计框架。确认范围及检查后正常提交推送；远端发生实际冲突时保留本地成果并停止推送。完成即停止。
+验收：规划直接链接 [H0](docs/H0_VM_SMOKE.md)、[H1](https://github.com/Ultramarine-1011/B1I_Receiver_EDA/blob/h1-frontend/docs/H1_VM_FRONTEND.md)、[G](reports/g_stage/FINAL_REPORT.md) 实证；严格区分 PASS、INTERRUPTED、NOT_RUN；M0–M5 有明确门槛和退出准则，且规划不等于授权执行。
 
-历史授权及成果见 [G 授权](docs/archive/G_AUTHORIZATION_2026-10-14.md)、[H0 实验](docs/H0_VM_SMOKE.md)、[BDI 实验](experiments/bdi_capture/README.md) 与 [WORKLOG](WORKLOG.md)。当前状态见 [STATUS](STATUS.md)。
+**状态：规划文档已编写；提交/推送完成后本轮即停止。** 下一阶段 M0 必须另行授权。
 
-本轮验收已完成，检查证据见 [整改记录](reports/local/cleanup_2026-10-23.md)；完成 Git 交付后停止。
+2026-10-23 的工程精简范围与结果保存在 [整改记录](reports/local/cleanup_2026-10-23.md) 和 Git 历史中；不作为本轮继续开发的授权。
