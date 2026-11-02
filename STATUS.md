@@ -1,11 +1,9 @@
 # 当前状态
 
-2026-11-02：本轮六通道RTL及功能仿真完成。复用原通道/PCPS/NH/D1，实现bds_bb_6ch_core、逐槽配置、标量采样及串行位输出；旧16样本入口允许CHANNELS=6。六星正常、PRN重排、RF失锁重捕/重配置均通过，IF端到端705位及Prompt层1080位逐位一致；捕获lag最大误差0sample。修复短时RF缺失下互相关假峰接纳问题，失败及最终结果均保留。
+2026-11-02：**六通道 RTL 与本地功能仿真已完成并推送**，功能基线 `main` `3ecef38`。六星正常/PRN重排/失锁重捕三组共705导航位、Prompt层1080位逐位PASS；六路同时锁定，100MHz假定逻辑时钟下16.368MHz定速输入0.4s无反压；旧16样本接口相关回归PASS。证据见[六通道报告](reports/six_channel_20261102/FINAL_REPORT.md)与[设计](docs/SIX_CHANNEL_DESIGN.md)。
 
-100MHz假定工作时钟/16.368MHz定速输入0.4s无反压、六路同时锁定；原通道/NAV/E0/PCPS及公开IF旧六槽回归通过。最终波形705个导航有效脉冲均为10ns。报告、复现入口、实际日志及波形清单见[六通道报告](reports/six_channel_20261102/FINAL_REPORT.md)，接口见[设计](docs/SIX_CHANNEL_DESIGN.md)。
+本次只按教师 `261102` 新发六通道专项规范调整后续规划，**未修改 RTL、未运行 EDA 仿真/综合**。当前专项需要六通道含真实 PAD 的 TSMC28 DC、完整时序/面积及网表/SDC/SDF、MAX/MIN 门级后仿和功耗报告；旧 V1.7 的12通道、ICC、DRC/LVS不作为本次专项前置。新版路线图见[课程里程碑](docs/COURSE_MASTER_PLAN.md#后续里程碑路线图2026-11-02)。
 
-本轮阻塞：无。TSMC28 PAD、DC时序面积优化、SDF后仿和功耗未执行，属于后续阶段；实际库/时钟/IO/复位与存储条件见[近期未决事项](docs/TBD.md)。用户已补充授权本轮Git提交推送；原始教师资料、用户PDF和本机大文件保留本地。
+**当前主要缺口**：实验室 VM 中 Synopsys 工具/许可、实际 TSMC28 标准单元与 PAD 时序/仿真模型未核实；clk/IO/复位约束、FFT/PCPS约2.29Mbit存储可综合性待确认。TSMC28 PAD、DC、SDF后仿和Power Compiler均为 NOT_RUN；H0 SAED90nm PRN与H1独立分支历史验证不替代。
 
-下一可执行任务：停止，等待用户授权后续TSMC28综合及门级后仿。范围与验收见[GOAL](GOAL.md)。
-
-远端2026-10-30的M0–M5规划已保留并合并；H1证据仍在独立h1-frontend分支，本轮不合并其RTL或执行后端。
+**唯一下一候选任务**：在用户另行授权后执行 **M1：VM 工具和工艺库（特别是 PAD）只读预检**，形成 GO/NO-GO，再决定是否开启 M2。当前 [GOAL](GOAL.md) 为本次文档规划更新，完成后停止。

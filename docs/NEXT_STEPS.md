@@ -1,9 +1,9 @@
 # 交接入口
 
-当前状态、阻塞与唯一下一任务见 [STATUS](../STATUS.md)；当前授权范围与验收见 [GOAL](../GOAL.md)；实际命令、退出码及历史事件见 [WORKLOG](../WORKLOG.md)。按任务读取技术文档，协作规则见 [AGENTS](../AGENTS.md)。
+唯一当前状态及下一任务见 [STATUS](../STATUS.md)，当次授权范围见 [GOAL](../GOAL.md)，真实运行/提交事件见 [WORKLOG](../WORKLOG.md)，协作纪律见 [AGENTS](../AGENTS.md)。
 
-2026-11-02六通道核心及功能验证已完成，见[报告](../reports/six_channel_20261102/FINAL_REPORT.md)；Git交付后停止。后续按最新六通道教师要求确定PAD/约束及工具输入，不将下文历史12通道规划作为当前任务。
+2026-11-02 六通道 RTL 与本地功能阶段已完成：[最终报告](../reports/six_channel_20261102/FINAL_REPORT.md)、[接口说明](SIX_CHANNEL_DESIGN.md)。旧 `student_receiver_core` 16样本输入路径仍可用；本次新教师六通道专项的后续目标集中于 TSMC28 PAD/DC/SDF 后仿/功耗。
 
-**后续 M0–M5 里程碑、优先级、进入条件和停止规则**：见 [课程要求与成果索引：后续里程碑路线图](COURSE_MASTER_PLAN.md#后续里程碑路线图2026-10-30)。规划不自动授权执行，下一阶段以用户更新的 GOAL 为准。
+**当前 M0–M5 规划、执行门槛与交付**：见[六通道后端里程碑路线图](COURSE_MASTER_PLAN.md#后续里程碑路线图2026-11-02)。下一候选仅为获授权后的 M1（VM Synopsys 工具、标准单元、PAD 与模型预检），不是重新启动本地 RTL 长仿真或原 12 通道 ICC。
 
-最近完成的 H1 仅在独立 [h1-frontend 分支](https://github.com/Ultramarine-1011/B1I_Receiver_EDA/tree/h1-frontend)，其 [验证报告](https://github.com/Ultramarine-1011/B1I_Receiver_EDA/blob/h1-frontend/docs/H1_VM_FRONTEND.md) 记录 VCS PASS、部分 DC 和中断/未运行项；未合并正式 main。
+H0 PRN 综合证据在[H0报告](H0_VM_SMOKE.md)，H1 证据仍在独立 [h1-frontend 分支](https://github.com/Ultramarine-1011/B1I_Receiver_EDA/tree/h1-frontend)，均不等于新的六通道 TSMC28 综合/后仿已通过。
