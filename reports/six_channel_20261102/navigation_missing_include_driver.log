@@ -1,0 +1,9 @@
+wsl.exe : %Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_rele
+ase/student_release/rtl/carrier_nco_mixer.sv:43:12: Cannot find include file: 'carrier_quarter_lut.svh'
+At C:\Users\26255\Desktop\DIC_EDA\windows-vmware-br-br-br-br\windows-vmware-br-br-br-br\scripts\run_six_channel.ps1:19 
+char:5
++     & wsl.exe -d Ubuntu -- bash -lc $command 2>&1 | Tee-Object -FileP ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (%Error: /mnt/c/...uarter_lut.svh':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

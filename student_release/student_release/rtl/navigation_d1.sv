@@ -13,6 +13,7 @@ module navigation_d1 (
     input logic [7:0] generation,
     output logic nh_valid,frame_valid,time_valid,bch_valid,
     output logic [4:0] nh_phase,
+    output logic bit_sync_valid,nav_bit_valid,nav_bit,
     output logic record_valid,
     input logic record_ready,
     output logic [255:0] record_data
@@ -80,15 +81,21 @@ module navigation_d1 (
     end
     always_ff @(posedge clk or negedge reset_n) begin
         if(!reset_n) begin
+            bit_sync_valid<=0;nav_bit_valid<=0;nav_bit<=0;
             publishing<=0;publish_index<=0;frame_good<=0;previous_good<=0;
             subframe<=0;previous_subframe<=0;sow_high<=0;sow<=0;previous_sow<=0;
             frame_start_ref<=0;previous_frame_ref<=0;frame_valid<=0;time_valid<=0;bch_valid<=0;
             prompt_meta_ref<=0;bit_meta_ref<=0;prompt_meta_phase<=0;bit_meta_phase<=0;
             prompt_meta_epoch<=0;bit_meta_epoch<=0;prompt_meta_step<=0;bit_meta_step<=0;
         end else if(!locked) begin
+            bit_sync_valid<=0;nav_bit_valid<=0;nav_bit<=0;
             publishing<=0;publish_index<=0;frame_good<=0;previous_good<=0;
             frame_valid<=0;time_valid<=0;bch_valid<=0;
         end else begin
+            nav_bit_valid<=0;
+            if(bit_valid && bit_sync_valid) begin
+                nav_bit<=data_bit^polarity;nav_bit_valid<=1;
+            end
             if(prompt_valid) begin
                 prompt_meta_ref<=prompt_end_ref;prompt_meta_phase<=end_code_phase_q;
                 prompt_meta_epoch<=end_code_period_count;prompt_meta_step<=end_code_step_q;
@@ -105,6 +112,8 @@ module navigation_d1 (
                 bch_valid<=word_bch;
                 if(word_number>=1 && word_number<=10) words[word_number-1'b1]<=word_record;
                 if(word_number==1) begin
+                    bit_sync_valid<=header_good;
+                    if(!header_good) nav_bit_valid<=0;
                     frame_good<=header_good;subframe<=information[10:8];sow_high<=information[7:0];
                     frame_start_ref<=word_ref;
                     if(!header_good) begin frame_valid<=0;time_valid<=0;previous_good<=0;end

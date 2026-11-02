@@ -1,9 +1,9 @@
 # 当前状态
 
-2026-10-23：工程精简完成。文档职责与默认启动阅读已收拢，默认验证路径已移除历史全量审计；本轮检查与变更分类见 [整改记录](reports/local/cleanup_2026-10-23.md)。
+2026-11-02：本轮六通道RTL及功能仿真完成。复用原通道/PCPS/NH/D1，实现bds_bb_6ch_core、逐槽配置、标量采样及串行位输出；旧16样本入口允许CHANNELS=6。六星正常、PRN重排、RF失锁重捕/重配置均通过，IF端到端705位及Prompt层1080位逐位一致；捕获lag最大误差0sample。修复短时RF缺失下互相关假峰接纳问题，失败及最终结果均保留。
 
-既有成果入口：[G 接收机评价](reports/g_stage/FINAL_REPORT.md)、[H0 PRN VCS/DC](docs/H0_VM_SMOKE.md)、[独立 BDI 捕获](experiments/bdi_capture/README.md)。正式性能输入缺口由 G 报告维护。
+100MHz假定工作时钟/16.368MHz定速输入0.4s无反压、六路同时锁定；原通道/NAV/E0/PCPS及公开IF旧六槽回归通过。最终波形705个导航有效脉冲均为10ns。报告、复现入口、实际日志及波形清单见[六通道报告](reports/six_channel_20261102/FINAL_REPORT.md)，接口见[设计](docs/SIX_CHANNEL_DESIGN.md)。
 
-本次阻塞：无。
+本轮阻塞：无。TSMC28 PAD、DC时序面积优化、SDF后仿和功耗未执行，属于后续阶段；实际库/时钟/IO/复位与存储条件见[近期未决事项](docs/TBD.md)。用户已补充授权本轮Git提交推送；原始教师资料、用户PDF和本机大文件保留本地。
 
-下一可执行任务：停止，等待用户新的明确任务。
+下一可执行任务：停止，等待用户授权后续TSMC28综合及门级后仿。范围与验收见[GOAL](GOAL.md)。

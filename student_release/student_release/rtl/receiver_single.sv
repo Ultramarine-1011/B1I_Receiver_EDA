@@ -102,7 +102,7 @@ module receiver_single #(
         assign acq_ready=1;
         assign acq_prn=coarse_prn;assign acq_ref=coarse_ref;
         assign acq_cycles=coarse_cycles+refine_cycles;
-        acquisition_pcps coarse(.clk(clk),.reset_n(reset_n),.request(state==REQUEST),
+        acquisition_pcps coarse(.clk(clk),.reset_n(reset_n),.request_prn(6'd0),.request(state==REQUEST),
             .cancel(state==HANDOFF || state==FLUSH),.sample_ready(acq_sample_ready),
             .sample_valid(sample_valid && state==CAPTURE),.sample_data(sample_data),.sample_ref(sample_ref),
             .result_valid(coarse_valid),.result_ready((state==SEARCH && !coarse_detected) ||
@@ -147,6 +147,7 @@ module receiver_single #(
         .end_code_phase_q(window_end_code_phase_q),.end_code_period_count(window_end_code_period_count),
         .end_code_step_q(window_end_code_step_q),.prn(acq_prn),.channel(4'd0),.generation(8'd1),
         .nh_valid(nh_valid),.frame_valid(frame_valid),.time_valid(time_valid),.bch_valid(bch_valid),.nh_phase(),
+        .bit_sync_valid(),.nav_bit_valid(),.nav_bit(),
         .record_valid(nav_valid),.record_ready(nav_ready),.record_data(nav_data));
     always_ff @(posedge clk or negedge reset_n) begin
         if(!reset_n) begin

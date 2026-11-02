@@ -1,0 +1,87 @@
+[
+  {
+    "path": "work\\six_channel_20261102\\recovery.if2",
+    "bytes": 12276000,
+    "sha256": "a6e566ad49b369e3c3b1d7333ab813b01f60089bf7082c0521f9b3c67165d8be"
+  },
+  {
+    "path": "work\\six_channel_20261102\\six.if2",
+    "bytes": 12276000,
+    "sha256": "c1a9bf6112374dfdb7a57137a4a93449833f46aecbe2517c96e1ea6196242034"
+  },
+  {
+    "path": "work\\six_channel_20261102\\bits0.mem",
+    "bytes": 1200,
+    "sha256": "05d61e5331bb85881d35bd242c57be813d89c172c210389f3da6f6498f8223b6"
+  },
+  {
+    "path": "work\\six_channel_20261102\\bits1.mem",
+    "bytes": 1200,
+    "sha256": "7ef9dff88274abdb68220111a3794ed99c9416b75d3ae8e642f93bd390adbf75"
+  },
+  {
+    "path": "work\\six_channel_20261102\\bits2.mem",
+    "bytes": 1200,
+    "sha256": "93359493f3514bbf86711c64e76a3927160712f6c533362ae858ded27f25e215"
+  },
+  {
+    "path": "work\\six_channel_20261102\\bits3.mem",
+    "bytes": 1200,
+    "sha256": "9f78fe304ecf5056473229265bad3f0071e25e6df574c921930edb772ac9e097"
+  },
+  {
+    "path": "work\\six_channel_20261102\\bits4.mem",
+    "bytes": 1200,
+    "sha256": "5a55165d6f618580d7da11d61d97fecba0a913572e2b33eaffab290a843fab6e"
+  },
+  {
+    "path": "work\\six_channel_20261102\\bits5.mem",
+    "bytes": 1200,
+    "sha256": "b84449b922011f10f4cd51c05c6e7a2b2863ed99f2a6b687940863dc620350a9"
+  },
+  {
+    "path": "work\\six_channel_20261102\\truth.json",
+    "bytes": 24512,
+    "sha256": "938ec2d22d739a77f62691e88bf8d1c71b291b8334c961abce157e3166a715a0"
+  },
+  {
+    "path": "work\\six_channel_20261102\\nominal.vcd",
+    "bytes": 81358,
+    "sha256": "20399688fe0d5f4caf952132686fa7e1caddc592b959b0683edff612af3aa9c7"
+  },
+  {
+    "path": "work\\six_channel_20261102\\paced.vcd",
+    "bytes": 11612,
+    "sha256": "ded565ca62fe23012ab0b9957ef8adb1562a2ff91339bcbc701dfdd8844a9969"
+  },
+  {
+    "path": "work\\six_channel_20261102\\permuted.vcd",
+    "bytes": 81329,
+    "sha256": "35a4d3a8f234376e3eb98247456c07f8ac7528a19a19fdfce4e0afd0627380cf"
+  },
+  {
+    "path": "work\\six_channel_20261102\\recovery.vcd",
+    "bytes": 82578,
+    "sha256": "994d062bd57089de240c2d2a763d0748e251d11fddb614ee491342569cdaa27c"
+  },
+  {
+    "path": "work\\six_channel_20261102\\recovery_extended_tail_fail.vcd",
+    "bytes": 50022,
+    "sha256": "b8033d91bb32f1d41c49f4ef468dbcba11e3f4988aad9579de597a1ac1346172"
+  },
+  {
+    "path": "261102\\tsmc28_学生使用说明.docx",
+    "bytes": 44479,
+    "sha256": "6ae6e6b5d3ea09dc7d72f8b3e64fa67cd0e50db0e5d7041d611e9ad176e9654f"
+  },
+  {
+    "path": "261102\\北斗六通道基带处理器VCD功耗评估说明.pdf",
+    "bytes": 114351,
+    "sha256": "44b2a3ff6fd102d94d7b23132b241b309301308f0372b48033c188e30eb7fe5a"
+  },
+  {
+    "path": "261102\\北斗基带信号处理器六通道逻辑综合实验要求.pdf",
+    "bytes": 123948,
+    "sha256": "1c5caddb003f812787563538e941f2eb9854a9f1c2b4e3e3d6036f9a99d1f8e6"
+  }
+]

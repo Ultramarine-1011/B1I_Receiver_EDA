@@ -1,5 +1,5 @@
 param([double]$DurationSeconds=1,[string]$EvidenceDirectory='reports/e_stage/fast',
-      [ValidateSet(1,2,4,12)][int]$Channels=4,[string]$OutputPath='',
+      [ValidateSet(1,2,4,6,12)][int]$Channels=4,[string]$OutputPath='',
       [string]$InputPath='student_release/student_release/input/scenario.if2',
       [int]$MinimumAcquisitions=-1,
       [switch]$SkipBuild,[switch]$Backpressure,[switch]$InputStalls)

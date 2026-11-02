@@ -42,3 +42,7 @@ __pycache__/
 /reports/g_stage/**/*_detail.csv
 !/reports/g_stage/acquisition/acquisition_results.jsonl
 !/reports/g_stage/acquisition_cn50/acquisition_results.jsonl
+
+# Six-channel detailed transport records stay local; logs/events/plots are small.
+/reports/six_channel_20261102/**/*.bin
+/reports/six_channel_20261102/**/*.jsonl

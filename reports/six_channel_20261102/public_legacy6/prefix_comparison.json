@@ -1,0 +1,25 @@
+{
+  "records": 1481,
+  "counts": {
+    "type5_prn8": 1,
+    "type5_prn11": 1,
+    "type5_prn13": 1,
+    "type5_prn21": 1,
+    "type5_prn28": 1,
+    "type1_prn13": 295,
+    "type1_prn11": 295,
+    "type1_prn21": 295,
+    "type1_prn28": 295,
+    "type1_prn8": 295,
+    "type6_prn0": 1
+  },
+  "locked_prompt_counts": {
+    "13": 88,
+    "11": 83,
+    "28": 77,
+    "21": 68,
+    "8": 20
+  },
+  "frozen_f2_shared_records_bit_exact": 1184,
+  "ignored_field": "type5 acquisition hardware cycles only"
+}

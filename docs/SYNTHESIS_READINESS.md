@@ -1,5 +1,7 @@
 # 综合准备与架构风险
 
+2026-11-02新增六通道核心`bds_bb_6ch_core`及独立配置/串行导航位接口，功能验证见[六通道报告](../reports/six_channel_20261102/FINAL_REPORT.md)，接口和采样预算见[SIX_CHANNEL_DESIGN](SIX_CHANNEL_DESIGN.md)。`261102`已提供TSMC28标准单元库路径；下面的“工艺未定”属于历史阶段条件。后续实际PAD、clk/IO/复位预算和存储映射仍须落实，未执行本次TSMC28综合或SDF后仿。
+
 PRN 模块已完成 VCS 回归和 SAED90nm 的实验性 DC 综合，条件及结果见 [H0_VM_SMOKE](H0_VM_SMOKE.md)。完整接收机综合、ICC、DRC/LVS 和最终 STA 为 NOT_RUN；下表是源码风险分析。
 
 实际周期、1/4/12数字槽服务、64word FIFO溢出与102400word有界通过，以及持续实时的缺项统一见 [G报告](../reports/g_stage/FINAL_REPORT.md)“吞吐与时间预算”。源码清单入口 `model/synthesis_inventory.py`；历史清单见 `reports/f_stage/synthesis/source_inventory.json`。

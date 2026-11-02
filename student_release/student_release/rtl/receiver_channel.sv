@@ -20,6 +20,9 @@ module receiver_channel #(
     output logic [255:0] record_data,
     output logic drained,overflow,
     output logic active,locked,nh_valid,frame_valid,time_valid,
+    output logic bit_sync_valid,nav_bit_valid,nav_bit,
+    output logic [42:0] tracking_code_phase,
+    output logic [32:0] tracking_code_step,
     output logic [5:0] prn_saved,
     output logic [7:0] generation
 );
@@ -40,6 +43,7 @@ module receiver_channel #(
     logic [31:0] assigned_epoch,assigned_carrier_phase;
     logic [42:0] assigned_code_phase;
     logic signed [31:0] assigned_doppler;
+    assign tracking_code_phase=code_phase_q;
     assign record_slot=!record_valid || record_ready;
     assign channel_reset_n=reset_n && !release_valid;
     assign nav_ready=record_slot && !prompt_pending && !lost_pending && !release_valid;
@@ -55,7 +59,7 @@ module receiver_channel #(
         .init_doppler_word(assign_valid ? assign_doppler : assigned_doppler),
         .sample_valid(sample_valid && active && sample_ref>=effective_ref && !release_valid),.sample_ready(tracker_ready),.sample_data(sample_data),.sample_ref(sample_ref),
         .code_phase_q(code_phase_q),.code_period_count(code_period_count),.carrier_phase_word(carrier_phase_word),
-        .code_step_q(),.carrier_step_word(carrier_step_word),.ie(),.qe(),.ip(ip),.qp(qp),.il(),.ql(),
+        .code_step_q(tracking_code_step),.carrier_step_word(carrier_step_word),.ie(),.qe(),.ip(ip),.qp(qp),.il(),.ql(),
         .window_done(window_done),.window_ref(window_ref),.window_code_phase_q(window_code_phase_q),
         .window_code_period_count(window_code_period_count),.window_carrier_phase_word(window_carrier_phase_word),
         .window_end_code_phase_q(window_end_code_phase_q),.window_end_code_period_count(window_end_code_period_count),
@@ -68,6 +72,7 @@ module receiver_channel #(
         .end_code_phase_q(window_end_code_phase_q),.end_code_period_count(window_end_code_period_count),
         .end_code_step_q(window_end_code_step_q),.prn(prn_saved),.channel(4'(CHANNEL_ID)),.generation(generation),
         .nh_valid(nh_valid),.frame_valid(frame_valid),.time_valid(time_valid),.bch_valid(bch_valid),.nh_phase(),
+        .bit_sync_valid(bit_sync_valid),.nav_bit_valid(nav_bit_valid),.nav_bit(nav_bit),
         .record_valid(nav_valid),.record_ready(nav_ready),.record_data(nav_data));
     tracking_record_framer framer(.event_valid(window_done),.prn(prn_saved),.channel(4'(CHANNEL_ID)),
         .generation(generation),.locked(locked),.nh_valid(nh_valid),.frame_valid(frame_valid),.time_valid(time_valid),

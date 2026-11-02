@@ -92,7 +92,7 @@ module receiver_multichannel #(
         .sample_ref(sample_ref),.sample_last(sample_last),.input_drained(input_drained));
     acquisition_pcps #(.FIRST_PRN(SEARCH_FIRST_PRN),.LAST_PRN(SEARCH_LAST_PRN),
         .FIRST_DOPPLER(SEARCH_FIRST_DOPPLER),.LAST_DOPPLER(SEARCH_LAST_DOPPLER),.DOPPLER_STEP(SEARCH_DOPPLER_STEP)) acquisition(
-        .clk(clk),.reset_n(reset_n),.request(state==REQUEST || (state==RUN && bg_state==BG_REQUEST)),
+        .clk(clk),.reset_n(reset_n),.request_prn(6'd0),.request(state==REQUEST || (state==RUN && bg_state==BG_REQUEST)),
         .cancel(state==PRIME || state==FLUSH),.sample_ready(coarse_sample_ready),
         .sample_valid(sample_valid && sample_ready && (state==CAPTURE || (state==RUN && bg_state==BG_CAPTURE))),.sample_data(sample_data),.sample_ref(sample_ref),
         .result_valid(coarse_valid),.result_ready(coarse_ready),.detected(coarse_detected),.finished(coarse_finished),
@@ -125,7 +125,8 @@ module receiver_multichannel #(
             .sample_data(sample_data),.sample_ref(sample_valid ? sample_ref : processed_samples),.epoch_event(epoch_event),.epoch_id(epoch_id),
             .record_valid(slot_valid[c]),.record_ready(slot_take[c]),.record_data(slot_data[c]),
             .drained(slot_drained[c]),.overflow(slot_overflow[c]),.active(active[c]),
-            .locked(slot_locked[c]),.nh_valid(),.frame_valid(),.time_valid(),.prn_saved(slot_prn[c]),.generation(slot_generation[c]));
+            .locked(slot_locked[c]),.nh_valid(),.frame_valid(),.time_valid(),.prn_saved(slot_prn[c]),.generation(slot_generation[c]),
+            .bit_sync_valid(),.nav_bit_valid(),.nav_bit(),.tracking_code_phase(),.tracking_code_step());
     end
     always_ff @(posedge clk or negedge reset_n) begin
         if(!reset_n) begin
@@ -227,7 +228,7 @@ module receiver_multichannel #(
         end
     end
     initial begin
-        if(CHANNELS!=1 && CHANNELS!=2 && CHANNELS!=4 && CHANNELS!=12) $fatal(1,"Invalid channel configuration");
+        if(CHANNELS!=1 && CHANNELS!=2 && CHANNELS!=4 && CHANNELS!=6 && CHANNELS!=12) $fatal(1,"Invalid channel configuration");
         if(SEARCH_FIRST_PRN<6 || SEARCH_LAST_PRN>37 || SEARCH_FIRST_PRN>SEARCH_LAST_PRN ||
            SEARCH_DOPPLER_STEP<=0 || SEARCH_FIRST_DOPPLER>SEARCH_LAST_DOPPLER)
             $fatal(1,"Invalid acquisition configuration");

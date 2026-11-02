@@ -12,7 +12,7 @@ module tb_g_acquisition;
     integer cycles=0,n=0,case_id,fd,accepted_cycle,coarse_cycle,refine_cycle,results=0;
     always #5 clk=~clk;
     acquisition_pcps #(.FIRST_PRN(6),.LAST_PRN(7)) coarse(
-        .clk,.reset_n,.request,.cancel,.sample_ready,.sample_valid,.sample_data,.sample_ref,
+        .clk,.reset_n,.request,.cancel,.request_prn(6'd0),.sample_ready,.sample_valid,.sample_data,.sample_ref,
         .result_valid(coarse_valid),.result_ready(coarse_ready),.detected(coarse_detected),.finished,
         .result_prn(prn),.result_lag(coarse_lag),.result_doppler(coarse_doppler),.result_ref(coarse_ref),
         .peak_power(coarse_peak),.mean_power(coarse_mean),.search_cycles(coarse_cycles),.replay_address,.replay_data);

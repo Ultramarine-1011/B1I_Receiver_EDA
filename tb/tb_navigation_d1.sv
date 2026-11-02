@@ -17,7 +17,7 @@ module tb_navigation_d1;
     logic stalled=0;
     integer phase=7,inverted=0,case_number=0,records=0,cycles=0;
     localparam logic [19:0] NH=20'b00000100110101001110;
-    navigation_d1 dut(.*);
+    navigation_d1 dut(.bit_sync_valid(),.nav_bit_valid(),.nav_bit(),.*);
     always @(negedge clk) begin cycles=cycles+1;record_ready=cycles%37>=19;end
     always @(posedge clk) if(reset_n) begin
         if(stalled && (!record_valid || record_data!==saved)) $fatal(1,"navigation backpressure stability");

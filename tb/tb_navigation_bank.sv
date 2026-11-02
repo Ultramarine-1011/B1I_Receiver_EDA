@@ -13,7 +13,7 @@ module nav_bank_case #(parameter integer C=0)(output logic done=0);
     integer records=0,cycles=0,phase=C%3==0 ? 0 : C%3==1 ? 7 : 19;
     localparam logic [19:0] NH=20'b00000100110101001110;
     always #5 clk=~clk;
-    navigation_d1 dut(.*);
+    navigation_d1 dut(.bit_sync_valid(),.nav_bit_valid(),.nav_bit(),.*);
     always @(negedge clk) begin cycles++;record_ready=(cycles+C)%37>=19;end
     always @(posedge clk) if(reset_n) begin
         if(stalled && (!record_valid || held!==record_data)) $fatal(1,"nav bank stall channel=%0d",C);

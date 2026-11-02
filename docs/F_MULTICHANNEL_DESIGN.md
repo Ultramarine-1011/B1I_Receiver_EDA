@@ -1,5 +1,7 @@
 # F 多通道最小修改设计
 
+2026-11-02适配：旧参数化入口新增CHANNELS=6，默认4不变；新规范的固定配置槽、标量IF和串行导航端口见[SIX_CHANNEL_DESIGN](SIX_CHANNEL_DESIGN.md)。下文F阶段原参数范围及证据按历史保留。
+
 起点f8e8de7；plan.md保留9.28冻结方案，教师接口优先；当前状态见STATUS/GOAL。
 
 ## F0审查

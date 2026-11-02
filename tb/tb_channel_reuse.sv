@@ -10,7 +10,7 @@ module tb_channel_reuse;
     logic record_valid,record_ready=0,drained,overflow,active,locked,nh_valid,frame_valid,time_valid;
     logic [255:0] record_data,held_data;logic [7:0] generation;
     integer cycles=0,n=0,lost=0,old=0,new_records=0;
-    receiver_channel dut(.*);
+    receiver_channel dut(.bit_sync_valid(),.nav_bit_valid(),.nav_bit(),.tracking_code_phase(),.tracking_code_step(),.*);
     always #5 clk=~clk;
     always @(posedge clk) if(reset_n) begin
         cycles++;if(cycles>200000) $fatal(1,"timeout");

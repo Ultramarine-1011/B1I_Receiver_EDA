@@ -4,9 +4,11 @@
 module acquisition_pcps #(
     parameter integer FIRST_PRN=6, LAST_PRN=37,
     parameter integer FIRST_DOPPLER=-2624000,LAST_DOPPLER=2624000,DOPPLER_STEP=131200,
-    parameter integer DETECTION_RATIO=8
+    parameter integer DETECTION_RATIO=8,
+    parameter integer CONFIGURED_PRN=0
 ) (
     input logic clk,reset_n,request,cancel,
+    input logic [5:0] request_prn,
     output logic sample_ready,
     input logic sample_valid,
     input logic signed [2:0] sample_data,
@@ -96,7 +98,7 @@ module acquisition_pcps #(
         else begin
             if(state!=IDLE && state!=FINISHED && state!=RESULT) cycles<=cycles+1'b1;
             case(state)
-                IDLE: if(request) begin capture_count<=0;cycles<=0;finished<=0;prn<=6'(FIRST_PRN);state<=CAPTURE;end
+                IDLE: if(request) begin capture_count<=0;cycles<=0;finished<=0;prn<=CONFIGURED_PRN!=0 ? request_prn : 6'(FIRST_PRN);state<=CAPTURE;end
                 CAPTURE: if(sample_valid && sample_ready) begin
                     if(capture_count==0) begin reference_sample<=sample_ref;result_ref<=sample_ref;end
                     raw[capture_count]<=sample_data;
@@ -170,12 +172,12 @@ module acquisition_pcps #(
                     detected<=(best_peak<<12)>best_sum*64'(DETECTION_RATIO);search_cycles<=cycles;
                 end else if(result_ready) begin
                     result_valid<=0;
-                    if(prn==6'(LAST_PRN)) begin state<=FINISHED;finished<=1;end
+                    if(CONFIGURED_PRN!=0 || prn==6'(LAST_PRN)) begin state<=FINISHED;finished<=1;end
                     else begin prn<=prn+1'b1;state<=CODE_INIT;end
                 end
                 FINISHED: if(request) begin
                     capture_count<=0;cycles<=0;finished<=0;result_valid<=0;
-                    prn<=6'(FIRST_PRN);state<=CAPTURE;
+                    prn<=CONFIGURED_PRN!=0 ? request_prn : 6'(FIRST_PRN);state<=CAPTURE;
                 end
                 default: state<=IDLE;
             endcase

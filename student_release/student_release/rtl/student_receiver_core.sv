@@ -25,6 +25,6 @@ module student_receiver_core #(
     end else begin: multi
         receiver_multichannel #(.CHANNELS(CHANNELS)) receiver(.*);
     end endgenerate
-    initial if(CHANNELS!=1 && CHANNELS!=2 && CHANNELS!=4 && CHANNELS!=12)
-        $fatal(1,"Supported independent-channel configurations are 1/2/4/12");
+    initial if(CHANNELS!=1 && CHANNELS!=2 && CHANNELS!=4 && CHANNELS!=6 && CHANNELS!=12)
+        $fatal(1,"Supported independent-channel configurations are 1/2/4/6/12");
 endmodule

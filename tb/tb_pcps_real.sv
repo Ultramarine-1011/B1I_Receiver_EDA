@@ -25,7 +25,7 @@ module tb_pcps_real;
         .stream_valid(stream_valid),.stream_ready(stream_ready),.stream_last(stream_last),.sample_index(sample_index),
         .sample_valid(sample_valid),.sample_ready(sample_ready),.sample_bits(),.sample_data(sample_data),
         .sample_ref(sample_ref),.sample_last(sample_last),.input_drained(input_drained));
-    acquisition_pcps dut(.clk(clk),.reset_n(reset_n),.request(start),.cancel(1'b0),.*);
+    acquisition_pcps dut(.clk(clk),.reset_n(reset_n),.request(start),.cancel(1'b0),.request_prn(6'd0),.*);
     always @(posedge clk) if(reset_n) begin
         if(dut.state==dut.EVALUATE && dut.prn==6 && dut.doppler==-2624000 && dut.window_number==3)
             $fwrite(power_fd,"%0d,%0d\n",dut.address,dut.total_power);
