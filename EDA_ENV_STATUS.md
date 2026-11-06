@@ -284,6 +284,14 @@ G0–G7当前可执行评价均在既有本机WSL2 Ubuntu/Verilator及Windows bu
 - Design Compiler K-2015.06 实际完成 `b1i_prn_gen` 的 analyze/elaborate/link/compile，目标库 `saed90nm_typ`。实验时钟 10 ns。这是工具可运行的证据，不是签核，也没有运行 ICC 或 PrimeTime。
 - 虚拟机未安装 `git`。提交不在虚拟机内执行，避免用远端版本覆盖解压工程。
 
+# 2026-11-06 M2 TSMC28 PAD 与受控 DC 追加
+
+- 仍使用 `7901_15@192.168.159.128` 与 `C:\Users\IC\.ssh\id_rsa_eda_codex`。主机内存 1991 MB，swap 0。未改网卡、许可证或系统安装。
+- VCS I-2014.03 跑通 FFT 三例和 `bds_bb_6ch_pad_top` 的焊盘连接检查。PAD 仿真模型是 `/home/share/libs/tsmc28` 下的 `tphn28hpcpgv18_pwr.v`，必须指定唯一顶层，否则未例化单元会在 0 时刻 `$stop`。
+- Design Compiler K-2015.06 加载 TT 标准单元库和 `tphn28hpcpgv18tt0p9v1p8v25c`。小 ROM 与旋转因子常数地址完成映射。隔离捕获存储后的六通道顶层完成 link；面积报告阶段进程退出 137。单通道映射在约 1627 MB 处长时间停留，没有写出最终时序报告。
+- `compile -map_effort low` 被该版本改成 medium（OPT-1303）。`memory` 不是这条 `dc_shell` 的命令。
+
+
 # 2026-11-06 M1 TSMC28 预检追加
 
 - 同一台 `IC` / `7901_15@192.168.159.128`。`free -m`：内存 1991 MB，可用约 1603 MB，swap 0。第一次 SSH 在 ARP 出现客体地址前超时；随后 ping 与 SSH 退出 0。未改网卡、bashrc、许可证或系统安装。

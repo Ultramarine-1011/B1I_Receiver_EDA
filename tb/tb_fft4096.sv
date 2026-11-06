@@ -6,8 +6,7 @@ module tb_fft4096;
     logic signed [31:0] load_real=0,load_imag=0,read_real,read_imag;
     logic signed [31:0] inr[0:4095],ini[0:4095],outr[0:4095],outi[0:4095];
     integer cycles=0,events=0;
-    fft4096_serial #(.COS_FILE("../../student_release/student_release/rom/fft_cos_q30.mem"),
-                    .SIN_FILE("../../student_release/student_release/rom/fft_sin_q30.mem")) dut(.*);
+    fft4096_serial dut(.*);
     initial begin
         repeat(3) @(negedge clk);reset_n=1;
         for(integer c=0;c<3;c=c+1) begin

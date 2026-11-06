@@ -1,8 +1,6 @@
 `timescale 1ns/1ps
 // One normalized radix-2 butterfly/clock; load bit-reversed, read natural order.
-module fft4096_serial #(
-    parameter COS_FILE="rom/fft_cos_q30.mem", SIN_FILE="rom/fft_sin_q30.mem"
-) (
+module fft4096_serial (
     input logic clk,reset_n,
     input logic load_valid,
     output logic load_ready,
@@ -13,7 +11,8 @@ module fft4096_serial #(
     input logic [11:0] read_address,
     output logic signed [31:0] read_real,read_imag
 );
-    logic signed [31:0] re[0:4095],im[0:4095],cosine[0:4095],sine[0:4095];
+    `include "fft_twiddle_rom.svh"
+    logic signed [31:0] re[0:4095],im[0:4095];
     logic [12:0] span,base;
     logic [11:0] half_span,j,twiddle_step,a_address,b_address,w_address,reversed;
     logic inverse_run;
@@ -26,7 +25,7 @@ module fft4096_serial #(
         a_address=12'(base+13'(j));b_address=a_address+half_span;
         w_address=j*twiddle_step;
         ar=re[a_address];ai=im[a_address];br=re[b_address];bi=im[b_address];
-        wr=cosine[w_address];wi=inverse_run ? sine[w_address] : -sine[w_address];
+        wr=fft_twiddle_cos(w_address);wi=inverse_run ? fft_twiddle_sin(w_address) : -fft_twiddle_sin(w_address);
         product_rr=$signed(br)*$signed(wr);product_ii=$signed(bi)*$signed(wi);
         product_ri=$signed(br)*$signed(wi);product_ir=$signed(bi)*$signed(wr);
         tr=(product_rr-product_ii) >>> 30;ti=(product_ri+product_ir) >>> 30;
@@ -54,5 +53,4 @@ module fft4096_serial #(
             end
         end
     end
-    initial begin $readmemh(COS_FILE,cosine);$readmemh(SIN_FILE,sine);end
 endmodule

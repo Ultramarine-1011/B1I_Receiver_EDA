@@ -2,11 +2,19 @@
 
 当前状态只见[STATUS.md](../STATUS.md)，任务范围见GOAL.md。历史未决记录保留[archive/TBD_2026-09-28.md](archive/TBD_2026-09-28.md)。
 
+## 六通道与TSMC28（2026-11-06 M2 之后）
+
+- 旋转因子已改为 function，数值与 `rom/fft_*_q30.mem` 一致。`initial $readmemh` 仍会被 DC 忽略，不能再加回去。证据见[M2报告](../reports/m2_tsmc28_20261106/REPORT.md)。
+- `bds_bb_6ch_pad_top` 已接 TPHN28 8 mA 焊盘。`OEN`/`REN` 低有效；正常工作时 `PVDD2POC` 把 `POC` 驱成 0。DC 的逻辑视图不保留电源 `pg_pin`，SDC 不能对 `VDD/VSS/VDDPST/VSSPST` 调用 `get_ports`。
+- 10 ns、输入/输出延迟 2.0 ns、输入转换 0.5 ns、输出负载 5 pF 仍是候选约束，不是签核值。
+- 这台 1991 MB、无 swap 的虚拟机不能完成六通道映射。捕获 2,293,056 bit 多端口存储仍然没有 SRAM 宏，M2 只在综合实验里把它隔离。单通道 80 位除法已被 DC 识别为 `DW_div_tc_a_width80_b_width64`，但没有最终时序报告。
+- 进入 M3 为 NO-GO，直到另有至少 8 GB 内存的主机。自生成六星的功能评分范围不变。
+
 ## 六通道与TSMC28（2026-11-06 预检后）
 
 - 虚拟机已核对 `/home/share/libs/tsmc28`：标准单元 TT/SS/FF `.db/.lib`、TPHN28HPCPGV18 PAD 的 `.db/.lib` 和两份 Verilog 都在。没有 SRAM/存储器宏，也没有标准单元门级 Verilog。证据见[M1报告](../reports/m1_tsmc28_20261106/REPORT.md)。
-- 首次全芯片 DC 前必须处理两项：DC 忽略 `initial $readmemh`（VER-281）；2,293,056 bit 多端口捕获/FFT 存储不能在 1991 MB、无 swap 的虚拟机上展开。
-- 仍未选定 ASIC 周期、输入/输出延迟、转换时间、驱动档、负载和复位恢复/移除。100 MHz 只是功能吞吐候选。PAD `OEN`/`REN`/POC 的有效电平尚未按 liberty function 核定。
+- 当时的结论是：首次全芯片 DC 前必须处理两项，DC 忽略 `initial $readmemh`（VER-281），以及 2,293,056 bit 多端口存储不能在这台虚拟机上展开。M2 段记录了随后的实际处理结果。
+- 当时尚未选定 ASIC 周期和 IO 电气参数。PAD `OEN`/`REN`/POC 的有效电平也尚未核定。M2 段给出了候选值和极性。
 - 自生成六星 IF 的功能评分范围不变。正式统计/动态/定位输入缺口仍属原 G 范围。
 
 ## 六通道与TSMC28（2026-11-02 当时记录）

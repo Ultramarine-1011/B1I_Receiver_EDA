@@ -63,6 +63,6 @@ PRN最长2046逻辑拍预置；预约之前该槽不接样，不拖停健康槽�
 
 教师标准单元系列为`tcbn28hpcplusbwp40p140`（Standard Vt、9-track）。TT/SS/FF `.db`在`/home/share/libs/tsmc28/logic/selected_db/`，分别为`tt0p9v25c`、`ssg0p81v125c`、`ffg0p99vm40c`；完整文件名与ICC/Calibre路径以原DOCX为准。
 
-后续须选择实际PAD及其时序库/Verilog模型，建立`bds_bb_6ch_pad_top`，按位覆盖所有核心及必要配置/握手端口；本轮没有以空PAD替代真实库。需落实目标clk及IO最大最小延迟、驱动/转换/负载和复位释放条件，再检查宽除法、组合复位、ROM初始化及捕获存储映射，风险继续见[SYNTHESIS_READINESS](SYNTHESIS_READINESS.md)。
+后续已建立 `rtl/bds_bb_6ch_pad_top.sv`。M2 用 TPHN28 `PDDW08`/`PDUW08` 和 `PVDD1`/`PVSS1`/`PVDD2POC` 接上全部功能端口；极性、候选 10 ns SDC 和未能完成的六通道映射见[M2报告](../reports/m2_tsmc28_20261106/REPORT.md)。10 ns 仍是候选周期。风险继续见[SYNTHESIS_READINESS](SYNTHESIS_READINESS.md)。
 
 功耗手册规定同版`output/final.v`、`final.ddc`、`final.sdc`、`final_max.sdf`，`sim/tb.sv`中实例`tb.dut`。真正后仿应完整记录DUT活动、通过最大及最小延迟检查，之后VCD→SAIF→Power Compiler。当前功能稀疏事件VCD用于查看关键状态和位脉冲，不能充作完整功耗活动或SDF后仿证据。

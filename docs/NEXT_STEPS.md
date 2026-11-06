@@ -2,8 +2,8 @@
 
 唯一当前状态及下一任务见 [STATUS](../STATUS.md)，当次授权范围见 [GOAL](../GOAL.md)，真实运行/提交事件见 [WORKLOG](../WORKLOG.md)，协作纪律见 [AGENTS](../AGENTS.md)。
 
-2026-11-06 M1 已完成：[预检报告](../reports/m1_tsmc28_20261106/REPORT.md)。工具、三套标准单元角和 TPHN28 PAD 时序/仿真模型已在虚拟机上核对。直接展开现有六通道 RTL 做首次全芯片 DC 被 ROM 初始化被忽略、以及缺少存储器宏这两项挡住。
+2026-11-06 M2 已完成：[M2 报告](../reports/m2_tsmc28_20261106/REPORT.md)。PAD 顶层和可综合旋转因子已经落地。隔离捕获存储后的六通道顶层能够 link，但这台 1991 MB 虚拟机没有给出六通道面积/时序，进入 M3 为 NO-GO。
 
-**当前 M0–M5 规划：** 见[六通道后端里程碑路线图](COURSE_MASTER_PLAN.md#后续里程碑路线图2026-11-02)。下一候选是另行授权后的 M2：先处理 `$readmemh` 和大存储，再做 `bds_bb_6ch_pad_top` 与受控首次映射。不要把 100 MHz 功能测试时钟当成已签核的 ASIC 周期，也不要启动完整接收机 compile、SDF 后仿或 ICC。
+**当前 M0–M5 规划：** 见[六通道后端里程碑路线图](COURSE_MASTER_PLAN.md#后续里程碑路线图2026-11-02)。下一候选必须另行授权，并且先换到至少 8 GB、带 swap 的主机。不要把 10 ns 候选周期当成签核周期，也不要在这台虚拟机上展开 2,293,056 bit 捕获存储。
 
 六通道功能证据仍是 [最终报告](../reports/six_channel_20261102/FINAL_REPORT.md)。H0/H1 的 SAED90nm 与部分前端综合不等于本次 TSMC28 结果。

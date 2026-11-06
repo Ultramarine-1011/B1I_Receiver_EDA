@@ -1,0 +1,1066 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# M2 experiment: map one tracking channel, the unit that contains the 80-bit dividers.
+# This is not the six-channel pad compile. The pad-top compile was killed on the 2GB VM.
+set_app_var sh_enable_page_mode false
+false
+set std_db /home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db
+/home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db
+set_app_var target_library [list $std_db]
+/home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db
+set_app_var link_library [list * $std_db]
+* /home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db
+set rtl student_release/student_release/rtl
+student_release/student_release/rtl
+set_app_var search_path [concat [list $rtl .] $search_path]
+student_release/student_release/rtl . . /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver
+set report_dir reports/m2_tsmc28_20261106
+reports/m2_tsmc28_20261106
+file mkdir $report_dir
+foreach name {b1i_prn_gen.sv code_nco.sv carrier_nco_mixer.sv epl_correlator.sv tracking_frontend_spaced.sv tracking_channel_minimal.sv} {
+    if {[analyze -format sverilog $rtl/$name] == 0} {
+        puts "M2_CH_ANALYZE_FAIL $name"
+        exit 1
+    }
+}
+Running PRESTO HDLC
+Compiling source file ./student_release/student_release/rtl/b1i_prn_gen.sv
+Presto compilation completed successfully.
+Loading db file '/home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db'
+Running PRESTO HDLC
+Compiling source file ./student_release/student_release/rtl/code_nco.sv
+Warning:  ./student_release/student_release/rtl/code_nco.sv:248: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./student_release/student_release/rtl/carrier_nco_mixer.sv
+Opening include file student_release/student_release/rtl/carrier_quarter_lut.svh
+Warning:  ./student_release/student_release/rtl/carrier_nco_mixer.sv:99: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./student_release/student_release/rtl/epl_correlator.sv
+Warning:  ./student_release/student_release/rtl/epl_correlator.sv:159: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./student_release/student_release/rtl/tracking_frontend_spaced.sv
+Warning:  ./student_release/student_release/rtl/tracking_frontend_spaced.sv:185: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./student_release/student_release/rtl/tracking_channel_minimal.sv
+Presto compilation completed successfully.
+if {[elaborate tracking_channel_minimal -parameters "ENABLE_FLL=1,ENABLE_CARRIER_AID=1"] == 0} {
+    puts "M2_CH_ELABORATE_FAIL"
+    exit 1
+}
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp40p140tt0p9v25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:166: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:192: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:95: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:96: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:167: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:180: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:182: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:190: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:191: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:194: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:195: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_channel_minimal.sv:196: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 line 152 in file
+		'./student_release/student_release/rtl/tracking_channel_minimal.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|      feedback_ref_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        enabled_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      base_doppler_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     code_integral_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    carrier_integral_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_step_q_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_step_q_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   carrier_step_word_reg    | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   carrier_step_word_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| previous_prompt_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      previous_ip_reg       | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      previous_qp_reg       | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  previous_prompt_ref_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     fll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     feedback_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         usable_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         locked_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      good_windows_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      bad_windows_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      invalid_run_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    validity_history_reg    | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|       population_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|          seen_reg          | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     code_mean_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   frequency_mean_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   previous_phase_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_mean_square_q32_reg  | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_mean_square_q32_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  previous_phase_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     dll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     pll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_correction_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| carrier_correction_q16_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+Information: Building the design 'tracking_frontend_spaced' instantiated from design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1' with
+	the parameters "EPL_HALF_SPACING_NUMERATOR=5,EPL_HALF_SPACING_DENOMINATOR=16". (HDL-193)
+Warning:  ./student_release/student_release/rtl/tracking_frontend_spaced.sv:162: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_frontend_spaced.sv:91: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/tracking_frontend_spaced.sv:92: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 line 107 in file
+		'./student_release/student_release/rtl/tracking_frontend_spaced.sv'.
+=============================================================================================
+|           Register Name           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================
+| window_end_carrier_phase_word_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         early_delayed_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        prompt_delayed_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         late_delayed_reg          | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       integrate_delayed_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      integration_started_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|          energy_acc_reg           | Flip-flop |  42   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         energy_count_reg          | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         window_energy_reg         | Flip-flop |  42   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_phase_delayed_reg       | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        period_delayed_reg         | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     carrier_phase_delayed_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       first_code_phase_reg        | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         first_period_reg          | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      first_carrier_phase_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      window_code_phase_q_reg      | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   window_code_period_count_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   window_carrier_phase_word_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       end_phase_delayed_reg       | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      end_period_delayed_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       end_step_delayed_reg        | Flip-flop |  33   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    window_end_code_phase_q_reg    | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+| window_end_code_period_count_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    window_end_code_step_q_reg     | Flip-flop |  33   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      end_carrier_delayed_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+=============================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'code_nco' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "PHASE_FRAC=32,PERIOD_COUNT_WIDTH=32,EPL_HALF_SPACING_NUMERATOR=5,EPL_HALF_SPACING_DENOMINATOR=16". (HDL-193)
+
+Inferred memory devices in process
+	in routine code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 line 199 in file
+		'./student_release/student_release/rtl/code_nco.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|     code_epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      phase_acc_reg      | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_period_count_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| target_prompt_index_reg | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+| target_early_index_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  target_late_index_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      init_busy_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     code_valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      init_done_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'carrier_nco_mixer' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "PHASE_WIDTH=32,INPUT_WIDTH=3,SAMPLE_REF_WIDTH=64". (HDL-193)
+Warning:  ./student_release/student_release/rtl/carrier_nco_mixer.sv:88: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/carrier_nco_mixer.sv:89: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 56 in file
+	'./student_release/student_release/rtl/carrier_nco_mixer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            5             |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 line 67 in file
+		'./student_release/student_release/rtl/carrier_nco_mixer.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|       iq_ref_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+| carrier_phase_word_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   carrier_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      iq_valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      i_sample_reg      | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      q_sample_reg      | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'epl_correlator' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "IQ_WIDTH=14,WINDOW_SAMPLES=16368,SAMPLE_REF_WIDTH=64,ACC_WIDTH=28". (HDL-193)
+Warning:  ./student_release/student_release/rtl/epl_correlator.sv:63: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/epl_correlator.sv:64: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./student_release/student_release/rtl/epl_correlator.sv:122: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28 line 81 in file
+		'./student_release/student_release/rtl/epl_correlator.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|     window_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       ie_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       qe_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ip_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       qp_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       il_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ql_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ie_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         qe_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ip_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         qp_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         il_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ql_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+| window_sample_count_reg | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  window_start_ref_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     window_ref_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'b1i_prn_gen'. (HDL-193)
+
+Statistics for case statements in always block at line 82 in file
+	'./student_release/student_release/rtl/b1i_prn_gen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine b1i_prn_gen line 98 in file
+		'./student_release/student_release/rtl/b1i_prn_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   active_prn_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   chip_index_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   configured_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+current_design tracking_channel_minimal
+Error: Can't find design 'tracking_channel_minimal'. (UID-109)
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+{tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1}
+link
+
+  Linking design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (6 designs)               /home/7901_15/eda_project/m2/tree/tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1.db, etc
+  tcbn28hpcplusbwp40p140tt0p9v25c (library) /home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db
+
+1
+create_clock -name clk -period 10 [get_ports clk]
+1
+set_clock_uncertainty 0.10 [get_clocks clk]
+1
+set data_in [remove_from_collection [all_inputs] [get_ports {clk reset_n}]]
+{init_valid init_prn[5] init_prn[4] init_prn[3] init_prn[2] init_prn[1] init_prn[0] init_code_phase_q[42] init_code_phase_q[41] init_code_phase_q[40] init_code_phase_q[39] init_code_phase_q[38] init_code_phase_q[37] init_code_phase_q[36] init_code_phase_q[35] init_code_phase_q[34] init_code_phase_q[33] init_code_phase_q[32] init_code_phase_q[31] init_code_phase_q[30] init_code_phase_q[29] init_code_phase_q[28] init_code_phase_q[27] init_code_phase_q[26] init_code_phase_q[25] init_code_phase_q[24] init_code_phase_q[23] init_code_phase_q[22] init_code_phase_q[21] init_code_phase_q[20] init_code_phase_q[19] init_code_phase_q[18] init_code_phase_q[17] init_code_phase_q[16] init_code_phase_q[15] init_code_phase_q[14] init_code_phase_q[13] init_code_phase_q[12] init_code_phase_q[11] init_code_phase_q[10] init_code_phase_q[9] init_code_phase_q[8] init_code_phase_q[7] init_code_phase_q[6] init_code_phase_q[5] init_code_phase_q[4] init_code_phase_q[3] init_code_phase_q[2] init_code_phase_q[1] init_code_phase_q[0] init_code_period_count[31] init_code_period_count[30] init_code_period_count[29] init_code_period_count[28] init_code_period_count[27] init_code_period_count[26] init_code_period_count[25] init_code_period_count[24] init_code_period_count[23] init_code_period_count[22] init_code_period_count[21] init_code_period_count[20] init_code_period_count[19] init_code_period_count[18] init_code_period_count[17] init_code_period_count[16] init_code_period_count[15] init_code_period_count[14] init_code_period_count[13] init_code_period_count[12] init_code_period_count[11] init_code_period_count[10] init_code_period_count[9] init_code_period_count[8] init_code_period_count[7] init_code_period_count[6] init_code_period_count[5] init_code_period_count[4] init_code_period_count[3] init_code_period_count[2] init_code_period_count[1] init_code_period_count[0] init_carrier_phase_word[31] init_carrier_phase_word[30] init_carrier_phase_word[29] init_carrier_phase_word[28] init_carrier_phase_word[27] init_carrier_phase_word[26] init_carrier_phase_word[25] init_carrier_phase_word[24] init_carrier_phase_word[23] init_carrier_phase_word[22] init_carrier_phase_word[21] init_carrier_phase_word[20] init_carrier_phase_word[19] init_carrier_phase_word[18] init_carrier_phase_word[17] init_carrier_phase_word[16] init_carrier_phase_word[15] init_carrier_phase_word[14] ...}
+set_input_delay -clock clk -max 2.0 $data_in
+1
+set_input_delay -clock clk -min 0.10 $data_in
+1
+set_output_delay -clock clk -max 2.0 [all_outputs]
+1
+set_output_delay -clock clk -min 0.10 [all_outputs]
+1
+set_input_delay -clock clk -max 2.0 [get_ports reset_n]
+1
+set_input_delay -clock clk -min 0.10 [get_ports reset_n]
+1
+puts "M2_CH_FREE_BEFORE"
+M2_CH_FREE_BEFORE
+sh free -m
+             total       used       free     shared    buffers     cached
+Mem:          1991       1190        800          2         11        284
+-/+ buffers/cache:        894       1097 
+Swap:            0          0          0 
+set compile_status [compile -map_effort low]
+Warning: The compile -map_effort low is obsolete. Setting this variable now defaults to compile -map_effort medium. Please update your script accordingly. (OPT-1303)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 78 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64'
+  Processing 'b1i_prn_gen_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_0'
+  Allocating blocks in 'DW_div_tc_a_width64_b_width11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2'
+  Allocating blocks in 'DW_div_tc_a_width33_b_width11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_3'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_6'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3'
+  Allocating blocks in 'DW_div_tc_a_width64_b_width25'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_3'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_7'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_8'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_9'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_10'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_12'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_6'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_7'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_8'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_17'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_12'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_19'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_20'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_14'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_21'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_15'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_16'
+  Allocating blocks in 'DW_div_tc_a_width80_b_width64'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_22'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_23'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24'
+  Allocating blocks in 'DW_div_tc_a_width76_b_width59'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_15'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_17'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_17'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_25'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_27'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_28'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_3'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_29'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_19'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_20'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_30'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_31'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_21'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_22'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_23'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_24'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_6'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_25'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_26'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_7'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_27'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_28'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_8'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_29'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_30'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_40'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_9'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_41'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_31'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_32'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_42'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_10'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_43'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_33'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_34'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_44'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_45'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_35'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_36'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_46'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_12'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_47'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_37'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_38'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_48'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_49'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_39'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_40'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_50'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_14'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_51'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_41'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_42'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_52'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_15'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_53'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_43'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_44'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_54'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_55'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_45'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_46'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_17'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_47'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_56'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_48'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp6_18'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_49'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_18'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_cmp2_19'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_sub_0'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_sub_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_0'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_2'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_4'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_5'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_4'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_6'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_5'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_7'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_6'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_8'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_7'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp2_9'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_4'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_5'
+  Processing 'b1i_prn_gen_1_DW01_inc_0'
+  Processing 'b1i_prn_gen_1_DW01_cmp2_0'
+  Processing 'b1i_prn_gen_1_DW01_cmp2_1'
+  Processing 'b1i_prn_gen_2_DW01_inc_0'
+  Processing 'b1i_prn_gen_2_DW01_cmp2_0'
+  Processing 'b1i_prn_gen_2_DW01_cmp2_1'
+  Processing 'b1i_prn_gen_0_DW01_inc_0'
+  Processing 'b1i_prn_gen_0_DW01_cmp2_0'
+  Processing 'b1i_prn_gen_0_DW01_cmp2_1'
+  Building model 'DW01_add_width32' (rpl)
+  Processing 'DW01_add_width32'
+  Building model 'DW01_add_width32' (cla)
+  Processing 'DW01_add_width32'
+  Building model 'DW01_add_width10' (rpl)
+  Processing 'DW01_add_width10'
+  Building model 'DW01_add_width10' (cla)
+  Processing 'DW01_add_width10'
+  Building model 'DW01_sub_width43' (rpl)
+  Processing 'DW01_sub_width43'
+  Building model 'DW01_sub_width43' (cla)
+  Processing 'DW01_sub_width43'
+  Allocating blocks in 'DW02_mult_A_width14_B_width14'
+  Building model 'DW01_MUX'
+  Processing 'DW01_MUX'
+  Building model 'DW01_mmux_width2'
+  Processing 'DW01_mmux_width2'
+  Building model 'DW01_mmux_width3'
+  Processing 'DW01_mmux_width3'
+  Building model 'DW01_mmux_width4'
+  Processing 'DW01_mmux_width4'
+  Building model 'DW01_mmux_width5'
+  Processing 'DW01_mmux_width5'
+  Building model 'DW01_add_width26' (cla)
+  Processing 'DW01_add_width26'
+  Building model 'DW02_mult_A_width14_B_width14' (csa)
+  Processing 'DW02_mult_A_width14_B_width14'
+  Allocating blocks in 'DW02_mult_A_width28_B_width28'
+  Building model 'DW01_add_width54' (cla)
+  Processing 'DW01_add_width54'
+  Building model 'DW02_mult_A_width28_B_width28' (csa)
+  Processing 'DW02_mult_A_width28_B_width28'
+  Building model 'DW01_sub_width57' (rpl)
+  Processing 'DW01_sub_width57'
+  Building model 'DW01_sub_width57' (cla)
+  Processing 'DW01_sub_width57'
+  Building model 'DW01_add_width57' (rpl)
+  Processing 'DW01_add_width57'
+  Building model 'DW01_add_width57' (cla)
+  Processing 'DW01_add_width57'
+  Building model 'DW01_add_width42' (rpl)
+  Processing 'DW01_add_width42'
+  Building model 'DW01_add_width42' (cla)
+  Processing 'DW01_add_width42'
+  Building model 'DW01_sub_width14' (rpl)
+  Processing 'DW01_sub_width14'
+  Building model 'DW01_sub_width14' (cla)
+  Processing 'DW01_sub_width14'
+  Allocating blocks in 'DW02_mult_A_width3_B_width12'
+  Building model 'DW01_add_width14' (cla)
+  Processing 'DW01_add_width14'
+  Allocating blocks in 'DW01_absval_width3'
+  Building model 'DW01_inc_width3' (cla)
+  Processing 'DW01_inc_width3'
+  Building model 'DW01_absval_width3' (cla)
+  Processing 'DW01_absval_width3'
+  Allocating blocks in 'DW01_absval_width12'
+  Building model 'DW01_inc_width12' (cla)
+  Processing 'DW01_inc_width12'
+  Building model 'DW01_absval_width12' (cla)
+  Processing 'DW01_absval_width12'
+  Building model 'DW01_inc_width15' (cla)
+  Processing 'DW01_inc_width15'
+  Building model 'DW02_mult_A_width3_B_width12' (csa)
+  Processing 'DW02_mult_A_width3_B_width12'
+  Building model 'DW01_add_width8' (rpl)
+  Processing 'DW01_add_width8'
+  Building model 'DW01_add_width8' (cla)
+  Processing 'DW01_add_width8'
+  Building model 'DW01_sub_width8' (rpl)
+  Processing 'DW01_sub_width8'
+  Building model 'DW01_sub_width8' (cla)
+  Processing 'DW01_sub_width8'
+  Allocating blocks in 'DW02_mult_A_width64_B_width5'
+  Building model 'DW01_add_width67' (cla)
+  Processing 'DW01_add_width67'
+  Building model 'DW02_mult_A_width64_B_width5' (csa)
+  Processing 'DW02_mult_A_width64_B_width5'
+  Allocating blocks in 'DW02_mult_A_width5_B_width64'
+  Building model 'DW02_mult_A_width5_B_width64' (csa)
+  Processing 'DW02_mult_A_width5_B_width64'
+  Building model 'DW01_sub_width48' (rpl)
+  Processing 'DW01_sub_width48'
+  Building model 'DW01_sub_width48' (cla)
+  Processing 'DW01_sub_width48'
+  Allocating blocks in 'DW02_mult_A_width48_B_width12'
+  Building model 'DW01_add_width58' (cla)
+  Processing 'DW01_add_width58'
+  Building model 'DW02_mult_A_width48_B_width12' (csa)
+  Processing 'DW02_mult_A_width48_B_width12'
+  Allocating blocks in 'DW02_mult_A_width12_B_width48'
+  Building model 'DW02_mult_A_width12_B_width48' (csa)
+  Processing 'DW02_mult_A_width12_B_width48'
+  Allocating blocks in 'DW02_mult_A_width60_B_width20'
+  Building model 'DW01_add_width78' (cla)
+  Processing 'DW01_add_width78'
+  Building model 'DW02_mult_A_width60_B_width20' (csa)
+  Processing 'DW02_mult_A_width60_B_width20'
+  Allocating blocks in 'DW02_mult_A_width60_B_width11'
+  Building model 'DW01_add_width69' (cla)
+  Processing 'DW01_add_width69'
+  Building model 'DW02_mult_A_width60_B_width11' (csa)
+  Processing 'DW02_mult_A_width60_B_width11'
+  Allocating blocks in 'DW02_mult_A_width20_B_width60'
+  Building model 'DW02_mult_A_width20_B_width60' (csa)
+  Processing 'DW02_mult_A_width20_B_width60'
+  Allocating blocks in 'DW02_mult_A_width11_B_width60'
+  Building model 'DW02_mult_A_width11_B_width60' (csa)
+  Processing 'DW02_mult_A_width11_B_width60'
+  Building model 'DW01_add_width33' (rpl)
+  Processing 'DW01_add_width33'
+  Building model 'DW01_add_width33' (cla)
+  Processing 'DW01_add_width33'
+  Building model 'DW01_add_width64' (rpl)
+  Processing 'DW01_add_width64'
+  Building model 'DW01_add_width64' (cla)
+  Processing 'DW01_add_width64'
+  Allocating blocks in 'DW02_mult_A_width48_B_width7'
+  Building model 'DW01_add_width53' (cla)
+  Processing 'DW01_add_width53'
+  Building model 'DW02_mult_A_width48_B_width7' (csa)
+  Processing 'DW02_mult_A_width48_B_width7'
+  Allocating blocks in 'DW02_mult_A_width48_B_width17'
+  Building model 'DW01_add_width63' (cla)
+  Processing 'DW01_add_width63'
+  Building model 'DW02_mult_A_width48_B_width17' (csa)
+  Processing 'DW02_mult_A_width48_B_width17'
+  Building model 'DW01_add_width49' (rpl)
+  Processing 'DW01_add_width49'
+  Building model 'DW01_add_width49' (cla)
+  Processing 'DW01_add_width49'
+  Allocating blocks in 'DW02_mult_A_width32_B_width1'
+  Allocating blocks in 'DW01_absval_width32'
+  Building model 'DW01_inc_width32' (cla)
+  Processing 'DW01_inc_width32'
+  Building model 'DW01_absval_width32' (cla)
+  Processing 'DW01_absval_width32'
+  Allocating blocks in 'DW01_absval_width1'
+  Building model 'DW01_inc_width1' (cla)
+  Processing 'DW01_inc_width1'
+  Building model 'DW01_absval_width1' (cla)
+  Processing 'DW01_absval_width1'
+  Building model 'DW01_inc_width33' (cla)
+  Processing 'DW01_inc_width33'
+  Building model 'DW02_mult_A_width32_B_width1' (csa)
+  Processing 'DW02_mult_A_width32_B_width1'
+  Allocating blocks in 'DW02_mult_A_width64_B_width15'
+  Building model 'DW01_add_width77' (cla)
+  Processing 'DW01_add_width77'
+  Building model 'DW02_mult_A_width64_B_width15' (csa)
+  Processing 'DW02_mult_A_width64_B_width15'
+  Allocating blocks in 'DW02_mult_A_width48_B_width48'
+  Building model 'DW01_add_width94' (cla)
+  Processing 'DW01_add_width94'
+  Building model 'DW02_mult_A_width48_B_width48' (csa)
+  Processing 'DW02_mult_A_width48_B_width48'
+  Allocating blocks in 'DW02_mult_A_width11_B_width48'
+  Building model 'DW02_mult_A_width11_B_width48' (csa)
+  Processing 'DW02_mult_A_width11_B_width48'
+  Allocating blocks in 'DW02_mult_A_width48_B_width13'
+  Building model 'DW01_add_width59' (cla)
+  Processing 'DW01_add_width59'
+  Building model 'DW02_mult_A_width48_B_width13' (csa)
+  Processing 'DW02_mult_A_width48_B_width13'
+  Allocating blocks in 'DW02_mult_A_width32_B_width11'
+  Building model 'DW01_add_width41' (cla)
+  Processing 'DW01_add_width41'
+  Building model 'DW02_mult_A_width32_B_width11' (csa)
+  Processing 'DW02_mult_A_width32_B_width11'
+  Allocating blocks in 'DW02_mult_A_width64_B_width13'
+  Building model 'DW01_add_width75' (cla)
+  Processing 'DW01_add_width75'
+  Building model 'DW02_mult_A_width64_B_width13' (csa)
+  Processing 'DW02_mult_A_width64_B_width13'
+  Allocating blocks in 'DW02_mult_A_width15_B_width64'
+  Building model 'DW02_mult_A_width15_B_width64' (csa)
+  Processing 'DW02_mult_A_width15_B_width64'
+  Allocating blocks in 'DW02_mult_A_width48_B_width11'
+  Building model 'DW02_mult_A_width48_B_width11' (csa)
+  Processing 'DW02_mult_A_width48_B_width11'
+  Allocating blocks in 'DW02_mult_A_width13_B_width48'
+  Building model 'DW02_mult_A_width13_B_width48' (csa)
+  Processing 'DW02_mult_A_width13_B_width48'
+  Allocating blocks in 'DW02_mult_A_width11_B_width32'
+  Building model 'DW02_mult_A_width11_B_width32' (csa)
+  Processing 'DW02_mult_A_width11_B_width32'
+  Allocating blocks in 'DW02_mult_A_width13_B_width64'
+  Building model 'DW02_mult_A_width13_B_width64' (csa)
+  Processing 'DW02_mult_A_width13_B_width64'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW02_mult_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW02_mult_1'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_57'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_58'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_50'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_59'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_3'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_60'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_61'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_62'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_63'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_6'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_64'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_7'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_65'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_8'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_66'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_9'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_67'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_5'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_6'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_4'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW02_mult_0'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_absval_0'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_inc_0'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_3'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_inc_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW02_mult_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_absval_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_inc_2'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_4'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_inc_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_68'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_51'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_10'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_69'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_70'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_71'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_52'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_12'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_72'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_73'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_74'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_75'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_76'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_77'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_78'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_14'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_79'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_15'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_80'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_81'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_82'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_17'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_83'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_18'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_84'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_85'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_19'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_86'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_20'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_87'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_53'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_21'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_88'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_54'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_22'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_89'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_55'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW02_mult_23'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_90'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:09:02  104431.7    224.31   58071.5      23.3                          
+    0:09:02  104431.7    224.31   58071.5      23.3                          
+    0:09:03  105932.2    224.30   58068.9      23.3                          
+    0:09:05  107957.3    224.29   58054.1      23.0                          
+    0:09:10  108803.9    224.04   57991.6      21.3                          
+    0:09:24  111626.8    224.04   56890.7      17.2                          
+    0:12:02  115812.4    135.87   38396.8       0.0                          
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:12:02  115812.4    135.87   38396.8       0.0                          
+Information: The register 'fll_error_q16_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'fll_error_q16_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'fll_error_q16_reg[0]' is a constant and will be removed. (OPT-1206)
+    0:13:16  133606.9    132.89   38107.5       0.0 code_step_q_reg[32]/D    
+    0:13:18  133703.1    132.08   37797.3       0.0 code_step_q_reg[32]/D    
+    0:13:19  133697.2    132.06   37795.2       0.0 code_step_q_reg[32]/D    
+    0:13:21  133795.5    131.19   37452.1       0.0 code_step_q_reg[32]/D    
+    0:13:25  133895.5    130.37   37113.2       0.0 code_step_q_reg[32]/D    
+    0:13:27  133927.2    130.01   36998.6       0.0 code_step_q_reg[32]/D    
+    0:13:29  133923.8    129.90   36974.1       0.0 code_step_q_reg[32]/D    
+    0:13:31  133945.3    129.81   36898.9       0.0 code_step_q_reg[32]/D    
+    0:13:33  133959.5    129.50   36832.4       0.0 code_step_q_reg[32]/D    
+    0:13:34  133954.3    129.48   36826.0       0.0 code_step_q_reg[32]/D    
+    0:13:38  133993.3    129.18   36686.5       0.0 code_step_q_reg[32]/D    
+    0:13:40  133978.3    129.03   36654.3       0.0 code_step_q_reg[32]/D    
+    0:13:43  133983.4    128.77   36538.2       0.0 code_step_q_reg[32]/D    
+    0:13:47  133990.2    128.53   36471.0       0.0 code_step_q_reg[32]/D    
+    0:13:52  134025.8    128.16   36320.0       0.0 code_step_q_reg[32]/D    
+    0:13:55  134039.8    127.79   36202.2       0.0 code_step_q_reg[32]/D    
+    0:14:03  134094.0    126.91   35879.7       0.0 code_step_q_reg[32]/D    
+    0:14:13  134045.7    126.41   35740.3       0.0 code_step_q_reg[32]/D    
+    0:14:26  133982.2    125.54   35486.4       0.0 code_step_q_reg[32]/D    
+    0:14:45  133808.0    124.30   35215.4       0.0 code_step_q_reg[32]/D    
+    0:14:53  133782.5    124.06   35146.7       0.0 code_step_q_reg[32]/D    
+    0:14:59  133785.3    124.00   35116.3       0.0 code_step_q_reg[32]/D    
+    0:15:09  133759.7    123.98   35112.4       0.0 code_step_q_reg[32]/D    
+    0:15:16  133748.2    123.98   35111.6       0.0 code_step_q_reg[32]/D    
+    0:15:26  133705.7    123.98   35111.0       0.0 code_step_q_reg[32]/D    
+    0:15:31  133657.3    123.97   35110.5       0.0 code_step_q_reg[32]/D    
+    0:15:35  133642.2    123.97   35109.8       0.0 code_step_q_reg[32]/D    
+    0:15:41  133578.6    123.97   35109.3       0.0 code_step_q_reg[32]/D    
+    0:15:47  133523.8    123.97   35108.2       0.0 code_step_q_reg[32]/D    
+    0:15:48  133517.5    123.79   35016.3       0.0 code_step_q_reg[32]/D    
+    0:15:49  133520.6    123.71   35003.4       0.0 code_step_q_reg[32]/D    
+    0:15:51  133565.4    123.42   34894.2       0.0 code_step_q_reg[32]/D    
+    0:15:53  133602.3    123.13   34792.0       0.0 code_step_q_reg[32]/D    
+    0:15:55  133614.8    123.04   34760.2       0.0 code_step_q_reg[32]/D    
+    0:15:59  133663.2    122.65   34616.3       0.0 code_step_q_reg[32]/D    
+    0:16:01  133706.8    122.63   34559.2       0.0 code_step_q_reg[32]/D    
+    0:16:02  133692.8    122.59   34549.1       0.0 code_step_q_reg[32]/D    
+    0:16:03  133690.3    122.54   34538.0       0.0 code_step_q_reg[32]/D    
+    0:16:04  133687.4    122.53   34533.9       0.0 code_step_q_reg[32]/D    
+    0:16:05  133687.0    122.51   34530.2       0.0 code_step_q_reg[32]/D    
+    0:16:06  133682.3    122.48   34524.3       0.0 code_step_q_reg[32]/D    
+    0:16:08  133682.8    122.44   34512.8       0.0 code_step_q_reg[32]/D    
+    0:16:08  133679.7    122.41   34506.2       0.0 code_step_q_reg[32]/D    
+    0:16:12  133714.1    122.17   34406.7       0.0 code_step_q_reg[32]/D    
+    0:16:14  133712.3    122.12   34393.9       0.0 code_step_q_reg[32]/D    
+    0:16:17  133748.7    121.78   34263.5       0.0 code_step_q_reg[32]/D    
+    0:16:22  133734.5    121.48   34165.5       0.0 code_step_q_reg[32]/D    
+    0:16:37  133778.4    120.95   33990.3       0.0 code_step_q_reg[32]/D    
+    0:16:46  133738.9    120.62   33889.8       0.0 code_step_q_reg[32]/D    
+    0:16:52  133690.2    120.53   33884.4       0.0 code_step_q_reg[32]/D    
+    0:16:55  133698.3    120.41   33830.4       0.0 code_step_q_reg[32]/D    
+    0:17:04  133674.4    120.23   33807.8       0.0 code_step_q_reg[32]/D    
+    0:17:17  133679.4    120.10   33765.0       0.0 code_step_q_reg[32]/D    
+    0:17:24  133643.7    120.09   33764.3       0.0 code_step_q_reg[32]/D    
+    0:17:28  133633.6    120.08   33763.6       0.0 code_step_q_reg[32]/D    
+    0:17:38  133600.1    120.08   33762.7       0.0 code_step_q_reg[32]/D    
+    0:17:45  133584.3    120.08   33762.4       0.0 code_step_q_reg[32]/D    
+    0:17:53  133572.9    120.05   33755.2       0.0 code_step_q_reg[32]/D    
+    0:17:55  133583.7    120.02   33741.7       0.0 code_step_q_reg[32]/D    
+    0:17:58  133589.4    119.96   33723.6       0.0 code_step_q_reg[32]/D    
+    0:17:58  133588.2    119.96   33722.8       0.0 code_step_q_reg[32]/D    
+    0:18:00  133593.8    119.95   33717.4       0.0 code_step_q_reg[32]/D    
+    0:18:02  133624.3    119.89   33657.2       0.0 code_step_q_reg[32]/D    
+    0:18:05  133637.7    119.74   33619.5       0.0 code_step_q_reg[32]/D    
+    0:18:06  133641.5    119.73   33618.1       0.0 code_step_q_reg[32]/D    
+    0:18:06  133646.6    119.72   33615.6       0.0 code_step_q_reg[32]/D    
+    0:18:07  133651.5    119.70   33609.4       0.0 code_step_q_reg[32]/D    
+    0:18:08  133644.2    119.67   33601.9       0.0 code_step_q_reg[32]/D    
+    0:18:09  133663.6    119.63   33590.7       0.0 code_step_q_reg[32]/D    
+    0:18:09  133662.7    119.61   33587.0       0.0 code_step_q_reg[32]/D    
+    0:18:11  133667.5    119.59   33581.6       0.0 code_step_q_reg[32]/D    
+    0:18:11  133669.2    119.58   33579.1       0.0 code_step_q_reg[32]/D    
+    0:18:12  133670.0    119.57   33578.0       0.0 code_step_q_reg[32]/D    
+    0:18:12  133671.0    119.57   33575.7       0.0 code_step_q_reg[32]/D    
+    0:18:13  133670.8    119.56   33571.0       0.0 code_step_q_reg[32]/D    
+    0:18:15  133683.4    119.52   33550.4       0.0 code_step_q_reg[32]/D    
+    0:18:20  133747.4    119.02   33371.9       0.0 code_step_q_reg[32]/D    
+    0:18:23  133814.8    118.68   33234.8       0.0 code_step_q_reg[32]/D    
+    0:18:27  133841.0    118.48   33140.5       0.0 code_step_q_reg[32]/D    
+    0:18:35  133871.8    118.24   33087.5       0.0 code_step_q_reg[32]/D    
+    0:18:39  133869.1    118.17   33081.1       0.0 code_step_q_reg[32]/D    
+    0:18:46  133866.7    118.00   33012.4       0.0 code_step_q_reg[32]/D    
+    0:18:51  133839.2    117.95   33005.8       0.0 code_step_q_reg[32]/D    
+    0:18:55  133794.7    117.89   32997.1       0.0 code_step_q_reg[32]/D    
+    0:19:06  133826.6    117.75   32939.8       0.0 code_step_q_reg[32]/D    
+    0:19:09  133824.7    117.71   32935.2       0.0 code_step_q_reg[32]/D    
+    0:19:12  133816.9    117.70   32934.2       0.0 code_step_q_reg[32]/D    
+    0:19:16  133821.8    117.69   32933.0       0.0 code_step_q_reg[32]/D    
+    0:19:16  133821.8    117.68   32930.7       0.0 code_step_q_reg[32]/D    
+    0:19:19  133830.3    117.67   32928.0       0.0 code_step_q_reg[32]/D    
+    0:19:21  133847.2    117.56   32898.9       0.0 code_step_q_reg[32]/D    
+    0:19:21  133846.9    117.53   32893.0       0.0 code_step_q_reg[32]/D    
+    0:19:22  133845.9    117.52   32889.1       0.0 code_step_q_reg[32]/D    
+    0:19:23  133856.1    117.49   32881.2       0.0 code_step_q_reg[32]/D    
+    0:19:24  133865.4    117.49   32864.5       0.0 code_step_q_reg[32]/D    
+    0:19:26  133858.9    117.47   32860.3       0.0 code_step_q_reg[32]/D    
+    0:19:27  133865.4    117.46   32858.6       0.0 code_step_q_reg[32]/D    
+    0:19:29  133900.7    117.42   32847.3       0.0 code_step_q_reg[32]/D    
+    0:19:30  133902.8    117.41   32846.2       0.0 code_step_q_reg[32]/D    
+    0:19:32  133902.7    117.39   32840.8       0.0 code_step_q_reg[32]/D    
+    0:19:33  133896.0    117.36   32833.1       0.0 code_step_q_reg[32]/D    
+    0:19:35  133893.8    117.30   32807.0       0.0 code_step_q_reg[32]/D    
+    0:19:37  133894.5    117.28   32802.7       0.0 code_step_q_reg[32]/D    
+    0:19:40  133922.6    117.16   32755.4       0.0 code_step_q_reg[32]/D    
+    0:19:43  133963.8    116.94   32655.2       0.0 code_step_q_reg[32]/D    
+    0:19:44  133963.3    116.93   32652.4       0.0 code_step_q_reg[32]/D    
+    0:19:47  133967.2    116.88   32639.3       0.0 code_step_q_reg[32]/D    
+    0:19:52  133959.7    116.80   32626.3       0.0 code_step_q_reg[32]/D    
+    0:20:00  133943.2    116.70   32581.3       0.0 code_step_q_reg[32]/D    
+    0:20:05  133936.1    116.64   32570.5       0.0 code_step_q_reg[32]/D    
+    0:20:06  133934.7    116.64   32570.0       0.0 code_step_q_reg[32]/D    
+    0:20:07  133943.7    116.63   32567.2       0.0 code_step_q_reg[32]/D    
+    0:20:10  133926.7    116.59   32563.6       0.0 code_step_q_reg[32]/D    
+    0:20:13  133926.2    116.54   32555.5       0.0 code_step_q_reg[32]/D    
+    0:20:16  133934.1    116.50   32543.8       0.0 code_step_q_reg[32]/D    
+    0:20:17  133945.4    116.49   32538.0       0.0 code_step_q_reg[32]/D    
+    0:20:26  133932.3    116.46   32494.6       0.0 code_step_q_reg[32]/D    
+    0:20:36  133907.4    116.46   32494.1       0.0 code_step_q_reg[32]/D    
+    0:20:44  133899.2    116.46   32494.0       0.0 code_step_q_reg[32]/D    
+    0:20:50  133885.0    116.46   32493.7       0.0 code_step_q_reg[32]/D    
+    0:20:54  133867.7    116.46   32493.6       0.0 code_step_q_reg[32]/D    
+    0:20:57  133872.5    116.44   32489.6       0.0 code_step_q_reg[32]/D    
+    0:20:59  133889.0    116.32   32460.5       0.0 code_step_q_reg[32]/D    
+    0:21:00  133899.2    116.31   32455.7       0.0 code_step_q_reg[32]/D    
+    0:21:01  133890.6    116.30   32454.0       0.0 code_step_q_reg[32]/D    
+    0:21:02  133892.4    116.28   32449.5       0.0 code_step_q_reg[32]/D    
+    0:21:03  133897.7    116.27   32447.3       0.0 code_step_q_reg[32]/D    
+    0:21:04  133906.5    116.17   32421.2       0.0 code_step_q_reg[32]/D    
+    0:21:05  133919.2    116.17   32418.2       0.0 code_step_q_reg[32]/D    
+    0:21:06  133917.7    116.16   32417.8       0.0 code_step_q_reg[32]/D    
+    0:21:10  133938.0    116.09   32387.1       0.0 code_step_q_reg[32]/D    
+    0:21:10  133941.4    116.09   32385.9       0.0 code_step_q_reg[32]/D    
+    0:21:11  133942.0    116.08   32384.8       0.0 code_step_q_reg[32]/D    
+    0:21:12  133946.7    116.08   32383.6       0.0 code_step_q_reg[32]/D    
+    0:21:13  133947.8    116.07   32382.3       0.0 code_step_q_reg[32]/D    
+    0:21:14  133950.6    116.07   32381.1       0.0 code_step_q_reg[32]/D    
+    0:21:15  133955.6    116.06   32379.0       0.0 code_step_q_reg[32]/D    
+    0:21:16  133965.2    116.04   32375.1       0.0 code_step_q_reg[32]/D    
+    0:21:17  133955.9    116.04   32373.5       0.0 code_step_q_reg[32]/D    
+    0:21:17  133958.7    116.03   32372.3       0.0 code_step_q_reg[32]/D    
+    0:21:19  133964.0    116.02   32370.5       0.0 code_step_q_reg[32]/D    
+    0:21:20  133969.8    116.00   32342.0       0.0 code_step_q_reg[32]/D    
+    0:21:22  134000.6    115.82   32279.5       0.0 code_step_q_reg[32]/D    
+    0:21:24  133998.9    115.80   32273.0       0.0 code_step_q_reg[32]/D    
+    0:21:26  133999.9    115.79   32271.0       0.0 code_step_q_reg[32]/D    
+    0:21:27  134000.1    115.77   32270.8       0.0 code_step_q_reg[32]/D    
+    0:21:29  134003.3    115.73   32261.3       0.0 code_step_q_reg[32]/D    
+    0:21:33  134012.6    115.70   32251.8       0.0 code_step_q_reg[32]/D    
+    0:21:38  134005.5    115.66   32247.6       0.0 code_step_q_reg[32]/D    
+    0:26:54  134006.7    115.66   32247.6       0.0 code_step_q_reg[32]/D    
+    0:26:56  133972.8    115.65   32243.4       0.0 code_step_q_reg[32]/D    
+    0:26:59  133973.0    115.65   32243.2       0.0 code_step_q_reg[32]/D    
+    0:27:03  133967.5    115.64   32242.2       0.0 code_step_q_reg[32]/D    
+    0:27:06  133921.0    115.61   32235.6       0.0 code_step_q_reg[32]/D    
+    0:27:09  133923.6    115.57   32220.3       0.0 code_step_q_reg[32]/D    
+    0:27:12  133932.6    115.53   32202.8       0.0 code_step_q_reg[32]/D    
+    0:27:16  133933.3    115.52   32198.4       0.0 code_step_q_reg[32]/D    
+    0:27:20  133922.8    115.51   32195.4       0.0 code_step_q_reg[32]/D    
+    0:27:23  133920.2    115.50   32193.1       0.0 code_step_q_reg[32]/D    
+    0:27:25  133906.4    115.44   32170.2       0.0 code_step_q_reg[32]/D    
+    0:27:27  133897.6    115.38   32147.2       0.0 code_step_q_reg[32]/D    
+    0:27:28  133899.9    115.36   32142.8       0.0 code_step_q_reg[32]/D    
+    0:27:31  133877.0    115.31   32126.6       0.0 code_step_q_reg[32]/D    
+    0:27:33  133855.1    115.28   32117.8       0.0 code_step_q_reg[32]/D    
+    0:27:36  133854.0    115.27   32112.6       0.0 code_step_q_reg[32]/D    
+    0:27:54  133845.6    115.25   32105.2       0.0 code_step_q_reg[32]/D    
+    0:27:57  133843.2    115.25   32103.2       0.0 code_step_q_reg[32]/D    
+    0:28:11  133843.5    115.22   32093.2       0.0 code_step_q_reg[32]/D    
+    0:28:21  133840.1    115.22   32093.2       0.0 code_step_q_reg[32]/D    
+    0:28:33  133840.7    115.22   32093.2       0.0 code_step_q_reg[32]/D    
+    0:28:42  133840.5    115.21   32093.2       0.0 code_step_q_reg[32]/D    
+    0:28:46  133841.6    115.21   32090.7       0.0 code_step_q_reg[31]/D    
+    0:28:49  133839.6    115.19   32085.2       0.0 code_step_q_reg[31]/D    
+    0:28:53  133819.6    115.19   32084.0       0.0 code_step_q_reg[31]/D    
+    0:28:57  133819.9    115.18   32079.7       0.0 code_step_q_reg[31]/D    
+    0:29:01  133822.7    115.17   32078.0       0.0 code_step_q_reg[31]/D    
+    0:29:06  133827.0    115.15   32073.5       0.0 code_step_q_reg[31]/D    
+    0:29:10  133830.1    115.14   32069.1       0.0 code_step_q_reg[31]/D    
+    0:29:14  133834.3    115.12   32065.4       0.0 code_step_q_reg[31]/D    
+    0:29:18  133832.3    115.10   32062.0       0.0 code_step_q_reg[31]/D    
+    0:29:21  133832.0    115.07   32057.4       0.0 code_step_q_reg[31]/D    
+    0:29:25  133833.7    115.05   32054.7       0.0 code_step_q_reg[31]/D    
+    0:29:28  133833.0    115.05   32054.1       0.0 code_step_q_reg[31]/D    
+    0:29:31  133831.4    115.02   32049.4       0.0 code_step_q_reg[31]/D    
+    0:29:48  133833.8    115.01   32047.4       0.0 code_step_q_reg[32]/D    
+    0:30:05  133831.3    115.01   32047.3       0.0 code_step_q_reg[32]/D    
+    0:30:21  133831.4    115.01   32047.3       0.0 code_step_q_reg[32]/D    
+    0:34:00  133831.2    115.01   32047.3       0.0 code_step_q_reg[32]/D    
+    0:34:25  133831.2    115.01   32047.3       0.0 code_step_q_reg[32]/D    
+
+Received Signal 15 from: PID=21053 (UID=502)
+
+
+Process terminated by kill.
+

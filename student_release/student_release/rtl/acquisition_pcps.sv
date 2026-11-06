@@ -35,8 +35,8 @@ module acquisition_pcps #(
     logic [15:0] capture_count;
     logic [12:0] address;
     logic [1:0] window_number;
+    `include "fft_twiddle_rom.svh"
     logic signed [31:0] code_r[0:4095],code_i[0:4095],signal_r[0:4095],signal_i[0:4095];
-    logic signed [31:0] cosine[0:4095],sine[0:4095];
     logic [63:0] accumulated_power[0:4095];
     logic [5:0] prn;
     logic signed [31:0] doppler,best_doppler;
@@ -60,10 +60,10 @@ module acquisition_pcps #(
         fft_inverse=state==IFFT_START;
         buffer_address=14'(int'(window_number)*4092+int'(address));
         twiddle_address=mixer_phase[31:20];
-        rr=64'($signed(base_r[buffer_address]))*64'($signed(cosine[twiddle_address]));
-        ii=64'($signed(base_i[buffer_address]))*64'($signed(sine[twiddle_address]));
-        ri=64'($signed(base_r[buffer_address]))*64'($signed(sine[twiddle_address]));
-        ir=64'($signed(base_i[buffer_address]))*64'($signed(cosine[twiddle_address]));
+        rr=64'($signed(base_r[buffer_address]))*64'($signed(fft_twiddle_cos(twiddle_address)));
+        ii=64'($signed(base_i[buffer_address]))*64'($signed(fft_twiddle_sin(twiddle_address)));
+        ri=64'($signed(base_r[buffer_address]))*64'($signed(fft_twiddle_sin(twiddle_address)));
+        ir=64'($signed(base_i[buffer_address]))*64'($signed(fft_twiddle_cos(twiddle_address)));
         // Four extra fractional bits prevent /4096 FFT noise-bin truncation.
         mixed_r=((rr+ii)*2048) >>> 30;mixed_i=((ir-ri)*2048) >>> 30;
         load_r=0;load_i=0;
@@ -183,5 +183,4 @@ module acquisition_pcps #(
             endcase
         end
     end
-    initial begin $readmemh("rom/fft_cos_q30.mem",cosine);$readmemh("rom/fft_sin_q30.mem",sine);end
 endmodule
