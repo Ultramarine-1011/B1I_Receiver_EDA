@@ -1,0 +1,192 @@
+DATE 2026-11-06 13:28:12 +0800
+HOST IC
+USER 7901_15
+UNAME Linux IC 2.6.32-573.el6.x86_64 #1 SMP Wed Jul 1 18:23:37 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+=== SSHD ===
+root       2435      1  0 13:23 ?        00:00:00 /usr/sbin/sshd
+root       4149   2435  0 13:27 ?        00:00:00 sshd: 7901_15 [priv]
+7901_15    4154   4149  0 13:28 ?        00:00:00 sshd: 7901_15@notty
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      
+tcp        0      0 :::22                       :::*                        LISTEN      
+=== WHICH ===
+WHICH vcs /opt/Synopsys/VCS2014/bin/vcs
+-rwxr-xr-x. 1 500 500 831965 Feb 28  2014 /opt/Synopsys/VCS2014/bin/vcs
+WHICH dc_shell /opt/Synopsys/Synplify2015/bin/dc_shell
+lrwxrwxrwx. 1 500 500 10 Apr  1  2017 /opt/Synopsys/Synplify2015/bin/dc_shell -> snps_shell
+WHICH pt_shell /opt/Synopsys/PrimeTime2015/bin/pt_shell
+-rwxr-xr-x. 1 500 500 12375 May 19  2015 /opt/Synopsys/PrimeTime2015/bin/pt_shell
+WHICH icc_shell /opt/Synopsys/ICC2016/bin/icc_shell
+lrwxrwxrwx. 1 500 500 10 Apr  1  2017 /opt/Synopsys/ICC2016/bin/icc_shell -> snps_shell
+WHICH icc2_shell MISSING
+WHICH vcd2saif /opt/Synopsys/ICC2016/bin/vcd2saif
+lrwxrwxrwx. 1 500 500 10 Apr  1  2017 /opt/Synopsys/ICC2016/bin/vcd2saif -> snps_shell
+WHICH pw_shell MISSING
+WHICH lc_shell MISSING
+=== DC_VERSION ===
+
+dc_shell version    -  K-2015.06
+dc_shell build date -  May 28, 2015
+Site Identification Number: 000
+Local Administrator: 
+Contact: Top@(none)
+DC_VERSION_EXIT 1
+=== VCS_FILE ===
+-rwxr-xr-x. 1 500 500 831965 Feb 28  2014 /opt/Synopsys/VCS2014/bin/vcs
+vcs script version : I-2014.03
+machine name = IC 
+machine type = linux 
+machine os = Linux 2.6.32-573.el6.x86_64  
+The FLEXlm host ID of this machine is "a4db30357557"
+Compiler version = VCS-MX I-2014.03
+VCS Build Date = Feb 27 2014 20:47:09
+If you need to renew your license, please email this information to your
+Account Manager. To obtain contact information for your Account Manager
+please email pass@synopsys.com
+VCS_ID_EXIT 0
+=== VCD2SAIF ===
+VCD to SAIF translator version L-2016.03-SP1 Synopsys, Inc.
+Usage: vcd2saif -help
+       vcd2saif -input vcd_file [-pipe command] -output bsaif [-32|-64]
+                [[-instance path] ...]
+                [-format lang] [-testbench lang]
+                [-verilog_instance path] [-vhdl_instance path]
+                [-no_div] [-keep_leading_backslash]
+                [[-time start stop] ...]
+
+  -help           Display this usage message.
+  -input vcd_file Specify vcd_file as the input VCD file. When the input
+                  file has extension .gz or .Z, gunzip or uncompress is
+                  invoked. When the extension is .vpd or .fsdb, vpd2vcd or
+                  fsdb2vcd is invoked.
+  -pipe command   The -pipe command option specifies a shell command which
+                  is used to generate the VCD file file_name. This option
+                  will invoke the command and directly pipe the output
+                  VCD file to vcd2saif.
+  -output bsaif   Specify bsaif as the output backward SAIF file. When the
+                  file has extension .gz, the output file will be in gzip
+                  format.
+  -32|-64          Specify to use either 32 bit or 64 bit executable.
+  -instance path  In general path is the absolute path of the design instance
+                  as instantiated in your testbench.
+                  For gate or RTL VCD files, all signals of the instance
+                  are included in the backward SAIF file. When no instances
+                  and no forward SAIF files are specified, all signals in
+                  the VCD file are included.
+  -format lang    Specify lang as the HDL language used for the
+                  testbench and simulated designs.
+                  lang can be "Verilog" or "VHDL", if omitted
+                  the default is assumed to be "Verilog".
+  -top path       Specify path as the top level path in the forward SAIF
+                  file; if omitted, the default is assumed to be "top".
+  -no_div         When parsing the instance paths (in the -top, -instance,
+                  etc., arguments) assume that the hierarchical divider
+                  is a white space. When calling vcd2saif from your command
+                  shell with the -no_div option, path name arguments need
+                  to be enclosed in double quotes.
+  -time           Specify the time window for SAIF generation. Multiple
+                  time windows can be specified
+
+The following arguments are applicable only to VCD files generated
+using mixed-language simulation:
+  -testbench lang Specify lang as the HDL language used for the
+                  testbench. lang can be "Verilog" or "VHDL", if omitted
+                  the default is assumed to be "Verilog".
+  -verilog_instance path    Specify that the given instance path is a
+                  Verilog language design.
+  -vhdl_instance path       Specify that the given instance path is a
+                  VHDL language design.
+VCD2SAIF_HELP_EXIT 1
+=== LICENSE_PROCS ===
+root       2702      1  0 13:23 ?        00:00:00 /opt/Synopsys/SCL11.11/linux64/bin/lmgrd -c /opt/Synopsys/License/License.dat
+snpslmd child of lmgrd is running; server arguments omitted
+LICENSE_DAT_READABLE
+=== DC_QUIT ===
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+puts "DC_SHELL_READY"
+DC_SHELL_READY
+exit
+
+Memory usage for main task 46 Mbytes.
+Memory usage for this session 46 Mbytes.
+CPU usage for this session 1 seconds ( 0.00 hours ).
+
+Thank you...
+DC_QUIT_EXIT 0
+=== TSMC_TOP ===
+TSMC_ROOT_OK /home/share/libs/tsmc28
+total 1268
+drwxr-xr-x.  7 root root    4096 Nov  2 17:25 .
+drwxr-xr-x.  3 root root    4096 Nov  2 12:26 ..
+-rw-r--r--.  1 root root 1262510 Nov  1 22:46 deployment_manifest.json
+drwxr-xr-x.  7 root root    4096 Nov  1 22:44 icc
+drwxr-xr-x.  4 root root    4096 Nov  1 22:44 logic
+drwxr-xr-x. 18 root root    4096 Nov  2 17:25 pad
+-rw-r--r--.  1 root root       0 Nov  2 17:24 .pad-install.lock
+drwxr-xr-x.  2 root root    4096 Nov  2 09:34 PDF文档
+-rw-r--r--.  1 root root    2352 Nov  1 22:46 README.txt
+drwxr-xr-x.  6 root root    4096 Nov  1 22:45 verification
+=== TSMC_DEPTH2 ===
+/home/share/libs/tsmc28
+/home/share/libs/tsmc28/PDF文档
+/home/share/libs/tsmc28/pad
+/home/share/libs/tsmc28/pad/verification_spi
+/home/share/libs/tsmc28/pad/bondpad
+/home/share/libs/tsmc28/pad/icc_sef_9lm
+/home/share/libs/tsmc28/pad/crosstalk_ctc
+/home/share/libs/tsmc28/pad/cdk_9lm
+/home/share/libs/tsmc28/pad/signal_integrity_ibs
+/home/share/libs/tsmc28/pad/simulation_vlg
+/home/share/libs/tsmc28/pad/general_application_notes
+/home/share/libs/tsmc28/pad/parasitic_lpe
+/home/share/libs/tsmc28/pad/documentation
+/home/share/libs/tsmc28/pad/verification_gds_9lm
+/home/share/libs/tsmc28/pad/icc_apt_9lm
+/home/share/libs/tsmc28/pad/icc_apf_9lm
+/home/share/libs/tsmc28/pad/timing_nldm
+/home/share/libs/tsmc28/pad/rln
+/home/share/libs/tsmc28/pad/dft_mdt
+/home/share/libs/tsmc28/logic
+/home/share/libs/tsmc28/logic/selected_db
+/home/share/libs/tsmc28/logic/nldm
+/home/share/libs/tsmc28/verification
+/home/share/libs/tsmc28/verification/spi
+/home/share/libs/tsmc28/verification/drc
+/home/share/libs/tsmc28/verification/lvs
+/home/share/libs/tsmc28/verification/gds
+/home/share/libs/tsmc28/icc
+/home/share/libs/tsmc28/icc/sef
+/home/share/libs/tsmc28/icc/technology
+/home/share/libs/tsmc28/icc/apt
+/home/share/libs/tsmc28/icc/apf
+/home/share/libs/tsmc28/icc/tluplus
+=== NAME_HITS ===
+/home/share/libs/tsmc28/pad
+/home/share/libs/tsmc28/pad/bondpad
+/home/share/libs/tsmc28/pad/README_pad.txt
+/home/share/libs/tsmc28/logic/selected_db
+/home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140ssg0p81v125c.db
+/home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140ffg0p99vm40c.db
+/home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db
+/home/share/libs/tsmc28/.pad-install.lock
+NAME_HITS_DONE
+PRECHECK_STAGE1_DONE

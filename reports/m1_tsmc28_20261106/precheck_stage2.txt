@@ -1,0 +1,130 @@
+DATE 2026-11-06 13:29:58 +0800
+=== README ===
+2352 /home/share/libs/tsmc28/README.txt
+1331 /home/share/libs/tsmc28/pad/README_pad.txt
+3683 total
+----- README.txt -----
+TSMC28 DC ICC Calibre library copies
+Account: user002
+Destination: /home/user002/Public/lib2
+Status: complete
+All 13 original sources verified unchanged by SHA-256 and metadata.
+Copied archives deleted only after successful extraction and verification.
+
+Extracted roots:
+/home/user002/Public/lib2/logic/nldm/extracted
+/home/user002/Public/lib2/icc/apf/extracted
+/home/user002/Public/lib2/icc/apt/extracted
+/home/user002/Public/lib2/icc/sef/extracted
+/home/user002/Public/lib2/verification/gds/extracted
+/home/user002/Public/lib2/verification/spi/extracted
+/home/user002/Public/lib2/icc/technology/extracted
+/home/user002/Public/lib2/icc/technology/extracted/N28_PRTF_Syn_v1d5a.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_cbest.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_cbest_T.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_cworst.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_cworst_T.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_rcbest.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_rcbest_T.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_rcworst.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_rcworst_T.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/RC_TLUplus_cln28hpc+_1p09m+ut-alrdl_4x2y2r_typical.tar.gz_unpacked
+/home/user002/Public/lib2/icc/tluplus/extracted/DOC_TSMC.zip_unpacked
+/home/user002/Public/lib2/verification/drc/extracted
+/home/user002/Public/lib2/verification/drc/extracted/DRC_Calibre_28nm_HP_1P12M_002.18a.tar.gz_unpacked
+/home/user002/Public/lib2/verification/lvs/extracted
+/home/user002/Public/lib2/verification/lvs/extracted/DFM_LVS_RC_CALIBRE_N28HP_1p13m_ALRDL.v1.0_3o_all.tar.gz_unpacked
+/home/user002/Public/lib2/verification/lvs/extracted/DFM_LVS_RC_CALIBRE_N28HP_1p13m_ALRDL.v1.0_3o_all.tar.gz_unpacked/DFM_LVS_RC_CALIBRE_N28HP_1p13m_ALRDL.v1.0_3o.tar.gz_unpacked
+----- README_pad.txt -----
+PAD / I/O libraries for the TSMC28 teaching installation
+I/O: TPHN28HPCPGV18 170A, 0.9V core / 1.8V I/O, physical views 110A mt_2/9lm.
+Bond pads: TPBN28V CUP 9M_4X2Y2R APF 140B / APT and GDS 140A.
+Optional alternatives: TPBN28V MTRDL 9M_R and APRDL flip-chip views.
+Install root: /home/share/libs/tsmc28/pad
+Do not combine alternative bond-pad libraries with duplicate cell names in one reference list.
+The 14 I/O kits match the TPHN28HPCPGV18 170A release-note dependency table.
+All 21 selected archives were checked member-by-member against the extracted files.
+Celtic ctc is a crosstalk/noise database, not a clock-analysis library.
+File integrity verification is not an ICC integration or DRC/LVS signoff result.
+The supplied source tree has no separate TPBN28V release-note, databook, LEF or SPICE kit.
+Consult the included I/O release note and General I/O application note; do not assume missing
+Bond Pad documentation or project-specific requirements have been satisfied.
+The optional MTRDL source archives contain several metal stacks despite their filename;
+all vendor members are preserved. For the 9M_R option choose the actual 9m/9M_R subdirectory.
+I/O SPICE and Verilog contain 109 cells; 14 physical-only corner/filler cells have no such models
+in the original vendor kits. NLDM/LEF/ICC FRAM cover all 123 I/O cells.
+=== SELECTED_DB_SIZES ===
+total 58M
+-rwxr-xr-x. 1 root root 20M Nov  1 22:44 tcbn28hpcplusbwp40p140ffg0p99vm40c.db
+-rwxr-xr-x. 1 root root 20M Nov  1 22:44 tcbn28hpcplusbwp40p140ssg0p81v125c.db
+-rwxr-xr-x. 1 root root 20M Nov  1 22:44 tcbn28hpcplusbwp40p140tt0p9v25c.db
+=== LOGIC_NLDM ===
+/home/share/libs/tsmc28/logic/nldm
+/home/share/libs/tsmc28/logic/nldm/extracted
+/home/share/libs/tsmc28/logic/nldm/extracted/TSMCHOME
+/home/share/libs/tsmc28/logic/nldm/extracted/TSMCHOME/digital
+=== PAD_TIMING ===
+/home/share/libs/tsmc28/pad/timing_nldm
+/home/share/libs/tsmc28/pad/timing_nldm/TSMCHOME
+/home/share/libs/tsmc28/pad/timing_nldm/TSMCHOME/digital
+/home/share/libs/tsmc28/pad/timing_nldm/TSMCHOME/digital/Front_End
+=== PAD_SIM ===
+/home/share/libs/tsmc28/pad/simulation_vlg
+/home/share/libs/tsmc28/pad/simulation_vlg/TSMCHOME
+/home/share/libs/tsmc28/pad/simulation_vlg/TSMCHOME/digital
+/home/share/libs/tsmc28/pad/simulation_vlg/TSMCHOME/digital/Front_End
+=== VERILOG_COUNT ===
+2
+=== VERILOG_DIRS ===
+      2 /home/share/libs/tsmc28/pad/simulation_vlg/TSMCHOME/digital/Front_End/verilog/tphn28hpcpgv18_110a
+=== SDF_COUNT ===
+0
+=== LIB_COUNT ===
+105
+=== DB_COUNT ===
+108
+=== SRAM_HITS ===
+SRAM_FIND_DONE
+=== MANIFEST_HITS ===
+498:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v0p88v0c.lib",
+508:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v0p88v125c.lib",
+518:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v0p88vm40c.lib",
+528:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v0p99v0c.lib",
+538:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v0p99v125c.lib",
+548:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v0p99vm40c.lib",
+558:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v1p05v0c.lib",
+568:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v1p05v125c.lib",
+578:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p88v1p05vm40c.lib",
+588:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v0p88v0c.lib",
+598:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v0p88v125c.lib",
+608:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v0p88vm40c.lib",
+618:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v0p99v0c.lib",
+628:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v0p99v125c.lib",
+638:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v0p99vm40c.lib",
+648:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v1p05v0c.lib",
+658:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v1p05v125c.lib",
+668:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg0p99v1p05vm40c.lib",
+678:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v0p88v0c.lib",
+688:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v0p88v125c.lib",
+698:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v0p88vm40c.lib",
+708:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v0p99v0c.lib",
+718:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v0p99v125c.lib",
+728:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v0p99vm40c.lib",
+738:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v1p05v0c.lib",
+748:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v1p05v125c.lib",
+758:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ffg1p05v1p05vm40c.lib",
+768:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p72v0c.lib",
+778:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p72v125c.lib",
+788:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p72vm40c.lib",
+798:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p81v0c.lib",
+808:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p81v125c.lib",
+818:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p81vm40c.lib",
+828:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p9v0c.lib",
+838:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p9v125c.lib",
+848:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p72v0p9vm40c.lib",
+858:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p81v0p72v0c.lib",
+868:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p81v0p72v125c.lib",
+878:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p81v0p72vm40c.lib",
+888:      "path": "logic/nldm/extracted/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp40p140_180a/tcbn28hpcplusbwp40p140ssg0p81v0p81v0c.lib",
+STAGE2_SCAN_DONE

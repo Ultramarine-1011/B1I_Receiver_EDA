@@ -1,6 +1,6 @@
 # 综合准备与架构风险
 
-2026-11-02新增六通道核心`bds_bb_6ch_core`及独立配置/串行导航位接口，功能验证见[六通道报告](../reports/six_channel_20261102/FINAL_REPORT.md)，接口和采样预算见[SIX_CHANNEL_DESIGN](SIX_CHANNEL_DESIGN.md)。`261102`已提供TSMC28标准单元库路径；下面的“工艺未定”属于历史阶段条件。后续实际PAD、clk/IO/复位预算和存储映射仍须落实，未执行本次TSMC28综合或SDF后仿。
+2026-11-02新增六通道核心`bds_bb_6ch_core`及独立配置/串行导航位接口，功能验证见[六通道报告](../reports/six_channel_20261102/FINAL_REPORT.md)，接口和采样预算见[SIX_CHANNEL_DESIGN](SIX_CHANNEL_DESIGN.md)。2026-11-06 M1 已在虚拟机核对 TSMC28 标准单元三角和 TPHN28 PAD，见[M1报告](../reports/m1_tsmc28_20261106/REPORT.md)。DC K-2015.06 会忽略 `initial`（VER-281），`$readmemh` 不能作为旋转因子的综合加载方式。该库没有 SRAM 宏。下面的“工艺未定”只保留为更早阶段的历史措辞。
 
 PRN 模块已完成 VCS 回归和 SAED90nm 的实验性 DC 综合，条件及结果见 [H0_VM_SMOKE](H0_VM_SMOKE.md)。完整接收机综合、ICC、DRC/LVS 和最终 STA 为 NOT_RUN；下表是源码风险分析。
 

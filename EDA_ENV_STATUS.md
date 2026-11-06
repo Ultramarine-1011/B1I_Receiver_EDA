@@ -283,3 +283,9 @@ G0–G7当前可执行评价均在既有本机WSL2 Ubuntu/Verilator及Windows bu
 - `bash scripts/h0_vm_smoke.sh` 于 2026-10-16 15:16 +0800 退出 0。VCS I-2014.03 实际编译并仿真当前 PRN，退出码 0，日志含 `B1I_PRN_REGRESSION_PASS`。
 - Design Compiler K-2015.06 实际完成 `b1i_prn_gen` 的 analyze/elaborate/link/compile，目标库 `saed90nm_typ`。实验时钟 10 ns。这是工具可运行的证据，不是签核，也没有运行 ICC 或 PrimeTime。
 - 虚拟机未安装 `git`。提交不在虚拟机内执行，避免用远端版本覆盖解压工程。
+
+# 2026-11-06 M1 TSMC28 预检追加
+
+- 同一台 `IC` / `7901_15@192.168.159.128`。`free -m`：内存 1991 MB，可用约 1603 MB，swap 0。第一次 SSH 在 ARP 出现客体地址前超时；随后 ping 与 SSH 退出 0。未改网卡、bashrc、许可证或系统安装。
+- `vcs -ID` 退出 0，版本 I-2014.03。`dc_shell` K-2015.06：`-version` 退出 1 但打印版本，空脚本退出 0。PATH 上的 `vcd2saif` 为 ICC L-2016.03-SP1，合法小 VCD 转换退出 0。`report_power` 可执行，无设计时为 UID-4。
+- `/home/share/libs/tsmc28` 含 `tcbn28hpcplusbwp40p140` 的 TT/SS/FF `.db/.lib`，以及 `tphn28hpcpgv18` PAD 时序库和两份 Verilog。标准单元 Verilog 与 SRAM 宏未找到。16 项 `$readmemh` 探针被 VER-281 忽略。细节只维护在 `reports/m1_tsmc28_20261106/REPORT.md`。

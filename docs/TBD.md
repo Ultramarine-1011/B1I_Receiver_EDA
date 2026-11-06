@@ -2,11 +2,17 @@
 
 当前状态只见[STATUS.md](../STATUS.md)，任务范围见GOAL.md。历史未决记录保留[archive/TBD_2026-09-28.md](archive/TBD_2026-09-28.md)。
 
-## 六通道与TSMC28（2026-11-02）
+## 六通道与TSMC28（2026-11-06 预检后）
+
+- 虚拟机已核对 `/home/share/libs/tsmc28`：标准单元 TT/SS/FF `.db/.lib`、TPHN28HPCPGV18 PAD 的 `.db/.lib` 和两份 Verilog 都在。没有 SRAM/存储器宏，也没有标准单元门级 Verilog。证据见[M1报告](../reports/m1_tsmc28_20261106/REPORT.md)。
+- 首次全芯片 DC 前必须处理两项：DC 忽略 `initial $readmemh`（VER-281）；2,293,056 bit 多端口捕获/FFT 存储不能在 1991 MB、无 swap 的虚拟机上展开。
+- 仍未选定 ASIC 周期、输入/输出延迟、转换时间、驱动档、负载和复位恢复/移除。100 MHz 只是功能吞吐候选。PAD `OEN`/`REN`/POC 的有效电平尚未按 liberty function 核定。
+- 自生成六星 IF 的功能评分范围不变。正式统计/动态/定位输入缺口仍属原 G 范围。
+
+## 六通道与TSMC28（2026-11-02 当时记录）
 
 - 新教师文件已明确六通道标量IF、状态及串行位接口，并提供TSMC28标准单元TT/SS/FF、ICC及Calibre库路径。当前核心及接口见[SIX_CHANNEL_DESIGN](SIX_CHANNEL_DESIGN.md)，本地功能证据见[六通道报告](../reports/six_channel_20261102/FINAL_REPORT.md)。
-- 后续综合仍须落实实际PAD单元及其时序/仿真模型、目标clk、IO最大最小延迟/驱动/转换/负载、复位释放、捕获存储实现及ROM加载方式。本轮不访问远端工艺库，不凭路径说明声称实际库/PAD已验证。
-- 本轮自生成六星IF可逐位独立评分；真实公开六星文件作为旧16样本接口回归，不把短窗捕获结果外推为六星长期稳定导航。正式统计/动态/定位输入缺口仍属原G范围，不阻止本轮六通道功能验收。
+- 当时尚未访问远端工艺库。2026-11-06 的预检取代“库/PAD 未验证”这一句，不改变功能验收范围。
 
 ## 维护待办（2026-10-23）
 
