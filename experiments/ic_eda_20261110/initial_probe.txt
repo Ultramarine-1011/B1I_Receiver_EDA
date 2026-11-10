@@ -1,0 +1,183 @@
+=== ID ===
+2026-11-10T17:54:35+0800
+uid=1000(ICer) gid=1000(ICer) 组=1000(ICer),18(dialout),1001(plugdev) 环境=system_u:system_r:vmtools_unconfined_t:s0
+IC_EDA
+/
+=== SYSTEM ===
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                8
+On-line CPU(s) list:   0-7
+Thread(s) per core:    1
+Core(s) per socket:    2
+座：                 4
+NUMA 节点：         1
+厂商 ID：           AuthenticAMD
+CPU 系列：          25
+型号：              97
+型号名称：        AMD Ryzen 9 8940HX with Radeon Graphics
+步进：              2
+CPU MHz：             2395.453
+BogoMIPS：            4790.90
+超管理器厂商：  VMware
+虚拟化类型：     完全
+L1d 缓存：          32K
+L1i 缓存：          32K
+L2 缓存：           1024K
+L3 缓存：           65536K
+NUMA 节点0 CPU：    0-7
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw retpoline_amd ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec clzero arat avx512_vpopcntdq overflow_recov succor
+              total        used        free      shared  buff/cache   available
+Mem:           9818         976        7986          38         856        8557
+Swap:         10235           0       10235
+NAME      TYPE      SIZE USED PRIO
+/dev/dm-1 partition  10G   0B   -2
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda               8:0    0  400G  0 disk 
+├─sda1            8:1    0    1G  0 part /boot
+├─sda2            8:2    0  199G  0 part 
+│ ├─centos-root 253:0    0   20G  0 lvm  /
+│ ├─centos-swap 253:1    0   10G  0 lvm  [SWAP]
+│ └─centos-home 253:2    0  309G  0 lvm  /home
+└─sda3            8:3    0  200G  0 part 
+  └─centos-home 253:2    0  309G  0 lvm  /home
+sr0              11:0    1 1024M  0 rom  
+文件系统                类型      容量  已用  可用 已用% 挂载点
+devtmpfs                devtmpfs  4.8G     0  4.8G    0% /dev
+tmpfs                   tmpfs     4.8G     0  4.8G    0% /dev/shm
+tmpfs                   tmpfs     4.8G   13M  4.8G    1% /run
+tmpfs                   tmpfs     4.8G     0  4.8G    0% /sys/fs/cgroup
+/dev/mapper/centos-root xfs        20G  7.9G   13G   40% /
+/dev/sda1               xfs      1014M  184M  831M   19% /boot
+/dev/mapper/centos-home xfs       309G   45G  265G   15% /home
+tmpfs                   tmpfs     982M   24K  982M    1% /run/user/1000
+=== NETWORK ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+192.168.122.0/24 dev virbr0 proto kernel scope link src 192.168.122.1 
+DEVICE      TYPE      STATE   CONNECTION 
+virbr0      bridge    未托管  --         
+ens33       ethernet  未托管  --         
+lo          loopback  未托管  --         
+virbr0-nic  tun       未托管  --         
+active
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: enabled)
+   Active: active (running) since 二 2026-11-10 17:48:27 CST; 6min ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 1566 (sshd)
+    Tasks: 1
+   CGroup: /system.slice/sshd.service
+           └─1566 /usr/sbin/sshd -D
+State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
+LISTEN     0      128          *:111                      *:*                  
+LISTEN     0      5      192.168.122.1:53                       *:*                  
+LISTEN     0      128          *:22                       *:*                  
+LISTEN     0      128    127.0.0.1:631                      *:*                  
+LISTEN     0      100    127.0.0.1:25                       *:*                  
+LISTEN     0      128       [::]:111                   [::]:*                  
+LISTEN     0      128       [::]:22                    [::]:*                  
+LISTEN     0      128      [::1]:631                   [::]:*                  
+LISTEN     0      128       [::]:27000                 [::]:*                  
+LISTEN     0      100      [::1]:25                    [::]:*                  
+LISTEN     0      128       [::]:36826                 [::]:*                  
+LISTEN     0      128       [::]:27002                 [::]:*                  
+LISTEN     0      128       [::]:49507                 [::]:*                  
+=== TOOLS ===
+872 /usr/bin/vmtoolsd
+1713 /home/synopsys/scl/2018.06/linux64/bin/lmgrd -c /home/synopsys/scl/2018.06/admin/license/Synopsys.dat
+1720 snpslmd -T IC_EDA 11.14 3 -c :/home/synopsys/scl/2018.06/admin/license/Synopsys.dat: -srv [REDACTED_PROCESS_TOKEN] --lmgrd_start 6af2e86b -vdrestart 0
+1768 /home/mentor/questasim/linux_x86_64/lmgrd -c /home/mentor/questasim/mentor.dat
+1773 mgcld -T IC_EDA 11.14 3 -c :/home/mentor/questasim/mentor.dat: -srv [REDACTED_PROCESS_TOKEN] --lmgrd_start 6af2e86b -vdrestart 0
+4418 /usr/bin/vmtoolsd -n vmusr
+5569 /usr/bin/vmtoolsd
+/usr/bin/python
+/usr/bin/python3
+/usr/bin/ssh
+drwxrwx---. 36 ICer ICer     4096 11月 10 17:52 /home/ICer
+drwxr-xr-x.  4 root root       37 5月   8 2022 /home/ic_libs
+drwxrwxrwx.  3 root root       23 5月   2 2022 /home/mentor
+drwxrwxrwx. 12 root root      173 5月   2 2022 /home/Riscv_Tools
+drwxrwxrwx. 12 root root      160 5月  21 2022 /home/synopsys
+drwxr-xr-x. 12 ICer ICer     4096 2月  16 2022 /opt/automake-1.14.1
+drwxr-xr-x.  2 root root        6 10月 31 2018 /opt/rh
+-rw-------.  1 root root 56414224 4月  30 2022 /opt/VMwareTools-10.3.22-15902021.tar.gz
+drwxr-xr-x.  9 root root      145 3月  25 2020 /opt/vmware-tools-distrib
+=== USER INIT ===
+/home/ICer/.bashrc:9:# export SYSTEMD_PAGER=
+/home/ICer/.bashrc:12:export PS1='[\u@\h `pwd`]\$'
+/home/ICer/.bashrc:22:#   Synopsys Tools
+/home/ICer/.bashrc:24:export DVE_HOME=/home/synopsys/vcs/O-2018.09-SP2
+/home/ICer/.bashrc:25:#export DVE_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
+/home/ICer/.bashrc:27:export VCS_HOME=/home/synopsys/vcs/O-2018.09-SP2
+/home/ICer/.bashrc:28:#export VCS_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
+/home/ICer/.bashrc:30:export VERDI_HOME=/home/synopsys/verdi/Verdi_O-2018.09-SP2
+/home/ICer/.bashrc:31:export SCL_HOME=/home/synopsys/scl/2018.06
+/home/ICer/.bashrc:32:export DC_HOME=/home/synopsys/syn/O-2018.06-SP1
+/home/ICer/.bashrc:33:export LC_HOME=/home/synopsys/lc/O-2018.06-SP1
+/home/ICer/.bashrc:34:export SPYGLASS_HOME=/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/
+/home/ICer/.bashrc:35:export PT_HOME=/home/synopsys/pts/O-2018.06-SP1
+/home/ICer/.bashrc:36:export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$VERDI_HOME/share/PLI/lib/LINUX64"
+/home/ICer/.bashrc:37:export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$VERDI_HOME/share/PLI/IUS/LINUX64/boot"
+/home/ICer/.bashrc:40:PATH=$PATH:$PT_HOME/bin
+/home/ICer/.bashrc:44:PATH=$PATH:$DC_HOME/bin
+/home/ICer/.bashrc:49:PATH=$PATH:$LC_HOME/bin
+/home/ICer/.bashrc:53:PATH=$PATH:$SPYGLASS_HOME/bin
+/home/ICer/.bashrc:58:PATH=$PATH:$DVE_HOME/gui/dve/bin
+/home/ICer/.bashrc:62:PATH=$PATH:$VCS_HOME/bin
+/home/ICer/.bashrc:67:PATH=$PATH:$VERDI_HOME/bin:$VERDI_HOME/platform/LINUX/bin
+/home/ICer/.bashrc:71:PATH=$PATH:$SCL_HOME/linux64/bin
+/home/ICer/.bashrc:72:export VCS_ARCH_OVERRIDE=linux
+/home/ICer/.bashrc:74:#SynopsysInstaller
+/home/ICer/.bashrc:75:PATH=$PATH:$SYNOP_INSTALL50_HOME
+/home/ICer/.bashrc:76:alias SYN_install="/home/synopsys/SynopsysInstaller_v5.0/setup.sh &"
+/home/ICer/.bashrc:82:export QUESTASIM_HOME=/home/mentor/questasim
+/home/ICer/.bashrc:84:export PATH=$PATH:$QUESTASIM_HOME/linux_x86_64
+/home/ICer/.bashrc:97:export RISCV=/home/Riscv_Tools
+/home/ICer/.bashrc:98:export QEMU_HOME=$RISCV/riscv-gnu-toolchain/qemu-6.0.0
+/home/ICer/.bashrc:99:PATH=$PATH:$RISCV/bin
+/home/ICer/.bashrc:100:PATH=$PATH:$QEMU_HOME/build/riscv32-linux-user
+/home/ICer/.bashrc:107:# Synopsys & Cadence LICENCE
+/home/ICer/.bashrc:110:export SNPSLMD_LICENSE_FILE=27000@IC_EDA
+/home/ICer/.bashrc:111:export MGLS_LICENSE_FILE=/home/mentor/questasim/mentor.dat
+/home/ICer/.bashrc:113:alias lmg_synopsys="/home/synopsys/scl/2018.06/linux64/bin/lmgrd -c /home/synopsys/scl/2018.06/admin/license/Synopsys.dat"
+/home/ICer/.bashrc:116:alias relmg="kill_lmg ; lmg_synopsys; lmg_mentor"
+/etc/profile:12:    case ":${PATH}:" in
+/etc/profile:17:                PATH=$PATH:$1
+/etc/profile:19:                PATH=$1:$PATH
+/etc/profile:48:    export HISTCONTROL=ignoreboth
+/etc/profile:50:    export HISTCONTROL=ignoredups
+/etc/profile:53:export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
+/etc/bashrc:54:        case ":${PATH}:" in
+/etc/bashrc:59:                    PATH=$PATH:$1
+/etc/bashrc:61:                    PATH=$1:$PATH
+=== HOST KEY ===
+256 SHA256:k8FQmj1/bhwni/wj0R42ZFlo0SWj7csEpRrQiVqF3g4 no comment (ECDSA)
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOwM16S9QurwoMEiRBrIuu3STe3C4BuU2mgYd4KlH9UyGOnKNiFBOxxZrK3EQOJd2tM+OBPksT/32KQDQ2u9AHI= 
+256 SHA256:grp9NQF1zb1ijZGZj23sS2j7piW8DdWGA12agwF+g5Q no comment (ED25519)
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEz0/MjaxaX0Iqcp3hRcFtgazYy5uEuyTPJtZQT0eRYC 
+2048 SHA256:9y5Bkf6zCIrdhPloV2Pmb1sCZS3kOHFF9lqwYXrSGUs no comment (RSA)
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC13VFOgsgXzNLASf8sSBqXqi91RjKNJgJIoaY5Amfhjne7bSY1chaIVY0SKVjWqddXcdkDs9gip+yEx7GN43QBFuv0V9mULhz1KFiKZ6/RuGvQtYdN5iq8Rt/5C44mEuM+e6eKHltvGOlqAIQG99KpHbk/wL+jcHEnkHuM9EMF2h85clwY+LXDYA9S1ndeb1C1n511gHaaha1u60o3fbZsC0InNdQzsgSWfqq/yWACRdwzz1VXsCzpUF1I3cJRXgEsod4OMuODU93yTOJJWSALBrPUNb0pZw8Wkx41xgUQDXn7ypKkrSQq1D9gOO/JK9C7DgwAeJbiBHKZcUS1bLJN 

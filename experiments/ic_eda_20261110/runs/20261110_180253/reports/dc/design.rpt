@@ -1,0 +1,67 @@
+ 
+****************************************
+Report : design
+Design : b1i_prn_gen
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 18:02:56 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    typical (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db)
+
+Local Link Library:
+
+    {/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : typical
+    Library : typical
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: enclosed.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    None specified.
+1

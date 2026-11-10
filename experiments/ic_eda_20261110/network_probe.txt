@@ -1,0 +1,206 @@
+uid=1000(ICer) gid=1000(ICer) groups=1000(ICer),18(dialout),1001(plugdev) context=system_u:system_r:vmtools_unconfined_t:s0
+2: ens33: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:57:17:00 brd ff:ff:ff:ff:ff:ff
+NAME   UUID                                  TYPE      DEVICE 
+ens33  8c5fe42d-1b03-4df0-9341-36814cab2dc0  ethernet  --     
+active
+active
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=8c5fe42d-1b03-4df0-9341-36814cab2dc0
+DEVICE=ens33
+ONBOOT=no
+IC_EDA
+# Created by anaconda
+-rwxr-xr-x. 1 root root 424280 Jun 10  2021 /usr/sbin/dhclient
+-rwxr-xr-x. 1 root root   5010 May 22  2020 /usr/sbin/ifup
+sudo: a password is required
+
+=== INIT AND TOOLS ===
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+export PS1='[\u@\h `pwd`]\$'
+alias gv="gvim"
+alias g="gvim -p"
+alias la="ls -a"
+alias lla="ll -a"
+alias ..="cd ../"
+alias gt="/usr/bin/gnome-terminal --tab&"
+cd() { builtin cd "$@" && ls; }
+
+#=============================================================================================
+#   Synopsys Tools
+#=============================================================================================
+export DVE_HOME=/home/synopsys/vcs/O-2018.09-SP2
+#export DVE_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
+
+export VCS_HOME=/home/synopsys/vcs/O-2018.09-SP2
+#export VCS_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
+
+export VERDI_HOME=/home/synopsys/verdi/Verdi_O-2018.09-SP2
+export SCL_HOME=/home/synopsys/scl/2018.06
+export DC_HOME=/home/synopsys/syn/O-2018.06-SP1
+export LC_HOME=/home/synopsys/lc/O-2018.06-SP1
+export SPYGLASS_HOME=/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/
+export PT_HOME=/home/synopsys/pts/O-2018.06-SP1
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$VERDI_HOME/share/PLI/lib/LINUX64"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$VERDI_HOME/share/PLI/IUS/LINUX64/boot"
+
+#PT
+PATH=$PATH:$PT_HOME/bin
+alias pt="pt_shell"
+
+#DC
+PATH=$PATH:$DC_HOME/bin
+alias dc="dc_shell"
+alias dv="design_vision"
+
+#lib compile
+PATH=$PATH:$LC_HOME/bin
+alias lc="lc_shell"
+
+#Spyglass
+PATH=$PATH:$SPYGLASS_HOME/bin
+alias spyglass="spyglass"
+
+
+#Dve
+PATH=$PATH:$DVE_HOME/gui/dve/bin
+alias dve="dve -full64"
+
+#VCS
+PATH=$PATH:$VCS_HOME/bin
+alias vcs="vcs -full64"
+
+
+#Verdi
+PATH=$PATH:$VERDI_HOME/bin:$VERDI_HOME/platform/LINUX/bin
+alias verdi="verdi"
+
+#scl
+PATH=$PATH:$SCL_HOME/linux64/bin
+export VCS_ARCH_OVERRIDE=linux
+
+#SynopsysInstaller
+PATH=$PATH:$SYNOP_INSTALL50_HOME
+alias SYN_install="/home/synopsys/SynopsysInstaller_v5.0/setup.sh &"
+
+
+#=============================================================================================
+#   Mentor Tools
+#=============================================================================================
+export QUESTASIM_HOME=/home/mentor/questasim
+
+export PATH=$PATH:$QUESTASIM_HOME/linux_x86_64
+
+#Questasim
+alias vsim="vsim"
+alias questasim="vsim"
+
+
+
+
+
+#=============================================================================================
+#   RISCV Tools
+#=============================================================================================
+export RISCV=/home/Riscv_Tools
+export QEMU_HOME=$RISCV/riscv-gnu-toolchain/qemu-6.0.0
+PATH=$PATH:$RISCV/bin
+PATH=$PATH:$QEMU_HOME/build/riscv32-linux-user
+alias qemu32='qemu-riscv32';
+alias rv32_elf='riscv32-unknown-elf-gcc';
+
+
+
+#=============================================================================================
+# Synopsys & Cadence LICENCE
+#=============================================================================================
+
+export SNPSLMD_LICENSE_FILE=27000@IC_EDA
+export MGLS_LICENSE_FILE=/home/mentor/questasim/mentor.dat
+
+alias lmg_synopsys="/home/synopsys/scl/2018.06/linux64/bin/lmgrd -c /home/synopsys/scl/2018.06/admin/license/Synopsys.dat"
+alias lmg_mentor="/home/mentor/questasim/linux_x86_64/lmgrd -c /home/mentor/questasim/mentor.dat"
+alias kill_lmg="sudo killall lmgrd"
+alias relmg="kill_lmg ; lmg_synopsys; lmg_mentor"
+
+#=============================================================================================
+# Others
+#=============================================================================================
+alias t='gnome-terminal';
+
+/home/synopsys/vcs-mx/O-2018.09-SP2/bin/vcs
+/home/synopsys/vcs/O-2018.09-SP2/bin/vcs
+/home/synopsys/pts/O-2018.06-SP1/bin/pt_shell
+/home/ic_libs/TSMC_013/synopsys/tpz013g3wc.lib
+/home/ic_libs/TSMC_013/synopsys/tpz013g3tc.lib
+/home/ic_libs/TSMC_013/synopsys/tpz013g3bc.lib
+/home/ic_libs/TSMC_013/synopsys/fastz.lib
+/home/ic_libs/TSMC_013/synopsys/fastz.db
+/home/ic_libs/TSMC_013/synopsys/typical.db
+/home/ic_libs/TSMC_013/synopsys/typical.lib
+/home/ic_libs/TSMC_013/synopsys/slow.db
+/home/ic_libs/TSMC_013/synopsys/slow.lib
+/home/ic_libs/TSMC_013/synopsys/fast.db
+/home/ic_libs/TSMC_013/synopsys/fast.lib
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast.lib
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.lib
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fastz.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fastz.lib
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.lib
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast_leakage.lib
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical_leakage.lib
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast_leakage.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical_leakage.db
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_4lm_1thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_4lm_2thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_5lm_1thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_5lm_2thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_6lm_1thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_6lm_2thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_7lm_1thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_7lm_2thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_8lm_1thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_8lm_2thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090lk_9lm_2thick_tech.lef
+/home/ic_libs/TSMC.90/aci/sc-x/lef/tsmc090nvt_macros.lef
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/fastz.db
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/fastz.lib
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/fast.db
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/fast.lib
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/slow.db
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/slow.lib
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/typical.db
+/home/ic_libs/TSMC.90/aci/sc-x/libsi/typical.lib
+/home/ic_libs/TSMC.90/aci/sc-x/libspm/fast.lib
+/home/ic_libs/TSMC.90/aci/sc-x/libspm/fast.db
+/home/ic_libs/TSMC.90/aci/sc-x/libspm/typical.db
+/home/ic_libs/TSMC.90/aci/sc-x/libspm/slow.lib
+/home/ic_libs/TSMC.90/aci/sc-x/libspm/slow.db
+/home/ic_libs/TSMC.90/aci/sc-x/libspm/typical.lib
+drwx------. 2 ICer ICer 57 Mar 13  2022 /home/ICer/.ssh
+/usr/bin/vmware-toolbox-cmd
+11.0.5.17716 (build-15389592)

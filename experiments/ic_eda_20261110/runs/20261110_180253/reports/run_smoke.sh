@@ -1,0 +1,43 @@
+#!/bin/bash
+# Isolated PRN regression and synthesis. Every invocation gets a fresh run folder.
+source /home/ICer/.bashrc
+set -euo pipefail
+export LC_ALL=C
+ROOT="$(builtin cd "$(dirname "$0")/.." && pwd)"
+RUN="$ROOT/runs/$(date +%Y%m%d_%H%M%S)"
+mkdir -p "$RUN/work/prn" "$RUN/work/dc" "$RUN/reports/vcs" "$RUN/reports/dc"
+ln -s "$ROOT/rtl" "$RUN/rtl"
+ln -s "$ROOT/tb" "$RUN/tb"
+ln -s "$ROOT/scripts" "$RUN/scripts"
+printf '%s\n' "$RUN" > "$ROOT/latest_run.txt"
+sha256sum "$ROOT"/rtl/*.sv "$ROOT"/tb/*.sv "$ROOT"/tb/vectors/*.mem "$ROOT"/scripts/* > "$RUN/reports/source_sha256.txt"
+printf 'vcs -full64 -sverilog -R ../../rtl/b1i_prn_gen.sv ../../tb/tb_b1i_prn_gen.sv\ndc_shell -64bit -f ../../scripts/dc_prn.tcl\n' > "$RUN/reports/commands.txt"
+date -Is > "$RUN/reports/start_time.txt"
+
+set +e
+(
+  builtin cd "$RUN/work/prn" || exit 1
+  /usr/bin/time -v -o ../../reports/vcs/time.txt timeout 120 vcs -full64 -sverilog -R ../../rtl/b1i_prn_gen.sv ../../tb/tb_b1i_prn_gen.sv
+) > "$RUN/reports/vcs/run.log" 2>&1
+vcs_rc=$?
+printf '%s\n' "$vcs_rc" > "$RUN/reports/vcs/exit_code.txt"
+(
+  builtin cd "$RUN/work/dc" || exit 1
+  /usr/bin/time -v -o ../../reports/dc/time.txt timeout 180 dc_shell -64bit -f ../../scripts/dc_prn.tcl
+) > "$RUN/reports/dc/run.log" 2>&1
+dc_rc=$?
+printf '%s\n' "$dc_rc" > "$RUN/reports/dc/exit_code.txt"
+set -e
+date -Is > "$RUN/reports/end_time.txt"
+printf 'RUN=%s\nVCS_RC=%s\nDC_RC=%s\n' "$RUN" "$vcs_rc" "$dc_rc" | tee "$RUN/reports/result.txt"
+test "$vcs_rc" -eq 0
+grep -q B1I_PRN_REGRESSION_PASS "$RUN/reports/vcs/run.log"
+test "$dc_rc" -eq 0
+grep -q IC_EDA_DC_COMPILE_DONE "$RUN/reports/dc/run.log"
+test -s "$RUN/reports/dc/b1i_prn_gen_tsmc90.v"
+test -s "$RUN/reports/dc/timing_max.rpt"
+if grep -E '^(Error:|Error-|Fatal:|FATAL:)' "$RUN/reports/dc/run.log" "$RUN/reports/vcs/run.log" "$RUN"/reports/dc/*.rpt; then
+  printf 'IC_EDA_SMOKE_LOG_ERROR\n' | tee -a "$RUN/reports/result.txt"
+  exit 1
+fi
+printf 'IC_EDA_SMOKE_PASS\n' | tee -a "$RUN/reports/result.txt"

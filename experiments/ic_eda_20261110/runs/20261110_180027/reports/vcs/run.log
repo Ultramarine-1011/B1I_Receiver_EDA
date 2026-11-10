@@ -1,0 +1,65 @@
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Tue Nov 10 18:00:27 2026
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '../../rtl/b1i_prn_gen.sv'
+Parsing design file '../../tb/tb_b1i_prn_gen.sv'
+Top Level Modules:
+       tb_b1i_prn_gen
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+
+1 module and 0 UDP read.
+recompiling module tb_b1i_prn_gen
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  -Wl,-rpath=/home/synopsys/vcs/O-2018.09-SP2/linux64/lib -L/home/synopsys/vcs/O-2018.09-SP2/linux64/lib   objs/amcQw_d.o   _7982_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/synopsys/vcs/O-2018.09-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive          /home/synopsys/vcs/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 10 18:00 2026
+PRN 6: 2046 chips and wrap verified
+PRN 7: 2046 chips and wrap verified
+PRN 8: 2046 chips and wrap verified
+PRN 9: 2046 chips and wrap verified
+PRN 10: 2046 chips and wrap verified
+PRN 11: 2046 chips and wrap verified
+PRN 12: 2046 chips and wrap verified
+PRN 13: 2046 chips and wrap verified
+PRN 14: 2046 chips and wrap verified
+PRN 15: 2046 chips and wrap verified
+PRN 16: 2046 chips and wrap verified
+PRN 17: 2046 chips and wrap verified
+PRN 18: 2046 chips and wrap verified
+PRN 19: 2046 chips and wrap verified
+PRN 20: 2046 chips and wrap verified
+PRN 21: 2046 chips and wrap verified
+PRN 22: 2046 chips and wrap verified
+PRN 23: 2046 chips and wrap verified
+PRN 24: 2046 chips and wrap verified
+PRN 25: 2046 chips and wrap verified
+PRN 26: 2046 chips and wrap verified
+PRN 27: 2046 chips and wrap verified
+PRN 28: 2046 chips and wrap verified
+PRN 29: 2046 chips and wrap verified
+PRN 30: 2046 chips and wrap verified
+PRN 31: 2046 chips and wrap verified
+PRN 32: 2046 chips and wrap verified
+PRN 33: 2046 chips and wrap verified
+PRN 34: 2046 chips and wrap verified
+PRN 35: 2046 chips and wrap verified
+PRN 36: 2046 chips and wrap verified
+PRN 37: 2046 chips and wrap verified
+B1I_PRN_REGRESSION_PASS
+$finish called from file "../../tb/tb_b1i_prn_gen.sv", line 149.
+$finish at simulation time            655406000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 655406000 ps
+CPU Time:      0.860 seconds;       Data structure size:   0.1Mb
+Tue Nov 10 18:00:30 2026
+CPU time: .614 seconds to compile + .497 seconds to elab + .208 seconds to link + .896 seconds in simulation

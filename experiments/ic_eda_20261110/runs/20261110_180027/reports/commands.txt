@@ -1,0 +1,2 @@
+vcs -full64 -sverilog -R ../../rtl/b1i_prn_gen.sv ../../tb/tb_b1i_prn_gen.sv
+dc_shell -64bit -f ../../scripts/dc_prn.tcl

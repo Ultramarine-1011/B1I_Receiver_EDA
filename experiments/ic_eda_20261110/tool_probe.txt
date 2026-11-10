@@ -1,0 +1,163 @@
+uid=1000(ICer) gid=1000(ICer) groups=1000(ICer),18(dialout),1001(plugdev) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+IC_EDA
+/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell
+/home/synopsys/pts/O-2018.06-SP1/bin/pt_shell
+/home/synopsys/vcs/O-2018.09-SP2/bin/vcs
+total 4
+drwxr-xr-x. 11 ICer ICer 4096 Apr 22  2016 SpyGlass-L2016.06
+drwxrwxr-x.  5 ICer ICer  176 Oct 10  2021 SynopsysInstaller_v5.0
+drwxrwxr-x.  3 ICer ICer   27 Apr 30  2022 lc
+drwxrwxr-x.  3 ICer ICer   27 Mar 28  2021 pts
+drwxrwxr-x.  3 ICer ICer   21 Nov 28  2020 scl
+drwxrwxr-x.  3 ICer ICer   27 Feb 12  2021 syn
+drwxrwxr-x.  3 ICer ICer   27 Nov 28  2020 vcs
+drwxrwxr-x.  3 ICer ICer   27 May  2  2022 vcs-mx
+drwxrwxr-x.  3 ICer ICer   33 May 21  2022 verdi
+lrwxrwxrwx. 1 ICer ICer 10 Jul 20  2018 /home/synopsys/syn/O-2018.06-SP1/bin/dc_shell -> snps_shell
+
+dc_shell version    -  O-2018.06-SP1
+dc_shell build date -  Jul 19, 2018
+Site Identification Number: 000
+Local Administrator: ICer
+Contact: ICer@(none)
+pt_shell version    - O-2018.06-SP1
+pt_shell build date - Jul 19, 2018
+
+Error-[VCS_COM_UNE] Cannot find VCS compiler
+  VCS compiler not found. Environment variable VCS_HOME 
+  (/home/synopsys/vcs/O-2018.09-SP2/linux) is selecting a directory in which 
+  there isn't a compiler '/home/synopsys/vcs/O-2018.09-SP2/linux/bin/vcs1' for
+  a machine of this type 'linux'.
+  Please check whether 'VCS_HOME' is incorrect; if not, see below.
+
+ Perhaps vcs hasn't been installed for machine of type "linux".
+ Or the installation has been damaged.
+ To verify whether vcsO-2018.09 supports machine of type "Linux 3.10.0-1160.53.1.el7.x86_64",
+ please look at ReleaseNotes for more details .
+ We determine the machine type from uname; maybe uname is incorrect.
+ You can fix installation problems by reinstalling from CDROM 
+ or downloading it from the Synopsys ftp server. 
+ For assistance, please contact vcs technical support
+ at vcs_support@synopsys.com or call 1-800-VERILOG 
+/* 
+ * Copyright (c) 2005 Artisan Components, Inc.  All Rights Reserved.
+ * 
+ * CONFIDENTIAL AND PROPRIETARY SOFTWARE/DATA OF ARTISAN COMPONENTS, INC.
+ * 
+ * This file has been provided pursuant to a License Agreement containing
+ * restrictions on its use.  This file contains valuable trade secrets and
+ * proprietary information of Artisan Components, Inc., and is protected by
+ * U.S. and international laws and/or treaties.
+ * 
+ * The copyright notice(s) in this file does not indicate actual or intended
+ * publication of this file.
+ * 
+ * artix(v4.38.20)-artichar(v3.68.59)-syntech(1.63.2.13)
+ *
+ * process (tt), voltage (1.0v), temp (25)
+ * 
+ * corner: com1_tt_n_n
+ */
+/* table model: cell-delay */
+library(typical) {
+
+  /* general attributes */
+  delay_model : table_lookup;
+  in_place_swap_mode : match_footprint;
+  library_features(report_delay_calculation);
+
+  /* documentation attributes */
+  revision : 1.3;
+  date : "Wed Jun 22 12:31:48 2005";
+  comment : "Copyright (c) 2005 Artisan Components, Inc.  All Rights Reserved.";
+
+  /* unit attributes */
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1mA";
+  pulling_resistance_unit : "1kohm";
+  leakage_power_unit : "1pW";
+  capacitive_load_unit (1.0,pf);
+
+  /* operation conditions */
+  nom_process     : 1;
+  nom_temperature : 25;
+  nom_voltage     : 1.0;
+  operating_conditions(typical) {
+    process	: 1;
+    temperature	: 25;
+    voltage	: 1.0;
+    tree_type	: balanced_tree
+  }
+  default_operating_conditions : typical;
+
+  /* threshold definitions */
+  slew_lower_threshold_pct_fall : 30.0;
+  slew_upper_threshold_pct_fall : 70.0;
+  slew_lower_threshold_pct_rise : 30.0;
+  slew_upper_threshold_pct_rise : 70.0;
+  input_threshold_pct_fall      : 50.0;
+  input_threshold_pct_rise      : 50.0;
+  output_threshold_pct_fall     : 50.0;
+  output_threshold_pct_rise     : 50.0;
+  slew_derate_from_library      : 0.5;
+
+  /* default attributes */
+  default_leakage_power_density	: 0.0;
+  default_cell_leakage_power	: 0.0;
+  default_fanout_load	: 1.0;
+  default_output_pin_cap	: 0.0;
+  default_inout_pin_cap	: 0.001165;
+  default_input_pin_cap	: 0.001165;
+  default_max_transition	: 0.66;
+
+  /* templates */
+  lu_table_template(delay_template_7x1) {
+    variable_1 : input_net_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(energy_template_7x1) {
+    variable_1 : input_transition_time;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(delay_template_7x7) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(energy_template_7x7) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(energy_template_1x7) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(energy_template_7x3x3) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    variable_3 : equal_or_opposite_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002");
+    index_3 ("1000, 1001, 1002");
+  }
+  power_lut_template(passive_energy_template_1x7) {
+    variable_1 : input_transition_time;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(setup_template_3x3) {
+/* table model: cell-delay */
+  default_cell_leakage_power	: 0.0;
+  k_process_cell_leakage_power	: 0;
+  k_temp_cell_leakage_power	: 0;
+  k_volt_cell_leakage_power	: 0;
+  k_process_cell_rise	: 1;
+  k_temp_cell_rise	: 0;
+  k_volt_cell_rise	: 0;
+  k_process_cell_fall	: 1;
+  k_temp_cell_fall	: 0;
+  k_volt_cell_fall	: 0;
+cell (ACCSHCINX2) { 

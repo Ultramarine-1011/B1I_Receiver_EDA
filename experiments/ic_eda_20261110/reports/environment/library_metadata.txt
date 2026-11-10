@@ -1,0 +1,222 @@
+=== Selected 90 nm Liberty metadata ===
+/* 
+ * Copyright (c) 2005 Artisan Components, Inc.  All Rights Reserved.
+ * 
+ * CONFIDENTIAL AND PROPRIETARY SOFTWARE/DATA OF ARTISAN COMPONENTS, INC.
+ * 
+ * This file has been provided pursuant to a License Agreement containing
+ * restrictions on its use.  This file contains valuable trade secrets and
+ * proprietary information of Artisan Components, Inc., and is protected by
+ * U.S. and international laws and/or treaties.
+ * 
+ * The copyright notice(s) in this file does not indicate actual or intended
+ * publication of this file.
+ * 
+ * artix(v4.38.20)-artichar(v3.68.59)-syntech(1.63.2.13)
+ *
+ * process (tt), voltage (1.0v), temp (25)
+ * 
+ * corner: com1_tt_n_n
+ */
+/* table model: cell-delay */
+library(typical) {
+
+  /* general attributes */
+  delay_model : table_lookup;
+  in_place_swap_mode : match_footprint;
+  library_features(report_delay_calculation);
+
+  /* documentation attributes */
+  revision : 1.3;
+  date : "Wed Jun 22 12:31:48 2005";
+  comment : "Copyright (c) 2005 Artisan Components, Inc.  All Rights Reserved.";
+
+  /* unit attributes */
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1mA";
+  pulling_resistance_unit : "1kohm";
+  leakage_power_unit : "1pW";
+  capacitive_load_unit (1.0,pf);
+
+  /* operation conditions */
+  nom_process     : 1;
+  nom_temperature : 25;
+  nom_voltage     : 1.0;
+  operating_conditions(typical) {
+    process	: 1;
+    temperature	: 25;
+    voltage	: 1.0;
+    tree_type	: balanced_tree
+  }
+  default_operating_conditions : typical;
+
+  /* threshold definitions */
+  slew_lower_threshold_pct_fall : 30.0;
+  slew_upper_threshold_pct_fall : 70.0;
+  slew_lower_threshold_pct_rise : 30.0;
+  slew_upper_threshold_pct_rise : 70.0;
+  input_threshold_pct_fall      : 50.0;
+  input_threshold_pct_rise      : 50.0;
+  output_threshold_pct_fall     : 50.0;
+  output_threshold_pct_rise     : 50.0;
+  slew_derate_from_library      : 0.5;
+
+  /* default attributes */
+  default_leakage_power_density	: 0.0;
+  default_cell_leakage_power	: 0.0;
+  default_fanout_load	: 1.0;
+  default_output_pin_cap	: 0.0;
+  default_inout_pin_cap	: 0.001165;
+  default_input_pin_cap	: 0.001165;
+  default_max_transition	: 0.66;
+
+  /* templates */
+  lu_table_template(delay_template_7x1) {
+    variable_1 : input_net_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(energy_template_7x1) {
+    variable_1 : input_transition_time;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(delay_template_7x7) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+cell (INVX1) { 
+  cell_footprint : inv;
+  area : 2.116800;
+  pin(A) {
+    direction : input;
+    capacitance : 0.001651;
+  }
+  pin(Y) {
+    direction : output;
+    capacitance : 0.0;
+    function : "(!A)";
+    internal_power() {
+      related_pin : "A";
+      rise_power(energy_template_7x7) {
+        index_1 ("0.018, 0.028, 0.048, 0.09, 0.17, 0.334, 0.66");
+        index_2 ("0.0005825, 0.001398, 0.0031455, 0.006524, 0.0133975, 0.0271445, 0.054755");
+        values ( \
+          "0.001592, 0.001616, 0.001659, 0.001718, 0.001801, 0.001945, 0.002211", \
+          "0.001600, 0.001618, 0.001653, 0.001711, 0.001800, 0.001945, 0.002210", \
+          "0.001652, 0.001656, 0.001675, 0.001718, 0.001805, 0.001951, 0.002217", \
+          "0.001806, 0.001789, 0.001785, 0.001797, 0.001854, 0.001984, 0.002248", \
+          "0.002195, 0.002140, 0.002070, 0.002037, 0.002032, 0.002111, 0.002338", \
+          "0.003127, 0.003017, 0.002863, 0.002689, 0.002550, 0.002512, 0.002628", \
+          "0.005087, 0.004906, 0.004616, 0.004296, 0.003946, 0.003572, 0.003458");
+      }
+      fall_power(energy_template_7x7) {
+        index_1 ("0.018, 0.028, 0.048, 0.09, 0.17, 0.334, 0.66");
+        index_2 ("0.0005825, 0.001398, 0.0031455, 0.006524, 0.0133975, 0.0271445, 0.054755");
+        values ( \
+          "0.000069, 0.000048, 0.000020, 0.000003, 0.000021, 0.000033, 0.000039", \
+          "0.000072, 0.000057, 0.000033, 0.000006, 0.000014, 0.000029, 0.000038", \
+          "0.000041, 0.000038, 0.000026, 0.000009, 0.000010, 0.000024, 0.000034", \
+          "0.000106, 0.000081, 0.000051, 0.000035, 0.000035, 0.000038, 0.000044", \
+          "0.000488, 0.000418, 0.000331, 0.000245, 0.000174, 0.000118, 0.000087", \
+          "0.001412, 0.001278, 0.001089, 0.000871, 0.000637, 0.000445, 0.000289", \
+          "0.003394, 0.003200, 0.002886, 0.002449, 0.001948, 0.001430, 0.000994");
+
+=== typical ===
+library(typical) {
+  nom_process     : 1;
+  nom_temperature : 25;
+  nom_voltage     : 1.0;
+
+=== slow ===
+library(slow) {
+  nom_process     : 1;
+  nom_temperature : 125;
+  nom_voltage     : 0.9;
+
+=== fast ===
+library(fast) {
+  nom_process     : 1;
+  nom_temperature : -40;
+  nom_voltage     : 1.1;
+
+=== fastz ===
+library(fastz) {
+  nom_process     : 1;
+  nom_temperature : 0;
+  nom_voltage     : 1.1;
+
+=== 130 nm Liberty metadata ===
+/* $Id$ 
+ * Copyright (c) 2002 Artisan Components, Inc.  All Rights Reserved.
+ * 
+ * CONFIDENTIAL AND PROPRIETARY SOFTWARE/DATA OF ARTISAN COMPONENTS, INC.
+ * 
+ * This file has been provided pursuant to a License Agreement containing
+ * restrictions on its use.  This file contains valuable trade secrets and
+ * proprietary information of Artisan Components, Inc., and is protected by
+ * U.S. and international laws and/or treaties.
+ * 
+ * The copyright notice(s) in this file does not indicate actual or intended
+ * publication of this file.
+ * 
+ * This file was generated by "SAGE-Modeler TSMC 0.13um FSG",
+ * which is licensed to Artisan Components, Inc..
+ * Please contact info@artisan.com for more information.
+ * 
+ * rechar(2002Q1V1)-artix(v4.25.12)-artichar(v3.55.43)-syntech(1.43)
+ *
+ * process (tt), voltage (1.2V), temp (25)
+ * 
+ * corner: com1_tt_n_n
+ */
+/* table model: cell-delay */
+library(typical) {
+
+  /* general attributes */
+  delay_model : table_lookup;
+  in_place_swap_mode : match_footprint;
+  library_features(report_delay_calculation);
+
+  /* documentation attributes */
+  revision : 1.2;
+  date : "Wed Jun  5 17:42:40 PDT 2002";
+  comment : "Copyright (c) 2002 Artisan Components, Inc.  All Rights Reserved.";
+
+  /* unit attributes */
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1uA";
+  pulling_resistance_unit : "1kohm";
+  leakage_power_unit : "1pW";
+  capacitive_load_unit (1.0,pf);
+
+  /* operation conditions */
+  nom_process     : 1;
+  nom_temperature : 25;
+  nom_voltage     : 1.2;
+  operating_conditions(typical) {
+    process	: 1;
+    temperature	: 25;
+    voltage	: 1.2;
+    tree_type	: balanced_tree
+  }
+  default_operating_conditions : typical;
+
+  /* threshold definitions */
+  slew_lower_threshold_pct_fall : 30.0;
+  slew_upper_threshold_pct_fall : 70.0;
+  slew_lower_threshold_pct_rise : 30.0;
+  slew_upper_threshold_pct_rise : 70.0;
+  input_threshold_pct_fall      : 50.0;
+  input_threshold_pct_rise      : 50.0;
+  output_threshold_pct_fall     : 50.0;
+  output_threshold_pct_rise     : 50.0;
+
+  /* default attributes */
+  default_leakage_power_density	: 0.0;
+  slew_derate_from_library	: 0.5;
+  default_cell_leakage_power	: 0.0;
+
+=== Selected library hashes ===
+8022bc0d744d01fcc93b8c7387d9de6d33d674c29c81beba0e0496d2dde1702a  /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+f79391e02ee6a159c42428d7276ce9bdaea063090a153b6a9a650cff0f7146e5  /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.lib

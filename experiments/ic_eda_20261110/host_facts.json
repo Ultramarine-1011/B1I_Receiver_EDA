@@ -1,0 +1,20 @@
+{
+  "date_singapore": "2026-11-10T17:59:39.5763455",
+  "git_head": "fb662d36e85e9cffe02a4b8f003887808f73007c",
+  "initial_untracked": [
+    "261102/",
+    "BDI_signal_source_student/",
+    "docs/ACQUISITION_REPORT.pdf",
+    "docs/NH_D1_REPORT.pdf",
+    "docs/TRACKING_REPORT.pdf"
+  ],
+  "vmx": "C:\\IC_EDA_Lite_20220604\\IC_EDA_Lite\\IC_EDA_Lite\\IC_EDA.vmx",
+  "guest_mac": "00:0c:29:57:17:00",
+  "guest_ip": "192.168.236.129",
+  "ram_mb": 10240,
+  "vcpus": 8,
+  "host_resources": {
+    "TotalPhysicalMemory": 33517670400,
+    "NumberOfLogicalProcessors": 32
+  }
+}

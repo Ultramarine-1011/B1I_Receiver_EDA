@@ -1,0 +1,275 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+# Adapted from scripts/h0_dc_prn.tcl at fb662d3 for IC_EDA only.
+set_app_var sh_enable_page_mode false
+false
+set_host_options -max_cores 1
+1
+set library_dir /home/ic_libs/TSMC.90/aci/sc-x/synopsys
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys
+set db_file $library_dir/typical.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set_app_var search_path [concat $search_path $library_dir]
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ic_libs/TSMC.90/aci/sc-x/synopsys
+set_app_var target_library [list $db_file]
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set_app_var synthetic_library [list dw_foundation.sldb]
+dw_foundation.sldb
+set_app_var link_library [list * $db_file dw_foundation.sldb]
+* /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db dw_foundation.sldb
+define_design_lib WORK -path ./WORK
+1
+set report_dir ../../reports/dc
+../../reports/dc
+file mkdir $report_dir
+if {[analyze -format sverilog ../../rtl/b1i_prn_gen.sv] == 0} { exit 1 }
+Running PRESTO HDLC
+Compiling source file ../../rtl/b1i_prn_gen.sv
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+if {[elaborate b1i_prn_gen] == 0} { exit 1 }
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 82 in file
+	'../../rtl/b1i_prn_gen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine b1i_prn_gen line 98 in file
+		'../../rtl/b1i_prn_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   active_prn_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   chip_index_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   configured_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'b1i_prn_gen'.
+current_design b1i_prn_gen
+Current design is 'b1i_prn_gen'.
+{b1i_prn_gen}
+if {[link] == 0} { exit 1 }
+
+  Linking design 'b1i_prn_gen'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  b1i_prn_gen                 /home/ICer/ic_eda_smoke_20261110/runs/20261110_180446/work/dc/b1i_prn_gen.db
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+redirect $report_dir/check_design_pre.rpt { check_design }
+set_operating_conditions typical -library typical
+Using operating conditions 'typical' found in library 'typical'.
+1
+# Experimental constraints, time in ns and capacitance in pF.
+create_clock -name clk -period 10 [get_ports clk]
+1
+set_clock_uncertainty 0.2 [get_clocks clk]
+1
+set_clock_transition 0.1 [get_clocks clk]
+1
+set data_inputs [remove_from_collection [all_inputs] [get_ports {clk rst_n}]]
+{load chip_enable prn_select[5] prn_select[4] prn_select[3] prn_select[2] prn_select[1] prn_select[0]}
+set_input_delay -clock clk -max 1.0 $data_inputs
+1
+set_input_delay -clock clk -min 0.0 $data_inputs
+1
+set_output_delay -clock clk -max 1.0 [all_outputs]
+1
+set_output_delay -clock clk -min 0.0 [all_outputs]
+1
+set_driving_cell -lib_cell INVX1 -library typical $data_inputs
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set inv_load [load_of typical/INVX1/A]
+0.001651
+set output_load [expr {4.0 * $inv_load}]
+0.006604
+set_load $output_load [all_outputs]
+1
+set_false_path -from [get_ports rst_n]
+1
+set_wire_load_mode enclosed
+1
+puts "IC_EDA_OUTPUT_LOAD_PF $output_load"
+IC_EDA_OUTPUT_LOAD_PF 0.006604
+redirect $report_dir/library.rpt { list_libs }
+redirect $report_dir/host_options.rpt { report_host_options }
+if {[compile] == 0} { exit 1 }
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'b1i_prn_gen'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'b1i_prn_gen_DW01_inc_0'
+  Mapping 'b1i_prn_gen_DW_cmp_0'
+  Mapping 'b1i_prn_gen_DW_cmp_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen'. (DDB-72)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    1916.4      0.00       0.0       0.0                          
+    0:00:01    1916.4      0.00       0.0       0.0                          
+    0:00:01    1916.4      0.00       0.0       0.0                          
+    0:00:01    1916.4      0.00       0.0       0.0                          
+    0:00:01    1916.4      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1411.9      0.00       0.0       0.0                          
+    0:00:01    1388.6      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    1388.6      0.00       0.0       0.0                          
+    0:00:01    1388.6      0.00       0.0       0.0                          
+    0:00:01    1386.5      0.00       0.0       0.0                          
+    0:00:01    1384.4      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+    0:00:01    1380.2      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+redirect $report_dir/check_design_post.rpt { set design_ok [check_design] }
+if {$design_ok == 0} { exit 1 }
+set unmapped [get_cells -hierarchical -filter {is_hierarchical == false && is_unmapped == true}]
+puts "IC_EDA_UNMAPPED_CELLS [sizeof_collection $unmapped]"
+IC_EDA_UNMAPPED_CELLS 0
+if {[sizeof_collection $unmapped] != 0} { exit 1 }
+redirect $report_dir/area.rpt { report_area -hierarchy }
+redirect $report_dir/references.rpt { report_reference -hierarchy }
+redirect $report_dir/resources.rpt { report_resources }
+redirect $report_dir/qor.rpt { report_qor }
+redirect $report_dir/design.rpt { report_design }
+redirect $report_dir/timing_max.rpt { report_timing -delay max -max_paths 10 -nworst 1 -significant_digits 6 }
+redirect $report_dir/timing_min.rpt { report_timing -delay min -max_paths 10 -nworst 1 -significant_digits 6 }
+redirect $report_dir/constraints.rpt { report_constraint -all_violators -significant_digits 6 }
+redirect $report_dir/check_timing.rpt { check_timing }
+write -format verilog -hierarchy -output $report_dir/b1i_prn_gen_tsmc90.v
+Writing verilog file '/home/ICer/ic_eda_smoke_20261110/runs/20261110_180446/reports/dc/b1i_prn_gen_tsmc90.v'.
+1
+write_sdc $report_dir/b1i_prn_gen_tsmc90.sdc
+1
+write -format ddc -hierarchy -output $report_dir/b1i_prn_gen_tsmc90.ddc
+Writing ddc file '../../reports/dc/b1i_prn_gen_tsmc90.ddc'.
+1
+puts "IC_EDA_DC_COMPILE_DONE"
+IC_EDA_DC_COMPILE_DONE
+exit 0
+
+Memory usage for main task 148 Mbytes.
+Memory usage for this session 148 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+
+Thank you...

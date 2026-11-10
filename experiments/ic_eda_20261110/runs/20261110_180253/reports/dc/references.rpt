@@ -1,0 +1,65 @@
+ 
+****************************************
+Report : reference
+Design : b1i_prn_gen
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 18:02:56 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21X1            typical        3.528000       2      7.056000  
+AOI22XL            typical        4.233600      10     42.336001  
+AOI211X1           typical        4.233600       1      4.233600  
+AOI221XL           typical        5.644800       2     11.289600  
+BMXIX2             typical       16.934401       1     16.934401  
+BUFX2              typical        2.822400       4     11.289600  
+CLKINVX1           typical        2.116800       6     12.700800  
+CLKNAND2X2         typical        2.822400       7     19.756801  
+DFFRX1             typical       16.934401       8    135.475204  n
+DFFRXL             typical       16.934401      23    389.491213  n
+DFFSX2             typical       15.523200       3     46.569600  n
+DFFSXL             typical       15.523200       7    108.662400  n
+MX2X1              typical        6.350400       7     44.452800  
+MX4XL              typical       16.934401       1     16.934401  
+MXI2X1             typical        5.644800      12     67.737602  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND3XL            typical        3.528000       1      3.528000  
+NAND4X1            typical        4.939200       1      4.939200  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400       2      5.644800  
+NOR3X1             typical        3.528000       2      7.056000  
+NOR4X1             typical        4.233600       1      4.233600  
+OAI2B2X1           typical        5.644800      11     62.092802  
+OAI21X1            typical        3.528000       2      7.056000  
+OAI22X1            typical        4.233600      12     50.803202  
+OAI211XL           typical        4.233600       2      8.467200  
+OAI221X1           typical        6.350400      12     76.204800  
+OR3X1              typical        4.233600       1      4.233600  
+XOR2X1             typical        5.644800      17     95.961603  
+b1i_prn_gen_DW01_inc_0          103.017597       1    103.017597  h
+-----------------------------------------------------------------------------
+Total 30 references                                  1380.153630
+
+****************************************
+Design: b1i_prn_gen_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000       9     95.255997  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                    103.017597
+1

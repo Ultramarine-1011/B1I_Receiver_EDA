@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : b1i_prn_gen
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 18:00:35 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    typical (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db)
+
+Number of ports:                           46
+Number of nets:                           245
+Number of cells:                          174
+Number of combinational cells:            132
+Number of sequential cells:                41
+Number of macros/black boxes:               0
+Number of buf/inv:                         11
+Number of references:                      30
+
+Combinational area:                699.955212
+Buf/Inv area:                       26.107201
+Noncombinational area:             680.198418
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1380.153630
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ----------------------
+b1i_prn_gen                       1380.1536    100.0  596.9376   680.1984  0.0000  b1i_prn_gen
+add_124                            103.0176      7.5  103.0176     0.0000  0.0000  b1i_prn_gen_DW01_inc_0
+--------------------------------  ---------  -------  --------  ---------  ------  ----------------------
+Total                                                 699.9552   680.1984  0.0000
+
+1

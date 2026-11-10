@@ -1,0 +1,314 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : b1i_prn_gen
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 18:02:56 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: configured_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 r
+  load (in)                            0.034218   0.034218 r
+  U169/Y (MXI2X1)                      0.027877   0.062095 f
+  configured_reg/D (DFFRXL)            0.000000   0.062095 f
+  data arrival time                               0.062095
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  configured_reg/CK (DFFRXL)           0.000000   0.200000 r
+  library hold time                    0.018625   0.218625
+  data required time                              0.218625
+  -----------------------------------------------------------
+  data required time                              0.218625
+  data arrival time                               -0.062095
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.156530
+
+
+  Startpoint: prn_select[0]
+              (input port clocked by clk)
+  Endpoint: active_prn_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 f
+  prn_select[0] (in)                   0.002796   0.002796 f
+  U215/Y (MX2X1)                       0.060264   0.063060 f
+  active_prn_reg[0]/D (DFFRXL)         0.000000   0.063060 f
+  data arrival time                               0.063060
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  active_prn_reg[0]/CK (DFFRXL)        0.000000   0.200000 r
+  library hold time                    0.019473   0.219473
+  data required time                              0.219473
+  -----------------------------------------------------------
+  data required time                              0.219473
+  data arrival time                               -0.063060
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.156413
+
+
+  Startpoint: prn_select[1]
+              (input port clocked by clk)
+  Endpoint: active_prn_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 f
+  prn_select[1] (in)                   0.008234   0.008234 f
+  U220/Y (MX2X1)                       0.062584   0.070819 f
+  active_prn_reg[1]/D (DFFRXL)         0.000000   0.070819 f
+  data arrival time                               0.070819
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  active_prn_reg[1]/CK (DFFRXL)        0.000000   0.200000 r
+  library hold time                    0.019284   0.219284
+  data required time                              0.219284
+  -----------------------------------------------------------
+  data required time                              0.219284
+  data arrival time                               -0.070819
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.148465
+
+
+  Startpoint: prn_select[3]
+              (input port clocked by clk)
+  Endpoint: active_prn_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 f
+  prn_select[3] (in)                   0.008575   0.008575 f
+  U218/Y (MX2X1)                       0.062738   0.071313 f
+  active_prn_reg[3]/D (DFFRXL)         0.000000   0.071313 f
+  data arrival time                               0.071313
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  active_prn_reg[3]/CK (DFFRXL)        0.000000   0.200000 r
+  library hold time                    0.019284   0.219284
+  data required time                              0.219284
+  -----------------------------------------------------------
+  data required time                              0.219284
+  data arrival time                               -0.071313
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.147971
+
+
+  Startpoint: prn_select[4]
+              (input port clocked by clk)
+  Endpoint: active_prn_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 f
+  prn_select[4] (in)                   0.008738   0.008738 f
+  U217/Y (MX2X1)                       0.062811   0.071549 f
+  active_prn_reg[4]/D (DFFRXL)         0.000000   0.071549 f
+  data arrival time                               0.071549
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  active_prn_reg[4]/CK (DFFRXL)        0.000000   0.200000 r
+  library hold time                    0.019284   0.219284
+  data required time                              0.219284
+  -----------------------------------------------------------
+  data required time                              0.219284
+  data arrival time                               -0.071549
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.147735
+
+
+  Startpoint: prn_select[2]
+              (input port clocked by clk)
+  Endpoint: active_prn_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 f
+  prn_select[2] (in)                   0.008868   0.008868 f
+  U219/Y (MX2X1)                       0.062869   0.071738 f
+  active_prn_reg[2]/D (DFFRXL)         0.000000   0.071738 f
+  data arrival time                               0.071738
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  active_prn_reg[2]/CK (DFFRXL)        0.000000   0.200000 r
+  library hold time                    0.019284   0.219284
+  data required time                              0.219284
+  -----------------------------------------------------------
+  data required time                              0.219284
+  data arrival time                               -0.071738
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.147546
+
+
+  Startpoint: prn_select[5]
+              (input port clocked by clk)
+  Endpoint: active_prn_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 f
+  prn_select[5] (in)                   0.009034   0.009034 f
+  U216/Y (MX2X1)                       0.062944   0.071978 f
+  active_prn_reg[5]/D (DFFRXL)         0.000000   0.071978 f
+  data arrival time                               0.071978
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  active_prn_reg[5]/CK (DFFRXL)        0.000000   0.200000 r
+  library hold time                    0.019284   0.219284
+  data required time                              0.219284
+  -----------------------------------------------------------
+  data required time                              0.219284
+  data arrival time                               -0.071978
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.147306
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 r
+  load (in)                            0.034218   0.034218 r
+  U166/Y (NOR2X2)                      0.047833   0.082051 f
+  U207/Y (OAI221X1)                    0.030578   0.112628 r
+  g1_state_reg[9]/D (DFFSX2)           0.000000   0.112628 r
+  data arrival time                               0.112628
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  g1_state_reg[9]/CK (DFFSX2)          0.000000   0.200000 r
+  library hold time                    -0.016024  0.183976
+  data required time                              0.183976
+  -----------------------------------------------------------
+  data required time                              0.183976
+  data arrival time                               -0.112628
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.071348
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 r
+  load (in)                            0.034218   0.034218 r
+  U166/Y (NOR2X2)                      0.047833   0.082051 f
+  U205/Y (OAI221X1)                    0.030578   0.112628 r
+  g1_state_reg[7]/D (DFFSX2)           0.000000   0.112628 r
+  data arrival time                               0.112628
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  g1_state_reg[7]/CK (DFFSX2)          0.000000   0.200000 r
+  library hold time                    -0.016024  0.183976
+  data required time                              0.183976
+  -----------------------------------------------------------
+  data required time                              0.183976
+  data arrival time                               -0.112628
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.071348
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 0.000000   0.000000 r
+  load (in)                            0.034218   0.034218 r
+  U166/Y (NOR2X2)                      0.047833   0.082051 f
+  U203/Y (OAI221X1)                    0.030578   0.112628 r
+  g1_state_reg[5]/D (DFFSX2)           0.000000   0.112628 r
+  data arrival time                               0.112628
+
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  clock uncertainty                    0.200000   0.200000
+  g1_state_reg[5]/CK (DFFSX2)          0.000000   0.200000 r
+  library hold time                    -0.016024  0.183976
+  data required time                              0.183976
+  -----------------------------------------------------------
+  data required time                              0.183976
+  data arrival time                               -0.112628
+  -----------------------------------------------------------
+  slack (VIOLATED)                                -0.071348
+
+
+1

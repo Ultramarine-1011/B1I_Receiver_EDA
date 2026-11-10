@@ -1,0 +1,340 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : b1i_prn_gen
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 18:04:50 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: active_prn_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: chip (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  active_prn_reg[1]/CK (DFFRXL)        0.000000   0.000000 r
+  active_prn_reg[1]/Q (DFFRXL)         0.215307   0.215307 f
+  U268/Y (CLKNAND2X2)                  0.049852   0.265159 r
+  U267/Y (CLKINVX1)                    0.064325   0.329484 f
+  U245/Y (AOI22XL)                     0.080324   0.409808 r
+  U244/Y (MXI2X1)                      0.040852   0.450659 f
+  U243/Y (AOI221XL)                    0.077858   0.528518 r
+  U236/Y (MXI2X1)                      0.047088   0.575606 f
+  U230/Y (MX4XL)                       0.120297   0.695902 f
+  U223/Y (MXI2X1)                      0.041373   0.737275 r
+  U222/Y (XOR2X1)                      0.061108   0.798383 f
+  U221/Y (NOR2X1)                      0.074008   0.872390 r
+  chip (out)                           0.000000   0.872390 r
+  data arrival time                               0.872390
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  output external delay                -1.000000  8.800000
+  data required time                              8.800000
+  -----------------------------------------------------------
+  data required time                              8.800000
+  data arrival time                               -0.872390
+  -----------------------------------------------------------
+  slack (MET)                                     7.927610
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g2_state_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U191/Y (OAI22X1)                     0.078479   1.678732 r
+  g2_state_reg[8]/D (DFFRXL)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g2_state_reg[8]/CK (DFFRXL)          0.000000   9.800000 r
+  library setup time                   -0.077071  9.722930
+  data required time                              9.722930
+  -----------------------------------------------------------
+  data required time                              9.722930
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.044197
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U200/Y (OAI22X1)                     0.078479   1.678732 r
+  g1_state_reg[2]/D (DFFRXL)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g1_state_reg[2]/CK (DFFRXL)          0.000000   9.800000 r
+  library setup time                   -0.077071  9.722930
+  data required time                              9.722930
+  -----------------------------------------------------------
+  data required time                              9.722930
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.044197
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U199/Y (OAI22X1)                     0.078479   1.678732 r
+  g1_state_reg[0]/D (DFFRXL)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g1_state_reg[0]/CK (DFFRXL)          0.000000   9.800000 r
+  library setup time                   -0.077071  9.722930
+  data required time                              9.722930
+  -----------------------------------------------------------
+  data required time                              9.722930
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.044197
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U202/Y (OAI22X1)                     0.078479   1.678732 r
+  g1_state_reg[4]/D (DFFRXL)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g1_state_reg[4]/CK (DFFRXL)          0.000000   9.800000 r
+  library setup time                   -0.077071  9.722930
+  data required time                              9.722930
+  -----------------------------------------------------------
+  data required time                              9.722930
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.044197
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g2_state_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U185/Y (OAI22X1)                     0.078479   1.678732 r
+  g2_state_reg[2]/D (DFFRXL)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g2_state_reg[2]/CK (DFFRXL)          0.000000   9.800000 r
+  library setup time                   -0.077071  9.722930
+  data required time                              9.722930
+  -----------------------------------------------------------
+  data required time                              9.722930
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.044197
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g2_state_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U189/Y (OAI22X1)                     0.078479   1.678732 r
+  g2_state_reg[6]/D (DFFRXL)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g2_state_reg[6]/CK (DFFRXL)          0.000000   9.800000 r
+  library setup time                   -0.077071  9.722930
+  data required time                              9.722930
+  -----------------------------------------------------------
+  data required time                              9.722930
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.044197
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g2_state_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U183/Y (OAI22X1)                     0.078479   1.678732 r
+  g2_state_reg[0]/D (DFFRXL)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g2_state_reg[0]/CK (DFFRXL)          0.000000   9.800000 r
+  library setup time                   -0.077071  9.722930
+  data required time                              9.722930
+  -----------------------------------------------------------
+  data required time                              9.722930
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.044197
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U206/Y (OAI22X1)                     0.078479   1.678732 r
+  g1_state_reg[8]/D (DFFRX1)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g1_state_reg[8]/CK (DFFRX1)          0.000000   9.800000 r
+  library setup time                   -0.076078  9.723923
+  data required time                              9.723923
+  -----------------------------------------------------------
+  data required time                              9.723923
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.045191
+
+
+  Startpoint: load (input port clocked by clk)
+  Endpoint: g1_state_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  load (in)                            0.027933   1.027933 f
+  U277/Y (CLKINVX1)                    0.088568   1.116501 r
+  U165/Y (NAND3XL)                     0.260752   1.377253 f
+  U168/Y (NAND2BX2)                    0.223001   1.600253 f
+  U204/Y (OAI22X1)                     0.078479   1.678732 r
+  g1_state_reg[6]/D (DFFRX1)           0.000000   1.678732 r
+  data arrival time                               1.678732
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  g1_state_reg[6]/CK (DFFRX1)          0.000000   9.800000 r
+  library setup time                   -0.076078  9.723923
+  data required time                              9.723923
+  -----------------------------------------------------------
+  data required time                              9.723923
+  data arrival time                               -1.678732
+  -----------------------------------------------------------
+  slack (MET)                                     8.045191
+
+
+1
