@@ -1,0 +1,121 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : tracking_divide_step
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 00:06:52 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: value[2] (input port clocked by module_clk)
+  Endpoint: result[23] (output port clocked by module_clk)
+  Path Group: module_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock module_clk (rise edge)                        0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 r
+  value[2] (in)                                       0.012717   0.012717 r
+  mult_492_C497/a[2] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   0.012717 r
+  mult_492_C497/U939/Y (BUFX2)                        0.196654   0.209371 r
+  mult_492_C497/U736/CO (CMPR42X1)                    0.322179   0.531550 f
+  mult_492_C497/U705/S (CMPR42X1)                     0.214449   0.745999 f
+  mult_492_C497/U611/Y (OR2X2)                        0.056132   0.802131 f
+  mult_492_C497/U594/Y (AOI21X1)                      0.045586   0.847717 r
+  mult_492_C497/U97/Y (OAI21X1)                       0.033388   0.881105 f
+  mult_492_C497/U597/Y (AOI21X1)                      0.044239   0.925344 r
+  mult_492_C497/U89/Y (OAI21X1)                       0.033388   0.958732 f
+  mult_492_C497/U559/Y (AOI21X1)                      0.044239   1.002972 r
+  mult_492_C497/U81/Y (OAI21X1)                       0.033388   1.036360 f
+  mult_492_C497/U562/Y (AOI21X1)                      0.044239   1.080599 r
+  mult_492_C497/U73/Y (OAI21X1)                       0.033388   1.113987 f
+  mult_492_C497/U565/Y (AOI21X1)                      0.044239   1.158226 r
+  mult_492_C497/U65/Y (OAI21X1)                       0.028736   1.186962 f
+  mult_492_C497/U572/Y (OAI2BB1X1)                    0.080328   1.267290 f
+  mult_492_C497/U58/CO (ADDFX1)                       0.104646   1.371936 f
+  mult_492_C497/U57/CO (ADDFX1)                       0.105454   1.477390 f
+  mult_492_C497/U56/CO (ADDFX1)                       0.105454   1.582844 f
+  mult_492_C497/U55/CO (ADDFX1)                       0.105454   1.688298 f
+  mult_492_C497/U54/CO (ADDFX1)                       0.105454   1.793752 f
+  mult_492_C497/U53/CO (ADDFX1)                       0.105454   1.899206 f
+  mult_492_C497/U52/CO (ADDFX1)                       0.105454   2.004660 f
+  mult_492_C497/U51/CO (ADDFX1)                       0.105454   2.110114 f
+  mult_492_C497/U50/CO (ADDFX1)                       0.105454   2.215568 f
+  mult_492_C497/U49/CO (ADDFX1)                       0.105454   2.321022 f
+  mult_492_C497/U48/CO (ADDFX1)                       0.105454   2.426476 f
+  mult_492_C497/U47/CO (ADDFX1)                       0.105454   2.531930 f
+  mult_492_C497/U46/CO (ADDFX1)                       0.105454   2.637384 f
+  mult_492_C497/U45/CO (ADDFX1)                       0.105454   2.742838 f
+  mult_492_C497/U44/CO (ADDFX1)                       0.105454   2.848292 f
+  mult_492_C497/U43/CO (ADDFX1)                       0.105454   2.953746 f
+  mult_492_C497/U42/CO (ADDFX1)                       0.105454   3.059200 f
+  mult_492_C497/U41/CO (ADDFX1)                       0.105454   3.164654 f
+  mult_492_C497/U40/CO (ADDFX1)                       0.105454   3.270108 f
+  mult_492_C497/U39/CO (ADDFX1)                       0.105454   3.375562 f
+  mult_492_C497/U38/CO (ADDFX1)                       0.105454   3.481016 f
+  mult_492_C497/U37/CO (ADDFX1)                       0.105454   3.586470 f
+  mult_492_C497/U36/CO (ADDFX1)                       0.105454   3.691924 f
+  mult_492_C497/U35/CO (ADDFX1)                       0.105454   3.797378 f
+  mult_492_C497/U34/CO (ADDFX1)                       0.105454   3.902832 f
+  mult_492_C497/U33/CO (ADDFX1)                       0.105454   4.008286 f
+  mult_492_C497/U32/CO (ADDFX1)                       0.105454   4.113739 f
+  mult_492_C497/U31/CO (ADDFX1)                       0.105454   4.219193 f
+  mult_492_C497/U30/CO (ADDFX1)                       0.105454   4.324647 f
+  mult_492_C497/U29/CO (ADDFX1)                       0.105454   4.430101 f
+  mult_492_C497/U28/CO (ADDFX1)                       0.105454   4.535555 f
+  mult_492_C497/U27/CO (ADDFX1)                       0.105454   4.641009 f
+  mult_492_C497/U26/CO (ADDFX1)                       0.105454   4.746463 f
+  mult_492_C497/U25/CO (ADDFX1)                       0.105454   4.851917 f
+  mult_492_C497/U24/CO (ADDFX1)                       0.105454   4.957371 f
+  mult_492_C497/U23/CO (ADDFX1)                       0.105454   5.062825 f
+  mult_492_C497/U22/CO (ADDFX1)                       0.105454   5.168279 f
+  mult_492_C497/U21/CO (ADDFX1)                       0.105454   5.273733 f
+  mult_492_C497/U20/CO (ADDFX1)                       0.105454   5.379187 f
+  mult_492_C497/U19/CO (ADDFX1)                       0.105454   5.484641 f
+  mult_492_C497/U18/CO (ADDFX1)                       0.105454   5.590095 f
+  mult_492_C497/U17/CO (ADDFX1)                       0.105454   5.695549 f
+  mult_492_C497/U16/CO (ADDFX1)                       0.105454   5.801003 f
+  mult_492_C497/U15/CO (ADDFX1)                       0.105454   5.906457 f
+  mult_492_C497/U14/CO (ADDFX1)                       0.105454   6.011911 f
+  mult_492_C497/U13/CO (ADDFX1)                       0.105454   6.117365 f
+  mult_492_C497/U12/CO (ADDFX1)                       0.105454   6.222819 f
+  mult_492_C497/U11/CO (ADDFX1)                       0.105454   6.328273 f
+  mult_492_C497/U10/CO (ADDFX1)                       0.105454   6.433727 f
+  mult_492_C497/U9/CO (ADDFX1)                        0.105536   6.539263 f
+  mult_492_C497/U8/CO (ADDFX1)                        0.105529   6.644792 f
+  mult_492_C497/U7/CO (ADDFX1)                        0.105596   6.750388 f
+  mult_492_C497/U6/CO (ADDFX1)                        0.105614   6.856002 f
+  mult_492_C497/U5/CO (ADDFX1)                        0.105592   6.961594 f
+  mult_492_C497/U4/S (ADDFX1)                         0.088727   7.050321 f
+  mult_492_C497/product[78] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   7.050321 f
+  add_494_C497/A[22] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   7.050321 f
+  add_494_C497/U50/CO (ADDHX1)                        0.067858   7.118178 f
+  add_494_C497/U40/Y (XOR2X1)                         0.068733   7.186911 r
+  add_494_C497/SUM[23] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   7.186911 r
+  result[23] (out)                                    0.000000   7.186911 r
+  data arrival time                                              7.186911
+
+  clock module_clk (rise edge)                        10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               0.000000   9.800000
+  data required time                                             9.800000
+  --------------------------------------------------------------------------
+  data required time                                             9.800000
+  data arrival time                                              -7.186911
+  --------------------------------------------------------------------------
+  slack (MET)                                                    2.613089
+
+
+1

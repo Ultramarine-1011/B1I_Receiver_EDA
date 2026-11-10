@@ -1,9 +1,11 @@
-param([ValidateSet('arithmetic','constant','loop','tracking','fll','six','recovery')][string]$Task='arithmetic')
+param([ValidateSet('arithmetic','constant','loop','tracking','fll','six','recovery')][string]$Task='arithmetic',
+      [string]$EvidenceGroup='')
 $ErrorActionPreference='Stop'
 $PSNativeCommandUseErrorActionPreference=$false
 $experiment=Split-Path -Parent $PSScriptRoot
 $root=Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $experiment))
 $report=Join-Path $experiment "evidence/$Task"
+if($EvidenceGroup){$report=Join-Path $experiment "evidence/$EvidenceGroup/$Task"}
 $work=Join-Path $experiment 'work'
 New-Item -ItemType Directory -Force $report,$work | Out-Null
 function LinuxPath([string]$path) {

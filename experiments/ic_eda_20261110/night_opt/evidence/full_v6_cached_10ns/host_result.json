@@ -1,0 +1,13 @@
+{
+  "host_elapsed_s": 470.18799999996554,
+  "host_deadline_signalled": false,
+  "attached_existing_job": false,
+  "budget_s": 1200,
+  "run": "/home/ICer/ic_eda_night_20261110/runs/full_v6_cached_10ns",
+  "result": {
+    "stop_reason": null,
+    "monotonic_elapsed_s": 433.72999999999956,
+    "time_report_nonempty": true,
+    "return_code": 0
+  }
+}

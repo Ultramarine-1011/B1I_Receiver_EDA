@@ -1,5 +1,116 @@
 [
   {
+    "label": "cached_dc_preflight",
+    "process": {
+      "stop_reason": null,
+      "monotonic_elapsed_s": 4.100000000002183,
+      "time_report_nonempty": true,
+      "return_code": 1
+    },
+    "wall_seconds": 3.89,
+    "peak_rss_kib": 312932.0,
+    "dc_error_lines": [
+      "Error: 'tracking_atan' doesn't specify a unique design",
+      "Error: 'tracking_divide_aid' doesn't specify a unique design",
+      "Error: 'tracking_divide_step' doesn't specify a unique design",
+      "Error: 'tracking_ratio_code' doesn't specify a unique design",
+      "Error: 'tracking_ratio_phase' doesn't specify a unique design",
+      "Error: 'tracking_atan' doesn't specify a unique design"
+    ],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 6.562000000034459,
+    "completed": false
+  },
+  {
+    "label": "cached_dc_preflight_fixed",
+    "process": {
+      "stop_reason": null,
+      "monotonic_elapsed_s": 13.829999999998108,
+      "time_report_nonempty": true,
+      "return_code": 0
+    },
+    "wall_seconds": 13.6,
+    "peak_rss_kib": 476836.0,
+    "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 15.812999999965541,
+    "completed": true,
+    "stage": "elaboration_only"
+  },
+  {
+    "label": "full_v5_r4_signed_10ns",
+    "process": {
+      "stop_reason": null,
+      "monotonic_elapsed_s": 1135.1699999999983,
+      "time_report_nonempty": true,
+      "return_code": 1
+    },
+    "wall_seconds": 1188.02,
+    "peak_rss_kib": 853372.0,
+    "dc_error_lines": [],
+    "host_deadline_signalled": true,
+    "host_elapsed_s": 1188.5929999999935,
+    "completed": false
+  },
+  {
+    "label": "full_v6_cached_10ns",
+    "process": {
+      "stop_reason": null,
+      "monotonic_elapsed_s": 433.72999999999956,
+      "time_report_nonempty": true,
+      "return_code": 0
+    },
+    "wall_seconds": 464.37,
+    "peak_rss_kib": 635876.0,
+    "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 470.18799999996554,
+    "completed": true,
+    "cell_area_um2": 486269.185663,
+    "critical_path_length_ns": 28.38,
+    "logic_levels": 420.0,
+    "worst_setup_slack_ns": -18.646854,
+    "setup_wns_ns": -18.646854,
+    "setup_tns_ns": -3179.54,
+    "setup_violating_paths": 414.0,
+    "worst_hold_slack_ns": -0.16,
+    "hold_violating_paths": 1917.0,
+    "startpoint": "frontend/correlator/qp_reg[11]",
+    "endpoint": "code_step_q_reg[27]",
+    "unmapped_cells": 0.0
+  },
+  {
+    "label": "full_v6_hier_10ns",
+    "process": {
+      "stop_reason": null,
+      "monotonic_elapsed_s": 1121.119999999999,
+      "time_report_nonempty": true,
+      "return_code": 1
+    },
+    "wall_seconds": 1188.66,
+    "peak_rss_kib": 598056.0,
+    "dc_error_lines": [],
+    "host_deadline_signalled": true,
+    "host_elapsed_s": 1190.765999999945,
+    "completed": false
+  },
+  {
+    "label": "hier_dc_preflight",
+    "process": {
+      "stop_reason": null,
+      "monotonic_elapsed_s": 2.569999999999709,
+      "time_report_nonempty": true,
+      "return_code": 0
+    },
+    "wall_seconds": 2.56,
+    "peak_rss_kib": 260020.0,
+    "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 3.531000000075437,
+    "completed": true,
+    "stage": "elaboration_only"
+  },
+  {
     "label": "nr_29",
     "process": {
       "stop_reason": null,
@@ -10,6 +121,8 @@
     "wall_seconds": 23.25,
     "peak_rss_kib": 278704.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 24.953000000095926,
     "completed": true,
     "cell_area_um2": 17545.450047,
     "critical_path_length_ns": 8.73,
@@ -35,6 +148,8 @@
     "wall_seconds": 116.84,
     "peak_rss_kib": 301864.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 120.01599999994505,
     "completed": true,
     "cell_area_um2": 39631.436171,
     "critical_path_length_ns": 8.76,
@@ -60,6 +175,8 @@
     "wall_seconds": 280.21,
     "peak_rss_kib": 403644.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 283.0469999999041,
     "completed": true,
     "cell_area_um2": 114929.542286,
     "critical_path_length_ns": 8.73,
@@ -85,6 +202,8 @@
     "wall_seconds": 68.96000000000001,
     "peak_rss_kib": 312372.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 71.03099999995902,
     "completed": true,
     "cell_area_um2": 49580.396742,
     "critical_path_length_ns": 8.75,
@@ -110,6 +229,8 @@
     "wall_seconds": 13.32,
     "peak_rss_kib": 334444.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 15.75,
     "completed": true,
     "cell_area_um2": 23779.425491,
     "critical_path_length_ns": 8.73,
@@ -135,6 +256,8 @@
     "wall_seconds": 14.9,
     "peak_rss_kib": 275708.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 18.859000000054948,
     "completed": true,
     "cell_area_um2": 17314.718844,
     "critical_path_length_ns": 8.73,
@@ -160,6 +283,8 @@
     "wall_seconds": 92.15,
     "peak_rss_kib": 304440.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 0.2029999999795109,
     "completed": true,
     "cell_area_um2": 41266.311398,
     "critical_path_length_ns": 8.73,
@@ -185,6 +310,8 @@
     "wall_seconds": 44.79,
     "peak_rss_kib": 315212.0,
     "dc_error_lines": [],
+    "host_deadline_signalled": false,
+    "host_elapsed_s": 46.43700000003446,
     "completed": true,
     "cell_area_um2": 32080.809748,
     "critical_path_length_ns": 8.73,

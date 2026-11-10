@@ -1,0 +1,38 @@
+[
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\rtl\\tracking_channel_minimal.sv",
+    "sha256": "ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\work\\norm_probes.sv",
+    "sha256": "529f1b94494312af993e28dc9fb12f6a7def15cd6a7c969c63687c478b0c4b56"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\work\\loop_probes.sv",
+    "sha256": "a60f1127758eb0229e281f78065949fc03340a9ee85620735653fa68c75f5ee5"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\work\\constant_division_probe.sv",
+    "sha256": "417d9d3934e441167e47da532ca3714f908bb82fd48abbbebf3d5b26f0098f05"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\work\\public_prompt.txt",
+    "sha256": "ce2a4ffa708b00cbfa0f3c8555ee711880cc04730642c0ffde186eecd8c3a149"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\tb\\tb_constant_division_equivalence.sv",
+    "sha256": "c4cb4b77ba6e1d6d7a30f3f4365ff4d395efe7e23225f8fbd9d001b626455a45"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\tb\\tb_divider_equivalence.sv",
+    "sha256": "27e5cd768b770d5d498ce8361bb3c35cfb2a94f9dea83337424d3eb1876c9754"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\tb\\tb_loop_equivalence.sv",
+    "sha256": "30d4e5dd0873c8bf78d98483ae8afdbe4d2ea0f6b6a242439c2bf4b56564b371"
+  },
+  {
+    "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\tb\\tb_radix_equivalence.sv",
+    "sha256": "e37e7dd0bfb2ef98db52e2fc8a1e198f6bb7f83acdbf52e026f19b56825454cf"
+  }
+]

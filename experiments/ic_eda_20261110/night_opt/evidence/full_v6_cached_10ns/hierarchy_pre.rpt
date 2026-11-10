@@ -1,0 +1,1114 @@
+ 
+****************************************
+Report : hierarchy
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 00:17:27 2026
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+Attributes:
+    r - licensed design
+
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+    *ADD_TC_OP_2_16_16
+        DW01_add_width16
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_22_20_23
+        DW01_add_width23
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_31_14_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_31_22_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_31_24_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_11_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_16_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_23_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_23_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_24_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_29_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_30_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_32_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_33_22_34
+        DW01_add_width34
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_56_56_57
+        DW01_add_width57
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_3_1_3
+        DW01_inc_width3
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_XOR2                                                                                                gtech
+    *ADD_UNS_OP_5_1_5
+        DW01_inc_width5
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_XOR2                                                                                                gtech
+    *ADD_UNS_OP_6_1_6
+        DW01_inc_width6
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_XOR2                                                                                                gtech
+    *ADD_UNS_OP_8_1_8
+        DW01_add_width8
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_29_29_29
+        DW01_add_width29
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_31_32_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_56_56_57
+        DW01_add_width57
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_57_57_58
+        DW01_add_width58
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_64_14_64
+        DW01_add_width64
+            GTECH_ADD_ABC                                                                                             gtech
+    *EQ_UNS_OP_64_64_1
+        DW01_cmp6_width64
+            GTECH_AND_NOT                                                                                             gtech
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_3_2_1
+        DW01_cmp2_width3
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_5_4_1
+        DW01_cmp2_width5
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_6_5_1
+        DW01_cmp2_width6
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_57_57_1
+        DW01_cmp2_width57
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_23_22_1
+        DW01_cmp2_width23
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_32_14_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_32_21_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_32_31_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_33_22_1
+        DW01_cmp2_width33
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_34_31_1
+        DW01_cmp2_width34
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_UNS_OP_64_44_1
+        DW01_cmp2_width64
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_UNS_OP_64_45_1
+        DW01_cmp2_width64
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_23_22_1
+        DW01_cmp2_width23
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_28_1_1
+        DW01_cmp2_width28
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_32_14_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_32_21_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_32_31_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_33_22_1
+        DW01_cmp2_width33
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_34_31_1
+        DW01_cmp2_width34
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_UNS_OP_32_24_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_UNS_OP_64_64_1
+        DW01_cmp2_width64
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *MULT_TC_OP_11_33_44
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_15_7_22
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_15_15_30
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_15_17_32
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_16_11_26
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_16_11_27
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_16_20_36
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_18_5_23
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_18_15_31
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_26_13_38
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_28_28_56
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_33_12_45
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_34_12_46
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_45_13_48
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_UNS_OP_32_1_32
+        DW02_mult                                                                                                               r
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *SUB_TC_OP_1_18_18
+        DW01_sub_width18
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_1_28_29
+        DW01_sub_width29
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_15_32_33
+        DW01_sub_width33
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_16_32_33
+        DW01_sub_width33
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_30_33_34
+        DW01_sub_width34
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_44_32_45
+        DW01_sub_width45
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_56_56_57
+        DW01_sub_width57
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_UNS_OP_8_1_8
+        DW01_sub_width8
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_UNS_OP_57_57_57
+        DW01_sub_width57
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    GTECH_AND2                                                                                                        gtech
+    GTECH_BUF                                                                                                         gtech
+    GTECH_NOT                                                                                                         gtech
+    GTECH_OR2                                                                                                         gtech
+    GTECH_XOR2                                                                                                        gtech
+    tracking_atan                                                                                                               r
+        ADDHX1                                                                                                        typical
+        ADDHX2                                                                                                        typical
+        ADDHXL                                                                                                        typical
+        AND2X1                                                                                                        typical
+        AND2X2                                                                                                        typical
+        AND2X4                                                                                                        typical
+        AND2X6                                                                                                        typical
+        AND2X8                                                                                                        typical
+        AND2XL                                                                                                        typical
+        AND3X2                                                                                                        typical
+        AND3X4                                                                                                        typical
+        AND4X2                                                                                                        typical
+        AND4X4                                                                                                        typical
+        AND4XL                                                                                                        typical
+        AO2B2BX2                                                                                                      typical
+        AO2B2BX4                                                                                                      typical
+        AO2B2X1                                                                                                       typical
+        AO2B2X2                                                                                                       typical
+        AO2B2X4                                                                                                       typical
+        AO2B2XL                                                                                                       typical
+        AO21X1                                                                                                        typical
+        AO21X2                                                                                                        typical
+        AO21X4                                                                                                        typical
+        AO21XL                                                                                                        typical
+        AO22X1                                                                                                        typical
+        AO22X2                                                                                                        typical
+        AO22X4                                                                                                        typical
+        AOI2B1X1                                                                                                      typical
+        AOI2B1X2                                                                                                      typical
+        AOI2B1X4                                                                                                      typical
+        AOI2B1XL                                                                                                      typical
+        AOI2BB1X2                                                                                                     typical
+        AOI2BB1X4                                                                                                     typical
+        AOI2BB1XL                                                                                                     typical
+        AOI2BB2X2                                                                                                     typical
+        AOI21BX1                                                                                                      typical
+        AOI21BX2                                                                                                      typical
+        AOI21BX4                                                                                                      typical
+        AOI21BXL                                                                                                      typical
+        AOI21X1                                                                                                       typical
+        AOI21X2                                                                                                       typical
+        AOI21X3                                                                                                       typical
+        AOI21X4                                                                                                       typical
+        AOI21X6                                                                                                       typical
+        AOI21X8                                                                                                       typical
+        AOI21XL                                                                                                       typical
+        AOI22X1                                                                                                       typical
+        AOI22X2                                                                                                       typical
+        AOI22XL                                                                                                       typical
+        AOI31X1                                                                                                       typical
+        AOI31X2                                                                                                       typical
+        AOI31XL                                                                                                       typical
+        AOI32X1                                                                                                       typical
+        AOI32X2                                                                                                       typical
+        AOI32XL                                                                                                       typical
+        AOI211X1                                                                                                      typical
+        AOI211X2                                                                                                      typical
+        AOI211X4                                                                                                      typical
+        AOI211XL                                                                                                      typical
+        AOI221X1                                                                                                      typical
+        AOI222X1                                                                                                      typical
+        AOI222XL                                                                                                      typical
+        BUFX2                                                                                                         typical
+        BUFX3                                                                                                         typical
+        BUFX4                                                                                                         typical
+        BUFX5                                                                                                         typical
+        BUFX6                                                                                                         typical
+        BUFX8                                                                                                         typical
+        BUFX10                                                                                                        typical
+        BUFX12                                                                                                        typical
+        BUFX14                                                                                                        typical
+        BUFX18                                                                                                        typical
+        BUFX20                                                                                                        typical
+        CLKAND2X2                                                                                                     typical
+        CLKAND2X3                                                                                                     typical
+        CLKAND2X4                                                                                                     typical
+        CLKAND2X6                                                                                                     typical
+        CLKAND2X8                                                                                                     typical
+        CLKBUFX2                                                                                                      typical
+        CLKBUFX4                                                                                                      typical
+        CLKBUFX6                                                                                                      typical
+        CLKBUFX20                                                                                                     typical
+        CLKBUFX40                                                                                                     typical
+        CLKINVX1                                                                                                      typical
+        CLKINVX2                                                                                                      typical
+        CLKINVX3                                                                                                      typical
+        CLKINVX4                                                                                                      typical
+        CLKINVX6                                                                                                      typical
+        CLKINVX8                                                                                                      typical
+        CLKINVX12                                                                                                     typical
+        CLKINVX20                                                                                                     typical
+        CLKINVX24                                                                                                     typical
+        CLKINVX40                                                                                                     typical
+        CLKNAND2X2                                                                                                    typical
+        CLKNAND2X4                                                                                                    typical
+        CLKNAND2X8                                                                                                    typical
+        CLKNAND2X12                                                                                                   typical
+        DLY1X1                                                                                                        typical
+        INVX1                                                                                                         typical
+        INVX2                                                                                                         typical
+        INVX3                                                                                                         typical
+        INVX4                                                                                                         typical
+        INVX5                                                                                                         typical
+        INVX6                                                                                                         typical
+        INVX8                                                                                                         typical
+        INVX10                                                                                                        typical
+        INVX12                                                                                                        typical
+        INVX14                                                                                                        typical
+        INVX16                                                                                                        typical
+        INVX20                                                                                                        typical
+        INVXL                                                                                                         typical
+        MX2X1                                                                                                         typical
+        MX2X2                                                                                                         typical
+        MX2X3                                                                                                         typical
+        MX2X4                                                                                                         typical
+        MX2XL                                                                                                         typical
+        MXI2X1                                                                                                        typical
+        MXI2X2                                                                                                        typical
+        MXI2XL                                                                                                        typical
+        NAND2BX1                                                                                                      typical
+        NAND2BX2                                                                                                      typical
+        NAND2BX4                                                                                                      typical
+        NAND2BX8                                                                                                      typical
+        NAND2BXL                                                                                                      typical
+        NAND2X1                                                                                                       typical
+        NAND2X2                                                                                                       typical
+        NAND2X3                                                                                                       typical
+        NAND2X4                                                                                                       typical
+        NAND2X6                                                                                                       typical
+        NAND2X8                                                                                                       typical
+        NAND2XL                                                                                                       typical
+        NAND3BX1                                                                                                      typical
+        NAND3BX2                                                                                                      typical
+        NAND3BX4                                                                                                      typical
+        NAND3BXL                                                                                                      typical
+        NAND3X1                                                                                                       typical
+        NAND3X2                                                                                                       typical
+        NAND3X3                                                                                                       typical
+        NAND3X4                                                                                                       typical
+        NAND3XL                                                                                                       typical
+        NAND4BBX2                                                                                                     typical
+        NAND4BX2                                                                                                      typical
+        NAND4BX4                                                                                                      typical
+        NAND4X2                                                                                                       typical
+        NAND4X4                                                                                                       typical
+        NOR2BX1                                                                                                       typical
+        NOR2BX2                                                                                                       typical
+        NOR2BXL                                                                                                       typical
+        NOR2X1                                                                                                        typical
+        NOR2X2                                                                                                        typical
+        NOR2X3                                                                                                        typical
+        NOR2X4                                                                                                        typical
+        NOR2X6                                                                                                        typical
+        NOR2X8                                                                                                        typical
+        NOR2XL                                                                                                        typical
+        NOR3BX1                                                                                                       typical
+        NOR3BX2                                                                                                       typical
+        NOR3BX4                                                                                                       typical
+        NOR3BXL                                                                                                       typical
+        NOR3X1                                                                                                        typical
+        NOR3X2                                                                                                        typical
+        NOR3X4                                                                                                        typical
+        NOR3XL                                                                                                        typical
+        NOR4BBX1                                                                                                      typical
+        NOR4BBX2                                                                                                      typical
+        NOR4BBX4                                                                                                      typical
+        NOR4BX1                                                                                                       typical
+        NOR4BX2                                                                                                       typical
+        NOR4BX4                                                                                                       typical
+        NOR4BXL                                                                                                       typical
+        NOR4X1                                                                                                        typical
+        NOR4X2                                                                                                        typical
+        NOR4X4                                                                                                        typical
+        NOR4X6                                                                                                        typical
+        OA21X1                                                                                                        typical
+        OA21X2                                                                                                        typical
+        OA21X4                                                                                                        typical
+        OA21XL                                                                                                        typical
+        OA22X1                                                                                                        typical
+        OA22X2                                                                                                        typical
+        OA22X4                                                                                                        typical
+        OA22XL                                                                                                        typical
+        OAI2B1X1                                                                                                      typical
+        OAI2B1X2                                                                                                      typical
+        OAI2B1X4                                                                                                      typical
+        OAI2B1XL                                                                                                      typical
+        OAI2B2X1                                                                                                      typical
+        OAI2B2XL                                                                                                      typical
+        OAI2B11X2                                                                                                     typical
+        OAI2BB1X1                                                                                                     typical
+        OAI2BB1X2                                                                                                     typical
+        OAI2BB1X4                                                                                                     typical
+        OAI2BB1XL                                                                                                     typical
+        OAI2BB2X1                                                                                                     typical
+        OAI2BB2X2                                                                                                     typical
+        OAI2BB2X4                                                                                                     typical
+        OAI2BB2XL                                                                                                     typical
+        OAI21BX1                                                                                                      typical
+        OAI21BX2                                                                                                      typical
+        OAI21BX4                                                                                                      typical
+        OAI21BXL                                                                                                      typical
+        OAI21X1                                                                                                       typical
+        OAI21X2                                                                                                       typical
+        OAI21X3                                                                                                       typical
+        OAI21X4                                                                                                       typical
+        OAI21X6                                                                                                       typical
+        OAI21X8                                                                                                       typical
+        OAI21XL                                                                                                       typical
+        OAI31X1                                                                                                       typical
+        OAI31X2                                                                                                       typical
+        OAI31X4                                                                                                       typical
+        OAI31XL                                                                                                       typical
+        OAI33X1                                                                                                       typical
+        OAI211X2                                                                                                      typical
+        OAI211X4                                                                                                      typical
+        OAI211XL                                                                                                      typical
+        OAI221X2                                                                                                      typical
+        OAI221X4                                                                                                      typical
+        OAI221XL                                                                                                      typical
+        OR2X1                                                                                                         typical
+        OR2X2                                                                                                         typical
+        OR2X4                                                                                                         typical
+        OR2X6                                                                                                         typical
+        OR2X8                                                                                                         typical
+        OR2XL                                                                                                         typical
+        OR3X1                                                                                                         typical
+        OR3X2                                                                                                         typical
+        OR3X4                                                                                                         typical
+        OR3X6                                                                                                         typical
+        OR3XL                                                                                                         typical
+        OR4X1                                                                                                         typical
+        OR4X2                                                                                                         typical
+        OR4X4                                                                                                         typical
+        XNOR2X1                                                                                                       typical
+        XNOR2X2                                                                                                       typical
+        XNOR2X4                                                                                                       typical
+        XNOR2XL                                                                                                       typical
+        XOR2X1                                                                                                        typical
+        XOR2X2                                                                                                        typical
+        XOR2X4                                                                                                        typical
+        XOR2X8                                                                                                        typical
+        XOR2XL                                                                                                        typical
+    tracking_divide_aid                                                                                                         r
+        ADDFX1                                                                                                        typical
+        ADDHX1                                                                                                        typical
+        AND2X2                                                                                                        typical
+        AOI222XL                                                                                                      typical
+        BUFX2                                                                                                         typical
+        CLKNAND2X2                                                                                                    typical
+        CMPR42X1                                                                                                      typical
+        INVX2                                                                                                         typical
+        NAND2X2                                                                                                       typical
+        XNOR2X1                                                                                                       typical
+        XOR2X1                                                                                                        typical
+    tracking_divide_step                                                                                                        r
+        ADDFX1                                                                                                        typical
+        ADDHX1                                                                                                        typical
+        AND2X2                                                                                                        typical
+        AOI21X1                                                                                                       typical
+        BUFX2                                                                                                         typical
+        CMPR42X1                                                                                                      typical
+        INVX2                                                                                                         typical
+        NAND2X2                                                                                                       typical
+        NOR2X2                                                                                                        typical
+        OAI2BB1X1                                                                                                     typical
+        OAI21X1                                                                                                       typical
+        OR2X2                                                                                                         typical
+        XNOR2X1                                                                                                       typical
+        XOR2X1                                                                                                        typical
+    tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+        *ADD_UNS_OP_14_1_14
+            DW01_inc_width14
+                GTECH_ADD_AB                                                                                          gtech
+                GTECH_NOT                                                                                             gtech
+                GTECH_XOR2                                                                                            gtech
+        *ADD_UNS_OP_28_28_29
+            DW01_add_width29
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_32_1_32
+            DW01_add_width32
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_32_32_32
+            DW01_add_width32
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_42_29_42
+            DW01_add_width42
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_43_33_44
+            DW01_add_width44
+                GTECH_ADD_ABC                                                                                         gtech
+        *GEQ_UNS_OP_44_43_1
+            DW01_cmp2_width44
+                GTECH_NAND2                                                                                           gtech
+                GTECH_NOT                                                                                             gtech
+                GTECH_OR_NOT                                                                                          gtech
+                GTECH_XNOR2                                                                                           gtech
+                GTECH_XOR2                                                                                            gtech
+        *MULT_TC_OP_14_14_28
+            DW02_mult                                                                                                           r
+                GTECH_ADD_AB                                                                                          gtech
+                GTECH_ADD_ABC                                                                                         gtech
+                GTECH_AND2                                                                                            gtech
+                GTECH_NOR2                                                                                            gtech
+                GTECH_NOT                                                                                             gtech
+                GTECH_OR2                                                                                             gtech
+                GTECH_XNOR2                                                                                           gtech
+                GTECH_XOR2                                                                                            gtech
+                GTECH_XOR3                                                                                            gtech
+        *SUB_UNS_OP_43_43_43
+            DW01_sub_width43
+                GTECH_ADD_ABC                                                                                         gtech
+                GTECH_NOT                                                                                             gtech
+        GTECH_AND2                                                                                                    gtech
+        GTECH_BUF                                                                                                     gtech
+        GTECH_NOT                                                                                                     gtech
+        GTECH_OR2                                                                                                     gtech
+        carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+            *ADD_UNS_OP_10_9_10
+                DW01_add_width10
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_32_22_32
+                DW01_add_width32
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_32_32_32
+                ...
+            *MULT_TC_OP_3_12_14
+                DW02_mult                                                                                                       r
+                    GTECH_ADD_AB                                                                                      gtech
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_AND2                                                                                        gtech
+                    GTECH_NOR2                                                                                        gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR2                                                                                         gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+                    GTECH_XOR3                                                                                        gtech
+            *SUB_TC_OP_1_12_12
+                DW01_sub_width12
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_TC_OP_1_14_14
+                DW01_sub_width14
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_UNS_OP_9_8_9
+                DW01_sub_width9
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+        code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+            *ADD_UNS_OP_32_1_32
+                ...
+            *ADD_UNS_OP_43_31_44
+                DW01_add_width44
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_43_33_44
+                ...
+            *EQ_UNS_OP_11_11_1
+                DW01_cmp6_width11
+                    GTECH_AND_NOT                                                                                     gtech
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOR2                                                                                        gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_6_3_1
+                DW01_cmp2_width6
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_43_31_1
+                DW01_cmp2_width43
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_43_43_1
+                DW01_cmp2_width43
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_44_43_1
+                ...
+            *LEQ_UNS_OP_6_6_1
+                DW01_cmp2_width6
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *NE_UNS_OP_11_11_1
+                DW01_cmp6_width11
+                    GTECH_AND_NOT                                                                                     gtech
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOR2                                                                                        gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *SUB_UNS_OP_31_43_43
+                DW01_sub_width43
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_UNS_OP_43_31_43
+                DW01_sub_width43
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_UNS_OP_43_43_43
+                ...
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            b1i_prn_gen
+                *ADD_UNS_OP_11_1_11
+                    DW01_inc_width11
+                        GTECH_ADD_AB                                                                                  gtech
+                        GTECH_NOT                                                                                     gtech
+                        GTECH_XOR2                                                                                    gtech
+                *GEQ_UNS_OP_6_3_1
+                    ...
+                *LEQ_UNS_OP_6_6_1
+                    ...
+                GTECH_AND2                                                                                            gtech
+                GTECH_BUF                                                                                             gtech
+                GTECH_NOT                                                                                             gtech
+                GTECH_OR2                                                                                             gtech
+                GTECH_XOR2                                                                                            gtech
+        epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+            *ADD_TC_OP_28_28_28
+                DW01_add_width28
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_14_1_14
+                ...
+            *SUB_TC_OP_1_14_15
+                DW01_sub_width15
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+    tracking_ratio_code                                                                                                         r
+        ADDFHX1                                                                                                       typical
+        ADDFHX2                                                                                                       typical
+        ADDFHX4                                                                                                       typical
+        ADDFHXL                                                                                                       typical
+        ADDFX1                                                                                                        typical
+        ADDFX2                                                                                                        typical
+        ADDFXL                                                                                                        typical
+        ADDHX1                                                                                                        typical
+        AND2X2                                                                                                        typical
+        AND2X4                                                                                                        typical
+        AND2XL                                                                                                        typical
+        AND3X2                                                                                                        typical
+        AND4X2                                                                                                        typical
+        AO2B2X1                                                                                                       typical
+        AO2B2X2                                                                                                       typical
+        AO2B2X4                                                                                                       typical
+        AO2B2XL                                                                                                       typical
+        AO21X2                                                                                                        typical
+        AO21X4                                                                                                        typical
+        AO22X1                                                                                                        typical
+        AO22X2                                                                                                        typical
+        AO22XL                                                                                                        typical
+        AOI2BB1X4                                                                                                     typical
+        AOI21BX1                                                                                                      typical
+        AOI21BX2                                                                                                      typical
+        AOI21BXL                                                                                                      typical
+        AOI21X1                                                                                                       typical
+        AOI21X2                                                                                                       typical
+        AOI21X4                                                                                                       typical
+        AOI21X6                                                                                                       typical
+        AOI21X8                                                                                                       typical
+        AOI21XL                                                                                                       typical
+        AOI22X1                                                                                                       typical
+        AOI22X2                                                                                                       typical
+        AOI22XL                                                                                                       typical
+        BUFX2                                                                                                         typical
+        BUFX3                                                                                                         typical
+        BUFX4                                                                                                         typical
+        BUFX5                                                                                                         typical
+        BUFX6                                                                                                         typical
+        BUFX8                                                                                                         typical
+        BUFX10                                                                                                        typical
+        BUFX12                                                                                                        typical
+        BUFX20                                                                                                        typical
+        CLKBUFX4                                                                                                      typical
+        CLKINVX1                                                                                                      typical
+        CLKINVX2                                                                                                      typical
+        CLKINVX3                                                                                                      typical
+        CLKINVX4                                                                                                      typical
+        CLKINVX6                                                                                                      typical
+        CLKINVX16                                                                                                     typical
+        CLKNAND2X2                                                                                                    typical
+        CLKNAND2X4                                                                                                    typical
+        INVX1                                                                                                         typical
+        INVX2                                                                                                         typical
+        INVX3                                                                                                         typical
+        INVX4                                                                                                         typical
+        INVX6                                                                                                         typical
+        INVX12                                                                                                        typical
+        INVX16                                                                                                        typical
+        INVXL                                                                                                         typical
+        NAND2BX1                                                                                                      typical
+        NAND2BX2                                                                                                      typical
+        NAND2BX4                                                                                                      typical
+        NAND2BX8                                                                                                      typical
+        NAND2BXL                                                                                                      typical
+        NAND2X1                                                                                                       typical
+        NAND2X2                                                                                                       typical
+        NAND2X4                                                                                                       typical
+        NAND2XL                                                                                                       typical
+        NAND3X2                                                                                                       typical
+        NAND3X3                                                                                                       typical
+        NAND3X4                                                                                                       typical
+        NAND3XL                                                                                                       typical
+        NAND4BX2                                                                                                      typical
+        NAND4BX4                                                                                                      typical
+        NAND4X2                                                                                                       typical
+        NOR2BX1                                                                                                       typical
+        NOR2BXL                                                                                                       typical
+        NOR2X1                                                                                                        typical
+        NOR2X2                                                                                                        typical
+        NOR2X3                                                                                                        typical
+        NOR2X4                                                                                                        typical
+        NOR2X6                                                                                                        typical
+        NOR2X8                                                                                                        typical
+        NOR2XL                                                                                                        typical
+        NOR3X1                                                                                                        typical
+        NOR3X4                                                                                                        typical
+        NOR4BX2                                                                                                       typical
+        NOR4BX4                                                                                                       typical
+        NOR4BXL                                                                                                       typical
+        NOR4X2                                                                                                        typical
+        NOR4XL                                                                                                        typical
+        OA21X1                                                                                                        typical
+        OA21X2                                                                                                        typical
+        OA21XL                                                                                                        typical
+        OAI2B1X1                                                                                                      typical
+        OAI2B1XL                                                                                                      typical
+        OAI2BB1X1                                                                                                     typical
+        OAI21BX1                                                                                                      typical
+        OAI21BX4                                                                                                      typical
+        OAI21BXL                                                                                                      typical
+        OAI21X1                                                                                                       typical
+        OAI21X2                                                                                                       typical
+        OAI21X3                                                                                                       typical
+        OAI21X4                                                                                                       typical
+        OAI21X8                                                                                                       typical
+        OAI21XL                                                                                                       typical
+        OAI32X4                                                                                                       typical
+        OR2X1                                                                                                         typical
+        OR2X2                                                                                                         typical
+        OR2X4                                                                                                         typical
+        OR2XL                                                                                                         typical
+        OR4X2                                                                                                         typical
+        OR4XL                                                                                                         typical
+        XNOR2X1                                                                                                       typical
+        XNOR2X2                                                                                                       typical
+        XNOR2X4                                                                                                       typical
+        XNOR2XL                                                                                                       typical
+        XOR2X1                                                                                                        typical
+        XOR2X2                                                                                                        typical
+        XOR2X8                                                                                                        typical
+        XOR2XL                                                                                                        typical
+    tracking_ratio_phase                                                                                                        r
+        AND2XL                                                                                                        typical
+        AOI21BX1                                                                                                      typical
+        AOI21BX2                                                                                                      typical
+        AOI21BXL                                                                                                      typical
+        AOI21X1                                                                                                       typical
+        AOI21X2                                                                                                       typical
+        AOI21X4                                                                                                       typical
+        AOI21X6                                                                                                       typical
+        AOI21X8                                                                                                       typical
+        AOI21XL                                                                                                       typical
+        BUFX2                                                                                                         typical
+        BUFX4                                                                                                         typical
+        BUFX12                                                                                                        typical
+        BUFX20                                                                                                        typical
+        CLKAND2X2                                                                                                     typical
+        CLKBUFX4                                                                                                      typical
+        CLKINVX2                                                                                                      typical
+        CLKINVX4                                                                                                      typical
+        CLKINVX6                                                                                                      typical
+        CLKINVX8                                                                                                      typical
+        CLKINVX24                                                                                                     typical
+        CLKMX2X3                                                                                                      typical
+        CLKNAND2X2                                                                                                    typical
+        INVX1                                                                                                         typical
+        INVX2                                                                                                         typical
+        INVX4                                                                                                         typical
+        INVX5                                                                                                         typical
+        INVX6                                                                                                         typical
+        INVX8                                                                                                         typical
+        INVX10                                                                                                        typical
+        INVX12                                                                                                        typical
+        INVXL                                                                                                         typical
+        MX2X1                                                                                                         typical
+        MX2X2                                                                                                         typical
+        MX2XL                                                                                                         typical
+        MXI2X1                                                                                                        typical
+        MXI2XL                                                                                                        typical
+        NAND2BX1                                                                                                      typical
+        NAND2BX2                                                                                                      typical
+        NAND2X1                                                                                                       typical
+        NAND2X2                                                                                                       typical
+        NAND2XL                                                                                                       typical
+        NAND3BX2                                                                                                      typical
+        NAND3XL                                                                                                       typical
+        NAND4BX2                                                                                                      typical
+        NOR2BXL                                                                                                       typical
+        NOR2X1                                                                                                        typical
+        NOR2X2                                                                                                        typical
+        NOR2X4                                                                                                        typical
+        NOR2XL                                                                                                        typical
+        NOR3X1                                                                                                        typical
+        NOR3XL                                                                                                        typical
+        NOR4BX2                                                                                                       typical
+        NOR4BXL                                                                                                       typical
+        NOR4XL                                                                                                        typical
+        OA21X1                                                                                                        typical
+        OA21X2                                                                                                        typical
+        OA21X4                                                                                                        typical
+        OA21XL                                                                                                        typical
+        OAI2B1XL                                                                                                      typical
+        OAI21X1                                                                                                       typical
+        OAI21X2                                                                                                       typical
+        OAI21X3                                                                                                       typical
+        OAI21X4                                                                                                       typical
+        OAI21XL                                                                                                       typical
+        OR4X2                                                                                                         typical
+        XNOR2X1                                                                                                       typical
+        XNOR2X4                                                                                                       typical
+        XNOR2XL                                                                                                       typical
+        XOR2X1                                                                                                        typical
+        XOR2XL                                                                                                        typical
+1

@@ -12,3 +12,16 @@
 - 本轮初次同步因遗漏远端 tb 目录失败，补齐后 SHA 校验通过。第一个模块探针的宿主启动连接等待超时，但独立客体监督器正常，DC 在 92.15 秒自然完成。宿主启动改成独立 nohup 命令后，其余作业均由宿主 monotonic 截止监督并保存实际结果。没有因此重复完整综合。
 - 23:24，六通道恢复最终退出 0，49104000 样本、50516937 拍、235 正确导航位，最长反压 4 拍，通道 2 真实丢锁与再次捕获，终态六锁。全部 V5 功能检查已通过。
 - 23:25，`night_sync.py` 冻结同步 SHA 后，`night_job.py channel full_v5_r4_signed_10ns 1200` 启动第 1 次完整综合。DC 为 O-2018.06-SP1，`ENABLE_FLL=1,ENABLE_CARRIER_AID=1`、TSMC90 typical、单核 `compile -map_effort medium`、B0 的 10 ns SDC。源/脚本快照在本 run，原始 B0 与 V4 保持不动。
+- 23:40，V5 稳定功能版本本地提交 `346606e`，只包含本实验。原始日志的 CRLF/行末空白保留，非 evidence 源码按 `cr-at-eol` 规则检查退出 0。
+- 23:45，第 1 次完整综合由宿主发 TERM，实际 1188.02 秒，峰值 RSS 853372 KiB，进程退出 1，宿主观测 1188.593 秒。最后中间负 slack 约 9.65 ns，多次端点为 carrier_step_word_reg[31]。没有完成报告或最终网表，不作为最终 PPA。
+- V6 将 DLL/PLL 比值、CORDIC、两种精确常数除法拆为五种纯组合模块、七个实例。函数体、顶层端口/参数及 always_ff 时序块统一行尾后文本相同。预检源码与最终 RTL SHA256 均为 `ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88`。Verilator 实际层次化环路 100625 组 18 字段、四个单通道场景的 32 输出逐拍、六通道正常及恢复均退出 0，样本/周期/导航位与 V5 相同，CSV 相同。结构证明在 `evidence/hier_preflight/structure.json`。
+- 23:48，V6 DC 仅展开预检退出 0，5 种模块/7 实例，LINT-32/33 为输入常零和符号扩展的预期连接。未执行 compile，不计完整综合次数。V6 重新生成的归一化、常数及完整环路探针在 Verilator/VCS 均退出 0。
+- 23:50，`night_job.py channel_hier full_v6_hier_10ns 1200` 开始第 2 次完整综合。所有算术块先用 10 ns 虚拟内部时钟和零内部 IO 延迟映射，再清除块约束、固定实际映射电路。完整顶层继续使用 B0 的 10 ns、1 ns 外部 IO 延迟及原负载，所有功能路径仍计时，无新增流水线或多周期例外。
+- 2026-11-11 00:10，第二次由宿主截止停止，五种算术块 DDC 已全部保存，顶层 compile 尚未开始。CORDIC 在 10 ns 内部预算下约占 17 分钟，另四块在剩余时间完成。第二次不是完整通道综合成功。
+- 00:14，映射块复用首次仅加载预检退出 1，同名 generic RTL 与 DDC 同时驻留导致 UID-13/UIO-92，原 generic 被优先解析。修正为清除这五个 generic design 再读取 DDC。失败日志保存在 `evidence/cached_dc_preflight`，没有启动第三次 compile。
+- 00:16，修正的复用预检 `cached_dc_preflight_fixed` 退出 0，五种实际映射模块、七实例，原 B0 约束检查完成。源 RTL SHA 与既有 V6 功能验证相同，缓存 DDC 哈希另存于各 run。
+- 00:17，`night_job.py cached full_v6_cached_10ns 1200` 启动第三次、最后一次完整尝试。复用第二次真实已映射块，完整顶层仍按原 10 ns SDC 综合、保存实际负 Slack 和全范围网表。此后不新增完整综合次数。
+- 00:25，第三次完整 DC 正常结束，退出 0，GNU time 墙钟 464.37 秒、峰值 635876 KiB，宿主观测 470.188 秒。`BASELINE_UNMAPPED 0`、`BASELINE_REPORTS_DONE B0`，完整网表 11330721 字节，DDC 3878656 字节，SDC 和全部报告已取回。最终面积 486269.185663 µm²、最差 setup −18.646854 ns、QOR TNS −3179.54 ns。
+- 00:31，检查实际 414 个 setup 违例端点求和为 −3179.539771 ns，最差 hold −0.162817 ns，1917 个 hold 违例。最终最差路径为 qp_reg[11]→PLL 比值→环路→carrier_conversion→feedback_aid→code_step_q_reg[27]，数据到达 28.381390 ns。原 B0 时钟、唯一异步复位例外、库/工具/DesignWare 哈希核对通过。设计警告中的三个常零位为 FLL 乘 1000 的低三位，五组短接位均为 DesignWare 符号扩展。
+- 最终来源检查发现早期 FLL 日志引用的临时 TB 被后续生成器重写了行尾，已用最终路径重新编译、实跑 FLL 两例逐拍比较，退出 0。当前源码、全部七类功能证据及 17 份正式来源 SHA 检查通过。
+- 00:42，`audit_postmap.py`、`validate_delivery.py --require-full`、`package_netlists.py` 均退出 0。网表与五个映射块 DDC 归档逐文件 SHA256 复核通过。虚拟机没有本轮 DC/VCS 进程，WSL 没有本轮仿真可执行程序。三次完整尝试结束，保存交接、创建最终本地提交并停止。

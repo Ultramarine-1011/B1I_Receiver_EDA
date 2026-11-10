@@ -1,0 +1,10 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 10 23:49 2026
+CONSTANT_DIVISION_EQUIVALENCE_PASS checks=210169 seed=c0de7631
+$finish called from file "/home/ICer/ic_eda_night_20261110/tb/tb_constant_division_equivalence.sv", line 58.
+$finish at simulation time            210169000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 210169000 ps
+CPU Time:      0.250 seconds;       Data structure size:   0.0Mb
+Tue Nov 10 23:49:22 2026

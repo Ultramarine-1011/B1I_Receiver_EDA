@@ -1,0 +1,15 @@
+{
+  "budget_s": 180.0, 
+  "cwd": "/home/ICer/ic_eda_night_20261110/runs/cached_dc_preflight/work", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_night_20261110/runs/cached_dc_preflight/reports/time.txt", 
+    "setsid", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "scripts/dc_cached_preflight.tcl"
+  ]
+}

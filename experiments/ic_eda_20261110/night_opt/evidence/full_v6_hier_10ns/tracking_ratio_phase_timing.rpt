@@ -1,0 +1,268 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : tracking_ratio_phase
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 00:08:56 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: denominator[9]
+              (input port clocked by module_clk)
+  Endpoint: result[0] (output port clocked by module_clk)
+  Path Group: module_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock module_clk (rise edge)                        0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 r
+  denominator[9] (in)                                 0.006499   0.006499 r
+  U713/Y (BUFX4)                                      0.084532   0.091031 r
+  U1270/Y (XNOR2X1)                                   0.062923   0.153954 f
+  U791/Y (NOR4BX2)                                    0.061128   0.215083 f
+  U1258/Y (NOR4BX2)                                   0.064531   0.279614 f
+  U1303/Y (NAND3BX2)                                  0.032574   0.312187 r
+  U729/Y (NAND3BX2)                                   0.047205   0.359392 r
+  U1217/Y (INVX2)                                     0.062886   0.422278 f
+  U818/Y (NAND2BX1)                                   0.087566   0.509844 f
+  U1284/Y (INVX2)                                     0.032278   0.542122 r
+  sub_451_C459/A[8] (tracking_ratio_phase_DW01_sub_31)
+                                                      0.000000   0.542122 r
+  sub_451_C459/U496/Y (CLKNAND2X2)                    0.037502   0.579625 f
+  sub_451_C459/U534/Y (OAI21X1)                       0.063944   0.643569 r
+  sub_451_C459/U374/Y (AOI21X1)                       0.060860   0.704428 f
+  sub_451_C459/U376/Y (OA21XL)                        0.119524   0.823952 f
+  sub_451_C459/U377/Y (AOI21BX2)                      0.096554   0.920507 f
+  sub_451_C459/U350/Y (OA21X4)                        0.100025   1.020531 f
+  sub_451_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_31)
+                                                      0.000000   1.020531 f
+  U661/Y (BUFX20)                                     0.053297   1.073828 f
+  U691/Y (MX2X1)                                      0.084530   1.158359 f
+  sub_451_I2_C459/A[8] (tracking_ratio_phase_DW01_sub_30)
+                                                      0.000000   1.158359 f
+  sub_451_I2_C459/U386/Y (CLKNAND2X2)                 0.034378   1.192737 r
+  sub_451_I2_C459/U537/Y (OAI21X1)                    0.052934   1.245670 f
+  sub_451_I2_C459/U370/Y (AOI21X1)                    0.090116   1.335786 r
+  sub_451_I2_C459/U372/Y (OAI21X2)                    0.039017   1.374803 f
+  sub_451_I2_C459/U373/Y (AOI21X4)                    0.093363   1.468165 r
+  sub_451_I2_C459/U371/Y (OA21X2)                     0.059984   1.528150 r
+  sub_451_I2_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_30)
+                                                      0.000000   1.528150 r
+  U728/Y (INVX2)                                      0.021142   1.549291 f
+  U727/Y (INVX6)                                      0.080133   1.629425 r
+  U1130/Y (MX2XL)                                     0.115538   1.744963 f
+  sub_451_I3_C459/A[17] (tracking_ratio_phase_DW01_sub_29)
+                                                      0.000000   1.744963 f
+  sub_451_I3_C459/U584/Y (NOR2X2)                     0.060068   1.805031 r
+  sub_451_I3_C459/U373/Y (OAI21X2)                    0.037784   1.842815 f
+  sub_451_I3_C459/U365/Y (AOI21X1)                    0.096384   1.939199 r
+  sub_451_I3_C459/U372/Y (OAI21X4)                    0.038935   1.978134 f
+  sub_451_I3_C459/U609/Y (AOI21X1)                    0.045895   2.024029 r
+  sub_451_I3_C459/U377/Y (OAI21X1)                    0.037037   2.061066 f
+  sub_451_I3_C459/U455/Y (CLKINVX2)                   0.021166   2.082232 r
+  sub_451_I3_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_29)
+                                                      0.000000   2.082232 r
+  U726/Y (INVX2)                                      0.017273   2.099505 f
+  U725/Y (INVX5)                                      0.106039   2.205544 r
+  U782/Y (MX2XL)                                      0.128970   2.334513 f
+  sub_451_I4_C459/A[9] (tracking_ratio_phase_DW01_sub_28)
+                                                      0.000000   2.334513 f
+  sub_451_I4_C459/U360/Y (NOR2X2)                     0.055144   2.389657 r
+  sub_451_I4_C459/U438/Y (OAI21X2)                    0.036543   2.426200 f
+  sub_451_I4_C459/U370/Y (AOI21X1)                    0.084707   2.510907 r
+  sub_451_I4_C459/U424/Y (OAI21X2)                    0.045826   2.556732 f
+  sub_451_I4_C459/U423/Y (AOI21X6)                    0.073132   2.629864 r
+  sub_451_I4_C459/U5/Y (OAI21X1)                      0.040740   2.670604 f
+  sub_451_I4_C459/U371/Y (CLKINVX2)                   0.021429   2.692032 r
+  sub_451_I4_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_28)
+                                                      0.000000   2.692032 r
+  U724/Y (INVX2)                                      0.019885   2.711917 f
+  U723/Y (INVX6)                                      0.079621   2.791538 r
+  U795/Y (MX2XL)                                      0.115352   2.906889 f
+  sub_451_I5_C459/A[9] (tracking_ratio_phase_DW01_sub_27)
+                                                      0.000000   2.906889 f
+  sub_451_I5_C459/U493/Y (NOR2X2)                     0.062342   2.969231 r
+  sub_451_I5_C459/U533/Y (OAI21X1)                    0.052485   3.021716 f
+  sub_451_I5_C459/U360/Y (AOI21X2)                    0.067437   3.089153 r
+  sub_451_I5_C459/U370/Y (OAI21X1)                    0.050966   3.140118 f
+  sub_451_I5_C459/U368/Y (AOI21X4)                    0.099488   3.239607 r
+  sub_451_I5_C459/U5/Y (OAI21X1)                      0.043930   3.283536 f
+  sub_451_I5_C459/U389/Y (CLKINVX2)                   0.029153   3.312690 r
+  sub_451_I5_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_27)
+                                                      0.000000   3.312690 r
+  U821/Y (INVX4)                                      0.026808   3.339497 f
+  U775/Y (CLKINVX24)                                  0.031263   3.370760 r
+  U777/Y (MX2XL)                                      0.088389   3.459149 r
+  sub_451_I6_C459/A[9] (tracking_ratio_phase_DW01_sub_26)
+                                                      0.000000   3.459149 r
+  sub_451_I6_C459/U355/Y (NOR2XL)                     0.041893   3.501042 f
+  sub_451_I6_C459/U357/Y (OAI21X1)                    0.069867   3.570909 r
+  sub_451_I6_C459/U365/Y (AOI21X1)                    0.063279   3.634188 f
+  sub_451_I6_C459/U368/Y (OA21XL)                     0.119878   3.754066 f
+  sub_451_I6_C459/U369/Y (AOI21BX2)                   0.095450   3.849516 f
+  sub_451_I6_C459/U408/Y (OA21X1)                     0.139123   3.988639 f
+  sub_451_I6_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_26)
+                                                      0.000000   3.988639 f
+  U656/Y (CLKINVX4)                                   0.032216   4.020855 r
+  U655/Y (INVX10)                                     0.035487   4.056342 f
+  U851/Y (MX2XL)                                      0.101768   4.158111 r
+  sub_451_I7_C459/A[8] (tracking_ratio_phase_DW01_sub_25)
+                                                      0.000000   4.158111 r
+  sub_451_I7_C459/U385/Y (CLKNAND2X2)                 0.044971   4.203081 f
+  sub_451_I7_C459/U365/Y (OAI21X1)                    0.073333   4.276414 r
+  sub_451_I7_C459/U359/Y (AOI21X1)                    0.056983   4.333397 f
+  sub_451_I7_C459/U360/Y (OA21XL)                     0.117579   4.450976 f
+  sub_451_I7_C459/U364/Y (AOI21BX2)                   0.096404   4.547380 f
+  sub_451_I7_C459/U5/Y (OAI21X1)                      0.053451   4.600831 r
+  sub_451_I7_C459/U367/Y (CLKINVX2)                   0.036553   4.637383 f
+  sub_451_I7_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_25)
+                                                      0.000000   4.637383 f
+  U658/Y (CLKINVX6)                                   0.026296   4.663680 r
+  U657/Y (INVX12)                                     0.029711   4.693390 f
+  U771/Y (MX2XL)                                      0.092756   4.786147 f
+  sub_451_I8_C459/A[9] (tracking_ratio_phase_DW01_sub_24)
+                                                      0.000000   4.786147 f
+  sub_451_I8_C459/U491/Y (NOR2X2)                     0.062345   4.848492 r
+  sub_451_I8_C459/U531/Y (OAI21X1)                    0.049061   4.897553 f
+  sub_451_I8_C459/U360/Y (AOI21X1)                    0.082702   4.980255 r
+  sub_451_I8_C459/U166/Y (OAI21X1)                    0.065863   5.046117 f
+  sub_451_I8_C459/U414/Y (AOI21X6)                    0.076367   5.122485 r
+  sub_451_I8_C459/U364/Y (OAI21X1)                    0.042906   5.165390 f
+  sub_451_I8_C459/U362/Y (INVX2)                      0.023332   5.188722 r
+  sub_451_I8_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_24)
+                                                      0.000000   5.188722 r
+  U722/Y (INVX2)                                      0.020564   5.209286 f
+  U721/Y (CLKINVX8)                                   0.065082   5.274367 r
+  U829/Y (MX2XL)                                      0.109133   5.383500 f
+  sub_451_I9_C459/A[9] (tracking_ratio_phase_DW01_sub_23)
+                                                      0.000000   5.383500 f
+  sub_451_I9_C459/U486/Y (NOR2X2)                     0.062332   5.445832 r
+  sub_451_I9_C459/U526/Y (OAI21X1)                    0.049061   5.494893 f
+  sub_451_I9_C459/U357/Y (AOI21X1)                    0.071105   5.565998 r
+  sub_451_I9_C459/U361/Y (OAI21X1)                    0.052404   5.618402 f
+  sub_451_I9_C459/U359/Y (AOI21X4)                    0.084807   5.703209 r
+  sub_451_I9_C459/U358/Y (OA21X1)                     0.067170   5.770380 r
+  sub_451_I9_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_23)
+                                                      0.000000   5.770380 r
+  U720/Y (INVX2)                                      0.024724   5.795103 f
+  U719/Y (INVX8)                                      0.067480   5.862583 r
+  U1209/Y (MX2X1)                                     0.093916   5.956499 f
+  sub_451_I10_C459/A[9] (tracking_ratio_phase_DW01_sub_22)
+                                                      0.000000   5.956499 f
+  sub_451_I10_C459/U373/Y (NOR2X2)                    0.058824   6.015322 r
+  sub_451_I10_C459/U527/Y (OAI21X1)                   0.048998   6.064320 f
+  sub_451_I10_C459/U358/Y (AOI21X1)                   0.082702   6.147022 r
+  sub_451_I10_C459/U166/Y (OAI21X1)                   0.054931   6.201953 f
+  sub_451_I10_C459/U400/Y (AOI21X4)                   0.086403   6.288356 r
+  sub_451_I10_C459/U365/Y (OAI21X1)                   0.045064   6.333420 f
+  sub_451_I10_C459/U364/Y (INVX2)                     0.024237   6.357657 r
+  sub_451_I10_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_22)
+                                                      0.000000   6.357657 r
+  U788/Y (INVX2)                                      0.020384   6.378041 f
+  U718/Y (INVX6)                                      0.080604   6.458644 r
+  U770/Y (MX2XL)                                      0.115770   6.574415 f
+  sub_451_I11_C459/A[9] (tracking_ratio_phase_DW01_sub_21)
+                                                      0.000000   6.574415 f
+  sub_451_I11_C459/U384/Y (NOR2X2)                    0.062345   6.636760 r
+  sub_451_I11_C459/U529/Y (OAI21X1)                   0.049061   6.685821 f
+  sub_451_I11_C459/U358/Y (AOI21X1)                   0.082702   6.768523 r
+  sub_451_I11_C459/U166/Y (OAI21X1)                   0.065863   6.834385 f
+  sub_451_I11_C459/U410/Y (AOI21X6)                   0.084652   6.919037 r
+  sub_451_I11_C459/U5/Y (OAI21X1)                     0.044124   6.963161 f
+  sub_451_I11_C459/U361/Y (INVX2)                     0.023824   6.986985 r
+  sub_451_I11_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_21)
+                                                      0.000000   6.986985 r
+  U789/Y (INVX2)                                      0.018250   7.005235 f
+  U717/Y (CLKINVX6)                                   0.076965   7.082201 r
+  U897/Y (MX2XL)                                      0.122651   7.204852 r
+  sub_451_I12_C459/A[8] (tracking_ratio_phase_DW01_sub_20)
+                                                      0.000000   7.204852 r
+  sub_451_I12_C459/U385/Y (CLKNAND2X2)                0.042400   7.247252 f
+  sub_451_I12_C459/U531/Y (OAI21X1)                   0.064201   7.311453 r
+  sub_451_I12_C459/U358/Y (AOI21X1)                   0.054688   7.366141 f
+  sub_451_I12_C459/U360/Y (OA21XL)                    0.117174   7.483315 f
+  sub_451_I12_C459/U363/Y (AOI21BX2)                  0.096405   7.579720 f
+  sub_451_I12_C459/U5/Y (OAI21X1)                     0.053451   7.633171 r
+  sub_451_I12_C459/U367/Y (CLKINVX2)                  0.026330   7.659500 f
+  sub_451_I12_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_20)
+                                                      0.000000   7.659500 f
+  U716/Y (INVX2)                                      0.031211   7.690711 r
+  U650/Y (INVX6)                                      0.049365   7.740076 f
+  U648/Y (MX2X1)                                      0.091215   7.831291 r
+  sub_451_I13_C459/A[21] (tracking_ratio_phase_DW01_sub_19)
+                                                      0.000000   7.831291 r
+  sub_451_I13_C459/U582/Y (NOR2X2)                    0.020892   7.852183 f
+  sub_451_I13_C459/U374/Y (NOR2XL)                    0.094849   7.947031 r
+  sub_451_I13_C459/U371/Y (NAND2X1)                   0.058903   8.005935 f
+  sub_451_I13_C459/U357/Y (OAI21X1)                   0.106002   8.111937 r
+  sub_451_I13_C459/U543/Y (AOI21X1)                   0.052038   8.163975 f
+  sub_451_I13_C459/U391/Y (OAI21X1)                   0.028460   8.192434 r
+  sub_451_I13_C459/U370/Y (INVX1)                     0.031919   8.224353 f
+  sub_451_I13_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_19)
+                                                      0.000000   8.224353 f
+  U685/Y (INVX4)                                      0.042766   8.267118 r
+  U684/Y (CLKINVX24)                                  0.037282   8.304400 f
+  U1039/Y (MX2XL)                                     0.095338   8.399738 r
+  sub_451_I14_C459/A[21] (tracking_ratio_phase_DW01_sub_18)
+                                                      0.000000   8.399738 r
+  sub_451_I14_C459/U574/Y (NOR2X2)                    0.022614   8.422352 f
+  sub_451_I14_C459/U365/Y (NOR2XL)                    0.095491   8.517843 r
+  sub_451_I14_C459/U361/Y (NAND2X1)                   0.077887   8.595730 f
+  sub_451_I14_C459/U393/Y (OAI21X2)                   0.096260   8.691990 r
+  sub_451_I14_C459/U547/Y (AOI21X1)                   0.048841   8.740830 f
+  sub_451_I14_C459/U5/Y (OAI21X1)                     0.028919   8.769750 r
+  sub_451_I14_C459/U360/Y (CLKINVX2)                  0.030703   8.800452 f
+  sub_451_I14_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_18)
+                                                      0.000000   8.800452 f
+  U652/Y (CLKINVX4)                                   0.026616   8.827068 r
+  U651/Y (INVX10)                                     0.034413   8.861482 f
+  U1063/Y (MX2XL)                                     0.096598   8.958079 r
+  sub_451_I15_C459/A[13] (tracking_ratio_phase_DW01_sub_17)
+                                                      0.000000   8.958079 r
+  sub_451_I15_C459/U577/Y (NOR2X2)                    0.022621   8.980700 f
+  sub_451_I15_C459/U366/Y (NOR2XL)                    0.095180   9.075880 r
+  sub_451_I15_C459/U375/Y (NAND2XL)                   0.074656   9.150537 f
+  sub_451_I15_C459/U374/Y (NOR2X2)                    0.070936   9.221473 r
+  sub_451_I15_C459/U385/Y (AOI21X6)                   0.047575   9.269048 f
+  sub_451_I15_C459/U5/Y (OAI21X1)                     0.050554   9.319602 r
+  sub_451_I15_C459/U376/Y (CLKINVX2)                  0.036277   9.355879 f
+  sub_451_I15_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_17)
+                                                      0.000000   9.355879 f
+  U683/Y (CLKINVX6)                                   0.029531   9.385409 r
+  U682/Y (INVX12)                                     0.026051   9.411460 f
+  U814/Y (MX2XL)                                      0.085342   9.496802 r
+  sub_451_I16_C459/A[2] (tracking_ratio_phase_DW01_sub_16)
+                                                      0.000000   9.496802 r
+  sub_451_I16_C459/U163/Y (NOR2XL)                    0.029537   9.526340 f
+  sub_451_I16_C459/U212/Y (NOR2X2)                    0.030703   9.557042 r
+  sub_451_I16_C459/U251/Y (AOI21X1)                   0.034380   9.591422 f
+  sub_451_I16_C459/U86/Y (OAI21X1)                    0.044615   9.636037 r
+  sub_451_I16_C459/U260/Y (AOI21X1)                   0.037647   9.673684 f
+  sub_451_I16_C459/U2/Y (OAI21X1)                     0.043128   9.716812 r
+  sub_451_I16_C459/U258/Y (INVX1)                     0.024557   9.741369 f
+  sub_451_I16_C459/DIFF[30] (tracking_ratio_phase_DW01_sub_16)
+                                                      0.000000   9.741369 f
+  U1302/Y (NOR2X2)                                    0.055259   9.796628 r
+  result[0] (out)                                     0.000000   9.796628 r
+  data arrival time                                              9.796628
+
+  clock module_clk (rise edge)                        10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               0.000000   9.800000
+  data required time                                             9.800000
+  --------------------------------------------------------------------------
+  data required time                                             9.800000
+  data arrival time                                              -9.796628
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.003372
+
+
+1

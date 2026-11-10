@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "full_top": "tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1",
+  "clock": "create_clock [get_ports clk]  -period 10  -waveform {0 5}",
+  "timing_exceptions": [
+    "set_false_path   -from [get_ports reset_n]"
+  ],
+  "reset_input_delay_warning": "TIM-216 only, covered by the original reset false path",
+  "unmapped_cells": 0,
+  "macro_black_box_area_um2": 0.0,
+  "standard_cell_area_um2": 486269.185663,
+  "sequential_cells": 2338,
+  "setup_wns_ns": -18.646854,
+  "setup_tns_ns_sum_of_reported_endpoints": -3179.539771,
+  "setup_violating_endpoints": 414,
+  "worst_hold_slack_ns": -0.162817,
+  "critical_path": {
+    "start": "frontend/correlator/qp_reg[11]",
+    "end": "code_step_q_reg[27]",
+    "data_arrival_ns": 28.38139,
+    "components": [
+      {
+        "block": "pll_ratio",
+        "arrival_at_input_ns": 0.797988,
+        "arrival_at_output_ns": 10.582711,
+        "path_delay_ns": 9.784723
+      },
+      {
+        "block": "carrier_conversion",
+        "arrival_at_input_ns": 14.34798,
+        "arrival_at_output_ns": 19.993448,
+        "path_delay_ns": 5.645468000000001
+      },
+      {
+        "block": "feedback_aid",
+        "arrival_at_input_ns": 20.125681,
+        "arrival_at_output_ns": 28.046709,
+        "path_delay_ns": 7.921028
+      }
+    ]
+  },
+  "constant_output_bits": [
+    "fll_error_q16[2]",
+    "fll_error_q16[1]",
+    "fll_error_q16[0]"
+  ],
+  "constant_output_reason": "FLL Q16 frequency is a signed integer multiplied by 1000, so bits 2:0 are zero",
+  "shorted_outputs_reason": "Five DesignWare arithmetic output pairs share sign-extension bits",
+  "design_warning_counts": {
+    "LINT-8": 27,
+    "LINT-28": 1289,
+    "LINT-29": 25,
+    "LINT-31": 5,
+    "LINT-52": 3,
+    "LINT-32": 794,
+    "LINT-33": 309,
+    "LINT-2": 169
+  },
+  "mapped_cache_hashes": "PASS",
+  "cache_files": [
+    "tracking_atan.ddc",
+    "tracking_divide_aid.ddc",
+    "tracking_divide_step.ddc",
+    "tracking_ratio_code.ddc",
+    "tracking_ratio_phase.ddc"
+  ],
+  "B0_tool_DW_and_target_library_hashes": "IDENTICAL",
+  "timing_model": "typical 1.0 V 25 C, ideal clock, no selected wire-load model"
+}

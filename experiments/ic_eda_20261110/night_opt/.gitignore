@@ -10,3 +10,6 @@ __pycache__/
 /evidence/v4_conversion/
 /evidence/signed_conversion/
 /evidence/probe_sources/
+/evidence/quad_preflight/
+/evidence/full_*/mapped.v
+/evidence/full_*/*.ddc

@@ -25,8 +25,17 @@ def summarize(directory):
     record["peak_rss_kib"] = number(r"Maximum resident set size \(kbytes\): (\d+)", timer)
     log = (directory / "run.log").read_text(encoding="utf-8", errors="replace")
     record["dc_error_lines"] = re.findall(r"^Error:[^\n]*", log, re.M)
+    host_path = directory / "host_result.json"
+    if host_path.exists():
+        host = json.loads(host_path.read_text(encoding="utf-8"))
+        record["host_deadline_signalled"] = host["host_deadline_signalled"]
+        record["host_elapsed_s"] = host["host_elapsed_s"]
     completed = result["return_code"] == 0 and result["stop_reason"] is None
     record["completed"] = completed and "REPORTS_DONE" in log and not record["dc_error_lines"]
+    if re.search(r"^(?:HIER|CACHED)_PREFLIGHT_PASS$", log, re.M):
+        record["stage"] = "elaboration_only"
+        record["completed"] = completed and not record["dc_error_lines"]
+        return record
     if not record["completed"]:
         return record
     qor = (directory / "qor.rpt").read_text(encoding="utf-8")

@@ -1,0 +1,13 @@
+{
+  "host_elapsed_s": 3.531000000075437,
+  "host_deadline_signalled": false,
+  "attached_existing_job": false,
+  "budget_s": 90,
+  "run": "/home/ICer/ic_eda_night_20261110/runs/hier_dc_preflight",
+  "result": {
+    "stop_reason": null,
+    "monotonic_elapsed_s": 2.569999999999709,
+    "time_report_nonempty": true,
+    "return_code": 0
+  }
+}

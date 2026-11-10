@@ -23,12 +23,19 @@ for version, source in texts.items():
     arithmetic = source[source.index("        ie2="):source.index("        valid_energy=")]
     divider_declarations = ("logic signed [79:0] code_numerator,phase_numerator;" if version == "original" else
         "logic [56:0] code_magnitude; logic [28:0] phase_denominator; logic [16:0] code_ratio,phase_ratio; logic signed [17:0] code_ratio_signed,phase_ratio_signed;")
+    hierarchical = version == "optimized" and "// Combinational arithmetic partition definitions." in source
+    if hierarchical:
+        divider_declarations += """
+    logic [16:0] normalized_code_raw,normalized_phase_raw;
+    tracking_ratio_code dll_ratio(.magnitude(code_magnitude),.denominator(den_code[56:0]),.result(normalized_code_raw));
+    tracking_ratio_phase pll_ratio(.magnitude(abs_q[28:0]),.denominator(phase_denominator),.result(normalized_phase_raw));
+"""
     code_width = re.search(r"logic signed \[(\d+):0\] dcode", source)
     phase_width = re.search(r"logic signed \[(\d+):0\] dphase", source)
     code_width = code_width[1] if code_width else "63"
     phase_width = phase_width[1] if phase_width else "63"
     function = ""
-    if version == "optimized":
+    if version == "optimized" and not hierarchical:
         function = "\n".join(re.findall(r"    function automatic logic \[16:0\] normalized_(?:phase_)?ratio_q16\([\s\S]*?    endfunction", source))
     header = f"""module norm_{version} (
     input logic window_done,
@@ -58,6 +65,9 @@ endmodule
         else begin dcode<=64'($signed(code_value));dphase<=64'($signed(phase_value));end
 endmodule
 """)
+helper_marker = "\n// Combinational arithmetic partition definitions.\n"
+if helper_marker in texts["optimized"]:
+    probes.append(texts["optimized"].split(helper_marker, 1)[1])
 (work / "norm_probes.sv").write_text("\n".join(probes), encoding="utf-8")
 (work / "probe_registers.sv").write_text("\n".join(wrappers), encoding="utf-8")
 constant_functions = re.findall(

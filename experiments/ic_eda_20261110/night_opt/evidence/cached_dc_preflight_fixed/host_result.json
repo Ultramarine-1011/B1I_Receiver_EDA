@@ -1,0 +1,13 @@
+{
+  "host_elapsed_s": 15.812999999965541,
+  "host_deadline_signalled": false,
+  "attached_existing_job": false,
+  "budget_s": 180,
+  "run": "/home/ICer/ic_eda_night_20261110/runs/cached_dc_preflight_fixed",
+  "result": {
+    "stop_reason": null,
+    "monotonic_elapsed_s": 13.829999999998108,
+    "time_report_nonempty": true,
+    "return_code": 0
+  }
+}

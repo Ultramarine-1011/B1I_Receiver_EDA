@@ -1,0 +1,900 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+# IC_EDA original-RTL baseline. Run from the frozen experiment root.
+set_app_var sh_enable_page_mode false
+false
+set_host_options -max_cores 1
+1
+set stage $env(BASELINE_STAGE)
+B0
+set report_dir $env(BASELINE_REPORT_DIR)
+/home/ICer/ic_eda_night_20261110/runs/cached_dc_preflight_fixed/reports
+file mkdir $report_dir
+define_design_lib WORK -path ./WORK
+1
+set library_dir /home/ic_libs/TSMC.90/aci/sc-x/synopsys
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys
+set db_file $library_dir/typical.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set rtl sources/student_release/student_release/rtl
+sources/student_release/student_release/rtl
+set_app_var search_path [concat [list rtl $rtl $library_dir .] $search_path]
+rtl sources/student_release/student_release/rtl /home/ic_libs/TSMC.90/aci/sc-x/synopsys . . /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver
+set_app_var target_library [list $db_file]
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set_app_var synthetic_library [list dw_foundation.sldb]
+dw_foundation.sldb
+set_app_var link_library [list * $db_file dw_foundation.sldb]
+* /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db dw_foundation.sldb
+puts "BASELINE_STAGE $stage"
+BASELINE_STAGE B0
+# The DC banner in run.log records the precise version and build date.
+puts "BASELINE_DW_FILE [which dw_foundation.sldb]"
+BASELINE_DW_FILE /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+puts "BASELINE_COMPILE_COMMAND compile -map_effort medium"
+BASELINE_COMPILE_COMMAND compile -map_effort medium
+set list_file [open filelists/$stage.txt r]
+file13
+set sources [split [string trim [read $list_file]] \n]
+sources/student_release/student_release/rtl/b1i_prn_gen.sv sources/student_release/student_release/rtl/code_nco.sv sources/student_release/student_release/rtl/carrier_nco_mixer.sv sources/student_release/student_release/rtl/epl_correlator.sv sources/student_release/student_release/rtl/tracking_frontend_spaced.sv rtl/tracking_channel_minimal.sv
+close $list_file
+foreach path $sources {
+    puts "BASELINE_SOURCE $path"
+    if {[analyze -format sverilog -define SYNTHESIS $path] == 0} { exit 1 }
+}
+BASELINE_SOURCE sources/student_release/student_release/rtl/b1i_prn_gen.sv
+Running PRESTO HDLC
+Compiling source file ./sources/student_release/student_release/rtl/b1i_prn_gen.sv
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+BASELINE_SOURCE sources/student_release/student_release/rtl/code_nco.sv
+Running PRESTO HDLC
+Compiling source file ./sources/student_release/student_release/rtl/code_nco.sv
+Warning:  ./sources/student_release/student_release/rtl/code_nco.sv:241: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+BASELINE_SOURCE sources/student_release/student_release/rtl/carrier_nco_mixer.sv
+Running PRESTO HDLC
+Compiling source file ./sources/student_release/student_release/rtl/carrier_nco_mixer.sv
+Opening include file sources/student_release/student_release/rtl/carrier_quarter_lut.svh
+Warning:  ./sources/student_release/student_release/rtl/carrier_nco_mixer.sv:95: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+BASELINE_SOURCE sources/student_release/student_release/rtl/epl_correlator.sv
+Running PRESTO HDLC
+Compiling source file ./sources/student_release/student_release/rtl/epl_correlator.sv
+Warning:  ./sources/student_release/student_release/rtl/epl_correlator.sv:152: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+BASELINE_SOURCE sources/student_release/student_release/rtl/tracking_frontend_spaced.sv
+Running PRESTO HDLC
+Compiling source file ./sources/student_release/student_release/rtl/tracking_frontend_spaced.sv
+Warning:  ./sources/student_release/student_release/rtl/tracking_frontend_spaced.sv:181: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+BASELINE_SOURCE rtl/tracking_channel_minimal.sv
+Running PRESTO HDLC
+Compiling source file ./rtl/tracking_channel_minimal.sv
+Presto compilation completed successfully.
+if {$stage == "B0"} {
+    if {[elaborate tracking_channel_minimal -parameters "ENABLE_FLL=1,ENABLE_CARRIER_AID=1"] == 0} { exit 1 }
+    # elaborate selects the parameterized design. Keep its actual current name.
+    set reset_port reset_n
+} else {
+    if {[elaborate bds_bb_6ch_core] == 0} { exit 1 }
+    set reset_port rst_n
+}
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:114: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:115: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:194: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:195: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:208: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:220: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:222: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:223: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:224: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 line 180 in file
+		'./rtl/tracking_channel_minimal.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|      feedback_ref_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        enabled_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      base_doppler_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     code_integral_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    carrier_integral_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_step_q_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_step_q_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   carrier_step_word_reg    | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   carrier_step_word_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| previous_prompt_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      previous_ip_reg       | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      previous_qp_reg       | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  previous_prompt_ref_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     fll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     feedback_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         usable_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         locked_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      good_windows_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      bad_windows_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      invalid_run_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    validity_history_reg    | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|       population_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|          seen_reg          | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     code_mean_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   frequency_mean_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   previous_phase_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_mean_square_q32_reg  | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_mean_square_q32_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  previous_phase_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     dll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     pll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_correction_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| carrier_correction_q16_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+Information: Building the design 'tracking_ratio_code'. (HDL-193)
+Warning:  ./rtl/tracking_channel_minimal.sv:273: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:276: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:281: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:293: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:296: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:301: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:313: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:316: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:321: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:333: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:336: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:341: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:353: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:356: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:361: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:373: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:376: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:381: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:393: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:396: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:401: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:413: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:416: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:421: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'tracking_ratio_phase'. (HDL-193)
+Warning:  ./rtl/tracking_channel_minimal.sv:453: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'tracking_atan'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'tracking_divide_step'. (HDL-193)
+Warning:  ./rtl/tracking_channel_minimal.sv:494: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'tracking_divide_aid'. (HDL-193)
+Warning:  ./rtl/tracking_channel_minimal.sv:507: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'tracking_frontend_spaced' instantiated from design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1' with
+	the parameters "EPL_HALF_SPACING_NUMERATOR=5,EPL_HALF_SPACING_DENOMINATOR=16". (HDL-193)
+Warning:  ./sources/student_release/student_release/rtl/tracking_frontend_spaced.sv:91: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./sources/student_release/student_release/rtl/tracking_frontend_spaced.sv:92: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./sources/student_release/student_release/rtl/tracking_frontend_spaced.sv:162: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 line 107 in file
+		'./sources/student_release/student_release/rtl/tracking_frontend_spaced.sv'.
+=============================================================================================
+|           Register Name           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================
+| window_end_carrier_phase_word_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         early_delayed_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        prompt_delayed_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         late_delayed_reg          | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       integrate_delayed_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      integration_started_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|          energy_acc_reg           | Flip-flop |  42   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         energy_count_reg          | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         window_energy_reg         | Flip-flop |  42   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_phase_delayed_reg       | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        period_delayed_reg         | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     carrier_phase_delayed_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       first_code_phase_reg        | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         first_period_reg          | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      first_carrier_phase_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      window_code_phase_q_reg      | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   window_code_period_count_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   window_carrier_phase_word_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       end_phase_delayed_reg       | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      end_period_delayed_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       end_step_delayed_reg        | Flip-flop |  33   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    window_end_code_phase_q_reg    | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+| window_end_code_period_count_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    window_end_code_step_q_reg     | Flip-flop |  33   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      end_carrier_delayed_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+=============================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'code_nco' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "PHASE_FRAC=32,PERIOD_COUNT_WIDTH=32,EPL_HALF_SPACING_NUMERATOR=5,EPL_HALF_SPACING_DENOMINATOR=16". (HDL-193)
+
+Inferred memory devices in process
+	in routine code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 line 199 in file
+		'./sources/student_release/student_release/rtl/code_nco.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|     code_epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      phase_acc_reg      | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_period_count_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| target_prompt_index_reg | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+| target_early_index_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  target_late_index_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      init_busy_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     code_valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      init_done_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'carrier_nco_mixer' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "PHASE_WIDTH=32,INPUT_WIDTH=3,SAMPLE_REF_WIDTH=64". (HDL-193)
+Warning:  ./sources/student_release/student_release/rtl/carrier_nco_mixer.sv:88: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./sources/student_release/student_release/rtl/carrier_nco_mixer.sv:89: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 56 in file
+	'./sources/student_release/student_release/rtl/carrier_nco_mixer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            5             |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 line 67 in file
+		'./sources/student_release/student_release/rtl/carrier_nco_mixer.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|       iq_ref_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+| carrier_phase_word_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   carrier_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      iq_valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      i_sample_reg      | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      q_sample_reg      | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'epl_correlator' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "IQ_WIDTH=14,WINDOW_SAMPLES=16368,SAMPLE_REF_WIDTH=64,ACC_WIDTH=28". (HDL-193)
+Warning:  ./sources/student_release/student_release/rtl/epl_correlator.sv:63: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./sources/student_release/student_release/rtl/epl_correlator.sv:64: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./sources/student_release/student_release/rtl/epl_correlator.sv:122: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28 line 81 in file
+		'./sources/student_release/student_release/rtl/epl_correlator.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|     window_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       ie_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       qe_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ip_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       qp_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       il_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ql_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ie_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         qe_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ip_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         qp_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         il_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ql_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+| window_sample_count_reg | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  window_start_ref_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     window_ref_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'b1i_prn_gen'. (HDL-193)
+
+Statistics for case statements in always block at line 82 in file
+	'./sources/student_release/student_release/rtl/b1i_prn_gen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine b1i_prn_gen line 98 in file
+		'./sources/student_release/student_release/rtl/b1i_prn_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   active_prn_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   chip_index_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   configured_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+reset_n
+puts "BASELINE_ELABORATED [get_object_name [current_design]]"
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+BASELINE_ELABORATED tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+if {[link] == 0} { exit 1 }
+
+  Linking design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (11 designs)              /home/ICer/ic_eda_night_20261110/runs/cached_dc_preflight_fixed/work/tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+if {$stage == "B1"} {
+    set acq [get_cells acquisition]
+    if {[sizeof_collection $acq] != 1} { exit 1 }
+    set_dont_touch $acq true
+    set_boundary_optimization $acq false
+    puts "BASELINE_ISOLATED acquisition [get_attribute $acq ref_name]"
+}
+# Resume from completed, fully mapped arithmetic partitions produced in run V6.
+# The complete channel is still checked and timed under the original B0 SDC.
+set top_design [get_object_name [current_design]]
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+set cached_designs [list tracking_atan tracking_divide_aid tracking_divide_step tracking_ratio_code tracking_ratio_phase]
+tracking_atan tracking_divide_aid tracking_divide_step tracking_ratio_code tracking_ratio_phase
+remove_design [get_designs $cached_designs]
+Removing design 'tracking_atan'
+Removing design 'tracking_divide_aid'
+Removing design 'tracking_divide_step'
+Removing design 'tracking_ratio_code'
+Removing design 'tracking_ratio_phase'
+1
+foreach arithmetic $cached_designs {
+    read_ddc $env(CACHED_ARITH_DIR)/${arithmetic}.ddc
+    current_design $arithmetic
+    set missing [get_cells -hierarchical -filter {is_hierarchical == false && is_unmapped == true}]
+    if {[sizeof_collection $missing] != 0} { exit 1 }
+    set_dont_touch [current_design] true
+    puts "CACHED_PARTITION_LOADED $arithmetic"
+}
+Reading ddc file '/home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_atan.ddc'.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Loaded 1 design.
+Current design is 'tracking_atan'.
+Current design is 'tracking_atan'.
+Current design is 'tracking_atan'.
+CACHED_PARTITION_LOADED tracking_atan
+Reading ddc file '/home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_divide_aid.ddc'.
+Loaded 1 design.
+Current design is 'tracking_divide_aid'.
+Current design is 'tracking_divide_aid'.
+Current design is 'tracking_divide_aid'.
+CACHED_PARTITION_LOADED tracking_divide_aid
+Reading ddc file '/home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_divide_step.ddc'.
+Loaded 1 design.
+Current design is 'tracking_divide_step'.
+Current design is 'tracking_divide_step'.
+Current design is 'tracking_divide_step'.
+CACHED_PARTITION_LOADED tracking_divide_step
+Reading ddc file '/home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_ratio_code.ddc'.
+Loaded 1 design.
+Current design is 'tracking_ratio_code'.
+Current design is 'tracking_ratio_code'.
+Current design is 'tracking_ratio_code'.
+CACHED_PARTITION_LOADED tracking_ratio_code
+Reading ddc file '/home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_ratio_phase.ddc'.
+Loaded 1 design.
+Current design is 'tracking_ratio_phase'.
+Current design is 'tracking_ratio_phase'.
+Current design is 'tracking_ratio_phase'.
+CACHED_PARTITION_LOADED tracking_ratio_phase
+current_design $top_design
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+{tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1}
+if {[link] == 0} { exit 1 }
+
+  Linking design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (11 designs)              /home/ICer/ic_eda_night_20261110/runs/cached_dc_preflight_fixed/work/tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+set arithmetic_cells [get_cells -hierarchical -filter {ref_name =~ tracking_ratio_* || ref_name =~ tracking_atan* || ref_name =~ tracking_divide_*}]
+{dll_ratio pll_ratio fll_phase code_conversion carrier_conversion initial_aid feedback_aid}
+if {[sizeof_collection $arithmetic_cells] != 7} { exit 1 }
+set actual_references [lsort -unique [get_attribute $arithmetic_cells ref_name]]
+tracking_atan tracking_divide_aid tracking_divide_step tracking_ratio_code tracking_ratio_phase
+foreach arithmetic $actual_references {
+    current_design $arithmetic
+    set missing [get_cells -hierarchical -filter {is_hierarchical == false && is_unmapped == true}]
+    if {[sizeof_collection $missing] != 0} { exit 1 }
+}
+Current design is 'tracking_atan'.
+Current design is 'tracking_divide_aid'.
+Current design is 'tracking_divide_step'.
+Current design is 'tracking_ratio_code'.
+Current design is 'tracking_ratio_phase'.
+current_design $top_design
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+{tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1}
+set_dont_touch $arithmetic_cells true
+1
+set_boundary_optimization $arithmetic_cells false
+1
+puts "CACHED_FIXED_INSTANCES [sizeof_collection $arithmetic_cells]"
+CACHED_FIXED_INSTANCES 7
+set_operating_conditions typical -library typical
+Using operating conditions 'typical' found in library 'typical'.
+1
+source scripts/baseline.sdc
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+BASELINE_OUTPUT_LOAD_PF 0.006604
+redirect $report_dir/host_options.rpt { report_host_options }
+redirect $report_dir/library.rpt { list_libs }
+redirect $report_dir/design_pre.rpt { report_design }
+redirect $report_dir/check_design_pre.rpt { check_design }
+redirect $report_dir/check_timing_pre.rpt { check_timing }
+redirect $report_dir/resources_pre.rpt { report_resources -hierarchy }
+redirect $report_dir/hierarchy_pre.rpt { report_hierarchy }
+write_sdc $report_dir/constraints_pre.sdc
+1
+puts "CACHED_PREFLIGHT_PASS"
+CACHED_PREFLIGHT_PASS
+exit 0
+
+Memory usage for main task 362 Mbytes.
+Memory usage for this session 362 Mbytes.
+CPU usage for this session 13 seconds ( 0.00 hours ).
+
+Thank you...

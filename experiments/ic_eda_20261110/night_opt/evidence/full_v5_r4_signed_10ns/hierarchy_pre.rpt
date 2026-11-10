@@ -1,0 +1,992 @@
+ 
+****************************************
+Report : hierarchy
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 23:25:18 2026
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+Attributes:
+    r - licensed design
+
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+    *ADD_TC_OP_2_16_16
+        DW01_add_width16
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_22_20_23
+        DW01_add_width23
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_31_14_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_31_22_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_31_24_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_11_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_16_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_16_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_17_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_18_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_19_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_20_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_21_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_22_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_23_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_23_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_24_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_24_33
+        DW01_add_width33
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_25_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_26_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_27_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_28_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_29_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_30_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_32_32_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_33_22_34
+        DW01_add_width34
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_56_56_57
+        DW01_add_width57
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_45_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_46_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_47_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_48_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_49_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_50_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_51_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_52_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_53_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_54_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_55_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_56_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_57_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_58_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_TC_OP_59_59_59
+        DW01_add_width59
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_3_1_3
+        DW01_inc_width3
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_XOR2                                                                                                gtech
+    *ADD_UNS_OP_5_1_5
+        DW01_inc_width5
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_XOR2                                                                                                gtech
+    *ADD_UNS_OP_6_1_6
+        DW01_inc_width6
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_XOR2                                                                                                gtech
+    *ADD_UNS_OP_8_1_8
+        DW01_add_width8
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_14_1_14
+        DW01_add_width14
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_23_1_23
+        DW01_add_width23
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_24_1_24
+        DW01_add_width24
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_29_29_29
+        DW01_add_width29
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_31_32_32
+        DW01_add_width32
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_56_56_57
+        DW01_add_width57
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_57_57_58
+        DW01_add_width58
+            GTECH_ADD_ABC                                                                                             gtech
+    *ADD_UNS_OP_64_14_64
+        DW01_add_width64
+            GTECH_ADD_ABC                                                                                             gtech
+    *EQ_UNS_OP_29_29_1
+        DW01_cmp6_width29
+            GTECH_AND_NOT                                                                                             gtech
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *EQ_UNS_OP_57_57_1
+        DW01_cmp6_width57
+            GTECH_AND_NOT                                                                                             gtech
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *EQ_UNS_OP_64_64_1
+        DW01_cmp6_width64
+            GTECH_AND_NOT                                                                                             gtech
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_3_2_1
+        DW01_cmp2_width3
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_5_4_1
+        DW01_cmp2_width5
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_6_5_1
+        DW01_cmp2_width6
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GEQ_UNS_OP_57_57_1
+        DW01_cmp2_width57
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_23_22_1
+        DW01_cmp2_width23
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_32_14_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_32_21_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_32_31_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_33_22_1
+        DW01_cmp2_width33
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_34_31_1
+        DW01_cmp2_width34
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_TC_OP_59_1_1
+        DW01_cmp2_width59
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_UNS_OP_57_44_1
+        DW01_cmp2_width57
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *GT_UNS_OP_58_45_1
+        DW01_cmp2_width58
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_23_22_1
+        DW01_cmp2_width23
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_28_1_1
+        DW01_cmp2_width28
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_32_14_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_32_21_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_32_31_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_33_22_1
+        DW01_cmp2_width33
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_34_31_1
+        DW01_cmp2_width34
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_57_1_1
+        DW01_cmp2_width57
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_TC_OP_59_1_1
+        DW01_cmp2_width59
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_UNS_OP_32_24_1
+        DW01_cmp2_width32
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *LT_UNS_OP_57_57_1
+        DW01_cmp2_width57
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *MULT_TC_OP_11_33_44
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_15_7_22
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_15_15_30
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_15_17_32
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_16_11_26
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_16_11_27
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_16_20_36
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_18_5_23
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_18_15_31
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_26_13_38
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_28_28_56
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_31_41_70
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_32_34_66
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_33_12_45
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_33_34_66
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_34_12_46
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_40_41_79
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_TC_OP_45_13_48
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *MULT_UNS_OP_32_1_32
+        DW02_mult                                                                                                               r
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *MULT_UNS_OP_57_2_59
+        DW02_mult                                                                                                               r
+            GTECH_ADD_AB                                                                                              gtech
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+            GTECH_XOR3                                                                                                gtech
+    *NE_UNS_OP_29_1_1
+        DW01_cmp6_width29
+            GTECH_AND_NOT                                                                                             gtech
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *NE_UNS_OP_57_1_1
+        DW01_cmp6_width57
+            GTECH_AND_NOT                                                                                             gtech
+            GTECH_NAND2                                                                                               gtech
+            GTECH_NOR2                                                                                                gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR_NOT                                                                                              gtech
+            GTECH_XNOR2                                                                                               gtech
+            GTECH_XOR2                                                                                                gtech
+    *SUB_TC_OP_1_18_18
+        DW01_sub_width18
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_1_28_29
+        DW01_sub_width29
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_1_57_58
+        DW01_sub_width58
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_15_32_33
+        DW01_sub_width33
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_16_32_33
+        DW01_sub_width33
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_30_33_34
+        DW01_sub_width34
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_31_30_31
+        DW01_sub_width31
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_16_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_17_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_18_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_19_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_20_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_21_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_22_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_23_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_24_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_25_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_26_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_27_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_28_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_29_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_32_30_32
+        DW01_sub_width32
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_44_32_45
+        DW01_sub_width45
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_56_56_57
+        DW01_sub_width57
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_45_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_46_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_47_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_48_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_49_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_50_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_51_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_52_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_53_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_54_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_55_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_56_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_57_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_58_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_59_59_59
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_60_58_60
+        DW01_sub_width60
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_60_59_60
+        DW01_sub_width59
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_TC_OP_60_60_60
+        DW01_sub_width60
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_UNS_OP_8_1_8
+        DW01_sub_width8
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    *SUB_UNS_OP_57_57_57
+        DW01_sub_width57
+            GTECH_ADD_ABC                                                                                             gtech
+            GTECH_NOT                                                                                                 gtech
+    GTECH_AND2                                                                                                        gtech
+    GTECH_BUF                                                                                                         gtech
+    GTECH_NOT                                                                                                         gtech
+    GTECH_OR2                                                                                                         gtech
+    GTECH_XOR2                                                                                                        gtech
+    tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+        *ADD_UNS_OP_14_1_14
+            ...
+        *ADD_UNS_OP_28_28_29
+            DW01_add_width29
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_32_1_32
+            DW01_add_width32
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_32_32_32
+            DW01_add_width32
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_42_29_42
+            DW01_add_width42
+                GTECH_ADD_ABC                                                                                         gtech
+        *ADD_UNS_OP_43_33_44
+            DW01_add_width44
+                GTECH_ADD_ABC                                                                                         gtech
+        *GEQ_UNS_OP_44_43_1
+            DW01_cmp2_width44
+                GTECH_NAND2                                                                                           gtech
+                GTECH_NOT                                                                                             gtech
+                GTECH_OR_NOT                                                                                          gtech
+                GTECH_XNOR2                                                                                           gtech
+                GTECH_XOR2                                                                                            gtech
+        *MULT_TC_OP_14_14_28
+            DW02_mult                                                                                                           r
+                GTECH_ADD_AB                                                                                          gtech
+                GTECH_ADD_ABC                                                                                         gtech
+                GTECH_AND2                                                                                            gtech
+                GTECH_NOR2                                                                                            gtech
+                GTECH_NOT                                                                                             gtech
+                GTECH_OR2                                                                                             gtech
+                GTECH_XNOR2                                                                                           gtech
+                GTECH_XOR2                                                                                            gtech
+                GTECH_XOR3                                                                                            gtech
+        *SUB_UNS_OP_43_43_43
+            DW01_sub_width43
+                GTECH_ADD_ABC                                                                                         gtech
+                GTECH_NOT                                                                                             gtech
+        GTECH_AND2                                                                                                    gtech
+        GTECH_BUF                                                                                                     gtech
+        GTECH_NOT                                                                                                     gtech
+        GTECH_OR2                                                                                                     gtech
+        carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+            *ADD_UNS_OP_10_9_10
+                DW01_add_width10
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_32_22_32
+                DW01_add_width32
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_32_32_32
+                ...
+            *MULT_TC_OP_3_12_14
+                DW02_mult                                                                                                       r
+                    GTECH_ADD_AB                                                                                      gtech
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_AND2                                                                                        gtech
+                    GTECH_NOR2                                                                                        gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR2                                                                                         gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+                    GTECH_XOR3                                                                                        gtech
+            *SUB_TC_OP_1_12_12
+                DW01_sub_width12
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_TC_OP_1_14_14
+                DW01_sub_width14
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_UNS_OP_9_8_9
+                DW01_sub_width9
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+        code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+            *ADD_UNS_OP_32_1_32
+                ...
+            *ADD_UNS_OP_43_31_44
+                DW01_add_width44
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_43_33_44
+                ...
+            *EQ_UNS_OP_11_11_1
+                DW01_cmp6_width11
+                    GTECH_AND_NOT                                                                                     gtech
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOR2                                                                                        gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_6_3_1
+                DW01_cmp2_width6
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_43_31_1
+                DW01_cmp2_width43
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_43_43_1
+                DW01_cmp2_width43
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *GEQ_UNS_OP_44_43_1
+                ...
+            *LEQ_UNS_OP_6_6_1
+                DW01_cmp2_width6
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *NE_UNS_OP_11_11_1
+                DW01_cmp6_width11
+                    GTECH_AND_NOT                                                                                     gtech
+                    GTECH_NAND2                                                                                       gtech
+                    GTECH_NOR2                                                                                        gtech
+                    GTECH_NOT                                                                                         gtech
+                    GTECH_OR_NOT                                                                                      gtech
+                    GTECH_XNOR2                                                                                       gtech
+                    GTECH_XOR2                                                                                        gtech
+            *SUB_UNS_OP_31_43_43
+                DW01_sub_width43
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_UNS_OP_43_31_43
+                DW01_sub_width43
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            *SUB_UNS_OP_43_43_43
+                ...
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+            b1i_prn_gen
+                *ADD_UNS_OP_11_1_11
+                    DW01_inc_width11
+                        GTECH_ADD_AB                                                                                  gtech
+                        GTECH_NOT                                                                                     gtech
+                        GTECH_XOR2                                                                                    gtech
+                *GEQ_UNS_OP_6_3_1
+                    ...
+                *LEQ_UNS_OP_6_6_1
+                    ...
+                GTECH_AND2                                                                                            gtech
+                GTECH_BUF                                                                                             gtech
+                GTECH_NOT                                                                                             gtech
+                GTECH_OR2                                                                                             gtech
+                GTECH_XOR2                                                                                            gtech
+        epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+            *ADD_TC_OP_28_28_28
+                DW01_add_width28
+                    GTECH_ADD_ABC                                                                                     gtech
+            *ADD_UNS_OP_14_1_14
+                ...
+            *SUB_TC_OP_1_14_15
+                DW01_sub_width15
+                    GTECH_ADD_ABC                                                                                     gtech
+                    GTECH_NOT                                                                                         gtech
+            GTECH_AND2                                                                                                gtech
+            GTECH_BUF                                                                                                 gtech
+            GTECH_NOT                                                                                                 gtech
+            GTECH_OR2                                                                                                 gtech
+1

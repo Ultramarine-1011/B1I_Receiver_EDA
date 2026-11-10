@@ -1,0 +1,3083 @@
+ 
+****************************************
+Report : resources
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 00:09:05 2026
+****************************************
+
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_32_1_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_5_4_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_3_2_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_6_5_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_6_1_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_23_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_32_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_24_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_31_14_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_5_1_5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_1_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_31_32_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_31_24_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_32_21_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_TC_OP_32_21_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_32_14_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_TC_OP_32_14_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_UNS_OP_32_24_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_32_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_45_13_48
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_44_32_45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_11_33_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_15_32_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_29_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_33_12_45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_16_32_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_30_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_34_12_46
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_30_33_34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_15_15_30
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_8_1_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_1_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_32_31_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_TC_OP_32_31_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_31_22_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_15_7_22
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_23_22_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_TC_OP_23_22_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_22_20_23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_16_20_36
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_34_31_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_TC_OP_34_31_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_33_22_34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_16_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_15_17_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_26_13_38
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *EQ_UNS_OP_64_64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_64_14_64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_16_11_26
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_56_56_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_56_56_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_33_22_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_TC_OP_33_22_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_11_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_16_11_27
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_UNS_OP_64_45_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GT_UNS_OP_64_44_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_18_15_31
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_18_18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_28_1_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_28_1_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_2_16_16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_18_5_23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_18_18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_UNS_OP_64_64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_29_29_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_57_57_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_57_57_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_57_57_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_28_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_28_1_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_28_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LT_TC_OP_28_1_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_57_57_58
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width58
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_56_56_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_56_56_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_56_56_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_28_28_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_32_23_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width33
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_14_1_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_32_32_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_32_1_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_44_43_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_44_43_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_43_33_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_42_29_42
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width42
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_28_28_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_14_14_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_14_14_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_14_1_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_28_28_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_28_28_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_28_28_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_28_28_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_28_28_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_TC_OP_28_28_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_14_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_14_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_14_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_14_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_14_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_14_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width15
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_32_32_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_14_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_3_12_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_TC_OP_3_12_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_12_12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_9_8_9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_TC_OP_1_12_12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_9_8_9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_10_9_10
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width10
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_32_22_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width32
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_32_1_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *EQ_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *EQ_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *EQ_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *NE_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *NE_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *NE_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *NE_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *NE_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *NE_UNS_OP_11_11_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp6_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LEQ_UNS_OP_6_6_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_6_3_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_31_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_31_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_43_31_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_44_43_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_43_31_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_43_43_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_31_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_31_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_43_31_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_44_43_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_43_31_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_31_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_31_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_43_31_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_44_43_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_43_31_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_43_43_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_44_43_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_43_33_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width44
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : b1i_prn_gen
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_11_1_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LEQ_UNS_OP_6_6_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_6_3_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : b1i_prn_gen
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_11_1_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LEQ_UNS_OP_6_6_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_6_3_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : b1i_prn_gen
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_11_1_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *LEQ_UNS_OP_6_6_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_6_3_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width6
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : tracking_divide_aid
+****************************************
+
+Resource Sharing Report for design tracking_divide_aid in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_507_C510         |
+| r877     | DW_mult_tc   | a_width=33 |               | mult_505_C510        |
+|          |              | b_width=34 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_divide_aid
+****************************************
+Resource Sharing Report for design tracking_divide_aid in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_507_C510         |
+| r877     | DW_mult_tc   | a_width=33 |               | mult_505_C510        |
+|          |              | b_width=34 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_divide_step
+****************************************
+
+Resource Sharing Report for design tracking_divide_step in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_494_C497         |
+| r877     | DW_mult_tc   | a_width=40 |               | mult_492_C497        |
+|          |              | b_width=41 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_divide_step
+****************************************
+Resource Sharing Report for design tracking_divide_step in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_494_C497         |
+| r877     | DW_mult_tc   | a_width=40 |               | mult_492_C497        |
+|          |              | b_width=41 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_atan
+****************************************
+Resource Sharing Report for design tracking_atan in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r584     | DW01_cmp6    | width=59   |               | gt_476_C484          |
+|          |              |            |               | lt_477_C484          |
+| r585     | DW01_add     | width=59   |               | add_476_S2_C484      |
+|          |              |            |               | add_477_S3_C484      |
+| r588     | DW01_cmp6    | width=59   |               | gt_476_I2_C484       |
+|          |              |            |               | lt_477_I2_C484       |
+| r595     | DW01_cmp6    | width=59   |               | gt_476_I3_C484       |
+|          |              |            |               | lt_477_I3_C484       |
+| r602     | DW01_cmp6    | width=59   |               | gt_476_I4_C484       |
+|          |              |            |               | lt_477_I4_C484       |
+| r609     | DW01_cmp6    | width=59   |               | gt_476_I5_C484       |
+|          |              |            |               | lt_477_I5_C484       |
+| r616     | DW01_cmp6    | width=59   |               | gt_476_I6_C484       |
+|          |              |            |               | lt_477_I6_C484       |
+| r623     | DW01_cmp6    | width=59   |               | gt_476_I7_C484       |
+|          |              |            |               | lt_477_I7_C484       |
+| r630     | DW01_cmp6    | width=59   |               | gt_476_I8_C484       |
+|          |              |            |               | lt_477_I8_C484       |
+| r637     | DW01_cmp6    | width=59   |               | gt_476_I9_C484       |
+|          |              |            |               | lt_477_I9_C484       |
+| r644     | DW01_cmp6    | width=59   |               | gt_476_I10_C484      |
+|          |              |            |               | lt_477_I10_C484      |
+| r651     | DW01_cmp6    | width=59   |               | gt_476_I11_C484      |
+|          |              |            |               | lt_477_I11_C484      |
+| r658     | DW01_cmp6    | width=59   |               | gt_476_I12_C484      |
+|          |              |            |               | lt_477_I12_C484      |
+| r665     | DW01_cmp6    | width=59   |               | gt_476_I13_C484      |
+|          |              |            |               | lt_477_I13_C484      |
+| r672     | DW01_cmp6    | width=59   |               | gt_476_I14_C484      |
+|          |              |            |               | lt_477_I14_C484      |
+| r679     | DW01_cmp6    | width=59   |               | gt_476_I15_C484      |
+|          |              |            |               | lt_477_I15_C484      |
+| r684     | DW01_cmp6    | width=59   |               | gt_476_I16_C484      |
+|          |              |            |               | lt_477_I16_C484      |
+| r777     | DW_cmp       | width=57   |               | lt_467_C484          |
+| r779     | DW01_sub     | width=58   |               | sub_467_C484         |
+| r781     | DW01_sub     | width=58   |               | sub_467_S2_C484      |
+| r783     | DW01_sub     | width=59   |               | sub_476_S3_C484      |
+| r785     | DW01_sub     | width=59   |               | sub_477_S2_C484      |
+| r787     | DW01_add     | width=59   |               | add_476_S2_I2_C484   |
+| r789     | DW01_sub     | width=59   |               | sub_476_S3_I2_C484   |
+| r791     | DW01_add     | width=32   |               | add_476_S4_I2_C484   |
+| r793     | DW01_sub     | width=59   |               | sub_477_S2_I2_C484   |
+| r795     | DW01_add     | width=59   |               | add_477_S3_I2_C484   |
+| r797     | DW01_sub     | width=32   |               | sub_477_S4_I2_C484   |
+| r799     | DW01_add     | width=59   |               | add_476_S2_I3_C484   |
+| r801     | DW01_sub     | width=59   |               | sub_476_S3_I3_C484   |
+| r803     | DW01_add     | width=32   |               | add_476_S4_I3_C484   |
+| r805     | DW01_sub     | width=59   |               | sub_477_S2_I3_C484   |
+| r807     | DW01_add     | width=59   |               | add_477_S3_I3_C484   |
+| r809     | DW01_sub     | width=32   |               | sub_477_S4_I3_C484   |
+| r811     | DW01_add     | width=59   |               | add_476_S2_I4_C484   |
+| r813     | DW01_sub     | width=59   |               | sub_476_S3_I4_C484   |
+| r815     | DW01_add     | width=32   |               | add_476_S4_I4_C484   |
+| r817     | DW01_sub     | width=59   |               | sub_477_S2_I4_C484   |
+| r819     | DW01_add     | width=59   |               | add_477_S3_I4_C484   |
+| r821     | DW01_sub     | width=32   |               | sub_477_S4_I4_C484   |
+| r823     | DW01_add     | width=59   |               | add_476_S2_I5_C484   |
+| r825     | DW01_sub     | width=59   |               | sub_476_S3_I5_C484   |
+| r827     | DW01_add     | width=32   |               | add_476_S4_I5_C484   |
+| r829     | DW01_sub     | width=59   |               | sub_477_S2_I5_C484   |
+| r831     | DW01_add     | width=59   |               | add_477_S3_I5_C484   |
+| r833     | DW01_sub     | width=32   |               | sub_477_S4_I5_C484   |
+| r835     | DW01_add     | width=59   |               | add_476_S2_I6_C484   |
+| r837     | DW01_sub     | width=59   |               | sub_476_S3_I6_C484   |
+| r839     | DW01_add     | width=32   |               | add_476_S4_I6_C484   |
+| r841     | DW01_sub     | width=59   |               | sub_477_S2_I6_C484   |
+| r843     | DW01_add     | width=59   |               | add_477_S3_I6_C484   |
+| r845     | DW01_sub     | width=32   |               | sub_477_S4_I6_C484   |
+| r847     | DW01_add     | width=59   |               | add_476_S2_I7_C484   |
+| r849     | DW01_sub     | width=59   |               | sub_476_S3_I7_C484   |
+| r851     | DW01_add     | width=32   |               | add_476_S4_I7_C484   |
+| r853     | DW01_sub     | width=59   |               | sub_477_S2_I7_C484   |
+| r855     | DW01_add     | width=59   |               | add_477_S3_I7_C484   |
+| r857     | DW01_sub     | width=32   |               | sub_477_S4_I7_C484   |
+| r859     | DW01_add     | width=59   |               | add_476_S2_I8_C484   |
+| r861     | DW01_sub     | width=59   |               | sub_476_S3_I8_C484   |
+| r863     | DW01_add     | width=32   |               | add_476_S4_I8_C484   |
+| r865     | DW01_sub     | width=59   |               | sub_477_S2_I8_C484   |
+| r867     | DW01_add     | width=59   |               | add_477_S3_I8_C484   |
+| r869     | DW01_sub     | width=32   |               | sub_477_S4_I8_C484   |
+| r871     | DW01_add     | width=59   |               | add_476_S2_I9_C484   |
+| r873     | DW01_sub     | width=59   |               | sub_476_S3_I9_C484   |
+| r875     | DW01_add     | width=32   |               | add_476_S4_I9_C484   |
+| r877     | DW01_sub     | width=59   |               | sub_477_S2_I9_C484   |
+| r879     | DW01_add     | width=59   |               | add_477_S3_I9_C484   |
+| r881     | DW01_sub     | width=32   |               | sub_477_S4_I9_C484   |
+| r883     | DW01_add     | width=59   |               | add_476_S2_I10_C484  |
+| r885     | DW01_sub     | width=59   |               | sub_476_S3_I10_C484  |
+| r887     | DW01_add     | width=32   |               | add_476_S4_I10_C484  |
+| r889     | DW01_sub     | width=59   |               | sub_477_S2_I10_C484  |
+| r891     | DW01_add     | width=59   |               | add_477_S3_I10_C484  |
+| r893     | DW01_sub     | width=32   |               | sub_477_S4_I10_C484  |
+| r895     | DW01_add     | width=59   |               | add_476_S2_I11_C484  |
+| r897     | DW01_sub     | width=59   |               | sub_476_S3_I11_C484  |
+| r899     | DW01_add     | width=32   |               | add_476_S4_I11_C484  |
+| r901     | DW01_sub     | width=59   |               | sub_477_S2_I11_C484  |
+| r903     | DW01_add     | width=59   |               | add_477_S3_I11_C484  |
+| r905     | DW01_sub     | width=32   |               | sub_477_S4_I11_C484  |
+| r907     | DW01_add     | width=59   |               | add_476_S2_I12_C484  |
+| r909     | DW01_sub     | width=59   |               | sub_476_S3_I12_C484  |
+| r911     | DW01_add     | width=32   |               | add_476_S4_I12_C484  |
+| r913     | DW01_sub     | width=59   |               | sub_477_S2_I12_C484  |
+| r915     | DW01_add     | width=59   |               | add_477_S3_I12_C484  |
+| r917     | DW01_sub     | width=32   |               | sub_477_S4_I12_C484  |
+| r919     | DW01_add     | width=59   |               | add_476_S2_I13_C484  |
+| r921     | DW01_sub     | width=59   |               | sub_476_S3_I13_C484  |
+| r923     | DW01_add     | width=32   |               | add_476_S4_I13_C484  |
+| r925     | DW01_sub     | width=59   |               | sub_477_S2_I13_C484  |
+| r927     | DW01_add     | width=59   |               | add_477_S3_I13_C484  |
+| r929     | DW01_sub     | width=32   |               | sub_477_S4_I13_C484  |
+| r931     | DW01_add     | width=59   |               | add_476_S2_I14_C484  |
+| r933     | DW01_sub     | width=59   |               | sub_476_S3_I14_C484  |
+| r935     | DW01_add     | width=32   |               | add_476_S4_I14_C484  |
+| r937     | DW01_sub     | width=59   |               | sub_477_S2_I14_C484  |
+| r939     | DW01_add     | width=59   |               | add_477_S3_I14_C484  |
+| r941     | DW01_sub     | width=32   |               | sub_477_S4_I14_C484  |
+| r943     | DW01_sub     | width=59   |               | sub_476_S3_I15_C484  |
+| r945     | DW01_add     | width=32   |               | add_476_S4_I15_C484  |
+| r947     | DW01_add     | width=59   |               | add_477_S3_I15_C484  |
+| r949     | DW01_sub     | width=32   |               | sub_477_S4_I15_C484  |
+| r951     | DW01_add     | width=32   |               | add_476_S4_I16_C484  |
+| r953     | DW01_sub     | width=32   |               | sub_477_S4_I16_C484  |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_ratio_phase
+****************************************
+Resource Sharing Report for design tracking_ratio_phase in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r357     | DW_cmp       | width=29   |               | eq_446_C459          |
+| r359     | DW01_sub     | width=31   |               | sub_451_C459         |
+| r361     | DW01_sub     | width=31   |               | sub_451_I2_C459      |
+| r363     | DW01_sub     | width=31   |               | sub_451_I3_C459      |
+| r365     | DW01_sub     | width=31   |               | sub_451_I4_C459      |
+| r367     | DW01_sub     | width=31   |               | sub_451_I5_C459      |
+| r369     | DW01_sub     | width=31   |               | sub_451_I6_C459      |
+| r371     | DW01_sub     | width=31   |               | sub_451_I7_C459      |
+| r373     | DW01_sub     | width=31   |               | sub_451_I8_C459      |
+| r375     | DW01_sub     | width=31   |               | sub_451_I9_C459      |
+| r377     | DW01_sub     | width=31   |               | sub_451_I10_C459     |
+| r379     | DW01_sub     | width=31   |               | sub_451_I11_C459     |
+| r381     | DW01_sub     | width=31   |               | sub_451_I12_C459     |
+| r383     | DW01_sub     | width=31   |               | sub_451_I13_C459     |
+| r385     | DW01_sub     | width=31   |               | sub_451_I14_C459     |
+| r387     | DW01_sub     | width=31   |               | sub_451_I15_C459     |
+| r389     | DW01_sub     | width=31   |               | sub_451_I16_C459     |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_ratio_code
+****************************************
+Resource Sharing Report for design tracking_ratio_code in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r393     | DW_cmp       | width=57   |               | eq_264_C431          |
+| r395     | DW01_sub     | width=60   |               | sub_267_C431         |
+| r397     | DW01_sub     | width=60   |               | sub_268_C431         |
+| r399     | DW01_sub     | width=60   |               | sub_269_C431         |
+| r401     | DW01_sub     | width=60   |               | sub_287_C431         |
+| r403     | DW01_sub     | width=60   |               | sub_288_C431         |
+| r405     | DW01_sub     | width=60   |               | sub_289_C431         |
+| r407     | DW01_sub     | width=60   |               | sub_307_C431         |
+| r409     | DW01_sub     | width=60   |               | sub_308_C431         |
+| r411     | DW01_sub     | width=60   |               | sub_309_C431         |
+| r413     | DW01_sub     | width=60   |               | sub_327_C431         |
+| r415     | DW01_sub     | width=60   |               | sub_328_C431         |
+| r417     | DW01_sub     | width=60   |               | sub_329_C431         |
+| r419     | DW01_sub     | width=60   |               | sub_347_C431         |
+| r421     | DW01_sub     | width=60   |               | sub_348_C431         |
+| r423     | DW01_sub     | width=60   |               | sub_349_C431         |
+| r425     | DW01_sub     | width=60   |               | sub_367_C431         |
+| r427     | DW01_sub     | width=60   |               | sub_368_C431         |
+| r429     | DW01_sub     | width=60   |               | sub_369_C431         |
+| r431     | DW01_sub     | width=60   |               | sub_387_C431         |
+| r433     | DW01_sub     | width=60   |               | sub_388_C431         |
+| r435     | DW01_sub     | width=60   |               | sub_389_C431         |
+| r437     | DW01_sub     | width=60   |               | sub_407_C431         |
+| r439     | DW01_sub     | width=59   |               | sub_408_C431         |
+| r441     | DW01_sub     | width=60   |               | sub_409_C431         |
+| r1021    | DW_mult_uns  | a_width=57 |               | mult_261_C431        |
+|          |              | b_width=2  |               |                      |
+===============================================================================
+
+
+No implementations to report
+1

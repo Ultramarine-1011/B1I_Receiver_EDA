@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-11-10T15:48:48.5037878Z",
+  "task": "loop",
+  "sources": [
+    {
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\work\\loop_probes.sv",
+      "sha256": "A60F1127758EB0229E281F78065949FC03340A9EE85620735653FA68C75F5EE5"
+    },
+    {
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\tb\\tb_loop_equivalence.sv",
+      "sha256": "30D4E5DD0873C8BF78D98483AE8AFDBE4D2EA0F6B6A242439C2BF4B56564B371"
+    }
+  ]
+}

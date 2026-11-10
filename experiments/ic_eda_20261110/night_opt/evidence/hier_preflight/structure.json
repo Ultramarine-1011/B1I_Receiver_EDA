@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "top_ports_and_parameters_identical": true,
+  "sequential_block_identical": true,
+  "arithmetic_function_hashes": {
+    "normalized_ratio_q16": "11c8853d97520b688c54d7fa518f0faea6e8a77208c5c34d20feee96dd1e722b",
+    "normalized_phase_ratio_q16": "8d1be798fc8c50677bb57ba681657f3061eb568ccc16683e8b5b2201351f6ba6",
+    "atan_turn_q16": "4e801cdcdd0d04b9c2f7e6aaeec65e8952cec5767e6ff49665062c7cb09e1d11",
+    "divide_step_127875": "b8bd09825f35cd8e800e3fe9fbc2c6b22515a65131c2952759e294bb04804876",
+    "divide_aid_763": "e5c4e24ec830918a3e8e79636ae898a450b41077e22b4e62ef86f8960a8304c0"
+  },
+  "closed_loop_csv_identical": true,
+  "staged_rtl_sha256": "ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88"
+}

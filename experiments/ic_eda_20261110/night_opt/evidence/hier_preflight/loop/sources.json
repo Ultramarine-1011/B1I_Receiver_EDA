@@ -1,0 +1,14 @@
+{
+  "task": "loop",
+  "result": "PASS",
+  "sources": [
+    {
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\work\\hier\\loop_probes.sv",
+      "sha256": "a60f1127758eb0229e281f78065949fc03340a9ee85620735653fa68c75f5ee5"
+    },
+    {
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\night_opt\\tb\\tb_loop_equivalence.sv",
+      "sha256": "30d4e5dd0873c8bf78d98483ae8afdbe4d2ea0f6b6a242439c2bf4b56564b371"
+    }
+  ]
+}

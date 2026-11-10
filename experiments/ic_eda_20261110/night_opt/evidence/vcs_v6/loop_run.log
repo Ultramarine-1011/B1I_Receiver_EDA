@@ -1,0 +1,10 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 10 23:49 2026
+LOOP_EQUIVALENCE_PASS checks=100625 fields=18 seed=600dc0de
+$finish called from file "/home/ICer/ic_eda_night_20261110/tb/tb_loop_equivalence.sv", line 74.
+$finish at simulation time            100625000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 100625000 ps
+CPU Time:      1.010 seconds;       Data structure size:   0.0Mb
+Tue Nov 10 23:49:20 2026

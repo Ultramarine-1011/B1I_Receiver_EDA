@@ -1,0 +1,745 @@
+ 
+****************************************
+Report : resources
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 00:24:55 2026
+****************************************
+
+Resource Sharing Report for design
+        tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r716     | DW_cmp       | width=28   |               | lt_114 lt_129_2      |
+| r718     | DW_cmp       | width=28   |               | lt_115 lt_129        |
+| r878     | DW01_add     | width=33   |               | add_104              |
+| r892     | DW01_add     | width=57   |               | add_112              |
+| r894     | DW01_add     | width=57   |               | add_112_S2           |
+| r896     | DW01_add     | width=57   |               | add_112_S3           |
+| r898     | DW01_add     | width=58   |               | add_113              |
+| r900     | DW01_sub     | width=29   |               | sub_114              |
+| r902     | DW01_sub     | width=29   |               | sub_115              |
+| r904     | DW_cmp       | width=57   |               | gte_117              |
+| r906     | DW01_sub     | width=57   |               | sub_117              |
+| r908     | DW01_sub     | width=57   |               | sub_117_2            |
+| r910     | DW01_add     | width=29   |               | add_118              |
+| r912     | DW_cmp       | width=64   |               | lt_127               |
+| r914     | DW01_sub     | width=18   |               | sub_127              |
+| r920     | DW01_sub     | width=18   |               | sub_129              |
+| r924     | DW_cmp       | width=64   |               | gt_131               |
+| r926     | DW_cmp       | width=64   |               | gt_131_2             |
+| r932     | DW_cmp       | width=33   |               | gt_76_C132           |
+| r934     | DW_cmp       | width=33   |               | lt_77_C132           |
+| r950     | DW01_add     | width=64   |               | add_142              |
+| r952     | DW_cmp       | width=64   |               | eq_142               |
+| r962     | DW_cmp       | width=34   |               | gt_76_C144           |
+| r964     | DW_cmp       | width=34   |               | lt_77_C144           |
+| r970     | DW_cmp       | width=23   |               | gt_76_C145           |
+| r972     | DW_cmp       | width=23   |               | lt_77_C145           |
+| r978     | DW_cmp       | width=32   |               | gt_76_C146           |
+| r980     | DW_cmp       | width=32   |               | lt_77_C146           |
+| r1008    | DW01_add     | width=32   |               | add_156_aco          |
+| r1010    | DW_cmp       | width=32   |               | lt_157               |
+| r1012    | DW_cmp       | width=32   |               | gt_157               |
+| r1014    | DW_cmp       | width=32   |               | lt_157_2             |
+| r1016    | DW_cmp       | width=32   |               | gt_157_2             |
+| r1018    | DW_cmp       | width=32   |               | lt_157_3             |
+| r1020    | DW01_add     | width=32   |               | add_194              |
+| r1022    | DW01_add     | width=32   |               | add_195              |
+| r1024    | DW01_inc     | width=8    |               | add_213_S2           |
+| r1026    | DW01_inc     | width=5    |               | add_216_S2           |
+| r1036    | DW01_inc     | width=6    |               | add_228_S2           |
+| r1038    | DW_cmp       | width=6    |               | gte_229              |
+| r1040    | DW01_inc     | width=3    |               | add_232_S2           |
+| r1042    | DW_cmp       | width=3    |               | gte_233              |
+| r1044    | DW_cmp       | width=5    |               | gte_235              |
+| r1626    | DW_mult_tc   | a_width=28 |               | mult_109             |
+|          |              | b_width=28 |               |                      |
+| r2206    | DW_mult_tc   | a_width=28 |               | mult_109_S2          |
+|          |              | b_width=28 |               |                      |
+| r2795    | DW_mult_tc   | a_width=28 |               | mult_134_2           |
+|          |              | b_width=28 |               |                      |
+| r2797    | DW_mult_tc   | a_width=28 |               | mult_134             |
+|          |              | b_width=28 |               |                      |
+| r2799    | DW01_sub     | width=57   |               | sub_134              |
+| r3398    | DW_mult_tc   | a_width=28 |               | mult_133             |
+|          |              | b_width=28 |               |                      |
+| r3400    | DW_mult_tc   | a_width=28 |               | mult_110             |
+|          |              | b_width=28 |               |                      |
+| r3402    | DW_mult_tc   | a_width=28 |               | mult_133_2           |
+|          |              | b_width=28 |               |                      |
+| r3404    | DW_mult_tc   | a_width=28 |               | mult_110_S2          |
+|          |              | b_width=28 |               |                      |
+| r3406    | DW01_add     | width=57   |               | add_133              |
+| r3986    | DW_mult_tc   | a_width=28 |               | mult_111             |
+|          |              | b_width=28 |               |                      |
+| r4566    | DW_mult_tc   | a_width=28 |               | mult_111_S2          |
+|          |              | b_width=28 |               |                      |
+| r5152    | DW01_sub     | width=8    |               | sub_1_root_sub_0_root_sub_150 |
+| r5154    | DW01_add     | width=8    |               | add_0_root_sub_0_root_sub_150 |
+| r5734    | DW_mult_tc   | a_width=18 |               | mult_130             |
+|          |              | b_width=15 |               |                      |
+| r6327    | DW_mult_tc   | a_width=15 |               | mult_151             |
+|          |              | b_width=15 |               |                      |
+| r6329    | DW01_sub     | width=34   |               | sub_152              |
+| r6331    | DW_mult_tc   | a_width=34 |               | mult_152             |
+|          |              | b_width=12 |               |                      |
+| r6333    | DW01_add     | width=32   |               | add_152              |
+| r6918    | DW01_add     | width=32   |               | add_1_root_add_220_2 |
+| r6920    | DW01_add     | width=33   |               | add_0_root_add_220_2 |
+| r7507    | DW01_add     | width=32   |               | add_1_root_add_0_root_add_222_2 |
+| r7509    | DW01_add     | width=32   |               | add_0_root_add_0_root_add_222_2 |
+| r8093    | DW_mult_tc   | a_width=15 |               | mult_146             |
+|          |              | b_width=7  |               |                      |
+| r8095    | DW01_add     | width=32   |               | add_146              |
+| r8683    | DW01_sub     | width=33   |               | sub_153              |
+| r8685    | DW_mult_tc   | a_width=33 |               | mult_153             |
+|          |              | b_width=12 |               |                      |
+| r8687    | DW01_add     | width=32   |               | add_153              |
+| r9271    | DW_mult_tc   | a_width=16 |               | mult_132             |
+|          |              | b_width=11 |               |                      |
+| r9273    | DW01_add     | width=33   |               | add_132              |
+| r9857    | DW_mult_tc   | a_width=16 |               | mult_145             |
+|          |              | b_width=20 |               |                      |
+| r9859    | DW01_add     | width=23   |               | add_145              |
+| r10439   | DW_mult_uns  | a_width=32 |               | mult_add_156_aco     |
+|          |              | b_width=1  |               |                      |
+| r11043   | DW_mult_tc   | a_width=16 |               | mult_139             |
+|          |              | b_width=11 |               |                      |
+| r11045   | DW_mult_tc   | a_width=26 |               | mult_143             |
+|          |              | b_width=13 |               |                      |
+| r11047   | DW01_sub     | width=33   |               | sub_156              |
+| r11049   | DW_mult_tc   | a_width=11 |               | mult_156             |
+|          |              | b_width=33 |               |                      |
+| r11051   | DW01_sub     | width=45   |               | sub_156_2            |
+| r11053   | DW_mult_tc   | a_width=45 |               | mult_156_2           |
+|          |              | b_width=13 |               |                      |
+| r11637   | DW_mult_tc   | a_width=18 |               | mult_128             |
+|          |              | b_width=5  |               |                      |
+| r11639   | DW01_add     | width=16   |               | add_div_128          |
+| r12228   | DW_mult_tc   | a_width=15 |               | mult_144             |
+|          |              | b_width=17 |               |                      |
+| r12230   | DW01_add     | width=33   |               | add_1_root_add_144_2 |
+| r12232   | DW01_add     | width=34   |               | add_0_root_add_144_2 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_133_2         | DW_mult_tc       | pparch (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| mult_134           | DW_mult_tc       | pparch (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| mult_133           | DW_mult_tc       | pparch (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| add_133            | DW01_add         | pparch (area,speed)                 |
+| sub_134            | DW01_sub         | pparch (area,speed)                 |
+| add_0_root_add_144_2                  |                    |                |
+|                    | DW01_add         | pparch (area,speed)                 |
+| sub_115            | DW01_sub         | pparch (area,speed)                 |
+| add_1_root_add_144_2                  |                    |                |
+|                    | DW01_add         | pparch (area,speed)                 |
+| add_118            | DW01_add         | pparch (area,speed)                 |
+| mult_134_2         | DW_mult_tc       | pparch (area,speed)                 |
+|                    |                  | mult_arch: benc_radix4              |
+| mult_143           | DW_mult_tc       | pparch (area,speed)                 |
+| add_112            | DW01_add         | pparch (speed)     |                |
+| add_112_S3         | DW01_add         | pparch (speed)     |                |
+| mult_128           | DW_mult_tc       | pparch (area,speed)                 |
+| gte_117            | DW_cmp           | pparch (speed)     |                |
+| mult_132           | DW_mult_tc       | pparch (speed)     |                |
+| add_132            | DW01_add         | pparch (speed)     |                |
+| add_145            | DW01_add         | pparch (speed)     |                |
+| mult_111           | DW_mult_tc       | pparch (speed)     |                |
+|                    |                  | mult_arch: and     |                |
+| mult_109           | DW_mult_tc       | pparch (speed)     |                |
+|                    |                  | mult_arch: and     |                |
+| mult_111_S2        | DW_mult_tc       | pparch (speed)     |                |
+|                    |                  | mult_arch: and     |                |
+| mult_109_S2        | DW_mult_tc       | pparch (speed)     |                |
+|                    |                  | mult_arch: and     |                |
+| sub_114            | DW01_sub         | pparch (area,speed)                 |
+| mult_144           | DW_mult_tc       | pparch (speed)     |                |
+| mult_130           | DW_mult_tc       | pparch (speed)     |                |
+| mult_139           | DW_mult_tc       | pparch (area,speed)                 |
+| add_0_root_add_220_2                  |                    |                |
+|                    | DW01_add         | pparch (area,speed)                 |
+| add_146            | DW01_add         | pparch (speed)     |                |
+| mult_110_S2        | DW_mult_tc       | apparch (area)     |                |
+|                    |                  | mult_arch: and     |                |
+| mult_110           | DW_mult_tc       | apparch (area)     |                |
+|                    |                  | mult_arch: and     |                |
+| add_152            | DW01_add         | rpl                |                |
+| mult_152           | DW_mult_tc       | apparch (area)     |                |
+| sub_152            | DW01_sub         | rpl                |                |
+| mult_151           | DW_mult_tc       | apparch (area)     |                |
+|                    |                  | mult_arch: and     |                |
+| mult_156_2         | DW_mult_tc       | apparch (area)     |                |
+| sub_156_2          | DW01_sub         | rpl                |                |
+| mult_156           | DW_mult_tc       | apparch (area)     |                |
+| sub_156            | DW01_sub         | rpl                |                |
+| mult_add_156_aco   | DW_mult_uns      | apparch (area)     |                |
+|                    |                  | mult_arch: benc_radix4              |
+| mult_145           | DW_mult_tc       | apparch (area)     |                |
+| add_153            | DW01_add         | rpl                |                |
+| mult_153           | DW_mult_tc       | apparch (area)     |                |
+| sub_153            | DW01_sub         | rpl                |                |
+| add_0_root_add_0_root_add_222_2       |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_112_S2         | DW01_add         | rpl                |                |
+| gt_131             | DW_cmp           | apparch (area)     |                |
+| add_113            | DW01_add         | rpl                |                |
+| gt_131_2           | DW_cmp           | apparch (area)     |                |
+| add_142            | DW01_add         | rpl                |                |
+| add_104            | DW01_add         | rpl                |                |
+| sub_117            | DW01_sub         | rpl                |                |
+| sub_117_2          | DW01_sub         | rpl                |                |
+| lt_127             | DW_cmp           | apparch (area)     |                |
+| add_156_aco        | DW01_add         | rpl                |                |
+| add_213_S2         | DW01_inc         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+****************************************
+Resource Sharing Report for design
+        tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+        in file
+        ./sources/student_release/student_release/rtl/tracking_frontend_spaced.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r369     | DW_cmp       | width=44   |               | gte_147 gte_149      |
+| r392     | DW01_add     | width=44   |               | add_95               |
+| r394     | DW01_sub     | width=43   |               | sub_147_aco          |
+| r396     | DW01_add     | width=32   |               | add_149              |
+| r398     | DW01_add     | width=32   |               | add_151              |
+| r400     | DW01_inc     | width=14   |               | add_175              |
+| r980     | DW_mult_tc   | a_width=14 |               | mult_92              |
+|          |              | b_width=14 |               |                      |
+| r1560    | DW_mult_tc   | a_width=14 |               | mult_91              |
+|          |              | b_width=14 |               |                      |
+| r2147    | DW01_add     | width=42   |               | add_1_root_add_0_root_add_94 |
+| r2149    | DW01_add     | width=42   |               | add_0_root_add_0_root_add_94 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_91            | DW_mult_tc       | apparch (area)     |                |
+|                    |                  | mult_arch: and     |                |
+| mult_92            | DW_mult_tc       | apparch (area)     |                |
+|                    |                  | mult_arch: and     |                |
+| add_0_root_add_0_root_add_94          |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_0_root_add_94          |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_95             | DW01_add         | rpl                |                |
+| add_149            | DW01_add         | rpl                |                |
+| add_151            | DW01_add         | rpl                |                |
+| add_175            | DW01_inc         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+****************************************
+Resource Sharing Report for design
+        epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+        in file
+        ./sources/student_release/student_release/rtl/epl_correlator.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r347     | DW01_sub     | width=15   |               | sub_66 sub_68 sub_70 |
+| r348     | DW01_sub     | width=15   |               | sub_67 sub_69 sub_71 |
+| r364     | DW01_add     | width=28   |               | add_73               |
+| r366     | DW01_add     | width=28   |               | add_74               |
+| r368     | DW01_add     | width=28   |               | add_75               |
+| r370     | DW01_add     | width=28   |               | add_76               |
+| r372     | DW01_add     | width=28   |               | add_77               |
+| r374     | DW01_add     | width=28   |               | add_78               |
+| r376     | DW01_inc     | width=14   |               | add_146              |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_73             | DW01_add         | rpl                |                |
+| add_74             | DW01_add         | rpl                |                |
+| add_75             | DW01_add         | rpl                |                |
+| add_76             | DW01_add         | rpl                |                |
+| add_77             | DW01_add         | rpl                |                |
+| add_78             | DW01_add         | rpl                |                |
+| add_146            | DW01_inc         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+****************************************
+Resource Sharing Report for design
+        carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 in file
+        ./sources/student_release/student_release/rtl/carrier_nco_mixer.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r355     | DW01_sub     | width=9    |               | sub_49_C61           |
+| r357     | DW01_sub     | width=12   |               | sub_52_C61           |
+| r359     | DW01_sub     | width=9    |               | sub_49_C62           |
+| r361     | DW01_sub     | width=12   |               | sub_52_C62           |
+| r369     | DW01_add     | width=32   |               | add_85               |
+| r954     | DW01_add     | width=32   |               | add_58               |
+| r956     | DW01_add     | width=10   |               | add_60               |
+| r1545    | DW_mult_tc   | a_width=3  |               | mult_64              |
+|          |              | b_width=12 |               |                      |
+| r1547    | DW_mult_tc   | a_width=3  |               | mult_63              |
+|          |              | b_width=12 |               |                      |
+| r1549    | DW01_sub     | width=14   |               | sub_64               |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_63            | DW_mult_tc       | apparch (area)     |                |
+|                    |                  | mult_arch: and     |                |
+| mult_64            | DW_mult_tc       | apparch (area)     |                |
+|                    |                  | mult_arch: and     |                |
+| add_85             | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+****************************************
+Resource Sharing Report for design
+        code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+        in file ./sources/student_release/student_release/rtl/code_nco.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r409     | DW01_cmp6    | width=11   |               | eq_223 ne_150        |
+| r411     | DW01_cmp6    | width=11   |               | eq_223_2 ne_153      |
+| r413     | DW01_cmp6    | width=11   |               | eq_223_3 ne_156      |
+| r449     | DW01_add     | width=44   |               | add_114              |
+| r451     | DW_cmp       | width=44   |               | gte_116              |
+| r453     | DW01_sub     | width=43   |               | sub_117              |
+| r455     | DW01_add     | width=44   |               | add_94_C124          |
+| r457     | DW_cmp       | width=44   |               | gte_95_C124          |
+| r459     | DW01_sub     | width=43   |               | sub_96_C124          |
+| r461     | DW_cmp       | width=43   |               | gte_106_C125         |
+| r463     | DW01_sub     | width=43   |               | sub_107_C125         |
+| r469     | DW01_add     | width=44   |               | add_94_C126          |
+| r471     | DW_cmp       | width=44   |               | gte_95_C126          |
+| r473     | DW01_sub     | width=43   |               | sub_96_C126          |
+| r475     | DW_cmp       | width=43   |               | gte_106_C127         |
+| r477     | DW01_sub     | width=43   |               | sub_107_C127         |
+| r483     | DW_cmp       | width=43   |               | gte_136              |
+| r485     | DW01_sub     | width=43   |               | sub_137              |
+| r487     | DW01_add     | width=44   |               | add_94_C140          |
+| r489     | DW_cmp       | width=44   |               | gte_95_C140          |
+| r491     | DW01_sub     | width=43   |               | sub_96_C140          |
+| r493     | DW_cmp       | width=43   |               | gte_106_C141         |
+| r495     | DW01_sub     | width=43   |               | sub_107_C141         |
+| r501     | DW_cmp       | width=6    |               | gte_146              |
+| r503     | DW_cmp       | width=6    |               | lte_146              |
+| r505     | DW_cmp       | width=11   |               | ne_150_2             |
+| r507     | DW_cmp       | width=11   |               | ne_153_2             |
+| r509     | DW_cmp       | width=11   |               | ne_156_2             |
+| r511     | DW01_inc     | width=32   |               | add_234              |
+| r1096    | DW01_sub     | width=43   |               | sub_109_C125         |
+| r1098    | DW01_sub     | width=43   |               | sub_109_2_C125       |
+| r1683    | DW01_sub     | width=43   |               | sub_109_C141         |
+| r1685    | DW01_sub     | width=43   |               | sub_109_2_C141       |
+| r2270    | DW01_sub     | width=43   |               | sub_109_C127         |
+| r2272    | DW01_sub     | width=43   |               | sub_109_2_C127       |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| sub_109_2_C125     | DW01_sub         | rpl                |                |
+| sub_109_C125       | DW01_sub         | rpl                |                |
+| sub_109_2_C141     | DW01_sub         | rpl                |                |
+| sub_109_C141       | DW01_sub         | rpl                |                |
+| sub_109_2_C127     | DW01_sub         | rpl                |                |
+| sub_109_C127       | DW01_sub         | rpl                |                |
+| add_114            | DW01_add         | rpl                |                |
+| add_234            | DW01_inc         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : b1i_prn_gen_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_124            | DW01_inc         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : b1i_prn_gen_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_124            | DW01_inc         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : b1i_prn_gen_0
+****************************************
+Resource Sharing Report for design b1i_prn_gen_0 in file
+        ./sources/student_release/student_release/rtl/b1i_prn_gen.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r309     | DW_cmp       | width=6    |               | gte_34_C83           |
+| r311     | DW_cmp       | width=6    |               | lte_34_C83           |
+| r313     | DW01_inc     | width=11   |               | add_124              |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_124            | DW01_inc         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : tracking_divide_aid
+****************************************
+
+Resource Sharing Report for design tracking_divide_aid in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_507_C510         |
+| r877     | DW_mult_tc   | a_width=33 |               | mult_505_C510        |
+|          |              | b_width=34 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_divide_aid
+****************************************
+
+Resource Sharing Report for design tracking_divide_aid in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_507_C510         |
+| r877     | DW_mult_tc   | a_width=33 |               | mult_505_C510        |
+|          |              | b_width=34 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_divide_step
+****************************************
+
+Resource Sharing Report for design tracking_divide_step in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_494_C497         |
+| r877     | DW_mult_tc   | a_width=40 |               | mult_492_C497        |
+|          |              | b_width=41 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_divide_step
+****************************************
+
+Resource Sharing Report for design tracking_divide_step in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r297     | DW01_add     | width=24   |               | add_494_C497         |
+| r877     | DW_mult_tc   | a_width=40 |               | mult_492_C497        |
+|          |              | b_width=41 |               |                      |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_atan
+****************************************
+
+Resource Sharing Report for design tracking_atan in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r584     | DW01_cmp6    | width=59   |               | gt_476_C484          |
+|          |              |            |               | lt_477_C484          |
+| r585     | DW01_add     | width=59   |               | add_476_S2_C484      |
+|          |              |            |               | add_477_S3_C484      |
+| r588     | DW01_cmp6    | width=59   |               | gt_476_I2_C484       |
+|          |              |            |               | lt_477_I2_C484       |
+| r595     | DW01_cmp6    | width=59   |               | gt_476_I3_C484       |
+|          |              |            |               | lt_477_I3_C484       |
+| r602     | DW01_cmp6    | width=59   |               | gt_476_I4_C484       |
+|          |              |            |               | lt_477_I4_C484       |
+| r609     | DW01_cmp6    | width=59   |               | gt_476_I5_C484       |
+|          |              |            |               | lt_477_I5_C484       |
+| r616     | DW01_cmp6    | width=59   |               | gt_476_I6_C484       |
+|          |              |            |               | lt_477_I6_C484       |
+| r623     | DW01_cmp6    | width=59   |               | gt_476_I7_C484       |
+|          |              |            |               | lt_477_I7_C484       |
+| r630     | DW01_cmp6    | width=59   |               | gt_476_I8_C484       |
+|          |              |            |               | lt_477_I8_C484       |
+| r637     | DW01_cmp6    | width=59   |               | gt_476_I9_C484       |
+|          |              |            |               | lt_477_I9_C484       |
+| r644     | DW01_cmp6    | width=59   |               | gt_476_I10_C484      |
+|          |              |            |               | lt_477_I10_C484      |
+| r651     | DW01_cmp6    | width=59   |               | gt_476_I11_C484      |
+|          |              |            |               | lt_477_I11_C484      |
+| r658     | DW01_cmp6    | width=59   |               | gt_476_I12_C484      |
+|          |              |            |               | lt_477_I12_C484      |
+| r665     | DW01_cmp6    | width=59   |               | gt_476_I13_C484      |
+|          |              |            |               | lt_477_I13_C484      |
+| r672     | DW01_cmp6    | width=59   |               | gt_476_I14_C484      |
+|          |              |            |               | lt_477_I14_C484      |
+| r679     | DW01_cmp6    | width=59   |               | gt_476_I15_C484      |
+|          |              |            |               | lt_477_I15_C484      |
+| r684     | DW01_cmp6    | width=59   |               | gt_476_I16_C484      |
+|          |              |            |               | lt_477_I16_C484      |
+| r777     | DW_cmp       | width=57   |               | lt_467_C484          |
+| r779     | DW01_sub     | width=58   |               | sub_467_C484         |
+| r781     | DW01_sub     | width=58   |               | sub_467_S2_C484      |
+| r783     | DW01_sub     | width=59   |               | sub_476_S3_C484      |
+| r785     | DW01_sub     | width=59   |               | sub_477_S2_C484      |
+| r787     | DW01_add     | width=59   |               | add_476_S2_I2_C484   |
+| r789     | DW01_sub     | width=59   |               | sub_476_S3_I2_C484   |
+| r791     | DW01_add     | width=32   |               | add_476_S4_I2_C484   |
+| r793     | DW01_sub     | width=59   |               | sub_477_S2_I2_C484   |
+| r795     | DW01_add     | width=59   |               | add_477_S3_I2_C484   |
+| r797     | DW01_sub     | width=32   |               | sub_477_S4_I2_C484   |
+| r799     | DW01_add     | width=59   |               | add_476_S2_I3_C484   |
+| r801     | DW01_sub     | width=59   |               | sub_476_S3_I3_C484   |
+| r803     | DW01_add     | width=32   |               | add_476_S4_I3_C484   |
+| r805     | DW01_sub     | width=59   |               | sub_477_S2_I3_C484   |
+| r807     | DW01_add     | width=59   |               | add_477_S3_I3_C484   |
+| r809     | DW01_sub     | width=32   |               | sub_477_S4_I3_C484   |
+| r811     | DW01_add     | width=59   |               | add_476_S2_I4_C484   |
+| r813     | DW01_sub     | width=59   |               | sub_476_S3_I4_C484   |
+| r815     | DW01_add     | width=32   |               | add_476_S4_I4_C484   |
+| r817     | DW01_sub     | width=59   |               | sub_477_S2_I4_C484   |
+| r819     | DW01_add     | width=59   |               | add_477_S3_I4_C484   |
+| r821     | DW01_sub     | width=32   |               | sub_477_S4_I4_C484   |
+| r823     | DW01_add     | width=59   |               | add_476_S2_I5_C484   |
+| r825     | DW01_sub     | width=59   |               | sub_476_S3_I5_C484   |
+| r827     | DW01_add     | width=32   |               | add_476_S4_I5_C484   |
+| r829     | DW01_sub     | width=59   |               | sub_477_S2_I5_C484   |
+| r831     | DW01_add     | width=59   |               | add_477_S3_I5_C484   |
+| r833     | DW01_sub     | width=32   |               | sub_477_S4_I5_C484   |
+| r835     | DW01_add     | width=59   |               | add_476_S2_I6_C484   |
+| r837     | DW01_sub     | width=59   |               | sub_476_S3_I6_C484   |
+| r839     | DW01_add     | width=32   |               | add_476_S4_I6_C484   |
+| r841     | DW01_sub     | width=59   |               | sub_477_S2_I6_C484   |
+| r843     | DW01_add     | width=59   |               | add_477_S3_I6_C484   |
+| r845     | DW01_sub     | width=32   |               | sub_477_S4_I6_C484   |
+| r847     | DW01_add     | width=59   |               | add_476_S2_I7_C484   |
+| r849     | DW01_sub     | width=59   |               | sub_476_S3_I7_C484   |
+| r851     | DW01_add     | width=32   |               | add_476_S4_I7_C484   |
+| r853     | DW01_sub     | width=59   |               | sub_477_S2_I7_C484   |
+| r855     | DW01_add     | width=59   |               | add_477_S3_I7_C484   |
+| r857     | DW01_sub     | width=32   |               | sub_477_S4_I7_C484   |
+| r859     | DW01_add     | width=59   |               | add_476_S2_I8_C484   |
+| r861     | DW01_sub     | width=59   |               | sub_476_S3_I8_C484   |
+| r863     | DW01_add     | width=32   |               | add_476_S4_I8_C484   |
+| r865     | DW01_sub     | width=59   |               | sub_477_S2_I8_C484   |
+| r867     | DW01_add     | width=59   |               | add_477_S3_I8_C484   |
+| r869     | DW01_sub     | width=32   |               | sub_477_S4_I8_C484   |
+| r871     | DW01_add     | width=59   |               | add_476_S2_I9_C484   |
+| r873     | DW01_sub     | width=59   |               | sub_476_S3_I9_C484   |
+| r875     | DW01_add     | width=32   |               | add_476_S4_I9_C484   |
+| r877     | DW01_sub     | width=59   |               | sub_477_S2_I9_C484   |
+| r879     | DW01_add     | width=59   |               | add_477_S3_I9_C484   |
+| r881     | DW01_sub     | width=32   |               | sub_477_S4_I9_C484   |
+| r883     | DW01_add     | width=59   |               | add_476_S2_I10_C484  |
+| r885     | DW01_sub     | width=59   |               | sub_476_S3_I10_C484  |
+| r887     | DW01_add     | width=32   |               | add_476_S4_I10_C484  |
+| r889     | DW01_sub     | width=59   |               | sub_477_S2_I10_C484  |
+| r891     | DW01_add     | width=59   |               | add_477_S3_I10_C484  |
+| r893     | DW01_sub     | width=32   |               | sub_477_S4_I10_C484  |
+| r895     | DW01_add     | width=59   |               | add_476_S2_I11_C484  |
+| r897     | DW01_sub     | width=59   |               | sub_476_S3_I11_C484  |
+| r899     | DW01_add     | width=32   |               | add_476_S4_I11_C484  |
+| r901     | DW01_sub     | width=59   |               | sub_477_S2_I11_C484  |
+| r903     | DW01_add     | width=59   |               | add_477_S3_I11_C484  |
+| r905     | DW01_sub     | width=32   |               | sub_477_S4_I11_C484  |
+| r907     | DW01_add     | width=59   |               | add_476_S2_I12_C484  |
+| r909     | DW01_sub     | width=59   |               | sub_476_S3_I12_C484  |
+| r911     | DW01_add     | width=32   |               | add_476_S4_I12_C484  |
+| r913     | DW01_sub     | width=59   |               | sub_477_S2_I12_C484  |
+| r915     | DW01_add     | width=59   |               | add_477_S3_I12_C484  |
+| r917     | DW01_sub     | width=32   |               | sub_477_S4_I12_C484  |
+| r919     | DW01_add     | width=59   |               | add_476_S2_I13_C484  |
+| r921     | DW01_sub     | width=59   |               | sub_476_S3_I13_C484  |
+| r923     | DW01_add     | width=32   |               | add_476_S4_I13_C484  |
+| r925     | DW01_sub     | width=59   |               | sub_477_S2_I13_C484  |
+| r927     | DW01_add     | width=59   |               | add_477_S3_I13_C484  |
+| r929     | DW01_sub     | width=32   |               | sub_477_S4_I13_C484  |
+| r931     | DW01_add     | width=59   |               | add_476_S2_I14_C484  |
+| r933     | DW01_sub     | width=59   |               | sub_476_S3_I14_C484  |
+| r935     | DW01_add     | width=32   |               | add_476_S4_I14_C484  |
+| r937     | DW01_sub     | width=59   |               | sub_477_S2_I14_C484  |
+| r939     | DW01_add     | width=59   |               | add_477_S3_I14_C484  |
+| r941     | DW01_sub     | width=32   |               | sub_477_S4_I14_C484  |
+| r943     | DW01_sub     | width=59   |               | sub_476_S3_I15_C484  |
+| r945     | DW01_add     | width=32   |               | add_476_S4_I15_C484  |
+| r947     | DW01_add     | width=59   |               | add_477_S3_I15_C484  |
+| r949     | DW01_sub     | width=32   |               | sub_477_S4_I15_C484  |
+| r951     | DW01_add     | width=32   |               | add_476_S4_I16_C484  |
+| r953     | DW01_sub     | width=32   |               | sub_477_S4_I16_C484  |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_ratio_phase
+****************************************
+
+Resource Sharing Report for design tracking_ratio_phase in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r357     | DW_cmp       | width=29   |               | eq_446_C459          |
+| r359     | DW01_sub     | width=31   |               | sub_451_C459         |
+| r361     | DW01_sub     | width=31   |               | sub_451_I2_C459      |
+| r363     | DW01_sub     | width=31   |               | sub_451_I3_C459      |
+| r365     | DW01_sub     | width=31   |               | sub_451_I4_C459      |
+| r367     | DW01_sub     | width=31   |               | sub_451_I5_C459      |
+| r369     | DW01_sub     | width=31   |               | sub_451_I6_C459      |
+| r371     | DW01_sub     | width=31   |               | sub_451_I7_C459      |
+| r373     | DW01_sub     | width=31   |               | sub_451_I8_C459      |
+| r375     | DW01_sub     | width=31   |               | sub_451_I9_C459      |
+| r377     | DW01_sub     | width=31   |               | sub_451_I10_C459     |
+| r379     | DW01_sub     | width=31   |               | sub_451_I11_C459     |
+| r381     | DW01_sub     | width=31   |               | sub_451_I12_C459     |
+| r383     | DW01_sub     | width=31   |               | sub_451_I13_C459     |
+| r385     | DW01_sub     | width=31   |               | sub_451_I14_C459     |
+| r387     | DW01_sub     | width=31   |               | sub_451_I15_C459     |
+| r389     | DW01_sub     | width=31   |               | sub_451_I16_C459     |
+===============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : tracking_ratio_code
+****************************************
+
+Resource Sharing Report for design tracking_ratio_code in file
+        ./rtl/tracking_channel_minimal.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r393     | DW_cmp       | width=57   |               | eq_264_C431          |
+| r395     | DW01_sub     | width=60   |               | sub_267_C431         |
+| r397     | DW01_sub     | width=60   |               | sub_268_C431         |
+| r399     | DW01_sub     | width=60   |               | sub_269_C431         |
+| r401     | DW01_sub     | width=60   |               | sub_287_C431         |
+| r403     | DW01_sub     | width=60   |               | sub_288_C431         |
+| r405     | DW01_sub     | width=60   |               | sub_289_C431         |
+| r407     | DW01_sub     | width=60   |               | sub_307_C431         |
+| r409     | DW01_sub     | width=60   |               | sub_308_C431         |
+| r411     | DW01_sub     | width=60   |               | sub_309_C431         |
+| r413     | DW01_sub     | width=60   |               | sub_327_C431         |
+| r415     | DW01_sub     | width=60   |               | sub_328_C431         |
+| r417     | DW01_sub     | width=60   |               | sub_329_C431         |
+| r419     | DW01_sub     | width=60   |               | sub_347_C431         |
+| r421     | DW01_sub     | width=60   |               | sub_348_C431         |
+| r423     | DW01_sub     | width=60   |               | sub_349_C431         |
+| r425     | DW01_sub     | width=60   |               | sub_367_C431         |
+| r427     | DW01_sub     | width=60   |               | sub_368_C431         |
+| r429     | DW01_sub     | width=60   |               | sub_369_C431         |
+| r431     | DW01_sub     | width=60   |               | sub_387_C431         |
+| r433     | DW01_sub     | width=60   |               | sub_388_C431         |
+| r435     | DW01_sub     | width=60   |               | sub_389_C431         |
+| r437     | DW01_sub     | width=60   |               | sub_407_C431         |
+| r439     | DW01_sub     | width=59   |               | sub_408_C431         |
+| r441     | DW01_sub     | width=60   |               | sub_409_C431         |
+| r1021    | DW_mult_uns  | a_width=57 |               | mult_261_C431        |
+|          |              | b_width=2  |               |                      |
+===============================================================================
+
+
+No implementations to report
+1

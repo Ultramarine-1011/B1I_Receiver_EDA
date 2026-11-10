@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import re
+import tarfile
 
 EXPERIMENT = Path(__file__).resolve().parent.parent
 source = (EXPERIMENT.parent / "divider_opt/rtl/tracking_channel_minimal.sv").read_text(encoding="utf-8")
@@ -63,9 +64,9 @@ for divisor, width, name in ((127875, 40, "step_127875"), (763, 33, "aid_763")):
 (EXPERIMENT / "evidence/reciprocal_bounds.json").write_text(json.dumps(bounds, indent=2), encoding="utf-8")
 
 # Reuse the established conversion probe and its clamped input domains.
-template = (EXPERIMENT.parent / "divider_opt/work/conversion_probes.sv").read_text(encoding="utf-8")
-v4 = template.split("module conversion_optimized", 1)[1]
-v4 = "module conversion_v4" + v4
+with tarfile.open(EXPERIMENT / "evidence/module_dc.tar.gz", "r:gz") as archive:
+    captured = archive.extractfile("probe_sources/conversion_probes.sv").read().decode("utf-8")
+v4 = captured.split("module conversion_fast", 1)[0].rstrip() + "\n"
 fast = v4.replace("module conversion_v4", "module conversion_fast", 1)
 signed = v4.replace("module conversion_v4", "module conversion_signed", 1)
 for name in ("step_127875", "aid_763"):

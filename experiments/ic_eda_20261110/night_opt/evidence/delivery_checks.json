@@ -1,0 +1,44 @@
+{
+  "functional_checks": [
+    {
+      "case": "v6/arithmetic",
+      "marker": "DIVIDER_EQUIVALENCE_PASS checks=214883",
+      "status": "PASS"
+    },
+    {
+      "case": "v6/constant",
+      "marker": "CONSTANT_DIVISION_EQUIVALENCE_PASS checks=210169",
+      "status": "PASS"
+    },
+    {
+      "case": "v6/loop",
+      "marker": "LOOP_EQUIVALENCE_PASS checks=100625 fields=18",
+      "status": "PASS"
+    },
+    {
+      "case": "hier_preflight/tracking",
+      "marker": "TRACKING_MINIMAL_PASS cases=2",
+      "status": "PASS"
+    },
+    {
+      "case": "v6/fll",
+      "marker": "TRACKING_MINIMAL_PASS cases=2",
+      "status": "PASS"
+    },
+    {
+      "case": "hier_preflight/six",
+      "marker": "SIX_RECEIVER_PASS mode=nominal samples=49104000 cycles=50518067",
+      "status": "PASS"
+    },
+    {
+      "case": "hier_preflight/recovery",
+      "marker": "SIX_RECEIVER_PASS mode=recovery samples=49104000 cycles=50516937",
+      "status": "PASS"
+    }
+  ],
+  "protected_sources_checked": 17,
+  "arithmetic_proofs": "PASS",
+  "top_ports_parameters_and_sequential_block": "IDENTICAL",
+  "current_rtl_sha256": "ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88",
+  "full_channel_synthesis_complete": true
+}

@@ -1,0 +1,9 @@
+Logical Libraries:
+-------------------------------------------------------------------------
+Library		File			Path
+-------		----			----
+  typical	typical.db		/home/ic_libs/TSMC.90/aci/sc-x/synopsys
+  dw_foundation.sldb dw_foundation.sldb	/home/synopsys/syn/O-2018.06-SP1/libraries/syn
+  gtech		gtech.db		/home/synopsys/syn/O-2018.06-SP1/libraries/syn
+  standard.sldb	standard.sldb		/home/synopsys/syn/O-2018.06-SP1/libraries/syn
+1

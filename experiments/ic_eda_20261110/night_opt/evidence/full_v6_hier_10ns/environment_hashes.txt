@@ -1,0 +1,3 @@
+8022bc0d744d01fcc93b8c7387d9de6d33d674c29c81beba0e0496d2dde1702a  /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+39f25799c524d8c15f5e0e6dcc9100137db860edfed2147640420ce750637038  /home/synopsys/syn/O-2018.06-SP1/linux64/syn/bin/common_shell_exec
+6e8b2e24d9f502a070be8876923fa9e006d98cd12a531c52656beab1f2767d70  /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
