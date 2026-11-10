@@ -1,0 +1,5 @@
+CONSTANT_DIVISION_EQUIVALENCE_PASS checks=210169 seed=c0de7631
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/ic_eda_20261110/night_opt/tb/tb_constant_division_equivalence.sv:58: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 210us; walltime 0.031 s; speed 6.515 ms/s
+- Verilator: cpu 0.032 s on 1 threads; alloced 249 MB

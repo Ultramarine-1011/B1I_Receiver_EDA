@@ -1,0 +1,7 @@
+{
+  "source": "reports\\e_stage\\real_tracking_loop.csv",
+  "windows": 995,
+  "source_sha256": "e9ea10adf7d776c99b69d382cd2b00b2e8b85a015a752ef4617c774e2b0c420a",
+  "vectors_sha256": "8b6bc475a7e114895616c9c2b6a083a5fb54db24403f1216d2f8dbc967fecd5b",
+  "scope": "Previously recorded public-IF Prompt arithmetic replay, with no new RF acceptance claim"
+}

@@ -1,0 +1,9 @@
+COMMAND cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/ic_eda_20261110/night_opt/work' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/ic_eda_20261110/night_opt/work/build_arithmetic/Vtb_divider_equivalence' +PROMPT_REPLAY='/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/ic_eda_20261110/night_opt/work/public_prompt.txt'
+DIVIDER_EQUIVALENCE_PASS checks=214883 seed=b1d12026
+PUBLIC_PROMPT_REPLAY_PASS windows=995
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/ic_eda_20261110/night_opt/tb/tb_divider_equivalence.sv:70: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 216us; walltime 0.075 s; speed 3.012 ms/s
+- Verilator: cpu 0.072 s on 1 threads; alloced 249 MB
+EXIT_CODE 0
+WALL_SECONDS 0.2091611

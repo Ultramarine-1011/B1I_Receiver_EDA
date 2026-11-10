@@ -1,0 +1,11 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 10 23:19 2026
+DIVIDER_EQUIVALENCE_PASS checks=214883 seed=b1d12026
+PUBLIC_PROMPT_REPLAY_PASS windows=995
+$finish called from file "/home/ICer/ic_eda_night_20261110/tb/tb_divider_equivalence.sv", line 70.
+$finish at simulation time            215878000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 215878000 ps
+CPU Time:      0.970 seconds;       Data structure size:   0.0Mb
+Tue Nov 10 23:19:36 2026
