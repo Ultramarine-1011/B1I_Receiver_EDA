@@ -1,0 +1,24 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+{"stop_reason": null, "monotonic_elapsed_s": 92.96999999999935, "time_report_nonempty": true, "return_code": 0}
+   PID     ELAPSED   RSS
+runs/feedback_flat_10ns
+
+Received Signal 15 from: PID=57453 (UID=1000)
+
+
+Process terminated by kill.
+
+runs/feedback_flat_100ns
+
+Memory usage for main task 396 Mbytes.
+Memory usage for this session 396 Mbytes.
+CPU usage for this session 95 seconds ( 0.03 hours ).
+
+Thank you...

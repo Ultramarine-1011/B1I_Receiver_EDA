@@ -1,0 +1,9 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+FLAT_FEEDBACK_SUPERVISOR=56613

@@ -1,0 +1,94 @@
+{
+  "scope": "Standalone probes only, not full tracking-channel PPA",
+  "results": [
+    {
+      "run": "conversion_original",
+      "dc_exit_code": 1,
+      "stop_reason": "TIMEOUT",
+      "gnu_wall_s": 178.67000000000002,
+      "peak_rss_kib": 843800
+    },
+    {
+      "run": "conversion_optimized",
+      "dc_exit_code": 0,
+      "stop_reason": null,
+      "gnu_wall_s": 57.93,
+      "peak_rss_kib": 312872,
+      "cell_area_um2": 32080.809748,
+      "critical_path_ns": 8.73,
+      "setup_wns": 0.0,
+      "setup_tns": 0.0,
+      "hold_worst_violation": -0.16,
+      "hold_violating_paths": 97,
+      "startpoint": "raw_carrier[23]",
+      "endpoint": "code_step_reg[27]"
+    },
+    {
+      "run": "feedback_10ns",
+      "dc_exit_code": 1,
+      "stop_reason": "TIMEOUT",
+      "gnu_wall_s": 305.25,
+      "peak_rss_kib": 697560
+    },
+    {
+      "run": "feedback_30ns",
+      "dc_exit_code": 1,
+      "stop_reason": "TIMEOUT",
+      "gnu_wall_s": 319.19,
+      "peak_rss_kib": 698460
+    },
+    {
+      "run": "feedback_flat_10ns",
+      "dc_exit_code": 1,
+      "stop_reason": "TIMEOUT",
+      "gnu_wall_s": 190.77,
+      "peak_rss_kib": 641472
+    },
+    {
+      "run": "feedback_flat_30ns",
+      "dc_exit_code": 1,
+      "stop_reason": "TIMEOUT",
+      "gnu_wall_s": 322.77,
+      "peak_rss_kib": 652896
+    },
+    {
+      "run": "feedback_flat_100ns",
+      "dc_exit_code": 0,
+      "stop_reason": null,
+      "gnu_wall_s": 95.12,
+      "peak_rss_kib": 521908,
+      "cell_area_um2": 279722.418313,
+      "critical_path_ns": 98.72,
+      "setup_wns": 0.0,
+      "setup_tns": 0.0,
+      "hold_worst_violation": -0.16,
+      "hold_violating_paths": 97,
+      "startpoint": "il[1] (input port clocked by clk)",
+      "endpoint": "code_step_reg[32]",
+      "critical_arithmetic_instances": [
+        "mult_173",
+        "sub_113_C184",
+        "sub_113_I2_C184",
+        "sub_113_I3_C184",
+        "sub_113_I4_C184",
+        "sub_113_I5_C184",
+        "sub_113_I6_C184",
+        "sub_113_I7_C184",
+        "sub_113_I8_C184",
+        "sub_113_I9_C184",
+        "sub_113_I10_C184",
+        "sub_113_I11_C184",
+        "sub_113_I12_C184",
+        "sub_113_I13_C184",
+        "sub_113_I14_C184",
+        "sub_113_I15_C184",
+        "sub_113_I16_C184",
+        "mult_188",
+        "mult_192",
+        "mult_70_C206",
+        "mult_72_C206",
+        "sub_72_C206"
+      ]
+    }
+  ]
+}

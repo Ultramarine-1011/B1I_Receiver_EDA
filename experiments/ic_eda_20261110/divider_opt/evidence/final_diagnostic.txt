@@ -1,0 +1,142 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+	Command being timed: "setsid /home/synopsys/syn/O-2018.06-SP1/bin/dc_shell -64bit -f work/dc_feedback_flat_100ns.tcl"
+	User time (seconds): 95.91
+	System time (seconds): 0.18
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:35.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 521908
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 141228
+ 
+****************************************
+Report : qor
+Design : feedback_controller_flat
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 22:13:23 2026
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:            1354.00
+  Critical Path Length:         98.72
+  Critical Path Slack:           0.01
+  Critical Path Clk Period:    100.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:         -0.16
+  Total Hold Violation:         -5.66
+  No. of Hold Violations:       97.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        174
+  Hierarchical Port Count:      23471
+  Leaf Cell Count:              32316
+  Buf/Inv Cell Count:            6555
+  Buf Cell Count:                1123
+  Inv Cell Count:                5432
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     32251
+  Sequential Cell Count:           65
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   278713.410311
+  Noncombinational Area:  1009.008002
+  Buf/Inv Area:          14912.856486
+  Total Buffer Area:          3285.98
+  Total Inverter Area:       11626.88
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:            279722.418313
+  Design Area:          279722.418313
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         43431
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: IC_EDA
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   14.87
+  Logic Optimization:                 17.77
+  Mapping Optimization:               55.07
+  -----------------------------------------
+  Overall Compile Time:               91.23
+  Overall Compile Wall Clock Time:    90.82
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.16  TNS: 5.66  Number of Violating Paths: 97
+
+  --------------------------------------------------------------------
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : feedback_controller_flat
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 22:13:24 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: il[1] (input port clocked by clk)
+  Endpoint: code_step_reg[32]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data arrival time                                              99.693977
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data required time                                             99.729073
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data required time                                             99.729073
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data arrival time                                              -99.693977
+runs/feedback_flat_100ns/reports/timing_max.rpt:  slack (MET)                                                    0.035095
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data arrival time                                              99.644180
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data required time                                             99.728905
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data required time                                             99.728905
+runs/feedback_flat_100ns/reports/timing_max.rpt:  data arrival time                                              -99.644180
+runs/feedback_flat_100ns/reports/timing_max.rpt:  slack (MET)                                                    0.084724
+runs/feedback_flat_100ns/reports/run.log:puts "PROBE_UNMAPPED [sizeof_collection $unmapped]"
+runs/feedback_flat_100ns/reports/run.log:PROBE_UNMAPPED 0
+{"dc_evidence.tar.gz": {"files": 242, "sha256": "e883b402a406fe6face0e3b037ab91440198a9949c76790171f93daad8b3e444", "bytes": 1044350}, "mapped_outputs.tar.gz": {"files": 2, "sha256": "bac4a802094511fd2eb2e457c100cbd814020b103960a24a7e02ce68b0c68438", "bytes": 519200}}

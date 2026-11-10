@@ -1,0 +1,37 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+{"stop_reason": "TIMEOUT", "monotonic_elapsed_s": 300.8099999999995, "time_report_nonempty": true, "return_code": 1}
+   PID     ELAPSED   RSS
+ 57455       01:22 568468
+runs/feedback_flat_10ns
+  Processing 'feedback_controller_flat_DW01_sub_90'
+  Mapping 'feedback_controller_flat_DW_mult_uns_4'
+  Mapping 'feedback_controller_flat_DW_mult_uns_5'
+  Processing 'feedback_controller_flat_DW01_add_58'
+  Mapping 'feedback_controller_flat_DW_mult_tc_15'
+  Processing 'feedback_controller_flat_DW01_add_59'
+  Mapping 'feedback_controller_flat_DW_mult_tc_16'
+  Processing 'feedback_controller_flat_DW01_add_60'
+  Mapping 'feedback_controller_flat_DW_mult_tc_17'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+runs/feedback_flat_30ns
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:37  807388.5     17.79     991.1     204.7                          
+    0:02:37  807388.5     17.79     991.1     204.7                          
+    0:02:40  815634.1     17.08     947.3     201.2                          
+
+Received Signal 15 from: PID=56617 (UID=1000)
+
+
+Process terminated by kill.
+
