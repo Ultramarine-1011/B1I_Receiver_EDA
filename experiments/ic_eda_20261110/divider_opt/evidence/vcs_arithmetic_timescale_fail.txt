@@ -1,0 +1,20 @@
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Tue Nov 10 19:29:45 2026
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '/home/ICer/ic_eda_divopt_20261110/work/norm_probes.sv'
+Parsing design file '/home/ICer/ic_eda_divopt_20261110/tb/tb_divider_equivalence.sv'
+
+Error-[ITSFM] Illegal `timescale for module
+/home/ICer/ic_eda_divopt_20261110/tb/tb_divider_equivalence.sv, 2
+  Module "tb_divider_equivalence" has `timescale but previous 
+  module(s)/package(s) do not.
+  Please refer LRM 1364-2001 section 19.8.
+
+1 error
+CPU time: .124 seconds to compile

@@ -1,0 +1,69 @@
+{
+  "baseline_commit": "400de3a",
+  "selected_version": "V4",
+  "rtl_sha256": "406551c2208fa20089c319731e45b1aab0c2105c54cea8e7725f3b1736b2a99a",
+  "full_channel_runs": [
+    {
+      "version": "V1",
+      "run": "B0_20261110_193344",
+      "status": "TIMEOUT",
+      "dc_exit_code": 1,
+      "gnu_wall_s": 1264.88,
+      "peak_rss_kib": 1364484,
+      "guest_uptime_elapsed_s": 1200.9099999999999,
+      "compile_end": false,
+      "reports_complete": false,
+      "final_area": null,
+      "final_wns": null,
+      "final_tns": null,
+      "last_mapping_phase": 3
+    },
+    {
+      "version": "V2",
+      "run": "B0_20261110_195833",
+      "status": "TIMEOUT",
+      "dc_exit_code": 1,
+      "gnu_wall_s": 1197.44,
+      "peak_rss_kib": 1184468,
+      "guest_uptime_elapsed_s": 1150.6600000000008,
+      "compile_end": false,
+      "reports_complete": false,
+      "final_area": null,
+      "final_wns": null,
+      "final_tns": null,
+      "last_mapping_phase": 11
+    },
+    {
+      "version": "V3",
+      "run": "B0_20261110_202705",
+      "status": "TIMEOUT",
+      "dc_exit_code": 1,
+      "gnu_wall_s": 1199.09,
+      "peak_rss_kib": 1055516,
+      "guest_uptime_elapsed_s": 1147.1000000000004,
+      "compile_end": false,
+      "reports_complete": false,
+      "final_area": null,
+      "final_wns": null,
+      "final_tns": null,
+      "last_mapping_phase": 39
+    },
+    {
+      "version": "V4",
+      "run": "B0_20261110_210718",
+      "status": "TIMEOUT",
+      "dc_exit_code": 1,
+      "gnu_wall_s": 1199.14,
+      "peak_rss_kib": 832452,
+      "guest_uptime_elapsed_s": 1149.42,
+      "compile_end": false,
+      "reports_complete": false,
+      "final_area": null,
+      "final_wns": null,
+      "final_tns": null,
+      "last_mapping_phase": 32
+    }
+  ],
+  "baseline_observed_peak_rss_kib": 2739704,
+  "full_channel_final_ppa_available": false
+}

@@ -1,0 +1,35 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+{
+  "stop_reason": null, 
+  "monotonic_elapsed_s": 1150.6600000000008, 
+  "time_report_nonempty": true, 
+  "return_code": 1
+}  Mapping Optimization (Phase 10)
+  Mapping Optimization (Phase 11)
+
+Received Signal 15 from: PID=35940 (UID=1000)
+
+
+Process terminated by kill.
+
+Command exited with non-zero status 1
+	Command being timed: "setsid /home/synopsys/syn/O-2018.06-SP1/bin/dc_shell -64bit -f scripts/dc_opt.tcl"
+	User time (seconds): 1197.38
+	System time (seconds): 1.51
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 19:57.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1184468
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+   PID     ELAPSED   RSS

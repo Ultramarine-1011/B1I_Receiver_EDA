@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-11-10T13:00:35.9092818Z",
+  "task": "constant",
+  "sources": [
+    {
+      "sha256": "AB429DD78C3878CCC7D0EFE28B1EB73D724FDCDA22263C9BB82B4B3324EA3469",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\divider_opt\\work\\constant_division_probe.sv"
+    },
+    {
+      "sha256": "C4CB4B77BA6E1D6D7A30F3F4365FF4D395EFE7E23225F8FBD9D001B626455A45",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\divider_opt\\tb\\tb_constant_division_equivalence.sv"
+    }
+  ]
+}

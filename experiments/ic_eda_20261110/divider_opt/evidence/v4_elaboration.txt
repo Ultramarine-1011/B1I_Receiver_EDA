@@ -1,0 +1,30 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+V4_ELABORATE_EXIT=0
+    *DIV_TC_OP_31_18_32
+    *DIV_TC_OP_32_11_33
+    *DIV_TC_OP_33_11_34
+    *DIV_TC_OP_40_18_41
+    *MULT_TC_OP_11_33_44
+    *MULT_TC_OP_15_7_22
+    *MULT_TC_OP_15_15_30
+    *MULT_TC_OP_15_17_32
+    *MULT_TC_OP_16_11_26
+    *MULT_TC_OP_16_11_27
+    *MULT_TC_OP_16_20_36
+    *MULT_TC_OP_18_5_23
+    *MULT_TC_OP_18_15_31
+    *MULT_TC_OP_26_13_38
+    *MULT_TC_OP_28_28_56
+    *MULT_TC_OP_33_12_45
+    *MULT_TC_OP_34_12_46
+    *MULT_TC_OP_45_13_48
+    *MULT_UNS_OP_32_1_32
+        *MULT_TC_OP_14_14_28
+            *MULT_TC_OP_3_12_14

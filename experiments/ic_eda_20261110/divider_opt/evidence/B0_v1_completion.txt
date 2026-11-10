@@ -1,0 +1,32 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+/home/ICer/ic_eda_divopt_20261110/runs/B0_20261110_193344
+{"stop_reason": "TIMEOUT", "monotonic_elapsed_s": 1200.9099999999999, "time_report_nonempty": true, "return_code": 1}
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'. (DDB-72)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+
+Received Signal 15 from: PID=25612 (UID=1000)
+
+
+Process terminated by kill.
+
+{
+  "stop_reason": "TIMEOUT", 
+  "monotonic_elapsed_s": 1200.9099999999999, 
+  "time_report_nonempty": true, 
+  "return_code": 1
+}   PID     ELAPSED   RSS

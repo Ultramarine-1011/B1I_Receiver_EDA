@@ -1,0 +1,48 @@
+COMMAND cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/six_channel_20261102' && stdbuf -oL -eL '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/ic_eda_20261110/divider_opt/work/build_six/Vsix_receiver_probe' recovery.if2 recovery /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/experiments/ic_eda_20261110/divider_opt/work/recovery
+SIX_ASSIGN ch=0 sample=937794 capture_ref=0 coarse_lag=0 lag=0 doppler=0
+SIX_STATE sample=937795 cycle=963881 capture=01 lock=00 sync=00
+SIX_ASSIGN ch=1 sample=1867981 capture_ref=937798 coarse_lag=12268 lag=12266 doppler=0
+SIX_STATE sample=1867981 cycle=1920079 capture=03 lock=00 sync=00
+SIX_ASSIGN ch=2 sample=2794009 capture_ref=1867984 coarse_lag=15936 lag=15936 doppler=0
+SIX_STATE sample=2794010 cycle=2872161 capture=07 lock=00 sync=00
+SIX_STATE sample=4304785 cycle=4425726 capture=07 lock=01 sync=00
+SIX_ASSIGN ch=4 sample=4666282 capture_ref=3729315 coarse_lag=5788 lag=5789 doppler=0
+SIX_STATE sample=4666283 cycle=4797468 capture=17 lock=01 sync=00
+SIX_STATE sample=5238481 cycle=5385975 capture=17 lock=03 sync=00
+SIX_ASSIGN ch=5 sample=5606577 capture_ref=4666286 coarse_lag=2596 lag=2594 doppler=0
+SIX_STATE sample=5606578 cycle=5764577 capture=37 lock=03 sync=00
+SIX_STATE sample=6155969 cycle=6329720 capture=37 lock=07 sync=00
+SIX_ASSIGN ch=3 sample=6538607 capture_ref=5606587 coarse_lag=10036 lag=10037 doppler=0
+SIX_STATE sample=6538608 cycle=6723337 capture=3f lock=07 sync=00
+SIX_STATE sample=8056257 cycle=8284809 capture=3f lock=17 sync=00
+SIX_STATE sample=8445889 cycle=8685685 capture=3f lock=16 sync=00
+SIX_STATE sample=8445889 cycle=8685686 capture=3e lock=16 sync=00
+SIX_STATE sample=8973665 cycle=9228614 capture=3e lock=36 sync=00
+SIX_REJECT_HISTORY ch=0 sample=9375320 distance_q32=2124038518524 lag=12404
+SIX_STATE sample=9921409 cycle=10203547 capture=3e lock=3e sync=00
+SIX_REJECT_HISTORY ch=0 sample=10304490 distance_q32=3895104111122 lag=12643
+SIX_REJECT_HISTORY ch=0 sample=11233069 distance_q32=3140123820309 lag=13184
+SIX_ASSIGN ch=0 sample=13099382 capture_ref=12167570 coarse_lag=10220 lag=10222 doppler=0
+SIX_STATE sample=13099383 cycle=13472711 capture=3f lock=3e sync=00
+SIX_STATE sample=14731200 cycle=15151639 capture=3f lock=3a sync=00
+SIX_STATE sample=14731200 cycle=15151640 capture=3b lock=3a sync=00
+SIX_ASSIGN ch=2 sample=15999811 capture_ref=15058563 coarse_lag=1596 lag=1597 doppler=0
+SIX_STATE sample=15999812 cycle=16456643 capture=3f lock=3a sync=00
+SIX_STATE sample=16466209 cycle=16936495 capture=3f lock=3b sync=00
+SIX_STATE sample=19381313 cycle=19935790 capture=3f lock=3f sync=00
+SIX_STATE sample=36009601 cycle=37044284 capture=3f lock=3f sync=01
+SIX_STATE sample=36010321 cycle=37045027 capture=3f lock=3f sync=03
+SIX_STATE sample=36011201 cycle=37045935 capture=3f lock=3f sync=07
+SIX_STATE sample=36012001 cycle=37046760 capture=3f lock=3f sync=0f
+SIX_STATE sample=36012801 cycle=37047585 capture=3f lock=3f sync=1f
+SIX_STATE sample=36013601 cycle=37048410 capture=3f lock=3f sync=3f
+SIX_CHANNEL ch=0 captures=2 losses=1 nav_bits=40 last_index=149 tail_locked_cycles=28915716
+SIX_CHANNEL ch=1 captures=1 losses=0 nav_bits=39 last_index=148 tail_locked_cycles=28915716
+SIX_CHANNEL ch=2 captures=2 losses=1 nav_bits=39 last_index=148 tail_locked_cycles=28915716
+SIX_CHANNEL ch=3 captures=1 losses=0 nav_bits=39 last_index=148 tail_locked_cycles=28915716
+SIX_CHANNEL ch=4 captures=1 losses=0 nav_bits=39 last_index=148 tail_locked_cycles=28915716
+SIX_CHANNEL ch=5 captures=1 losses=0 nav_bits=39 last_index=148 tail_locked_cycles=28915716
+SIX_STATE sample=49104000 cycle=50516933 capture=00 lock=00 sync=00
+SIX_RECEIVER_PASS mode=recovery samples=49104000 cycles=50516937 stalled_cycles=47478 maximum_stall=4 parallel=6
+EXIT_CODE 0
+WALL_SECONDS 111.7537073

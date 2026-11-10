@@ -1,0 +1,10 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+INPUT_CHECK_EXIT=0
+V2_LAUNCH_PID=31335

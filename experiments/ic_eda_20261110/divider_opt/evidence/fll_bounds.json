@@ -1,0 +1,10 @@
+{
+  "max_abs_dot_cross": 36028797018963968,
+  "xy_bound": 180143985094819920,
+  "xy_signed_width": 59,
+  "angle_sum": 1191629338,
+  "angle_z_signed_width": 32,
+  "ratio_product_bound": "3169089918274592430548062513246884375/664613997892457936451903530140172288",
+  "max_abs_frequency_bound": 32768000,
+  "adjustment_magnitude_bound": 1677824
+}

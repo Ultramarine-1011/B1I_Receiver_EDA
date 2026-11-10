@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "sha256": "0BBEDE9A3EC59A6C9D6165A3A12157F698CB7F32D8A63BA26D9B01E01DE36475",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\b1i_prn_gen.sv"
+    },
+    {
+      "sha256": "415251D62DEA188086AA3C1655F634854464F69EDC3419B48494F4A8A1F79EF1",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\code_nco.sv"
+    },
+    {
+      "sha256": "CE6CB5A0AF6965439559093676F32A6A96C99EEB14E2B09CA7EEE8E1F8C452CC",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\carrier_nco_mixer.sv"
+    },
+    {
+      "sha256": "8FF439C4A40B5A5888B6787443A8CA9BB5BE69781934EFC017DE27504DB3A786",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\epl_correlator.sv"
+    },
+    {
+      "sha256": "34FE7AB1AB76F65542817E37E25AB8679D2A07C7202B94FC7D0A28FB2C20AB0B",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\student_release\\student_release\\rtl\\tracking_frontend_spaced.sv"
+    },
+    {
+      "sha256": "406551C2208FA20089C319731E45B1AAB0C2105C54CEA8E7725F3B1736B2A99A",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\divider_opt\\rtl\\tracking_channel_minimal.sv"
+    },
+    {
+      "sha256": "2C9062D256B8275A743F1EDD18989B03B17C1106D53479AFCDE0EAD726B75FE9",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\divider_opt\\work\\tracking_channel_original.sv"
+    },
+    {
+      "sha256": "2F16B84218F0D62AA0530D9229970C6CD7BBEBF3CD88F490E154DAF6494D4D93",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\divider_opt\\work\\tb_tracking_equivalence.sv"
+    }
+  ],
+  "timestamp_utc": "2026-11-10T13:01:36.5229298Z",
+  "task": "fll"
+}

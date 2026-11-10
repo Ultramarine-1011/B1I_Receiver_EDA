@@ -1,0 +1,33 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+{"stop_reason": "TIMEOUT", "monotonic_elapsed_s": 165.92999999999847, "time_report_nonempty": true, "return_code": 1}
+{"stop_reason": null, "monotonic_elapsed_s": 54.98000000000138, "time_report_nonempty": true, "return_code": 0}
+   PID     ELAPSED   RSS
+runs/conversion_optimized
+{
+  "stop_reason": null, 
+  "monotonic_elapsed_s": 54.98000000000138, 
+  "time_report_nonempty": true, 
+  "return_code": 0
+}Memory usage for main task 192 Mbytes.
+Memory usage for this session 192 Mbytes.
+CPU usage for this session 56 seconds ( 0.02 hours ).
+
+Thank you...
+runs/conversion_original
+{
+  "stop_reason": "TIMEOUT", 
+  "monotonic_elapsed_s": 165.92999999999847, 
+  "time_report_nonempty": true, 
+  "return_code": 1
+}Received Signal 15 from: PID=52202 (UID=1000)
+
+
+Process terminated by kill.
+

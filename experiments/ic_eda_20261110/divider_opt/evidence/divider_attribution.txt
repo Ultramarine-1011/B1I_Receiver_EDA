@@ -1,0 +1,37 @@
+code_check.rpt
+code_hierarchy.rpt
+code_resources.rpt
+command.log
+default.svf
+phase_check.rpt
+phase_hierarchy.rpt
+phase_resources.rpt
+run.log
+scripts
+work
+WORK
+code_hierarchy.rpt:        DW_div_tc_a_width76_b_width59                   l
+phase_hierarchy.rpt:        DW_div_tc_a_width80_b_width64                   l
+8eaeaba90cb54d60f6c1c9799efea5b521f79a39fe5c1179a363cd80c83e7726  work/identify_dividers.sv
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_88'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_21'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_89'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_22'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'. (DDB-72)
+239.89000000000033,959536,959536,7534488,0,25047,111.24260355030225
+244.96000000000004,990688,990688,7503116,0,25611,111.24260355030225

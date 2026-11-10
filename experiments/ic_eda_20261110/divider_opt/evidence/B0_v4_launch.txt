@@ -1,0 +1,12 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+INPUT_CHECK_EXIT=0
+V4_LAUNCH_PID=46935
+DC_PID=46968
+RUN_DIR=/home/ICer/ic_eda_divopt_20261110/runs/B0_20261110_210718/work

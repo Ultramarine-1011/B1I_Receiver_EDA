@@ -1,0 +1,43 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+{
+  "stop_reason": null, 
+  "monotonic_elapsed_s": 1149.42, 
+  "time_report_nonempty": true, 
+  "return_code": 1
+}    0:18:32  489294.1     13.96    3024.7       0.0 code_step_q_reg[31]/D    
+    0:18:35  489321.6     13.95    3022.6       0.0 code_step_q_reg[31]/D    
+    0:18:37  489343.5     13.94    3021.8       0.0 code_step_q_reg[31]/D    
+    0:18:39  489437.3     13.94    2923.1       0.0 code_step_q_reg[31]/D    
+    0:18:41  489453.6     13.93    2922.8       0.0 code_step_q_reg[32]/D    
+    0:18:51  489627.8     13.81    2909.7       0.0 code_step_q_reg[31]/D    
+    0:19:12  490440.7     13.60    2886.9       0.0 code_step_q_reg[31]/D    
+    0:19:26  490742.7     13.54    2877.9       0.0 code_step_q_reg[31]/D    
+    0:19:38  490930.4     13.49    2872.8       0.0 code_step_q_reg[31]/D    
+    0:19:46  491063.7     13.39    2861.1       0.0 code_step_q_reg[31]/D    
+
+Received Signal 15 from: PID=51144 (UID=1000)
+
+
+Process terminated by kill.
+
+Command exited with non-zero status 1
+	Command being timed: "setsid /home/synopsys/syn/O-2018.06-SP1/bin/dc_shell -64bit -f scripts/dc_opt.tcl"
+	User time (seconds): 1196.21
+	System time (seconds): 2.58
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 19:59.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 832452
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+   PID     ELAPSED   RSS

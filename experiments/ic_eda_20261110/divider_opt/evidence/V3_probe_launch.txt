@@ -1,0 +1,9 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+V3_PROBE_PID=33633

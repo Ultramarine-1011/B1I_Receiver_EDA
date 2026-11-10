@@ -1,0 +1,13 @@
+/work/
+/runs/
+# Raw observations stay local, with a verified copy in observations.tar.gz.
+/evidence/B0_progress_*.txt
+/evidence/B0_v2_progress_*.txt
+/evidence/B0_v3_progress_*.txt
+/evidence/B0_v4_progress_*.txt
+/evidence/probe_progress_*.txt
+/evidence/B0_arithmetic_mapping.txt
+/evidence/identify_inspect.txt
+/evidence/B0_v1_time_v2_initial.txt
+# V2 pass logs and sources are preserved in v2_functional_and_source.tar.gz.
+/evidence/v2_six/

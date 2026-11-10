@@ -1,0 +1,22 @@
+[
+  {
+    "signed_input_width": 40,
+    "divisor": 127875,
+    "shift": 40,
+    "multiplier": 8598331,
+    "max_quotient_magnitude": 4299165,
+    "signed_output_width": 24,
+    "correction": "q=floor(abs(value)*M/2^W); if abs(value)-q*D >= D then q=q+1; restore sign",
+    "proof": "0 <= n/D-n*M/2^W < n/2^W < 1; estimated integer quotient differs by at most one"
+  },
+  {
+    "signed_input_width": 33,
+    "divisor": 763,
+    "shift": 33,
+    "multiplier": 11258105,
+    "max_quotient_magnitude": 5629052,
+    "signed_output_width": 24,
+    "correction": "q=floor(abs(value)*M/2^W); if abs(value)-q*D >= D then q=q+1; restore sign",
+    "proof": "0 <= n/D-n*M/2^W < n/2^W < 1; estimated integer quotient differs by at most one"
+  }
+]

@@ -1,0 +1,29 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+{"stop_reason": "TIMEOUT", "monotonic_elapsed_s": 300.59000000000015, "time_report_nonempty": true, "return_code": 1}
+   PID     ELAPSED   RSS
+ 55474       01:15 591908
+runs/feedback_10ns/reports/run.log
+  Processing 'loop_optimized_DW01_add_58'
+  Mapping 'loop_optimized_DW_mult_tc_20'
+  Mapping 'loop_optimized_DW_mult_tc_21'
+  Processing 'loop_optimized_DW01_add_59'
+  Mapping 'loop_optimized_DW_mult_tc_22'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+runs/feedback_30ns/reports/run.log
+    0:05:17  838298.7      0.91      25.4       8.7 math/*cell*135579/U213/Y 
+    0:05:18  838241.5      0.91      25.4       8.7 math/*cell*135579/U231/Y 
+
+Received Signal 15 from: PID=54610 (UID=1000)
+
+
+Process terminated by kill.
+

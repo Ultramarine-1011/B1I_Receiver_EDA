@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-11-10T13:00:43.1737756Z",
+  "task": "arithmetic",
+  "sources": [
+    {
+      "sha256": "D020729451CF479556066420989D55057F9A8EE692FFFD8AF635839C1F8F466E",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\divider_opt\\work\\norm_probes.sv"
+    },
+    {
+      "sha256": "27E5CD768B770D5D498CE8361BB3C35CFB2A94F9DEA83337424D3EB1876C9754",
+      "path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\experiments\\ic_eda_20261110\\divider_opt\\tb\\tb_divider_equivalence.sv"
+    }
+  ]
+}

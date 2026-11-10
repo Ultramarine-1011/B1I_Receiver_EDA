@@ -1,0 +1,9 @@
+{
+  "status": "HOST_TIME_BUDGET",
+  "signal_exit": 0,
+  "signal_stdout": "HOST_DEADLINE_SIGNALLED\n",
+  "signal_stderr": "",
+  "host_elapsed_s": 1200.1542457522592,
+  "budget_s": 1200,
+  "run": "/home/ICer/ic_eda_divopt_20261110/runs/B0_20261110_195833"
+}

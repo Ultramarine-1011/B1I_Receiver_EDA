@@ -1,0 +1,9 @@
+filelists
+input_sha256.txt
+rtl
+runs
+scripts
+sources
+tb
+work
+B0_LAUNCH_PID=25612
