@@ -1,0 +1,63 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+BASELINE_OUTPUT_LOAD_PF 0.006604
+redirect $report_dir/host_options.rpt { report_host_options }
+redirect $report_dir/library.rpt { list_libs }
+redirect $report_dir/design_pre.rpt { report_design }
+redirect $report_dir/check_design_pre.rpt { check_design }
+redirect $report_dir/check_timing_pre.rpt { check_timing }
+5.012,0,0,0,340268,99.79,8158400,0,0,0,43458
+10.028,0,0,0,433552,100.68,8064896,0,0,0,43458
+15.044,0,0,0,509548,101.88,7988516,0,0,0,43458
+****************************************
+Report : host_options
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 18:35:39 2026
+****************************************
+
+Max_cores: 1
+
+1
+Information: Checking out the license 'DesignWare'. (SEC-104)
+  Allocating blocks in 'DW_div_tc_a_width76_b_width59'
+  Allocating blocks in 'DW_div_a_width76_b_width59_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width76'
+   PID   PPID     ELAPSED %CPU   RSS COMMAND
+ 14147  14146       00:18 96.6 510628 common_shell_ex
+  4051   3854       42:13  0.3 262440 gnome-shell
+  1811   1778       46:00  0.0 88012 X
+ 13647   1713       00:47  6.4 78332 snpslmd
+  4477   3854       42:09  0.0 65336 gnome-software
+  4354   3854       42:10  0.0 31000 nautilus-deskto
+   972      1       46:02  0.0 29788 firewalld

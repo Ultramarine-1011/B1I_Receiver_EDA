@@ -1,0 +1,40 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+  Allocating blocks in 'DW_div_tc_a_width76_b_width59'
+  Allocating blocks in 'DW_div_a_width76_b_width59_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width76'
+Warning: Design 'DW_div_tc_a_width76_b_width59' inherited license information from design 'DW_div_a_width76_b_width59_tc_mode1_rem_mode1'. (DDB-74)
+  Allocating blocks in 'DW_div_tc_a_width80_b_width64'
+  Allocating blocks in 'DW_div_a_width80_b_width64_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width80'
+Warning: Design 'DW_div_tc_a_width80_b_width64' inherited license information from design 'DW_div_a_width80_b_width64_tc_mode1_rem_mode1'. (DDB-74)
+  Allocating blocks in 'DW_div_tc_a_width64_b_width25'
+  Allocating blocks in 'DW_div_a_width64_b_width25_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width64'
+Warning: Design 'DW_div_tc_a_width64_b_width25' inherited license information from design 'DW_div_a_width64_b_width25_tc_mode1_rem_mode1'. (DDB-74)
+  Allocating blocks in 'DW_div_tc_a_width33_b_width11'
+  Allocating blocks in 'DW_div_a_width33_b_width11_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width33'
+Warning: Design 'DW_div_tc_a_width33_b_width11' inherited license information from design 'DW_div_a_width33_b_width11_tc_mode1_rem_mode1'. (DDB-74)
+  Allocating blocks in 'DW_div_tc_a_width64_b_width11'
+  Allocating blocks in 'DW_div_a_width64_b_width11_tc_mode1_rem_mode1'
+Warning: Design 'DW_div_tc_a_width64_b_width11' inherited license information from design 'DW_div_a_width64_b_width11_tc_mode1_rem_mode1'. (DDB-74)
+Information: Updating design information... (UID-85)
+Warning: Design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1' contains 8 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+Warning: The following input ports have no clock_relative delay specified, the command set_input_delay without -clock option will be ignored. (TIM-216)
+--------------------
+reset_n
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1

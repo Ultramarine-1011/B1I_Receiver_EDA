@@ -1,0 +1,27 @@
+{
+  "warning_counts": {
+    "OPT-112": 185204,
+    "UID-401": 214,
+    "VER-318": 20,
+    "VER-281": 4
+  },
+  "error_lines": [],
+  "last_mapping_operations": [
+    "  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16'",
+    "  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17'",
+    "  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_418'",
+    "  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18'",
+    "  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19'",
+    "  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_53'",
+    "  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_54'",
+    "  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20'",
+    "  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_21'",
+    "  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_55'",
+    "  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_22'",
+    "  Mapping Optimization (Phase 1)"
+  ],
+  "compile_begin": [
+    "1794306984"
+  ],
+  "compile_end": []
+}

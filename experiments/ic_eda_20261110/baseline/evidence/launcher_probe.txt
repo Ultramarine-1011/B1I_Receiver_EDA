@@ -1,0 +1,59 @@
+/home/synopsys/syn/O-2018.06-SP1/bin/snps_shell: POSIX shell script, ASCII text executable
+#!/bin/sh 
+
+P=`pwd`
+cmd=`echo $0 | sed -e 's#^\./##'`
+
+case $cmd in
+/*) ;;
+*)  cmd=$P/$cmd;;
+esac
+
+script_name=""
+real_platform=""
+real_synopsys_install_root_bin=""
+platform=""
+synopsys_root=""
+SYNOPSYS_INSTALL_ROOT=""
+sixtyfourbit_flag=""
+wrapper_verbose=0
+print_exe=0
+classic=0
+flag32=0
+ARGS=""
+
+while
+        synopsys_install_root_bin=`expr \
+          $cmd'/' : '\(/\)[^/]*/$' \
+          \| $cmd'/' : '\(.*[^/]\)//*[^/][^/]*//*$' \
+          \| .`
+        l=`ls -ld $cmd | grep '^[Ll]'`
+        [ -n "$l" ]
+do
+        m=`expr "$l" : '.* \(.*\)'`
+        script_name=`expr "$cmd" : '.*/\([^/]*\)$'`
+        real_platform=`expr "$synopsys_install_root_bin" : '.*/\([^/]*\)/syn/bin'`
+        real_synopsys_install_root_bin=`expr "$synopsys_install_root_bin" : '\(.*\)/[^/]*/syn/bin'`
+        case $m in
+        /*) cmd=$m ;;
+        *)  cmd=$synopsys_install_root_bin/$m ;;
+        esac
+done
+
+if [ T"${real_synopsys_install_root_bin}" == "T" ]; then
+  real_synopsys_install_root_bin=`dirname "$synopsys_install_root_bin"`
+fi
+
+  1713 lmgrd
+  1768 lmgrd
+ae18ee8134e92a46241c361ee5058ee747f4cd4a0d5327fb8aa87f2c78aeedf5  /home/ICer/.bashrc
+	Command being timed: "timeout 180 dc_shell -64bit -f ../../scripts/dc_prn.tcl"
+	User time (seconds): 2.38
+	System time (seconds): 0.10
+	Percent of CPU this job got: 94%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 267084

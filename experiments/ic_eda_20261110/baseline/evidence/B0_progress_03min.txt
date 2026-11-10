@@ -1,0 +1,34 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+2026-11-10T18:37:58+0800
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_285'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_286'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_287'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_288'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_289'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_290'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_291'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_292'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_293'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_294'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_295'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_296'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_297'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_298'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_299'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_300'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_301'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_inc_4'
+133.246,0,0,0,702616,104.52,7792624,0,0,0,75669
+138.258,0,0,0,702616,104.55,7792748,0,0,0,75669
+1794307070.507987,14147,701588,701588,13506,R
+1794307075.512141,14147,701588,701588,14029,R

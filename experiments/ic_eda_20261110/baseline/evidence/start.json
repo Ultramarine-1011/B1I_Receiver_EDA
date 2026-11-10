@@ -1,0 +1,24 @@
+{
+  "date_singapore": "2026-11-10T18:31:32.3358427+08:00",
+  "head": "55863842ceaff30c163b45b249fa4b2fbc559acb",
+  "main": "fb662d36e85e9cffe02a4b8f003887808f73007c",
+  "branch": "codex/ic-eda-personal-local-smoke-20261110",
+  "status": [
+    "?? 261102/",
+    "?? BDI_signal_source_student/",
+    "?? docs/ACQUISITION_REPORT.pdf",
+    "?? docs/NH_D1_REPORT.pdf",
+    "?? docs/TRACKING_REPORT.pdf",
+    "?? experiments/ic_eda_20261110/baseline/"
+  ],
+  "tracked_changes": [],
+  "source_commit": "55863842ceaff30c163b45b249fa4b2fbc559acb",
+  "B0_parameters": {
+    "ENABLE_CARRIER_AID": 1,
+    "ENABLE_FLL": 1
+  },
+  "B1_parameters": "all bds_bb_6ch_core defaults, CHANNEL_ID=0..5, ENABLE_FLL=1 ENABLE_CARRIER_AID=1",
+  "budget_s": 1200,
+  "max_cores": 1,
+  "vm_ip_rediscovered": "192.168.236.129"
+}

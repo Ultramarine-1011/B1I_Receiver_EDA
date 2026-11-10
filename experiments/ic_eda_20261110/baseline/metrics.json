@@ -1,0 +1,45 @@
+{
+  "stages": {
+    "B0": {
+      "status": "TIMEOUT",
+      "reports_complete": false,
+      "sampled_tree_peak_rss_kib": 2740552,
+      "return_code": -9,
+      "stage": "B0",
+      "final_timing": "NOT_AVAILABLE",
+      "errors": [],
+      "stop_reason": "SUPERVISOR_TIMEOUT",
+      "supervisor_elapsed_s": 1222.030338048935,
+      "sampled_dc_hwm_kib": 0,
+      "final_area": "NOT_AVAILABLE",
+      "vm_peak_swap_used_kib": 0,
+      "dc_command_wall_s": null,
+      "time_peak_rss_kib": null,
+      "user_cpu_s": null,
+      "system_cpu_s": null,
+      "vm_min_mem_available_kib": 5752820,
+      "sampled_peak_cpu_pct_1core": 111.56,
+      "area_um2": null,
+      "critical_path_ns": null,
+      "worst_setup_slack_ns": null,
+      "setup_wns_ns": null,
+      "setup_tns_ns": null,
+      "hold_wns_ns": null,
+      "hold_tns_ns": null,
+      "hold_violating_endpoints": null,
+      "direct_dc_peak_hwm_kib": 2739704,
+      "direct_dc_last_cpu_ticks": 124500,
+      "observed_guest_wall_to_final_log_s": 1248.689476966858,
+      "wall_measurement": "UTC start timestamp to final termination-message log mtime, includes stop handling",
+      "peak_memory_measurement": "5-second cumulative DC VmHWM sampling, GNU time report unavailable"
+    },
+    "B1": {
+      "stage": "B1",
+      "status": "SKIPPED",
+      "reason": "B0 TIMEOUT at the fixed 1200-second budget; entry gate not satisfied",
+      "final_area": "NOT_AVAILABLE",
+      "final_timing": "NOT_AVAILABLE"
+    }
+  },
+  "frozen_files_verified": 24
+}

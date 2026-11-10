@@ -1,0 +1,28 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+SAMPLER_PID=14443
+Information: There are 668 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64'
+  Processing 'b1i_prn_gen_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'
+Information: Added key list 'DesignWare' to design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'. (DDB-72)
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+Information: Added key list 'DesignWare' to design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'. (DDB-72)
+55.157,0,0,0,701236,110.6,7799472,0,0,0,44642
+60.167,0,0,0,701520,110.58,7799700,0,0,0,45244

@@ -1,0 +1,112 @@
+253:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/eco_update_exec"
+254:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/eco_update_exec -r ${SYNOPSYS_INSTALL_ROOT}";
+257:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/extract2plib_exec"
+258:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/extract2plib_exec -r ${SYNOPSYS_INSTALL_ROOT}";
+261:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+262:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -r ${SYNOPSYS_INSTALL_ROOT} -shell fpga_shell";
+263:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+266:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+267:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -r ${SYNOPSYS_INSTALL_ROOT} -shell fpga_shell -tcl_mode";
+268:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+271:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+272:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -shell fpga_shell -tcl_mode -xg_mode -r ${SYNOPSYS_INSTALL_ROOT}";
+273:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+277:      checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+278:      exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -shell lc_shell -r ${SYNOPSYS_INSTALL_ROOT}";
+279:      setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+281:      if [ "$SYNOPSYS_LC_ROOT" = "" ]; then
+282:        echo "Warning: SYNOPSYS_LC_ROOT missing, invoke common shell Library Compiler"
+283:        checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+284:        exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -shell lc_shell -r ${SYNOPSYS_INSTALL_ROOT}";
+285:        setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+287:        echo "Info: invoke lc_shell from $SYNOPSYS_LC_ROOT"
+288:        checkExePathAndSetPlatform $SYNOPSYS_LC_ROOT $platform "lc/bin/lc_shell_exec"
+289:        exec_name="$SYNOPSYS_LC_ROOT/$platform/lc/bin/lc_shell_exec -r ${SYNOPSYS_LC_ROOT}";
+290:        setLibraryPath $SYNOPSYS_LC_ROOT $platform
+295:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/lef2plib_exec"
+296:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/lef2plib_exec -r ${SYNOPSYS_INSTALL_ROOT}";
+299:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/ccs_cet";
+302:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/libchecker";
+305:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+306:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -r ${SYNOPSYS_INSTALL_ROOT} -shell psyn_shell -tcl_mode";
+307:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+308:    if test -f $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc ; then
+309:      physopt_astro_exec_dir=`cat $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc`
+314:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/ctp_shell_exec"
+315:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/ctp_shell_exec -ctp -r ${SYNOPSYS_INSTALL_ROOT}";
+319:    script_name="$SYNOPSYS_INSTALL_ROOT/auxx/dc_pack_design.pl";
+320:    exec_name="${perl_exec} ${script_name}"
+324:    script_name="$SYNOPSYS_INSTALL_ROOT/auxx/dc_unpack_design.pl";
+325:    exec_name="${perl_exec} ${script_name}"
+328:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/galaxy_icc_exec"
+329:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/galaxy_icc_exec -shell icc_shell -tcl_mode -xg_mode -r ${SYNOPSYS_INSTALL_ROOT}";
+330:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+331:    if test -f $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc ; then
+332:      physopt_astro_exec_dir=`cat $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc`
+337:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/jupiter_gui_exec"
+338:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/jupiter_gui_exec -shell icc_shell -tcl_mode -xg_mode -r ${SYNOPSYS_INSTALL_ROOT}";
+339:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+340:    if test -f $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc ; then
+341:      physopt_astro_exec_dir=`cat $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc`
+344:    SYNOPSYS_GUI_AUTOSTART=0
+345:    export SYNOPSYS_GUI_AUTOSTART
+348:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+349:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -shell gshell -tcl_mode -xg_mode -r ${SYNOPSYS_INSTALL_ROOT}";
+350:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+351:    if test -f $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc ; then
+352:      physopt_astro_exec_dir=`cat $SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/.astro_loc`
+357:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/common_shell_exec"
+358:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/common_shell_exec -shell design_vision -r ${SYNOPSYS_INSTALL_ROOT}";
+359:    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+362:    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/vcd2saif"
+363:    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/vcd2saif";
+366:    exec_name="$SYNOPSYS_INSTALL_ROOT/eteam/bin/nWave";
+369:    exec_name="$SYNOPSYS_INSTALL_ROOT/eteam/bin/fsdb2vcd";
+372:    echo "Error: The $script_name script is not supported."
+
+dc_shell version    -  O-2018.06-SP1
+dc_shell build date -  Jul 19, 2018
+Site Identification Number: 000
+Local Administrator: ICer
+Contact: ICer@(none)
+-rw-rw-r--. 1 ICer ICer   681 Sep 19  2025 /home/ICer/.synopsys_dv_prefs.tcl
+-rw-rw-r--. 1 ICer ICer 12085 Jan  1  2026 /home/ICer/.synopsys_dve_ini.tcl
+-rw-rw-r--. 1 ICer ICer   376 Nov 25  2025 /home/ICer/.synopsys_dve_prefs.tcl
+
+/home/ICer/.synopsys_lc_gui:
+total 4
+drwxrwxr-x.  3 ICer ICer   20 Apr 30  2022 .
+drwxrwx---. 38 ICer ICer 4096 Nov 10 18:31 ..
+drwxrwxr-x.  2 ICer ICer    6 Apr 30  2022 config
+
+/home/ICer/.synopsys_pt_gui:
+total 4
+drwxrwxr-x.  3 ICer ICer   20 Oct  9  2021 .
+drwxrwx---. 38 ICer ICer 4096 Nov 10 18:31 ..
+drwxrwxr-x.  2 ICer ICer    6 Oct  9  2021 config
+  1713 lmgrd           /home/synopsys/scl/2018.06/linux64/bin/lmgrd -c /home/synopsys/scl/2018.06/admin/license/Synopsys.dat
+  1768 lmgrd           /home/mentor/questasim/linux_x86_64/lmgrd -c /home/mentor/questasim/mentor.dat
+Command exited with non-zero status 1
+	Command being timed: "timeout 20 dc_shell -64bit -version"
+	User time (seconds): 0.03
+	System time (seconds): 0.05
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 62244
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 12986
+	Voluntary context switches: 88
+	Involuntary context switches: 26
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

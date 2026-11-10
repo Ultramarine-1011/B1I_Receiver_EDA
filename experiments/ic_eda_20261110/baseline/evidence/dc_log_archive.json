@@ -1,0 +1,8 @@
+{
+  "original": "runs/B0/reports/run.log",
+  "archive": "runs/B0/reports/run.log.gz",
+  "original_bytes": 23715061,
+  "original_sha256": "f484300ed3e42b3fc29401454749530a71f5fcf4a3231ad7230341e98352f2d8",
+  "archive_sha256": "c6124ec1204263d4be7ff5d9215c32f46603843957e291b057a31b853e68dd82",
+  "decompression_verified": true
+}

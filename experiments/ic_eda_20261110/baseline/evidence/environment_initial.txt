@@ -1,0 +1,22 @@
+IC_EDA
+uid=1000(ICer) gid=1000(ICer) 组=1000(ICer),18(dialout),1001(plugdev) 环境=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+              total        used        free      shared  buff/cache   available
+Mem:           9818        1150        6783          39        1884        8337
+Swap:         10235           0       10235
+8
+   PID COMMAND         %CPU   RSS
+  4051 gnome-shell      0.3 262440
+  1811 X                0.0 88012
+  4477 gnome-software   0.0 65336
+  4354 nautilus-deskto  0.0 31000
+   972 firewalld        0.0 29788
+  4144 goa-daemon       0.0 27156
+  4418 vmtoolsd         0.2 25488
+  4499 evolution-addre  0.0 22940
+  4383 evolution-calen  0.0 20668
+  1562 tuned            0.0 19588
+  1588 libvirtd         0.0 18864
+8022bc0d744d01fcc93b8c7387d9de6d33d674c29c81beba0e0496d2dde1702a  /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-home  309G   45G  265G   15% /home
+Python 2.7.5

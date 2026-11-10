@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "frozen_sha256.txt": true,
+    "support_sha256.txt": true,
+    "source_copies_match_originals": true,
+    "protected_document_hashes": true,
+    "python_ast": true,
+    "tracked_worktree_unchanged": true,
+    "index_unchanged": true,
+    "head_unchanged": true,
+    "markdown_links": true,
+    "status_B0_timeout": true,
+    "status_B1_skipped": true,
+    "corrected_timeout_wrapper_test": true
+  },
+  "all_pass": true,
+  "missing_links": [],
+  "head": "55863842ceaff30c163b45b249fa4b2fbc559acb",
+  "git_status": "## codex/ic-eda-personal-local-smoke-20261110\n?? 261102/\n?? BDI_signal_source_student/\n?? docs/ACQUISITION_REPORT.pdf\n?? docs/NH_D1_REPORT.pdf\n?? docs/TRACKING_REPORT.pdf\n?? experiments/ic_eda_20261110/baseline/\n",
+  "time_utc": "2026-11-10T11:04:09.915269+00:00"
+}

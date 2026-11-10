@@ -1,0 +1,33 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+scripts
+sources
+SUPERVISOR_PID=14117
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine b1i_prn_gen line 98 in file
+		'./sources/student_release/student_release/rtl/b1i_prn_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   active_prn_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   chip_index_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   configured_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+elapsed_s,dc_pid,dc_rss_kib,dc_hwm_kib,tree_rss_kib,tree_cpu_pct_1core,mem_available_kib,swap_used_kib,pswpin_pages,pswpout_pages,log_bytes
+0.001,0,0,0,352,0.0,8450048,0,0,0,0

@@ -1,0 +1,15 @@
+{
+  "budget_s": 2.0, 
+  "cwd": "/home/ICer/ic_eda_baseline_20261110/work_supervisor_verification", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_baseline_20261110/work_supervisor_verification/timeout/time.txt", 
+    "setsid", 
+    "bash", 
+    "-c", 
+    "sleep 600 & wait", 
+    "baseline_timeout_probe"
+  ]
+}

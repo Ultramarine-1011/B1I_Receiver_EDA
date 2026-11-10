@@ -1,0 +1,3 @@
+pid=14147
+exe=/home/synopsys/syn/O-2018.06-SP1/linux64/syn/bin/common_shell_exec
+/home/synopsys/syn/O-2018.06-SP1/linux64/syn/bin/common_shell_exec -64 -shell dc_shell -r /home/synopsys/syn/O-2018.06-SP1 -f scripts/dc_baseline.tcl 

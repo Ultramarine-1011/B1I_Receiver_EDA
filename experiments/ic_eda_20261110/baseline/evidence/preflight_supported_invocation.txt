@@ -1,0 +1,9 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight.log
+scripts
+sources
+dc_shell 是 /home/synopsys/syn/O-2018.06-SP1/bin/dc_shell
+SYNOPSYS=
+Fatal: Design Compiler is not enabled. (DCSH-1)

@@ -1,0 +1,45 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+{
+  "status": "TIMEOUT", 
+  "reports_complete": false, 
+  "sampled_tree_peak_rss_kib": 2740552, 
+  "return_code": -9, 
+  "stage": "B0", 
+  "final_timing": "NOT_AVAILABLE", 
+  "errors": [], 
+  "stop_reason": "SUPERVISOR_TIMEOUT", 
+  "supervisor_elapsed_s": 1222.030338048935, 
+  "sampled_dc_hwm_kib": 0, 
+  "final_area": "NOT_AVAILABLE", 
+  "vm_peak_swap_used_kib": 0
+}Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U111, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U102, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U97, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U88, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U81, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U72, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U65, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U56, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U49, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U40, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U33, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U24, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U17, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U8, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U7, because it is not driving any load. (OPT-112)
+  Mapping Optimization (Phase 1)
+1217.006,0,0,0,2740552,99.88,5754344,0,0,0,23714950
+1222.021,0,0,0,2740552,100.1,5754272,0,0,0,23714950
+   PID   PPID     ELAPSED S COMMAND
+ 14147  14146       19:55 R common_shell_ex
+ 14443      1       18:54 S python

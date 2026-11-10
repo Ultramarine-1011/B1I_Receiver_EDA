@@ -1,0 +1,2 @@
+8022bc0d744d01fcc93b8c7387d9de6d33d674c29c81beba0e0496d2dde1702a  /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+ae18ee8134e92a46241c361ee5058ee747f4cd4a0d5327fb8aa87f2c78aeedf5  /home/ICer/.bashrc

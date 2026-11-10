@@ -1,0 +1,14 @@
+{
+  "status": "TIMEOUT", 
+  "reports_complete": false, 
+  "sampled_tree_peak_rss_kib": 2740552, 
+  "return_code": -9, 
+  "stage": "B0", 
+  "final_timing": "NOT_AVAILABLE", 
+  "errors": [], 
+  "stop_reason": "SUPERVISOR_TIMEOUT", 
+  "supervisor_elapsed_s": 1222.030338048935, 
+  "sampled_dc_hwm_kib": 0, 
+  "final_area": "NOT_AVAILABLE", 
+  "vm_peak_swap_used_kib": 0
+}

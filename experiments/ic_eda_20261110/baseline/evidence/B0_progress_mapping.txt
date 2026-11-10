@@ -1,0 +1,144 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+2026-11-10T18:37:09+0800
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_285'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_286'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_287'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_288'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_289'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_290'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_291'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_292'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_293'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_294'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_295'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_296'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_297'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_298'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_299'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_300'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_301'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_inc_4'
+83.086,0,0,0,702616,64.5,7793400,0,0,0,69104
+88.103,0,0,0,702616,99.86,7793408,0,0,0,75669
+1794307020.455087,14147,701588,701588,8314,R
+1794307025.460747,14147,701588,701588,8814,R
+pid=14147
+exe=/home/synopsys/syn/O-2018.06-SP1/linux64/syn/bin/common_shell_exec
+/home/synopsys/syn/O-2018.06-SP1/linux64/syn/bin/common_shell_exec -64 -shell dc_shell -r /home/synopsys/syn/O-2018.06-SP1 -f scripts/dc_baseline.tcl 
+39f25799c524d8c15f5e0e6dcc9100137db860edfed2147640420ce750637038  /proc/14147/exe
+6e8b2e24d9f502a070be8876923fa9e006d98cd12a531c52656beab1f2767d70  /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+  Allocating blocks in 'DW_div_tc_a_width80_b_width64'
+  Allocating blocks in 'DW_div_a_width80_b_width64_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width80'
+Warning: Design 'DW_div_tc_a_width80_b_width64' inherited license information from design 'DW_div_a_width80_b_width64_tc_mode1_rem_mode1'. (DDB-74)
+  Allocating blocks in 'DW_div_tc_a_width64_b_width25'
+  Allocating blocks in 'DW_div_a_width64_b_width25_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width64'
+Warning: Design 'DW_div_tc_a_width64_b_width25' inherited license information from design 'DW_div_a_width64_b_width25_tc_mode1_rem_mode1'. (DDB-74)
+  Allocating blocks in 'DW_div_tc_a_width33_b_width11'
+  Allocating blocks in 'DW_div_a_width33_b_width11_tc_mode1_rem_mode1'
+  Allocating blocks in 'DW01_absval_width33'
+Warning: Design 'DW_div_tc_a_width33_b_width11' inherited license information from design 'DW_div_a_width33_b_width11_tc_mode1_rem_mode1'. (DDB-74)
+  Allocating blocks in 'DW_div_tc_a_width64_b_width11'
+  Allocating blocks in 'DW_div_a_width64_b_width11_tc_mode1_rem_mode1'
+Warning: Design 'DW_div_tc_a_width64_b_width11' inherited license information from design 'DW_div_a_width64_b_width11_tc_mode1_rem_mode1'. (DDB-74)
+Information: Updating design information... (UID-85)
+Warning: Design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1' contains 8 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+Warning: The following input ports have no clock_relative delay specified, the command set_input_delay without -clock option will be ignored. (TIM-216)
+--------------------
+reset_n
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+ 
+****************************************
+Report : resources
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Tue Nov 10 18:36:23 2026
+****************************************
+
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_32_1_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW02_mult
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_5_4_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *GEQ_UNS_OP_3_2_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_cmp2_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+

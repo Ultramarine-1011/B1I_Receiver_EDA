@@ -1,0 +1,84 @@
+lmutil - Copyright (c) 1989-2017 Flexera Software LLC. All Rights Reserved.
+Flexible License Manager status on Tue 11/10/2026 18:33
+
+License server status: 27000@IC_EDA
+    License file(s) on IC_EDA: /home/synopsys/scl/2018.06/admin/license/Synopsys.dat:
+
+    IC_EDA: license server UP (MASTER) v11.14.1
+
+Vendor daemon status (on IC_EDA):
+
+   snpslmd: The desired vendor daemon is down. (-97,121)
+
+
+LMSTAT_RC=0
+    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/dc-transcript_exec -r ${SYNOPSYS_INSTALL_ROOT}";
+    ;;
+  dc_shell|dc_shell-t|dc_shell-xg-t)
+    if [ $no_user_prefs -eq 1 ]; then
+      SNPS_GUI_NO_USER_PREFS=1; export SNPS_GUI_NO_USER_PREFS;
+    fi
+    if [ $gui_start -eq 1 ]; then
+      SYNOPSYS_GUI_AUTOSTART=1; export SYNOPSYS_GUI_AUTOSTART;
+    fi
+    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/$dcexec_name"
+    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/$dcexec_name $sixtyfourbit_flag -shell dc_shell -r ${SYNOPSYS_INSTALL_ROOT}";
+    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+    ;;
+  de_shell)
+    if [ $no_user_prefs -eq 1 ]; then
+      SNPS_GUI_NO_USER_PREFS=1; export SNPS_GUI_NO_USER_PREFS;
+    fi
+    if [ $gui_start -eq 1 ]; then
+      SYNOPSYS_GUI_AUTOSTART=1; export SYNOPSYS_GUI_AUTOSTART;
+    fi
+    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/$dcexec_name"
+    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/$dcexec_name $sixtyfourbit_flag -shell de_shell -r ${SYNOPSYS_INSTALL_ROOT}";
+    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+    ;;
+  dc_sms_shell)
+    if [ $no_user_prefs -eq 1 ]; then
+      SNPS_GUI_NO_USER_PREFS=1; export SNPS_GUI_NO_USER_PREFS;
+    fi
+    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "syn/bin/$dcexec_name"
+    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/syn/bin/$dcexec_name $sixtyfourbit_flag -shell dc_sms_shell -r ${SYNOPSYS_INSTALL_ROOT}";
+    setLibraryPath $SYNOPSYS_INSTALL_ROOT $platform
+    ;;
+  dcprocheck)
+    checkExePathAndSetPlatform $SYNOPSYS_INSTALL_ROOT $platform "tcl/bin/snps_checker_exec"
+    synopsys_root=$SYNOPSYS_INSTALL_ROOT
+    tcllib="${synopsys_root}/auxx/tcllib";
+
+    export synopsys_root
+
+    exec_name="$SYNOPSYS_INSTALL_ROOT/$platform/tcl/bin/snps_checker_exec \
+      ${tcllib}/snps_tcl/snps_checker/snps_checker.tbc \
+      -pcx ${synopsys_root}/auxx/tcllib/snps_tcl \
+      -pcx ${synopsys_root}/auxx/tcllib/syn \
+      -use snpsTcl1.0 -use syn1.0";
+TIMED_PREFLIGHT_RC=255
+Fatal: Design Compiler is not enabled. (DCSH-1)
+Command exited with non-zero status 255
+	Command being timed: "timeout 20 dc_shell -64bit -f /home/ICer/ic_eda_baseline_20261110/scripts/preflight.tcl"
+	User time (seconds): 0.05
+	System time (seconds): 0.09
+	Percent of CPU this job got: 117%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 68512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 14596
+	Voluntary context switches: 93
+	Involuntary context switches: 27
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 255

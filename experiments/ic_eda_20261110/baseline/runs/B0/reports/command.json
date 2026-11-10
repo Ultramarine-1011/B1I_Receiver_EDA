@@ -1,0 +1,20 @@
+{
+  "max_cores": 1, 
+  "budget_seconds": 1200, 
+  "cwd": "/home/ICer/ic_eda_baseline_20261110/runs/B0/work", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_baseline_20261110/runs/B0/reports/time.txt", 
+    "timeout", 
+    "--signal=TERM", 
+    "--kill-after=10s", 
+    "1200", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "scripts/dc_baseline.tcl"
+  ], 
+  "started_utc": "2026-11-10T10:35:36.990430Z"
+}

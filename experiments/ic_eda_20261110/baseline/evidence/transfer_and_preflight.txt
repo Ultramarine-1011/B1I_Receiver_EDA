@@ -1,0 +1,27 @@
+input.tar.gz
+c0748b7d2dc25a4ae5778b27f434bed1cb5396488e7f686a1e2e156bab4516f5  input.tar.gz
+filelists/B0.txt: 确定
+filelists/B1.txt: 确定
+scripts/baseline.sdc: 确定
+scripts/dc_baseline.tcl: 确定
+scripts/monitor_stage.py: 确定
+scripts/run_stage.sh: 确定
+scripts/ssh_client.py: 确定
+sources/student_release/student_release/rtl/acquisition_refine.sv: 确定
+sources/student_release/student_release/rtl/b1i_prn_gen.sv: 确定
+sources/student_release/student_release/rtl/bds_bb_6ch_core.sv: 确定
+sources/student_release/student_release/rtl/carrier_nco_mixer.sv: 确定
+sources/student_release/student_release/rtl/carrier_quarter_lut.svh: 确定
+sources/student_release/student_release/rtl/code_nco.sv: 确定
+sources/student_release/student_release/rtl/d1_word_sync.sv: 确定
+sources/student_release/student_release/rtl/epl_correlator.sv: 确定
+sources/student_release/student_release/rtl/navigation_d1.sv: 确定
+sources/student_release/student_release/rtl/nh20_sync.sv: 确定
+sources/student_release/student_release/rtl/receiver_channel.sv: 确定
+sources/student_release/student_release/rtl/receiver_contract_pkg.sv: 确定
+sources/student_release/student_release/rtl/tracking_channel_minimal.sv: 确定
+sources/student_release/student_release/rtl/tracking_frontend_spaced.sv: 确定
+sources/student_release/student_release/rtl/tracking_frontend.sv: 确定
+sources/student_release/student_release/rtl/tracking_record_framer.sv: 确定
+sources/synth/m2_isolate/acquisition_pcps_blackbox.sv: 确定
+Fatal: Design Compiler is not enabled. (DCSH-1)

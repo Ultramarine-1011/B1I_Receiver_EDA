@@ -1,0 +1,43 @@
+2026-11-10T18:35:36+0800
+IC_EDA
+Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+              total        used        free      shared  buff/cache   available
+Mem:           9818        1235        6692          39        1890        8252
+Swap:         10235           0       10235
+bash: swapon: command not found
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-home  309G   45G  265G  15% /home
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 39142
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+   PID   PPID   PGID     ELAPSED %CPU   RSS COMMAND
+  4051   3854   3854       41:55  0.3 262440 gnome-shell
+  1811   1778   1811       45:42  0.0 88012 X
+ 13647   1713  13647       00:29 10.3 78332 snpslmd
+  4477   3854   3854       41:51  0.0 65336 gnome-software
+  4354   3854   3854       41:52  0.0 31000 nautilus-deskto
+   972      1    972       45:44  0.0 29788 firewalld
+  4144      1   3864       41:52  0.0 27156 goa-daemon
+  4418      1   3854       41:51  0.2 25488 vmtoolsd
+  4499   4467   3864       41:51  0.0 22940 evolution-addre
+  4383      1   3864       41:52  0.0 20668 evolution-calen
+  1562      1   1562       45:43  0.0 19588 tuned
+  1588      1   1588       45:43  0.0 18864 libvirtd
+  4405   4383   3864       41:51  0.0 18420 evolution-calen
+  4306   3854   3854       41:52  0.0 17808 gsd-media-keys
+  4296   3854   3854       41:52  0.0 16968 gsd-color
+  4475   3854   3854       41:51  0.0 16936 abrt-applet
+  4420      1   3864       41:51  0.0 16764 tracker-store

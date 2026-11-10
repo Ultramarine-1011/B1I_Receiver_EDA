@@ -1,0 +1,51 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+{
+  "max_cores": 1, 
+  "budget_seconds": 1200, 
+  "cwd": "/home/ICer/ic_eda_baseline_20261110/runs/B0/work", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_baseline_20261110/runs/B0/reports/time.txt", 
+    "timeout", 
+    "--signal=TERM", 
+    "--kill-after=10s", 
+    "1200", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "scripts/dc_baseline.tcl"
+  ], 
+  "started_utc": "2026-11-10T10:35:36.990430Z"
+}LOG_MTIME_EPOCH=1794308185 LOG_BYTES=23715061
+4022.70 30586.49
+2026-11-10T10:57:33+0000
+              total        used        free      shared  buff/cache   available
+Mem:           9818        1238        6462          39        2117        8247
+Swap:         10235           0       10235
+{
+  "status": "TIMEOUT", 
+  "reports_complete": false, 
+  "sampled_tree_peak_rss_kib": 2740552, 
+  "return_code": -9, 
+  "stage": "B0", 
+  "final_timing": "NOT_AVAILABLE", 
+  "errors": [], 
+  "stop_reason": "SUPERVISOR_TIMEOUT", 
+  "supervisor_elapsed_s": 1222.030338048935, 
+  "sampled_dc_hwm_kib": 0, 
+  "final_area": "NOT_AVAILABLE", 
+  "vm_peak_swap_used_kib": 0
+}c891caae0478479a3be76e3b420d70bee9f75ca4de8e91a2a89c65d98d3c56cd  results.tar.gz
+584K	results.tar.gz

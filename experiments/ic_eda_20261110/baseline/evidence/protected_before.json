@@ -1,0 +1,27 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "67558118F6882F10C739FEB57659F1B89B211E57E5FD456D4A397E532F1530C0",
+    "Path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\STATUS.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "ACF48C3011ACDF191F9B3708F0916EB7F0F7877D4A2686C43894877BF4AD053B",
+    "Path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\GOAL.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D084D6DD7DD03BB57C9F1019BDC67794EF080001211D81ABFB95D47C8CE5DE1C",
+    "Path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\WORKLOG.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "1767331DAEA52D2ECDC2057BC38E4959AABCD61ECE94393EDFB6D8881CFD1FA0",
+    "Path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\AGENTS.md"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "B295EE26F3889BEA41B32361E313A6659710A54FD3A9B3B220D14B309917BB7A",
+    "Path": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br\\reports\\m2_tsmc28_20261106\\REPORT.md"
+  }
+]

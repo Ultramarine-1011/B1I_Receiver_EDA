@@ -1,0 +1,43 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+805:  Allocating blocks in 'DW_div_tc_a_width64_b_width11'
+806:  Allocating blocks in 'DW_div_a_width64_b_width11_tc_mode1_rem_mode1'
+808:  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_0'
+880:  Allocating blocks in 'DW_div_tc_a_width33_b_width11'
+881:  Allocating blocks in 'DW_div_a_width33_b_width11_tc_mode1_rem_mode1'
+883:  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_div_tc_1'
+925:  Allocating blocks in 'DW_div_tc_a_width64_b_width25'
+926:  Allocating blocks in 'DW_div_a_width64_b_width25_tc_mode1_rem_mode1'
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+   PID   PPID   PGID     ELAPSED %CPU   RSS COMMAND
+  4051   3854   3854       41:55  0.3 262440 gnome-shell
+  1811   1778   1811       45:42  0.0 88012 X
+ 13647   1713  13647       00:29 10.3 78332 snpslmd
+  4477   3854   3854       41:51  0.0 65336 gnome-software
+  4354   3854   3854       41:52  0.0 31000 nautilus-deskto
+   972      1    972       45:44  0.0 29788 firewalld
+  4144      1   3864       41:52  0.0 27156 goa-daemon
+  4418      1   3854       41:51  0.2 25488 vmtoolsd
+  4499   4467   3864       41:51  0.0 22940 evolution-addre
+  4383      1   3864       41:52  0.0 20668 evolution-calen
+  1562      1   1562       45:43  0.0 19588 tuned
+  1588      1   1588       45:43  0.0 18864 libvirtd
+  4405   4383   3864       41:51  0.0 18420 evolution-calen
+  4306   3854   3854       41:52  0.0 17808 gsd-media-keys
+  4296   3854   3854       41:52  0.0 16968 gsd-color
+  4475   3854   3854       41:51  0.0 16936 abrt-applet
+  4420      1   3864       41:51  0.0 16764 tracker-store

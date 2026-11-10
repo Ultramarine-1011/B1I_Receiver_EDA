@@ -1,0 +1,16 @@
+sources/student_release/student_release/rtl/receiver_contract_pkg.sv
+sources/student_release/student_release/rtl/b1i_prn_gen.sv
+sources/student_release/student_release/rtl/code_nco.sv
+sources/student_release/student_release/rtl/carrier_nco_mixer.sv
+sources/student_release/student_release/rtl/epl_correlator.sv
+sources/student_release/student_release/rtl/tracking_frontend.sv
+sources/student_release/student_release/rtl/tracking_frontend_spaced.sv
+sources/student_release/student_release/rtl/tracking_channel_minimal.sv
+sources/student_release/student_release/rtl/nh20_sync.sv
+sources/student_release/student_release/rtl/d1_word_sync.sv
+sources/student_release/student_release/rtl/navigation_d1.sv
+sources/student_release/student_release/rtl/tracking_record_framer.sv
+sources/student_release/student_release/rtl/receiver_channel.sv
+sources/student_release/student_release/rtl/acquisition_refine.sv
+sources/student_release/student_release/rtl/bds_bb_6ch_core.sv
+sources/synth/m2_isolate/acquisition_pcps_blackbox.sv

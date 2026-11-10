@@ -1,0 +1,39 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+2026-11-10T18:56:42+0800
+   PID   PPID   PGID    SID     ELAPSED S COMMAND
+   PID   PPID   PGID     ELAPSED S COMMAND
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U7, because it is not driving any load. (OPT-112)
+  Mapping Optimization (Phase 1)
+
+Received Signal 15 from: PID=14146 (UID=1000)
+
+
+Process terminated by kill.
+
+-rw-rw-r--. 1 ICer ICer 0 11月 10 18:35 runs/B0/reports/time.txt
+1794308167.362722,14147,2739524,2739524,122998,R
+1794308172.368738,14147,2739524,2739524,123499,R
+1794308177.37426,14147,2739704,2739704,123999,R
+1794308182.381285,14147,2739704,2739704,124500,R
+2026-11-10T18:55:59+0800
+IC_EDA
+Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+              total        used        free      shared  buff/cache   available
+Mem:           9818        3888        3812          39        2117        5596
+Swap:         10235           0       10235
+bash: swapon: command not found
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-home  309G   45G  265G  15% /home
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0

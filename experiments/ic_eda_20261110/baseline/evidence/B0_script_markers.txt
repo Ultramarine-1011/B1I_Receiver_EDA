@@ -1,0 +1,100 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+# IC_EDA original-RTL baseline. Run from the frozen experiment root.
+set_app_var sh_enable_page_mode false
+false
+set_host_options -max_cores 1
+1
+set stage $env(BASELINE_STAGE)
+B0
+set report_dir $env(BASELINE_REPORT_DIR)
+/home/ICer/ic_eda_baseline_20261110/runs/B0/reports
+file mkdir $report_dir
+define_design_lib WORK -path ./WORK
+1
+set library_dir /home/ic_libs/TSMC.90/aci/sc-x/synopsys
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys
+set db_file $library_dir/typical.db
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set rtl sources/student_release/student_release/rtl
+sources/student_release/student_release/rtl
+set_app_var search_path [concat [list $rtl $library_dir .] $search_path]
+sources/student_release/student_release/rtl /home/ic_libs/TSMC.90/aci/sc-x/synopsys . . /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver
+set_app_var target_library [list $db_file]
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set_app_var synthetic_library [list dw_foundation.sldb]
+dw_foundation.sldb
+set_app_var link_library [list * $db_file dw_foundation.sldb]
+* /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db dw_foundation.sldb
+puts "BASELINE_STAGE $stage"
+BASELINE_STAGE B0
+# The DC banner in run.log records the precise version and build date.
+puts "BASELINE_DW_FILE [which dw_foundation.sldb]"
+BASELINE_DW_FILE /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+puts "BASELINE_COMPILE_COMMAND compile -map_effort medium"
+BASELINE_COMPILE_COMMAND compile -map_effort medium
+set list_file [open filelists/$stage.txt r]
+file13
+set sources [split [string trim [read $list_file]] \n]
+sources/student_release/student_release/rtl/b1i_prn_gen.sv sources/student_release/student_release/rtl/code_nco.sv sources/student_release/student_release/rtl/carrier_nco_mixer.sv sources/student_release/student_release/rtl/epl_correlator.sv sources/student_release/student_release/rtl/tracking_frontend_spaced.sv sources/student_release/student_release/rtl/tracking_channel_minimal.sv
+close $list_file
+foreach path $sources {
+    puts "BASELINE_SOURCE $path"
+    if {[analyze -format sverilog -define SYNTHESIS $path] == 0} { exit 1 }
+}
+BASELINE_SOURCE sources/student_release/student_release/rtl/b1i_prn_gen.sv
+Running PRESTO HDLC
+Compiling source file ./sources/student_release/student_release/rtl/b1i_prn_gen.sv
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+BASELINE_SOURCE sources/student_release/student_release/rtl/code_nco.sv
+Running PRESTO HDLC
+set stage $env(BASELINE_STAGE)
+set report_dir $env(BASELINE_REPORT_DIR)
+puts "BASELINE_STAGE $stage"
+BASELINE_STAGE B0
+puts "BASELINE_DW_FILE [which dw_foundation.sldb]"
+BASELINE_DW_FILE /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+puts "BASELINE_COMPILE_COMMAND compile -map_effort medium"
+BASELINE_COMPILE_COMMAND compile -map_effort medium
+    puts "BASELINE_SOURCE $path"
+BASELINE_SOURCE sources/student_release/student_release/rtl/b1i_prn_gen.sv
+BASELINE_SOURCE sources/student_release/student_release/rtl/code_nco.sv
+BASELINE_SOURCE sources/student_release/student_release/rtl/carrier_nco_mixer.sv
+BASELINE_SOURCE sources/student_release/student_release/rtl/epl_correlator.sv
+BASELINE_SOURCE sources/student_release/student_release/rtl/tracking_frontend_spaced.sv
+BASELINE_SOURCE sources/student_release/student_release/rtl/tracking_channel_minimal.sv
+puts "BASELINE_ELABORATED [get_object_name [current_design]]"
+879.469,0,0,0,2058456,110.83,6439296,0,0,0,10198296

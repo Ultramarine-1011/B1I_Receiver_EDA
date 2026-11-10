@@ -1,0 +1,26 @@
+filelists
+frozen_sha256.txt
+input.tar.gz
+preflight_c.log
+preflight_f.log
+preflight.log
+preflight_restored.log
+preflight_timed.log
+runs
+scripts
+sources
+2026-11-10T18:55:04+0800
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U88, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U81, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U72, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U65, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U56, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U49, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U40, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U33, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U24, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U17, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U8, because it is not driving any load. (OPT-112)
+Warning: Removing don't touch or size only GTECH cell u_div/u_inc_RInc/U7, because it is not driving any load. (OPT-112)
+1165.346,0,0,0,2740028,99.96,5755412,0,0,0,23714950
+1794308100.779717,14147,2739000,2739000,116340,R

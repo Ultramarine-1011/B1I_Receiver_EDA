@@ -1,0 +1,21 @@
+NORMAL_RC=1 TIMEOUT_RC=1
+ 18420  18391  18420 bash -c builtin cd /home/ICer/ic_eda_baseline_20261110; /usr/bin/python -c 'import json,os; p="runs/B0/reports/run.log"; json.dump({"log_final_mtime_epoch_s":os.stat(p).st_mtime,"log_size_bytes":os.stat(p).st_size},open("runs/B0/reports/completion_observation.json","w"),indent=2)'; mkdir -p work_supervisor_verification; builtin cd work_supervisor_verification; /usr/bin/python ../scripts/monitor_job.py normal 3 bash -c 'echo NORMAL_DONE; sleep 0.2'; normal_rc=$?; /usr/bin/python ../scripts/monitor_job.py timeout 2 bash -c 'sleep 600 & wait' baseline_timeout_probe; timeout_rc=$?; printf 'NORMAL_RC=%s TIMEOUT_RC=%s\n' "$normal_rc" "$timeout_rc"; cat normal/result.json timeout/result.json; grep 'Maximum resident|Elapsed' normal/time.txt timeout/time.txt; ps -eo pid,ppid,pgid,args | grep '[b]aseline_timeout_probe'; sha256sum ../scripts/monitor_job.py; tar -czf ../monitor_fix_evidence.tar.gz normal timeout; builtin cd ..; tar -czf final_extra.tar.gz runs/B0/reports/completion_observation.json; sha256sum monitor_fix_evidence.tar.gz final_extra.tar.gz
+ 18457      1  18420 /usr/bin/time -v -o /home/ICer/ic_eda_baseline_20261110/work_supervisor_verification/timeout/time.txt setsid bash -c sleep 600 & wait baseline_timeout_probe
+ 18459  18457  18459 bash -c sleep 600 & wait baseline_timeout_probe
+8c0d33f04a3d56bfbe3450e722a9e1988080ea00a2695db2b8a62c94b4cfe8ea  ../scripts/monitor_job.py
+6f8e9c26fbf324be4c9944b8eb5f2418b6ae27550e5ab0602a4809783e0e01d9  monitor_fix_evidence.tar.gz
+3b5164509aea47ae6397c3d5b9314afeb4efa7995d59c7037e56d5793fdc98b0  final_extra.tar.gz
+Traceback (most recent call last):
+  File "../scripts/monitor_job.py", line 49, in <module>
+    children = children_snapshot(process.pid)
+  File "../scripts/monitor_job.py", line 26, in children_snapshot
+    rows = [list(map(int, line.split())) for line in output.splitlines()]
+ValueError: invalid literal for int() with base 10: ',ppid=,pgid=,rss='
+Traceback (most recent call last):
+  File "../scripts/monitor_job.py", line 49, in <module>
+    children = children_snapshot(process.pid)
+  File "../scripts/monitor_job.py", line 26, in children_snapshot
+    rows = [list(map(int, line.split())) for line in output.splitlines()]
+ValueError: invalid literal for int() with base 10: ',ppid=,pgid=,rss='
+cat: normal/result.json: 没有那个文件或目录
+cat: timeout/result.json: 没有那个文件或目录
