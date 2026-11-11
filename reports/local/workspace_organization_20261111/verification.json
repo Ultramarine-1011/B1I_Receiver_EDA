@@ -1,0 +1,256 @@
+{
+  "original_files_checked": 16310,
+  "byte_identical_files": 16300,
+  "intentional_text_edits": [
+    {
+      "original": ".gitignore",
+      "current": ".gitignore",
+      "before_sha256": "253b723f2a6d9842dde1d2c9e8563476a8af03bec073a17d3c8de527682b4e5d",
+      "after_sha256": "8a12574784ccc51b892243bca391acbf7fb1fea349d86a68bed70a03e635784f"
+    },
+    {
+      "original": "GOAL.md",
+      "current": "GOAL.md",
+      "before_sha256": "a2c9960628be51c84c125fddb789f3d2bb97c3b01eeca664652ac24c6a35c55a",
+      "after_sha256": "6e3876cb0833408fe2d709e10c13531764fcf842fe44e2b8d8ed396439c405fd"
+    },
+    {
+      "original": "README.md",
+      "current": "README.md",
+      "before_sha256": "7240c366a6215f4b0546c1f27cfe31f8fe94f7b760e41c11304fedab7e8beeff",
+      "after_sha256": "b2d78b063f894bc63d76cf4400c8dc09dfb708e3d502fea2da3d45b04845d5e1"
+    },
+    {
+      "original": "STATUS.md",
+      "current": "STATUS.md",
+      "before_sha256": "54fa7929288b8105dbbfd6364f7cfa1d50c67fe5386a29168d6e33dd7d3566c6",
+      "after_sha256": "ad75ed66690c76bdd13e4aaafdbfc0e488f7c1d5978c760f0ddfab483ee92d8b"
+    },
+    {
+      "original": "WORKLOG.md",
+      "current": "WORKLOG.md",
+      "before_sha256": "f11104a98b807f59dc358a87c1148ee48cebaa38bbb8ab0d8d8ce89a5fb31806",
+      "after_sha256": "f3ebe14c429d2636529875e14e447efdf23181da2a207ee948c9a3e04f355143"
+    },
+    {
+      "original": "docs/NEXT_STEPS.md",
+      "current": "docs/NEXT_STEPS.md",
+      "before_sha256": "c5d0ff0ec2b676313a74b59f7e0733e100310ac2527af21f14986b08bcc45f0d",
+      "after_sha256": "edc0295d0f9e397a25a111620d31e61ec5a7a21baa66faaf9bf4a38242aece2b"
+    },
+    {
+      "original": "experiments/ic_eda_20261110/REPORT.md",
+      "current": "experiments/archive/2026-11-10_prn_environment/REPORT.md",
+      "before_sha256": "8f77cca819953f233015c8325fa1480c45b40ed37cbd5749cff6deffc43e4a83",
+      "after_sha256": "3a7d450a7165720e268ee8538db1593cb5d0efe7133aa33f4d8ed4faf8619f92"
+    },
+    {
+      "original": "experiments/ic_eda_20261110/scripts/verify_results.py",
+      "current": "experiments/archive/2026-11-10_prn_environment/scripts/verify_results.py",
+      "before_sha256": "5d835aa05699f78442bded4ab254d242c19d3074199ebb1dfe1a7101ac58d12b",
+      "after_sha256": "52b27b75ebc1e970e38fa4996a158be8b50881326223add49e06656ff75c4bc1"
+    },
+    {
+      "original": "experiments/ic_eda_20261111_backend/LAB_RUNBOOK.md",
+      "current": "experiments/ic_eda_20261111_backend/LAB_RUNBOOK.md",
+      "before_sha256": "191cae3c4e35777db7cb4985852b32d6fd5983db546fc66611a906ac5d60af0e",
+      "after_sha256": "d0e4ef850682bb55b05bb942260c2b1a0a8436d549645f88756a166ec6267448"
+    },
+    {
+      "original": "scripts/h0_vm_smoke.sh",
+      "current": "scripts/h0_vm_smoke.sh",
+      "before_sha256": "fe2c249927a9a338f6ddbfd5eaf95c5cd9b5ac9c5cf5d9cea00df73daf35c129",
+      "after_sha256": "d73458b9b87f9ec3caea154d509d682c90985db7fa6513e6ac834c22868b6ed4"
+    }
+  ],
+  "lost_files": 0,
+  "original_untracked_files_preserved": 13,
+  "git_refs_and_history": "PASS",
+  "main": "fb662d36e85e9cffe02a4b8f003887808f73007c",
+  "technical_result_commit": "c3ba596902c71b4ea0fe1ff780a01f08037c3cef",
+  "archive_count": 35,
+  "archives": [
+    {
+      "path": "experiments/archive/2026-11-10_prn_environment/final_input.tar.gz",
+      "files": 11,
+      "sha256": "64db168ddc565fdac8f15f0def88f491b7c2c4108cf22ac138445483bb134859"
+    },
+    {
+      "path": "experiments/archive/2026-11-10_prn_environment/final_results.tar.gz",
+      "files": 63,
+      "sha256": "807df8f12b57ec5f81199374bf35c2a8f6a892245093dce55f6139233e647b09"
+    },
+    {
+      "path": "experiments/archive/2026-11-10_prn_environment/input.tar.gz",
+      "files": 10,
+      "sha256": "ba27f15e3499e02533f0e791fc70a5a4566010b2b70255b73311924daf2b687a"
+    },
+    {
+      "path": "experiments/archive/2026-11-10_prn_environment/results.tar.gz",
+      "files": 33,
+      "sha256": "a8a9873740b7eeb9e1a54b934446a2d17fa4059986830f43ab33d2d94fc9d65a"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/baseline/final_extra.tar.gz",
+      "files": 1,
+      "sha256": "3b5164509aea47ae6397c3d5b9314afeb4efa7995d59c7037e56d5793fdc98b0"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/baseline/input.tar.gz",
+      "files": 25,
+      "sha256": "c0748b7d2dc25a4ae5778b27f434bed1cb5396488e7f686a1e2e156bab4516f5"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/baseline/monitor_fix_evidence.tar.gz",
+      "files": 8,
+      "sha256": "6f8e9c26fbf324be4c9944b8eb5f2418b6ae27550e5ab0602a4809783e0e01d9"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/baseline/monitor_fix_final.tar.gz",
+      "files": 10,
+      "sha256": "fc79ce6f9595175ab4442edecc10b8677c7144b40cec2e8d7eac5d91d824d58e"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/baseline/results.tar.gz",
+      "files": 26,
+      "sha256": "c891caae0478479a3be76e3b420d70bee9f75ca4de8e91a2a89c65d98d3c56cd"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/divider_opt/evidence/dc_evidence.tar.gz",
+      "files": 242,
+      "sha256": "e883b402a406fe6face0e3b037ab91440198a9949c76790171f93daad8b3e444"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/divider_opt/evidence/observations.tar.gz",
+      "files": 31,
+      "sha256": "2761c764e72ac460031f95bda13e81ccad6d0b2487fb16e8b1e687ffeb90fc6e"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/divider_opt/evidence/v1_functional_and_source.tar.gz",
+      "files": 19,
+      "sha256": "03431ee106f44df6ccea10523b193ef36189f11bca1b417470b2a94b3f5fa055"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/divider_opt/evidence/v2_functional_and_source.tar.gz",
+      "files": 26,
+      "sha256": "1f3def53ee5ba5b2d4e1f3e432c02b3ee7c7bd5ce0d19c5ee4a1f9d1f198ea23"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/divider_opt/evidence/v3_functional_and_source.tar.gz",
+      "files": 26,
+      "sha256": "68d6db5de04c73f945a7f026f8ee5b36cad17a0a9ce00b6626ed3368fcbb8693"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/divider_opt/work/mapped_outputs.tar.gz",
+      "files": 2,
+      "sha256": "bac4a802094511fd2eb2e457c100cbd814020b103960a24a7e02ce68b0c68438"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/cached_dc_preflight/synthesis_inputs.tar.gz",
+      "files": 45,
+      "sha256": "c534fdd7bd9f79cac103e5fac48f7092b39ed873583f481d4bf19ec0653bfbb2"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/cached_dc_preflight_fixed/synthesis_inputs.tar.gz",
+      "files": 45,
+      "sha256": "da481530c4a3e5f9c3a2ad993b3e3127ea2dcb813e51b82f60efe273e5b3e562"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/dc_netlists.tar.gz",
+      "files": 7,
+      "sha256": "c9ac0acf218ca6a10750242a7ca6f2938aa3f8850c1a38556781943a3aed3ef4"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/full_v5_r4_signed_10ns/synthesis_inputs.tar.gz",
+      "files": 36,
+      "sha256": "a8a4d5d19f9e962acc6eaeeadc24f6342afb0806c79993eee94d3bcc39e91087"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/full_v6_cached_10ns/synthesis_inputs.tar.gz",
+      "files": 45,
+      "sha256": "0a71ab2c77d6d2b22cca5910ed46a4bf522c52fbe8ed53961f1783778396c851"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/full_v6_hier_10ns/synthesis_inputs.tar.gz",
+      "files": 40,
+      "sha256": "e53cc40ae4be92b4b8dae17aeea3ba4c191176db0c22efd62e8ca5e114fce42c"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/hier_dc_preflight/synthesis_inputs.tar.gz",
+      "files": 40,
+      "sha256": "27da68c97136943b40c94c12fa4779d8fb61ad0eb83f86d315d29fd8d22c9e10"
+    },
+    {
+      "path": "experiments/ic_eda_20261110/night_opt/evidence/module_dc.tar.gz",
+      "files": 163,
+      "sha256": "9795658a8044654cc6258f2a626a80804308edecee96c3c3371fd8bb98fa139c"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/evidence/artifacts.tar.gz",
+      "files": 48,
+      "sha256": "7a74faa9bf9e7fbde835e233f1c73386c892ca43a930c8938d35a19481a551d7"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/evidence/LAB_INPUTS.tar.gz",
+      "files": 98,
+      "sha256": "8922bd51f757df2905a2499de645a043006419c2ab89a3415bedffad295072a0"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/audit.tar.gz",
+      "files": 54,
+      "sha256": "41fe781b55b9ba19d0c0ec82e4d37ff65557b8709d3bcc86c8a2ffcb439d0363"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/delivery.tar.gz",
+      "files": 475,
+      "sha256": "9eba0b0bdacc036971a2986c0a454ee57bdad821bd15ec80ad7d792c43dcedd6"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/delivery_validation.tar.gz",
+      "files": 104,
+      "sha256": "006a2e7245c299db41859f77c3b7c68c0b7c69e5e888948877ac881cdff628a2"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/generator_repo/experiments/ic_eda_20261110/night_opt/evidence/module_dc.tar.gz",
+      "files": 163,
+      "sha256": "9795658a8044654cc6258f2a626a80804308edecee96c3c3371fd8bb98fa139c"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/handoff_validation.tar.gz",
+      "files": 105,
+      "sha256": "5733520d5213f1441d8553114943beb67ec31d33584077a0fb1acc55ab860d5b"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/input.tar.gz",
+      "files": 52,
+      "sha256": "df5fe899f3b17aeb734fbb5125add9b2caee113a1360a66a9f36a7b29dde571b"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/phase_results.tar.gz",
+      "files": 202,
+      "sha256": "18a1ba2331555560cea4b979dc9fbe91d36fad85afd5f02cbf981efc608bb248"
+    },
+    {
+      "path": "experiments/ic_eda_20261111_backend/work/release_validation.tar.gz",
+      "files": 104,
+      "sha256": "8413878ac472b79d75aba05c3fbc3ffe73b3abb98bcf4e647fd0e59f05d0d902"
+    },
+    {
+      "path": "deliverables/2026-11-11_backend_lab/LAB_INPUTS.tar.gz",
+      "files": 98,
+      "sha256": "8922bd51f757df2905a2499de645a043006419c2ab89a3415bedffad295072a0"
+    },
+    {
+      "path": "work/workspace_organization_20261111/safety_originals.tar.gz",
+      "files": 132,
+      "sha256": "fa946efae5b0212c2526ec32d7ac7873a5b26eec2b4ac1cf5fc57aaa1681daee"
+    }
+  ],
+  "manifest_members_and_local_originals_verified": 218,
+  "lab_bundle_files_matching_before_inventory": 98,
+  "markdown_links_checked": 119,
+  "python_ast": "PASS",
+  "docx_zip_integrity": "PASS",
+  "native_dc_reload_this_task": "NOT_RUN",
+  "synthesis_input_and_cache_paths": "UNCHANGED"
+}

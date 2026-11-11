@@ -1,0 +1,10 @@
+{
+  "published_archive_extracted": true,
+  "packager_exit_code": 0,
+  "regenerated_bundle_files_matching_source": 98,
+  "relocated_prn_checker": "PASS",
+  "original_prn_metrics_preserved": true,
+  "staged_manifests_original_and_portable": "PASS",
+  "lab_synthesis_filelist_original_and_portable": "PASS",
+  "native_eda_tools_executed": false
+}

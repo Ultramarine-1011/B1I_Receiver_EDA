@@ -1,0 +1,17 @@
+{
+  "original_files_checked": 16310,
+  "byte_identical_files": 16300,
+  "lost_files": 0,
+  "original_untracked_files_preserved": 13,
+  "git_refs_and_history": "PASS",
+  "main": "fb662d36e85e9cffe02a4b8f003887808f73007c",
+  "technical_result_commit": "c3ba596902c71b4ea0fe1ff780a01f08037c3cef",
+  "archive_count": 35,
+  "manifest_members_and_local_originals_verified": 218,
+  "lab_bundle_files_matching_before_inventory": 98,
+  "markdown_links_checked": 119,
+  "python_ast": "PASS",
+  "docx_zip_integrity": "PASS",
+  "native_dc_reload_this_task": "NOT_RUN",
+  "synthesis_input_and_cache_paths": "UNCHANGED"
+}

@@ -1,0 +1,90 @@
+{
+  "files": 16310,
+  "bytes": 10861676109,
+  "directories": 1337,
+  "links": [],
+  "largest_groups": {
+    "experiments/ic_eda_20261110": {
+      "files": 3791,
+      "bytes": 4907553164
+    },
+    "work/verilator": {
+      "files": 2302,
+      "bytes": 3508282329
+    },
+    "work/g_stage": {
+      "files": 47,
+      "bytes": 797344405
+    },
+    "student_release/student_release": {
+      "files": 80,
+      "bytes": 425391126
+    },
+    "experiments/bdi_capture": {
+      "files": 118,
+      "bytes": 353428897
+    },
+    "experiments/ic_eda_20261111_backend": {
+      "files": 733,
+      "bytes": 227377720
+    },
+    "work/six_channel_20261102": {
+      "files": 4111,
+      "bytes": 152559795
+    },
+    "work/plotdeps": {
+      "files": 3385,
+      "bytes": 125504085
+    },
+    "work/codex-package-x86_64-unknown-linux-musl.tar.gz": {
+      "files": 1,
+      "bytes": 122557120
+    },
+    "reports/g_stage": {
+      "files": 200,
+      "bytes": 65901936
+    },
+    "reports/e_stage": {
+      "files": 183,
+      "bytes": 45389355
+    },
+    "reports/tracking_reference": {
+      "files": 63,
+      "bytes": 38448523
+    },
+    "work/bdi_tracking_acceptance": {
+      "files": 135,
+      "bytes": 15359302
+    },
+    "tb/vectors": {
+      "files": 24,
+      "bytes": 11908014
+    },
+    "reports/f_stage": {
+      "files": 105,
+      "bytes": 10203419
+    },
+    "work/teacher_bdi_capture": {
+      "files": 14,
+      "bytes": 10156427
+    },
+    "work/acceptance_demo": {
+      "files": 228,
+      "bytes": 6550249
+    },
+    "tmp/pdfs": {
+      "files": 19,
+      "bytes": 5871005
+    },
+    "work/report_waveforms": {
+      "files": 83,
+      "bytes": 5437872
+    },
+    "work/partial": {
+      "files": 1,
+      "bytes": 4341760
+    }
+  },
+  "duplicate_groups_ge_1MB": 24,
+  "raw_manifest_sha256": "f9a5344809b3672e41ff98a6ffcd709c7f1981218c6dbfe8b064d04ea5702f06"
+}

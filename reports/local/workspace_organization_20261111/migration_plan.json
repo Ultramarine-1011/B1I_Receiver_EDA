@@ -1,0 +1,533 @@
+{
+  "root": "C:\\Users\\26255\\Desktop\\DIC_EDA\\windows-vmware-br-br-br-br\\windows-vmware-br-br-br-br",
+  "moves": [
+    {
+      "source": "experiments/ic_eda_20261110/connect_probe.sh",
+      "target": "experiments/archive/2026-11-10_prn_environment/connect_probe.sh",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 184
+    },
+    {
+      "source": "experiments/ic_eda_20261110/connect_probe.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/connect_probe.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 1578
+    },
+    {
+      "source": "experiments/ic_eda_20261110/final_input.tar.gz",
+      "target": "experiments/archive/2026-11-10_prn_environment/final_input.tar.gz",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 21271
+    },
+    {
+      "source": "experiments/ic_eda_20261110/final_results.tar.gz",
+      "target": "experiments/archive/2026-11-10_prn_environment/final_results.tar.gz",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 111449
+    },
+    {
+      "source": "experiments/ic_eda_20261110/host_facts.json",
+      "target": "experiments/archive/2026-11-10_prn_environment/host_facts.json",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 586
+    },
+    {
+      "source": "experiments/ic_eda_20261110/host_final_checks.json",
+      "target": "experiments/archive/2026-11-10_prn_environment/host_final_checks.json",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 594
+    },
+    {
+      "source": "experiments/ic_eda_20261110/initial_probe.sh",
+      "target": "experiments/archive/2026-11-10_prn_environment/initial_probe.sh",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 826
+    },
+    {
+      "source": "experiments/ic_eda_20261110/initial_probe.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/initial_probe.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 10687
+    },
+    {
+      "source": "experiments/ic_eda_20261110/input.tar.gz",
+      "target": "experiments/archive/2026-11-10_prn_environment/input.tar.gz",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 20901
+    },
+    {
+      "source": "experiments/ic_eda_20261110/known_hosts",
+      "target": "experiments/archive/2026-11-10_prn_environment/known_hosts",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 97
+    },
+    {
+      "source": "experiments/ic_eda_20261110/latest_run.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/latest_run.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 54
+    },
+    {
+      "source": "experiments/ic_eda_20261110/metrics.json",
+      "target": "experiments/archive/2026-11-10_prn_environment/metrics.json",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 1257
+    },
+    {
+      "source": "experiments/ic_eda_20261110/network_probe.sh",
+      "target": "experiments/archive/2026-11-10_prn_environment/network_probe.sh",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 732
+    },
+    {
+      "source": "experiments/ic_eda_20261110/network_probe.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/network_probe.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 7281
+    },
+    {
+      "source": "experiments/ic_eda_20261110/network_up.sh",
+      "target": "experiments/archive/2026-11-10_prn_environment/network_up.sh",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 323
+    },
+    {
+      "source": "experiments/ic_eda_20261110/network_up.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/network_up.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 1248
+    },
+    {
+      "source": "experiments/ic_eda_20261110/REPORT.md",
+      "target": "experiments/archive/2026-11-10_prn_environment/REPORT.md",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 16491
+    },
+    {
+      "source": "experiments/ic_eda_20261110/reports",
+      "target": "experiments/archive/2026-11-10_prn_environment/reports",
+      "category": "historical_prn_experiment",
+      "files": 5,
+      "bytes": 355247
+    },
+    {
+      "source": "experiments/ic_eda_20261110/results.tar.gz",
+      "target": "experiments/archive/2026-11-10_prn_environment/results.tar.gz",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 67264
+    },
+    {
+      "source": "experiments/ic_eda_20261110/rtl",
+      "target": "experiments/archive/2026-11-10_prn_environment/rtl",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 5046
+    },
+    {
+      "source": "experiments/ic_eda_20261110/runs",
+      "target": "experiments/archive/2026-11-10_prn_environment/runs",
+      "category": "historical_prn_experiment",
+      "files": 85,
+      "bytes": 385464
+    },
+    {
+      "source": "experiments/ic_eda_20261110/scripts",
+      "target": "experiments/archive/2026-11-10_prn_environment/scripts",
+      "category": "historical_prn_experiment",
+      "files": 5,
+      "bytes": 14153
+    },
+    {
+      "source": "experiments/ic_eda_20261110/STATUS.md",
+      "target": "experiments/archive/2026-11-10_prn_environment/STATUS.md",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 756
+    },
+    {
+      "source": "experiments/ic_eda_20261110/sudo_probe.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/sudo_probe.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 485
+    },
+    {
+      "source": "experiments/ic_eda_20261110/sudo_probe2.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/sudo_probe2.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 605
+    },
+    {
+      "source": "experiments/ic_eda_20261110/tb",
+      "target": "experiments/archive/2026-11-10_prn_environment/tb",
+      "category": "historical_prn_experiment",
+      "files": 6,
+      "bytes": 152021
+    },
+    {
+      "source": "experiments/ic_eda_20261110/tool_probe.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/tool_probe.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 5941
+    },
+    {
+      "source": "experiments/ic_eda_20261110/transfer_sha256.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/transfer_sha256.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 350
+    },
+    {
+      "source": "experiments/ic_eda_20261110/verification.log",
+      "target": "experiments/archive/2026-11-10_prn_environment/verification.log",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 1283
+    },
+    {
+      "source": "experiments/ic_eda_20261110/vmx_selected.txt",
+      "target": "experiments/archive/2026-11-10_prn_environment/vmx_selected.txt",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 597
+    },
+    {
+      "source": "experiments/ic_eda_20261110/WORKLOG.md",
+      "target": "experiments/archive/2026-11-10_prn_environment/WORKLOG.md",
+      "category": "historical_prn_experiment",
+      "files": 1,
+      "bytes": 4264
+    },
+    {
+      "source": "EDA_2026-10-13.md",
+      "target": "docs/archive/EDA_2026-10-13.md",
+      "category": "historical_instructions",
+      "files": 1,
+      "bytes": 12666
+    },
+    {
+      "source": "plan.docx",
+      "target": "archive/reference/2026-10_course_plan/plan.docx",
+      "category": "historical_reference",
+      "files": 1,
+      "bytes": 121277
+    },
+    {
+      "source": "work/verilator",
+      "target": "archive/rebuildable/2026-11-11_verilator/course",
+      "category": "rebuildable_cache",
+      "files": 2302,
+      "bytes": 3508282329
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_arithmetic",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_arithmetic",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 168413904
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_arithmetic_v2",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_arithmetic_v2",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 168387131
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_arithmetic_v3",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_arithmetic_v3",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 168413625
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_constant",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_constant",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1951521
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_constant_v4",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_constant_v4",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1951472
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_conversion",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_conversion",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 872257
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_fll",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_fll",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 168137640
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_fll_v2",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_fll_v2",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 168036170
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_fll_v4",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_fll_v4",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 168113830
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_loop",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_loop",
+      "category": "rebuildable_cache",
+      "files": 50,
+      "bytes": 167180164
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_loop_v2",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_loop_v2",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1136560
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_loop_v3",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_loop_v3",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1154385
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_loop_v4",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_loop_v4",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1170590
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_loop_v4_corners",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_loop_v4_corners",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 171095606
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_six",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_six",
+      "category": "rebuildable_cache",
+      "files": 129,
+      "bytes": 187427047
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_six_v2",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_six_v2",
+      "category": "rebuildable_cache",
+      "files": 129,
+      "bytes": 186831207
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_tracking",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_tracking",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 167782109
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_tracking_v2",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_tracking_v2",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 167695190
+    },
+    {
+      "source": "experiments/ic_eda_20261110/divider_opt/work/build_tracking_v4",
+      "target": "archive/rebuildable/2026-11-11_verilator/divider_opt/build_tracking_v4",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 167754835
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_arithmetic",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_arithmetic",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 168392988
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_constant",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_constant",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1950362
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_constant_signed",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_constant_signed",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1504161
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_conversion",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_conversion",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 641074
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_conversion_signed",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_conversion_signed",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 639347
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_fll",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_fll",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 168094840
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_loop",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_loop",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 167104866
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_radix",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_radix",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 165723153
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_radix_nr",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_radix_nr",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 165844652
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_six",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_six",
+      "category": "rebuildable_cache",
+      "files": 132,
+      "bytes": 187487861
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/build_tracking",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/build_tracking",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 167825208
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/hier/build_fll",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/hier/build_fll",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 166736212
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/hier/build_loop",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/hier/build_loop",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 165488841
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/hier/build_six",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/hier/build_six",
+      "category": "rebuildable_cache",
+      "files": 132,
+      "bytes": 187136631
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/hier/build_tracking",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/hier/build_tracking",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 167748703
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/quad/build_atan",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/quad/build_atan",
+      "category": "rebuildable_cache",
+      "files": 27,
+      "bytes": 1209427
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/quad/build_fll",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/quad/build_fll",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 168143539
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/quad/build_loop",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/quad/build_loop",
+      "category": "rebuildable_cache",
+      "files": 47,
+      "bytes": 167120758
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/quad/build_six",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/quad/build_six",
+      "category": "rebuildable_cache",
+      "files": 132,
+      "bytes": 187411232
+    },
+    {
+      "source": "experiments/ic_eda_20261110/night_opt/work/quad/build_tracking",
+      "target": "archive/rebuildable/2026-11-11_verilator/night_opt/quad/build_tracking",
+      "category": "rebuildable_cache",
+      "files": 66,
+      "bytes": 167748661
+    },
+    {
+      "source": "experiments/ic_eda_20261111_backend/work/LAB_INPUTS.tar.gz",
+      "target": "deliverables/2026-11-11_backend_lab/LAB_INPUTS.tar.gz",
+      "category": "published_lab_package",
+      "files": 1,
+      "bytes": 669824
+    },
+    {
+      "source": "experiments/ic_eda_20261111_backend/work/LAB_INPUTS.tar.gz.sha256",
+      "target": "deliverables/2026-11-11_backend_lab/LAB_INPUTS.tar.gz.sha256",
+      "category": "published_lab_package",
+      "files": 1,
+      "bytes": 84
+    }
+  ],
+  "backup": "work/workspace_organization_20261111/safety_originals.tar.gz",
+  "backup_files_verified": 132,
+  "backup_sha256": "fa946efae5b0212c2526ec32d7ac7873a5b26eec2b4ac1cf5fc57aaa1681daee"
+}

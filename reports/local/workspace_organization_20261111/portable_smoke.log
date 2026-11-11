@@ -1,0 +1,45 @@
+{
+  "run": "20261110_180446",
+  "git_head": "fb662d36e85e9cffe02a4b8f003887808f73007c",
+  "top": "b1i_prn_gen",
+  "library": "/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db",
+  "pvt": {
+    "process": "typical",
+    "voltage_v": 1.0,
+    "temperature_c": 25
+  },
+  "clock_period_ns": 10.0,
+  "output_load_pf": 0.006604,
+  "area_um2": 1380.15363,
+  "leaf_cells": 173,
+  "sequential_cells": 41,
+  "critical_path_arrival_ns": 0.87239,
+  "worst_setup_slack_ns": 7.92761,
+  "setup_wns_ns": 0.0,
+  "setup_tns_ns": 0.0,
+  "hold_wns_ns": -0.15653,
+  "hold_tns_ns_from_printed_endpoints": -2.920424,
+  "hold_tns_ns_qor_rounded": -2.92,
+  "hold_violating_endpoints": 48,
+  "dc_exit_code": 0,
+  "dc_elapsed": "0:02.64",
+  "dc_peak_rss_kib": 267084,
+  "vcs_exit_code": 0,
+  "vcs_elapsed": "0:00.91",
+  "vcs_peak_rss_kib": 84632,
+  "verified_manifest_files": 10,
+  "results": {
+    "ssh_command": "PASS",
+    "scp_upload_download": "PASS",
+    "rtl_functional_regression": "PASS",
+    "logic_synthesis": "PASS",
+    "timing_reports": "PASS",
+    "setup_constraints": "PASS",
+    "hold_constraints": "FAIL",
+    "gate_level_simulation": "NOT_RUN",
+    "physical_design": "NOT_RUN",
+    "primetime_analysis": "NOT_RUN"
+  }
+}
+IC_EDA_EVIDENCE_VERIFIED
+PORTABLE_AND_RELOCATED_INPUTS_PASS 98

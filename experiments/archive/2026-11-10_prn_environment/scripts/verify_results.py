@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 root = Path(__file__).resolve().parents[1]
-repo = root.parents[1]
+repo = root.parents[2]
 run_name = Path((root / "latest_run.txt").read_text().strip()).name
 reports = root / "runs" / run_name / "reports"
 dc = reports / "dc"

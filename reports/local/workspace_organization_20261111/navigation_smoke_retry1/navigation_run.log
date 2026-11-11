@@ -1,0 +1,8 @@
+COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/six_channel_20261102' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_six_navigation/Vtb_six_navigation'
+SIX_NAVIGATION_PASS channels=6 bits=1080 NH_phases=0/3/6/9/12/15 polarities=both loss/restart/stagger/gaps
+- /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_six_navigation.sv:58: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.032 2025-01-01
+- Verilator: $finish at 520us; walltime 0.101 s; speed 5.722 ms/s
+- Verilator: cpu 0.091 s on 1 threads; alloced 249 MB
+EXIT_CODE: 0
+WALL_SECONDS: 0.2028592

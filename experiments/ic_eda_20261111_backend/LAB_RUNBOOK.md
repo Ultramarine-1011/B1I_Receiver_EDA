@@ -4,7 +4,13 @@
 
 ## 携带与初始化
 
-Windows 用 bundled Python 执行 `scripts/prepare.py --lab-bundle`，携带生成的 `work/LAB_INPUTS.tar.gz` 及 `.sha256`。包内包含所需 RTL、脚本和六星 IF/比特真值。工艺库与单元模型从实验室提供。
+Windows 仓库内已验证的携带包及校验文件集中在 `deliverables/2026-11-11_backend_lab/`。包对应 `c3ba596`，包内清单保持原验证版本。包含所需 RTL、脚本和六星 IF/比特真值。工艺库与单元模型从实验室提供。
+
+需要重新打包时，从 Git 仓库根目录在 PowerShell 执行以下命令，输出位于本实验的 `work/LAB_INPUTS.tar.gz` 及 `.sha256`。新包需另行核验，并保留已有携带包。
+
+```powershell
+wsl.exe -d Ubuntu -- python3 experiments/ic_eda_20261111_backend/scripts/prepare.py --lab-bundle
+```
 
 在 Linux 解包后执行以下命令。先加载实验室现有 EDA 环境。
 
