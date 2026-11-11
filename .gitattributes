@@ -1,2 +1,2 @@
-# Keep executable Bash sources usable from the Windows checkout and WSL.
-scripts/*.sh text eol=lf
+# Preserve raw source and evidence hashes across Windows checkouts.
+* -text

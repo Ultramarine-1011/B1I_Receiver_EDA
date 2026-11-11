@@ -1,9 +1,0 @@
-
-  Linking design 'bds_bb_6ch_pad_top'
-  Using the following designs and libraries:
-  --------------------------------------------------------------------------
-  * (25 designs)              /home/7901_15/eda_project/m2/tree/bds_bb_6ch_pad_top.db, etc
-  tcbn28hpcplusbwp40p140tt0p9v25c (library) /home/share/libs/tsmc28/logic/selected_db/tcbn28hpcplusbwp40p140tt0p9v25c.db
-  tphn28hpcpgv18tt0p9v1p8v25c (library) /home/share/libs/tsmc28/pad/timing_nldm/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tphn28hpcpgv18_170a/tphn28hpcpgv18tt0p9v1p8v25c.db
-
-1

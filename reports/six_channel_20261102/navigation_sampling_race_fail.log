@@ -1,6 +1,0 @@
-COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/six_channel_20261102' && '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/tb_six_navigation/Vtb_six_navigation'
-[259500000] %Fatal: tb_six_navigation.sv:23: Assertion failed in tb_six_navigation.channels[5].test: stale validity ch=5
-%Error: /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/tb/tb_six_navigation.sv:23: Verilog $stop
-Aborting...
-EXIT_CODE: 6
-WALL_SECONDS: 0.1832977

@@ -1,0 +1,9 @@
+*.sh text eol=lf
+*.tcl text eol=lf
+*.sdc text eol=lf
+*.py text eol=lf
+*.sv text eol=lf
+*.md text eol=lf
+evidence/** -text
+
+Results/** -text

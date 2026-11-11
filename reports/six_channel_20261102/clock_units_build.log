@@ -1,6 +1,0 @@
-COMMAND: make -C '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/six_receiver' -f Vsix_receiver_probe.mk -j 2
-make: Entering directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/six_receiver'
-g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O3   -Os  -c -o six_receiver.o /mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/scripts/six_receiver.cpp
-g++    six_receiver.o verilated.o verilated_vcd_c.o verilated_threads.o Vsix_receiver_probe__ALL.a    -pthread -lpthread -latomic   -o Vsix_receiver_probe
-make: Leaving directory '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/work/verilator/six_receiver'
-EXIT_CODE: 0

@@ -1,49 +1,5 @@
-# Local work areas and generated scratch files
-/work/
-/tmp/
-/outputs/
-/archive/rebuildable/
-/.agents/.validation-deps/
-/.agents/skills/
-
-# Generated build trees
-/student_release/student_release/build/
-/student_release/student_release/logs/
-/student_release/student_release/output/
-/student_release/student_release/tools/__pycache__/
-/student_release/student_release/sim/__pycache__/
-
-# The 409 MB teacher signal capture is not redistributed in this repository.
-/student_release/student_release/input/scenario.if2
-
-# Python caches
-__pycache__/
-*.py[cod]
-
-# Detailed derived run data stays local; lightweight logs/metrics/manifests commit.
-/reports/e_stage/**/receiver_records.bin
-/reports/e_stage/**/receiver_records.jsonl
-/reports/e_stage/**/*tracking_loop.csv
-/reports/e_stage/tracking_pull.csv
-/reports/e_stage/pcps_first_grid.csv
-/reports/e_stage/pcps_real_candidates*.csv
-/reports/e_stage/partial_position.jsonl
-/reports/e_stage/multi_tracking_loop.csv
-/reports/e_stage/real_tracking_loop.csv
-
-# Detailed F runs stay local; only lightweight evidence is committed.
-/reports/f_stage/**/*.bin
-/reports/f_stage/**/*.jsonl
-/reports/f_stage/**/*_detail.csv
-
-# Detailed G traces/signals remain local; commit small reproducible evidence.
-/reports/g_stage/**/*.bin
-/reports/g_stage/**/*.if2
-/reports/g_stage/**/*.jsonl
-/reports/g_stage/**/*_detail.csv
-!/reports/g_stage/acquisition/acquisition_results.jsonl
-!/reports/g_stage/acquisition_cn50/acquisition_results.jsonl
-
-# Six-channel detailed transport records stay local; logs/events/plots are small.
-/reports/six_channel_20261102/**/*.bin
-/reports/six_channel_20261102/**/*.jsonl
+**/work/
+**/build_*/
+**/__pycache__/
+**/*.py[cod]
+**/runs/

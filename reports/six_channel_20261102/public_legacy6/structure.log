@@ -1,4 +1,0 @@
-COMMAND: cd '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/student_release/student_release' && python3 tools/check_records.py '/mnt/c/Users/26255/Desktop/DIC_EDA/windows-vmware-br-br-br-br/windows-vmware-br-br-br-br/reports/six_channel_20261102/public_legacy6/receiver_records.bin' --expected-samples 4910400 --minimum-acquisitions 4 --require-tracking
-PASS records=1481 bytes=47392 types={'acquisition': 5, 'tracking': 1475, 'end': 1}
-EXIT_CODE: 0
-WALL_SECONDS: 0.2058035
