@@ -1,0 +1,15 @@
+{
+  "budget_s": 300.0, 
+  "cwd": "/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/logs/power/time.txt", 
+    "setsid", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "/home/ICer/ic_eda_backend_20261111/work/portable_handoff/experiments/ic_eda_20261111_backend/lab/flow.tcl"
+  ]
+}

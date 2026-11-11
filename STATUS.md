@@ -1,7 +1,11 @@
 # 当前状态
 
-2026-11-06：**M2 已完成，M3 为 NO-GO。** 正式改动在 `main`，起点 `8c9113a`。`h0-checkpoint` 的未提交修改没有并入。
+2026-11-11，本地 ASIC 预演与实验室准备已完成并停止。实验分支 `codex/ic-eda-personal-local-smoke-20261110`，起点 `b8b887c`。交付和真实限制见 [本轮报告](experiments/ic_eda_20261111_backend/REPORT.md)。
 
-`bds_bb_6ch_pad_top` 已用 TPHN28HPCPGV18 的 8 mA 焊盘接上 16 个输入和 25 个输出。VCS 连接检查 `M2_PAD_CONNECT_PASS`。PCPS/FFT 旋转因子改为与原 mem 一致的 function；VCS FFT 三例逐点 PASS。隔离 2,293,056 bit 捕获存储后，PAD 顶层能 link，`check_design` 把空的 `acquisition_pcps` 标成无单元设计。六通道 `compile` 之后的面积报告被杀掉（退出 137）。一个跟踪通道的 80 位除法被 DC 识别，但 34 分钟后进度表不再变化，没有最终时序报告。
+V6 从源码重建成功，面积 486269.185663 µm²、setup WNS −18.646854 ns。4 ns 内部算术映射预算使 WNS 改善至 −10.948725 ns，面积 499790.599561 µm²，仍有 414 个 setup、1987 个 hold 违例端点。两次完整单通道映射均在 20 分钟内。20万拍 Code NCO 映射比较、20007 组算术映射比较通过。
 
-**唯一下一候选：** 用户另行授权，并且换到至少 8 GB 内存、带 swap 的主机之后，才做 M3 的完整映射。不要在这台虚拟机上展开捕获存储，也不要启动 SDF 后仿。细节见 [M2 报告](reports/m2_tsmc28_20261106/REPORT.md)。
+隔离 PCPS 的唯一一次六通道核心预演完成解析、展开、链接和六路实例检查，映射在 30 分钟预算到期后停止，峰值 RSS 6.30 GiB，最终网表与 PPA 尚未生成。PCPS/FFT 可变数组 1768768 bit，另有逻辑常量表 524288 bit，存储实现仍是全量综合阻塞。
+
+实验室携带包及分阶段入口已准备。TSMC90 八位移位寄存器的 MAX/MIN SDF、VCS、SAIF 与功耗入口实跑通过，活动覆盖100%。TSMC28 六通道正式结果仍待实验室库、匹配门级模型、存储实现及相应资源。原 TSMC90 条件弧模型的28条IOPATH不匹配作为实际缺口保存。
+
+下一执行任务为在实验室按 [LAB_RUNBOOK](experiments/ic_eda_20261111_backend/LAB_RUNBOOK.md) 执行 preflight 和八位探针，核对实际库、模型、许可证、内存与 swap。本轮停止状态及资源检查保存在实验目录，最终本地 commit ID 记录于 `experiments/ic_eda_20261111_backend/work/FINAL_COMMIT.txt`。

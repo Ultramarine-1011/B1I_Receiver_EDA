@@ -1,0 +1,522 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:44:39 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: init_doppler_word[13]
+              (input port clocked by clk)
+  Endpoint: code_step_q_reg[28]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_doppler_word[13] (in)                          0.004002   1.004002 r
+  U3638/Y (BUFX2)                                     0.136711   1.140714 r
+  initial_aid/value[13] (tracking_divide_aid)         0.000000   1.140714 r
+  initial_aid/mult_505_C510/U845/S (ADDFX1)           0.215624   1.356338 f
+  initial_aid/mult_505_C510/U941/ICO (CMPR42X1)       0.096594   1.452932 f
+  initial_aid/mult_505_C510/U880/CO (CMPR42X1)        0.087182   1.540114 f
+  initial_aid/mult_505_C510/U932/S (CMPR42X1)         0.257244   1.797359 f
+  initial_aid/mult_505_C510/U904/Y (NOR2X2)           0.047417   1.844776 r
+  initial_aid/mult_505_C510/U209/Y (OAI21X1)          0.033908   1.878684 f
+  initial_aid/mult_505_C510/U922/Y (AOI21X1)          0.048543   1.927227 r
+  initial_aid/mult_505_C510/U201/Y (OAI21X1)          0.035614   1.962840 f
+  initial_aid/mult_505_C510/U940/Y (AOI21X1)          0.044430   2.007270 r
+  initial_aid/mult_505_C510/U191/Y (OAI21X1)          0.033388   2.040658 f
+  initial_aid/mult_505_C510/U939/Y (AOI21X1)          0.044239   2.084897 r
+  initial_aid/mult_505_C510/U183/Y (OAI21X1)          0.033388   2.118285 f
+  initial_aid/mult_505_C510/U938/Y (AOI21X1)          0.044239   2.162524 r
+  initial_aid/mult_505_C510/U175/Y (OAI21X1)          0.033388   2.195912 f
+  initial_aid/mult_505_C510/U936/Y (AOI21X1)          0.044239   2.240151 r
+  initial_aid/mult_505_C510/U167/Y (OAI21X1)          0.033388   2.273539 f
+  initial_aid/mult_505_C510/U935/Y (AOI21X1)          0.044239   2.317779 r
+  initial_aid/mult_505_C510/U159/Y (OAI21X1)          0.033388   2.351166 f
+  initial_aid/mult_505_C510/U925/Y (AOI21X1)          0.044239   2.395406 r
+  initial_aid/mult_505_C510/U151/Y (OAI21X1)          0.033388   2.428794 f
+  initial_aid/mult_505_C510/U919/Y (AOI21X1)          0.044239   2.473033 r
+  initial_aid/mult_505_C510/U143/Y (OAI21X1)          0.033388   2.506421 f
+  initial_aid/mult_505_C510/U944/Y (AOI21X1)          0.057737   2.564157 r
+  initial_aid/mult_505_C510/U132/Y (XOR2X1)           0.066113   2.630271 f
+  initial_aid/add_507_C510/U59/Y (NAND2X2)            0.033401   2.663672 r
+  initial_aid/add_507_C510/U56/Y (INVX2)              0.015934   2.679606 f
+  initial_aid/add_507_C510/U55/CO (ADDHX1)            0.066297   2.745903 f
+  initial_aid/add_507_C510/U43/CO (ADDHX1)            0.068451   2.814354 f
+  initial_aid/add_507_C510/U35/CO (ADDHX1)            0.065050   2.879404 f
+  initial_aid/add_507_C510/U44/CO (ADDHX1)            0.068460   2.947863 f
+  initial_aid/add_507_C510/U36/CO (ADDHX1)            0.065050   3.012913 f
+  initial_aid/add_507_C510/U45/CO (ADDHX1)            0.068460   3.081372 f
+  initial_aid/add_507_C510/U37/CO (ADDHX1)            0.065050   3.146422 f
+  initial_aid/add_507_C510/U46/CO (ADDHX1)            0.068460   3.214881 f
+  initial_aid/add_507_C510/U38/CO (ADDHX1)            0.065050   3.279931 f
+  initial_aid/add_507_C510/U47/CO (ADDHX1)            0.068460   3.348391 f
+  initial_aid/add_507_C510/U39/CO (ADDHX1)            0.065050   3.413440 f
+  initial_aid/add_507_C510/U48/CO (ADDHX1)            0.068460   3.481900 f
+  initial_aid/add_507_C510/U40/CO (ADDHX1)            0.065050   3.546949 f
+  initial_aid/add_507_C510/U49/CO (ADDHX1)            0.068460   3.615409 f
+  initial_aid/add_507_C510/U41/CO (ADDHX1)            0.065050   3.680459 f
+  initial_aid/add_507_C510/U50/CO (ADDHX1)            0.068460   3.748918 f
+  initial_aid/add_507_C510/U42/CO (ADDHX1)            0.065050   3.813968 f
+  initial_aid/add_507_C510/U57/CO (ADDHX1)            0.068460   3.882427 f
+  initial_aid/add_507_C510/U52/CO (ADDHX1)            0.065050   3.947477 f
+  initial_aid/add_507_C510/U53/CO (ADDHX1)            0.070240   4.017717 f
+  initial_aid/add_507_C510/U54/CO (ADDHX1)            0.070227   4.087944 f
+  initial_aid/add_507_C510/U58/CO (ADDHX1)            0.065940   4.153883 f
+  initial_aid/add_507_C510/U51/Y (XOR2X1)             0.053084   4.206967 r
+  initial_aid/result[23] (tracking_divide_aid)        0.000000   4.206967 r
+  U3619/Y (NAND2BX2)                                  0.060548   4.267516 f
+  U1952/Y (INVX2)                                     0.036386   4.303902 r
+  U1758/Y (AOI2B1X2)                                  0.014277   4.318179 f
+  U1941/Y (OAI2BB1X1)                                 0.021634   4.339812 r
+  code_step_q_reg[28]/D (DFFRQX1)                     0.000000   4.339812 r
+  data arrival time                                              4.339812
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  code_step_q_reg[28]/CK (DFFRQX1)                    0.000000   9.800000 r
+  library setup time                                  -0.065204  9.734797
+  data required time                                             9.734797
+  --------------------------------------------------------------------------
+  data required time                                             9.734797
+  data arrival time                                              -4.339812
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.394984
+
+
+  Startpoint: init_doppler_word[13]
+              (input port clocked by clk)
+  Endpoint: code_step_q_reg[27]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_doppler_word[13] (in)                          0.004002   1.004002 r
+  U3638/Y (BUFX2)                                     0.136711   1.140714 r
+  initial_aid/value[13] (tracking_divide_aid)         0.000000   1.140714 r
+  initial_aid/mult_505_C510/U845/S (ADDFX1)           0.215624   1.356338 f
+  initial_aid/mult_505_C510/U941/ICO (CMPR42X1)       0.096594   1.452932 f
+  initial_aid/mult_505_C510/U880/CO (CMPR42X1)        0.087182   1.540114 f
+  initial_aid/mult_505_C510/U932/S (CMPR42X1)         0.257244   1.797359 f
+  initial_aid/mult_505_C510/U904/Y (NOR2X2)           0.047417   1.844776 r
+  initial_aid/mult_505_C510/U209/Y (OAI21X1)          0.033908   1.878684 f
+  initial_aid/mult_505_C510/U922/Y (AOI21X1)          0.048543   1.927227 r
+  initial_aid/mult_505_C510/U201/Y (OAI21X1)          0.035614   1.962840 f
+  initial_aid/mult_505_C510/U940/Y (AOI21X1)          0.044430   2.007270 r
+  initial_aid/mult_505_C510/U191/Y (OAI21X1)          0.033388   2.040658 f
+  initial_aid/mult_505_C510/U939/Y (AOI21X1)          0.044239   2.084897 r
+  initial_aid/mult_505_C510/U183/Y (OAI21X1)          0.033388   2.118285 f
+  initial_aid/mult_505_C510/U938/Y (AOI21X1)          0.044239   2.162524 r
+  initial_aid/mult_505_C510/U175/Y (OAI21X1)          0.033388   2.195912 f
+  initial_aid/mult_505_C510/U936/Y (AOI21X1)          0.044239   2.240151 r
+  initial_aid/mult_505_C510/U167/Y (OAI21X1)          0.033388   2.273539 f
+  initial_aid/mult_505_C510/U935/Y (AOI21X1)          0.044239   2.317779 r
+  initial_aid/mult_505_C510/U159/Y (OAI21X1)          0.033388   2.351166 f
+  initial_aid/mult_505_C510/U925/Y (AOI21X1)          0.044239   2.395406 r
+  initial_aid/mult_505_C510/U151/Y (OAI21X1)          0.033388   2.428794 f
+  initial_aid/mult_505_C510/U919/Y (AOI21X1)          0.044239   2.473033 r
+  initial_aid/mult_505_C510/U143/Y (OAI21X1)          0.033388   2.506421 f
+  initial_aid/mult_505_C510/U944/Y (AOI21X1)          0.057737   2.564157 r
+  initial_aid/mult_505_C510/U132/Y (XOR2X1)           0.066113   2.630271 f
+  initial_aid/add_507_C510/U59/Y (NAND2X2)            0.033401   2.663672 r
+  initial_aid/add_507_C510/U56/Y (INVX2)              0.015934   2.679606 f
+  initial_aid/add_507_C510/U55/CO (ADDHX1)            0.066297   2.745903 f
+  initial_aid/add_507_C510/U43/CO (ADDHX1)            0.068451   2.814354 f
+  initial_aid/add_507_C510/U35/CO (ADDHX1)            0.065050   2.879404 f
+  initial_aid/add_507_C510/U44/CO (ADDHX1)            0.068460   2.947863 f
+  initial_aid/add_507_C510/U36/CO (ADDHX1)            0.065050   3.012913 f
+  initial_aid/add_507_C510/U45/CO (ADDHX1)            0.068460   3.081372 f
+  initial_aid/add_507_C510/U37/CO (ADDHX1)            0.065050   3.146422 f
+  initial_aid/add_507_C510/U46/CO (ADDHX1)            0.068460   3.214881 f
+  initial_aid/add_507_C510/U38/CO (ADDHX1)            0.065050   3.279931 f
+  initial_aid/add_507_C510/U47/CO (ADDHX1)            0.068460   3.348391 f
+  initial_aid/add_507_C510/U39/CO (ADDHX1)            0.065050   3.413440 f
+  initial_aid/add_507_C510/U48/CO (ADDHX1)            0.068460   3.481900 f
+  initial_aid/add_507_C510/U40/CO (ADDHX1)            0.065050   3.546949 f
+  initial_aid/add_507_C510/U49/CO (ADDHX1)            0.068460   3.615409 f
+  initial_aid/add_507_C510/U41/CO (ADDHX1)            0.065050   3.680459 f
+  initial_aid/add_507_C510/U50/CO (ADDHX1)            0.068460   3.748918 f
+  initial_aid/add_507_C510/U42/CO (ADDHX1)            0.065050   3.813968 f
+  initial_aid/add_507_C510/U57/CO (ADDHX1)            0.068460   3.882427 f
+  initial_aid/add_507_C510/U52/CO (ADDHX1)            0.065050   3.947477 f
+  initial_aid/add_507_C510/U53/CO (ADDHX1)            0.070240   4.017717 f
+  initial_aid/add_507_C510/U54/CO (ADDHX1)            0.070227   4.087944 f
+  initial_aid/add_507_C510/U58/CO (ADDHX1)            0.065940   4.153883 f
+  initial_aid/add_507_C510/U51/Y (XOR2X1)             0.053084   4.206967 r
+  initial_aid/result[23] (tracking_divide_aid)        0.000000   4.206967 r
+  U3619/Y (NAND2BX2)                                  0.060548   4.267516 f
+  U1952/Y (INVX2)                                     0.036386   4.303902 r
+  U1951/Y (AOI2B1X2)                                  0.015516   4.319418 f
+  U1942/Y (OAI2BB1X2)                                 0.023967   4.343385 r
+  code_step_q_reg[27]/D (DFFRHQX1)                    0.000000   4.343385 r
+  data arrival time                                              4.343385
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  code_step_q_reg[27]/CK (DFFRHQX1)                   0.000000   9.800000 r
+  library setup time                                  -0.053050  9.746950
+  data required time                                             9.746950
+  --------------------------------------------------------------------------
+  data required time                                             9.746950
+  data arrival time                                              -4.343385
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.403565
+
+
+  Startpoint: init_doppler_word[13]
+              (input port clocked by clk)
+  Endpoint: code_step_q_reg[24]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_doppler_word[13] (in)                          0.004002   1.004002 r
+  U3638/Y (BUFX2)                                     0.136711   1.140714 r
+  initial_aid/value[13] (tracking_divide_aid)         0.000000   1.140714 r
+  initial_aid/mult_505_C510/U845/S (ADDFX1)           0.215624   1.356338 f
+  initial_aid/mult_505_C510/U941/ICO (CMPR42X1)       0.096594   1.452932 f
+  initial_aid/mult_505_C510/U880/CO (CMPR42X1)        0.087182   1.540114 f
+  initial_aid/mult_505_C510/U932/S (CMPR42X1)         0.257244   1.797359 f
+  initial_aid/mult_505_C510/U904/Y (NOR2X2)           0.047417   1.844776 r
+  initial_aid/mult_505_C510/U209/Y (OAI21X1)          0.033908   1.878684 f
+  initial_aid/mult_505_C510/U922/Y (AOI21X1)          0.048543   1.927227 r
+  initial_aid/mult_505_C510/U201/Y (OAI21X1)          0.035614   1.962840 f
+  initial_aid/mult_505_C510/U940/Y (AOI21X1)          0.044430   2.007270 r
+  initial_aid/mult_505_C510/U191/Y (OAI21X1)          0.033388   2.040658 f
+  initial_aid/mult_505_C510/U939/Y (AOI21X1)          0.044239   2.084897 r
+  initial_aid/mult_505_C510/U183/Y (OAI21X1)          0.033388   2.118285 f
+  initial_aid/mult_505_C510/U938/Y (AOI21X1)          0.044239   2.162524 r
+  initial_aid/mult_505_C510/U175/Y (OAI21X1)          0.033388   2.195912 f
+  initial_aid/mult_505_C510/U936/Y (AOI21X1)          0.044239   2.240151 r
+  initial_aid/mult_505_C510/U167/Y (OAI21X1)          0.033388   2.273539 f
+  initial_aid/mult_505_C510/U935/Y (AOI21X1)          0.044239   2.317779 r
+  initial_aid/mult_505_C510/U159/Y (OAI21X1)          0.033388   2.351166 f
+  initial_aid/mult_505_C510/U925/Y (AOI21X1)          0.044239   2.395406 r
+  initial_aid/mult_505_C510/U151/Y (OAI21X1)          0.033388   2.428794 f
+  initial_aid/mult_505_C510/U919/Y (AOI21X1)          0.044239   2.473033 r
+  initial_aid/mult_505_C510/U143/Y (OAI21X1)          0.033388   2.506421 f
+  initial_aid/mult_505_C510/U944/Y (AOI21X1)          0.057737   2.564157 r
+  initial_aid/mult_505_C510/U132/Y (XOR2X1)           0.066113   2.630271 f
+  initial_aid/add_507_C510/U59/Y (NAND2X2)            0.033401   2.663672 r
+  initial_aid/add_507_C510/U56/Y (INVX2)              0.015934   2.679606 f
+  initial_aid/add_507_C510/U55/CO (ADDHX1)            0.066297   2.745903 f
+  initial_aid/add_507_C510/U43/CO (ADDHX1)            0.068451   2.814354 f
+  initial_aid/add_507_C510/U35/CO (ADDHX1)            0.065050   2.879404 f
+  initial_aid/add_507_C510/U44/CO (ADDHX1)            0.068460   2.947863 f
+  initial_aid/add_507_C510/U36/CO (ADDHX1)            0.065050   3.012913 f
+  initial_aid/add_507_C510/U45/CO (ADDHX1)            0.068460   3.081372 f
+  initial_aid/add_507_C510/U37/CO (ADDHX1)            0.065050   3.146422 f
+  initial_aid/add_507_C510/U46/CO (ADDHX1)            0.068460   3.214881 f
+  initial_aid/add_507_C510/U38/CO (ADDHX1)            0.065050   3.279931 f
+  initial_aid/add_507_C510/U47/CO (ADDHX1)            0.068460   3.348391 f
+  initial_aid/add_507_C510/U39/CO (ADDHX1)            0.065050   3.413440 f
+  initial_aid/add_507_C510/U48/CO (ADDHX1)            0.068460   3.481900 f
+  initial_aid/add_507_C510/U40/CO (ADDHX1)            0.065050   3.546949 f
+  initial_aid/add_507_C510/U49/CO (ADDHX1)            0.068460   3.615409 f
+  initial_aid/add_507_C510/U41/CO (ADDHX1)            0.065050   3.680459 f
+  initial_aid/add_507_C510/U50/CO (ADDHX1)            0.068460   3.748918 f
+  initial_aid/add_507_C510/U42/CO (ADDHX1)            0.065050   3.813968 f
+  initial_aid/add_507_C510/U57/CO (ADDHX1)            0.068460   3.882427 f
+  initial_aid/add_507_C510/U52/CO (ADDHX1)            0.065050   3.947477 f
+  initial_aid/add_507_C510/U53/CO (ADDHX1)            0.070240   4.017717 f
+  initial_aid/add_507_C510/U54/CO (ADDHX1)            0.070227   4.087944 f
+  initial_aid/add_507_C510/U58/CO (ADDHX1)            0.065940   4.153883 f
+  initial_aid/add_507_C510/U51/Y (XOR2X1)             0.053084   4.206967 r
+  initial_aid/result[23] (tracking_divide_aid)        0.000000   4.206967 r
+  U3619/Y (NAND2BX2)                                  0.060548   4.267516 f
+  U1909/Y (OAI2BB1X2)                                 0.031394   4.298910 r
+  U2364/Y (AO21X2)                                    0.032726   4.331635 r
+  code_step_q_reg[24]/D (DFFRQX1)                     0.000000   4.331635 r
+  data arrival time                                              4.331635
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  code_step_q_reg[24]/CK (DFFRQX1)                    0.000000   9.800000 r
+  library setup time                                  -0.064636  9.735364
+  data required time                                             9.735364
+  --------------------------------------------------------------------------
+  data required time                                             9.735364
+  data arrival time                                              -4.331635
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.403728
+
+
+  Startpoint: init_doppler_word[13]
+              (input port clocked by clk)
+  Endpoint: code_step_q_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_doppler_word[13] (in)                          0.004002   1.004002 r
+  U3638/Y (BUFX2)                                     0.136711   1.140714 r
+  initial_aid/value[13] (tracking_divide_aid)         0.000000   1.140714 r
+  initial_aid/mult_505_C510/U845/S (ADDFX1)           0.215624   1.356338 f
+  initial_aid/mult_505_C510/U941/ICO (CMPR42X1)       0.096594   1.452932 f
+  initial_aid/mult_505_C510/U880/CO (CMPR42X1)        0.087182   1.540114 f
+  initial_aid/mult_505_C510/U932/S (CMPR42X1)         0.257244   1.797359 f
+  initial_aid/mult_505_C510/U904/Y (NOR2X2)           0.047417   1.844776 r
+  initial_aid/mult_505_C510/U209/Y (OAI21X1)          0.033908   1.878684 f
+  initial_aid/mult_505_C510/U922/Y (AOI21X1)          0.048543   1.927227 r
+  initial_aid/mult_505_C510/U201/Y (OAI21X1)          0.035614   1.962840 f
+  initial_aid/mult_505_C510/U940/Y (AOI21X1)          0.044430   2.007270 r
+  initial_aid/mult_505_C510/U191/Y (OAI21X1)          0.033388   2.040658 f
+  initial_aid/mult_505_C510/U939/Y (AOI21X1)          0.044239   2.084897 r
+  initial_aid/mult_505_C510/U183/Y (OAI21X1)          0.033388   2.118285 f
+  initial_aid/mult_505_C510/U938/Y (AOI21X1)          0.044239   2.162524 r
+  initial_aid/mult_505_C510/U175/Y (OAI21X1)          0.033388   2.195912 f
+  initial_aid/mult_505_C510/U936/Y (AOI21X1)          0.044239   2.240151 r
+  initial_aid/mult_505_C510/U167/Y (OAI21X1)          0.033388   2.273539 f
+  initial_aid/mult_505_C510/U935/Y (AOI21X1)          0.044239   2.317779 r
+  initial_aid/mult_505_C510/U159/Y (OAI21X1)          0.033388   2.351166 f
+  initial_aid/mult_505_C510/U925/Y (AOI21X1)          0.044239   2.395406 r
+  initial_aid/mult_505_C510/U151/Y (OAI21X1)          0.033388   2.428794 f
+  initial_aid/mult_505_C510/U919/Y (AOI21X1)          0.044239   2.473033 r
+  initial_aid/mult_505_C510/U143/Y (OAI21X1)          0.033388   2.506421 f
+  initial_aid/mult_505_C510/U944/Y (AOI21X1)          0.057737   2.564157 r
+  initial_aid/mult_505_C510/U132/Y (XOR2X1)           0.066113   2.630271 f
+  initial_aid/add_507_C510/U59/Y (NAND2X2)            0.033401   2.663672 r
+  initial_aid/add_507_C510/U56/Y (INVX2)              0.015934   2.679606 f
+  initial_aid/add_507_C510/U55/CO (ADDHX1)            0.066297   2.745903 f
+  initial_aid/add_507_C510/U43/CO (ADDHX1)            0.068451   2.814354 f
+  initial_aid/add_507_C510/U35/CO (ADDHX1)            0.065050   2.879404 f
+  initial_aid/add_507_C510/U44/CO (ADDHX1)            0.068460   2.947863 f
+  initial_aid/add_507_C510/U36/CO (ADDHX1)            0.065050   3.012913 f
+  initial_aid/add_507_C510/U45/CO (ADDHX1)            0.068460   3.081372 f
+  initial_aid/add_507_C510/U37/CO (ADDHX1)            0.065050   3.146422 f
+  initial_aid/add_507_C510/U46/CO (ADDHX1)            0.068460   3.214881 f
+  initial_aid/add_507_C510/U38/CO (ADDHX1)            0.065050   3.279931 f
+  initial_aid/add_507_C510/U47/CO (ADDHX1)            0.068460   3.348391 f
+  initial_aid/add_507_C510/U39/CO (ADDHX1)            0.065050   3.413440 f
+  initial_aid/add_507_C510/U48/CO (ADDHX1)            0.068460   3.481900 f
+  initial_aid/add_507_C510/U40/CO (ADDHX1)            0.065050   3.546949 f
+  initial_aid/add_507_C510/U49/CO (ADDHX1)            0.068460   3.615409 f
+  initial_aid/add_507_C510/U41/CO (ADDHX1)            0.065050   3.680459 f
+  initial_aid/add_507_C510/U50/CO (ADDHX1)            0.068460   3.748918 f
+  initial_aid/add_507_C510/U42/CO (ADDHX1)            0.065050   3.813968 f
+  initial_aid/add_507_C510/U57/CO (ADDHX1)            0.068460   3.882427 f
+  initial_aid/add_507_C510/U52/CO (ADDHX1)            0.065050   3.947477 f
+  initial_aid/add_507_C510/U53/CO (ADDHX1)            0.070240   4.017717 f
+  initial_aid/add_507_C510/U54/CO (ADDHX1)            0.070227   4.087944 f
+  initial_aid/add_507_C510/U58/CO (ADDHX1)            0.065940   4.153883 f
+  initial_aid/add_507_C510/U51/Y (XOR2X1)             0.053084   4.206967 r
+  initial_aid/result[23] (tracking_divide_aid)        0.000000   4.206967 r
+  U3619/Y (NAND2BX2)                                  0.060548   4.267516 f
+  U2010/Y (OAI2BB1X2)                                 0.031394   4.298910 r
+  U2362/Y (AO21X2)                                    0.032726   4.331635 r
+  code_step_q_reg[26]/D (DFFRQX1)                     0.000000   4.331635 r
+  data arrival time                                              4.331635
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  code_step_q_reg[26]/CK (DFFRQX1)                    0.000000   9.800000 r
+  library setup time                                  -0.064636  9.735364
+  data required time                                             9.735364
+  --------------------------------------------------------------------------
+  data required time                                             9.735364
+  data arrival time                                              -4.331635
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.403728
+
+
+  Startpoint: init_doppler_word[13]
+              (input port clocked by clk)
+  Endpoint: code_step_q_reg[25]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_doppler_word[13] (in)                          0.004002   1.004002 r
+  U3638/Y (BUFX2)                                     0.136711   1.140714 r
+  initial_aid/value[13] (tracking_divide_aid)         0.000000   1.140714 r
+  initial_aid/mult_505_C510/U845/S (ADDFX1)           0.215624   1.356338 f
+  initial_aid/mult_505_C510/U941/ICO (CMPR42X1)       0.096594   1.452932 f
+  initial_aid/mult_505_C510/U880/CO (CMPR42X1)        0.087182   1.540114 f
+  initial_aid/mult_505_C510/U932/S (CMPR42X1)         0.257244   1.797359 f
+  initial_aid/mult_505_C510/U904/Y (NOR2X2)           0.047417   1.844776 r
+  initial_aid/mult_505_C510/U209/Y (OAI21X1)          0.033908   1.878684 f
+  initial_aid/mult_505_C510/U922/Y (AOI21X1)          0.048543   1.927227 r
+  initial_aid/mult_505_C510/U201/Y (OAI21X1)          0.035614   1.962840 f
+  initial_aid/mult_505_C510/U940/Y (AOI21X1)          0.044430   2.007270 r
+  initial_aid/mult_505_C510/U191/Y (OAI21X1)          0.033388   2.040658 f
+  initial_aid/mult_505_C510/U939/Y (AOI21X1)          0.044239   2.084897 r
+  initial_aid/mult_505_C510/U183/Y (OAI21X1)          0.033388   2.118285 f
+  initial_aid/mult_505_C510/U938/Y (AOI21X1)          0.044239   2.162524 r
+  initial_aid/mult_505_C510/U175/Y (OAI21X1)          0.033388   2.195912 f
+  initial_aid/mult_505_C510/U936/Y (AOI21X1)          0.044239   2.240151 r
+  initial_aid/mult_505_C510/U167/Y (OAI21X1)          0.033388   2.273539 f
+  initial_aid/mult_505_C510/U935/Y (AOI21X1)          0.044239   2.317779 r
+  initial_aid/mult_505_C510/U159/Y (OAI21X1)          0.033388   2.351166 f
+  initial_aid/mult_505_C510/U925/Y (AOI21X1)          0.044239   2.395406 r
+  initial_aid/mult_505_C510/U151/Y (OAI21X1)          0.033388   2.428794 f
+  initial_aid/mult_505_C510/U919/Y (AOI21X1)          0.044239   2.473033 r
+  initial_aid/mult_505_C510/U143/Y (OAI21X1)          0.033388   2.506421 f
+  initial_aid/mult_505_C510/U944/Y (AOI21X1)          0.057737   2.564157 r
+  initial_aid/mult_505_C510/U132/Y (XOR2X1)           0.066113   2.630271 f
+  initial_aid/add_507_C510/U59/Y (NAND2X2)            0.033401   2.663672 r
+  initial_aid/add_507_C510/U56/Y (INVX2)              0.015934   2.679606 f
+  initial_aid/add_507_C510/U55/CO (ADDHX1)            0.066297   2.745903 f
+  initial_aid/add_507_C510/U43/CO (ADDHX1)            0.068451   2.814354 f
+  initial_aid/add_507_C510/U35/CO (ADDHX1)            0.065050   2.879404 f
+  initial_aid/add_507_C510/U44/CO (ADDHX1)            0.068460   2.947863 f
+  initial_aid/add_507_C510/U36/CO (ADDHX1)            0.065050   3.012913 f
+  initial_aid/add_507_C510/U45/CO (ADDHX1)            0.068460   3.081372 f
+  initial_aid/add_507_C510/U37/CO (ADDHX1)            0.065050   3.146422 f
+  initial_aid/add_507_C510/U46/CO (ADDHX1)            0.068460   3.214881 f
+  initial_aid/add_507_C510/U38/CO (ADDHX1)            0.065050   3.279931 f
+  initial_aid/add_507_C510/U47/CO (ADDHX1)            0.068460   3.348391 f
+  initial_aid/add_507_C510/U39/CO (ADDHX1)            0.065050   3.413440 f
+  initial_aid/add_507_C510/U48/CO (ADDHX1)            0.068460   3.481900 f
+  initial_aid/add_507_C510/U40/CO (ADDHX1)            0.065050   3.546949 f
+  initial_aid/add_507_C510/U49/CO (ADDHX1)            0.068460   3.615409 f
+  initial_aid/add_507_C510/U41/CO (ADDHX1)            0.065050   3.680459 f
+  initial_aid/add_507_C510/U50/CO (ADDHX1)            0.068460   3.748918 f
+  initial_aid/add_507_C510/U42/CO (ADDHX1)            0.065050   3.813968 f
+  initial_aid/add_507_C510/U57/CO (ADDHX1)            0.068460   3.882427 f
+  initial_aid/add_507_C510/U52/CO (ADDHX1)            0.065050   3.947477 f
+  initial_aid/add_507_C510/U53/CO (ADDHX1)            0.070240   4.017717 f
+  initial_aid/add_507_C510/U54/CO (ADDHX1)            0.070227   4.087944 f
+  initial_aid/add_507_C510/U58/CO (ADDHX1)            0.065940   4.153883 f
+  initial_aid/add_507_C510/U51/Y (XOR2X1)             0.053084   4.206967 r
+  initial_aid/result[23] (tracking_divide_aid)        0.000000   4.206967 r
+  U3619/Y (NAND2BX2)                                  0.060548   4.267516 f
+  U2007/Y (OAI2BB1X4)                                 0.028471   4.295986 r
+  U2363/Y (AO21X2)                                    0.032042   4.328028 r
+  code_step_q_reg[25]/D (DFFRQX1)                     0.000000   4.328028 r
+  data arrival time                                              4.328028
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  code_step_q_reg[25]/CK (DFFRQX1)                    0.000000   9.800000 r
+  library setup time                                  -0.064636  9.735364
+  data required time                                             9.735364
+  --------------------------------------------------------------------------
+  data required time                                             9.735364
+  data arrival time                                              -4.328028
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.407336
+
+
+  Startpoint: init_doppler_word[13]
+              (input port clocked by clk)
+  Endpoint: code_step_q_reg[29]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_doppler_word[13] (in)                          0.004002   1.004002 r
+  U3638/Y (BUFX2)                                     0.136711   1.140714 r
+  initial_aid/value[13] (tracking_divide_aid)         0.000000   1.140714 r
+  initial_aid/mult_505_C510/U845/S (ADDFX1)           0.215624   1.356338 f
+  initial_aid/mult_505_C510/U941/ICO (CMPR42X1)       0.096594   1.452932 f
+  initial_aid/mult_505_C510/U880/CO (CMPR42X1)        0.087182   1.540114 f
+  initial_aid/mult_505_C510/U932/S (CMPR42X1)         0.257244   1.797359 f
+  initial_aid/mult_505_C510/U904/Y (NOR2X2)           0.047417   1.844776 r
+  initial_aid/mult_505_C510/U209/Y (OAI21X1)          0.033908   1.878684 f
+  initial_aid/mult_505_C510/U922/Y (AOI21X1)          0.048543   1.927227 r
+  initial_aid/mult_505_C510/U201/Y (OAI21X1)          0.035614   1.962840 f
+  initial_aid/mult_505_C510/U940/Y (AOI21X1)          0.044430   2.007270 r
+  initial_aid/mult_505_C510/U191/Y (OAI21X1)          0.033388   2.040658 f
+  initial_aid/mult_505_C510/U939/Y (AOI21X1)          0.044239   2.084897 r
+  initial_aid/mult_505_C510/U183/Y (OAI21X1)          0.033388   2.118285 f
+  initial_aid/mult_505_C510/U938/Y (AOI21X1)          0.044239   2.162524 r
+  initial_aid/mult_505_C510/U175/Y (OAI21X1)          0.033388   2.195912 f
+  initial_aid/mult_505_C510/U936/Y (AOI21X1)          0.044239   2.240151 r
+  initial_aid/mult_505_C510/U167/Y (OAI21X1)          0.033388   2.273539 f
+  initial_aid/mult_505_C510/U935/Y (AOI21X1)          0.044239   2.317779 r
+  initial_aid/mult_505_C510/U159/Y (OAI21X1)          0.033388   2.351166 f
+  initial_aid/mult_505_C510/U925/Y (AOI21X1)          0.044239   2.395406 r
+  initial_aid/mult_505_C510/U151/Y (OAI21X1)          0.033388   2.428794 f
+  initial_aid/mult_505_C510/U919/Y (AOI21X1)          0.044239   2.473033 r
+  initial_aid/mult_505_C510/U143/Y (OAI21X1)          0.033388   2.506421 f
+  initial_aid/mult_505_C510/U944/Y (AOI21X1)          0.057737   2.564157 r
+  initial_aid/mult_505_C510/U132/Y (XOR2X1)           0.066113   2.630271 f
+  initial_aid/add_507_C510/U59/Y (NAND2X2)            0.033401   2.663672 r
+  initial_aid/add_507_C510/U56/Y (INVX2)              0.015934   2.679606 f
+  initial_aid/add_507_C510/U55/CO (ADDHX1)            0.066297   2.745903 f
+  initial_aid/add_507_C510/U43/CO (ADDHX1)            0.068451   2.814354 f
+  initial_aid/add_507_C510/U35/CO (ADDHX1)            0.065050   2.879404 f
+  initial_aid/add_507_C510/U44/CO (ADDHX1)            0.068460   2.947863 f
+  initial_aid/add_507_C510/U36/CO (ADDHX1)            0.065050   3.012913 f
+  initial_aid/add_507_C510/U45/CO (ADDHX1)            0.068460   3.081372 f
+  initial_aid/add_507_C510/U37/CO (ADDHX1)            0.065050   3.146422 f
+  initial_aid/add_507_C510/U46/CO (ADDHX1)            0.068460   3.214881 f
+  initial_aid/add_507_C510/U38/CO (ADDHX1)            0.065050   3.279931 f
+  initial_aid/add_507_C510/U47/CO (ADDHX1)            0.068460   3.348391 f
+  initial_aid/add_507_C510/U39/CO (ADDHX1)            0.065050   3.413440 f
+  initial_aid/add_507_C510/U48/CO (ADDHX1)            0.068460   3.481900 f
+  initial_aid/add_507_C510/U40/CO (ADDHX1)            0.065050   3.546949 f
+  initial_aid/add_507_C510/U49/CO (ADDHX1)            0.068460   3.615409 f
+  initial_aid/add_507_C510/U41/CO (ADDHX1)            0.065050   3.680459 f
+  initial_aid/add_507_C510/U50/CO (ADDHX1)            0.068460   3.748918 f
+  initial_aid/add_507_C510/U42/CO (ADDHX1)            0.065050   3.813968 f
+  initial_aid/add_507_C510/U57/CO (ADDHX1)            0.068460   3.882427 f
+  initial_aid/add_507_C510/U52/CO (ADDHX1)            0.065050   3.947477 f
+  initial_aid/add_507_C510/U53/CO (ADDHX1)            0.070240   4.017717 f
+  initial_aid/add_507_C510/U54/CO (ADDHX1)            0.070227   4.087944 f
+  initial_aid/add_507_C510/U58/CO (ADDHX1)            0.065940   4.153883 f
+  initial_aid/add_507_C510/U51/Y (XOR2X1)             0.053084   4.206967 r
+  initial_aid/result[23] (tracking_divide_aid)        0.000000   4.206967 r
+  U1756/Y (OAI22X1)                                   0.052942   4.259909 f
+  U1755/Y (OAI21BX4)                                  0.064902   4.324811 f
+  code_step_q_reg[29]/D (DFFSHQX2)                    0.000000   4.324811 f
+  data arrival time                                              4.324811
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  code_step_q_reg[29]/CK (DFFSHQX2)                   0.000000   9.800000 r
+  library setup time                                  -0.042284  9.757716
+  data required time                                             9.757716
+  --------------------------------------------------------------------------
+  data required time                                             9.757716
+  data arrival time                                              -4.324811
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.432905
+
+
+1

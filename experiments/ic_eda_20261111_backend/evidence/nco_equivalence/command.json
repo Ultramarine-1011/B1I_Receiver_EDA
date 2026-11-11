@@ -1,0 +1,13 @@
+{
+  "budget_s": 300.0, 
+  "cwd": "/", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_backend_20261111/runs/nco_equivalence/time.txt", 
+    "setsid", 
+    "bash", 
+    "/home/ICer/ic_eda_backend_20261111/work/mapped_nco/run.sh"
+  ]
+}

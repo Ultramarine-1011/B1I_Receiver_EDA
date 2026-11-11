@@ -1,0 +1,20 @@
+{
+  "budget_s": 120.0, 
+  "cwd": "/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/logs/gls-min/run/time.txt", 
+    "setsid", 
+    "/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/sim/simv_min_nominal", 
+    "+sdfverbose", 
+    "+IF_DIR=/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/six_channel_20261102", 
+    "+MODE=nominal", 
+    "+CLOCK_NS=10.0", 
+    "+VCD=activity/raw_min_nominal.vcd", 
+    "+INTERVAL=activity/interval_min_nominal.txt", 
+    "+DUMP_BEGIN_SAMPLE=45830400", 
+    "+DUMP_END_SAMPLE=46485120"
+  ]
+}

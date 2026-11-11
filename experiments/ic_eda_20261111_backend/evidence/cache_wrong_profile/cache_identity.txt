@@ -1,0 +1,13 @@
+ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88  rtl/tracking_channel_minimal.sv
+82e7d33b92a1c51e5635c30f30e4344469e6632ed9918a41d67b5efccc732dde  scripts/partitions.tcl
+21210164f744b2cb753613f202bddfbb45f06ef583f32c23e3b23883b561afcb  scripts/library.tcl
+8022bc0d744d01fcc93b8c7387d9de6d33d674c29c81beba0e0496d2dde1702a  /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+185937f0aef4f430288f5ebbc35e39b6aa6fe038f1ef348522478f3fe0e01edf  /home/synopsys/syn/O-2018.06-SP1/bin/snps_shell
+39f25799c524d8c15f5e0e6dcc9100137db860edfed2147640420ce750637038  /home/synopsys/syn/O-2018.06-SP1/linux64/syn/bin/common_shell_exec
+6e8b2e24d9f502a070be8876923fa9e006d98cd12a531c52656beab1f2767d70  /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+typical
+typical
+INVX1
+A
+
+phase_step_aid_clock=4 other_clock=10 script=e619bd9b40de42131d80c790c27ca28f73677abde9a3cb7bb059c1e1008675c3

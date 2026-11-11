@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : backend_smoke
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 12:06:46 2026
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk             10.00   {0 5}                         {clk}
+--------------------------------------------------------------------------------
+1

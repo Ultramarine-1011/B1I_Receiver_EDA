@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : memory_sync_DEPTH64_WIDTH16
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:11:55 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: write_address[3]
+              (input port clocked by clk)
+  Endpoint: storage_reg[24][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 r
+  write_address[3] (in)                0.004002   1.004002 r
+  U436/Y (BUFX2)                       0.050085   1.054088 r
+  U342/Y (INVX2)                       0.026780   1.080868 f
+  U152/Y (NOR4BX2)                     0.177936   1.258804 r
+  U259/Y (AND2X2)                      0.151664   1.410469 r
+  storage_reg[24][0]/E (EDFFX2)        0.000000   1.410469 r
+  data arrival time                               1.410469
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  storage_reg[24][0]/CK (EDFFX2)       0.000000   10.000000 r
+  library setup time                   -0.222399  9.777600
+  data required time                              9.777600
+  -----------------------------------------------------------
+  data required time                              9.777600
+  data arrival time                               -1.410469
+  -----------------------------------------------------------
+  slack (MET)                                     8.367131
+
+
+1

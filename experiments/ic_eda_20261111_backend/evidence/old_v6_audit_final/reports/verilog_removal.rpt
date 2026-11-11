@@ -1,0 +1,167 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:14:14 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[27]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000   0.000000 r
+  previous_ip_reg[27]/RN (DFFRHQX8) <-                0.000000   0.000000 r
+  data arrival time                                              0.000000
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[25]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000   0.000000 r
+  previous_ip_reg[25]/RN (DFFRHQX8) <-                0.000000   0.000000 r
+  data arrival time                                              0.000000
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[23]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000   0.000000 r
+  previous_ip_reg[23]/RN (DFFRHQX8) <-                0.000000   0.000000 r
+  data arrival time                                              0.000000
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[21]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000   0.000000 r
+  previous_ip_reg[21]/RN (DFFRHQX8) <-                0.000000   0.000000 r
+  data arrival time                                              0.000000
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[19]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000   0.000000 r
+  previous_ip_reg[19]/RN (DFFRHQX8) <-                0.000000   0.000000 r
+  data arrival time                                              0.000000
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[17]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000   0.000000 r
+  previous_ip_reg[17]/RN (DFFRHQX8) <-                0.000000   0.000000 r
+  data arrival time                                              0.000000
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[11]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000   0.000000 r
+  previous_ip_reg[11]/RN (DFFRHQX8) <-                0.000000   0.000000 r
+  data arrival time                                              0.000000
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[9]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.000000   0.000000 r
+  reset_n (in)                         0.000000   0.000000 r
+  previous_ip_reg[9]/RN (DFFRHQX8) <-  0.000000   0.000000 r
+  data arrival time                               0.000000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: previous_ip_reg[8]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.000000   0.000000 r
+  reset_n (in)                         0.000000   0.000000 r
+  previous_ip_reg[8]/RN (DFFRHQX8) <-  0.000000   0.000000 r
+  data arrival time                               0.000000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: code_step_q_reg[5]/RN (internal pin)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.000000   0.000000 r
+  reset_n (in)                         0.000000   0.000000 r
+  code_step_q_reg[5]/RN (DFFRQX1) <-   0.000000   0.000000 r
+  data arrival time                               0.000000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

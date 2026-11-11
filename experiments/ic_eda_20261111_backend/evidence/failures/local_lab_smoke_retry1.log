@@ -1,0 +1,10 @@
+/home/ICer/.bashrc: line 19: cd: check.py
+config.sh
+flow.tcl
+library.tcl
+local_smoke.sh
+pad.sdc
+run_lab.sh
+smoke.sv
+tb.sv
+/home/ICer/ic_eda_backend_20261111/lab/..: No such file or directory

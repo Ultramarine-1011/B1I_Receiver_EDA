@@ -1,0 +1,60 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+source scripts/library.tcl
+1
+source scripts/reports.tcl
+set report_dir $env(REPORT_DIR)
+/home/ICer/ic_eda_backend_20261111/runs/old_v6_audit/reports
+set old /home/ICer/ic_eda_night_20261110/runs/full_v6_cached_10ns/reports
+/home/ICer/ic_eda_night_20261110/runs/full_v6_cached_10ns/reports
+read_ddc $old/mapped.ddc
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Reading ddc file '/home/ICer/ic_eda_night_20261110/runs/full_v6_cached_10ns/reports/mapped.ddc'.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Loaded 97 designs.
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 tracking_ratio_code tracking_ratio_phase tracking_atan tracking_divide_step tracking_divide_aid tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28 b1i_prn_gen_0 b1i_prn_gen_1 b1i_prn_gen_2 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_1 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_6 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4 epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5 carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3 b1i_prn_gen_1_DW01_inc_0 b1i_prn_gen_2_DW01_inc_0 b1i_prn_gen_0_DW01_inc_0 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3 tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4 carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0 carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12 code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_29 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_30 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_31 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_32 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_21 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_45 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_46 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_53 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_58 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_66 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_68 tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_72
+current_design tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+{tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1}
+if {![link]} {exit 1}
+
+  Linking design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (97 designs)              /home/ICer/ic_eda_night_20261110/runs/full_v6_cached_10ns/reports/mapped.ddc, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+backend_reports ddc_
+
+Received Signal 15 from: PID=7982 (UID=1000)
+
+
+Process terminated by kill.
+

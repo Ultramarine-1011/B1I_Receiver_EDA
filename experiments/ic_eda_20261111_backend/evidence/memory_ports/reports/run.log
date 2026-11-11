@@ -1,0 +1,816 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+source scripts/library.tcl
+1
+set report_dir $env(REPORT_DIR)
+/home/ICer/ic_eda_backend_20261111/runs/memory_ports/reports
+if {![analyze -format sverilog probes/memory.sv]} {exit 1}
+Running PRESTO HDLC
+Compiling source file ./probes/memory.sv
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+foreach type {async sync} {
+    foreach depth {16 64} {
+        if {![elaborate memory_$type -parameters "DEPTH=$depth,WIDTH=16"] || ![link]} {exit 1}
+        set_operating_conditions $env(OPCOND) -library $env(STD_LIB)
+        create_clock -name clk -period 10 [get_ports clk]
+        set data_inputs [remove_from_collection [all_inputs] [get_ports clk]]
+        set_input_delay -clock clk -max 1 $data_inputs
+        set_input_delay -clock clk -min 0 $data_inputs
+        set_output_delay -clock clk -max 1 [all_outputs]
+        set_output_delay -clock clk -min 0 [all_outputs]
+        set_driving_cell -library $env(STD_LIB) -lib_cell $env(DRIVE_CELL) $data_inputs
+        set_load [expr {4.0 * [load_of $env(STD_LIB)/$env(DRIVE_CELL)/$env(DRIVE_PIN)]}] [all_outputs]
+        redirect $report_dir/${type}_${depth}_resources.rpt {report_resources -hierarchy}
+        if {![compile -map_effort medium]} {exit 1}
+        redirect $report_dir/${type}_${depth}_area.rpt {report_area}
+        redirect $report_dir/${type}_${depth}_qor.rpt {report_qor}
+        redirect $report_dir/${type}_${depth}_timing.rpt {report_timing -delay max -max_paths 1 -significant_digits 6}
+        redirect $report_dir/${type}_${depth}_references.rpt {report_reference -hierarchy}
+        write -format verilog -hierarchy -output $report_dir/${type}_${depth}.v
+        puts "MEMORY_PROBE_DONE $type $depth"
+    }
+}
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine memory_async_DEPTH16_WIDTH16 line 12 in file
+		'./probes/memory.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     storage_reg     | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=====================================================================
+|        block name/line          | Inputs | Outputs | # sel inputs |
+=====================================================================
+| memory_async_DEPTH16_WIDTH16/9  |   16   |   16    |      4       |
+| memory_async_DEPTH16_WIDTH16/10 |   16   |   16    |      4       |
+| memory_async_DEPTH16_WIDTH16/11 |   16   |   16    |      4       |
+=====================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'memory_async_DEPTH16_WIDTH16'.
+
+  Linking design 'memory_async_DEPTH16_WIDTH16'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  memory_async_DEPTH16_WIDTH16 /home/ICer/ic_eda_backend_20261111/runs/memory_ports/work/memory_async_DEPTH16_WIDTH16.db
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |           |
+============================================================================
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'memory_async_DEPTH16_WIDTH16'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   15286.1      0.00       0.0       0.0                          
+    0:00:02   15286.1      0.00       0.0       0.0                          
+    0:00:02   15286.1      0.00       0.0       0.0                          
+    0:00:02   15286.1      0.00       0.0       0.0                          
+    0:00:02   15286.1      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8648.5      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+    0:00:02    8635.8      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/memory_ports/reports/async_16.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+MEMORY_PROBE_DONE async 16
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine memory_async_DEPTH64_WIDTH16 line 12 in file
+		'./probes/memory.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     storage_reg     | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=====================================================================
+|        block name/line          | Inputs | Outputs | # sel inputs |
+=====================================================================
+| memory_async_DEPTH64_WIDTH16/9  |   64   |   16    |      6       |
+| memory_async_DEPTH64_WIDTH16/10 |   64   |   16    |      6       |
+| memory_async_DEPTH64_WIDTH16/11 |   64   |   16    |      6       |
+=====================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'memory_async_DEPTH64_WIDTH16'.
+
+  Linking design 'memory_async_DEPTH64_WIDTH16'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home/ICer/ic_eda_backend_20261111/runs/memory_ports/work/memory_async_DEPTH64_WIDTH16.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'memory_async_DEPTH64_WIDTH16'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05   70087.2      0.00       0.0       0.0                          
+    0:00:05   70087.2      0.00       0.0       0.0                          
+    0:00:05   70087.2      0.00       0.0       0.0                          
+    0:00:06   70087.2      0.00       0.0       0.0                          
+    0:00:06   70087.2      0.00       0.0       0.0                          
+    0:00:07   35277.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:07   35186.2      0.00       0.0       0.0                          
+    0:00:08   35186.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   35186.2      0.00       0.0       0.0                          
+    0:00:08   35186.2      0.00       0.0       0.0                          
+    0:00:08   35165.0      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+    0:00:08   35160.8      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'memory_async_DEPTH64_WIDTH16' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1024 load(s), 1 driver(s)
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/memory_ports/reports/async_64.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+MEMORY_PROBE_DONE async 64
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine memory_sync_DEPTH16_WIDTH16 line 25 in file
+		'./probes/memory.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     storage_reg     | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+|     result_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+====================================================================
+|        block name/line         | Inputs | Outputs | # sel inputs |
+====================================================================
+| memory_sync_DEPTH16_WIDTH16/27 |   16   |   16    |      4       |
+====================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'memory_sync_DEPTH16_WIDTH16'.
+
+  Linking design 'memory_sync_DEPTH16_WIDTH16'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/ICer/ic_eda_backend_20261111/runs/memory_ports/work/memory_sync_DEPTH16_WIDTH16.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'memory_sync_DEPTH16_WIDTH16'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    9030.3      0.00       0.0       0.0                          
+    0:00:01    9030.3      0.00       0.0       0.0                          
+    0:00:01    9030.3      0.00       0.0       0.0                          
+    0:00:01    9030.3      0.00       0.0       0.0                          
+    0:00:01    9030.3      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+    0:00:02    6134.5      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/memory_ports/reports/sync_16.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+MEMORY_PROBE_DONE sync 16
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine memory_sync_DEPTH64_WIDTH16 line 25 in file
+		'./probes/memory.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     storage_reg     | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+|     result_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+====================================================================
+|        block name/line         | Inputs | Outputs | # sel inputs |
+====================================================================
+| memory_sync_DEPTH64_WIDTH16/27 |   64   |   16    |      6       |
+====================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'memory_sync_DEPTH64_WIDTH16'.
+
+  Linking design 'memory_sync_DEPTH64_WIDTH16'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               /home/ICer/ic_eda_backend_20261111/runs/memory_ports/work/memory_sync_DEPTH64_WIDTH16.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'memory_sync_DEPTH64_WIDTH16'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   34789.6      0.00       0.0       1.5                          
+    0:00:03   34789.6      0.00       0.0       1.5                          
+    0:00:03   34789.6      0.00       0.0       1.5                          
+    0:00:03   34789.6      0.00       0.0       1.5                          
+    0:00:03   34789.6      0.00       0.0       1.5                          
+    0:00:03   23955.8      0.00       0.0       0.0                          
+    0:00:03   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23908.6      0.00       0.0       0.0                          
+    0:00:04   23897.3      0.00       0.0       0.0                          
+    0:00:04   23897.3      0.00       0.0       0.0                          
+    0:00:04   23897.3      0.00       0.0       0.0                          
+    0:00:04   23897.3      0.00       0.0       0.0                          
+    0:00:04   23897.3      0.00       0.0       0.0                          
+    0:00:04   23897.3      0.00       0.0       0.0                          
+    0:00:04   23897.3      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'memory_sync_DEPTH64_WIDTH16' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1040 load(s), 1 driver(s)
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/memory_ports/reports/sync_64.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+MEMORY_PROBE_DONE sync 64
+puts "BACKEND_MEMORY_PASS"
+BACKEND_MEMORY_PASS
+exit 0
+
+Memory usage for main task 179 Mbytes.
+Memory usage for this session 179 Mbytes.
+CPU usage for this session 19 seconds ( 0.01 hours ).
+
+Thank you...

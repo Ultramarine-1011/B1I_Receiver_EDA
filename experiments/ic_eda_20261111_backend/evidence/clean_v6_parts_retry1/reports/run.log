@@ -1,0 +1,1969 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+source scripts/library.tcl
+1
+set report_dir $env(REPORT_DIR)
+/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports
+if {![analyze -format sverilog -define SYNTHESIS rtl/tracking_channel_minimal.sv]} {exit 1}
+Running PRESTO HDLC
+Compiling source file ./rtl/tracking_channel_minimal.sv
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+foreach name {tracking_atan tracking_divide_aid tracking_divide_step tracking_ratio_code tracking_ratio_phase} {
+    if {![elaborate $name] || ![link]} {exit 1}
+    set_operating_conditions $env(OPCOND) -library $env(STD_LIB)
+    create_clock -name module_clk -period 10
+    set_clock_uncertainty -setup 0.2 [get_clocks module_clk]
+    set_clock_uncertainty -hold 0.2 [get_clocks module_clk]
+    set_input_delay -clock module_clk -max 0 [all_inputs]
+    set_input_delay -clock module_clk -min 0 [all_inputs]
+    set_output_delay -clock module_clk -max 0 [all_outputs]
+    set_output_delay -clock module_clk -min 0 [all_outputs]
+    set_driving_cell -library $env(STD_LIB) -lib_cell $env(DRIVE_CELL) [all_inputs]
+    set_load [expr {4.0 * [load_of $env(STD_LIB)/$env(DRIVE_CELL)/$env(DRIVE_PIN)]}] [all_outputs]
+    puts "FRESH_PARTITION_BEGIN $name"
+    if {![compile -map_effort medium]} {exit 1}
+    if {[sizeof_collection [get_cells -hier -filter {is_hierarchical == false && is_unmapped == true}]]} {exit 1}
+    redirect $report_dir/${name}_qor.rpt {report_qor}
+    redirect $report_dir/${name}_timing.rpt {report_timing -delay max -max_paths 1 -significant_digits 6}
+    ungroup -all -flatten
+    reset_design
+    set_dont_touch [current_design] true
+    write -format ddc -hierarchy -output $report_dir/${name}.ddc
+    write -format verilog -hierarchy -output $report_dir/${name}.v
+    puts "FRESH_PARTITION_DONE $name"
+}
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_atan'.
+
+  Linking design 'tracking_atan'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  tracking_atan               /home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/work/tracking_atan.db
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FRESH_PARTITION_BEGIN tracking_atan
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 34 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_atan'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_atan_DW01_sub_0'
+  Processing 'tracking_atan_DW01_add_0'
+  Processing 'tracking_atan_DW01_sub_1'
+  Processing 'tracking_atan_DW01_add_1'
+  Processing 'tracking_atan_DW01_sub_2'
+  Processing 'tracking_atan_DW01_add_2'
+  Processing 'tracking_atan_DW01_sub_3'
+  Processing 'tracking_atan_DW01_add_3'
+  Processing 'tracking_atan_DW01_sub_4'
+  Processing 'tracking_atan_DW01_add_4'
+  Processing 'tracking_atan_DW01_sub_5'
+  Processing 'tracking_atan_DW01_add_5'
+  Processing 'tracking_atan_DW01_sub_6'
+  Processing 'tracking_atan_DW01_add_6'
+  Processing 'tracking_atan_DW01_sub_7'
+  Processing 'tracking_atan_DW01_add_7'
+  Processing 'tracking_atan_DW01_sub_8'
+  Processing 'tracking_atan_DW01_add_8'
+  Processing 'tracking_atan_DW01_sub_9'
+  Processing 'tracking_atan_DW01_add_9'
+  Processing 'tracking_atan_DW01_sub_10'
+  Processing 'tracking_atan_DW01_add_10'
+  Processing 'tracking_atan_DW01_sub_11'
+  Processing 'tracking_atan_DW01_add_11'
+  Processing 'tracking_atan_DW01_sub_12'
+  Processing 'tracking_atan_DW01_add_12'
+  Processing 'tracking_atan_DW01_sub_13'
+  Processing 'tracking_atan_DW01_add_13'
+  Processing 'tracking_atan_DW01_sub_14'
+  Processing 'tracking_atan_DW01_add_14'
+  Processing 'tracking_atan_DW01_cmp6_0'
+  Processing 'tracking_atan_DW01_add_15'
+  Processing 'tracking_atan_DW01_sub_15'
+  Processing 'tracking_atan_DW01_sub_16'
+  Processing 'tracking_atan_DW01_add_16'
+  Processing 'tracking_atan_DW01_cmp6_1'
+  Processing 'tracking_atan_DW01_add_17'
+  Processing 'tracking_atan_DW01_sub_17'
+  Processing 'tracking_atan_DW01_sub_18'
+  Processing 'tracking_atan_DW01_add_18'
+  Processing 'tracking_atan_DW01_cmp6_2'
+  Processing 'tracking_atan_DW01_add_19'
+  Processing 'tracking_atan_DW01_sub_19'
+  Processing 'tracking_atan_DW01_sub_20'
+  Processing 'tracking_atan_DW01_add_20'
+  Processing 'tracking_atan_DW01_cmp6_3'
+  Processing 'tracking_atan_DW01_add_21'
+  Processing 'tracking_atan_DW01_sub_21'
+  Processing 'tracking_atan_DW01_sub_22'
+  Processing 'tracking_atan_DW01_add_22'
+  Processing 'tracking_atan_DW01_cmp6_4'
+  Processing 'tracking_atan_DW01_add_23'
+  Processing 'tracking_atan_DW01_sub_23'
+  Processing 'tracking_atan_DW01_sub_24'
+  Processing 'tracking_atan_DW01_add_24'
+  Processing 'tracking_atan_DW01_cmp6_5'
+  Processing 'tracking_atan_DW01_add_25'
+  Processing 'tracking_atan_DW01_sub_25'
+  Processing 'tracking_atan_DW01_sub_26'
+  Processing 'tracking_atan_DW01_add_26'
+  Processing 'tracking_atan_DW01_cmp6_6'
+  Processing 'tracking_atan_DW01_add_27'
+  Processing 'tracking_atan_DW01_sub_27'
+  Processing 'tracking_atan_DW01_sub_28'
+  Processing 'tracking_atan_DW01_add_28'
+  Processing 'tracking_atan_DW01_cmp6_7'
+  Processing 'tracking_atan_DW01_add_29'
+  Processing 'tracking_atan_DW01_sub_29'
+  Processing 'tracking_atan_DW01_sub_30'
+  Processing 'tracking_atan_DW01_add_30'
+  Processing 'tracking_atan_DW01_cmp6_8'
+  Processing 'tracking_atan_DW01_add_31'
+  Processing 'tracking_atan_DW01_sub_31'
+  Processing 'tracking_atan_DW01_sub_32'
+  Processing 'tracking_atan_DW01_add_32'
+  Processing 'tracking_atan_DW01_cmp6_9'
+  Processing 'tracking_atan_DW01_add_33'
+  Processing 'tracking_atan_DW01_sub_33'
+  Processing 'tracking_atan_DW01_sub_34'
+  Processing 'tracking_atan_DW01_add_34'
+  Processing 'tracking_atan_DW01_cmp6_10'
+  Processing 'tracking_atan_DW01_add_35'
+  Processing 'tracking_atan_DW01_sub_35'
+  Processing 'tracking_atan_DW01_sub_36'
+  Processing 'tracking_atan_DW01_add_36'
+  Processing 'tracking_atan_DW01_cmp6_11'
+  Processing 'tracking_atan_DW01_add_37'
+  Processing 'tracking_atan_DW01_sub_37'
+  Processing 'tracking_atan_DW01_sub_38'
+  Processing 'tracking_atan_DW01_add_38'
+  Processing 'tracking_atan_DW01_cmp6_12'
+  Processing 'tracking_atan_DW01_add_39'
+  Processing 'tracking_atan_DW01_sub_39'
+  Processing 'tracking_atan_DW01_sub_40'
+  Processing 'tracking_atan_DW01_add_40'
+  Processing 'tracking_atan_DW01_cmp6_13'
+  Processing 'tracking_atan_DW01_add_41'
+  Processing 'tracking_atan_DW01_sub_41'
+  Processing 'tracking_atan_DW01_sub_42'
+  Processing 'tracking_atan_DW01_cmp6_14'
+  Processing 'tracking_atan_DW01_sub_43'
+  Processing 'tracking_atan_DW01_add_42'
+  Processing 'tracking_atan_DW01_sub_44'
+  Processing 'tracking_atan_DW01_cmp6_15'
+  Processing 'tracking_atan_DW01_sub_45'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'tracking_atan'. (DDB-72)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+  Mapping Optimization (Phase 10)
+  Mapping Optimization (Phase 11)
+  Mapping Optimization (Phase 12)
+  Mapping Optimization (Phase 13)
+  Mapping Optimization (Phase 14)
+  Mapping Optimization (Phase 15)
+  Mapping Optimization (Phase 16)
+  Mapping Optimization (Phase 17)
+  Mapping Optimization (Phase 18)
+  Mapping Optimization (Phase 19)
+  Mapping Optimization (Phase 20)
+  Mapping Optimization (Phase 21)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:06:41  336416.0      1.66      26.6       0.0                          
+    0:06:41  336416.0      1.66      26.6       0.0                          
+    0:06:41  336416.0      1.66      26.6       0.0                          
+    0:06:41  336416.0      1.66      26.6       0.0                          
+    0:06:41  336416.0      1.66      26.6       0.0                          
+    0:06:53  147809.8      3.15      50.4       0.0                          
+    0:07:01  147485.2      2.82      45.0       0.0                          
+    0:07:04  147066.8      2.50      39.9       0.0                          
+    0:07:05  147035.0      2.42      38.7       0.0                          
+    0:07:07  146975.8      2.31      37.0       0.0                          
+    0:07:09  147006.1      2.29      36.7       0.0                          
+    0:07:10  146987.8      2.17      34.7       0.0                          
+    0:07:11  147016.0      2.23      35.7       0.0                          
+    0:07:12  147015.3      2.08      33.2       0.0                          
+    0:07:14  147020.2      2.16      34.6       0.0                          
+    0:07:14  147028.7      2.08      33.2       0.0                          
+    0:07:14  147038.6      2.08      33.2       0.0                          
+    0:07:15  147049.9      2.04      32.6       0.0                          
+    0:07:15  147049.9      2.04      32.6       0.0                          
+    0:07:15  147049.9      2.04      32.6       0.0                          
+    0:07:15  147049.9      2.04      32.6       0.0                          
+    0:07:16  147049.9      2.04      32.6       0.0                          
+    0:07:16  147049.9      2.04      32.6       0.0                          
+    0:07:16  147049.9      2.04      32.6       0.0                          
+    0:07:20  147152.2      1.90      30.4       0.0 result[14]               
+    0:07:25  147200.9      1.76      28.2       0.0 result[14]               
+    0:07:29  147338.5      1.69      27.1       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:07:29  147338.5      1.69      27.1       0.0                          
+    0:07:43  148156.2      1.27      20.3       0.0 result[13]               
+    0:07:52  148635.3      1.13      18.0       0.0 result[13]               
+    0:07:58  148814.6      1.09      17.4       0.0 result[13]               
+    0:08:00  148882.3      1.08      17.2       0.0 result[13]               
+    0:08:04  148928.2      1.06      17.0       0.0 result[13]               
+    0:08:06  148935.9      1.05      16.8       0.0 result[13]               
+    0:08:08  148962.0      1.04      16.7       0.0 result[13]               
+    0:08:11  148950.0      1.04      16.5       0.0 result[13]               
+    0:08:14  148952.2      1.03      16.5       0.0 result[13]               
+    0:08:15  148950.0      1.02      16.3       0.0 result[13]               
+    0:08:16  149040.4      1.01      16.1       0.0 result[13]               
+    0:08:17  149050.2      1.00      16.0       0.0 result[13]               
+    0:08:18  149109.5      1.00      15.9       0.0 result[13]               
+    0:08:19  149115.9      0.99      15.8       0.0 result[13]               
+    0:08:19  149129.3      0.99      15.8       0.0 result[13]               
+    0:08:21  149172.3      0.98      15.7       0.0 result[13]               
+    0:08:24  149268.3      0.96      15.3       0.0 result[13]               
+    0:08:25  149294.4      0.95      15.2       0.0 result[13]               
+    0:08:27  149355.1      0.95      15.1       0.0 result[13]               
+    0:08:29  149400.2      0.94      15.0       0.0 result[13]               
+    0:08:30  149421.4      0.94      15.0       0.0 result[13]               
+    0:08:32  149482.1      0.93      14.9       0.0 result[13]               
+    0:08:33  149518.8      0.93      14.8       0.0 result[13]               
+    0:08:35  149561.8      0.92      14.7       0.0 result[13]               
+    0:08:40  149663.4      0.90      14.3       0.0 result[13]               
+    0:08:43  149744.6      0.88      14.1       0.0 result[13]               
+    0:08:44  149760.1      0.88      14.1       0.0 result[13]               
+    0:08:46  149814.4      0.88      14.0       0.0 result[13]               
+    0:08:48  149839.1      0.87      13.9       0.0 result[13]               
+    0:08:50  149853.2      0.87      13.9       0.0 result[13]               
+    0:08:51  149868.7      0.87      13.8       0.0 result[13]               
+    0:08:52  149875.1      0.86      13.8       0.0 result[13]               
+    0:08:53  149878.6      0.86      13.8       0.0 result[13]               
+    0:08:54  149880.0      0.86      13.8       0.0 result[13]               
+    0:08:55  149901.2      0.86      13.7       0.0 result[13]               
+    0:08:55  149899.1      0.86      13.7       0.0 result[13]               
+    0:09:02  150082.5      0.80      12.9       0.0 result[7]                
+    0:09:08  150267.4      0.76      12.2       0.0 result[7]                
+    0:09:14  150534.8      0.71      11.4       0.0 result[0]                
+    0:09:16  150611.0      0.69      11.0       0.0 result[0]                
+    0:09:19  150730.3      0.66      10.6       0.0 result[0]                
+    0:09:21  150836.1      0.65      10.4       0.0 result[0]                
+    0:09:22  150879.2      0.64      10.2       0.0 result[0]                
+    0:09:24  150937.7      0.63      10.0       0.0 result[0]                
+    0:09:25  150951.1      0.62      10.0       0.0 result[0]                
+    0:09:25  150956.8      0.62       9.9       0.0 result[0]                
+    0:09:26  150961.0      0.62       9.9       0.0 result[0]                
+    0:09:26  150991.3      0.62       9.9       0.0 result[0]                
+    0:09:27  151006.2      0.62       9.9       0.0 result[0]                
+    0:09:28  151009.7      0.62       9.8       0.0 result[0]                
+    0:09:28  151014.6      0.61       9.8       0.0 result[0]                
+    0:09:29  151037.9      0.61       9.8       0.0 result[0]                
+    0:09:31  151079.5      0.60       9.7       0.0 result[0]                
+    0:09:32  151138.8      0.60       9.6       0.0 result[0]                
+    0:09:34  151213.6      0.59       9.4       0.0 result[0]                
+    0:09:36  151259.5      0.58       9.3       0.0 result[0]                
+    0:09:37  151287.7      0.58       9.2       0.0 result[0]                
+    0:09:38  151310.3      0.57       9.2       0.0 result[0]                
+    0:09:39  151320.2      0.57       9.1       0.0 result[0]                
+    0:09:40  151355.4      0.57       9.1       0.0 result[0]                
+    0:09:41  151359.7      0.57       9.1       0.0 result[0]                
+    0:09:42  151369.5      0.56       9.0       0.0 result[0]                
+    0:09:43  151384.4      0.56       9.0       0.0 result[0]                
+    0:09:47  151437.3      0.55       8.8       0.0 result[7]                
+    0:09:54  151588.3      0.53       8.5       0.0 result[7]                
+    0:09:57  151646.1      0.52       8.3       0.0 result[7]                
+    0:09:59  151673.0      0.51       8.2       0.0 result[7]                
+    0:10:04  151776.7      0.50       8.0       0.0 result[7]                
+    0:10:08  151840.9      0.49       7.8       0.0 result[7]                
+    0:10:10  151861.4      0.49       7.8       0.0 result[7]                
+    0:10:12  151901.6      0.48       7.6       0.0 result[7]                
+    0:10:13  151965.8      0.47       7.6       0.2 result[7]                
+    0:10:14  151995.4      0.47       7.5       0.2 result[7]                
+    0:10:16  152032.1      0.47       7.4       0.2 result[7]                
+    0:10:17  152044.1      0.46       7.4       0.2 result[7]                
+    0:10:19  152059.6      0.46       7.4       0.2 result[7]                
+    0:10:21  152069.5      0.46       7.4       0.2 result[7]                
+    0:10:22  152071.6      0.46       7.4       0.2 result[7]                
+    0:10:24  152096.3      0.46       7.3       0.2 result[7]                
+    0:10:25  152107.6      0.46       7.3       0.2 result[7]                
+    0:10:26  152128.8      0.46       7.3       0.2 result[7]                
+    0:10:27  152130.9      0.46       7.3       0.2 result[7]                
+    0:10:27  152149.9      0.46       7.3       0.2 result[7]                
+    0:10:28  152159.1      0.45       7.3       0.2 result[7]                
+    0:10:29  152177.5      0.45       7.3       0.2 result[7]                
+    0:10:30  152195.1      0.45       7.2       0.2 result[7]                
+    0:10:32  152204.3      0.45       7.2       0.2 result[7]                
+    0:10:32  152212.7      0.45       7.2       0.2 result[7]                
+    0:10:33  152234.6      0.45       7.2       0.2 result[7]                
+    0:10:34  152244.5      0.45       7.2       0.2 result[7]                
+    0:10:35  152256.5      0.45       7.2       0.2 result[7]                
+    0:10:37  152290.4      0.44       7.1       0.2 result[7]                
+    0:10:38  152303.8      0.44       7.1       0.2 result[7]                
+    0:10:39  152305.2      0.44       7.1       0.2 result[7]                
+    0:10:43  152336.9      0.44       7.0       0.2 result[7]                
+    0:10:44  152379.3      0.43       6.9       0.2 result[7]                
+    0:10:45  152391.3      0.43       6.8       0.2 result[7]                
+    0:10:47  152435.0      0.42       6.7       0.2 result[7]                
+    0:10:48  152484.4      0.42       6.7       0.2 result[7]                
+    0:10:53  152588.8      0.41       6.5       0.2 result[7]                
+    0:10:56  152657.3      0.40       6.3       0.2 result[7]                
+    0:10:58  152701.7      0.39       6.2       0.2 result[7]                
+    0:10:58  152725.7      0.38       6.1       0.2 result[7]                
+    0:11:00  152738.4      0.38       6.0       0.2 result[7]                
+    0:11:01  152738.4      0.37       6.0       0.2 result[7]                
+    0:11:02  152753.9      0.37       6.0       0.2 result[7]                
+    0:11:03  152752.5      0.37       5.9       0.2 result[7]                
+    0:11:04  152754.6      0.37       5.9       0.2 result[7]                
+    0:11:05  152771.6      0.37       5.9       0.2 result[7]                
+    0:11:06  152786.4      0.37       5.9       0.2 result[7]                
+    0:11:07  152784.3      0.36       5.7       0.2 result[7]                
+    0:11:11  152837.2      0.35       5.6       0.2 result[7]                
+    0:11:12  152842.1      0.35       5.6       0.2 result[7]                
+    0:11:13  152875.3      0.35       5.5       0.2 result[7]                
+    0:11:14  152890.8      0.34       5.5       0.2 result[0]                
+    0:11:15  152904.2      0.34       5.4       0.2 result[7]                
+    0:11:16  152913.4      0.34       5.4       0.2 result[7]                
+    0:11:17  152952.2      0.33       5.3       0.2 result[1]                
+    0:11:18  152960.7      0.33       5.3       0.2 result[7]                
+    0:11:19  152985.4      0.33       5.2       0.2 result[4]                
+    0:11:20  153002.3      0.32       5.2       0.2 result[7]                
+    0:11:21  153046.8      0.32       5.1       0.4 result[7]                
+    0:11:22  153045.3      0.32       5.1       0.4 result[7]                
+    0:11:22  153048.9      0.32       5.1       0.4 result[7]                
+    0:11:23  153069.3      0.32       5.1       0.4 result[7]                
+    0:11:26  153096.9      0.31       4.9       0.4 result[7]                
+    0:11:28  153099.0      0.31       4.9       0.4 result[7]                
+    0:11:31  153237.3      0.30       4.7       0.4 result[7]                
+    0:11:32  153274.7      0.29       4.6       0.4 result[7]                
+    0:11:33  153307.8      0.29       4.6       0.4 result[7]                
+    0:11:34  153320.5      0.29       4.6       0.4 result[7]                
+    0:11:35  153353.7      0.28       4.5       0.4 result[7]                
+    0:11:36  153373.5      0.28       4.5       0.4 result[7]                
+    0:11:37  153391.1      0.28       4.5       0.4 result[7]                
+    0:11:37  153394.6      0.28       4.4       0.4 result[7]                
+    0:11:38  153398.1      0.28       4.4       0.4 result[7]                
+    0:11:40  153415.1      0.27       4.3       0.4 result[7]                
+    0:11:41  153448.2      0.27       4.3       0.4 result[7]                
+    0:11:45  153561.8      0.25       4.0       0.4 result[7]                
+    0:11:48  153649.3      0.25       3.9       0.4 result[7]                
+    0:11:50  153674.7      0.25       3.9       0.4 result[7]                
+    0:11:50  153695.2      0.24       3.9       0.4 result[7]                
+    0:11:51  153710.0      0.24       3.9       0.4 result[7]                
+    0:11:54  153743.9      0.24       3.9       0.4 result[7]                
+    0:11:55  153772.8      0.24       3.8       0.4 result[7]                
+    0:11:56  153808.1      0.24       3.8       0.4 result[7]                
+    0:11:57  153813.0      0.24       3.8       0.4 result[7]                
+    0:11:57  153820.1      0.24       3.8       0.4 result[7]                
+    0:11:58  153834.9      0.24       3.8       0.4 result[7]                
+    0:11:59  153851.1      0.24       3.8       0.4 result[7]                
+    0:12:00  153914.6      0.23       3.7       0.4 result[7]                
+    0:12:01  153927.3      0.22       3.6       0.4 result[7]                
+    0:12:10  154170.1      0.18       2.8       0.4 result[7]                
+    0:12:13  154240.6      0.17       2.7       0.4 result[7]                
+    0:12:20  154357.1      0.16       2.5       0.4 result[7]                
+    0:12:24  154410.0      0.15       2.4       0.4 result[7]                
+    0:12:26  154449.5      0.15       2.4       0.4 result[7]                
+    0:12:29  154534.9      0.14       2.3       0.4 result[7]                
+    0:12:33  154585.0      0.14       2.2       0.4 result[7]                
+    0:12:35  154614.6      0.13       2.1       0.4 result[7]                
+    0:12:36  154628.0      0.13       2.1       0.4 result[7]                
+    0:12:37  154643.5      0.13       2.1       0.4 result[7]                
+    0:12:38  154685.2      0.13       2.1       0.4 result[7]                
+    0:12:40  154714.8      0.13       2.0       0.4 result[7]                
+    0:12:42  154730.3      0.13       2.0       0.4 result[7]                
+    0:12:43  154740.2      0.13       2.0       0.4 result[7]                
+    0:12:44  154750.8      0.12       2.0       0.4 result[7]                
+    0:12:45  154745.8      0.12       2.0       0.4 result[7]                
+    0:12:51  154902.5      0.10       1.6       0.4 result[7]                
+    0:12:53  154931.4      0.10       1.5       0.4 result[7]                
+    0:12:56  154993.5      0.09       1.5       0.4 result[7]                
+    0:12:58  154986.5      0.09       1.4       0.4 result[7]                
+    0:13:00  155026.7      0.09       1.4       0.4 result[7]                
+    0:13:01  155042.2      0.09       1.4       0.4 result[7]                
+    0:13:02  155071.1      0.09       1.3       0.4 result[7]                
+    0:13:04  155087.4      0.08       1.3       0.4 result[7]                
+    0:13:05  155107.1      0.08       1.3       0.4 result[7]                
+    0:13:06  155129.0      0.08       1.3       0.4 result[7]                
+    0:13:07  155133.2      0.08       1.3       0.4 result[7]                
+    0:13:08  155145.2      0.08       1.3       0.4 result[7]                
+    0:13:09  155139.6      0.08       1.3       0.4 result[7]                
+    0:13:10  155143.8      0.08       1.3       0.4 result[7]                
+    0:13:13  155207.3      0.07       1.1       0.4 result[7]                
+    0:13:16  155249.6      0.06       1.0       0.4 result[7]                
+    0:13:17  155297.6      0.06       0.9       0.4 result[7]                
+    0:13:19  155315.3      0.06       0.9       0.4 result[7]                
+    0:13:21  155371.0      0.05       0.8       0.4 result[7]                
+    0:13:23  155425.3      0.05       0.7       0.4 result[7]                
+    0:13:25  155434.5      0.04       0.6       0.4 result[7]                
+    0:13:27  155459.9      0.04       0.6       0.4 result[7]                
+    0:13:29  155467.0      0.03       0.5       0.4 result[7]                
+    0:13:30  155465.6      0.03       0.5       0.4 result[7]                
+    0:13:32  155480.4      0.02       0.3       0.4 result[7]                
+    0:13:34  155558.7      0.02       0.2       0.4 result[7]                
+    0:13:36  155569.3      0.01       0.1       0.4 result[7]                
+    0:13:38  155578.5      0.00       0.0       0.6                          
+    0:13:38  155578.5      0.00       0.0       0.6                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:13:38  155578.5      0.00       0.0       0.6                          
+    0:13:38  155516.4      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:13:38  155516.4      0.00       0.0       0.0                          
+    0:13:38  155516.4      0.00       0.0       0.0                          
+    0:13:40  154804.4      0.08       1.3       0.0                          
+    0:13:40  154716.9      0.07       1.1       0.0                          
+    0:13:41  154680.9      0.06       0.9       0.0                          
+    0:13:41  154637.9      0.06       0.9       0.0                          
+    0:13:41  154615.3      0.06       0.9       0.0                          
+    0:13:41  154615.3      0.06       0.9       0.0                          
+    0:13:46  154627.3      0.01       0.1       0.0 result[4]                
+    0:13:49  154627.3      0.00       0.0       0.0                          
+    0:13:51  150767.7      0.70      10.9       0.0                          
+    0:13:52  149889.9      0.65      10.2       0.0                          
+    0:13:52  149584.4      0.64      10.0       0.0                          
+    0:13:53  149561.8      0.64       9.9       0.0                          
+    0:13:53  149551.2      0.64       9.9       0.0                          
+    0:13:53  149551.2      0.64       9.9       0.0                          
+    0:13:53  149551.2      0.64       9.9       0.0                          
+    0:13:53  149551.2      0.64       9.9       0.0                          
+    0:13:57  149657.1      0.36       5.8       0.0 result[15]               
+    0:14:01  149714.2      0.32       5.0       0.0 result[4]                
+    0:14:05  149832.8      0.29       4.6       0.0 result[4]                
+    0:14:09  149930.8      0.25       4.0       0.0 result[15]               
+    0:14:11  149973.9      0.23       3.7       0.0 result[4]                
+    0:14:14  150037.4      0.22       3.5       0.0 result[4]                
+    0:14:17  150093.8      0.20       3.2       0.0 result[8]                
+    0:14:23  150762.7      0.15       2.4       0.0 result[8]                
+    0:14:25  150877.0      0.13       2.1       0.0 result[8]                
+    0:14:27  150979.4      0.12       1.9       0.0 result[8]                
+    0:14:36  151498.0      0.06       1.0       0.0 result[6]                
+    0:14:40  151694.8      0.03       0.5       0.0 result[6]                
+    0:14:47  151951.0      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Current design is 'tracking_atan'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_atan.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_atan.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+FRESH_PARTITION_DONE tracking_atan
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:507: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_divide_aid'.
+
+  Linking design 'tracking_divide_aid'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/work/tracking_divide_aid.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FRESH_PARTITION_BEGIN tracking_divide_aid
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_divide_aid'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_divide_aid_DW01_add_0'
+  Mapping 'tracking_divide_aid_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00    7980.3      0.00       0.0       0.0                          
+    0:00:00    7980.3      0.00       0.0       0.0                          
+    0:00:00    7980.3      0.00       0.0       0.0                          
+    0:00:00    7980.3      0.00       0.0       0.0                          
+    0:00:00    7980.3      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:00    5922.8      0.00       0.0       0.0                          
+    0:00:01    5922.8      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01    5922.8      0.00       0.0       0.0                          
+    0:00:01    5922.8      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+    0:00:01    5918.6      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'tracking_divide_aid' inherited license information from design 'tracking_divide_aid_DW_mult_tc_0'. (DDB-74)
+Information: Added key list 'DesignWare' to design 'tracking_divide_aid'. (DDB-72)
+Current design is 'tracking_divide_aid'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_divide_aid.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_divide_aid.v'.
+FRESH_PARTITION_DONE tracking_divide_aid
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:494: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_divide_step'.
+
+  Linking design 'tracking_divide_step'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/work/tracking_divide_step.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FRESH_PARTITION_BEGIN tracking_divide_step
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_divide_step'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_divide_step_DW01_add_0'
+  Mapping 'tracking_divide_step_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 22)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   12881.4      0.00       0.0       0.0                          
+    0:00:02   12881.4      0.00       0.0       0.0                          
+    0:00:02   12881.4      0.00       0.0       0.0                          
+    0:00:02   12881.4      0.00       0.0       0.0                          
+    0:00:02   12881.4      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10698.3      0.00       0.0       0.0                          
+    0:00:02   10675.7      0.00       0.0       0.0                          
+    0:00:02   10668.0      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+    0:00:02   10665.1      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'tracking_divide_step' inherited license information from design 'tracking_divide_step_DW_mult_tc_2'. (DDB-74)
+Information: Added key list 'DesignWare' to design 'tracking_divide_step'. (DDB-72)
+Current design is 'tracking_divide_step'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_divide_step.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_divide_step.v'.
+FRESH_PARTITION_DONE tracking_divide_step
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:273: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:276: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:281: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:293: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:296: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:301: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:313: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:316: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:321: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:333: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:336: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:341: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:353: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:356: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:361: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:373: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:376: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:381: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:393: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:396: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:401: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:413: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:416: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/tracking_channel_minimal.sv:421: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_ratio_code'.
+
+  Linking design 'tracking_ratio_code'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               /home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/work/tracking_ratio_code.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FRESH_PARTITION_BEGIN tracking_ratio_code
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_ratio_code'
+Information: Added key list 'DesignWare' to design 'tracking_ratio_code'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_ratio_code_DW01_sub_0'
+  Processing 'tracking_ratio_code_DW01_sub_1'
+  Processing 'tracking_ratio_code_DW01_sub_2'
+  Processing 'tracking_ratio_code_DW01_sub_3'
+  Processing 'tracking_ratio_code_DW01_sub_4'
+  Processing 'tracking_ratio_code_DW01_sub_5'
+  Processing 'tracking_ratio_code_DW01_sub_6'
+  Processing 'tracking_ratio_code_DW01_sub_7'
+  Processing 'tracking_ratio_code_DW01_sub_8'
+  Processing 'tracking_ratio_code_DW01_sub_9'
+  Processing 'tracking_ratio_code_DW01_sub_10'
+  Processing 'tracking_ratio_code_DW01_sub_11'
+  Processing 'tracking_ratio_code_DW01_sub_12'
+  Processing 'tracking_ratio_code_DW01_sub_13'
+  Processing 'tracking_ratio_code_DW01_sub_14'
+  Processing 'tracking_ratio_code_DW01_sub_15'
+  Processing 'tracking_ratio_code_DW01_sub_16'
+  Processing 'tracking_ratio_code_DW01_sub_17'
+  Processing 'tracking_ratio_code_DW01_sub_18'
+  Processing 'tracking_ratio_code_DW01_sub_19'
+  Processing 'tracking_ratio_code_DW01_sub_20'
+  Processing 'tracking_ratio_code_DW01_sub_21'
+  Processing 'tracking_ratio_code_DW01_sub_22'
+  Processing 'tracking_ratio_code_DW01_sub_23'
+  Mapping 'tracking_ratio_code_DW_mult_uns_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 23)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:19  122442.8      0.00       0.0       0.0 *cell*327828/U303/Y      
+    0:00:19  122442.8      0.00       0.0       0.0 *cell*327828/U303/Y      
+    0:00:19  122280.5      0.00       0.0       0.0 *cell*327828/*cell*327985/CO
+    0:00:19  122175.3      0.00       0.0       0.0 *cell*327828/U351/Y      
+    0:00:19  122080.1      0.00       0.0       0.0 *cell*327828/U324/Y      
+    0:00:19  121959.4      0.00       0.0       0.0 *cell*327828/U287/Y      
+    0:00:19  121875.5      0.00       0.0       0.0 *cell*327828/U259/Y      
+    0:00:19  121782.3      0.00       0.0       0.0 *cell*327828/*cell*328124/Y
+    0:00:19  121691.3      0.00       0.0       0.0 *cell*327828/*cell*328151/Y
+    0:00:19  121593.9      0.00       0.0       0.0 *cell*327828/U161/Y      
+    0:00:19  121494.4      0.00       0.0       0.0 *cell*327828/U134/Y      
+    0:00:20  121409.1      0.00       0.0       0.0 *cell*327828/*cell*328235/Y
+    0:00:20  121310.3      0.00       0.0       0.0 *cell*327828/U63/Y       
+    0:00:20  121215.0      0.00       0.0       0.0 *cell*327828/*cell*328312/Y
+    0:00:20  121147.3      0.00       0.0       0.0 *cell*327828/U362/Y      
+    0:00:20  120046.6      0.14       0.2       0.0 *cell*328341/*cell*328427/Y
+    0:00:21  120067.0      0.00       0.0       0.0 *cell*328341/U117/Y      
+    0:00:22  119899.1      0.00       0.0       0.0 *cell*328341/*cell*328548/Y
+    0:00:22  119726.9      0.00       0.0       0.0 *cell*328341/*cell*328588/Y
+    0:00:22  119612.6      0.00       0.0       0.0 *cell*328341/*cell*328641/Y
+    0:00:23  119534.3      0.00       0.0       0.0 *cell*328341/*cell*328667/Y
+    0:00:23  119397.4      0.00       0.0       0.0 *cell*328341/U420/Y      
+    0:00:23  119300.7      0.00       0.0       0.0 *cell*328341/*cell*328618/Y
+    0:00:23  119256.3      0.00       0.0       0.0 *cell*328341/*cell*328757/Y
+    0:00:23  119185.7      0.00       0.0       0.0 *cell*328341/*cell*328782/Y
+    0:00:23  119129.3      0.00       0.0       0.0 *cell*328341/U148/Y      
+    0:00:24  119082.0      0.00       0.0       0.0 *cell*328341/U71/Y       
+    0:00:24  119035.4      0.00       0.0       0.0 *cell*328341/*cell*328836/Y
+    0:00:24  118988.9      0.00       0.0       0.0 *cell*328341/U302/Y      
+    0:00:24  118900.7      0.00       0.0       0.0 *cell*328341/*cell*328851/Y
+    0:00:24  118812.5      0.00       0.0       0.0 *cell*328341/*cell*328583/Y
+    0:00:24  118760.9      0.00       0.0       0.0 *cell*328341/*cell*328535/Y
+    0:00:24  118700.3      0.00       0.0       0.0 *cell*328341/U392/Y      
+    0:00:24  118645.9      0.00       0.0       0.0 *cell*328341/U137/Y      
+    0:00:24  118562.7      0.00       0.0       0.0 *cell*328341/*cell*328940/Y
+    0:00:24  118504.8      0.00       0.0       0.0 *cell*328341/U148/Y      
+    0:00:24  118463.2      0.00       0.0       0.0 *cell*328341/*cell*328985/Y
+    0:00:24  118428.6      0.00       0.0       0.0 *cell*328341/U20/Y       
+    0:00:25  118382.0      0.00       0.0       0.0 *cell*328341/*cell*329028/Y
+    0:00:25  118350.3      0.00       0.0       0.0 *cell*328341/*cell*328561/Y
+    0:00:25  118288.9      0.00       0.0       0.0 *cell*328341/*cell*328767/Y
+    0:00:25  118257.2      0.00       0.0       0.0 *cell*328341/*cell*328811/Y
+    0:00:25  118246.6      0.00       0.0       0.0 *cell*328341/*cell*328793/Y
+    0:00:25  118240.2      0.00       0.0       0.0 *cell*328341/U537/Y      
+    0:00:25  118164.0      0.00       0.0       0.0 *cell*328341/U553/Y      
+    0:00:25  118087.8      0.00       0.0       0.0 *cell*328341/U571/Y      
+    0:00:25  118011.6      0.00       0.0       0.0 *cell*328341/U588/Y      
+    0:00:26  117484.5      0.06       0.1       0.0 *cell*329131/*cell*329219/Y
+    0:00:26  117358.9      0.00       0.0       0.0 *cell*329131/U272/Y      
+    0:00:26  117168.4      0.00       0.0       0.0 *cell*329131/*cell*329311/Y
+    0:00:27  117080.2      0.00       0.0       0.0 *cell*329131/*cell*329285/Y
+    0:00:27  116906.6      0.00       0.0       0.0 *cell*329131/U525/Y      
+    0:00:27  116790.9      0.00       0.0       0.0 *cell*329131/*cell*329398/Y
+    0:00:27  116700.6      0.00       0.0       0.0 *cell*329131/*cell*329408/Y
+    0:00:27  116535.5      0.00       0.0       0.0 *cell*329131/*cell*329437/Y
+    0:00:27  116463.5      0.00       0.0       0.0 *cell*329131/*cell*329465/Y
+    0:00:27  116373.9      0.00       0.0       0.0 *cell*329131/*cell*329378/Y
+    0:00:27  116304.0      0.00       0.0       0.0 *cell*329131/*cell*329539/Y
+    0:00:27  116234.2      0.00       0.0       0.0 *cell*329131/*cell*329342/Y
+    0:00:27  116147.4      0.00       0.0       0.0 *cell*329131/*cell*329405/Y
+    0:00:27  116031.0      0.00       0.0       0.0 *cell*329131/*cell*329604/Y
+    0:00:27  115940.0      0.00       0.0       0.0 *cell*329131/*cell*329615/Y
+    0:00:27  115861.6      0.00       0.0       0.0 *cell*329131/*cell*329477/Y
+    0:00:27  115771.3      0.00       0.0       0.0 *cell*329131/U273/Y      
+    0:00:27  115688.8      0.00       0.0       0.0 *cell*329131/U320/Y      
+    0:00:27  115602.0      0.00       0.0       0.0 *cell*329131/*cell*329707/Y
+    0:00:27  115513.1      0.00       0.0       0.0 *cell*329131/*cell*329649/Y
+    0:00:27  115438.3      0.00       0.0       0.0 *cell*329131/U488/Y      
+    0:00:28  115398.1      0.00       0.0       0.0 *cell*329131/*cell*329636/Y
+    0:00:28  115343.0      0.00       0.0       0.0 *cell*329131/U22/Y       
+    0:00:28  115262.6      0.00       0.0       0.0 *cell*329131/*cell*329718/Y
+    0:00:28  115213.9      0.00       0.0       0.0 *cell*329131/*cell*329759/Y
+    0:00:28  115167.3      0.00       0.0       0.0 *cell*329131/*cell*329809/Y
+    0:00:28  115125.0      0.00       0.0       0.0 *cell*329131/*cell*329558/Y
+    0:00:28  115074.2      0.00       0.0       0.0 *cell*329131/U637/Y      
+    0:00:28  114989.5      0.00       0.0       0.0 *cell*329131/U655/Y      
+    0:00:28  114909.1      0.00       0.0       0.0 *cell*329131/U674/Y      
+    0:00:28  112896.7      0.66       1.5       0.0 *cell*329876/U1/Y        
+    0:00:29  112533.3      0.00       0.0       0.0 *cell*329876/U383/Y      
+    0:00:29  112410.5      0.00       0.0       0.0 *cell*329876/U388/Y      
+    0:00:29  112267.3      0.00       0.0       0.0 *cell*329876/*cell*330040/Y
+    0:00:29  112158.6      0.00       0.0       0.0 *cell*329876/*cell*330040/Y
+    0:00:29  112076.1      0.00       0.0       0.0 *cell*329876/*cell*330097/Y
+    0:00:29  111993.5      0.00       0.0       0.0 *cell*329876/U402/Y      
+    0:00:29  111908.9      0.00       0.0       0.0 *cell*329876/U406/Y      
+    0:00:29  111839.0      0.00       0.0       0.0 *cell*329876/*cell*330141/Y
+    0:00:29  111743.8      0.00       0.0       0.0 *cell*329876/*cell*330193/Y
+    0:00:29  111654.9      0.00       0.0       0.0 *cell*329876/*cell*330218/Y
+    0:00:29  111570.2      0.00       0.0       0.0 *cell*329876/U421/Y      
+    0:00:29  111481.3      0.00       0.0       0.0 *cell*329876/*cell*330248/Y
+    0:00:29  111390.3      0.00       0.0       0.0 *cell*329876/*cell*330263/Y
+    0:00:29  111333.1      0.00       0.0       0.0 *cell*329876/*cell*330307/Y
+    0:00:30  111273.8      0.00       0.0       0.0 *cell*329876/*cell*330325/Y
+    0:00:30  110104.6      0.44       0.9       0.0 *cell*330350/U94/Y       
+    0:00:30  109826.6      0.04       0.0       0.0 *cell*330350/*cell*330449/Y
+    0:00:31  109744.8      0.00       0.0       0.0 *cell*330350/*cell*330481/Y
+    0:00:31  109638.2      0.00       0.0       0.0 *cell*330350/U510/Y      
+    0:00:31  109527.5      0.00       0.0       0.0 *cell*330350/U351/Y      
+    0:00:31  109419.5      0.00       0.0       0.0 *cell*330350/*cell*330584/Y
+    0:00:32  109358.8      0.00       0.0       0.0 *cell*330350/*cell*330604/Y
+    0:00:32  109226.2      0.00       0.0       0.0 *cell*330350/U286/Y      
+    0:00:32  109167.6      0.00       0.0       0.0 *cell*330350/*cell*330625/Y
+    0:00:32  109064.6      0.00       0.0       0.0 *cell*330350/*cell*330660/Y
+    0:00:32  108984.9      0.00       0.0       0.0 *cell*330350/*cell*330627/Y
+    0:00:32  108932.6      0.00       0.0       0.0 *cell*330350/*cell*330720/Y
+    0:00:32  108864.9      0.00       0.0       0.0 *cell*330350/*cell*330614/Y
+    0:00:32  108807.0      0.00       0.0       0.0 *cell*330350/U441/Y      
+    0:00:32  108764.7      0.00       0.0       0.0 *cell*330350/U151/Y      
+    0:00:32  108690.6      0.00       0.0       0.0 *cell*330350/U296/Y      
+    0:00:32  108640.5      0.00       0.0       0.0 *cell*330350/*cell*330574/Y
+    0:00:32  108583.4      0.00       0.0       0.0 *cell*330350/U458/Y      
+    0:00:32  108522.7      0.00       0.0       0.0 *cell*330350/U70/Y       
+    0:00:32  108457.1      0.00       0.0       0.0 *cell*330350/*cell*330495/Y
+    0:00:32  108378.8      0.00       0.0       0.0 *cell*330350/*cell*330852/Y
+    0:00:32  108338.5      0.00       0.0       0.0 *cell*330350/U16/Y       
+    0:00:32  108299.7      0.00       0.0       0.0 *cell*330350/U18/Y       
+    0:00:33  108263.7      0.00       0.0       0.0 *cell*330350/*cell*330624/Y
+    0:00:33  108236.2      0.00       0.0       0.0 *cell*330350/*cell*330683/Y
+    0:00:33  108234.1      0.00       0.0       0.0 *cell*330350/*cell*330710/Y
+    0:00:33  108166.4      0.00       0.0       0.0 *cell*330350/U529/Y      
+    0:00:33  108090.2      0.00       0.0       0.0 *cell*330350/U547/Y      
+    0:00:33  108014.0      0.00       0.0       0.0 *cell*330350/U565/Y      
+    0:00:33  106498.3      0.06       0.1       0.0 *cell*331014/U470/Y      
+    0:00:34  106377.7      0.00       0.0       0.0 *cell*331014/U392/Y      
+    0:00:34  106290.9      0.00       0.0       0.0 *cell*331014/U392/Y      
+    0:00:34  106187.2      0.00       0.0       0.0 *cell*331014/U66/Y       
+    0:00:34  106056.6      0.00       0.0       0.0 *cell*331014/*cell*331171/Y
+    0:00:34  105977.6      0.00       0.0       0.0 *cell*331014/U477/Y      
+    0:00:34  105873.2      0.00       0.0       0.0 *cell*331014/*cell*331149/Y
+    0:00:34  105775.8      0.00       0.0       0.0 *cell*331014/*cell*331205/Y
+    0:00:34  105729.2      0.00       0.0       0.0 *cell*331014/*cell*331266/Y
+    0:00:34  105635.4      0.00       0.0       0.0 *cell*331014/U59/Y       
+    0:00:34  105585.3      0.00       0.0       0.0 *cell*331014/U44/Y       
+    0:00:34  105535.2      0.00       0.0       0.0 *cell*331014/*cell*331375/Y
+    0:00:34  105458.3      0.00       0.0       0.0 *cell*331014/*cell*331386/Y
+    0:00:34  105403.2      0.00       0.0       0.0 *cell*331014/*cell*331409/Y
+    0:00:34  105346.1      0.00       0.0       0.0 *cell*331014/*cell*331289/Y
+    0:00:34  105293.2      0.00       0.0       0.0 *cell*331014/*cell*331301/Y
+    0:00:34  105244.5      0.00       0.0       0.0 *cell*331014/U301/Y      
+    0:00:35  105225.4      0.00       0.0       0.0 *cell*331014/U412/Y      
+    0:00:35  105153.5      0.00       0.0       0.0 *cell*331014/U195/Y      
+    0:00:35  105092.8      0.00       0.0       0.0 *cell*331014/U41/Y       
+    0:00:35  105035.6      0.00       0.0       0.0 *cell*331014/U18/Y       
+    0:00:35  105010.2      0.00       0.0       0.0 *cell*331014/*cell*331575/Y
+    0:00:35  104991.2      0.00       0.0       0.0 *cell*331014/*cell*331533/Y
+    0:00:35  104919.2      0.00       0.0       0.0 *cell*331014/U518/Y      
+    0:00:35  104843.0      0.00       0.0       0.0 *cell*331014/U536/Y      
+    0:00:35  104766.8      0.00       0.0       0.0 *cell*331014/U554/Y      
+    0:00:35  103473.4      0.16       0.3       0.0 *cell*331657/U526/S      
+    0:00:36  103395.1      0.00       0.0       0.0 *cell*331657/*cell*331793/Y
+    0:00:36  103248.3      0.00       0.0       0.0 *cell*331657/U310/Y      
+    0:00:37  103140.4      0.00       0.0       0.0 *cell*331657/*cell*331847/Y
+    0:00:37  103033.8      0.00       0.0       0.0 *cell*331657/*cell*331882/Y
+    0:00:37  102944.2      0.00       0.0       0.0 *cell*331657/U242/Y      
+    0:00:37  102861.0      0.00       0.0       0.0 *cell*331657/U283/Y      
+    0:00:37  102771.3      0.00       0.0       0.0 *cell*331657/U472/Y      
+    0:00:37  102726.2      0.00       0.0       0.0 *cell*331657/*cell*331857/Y
+    0:00:37  102643.6      0.00       0.0       0.0 *cell*331657/U160/Y      
+    0:00:37  102547.0      0.00       0.0       0.0 *cell*331657/*cell*332061/Y
+    0:00:38  102510.3      0.00       0.0       0.0 *cell*331657/*cell*332058/Y
+    0:00:38  102460.9      0.00       0.0       0.0 *cell*331657/*cell*332091/Y
+    0:00:38  102377.6      0.00       0.0       0.0 *cell*331657/*cell*332074/Y
+    0:00:38  102296.5      0.00       0.0       0.0 *cell*331657/U380/Y      
+    0:00:38  102213.2      0.00       0.0       0.0 *cell*331657/U134/Y      
+    0:00:38  102162.4      0.00       0.0       0.0 *cell*331657/*cell*332093/Y
+    0:00:38  102096.8      0.00       0.0       0.0 *cell*331657/*cell*332173/Y
+    0:00:38  102054.5      0.00       0.0       0.0 *cell*331657/U22/Y       
+    0:00:38  101947.9      0.00       0.0       0.0 *cell*331657/*cell*332255/Y
+    0:00:38  101910.5      0.00       0.0       0.0 *cell*331657/U93/Y       
+    0:00:38  101854.8      0.00       0.0       0.0 *cell*331657/U10/Y       
+    0:00:38  101835.7      0.00       0.0       0.0 *cell*331657/*cell*332088/Y
+    0:00:38  101814.6      0.00       0.0       0.0 *cell*331657/*cell*331968/Y
+    0:00:38  101808.2      0.00       0.0       0.0 *cell*331657/U530/Y      
+    0:00:38  101727.8      0.00       0.0       0.0 *cell*331657/U547/Y      
+    0:00:38  101651.6      0.00       0.0       0.0 *cell*331657/U565/Y      
+    0:00:38  101575.4      0.00       0.0       0.0 *cell*331657/U584/Y      
+    0:00:39  100409.0      0.09       0.1       0.0 *cell*332351/*cell*332431/Y
+    0:00:39  100284.8      0.00       0.0       0.0 *cell*332351/*cell*332476/Y
+    0:00:40  100174.7      0.00       0.0       0.0 *cell*332351/*cell*332471/Y
+    0:00:40  100019.5      0.00       0.0       0.0 *cell*332351/U514/Y      
+    0:00:40   99883.3      0.00       0.0       0.0 *cell*332351/*cell*332518/Y
+    0:00:40   99777.5      0.00       0.0       0.0 *cell*332351/U390/Y      
+    0:00:40   99690.7      0.00       0.0       0.0 *cell*332351/*cell*332646/Y
+    0:00:40   99620.1      0.00       0.0       0.0 *cell*332351/*cell*332530/Y
+    0:00:40   99534.8      0.00       0.0       0.0 *cell*332351/U139/Y      
+    0:00:40   99475.5      0.00       0.0       0.0 *cell*332351/*cell*332721/Y
+    0:00:41   99416.2      0.00       0.0       0.0 *cell*332351/U457/Y      
+    0:00:41   99333.0      0.00       0.0       0.0 *cell*332351/*cell*332787/Y
+    0:00:41   99249.7      0.00       0.0       0.0 *cell*332351/*cell*332591/Y
+    0:00:41   99178.4      0.00       0.0       0.0 *cell*332351/*cell*332798/Y
+    0:00:41   99126.2      0.00       0.0       0.0 *cell*332351/*cell*332593/Y
+    0:00:41   99070.5      0.00       0.0       0.0 *cell*332351/*cell*332678/Y
+    0:00:41   99015.4      0.00       0.0       0.0 *cell*332351/U313/Y      
+    0:00:41   98971.0      0.00       0.0       0.0 *cell*332351/*cell*332867/Y
+    0:00:41   98904.7      0.00       0.0       0.0 *cell*332351/*cell*332547/Y
+    0:00:41   98854.6      0.00       0.0       0.0 *cell*332351/*cell*332939/Y
+    0:00:41   98823.5      0.00       0.0       0.0 *cell*332351/U140/Y      
+    0:00:41   98773.4      0.00       0.0       0.0 *cell*332351/U99/Y       
+    0:00:41   98743.8      0.00       0.0       0.0 *cell*332351/*cell*332487/Y
+    0:00:41   98693.0      0.00       0.0       0.0 *cell*332351/*cell*332985/Y
+    0:00:41   98665.5      0.00       0.0       0.0 *cell*332351/*cell*332911/Y
+    0:00:41   98646.4      0.00       0.0       0.0 *cell*332351/U534/Y      
+    0:00:41   98570.2      0.00       0.0       0.0 *cell*332351/U550/Y      
+    0:00:41   98494.0      0.00       0.0       0.0 *cell*332351/U568/Y      
+    0:00:41   98417.8      0.00       0.0       0.0 *cell*332351/U586/Y      
+    0:00:42   98396.6      0.00       0.0       0.0                          
+    0:00:42   98396.6      0.00       0.0       0.0                          
+    0:00:42   98396.6      0.00       0.0       0.0                          
+    0:00:42   98396.6      0.00       0.0       0.0                          
+    0:00:42   98396.6      0.00       0.0       0.0                          
+    0:00:45   48975.7      3.43      17.5       0.0                          
+    0:00:47   49337.7      2.81      13.7       0.0                          
+    0:00:48   49100.6      2.42      10.7       0.0                          
+    0:00:49   49128.1      2.20       9.1       0.0                          
+    0:00:49   49150.0      2.20       9.2       0.0                          
+    0:00:49   49179.6      2.00       8.0       0.0                          
+    0:00:50   49190.9      1.95       7.7       0.0                          
+    0:00:50   49183.1      1.93       7.6       0.0                          
+    0:00:50   49193.0      1.93       7.6       0.0                          
+    0:00:50   49174.0      1.93       7.6       0.0                          
+    0:00:50   49174.0      1.93       7.6       0.0                          
+    0:00:50   49174.0      1.93       7.6       0.0                          
+    0:00:50   49174.0      1.93       7.6       0.0                          
+    0:00:50   49174.0      1.93       7.6       0.0                          
+    0:00:50   49174.0      1.93       7.6       0.0                          
+    0:00:50   49174.0      1.93       7.6       0.0                          
+    0:00:52   49345.4      1.70       6.3       0.0 result[0]                
+    0:00:53   49502.8      1.52       5.5       0.0 result[0]                
+    0:00:54   49811.1      1.30       4.2       0.0 result[0]                
+    0:00:55   50185.1      1.08       3.2       0.0 result[0]                
+    0:00:56   50348.1      0.99       2.9       0.0 result[0]                
+    0:00:57   50787.0      0.67       1.6       0.0 result[0]                
+    0:00:58   51660.5      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:58   51660.5      0.00       0.0       0.0                          
+    0:00:58   51660.5      0.00       0.0       0.0                          
+    0:00:58   51660.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:58   51660.5      0.00       0.0       0.0                          
+    0:00:58   51660.5      0.00       0.0       0.0                          
+    0:00:59   51441.1      0.00       0.0       0.0                          
+    0:00:59   51417.1      0.02       0.0       0.0                          
+    0:00:59   51408.6      0.01       0.0       0.0                          
+    0:00:59   51403.7      0.01       0.0       0.0                          
+    0:00:59   51403.7      0.01       0.0       0.0                          
+    0:00:59   51403.7      0.01       0.0       0.0                          
+    0:00:59   51407.9      0.00       0.0       0.0                          
+    0:00:59   50529.4      0.39       0.7       0.0                          
+    0:00:59   50467.3      0.38       0.7       0.0                          
+    0:01:00   50462.4      0.38       0.7       0.0                          
+    0:01:00   50462.4      0.38       0.7       0.0                          
+    0:01:00   50462.4      0.38       0.7       0.0                          
+    0:01:00   50462.4      0.38       0.7       0.0                          
+    0:01:00   50462.4      0.38       0.7       0.0                          
+    0:01:00   50462.4      0.38       0.7       0.0                          
+    0:01:01   50656.4      0.08       0.2       0.0 result[0]                
+    0:01:02   50678.3      0.00       0.0       0.0 result[0]                
+    0:01:02   50679.0      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Current design is 'tracking_ratio_code'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_ratio_code.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_ratio_code.v'.
+FRESH_PARTITION_DONE tracking_ratio_code
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:453: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_ratio_phase'.
+
+  Linking design 'tracking_ratio_phase'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (5 designs)               /home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/work/tracking_ratio_phase.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FRESH_PARTITION_BEGIN tracking_ratio_phase
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_ratio_phase'
+Information: Added key list 'DesignWare' to design 'tracking_ratio_phase'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_ratio_phase_DW01_sub_0'
+  Processing 'tracking_ratio_phase_DW01_sub_1'
+  Processing 'tracking_ratio_phase_DW01_sub_2'
+  Processing 'tracking_ratio_phase_DW01_sub_3'
+  Processing 'tracking_ratio_phase_DW01_sub_4'
+  Processing 'tracking_ratio_phase_DW01_sub_5'
+  Processing 'tracking_ratio_phase_DW01_sub_6'
+  Processing 'tracking_ratio_phase_DW01_sub_7'
+  Processing 'tracking_ratio_phase_DW01_sub_8'
+  Processing 'tracking_ratio_phase_DW01_sub_9'
+  Processing 'tracking_ratio_phase_DW01_sub_10'
+  Processing 'tracking_ratio_phase_DW01_sub_11'
+  Processing 'tracking_ratio_phase_DW01_sub_12'
+  Processing 'tracking_ratio_phase_DW01_sub_13'
+  Processing 'tracking_ratio_phase_DW01_sub_14'
+  Processing 'tracking_ratio_phase_DW01_sub_15'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 24)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   41699.5      0.00       0.0       0.0                          
+    0:00:04   41699.5      0.00       0.0       0.0                          
+    0:00:04   41699.5      0.00       0.0       0.0                          
+    0:00:04   41699.5      0.00       0.0       0.0                          
+    0:00:04   41699.5      0.00       0.0       0.0                          
+    0:00:06   17997.7      3.53      10.8       0.0                          
+    0:00:06   18467.7      0.71       1.1       0.0                          
+    0:00:07   18277.2      0.24       0.2       0.0                          
+    0:00:07   18276.5      0.00       0.0       0.0                          
+    0:00:07   18076.8      2.45       6.8       0.0                          
+    0:00:07   18118.4      2.18       5.7       0.0                          
+    0:00:07   18117.0      2.17       5.6       0.0                          
+    0:00:07   18121.2      2.18       5.7       0.0                          
+    0:00:07   18117.0      2.24       6.0       0.0                          
+    0:00:08   18121.2      2.20       5.8       0.0                          
+    0:00:08   18121.2      2.20       5.8       0.0                          
+    0:00:08   18121.2      2.20       5.8       0.0                          
+    0:00:08   18121.2      2.20       5.8       0.0                          
+    0:00:08   18121.2      2.20       5.8       0.0                          
+    0:00:08   18121.2      2.20       5.8       0.0                          
+    0:00:08   18121.2      2.20       5.8       0.0                          
+    0:00:08   18257.4      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   18257.4      0.00       0.0       0.0                          
+    0:00:08   18257.4      0.00       0.0       0.0                          
+    0:00:08   18257.4      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   18257.4      0.00       0.0       0.0                          
+    0:00:08   18257.4      0.00       0.0       0.0                          
+    0:00:08   18231.3      0.01       0.0       0.0                          
+    0:00:08   18191.1      0.00       0.0       0.0                          
+    0:00:08   18191.1      0.00       0.0       0.0                          
+    0:00:08   18191.1      0.00       0.0       0.0                          
+    0:00:08   18191.1      0.00       0.0       0.0                          
+    0:00:08   18191.1      0.00       0.0       0.0                          
+    0:00:08   17865.1      0.66       1.0       0.0                          
+    0:00:08   17834.7      0.66       1.0       0.0                          
+    0:00:08   17832.6      0.66       1.0       0.0                          
+    0:00:08   17832.6      0.66       1.0       0.0                          
+    0:00:08   17832.6      0.66       1.0       0.0                          
+    0:00:08   17832.6      0.66       1.0       0.0                          
+    0:00:08   17832.6      0.66       1.0       0.0                          
+    0:00:08   17832.6      0.66       1.0       0.0                          
+    0:00:09   17948.3      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Current design is 'tracking_ratio_phase'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_ratio_phase.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/clean_v6_parts_retry1/reports/tracking_ratio_phase.v'.
+FRESH_PARTITION_DONE tracking_ratio_phase
+puts "BACKEND_PARTITIONS_PASS"
+BACKEND_PARTITIONS_PASS
+exit 0
+
+Memory usage for main task 333 Mbytes.
+Memory usage for this session 333 Mbytes.
+CPU usage for this session 966 seconds ( 0.27 hours ).
+
+Thank you...

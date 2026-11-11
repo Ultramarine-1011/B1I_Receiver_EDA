@@ -1,0 +1,10 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 11 10:31 2026
+MAPPED_ARITHMETIC_EQUIVALENCE_PASS checks=20007 seed=112026b1
+$finish called from file "/home/ICer/ic_eda_backend_20261111/probes/tb_mapped_arithmetic.sv", line 51.
+$finish at simulation time             20007000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 20007000 ps
+CPU Time:      3.260 seconds;       Data structure size:   0.7Mb
+Wed Nov 11 10:31:57 2026

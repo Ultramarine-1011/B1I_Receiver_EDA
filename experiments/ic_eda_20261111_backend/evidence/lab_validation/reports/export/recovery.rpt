@@ -1,0 +1,135 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : backend_smoke
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 12:06:49 2026
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_7_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_7_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_0_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_0_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_1_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_1_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_2_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_2_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_3_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_3_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_4_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_4_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_5_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_5_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port clocked by clk)
+  Endpoint: count_reg_6_/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                 0.010000   0.010000 r
+  reset_n (in)                         0.000000   0.010000 r
+  count_reg_6_/RN (DFFRQX2) <-         0.000000   0.010000 r
+  data arrival time                               0.010000
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:44:40 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: init_valid (input port clocked by clk)
+  Endpoint: sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  init_valid (in)                      0.002472   1.002472 f
+  U3653/Y (BUFX2)                      0.042431   1.044903 f
+  U3652/Y (INVX2)                      0.087612   1.132515 r
+  U3654/Y (AND4X2)                     0.089341   1.221856 r
+  sample_ready (out)                   0.000000   1.221856 r
+  data arrival time                               1.221856
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  output external delay                -1.000000  8.800000
+  data required time                              8.800000
+  -----------------------------------------------------------
+  data required time                              8.800000
+  data arrival time                               -1.221856
+  -----------------------------------------------------------
+  slack (MET)                                     7.578144
+
+
+1

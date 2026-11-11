@@ -1,0 +1,15 @@
+{
+  "budget_s": 180.0, 
+  "cwd": "/home/ICer/ic_eda_backend_20261111/runs/old_v6_audit/work", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_backend_20261111/runs/old_v6_audit/reports/time.txt", 
+    "setsid", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "scripts/audit.tcl"
+  ]
+}

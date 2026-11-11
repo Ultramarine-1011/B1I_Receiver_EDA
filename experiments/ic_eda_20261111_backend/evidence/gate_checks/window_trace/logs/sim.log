@@ -1,0 +1,11 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 11 11:22 2026
+Doing SDF annotation ...... Done
+LAB_GLS_SMOKE_PASS corner=MAXIMUM cycles=300
+$finish called from file "tb_window.sv", line 50.
+$finish at simulation time              3040010
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3040010 ps
+CPU Time:      0.150 seconds;       Data structure size:  12.0Mb
+Wed Nov 11 11:22:49 2026

@@ -1,0 +1,4 @@
+/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell
+/home/synopsys/vcs/O-2018.09-SP2/bin/vcs
+/home/synopsys/pts/O-2018.06-SP1/bin/vcd2saif
+/usr/bin/python

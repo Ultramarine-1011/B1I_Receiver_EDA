@@ -1,0 +1,5 @@
+SYNTHESIS_CONFIGURATION_MATCH
+Traceback (most recent call last):
+  File "/home/ICer/ic_eda_backend_20261111/work/portable_delivery/experiments/ic_eda_20261111_backend/lab/check.py", line 89, in <module>
+    raise ValueError("Configuration differs from synthesis: " + name)
+ValueError: Configuration differs from synthesis: CLOCK_NS

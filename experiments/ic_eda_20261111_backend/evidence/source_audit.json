@@ -1,0 +1,152 @@
+{
+  "source_sha256": "ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88",
+  "runs": {
+    "full_v6_hier_10ns": {
+      "matching_files": 42,
+      "changed_after_run": {
+        "scripts/prepare_constants.py": {
+          "frozen_sha256": "d43b35a0030d003aec1ad3e99220b7790b7a31cae3b4e60d2803ac24ad17cc96",
+          "current_sha256": "e80d973213556d9be74e26f7e00b86ad1db0083e76e3d2e43bac69a19cca925d"
+        },
+        "scripts/run_scoped.sh": {
+          "frozen_sha256": "527b4d37c646f27b3f33c4e27475a749ec2803b9ae2ec8a17dc2236c4f07b7bf",
+          "current_sha256": "e9c426be3443e17d8203a88875aea36a4a57cff4211f11e1fa09f6586b2a6818"
+        },
+        "scripts/summarize.py": {
+          "frozen_sha256": "8a89bfd48cd3c98c9722f53a328e9182e121e7312a730c801bb24795f129b34c",
+          "current_sha256": "b5cdceeefd0b28b49b46ec9bdf55e136df94b06598fb1a79e64405a372d8c6f5"
+        }
+      },
+      "unavailable_files": []
+    },
+    "full_v6_cached_10ns": {
+      "matching_files": 48,
+      "changed_after_run": {
+        "scripts/prepare_constants.py": {
+          "frozen_sha256": "d43b35a0030d003aec1ad3e99220b7790b7a31cae3b4e60d2803ac24ad17cc96",
+          "current_sha256": "e80d973213556d9be74e26f7e00b86ad1db0083e76e3d2e43bac69a19cca925d"
+        },
+        "scripts/run_scoped.sh": {
+          "frozen_sha256": "f3fe1e4891dfbc936ac754d334e963d8419da9ba054d35acdc51ae8135db26d0",
+          "current_sha256": "e9c426be3443e17d8203a88875aea36a4a57cff4211f11e1fa09f6586b2a6818"
+        }
+      },
+      "unavailable_files": []
+    }
+  },
+  "original_cache_files": [
+    {
+      "file": "tracking_atan.ddc",
+      "sha256": "7d9296b660a31904916e63c7d895d23a4d95f7055269c7b61f054d998b6a17ca"
+    },
+    {
+      "file": "tracking_divide_aid.ddc",
+      "sha256": "7134c21747348f0a995914044506297c1077162a857783f42f9aa9c67977e6a9"
+    },
+    {
+      "file": "tracking_divide_step.ddc",
+      "sha256": "234c8aa46b5dea3bb55e2db3fa6e53754731e4dcfd1f9dd727d99d8b6facdc26"
+    },
+    {
+      "file": "tracking_ratio_code.ddc",
+      "sha256": "2202bbb2d34baab36cf3953f85a157687396709bf6a0a701cb596c3592ac6e6b"
+    },
+    {
+      "file": "tracking_ratio_phase.ddc",
+      "sha256": "d6a5bdcf762e62d10245742aba7b07111ef3bed4417d4b7c8e961f601d0fb4ea"
+    }
+  ],
+  "generator_reproduction": {
+    "sha256": "ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88",
+    "byte_identical": true,
+    "commands": [
+      {
+        "arguments": [
+          "prepare_radix.py"
+        ],
+        "exit_code": 0,
+        "stdout": "RADIX_PROBES_PREPARED v4,r4,r16,nr widths=57,29\n",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "prepare_constants.py"
+        ],
+        "exit_code": 0,
+        "stdout": "RECIPROCAL_BOUND_PROOF_PASS divisors=127875,763\n",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "prepare_accepted.py"
+        ],
+        "exit_code": 0,
+        "stdout": "ACCEPTED_PREPARED code=r4 phase=v4 constants=signed_exact feedback_cycles=unchanged\n",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "prepare_hier.py",
+          "--activate"
+        ],
+        "exit_code": 0,
+        "stdout": "HIERARCHY_STAGED five combinational arithmetic partitions, no added registers\n",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "prepare.py"
+        ],
+        "exit_code": 0,
+        "stdout": "PREPARE_PASS frozen reference and exact arithmetic probes generated\nCHANNEL_COMPARISON_PORTS 32\n",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "prepare_loop_equivalence.py"
+        ],
+        "exit_code": 0,
+        "stdout": "LOOP_EQUIVALENCE_PREPARE_PASS observed=18\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "protected_source_hashes": {
+    "student_release/student_release/rtl/acquisition_pcps.sv": "ee5d3c8f94040924b3ace3230b8a5765430632c2a532415b8ddfe16cb0d5c0d6",
+    "student_release/student_release/rtl/acquisition_refine.sv": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+    "student_release/student_release/rtl/acquisition_serial.sv": "a8d9067d0b3445710622e33ec71abd9adef0fc4812942a8a6a45950c020f0667",
+    "student_release/student_release/rtl/b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "student_release/student_release/rtl/bds_bb_6ch_core.sv": "1bcb43bb790125a7e128b9e9583ca3c683a51e6edfa0144ba9d36a87673fe3f8",
+    "student_release/student_release/rtl/carrier_nco_mixer.sv": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+    "student_release/student_release/rtl/carrier_quarter_lut.svh": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+    "student_release/student_release/rtl/code_nco.sv": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+    "student_release/student_release/rtl/d1_word_sync.sv": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+    "student_release/student_release/rtl/epl_correlator.sv": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+    "student_release/student_release/rtl/fft4096_serial.sv": "1e3cda5195cbc0bec9a27188ab4dba190928ec6cb588a44f76642f542a790fa7",
+    "student_release/student_release/rtl/fft_twiddle_rom.svh": "dff2e2f79a01588b642e2467eea33cf3832ebae6aa2bb7c0541304f99690b159",
+    "student_release/student_release/rtl/navigation_d1.sv": "85fb5e191344ef0898cea11055e2c0643a114fedad1c97804fb7fe661fe3f0e9",
+    "student_release/student_release/rtl/nh20_sync.sv": "0520daed58c8c06d0107292bbef81918c29f52bd2564d469b0ac74afcd25e454",
+    "student_release/student_release/rtl/receiver_channel.sv": "02167a8fc886330afd9a0e7fdb26bd3ecfd4003d0452fe20597554bd02f177eb",
+    "student_release/student_release/rtl/receiver_contract_pkg.sv": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+    "student_release/student_release/rtl/receiver_multichannel.sv": "44cb86927e7fa16402cf582cdf2effd5444f95fc04b47f9423d955ab27fd4b62",
+    "student_release/student_release/rtl/receiver_single.sv": "4dce6eff19a76a45ac63caced30b170cf5ea84ad6ad6efcc482e1d10d321c389",
+    "student_release/student_release/rtl/satellite_manager.sv": "4d3d34bc620b48a0298ad1564e74635dffd38fa7f5f7d7b75b094bdedf8e2f9f",
+    "student_release/student_release/rtl/stream_unpacker.sv": "86085a362b15bf80694dec2db55cb4fe6e06c0c2e206987cdbaf17ae7fc7da5c",
+    "student_release/student_release/rtl/student_receiver_core.sv": "2ec4308d07ee7e3e3309c712bcdfe23ea35bf2ecec187fa1e75232fe76fa3722",
+    "student_release/student_release/rtl/tracking_channel_minimal.sv": "a8d22cd15752e1305908d1769434c6c78ed9460093062a4ad1d6fb81bb74f9cf",
+    "student_release/student_release/rtl/tracking_frontend.sv": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+    "student_release/student_release/rtl/tracking_frontend_spaced.sv": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+    "student_release/student_release/rtl/tracking_record_framer.sv": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+    "rtl/b1i_prn_gen.sv": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+    "rtl/bds_bb_6ch_pad_top.sv": "2a433c3d5b79ff7531cb9623cc33b53b21f1a7cb65eabb9b202160360879bdaf",
+    "rtl/carrier_nco_mixer.sv": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+    "rtl/carrier_quarter_lut.svh": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+    "rtl/code_nco.sv": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+    "rtl/counter.v": "9176658b4c53488b17837e15a3fffb15c7dabe6ef8cb699f44bd4b54fae8c1a6",
+    "rtl/epl_correlator.sv": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+    "rtl/tracking_frontend.sv": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+    "261102/tsmc28_\u5b66\u751f\u4f7f\u7528\u8bf4\u660e.docx": "6ae6e6b5d3ea09dc7d72f8b3e64fa67cd0e50db0e5d7041d611e9ad176e9654f",
+    "261102/\u5317\u6597\u516d\u901a\u9053\u57fa\u5e26\u5904\u7406\u5668VCD\u529f\u8017\u8bc4\u4f30\u8bf4\u660e.pdf": "44b2a3ff6fd102d94d7b23132b241b309301308f0372b48033c188e30eb7fe5a",
+    "261102/\u5317\u6597\u57fa\u5e26\u4fe1\u53f7\u5904\u7406\u5668\u516d\u901a\u9053\u903b\u8f91\u7efc\u5408\u5b9e\u9a8c\u8981\u6c42.pdf": "1c5caddb003f812787563538e941f2eb9854a9f1c2b4e3e3d6036f9a99d1f8e6"
+  }
+}

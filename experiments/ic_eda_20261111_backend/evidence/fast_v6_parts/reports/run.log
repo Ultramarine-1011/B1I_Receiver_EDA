@@ -1,0 +1,1550 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+# Same V6 arithmetic, with a shorter budget for the three serial feedback blocks.
+source scripts/library.tcl
+1
+set report_dir $env(REPORT_DIR)
+/home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/reports
+foreach name {tracking_atan tracking_ratio_code} {
+    file copy $env(BASE_CACHE_DIR)/${name}.ddc $report_dir/${name}.ddc
+}
+if {![analyze -format sverilog -define SYNTHESIS rtl/tracking_channel_minimal.sv]} {exit 1}
+Running PRESTO HDLC
+Compiling source file ./rtl/tracking_channel_minimal.sv
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+foreach name {tracking_ratio_phase tracking_divide_step tracking_divide_aid} {
+    if {![elaborate $name] || ![link]} {exit 1}
+    set_operating_conditions $env(OPCOND) -library $env(STD_LIB)
+    create_clock -name module_clk -period 4
+    set_clock_uncertainty -setup 0.2 [get_clocks module_clk]
+    set_clock_uncertainty -hold 0.2 [get_clocks module_clk]
+    set_input_delay -clock module_clk -max 0 [all_inputs]
+    set_input_delay -clock module_clk -min 0 [all_inputs]
+    set_output_delay -clock module_clk -max 0 [all_outputs]
+    set_output_delay -clock module_clk -min 0 [all_outputs]
+    set_driving_cell -library $env(STD_LIB) -lib_cell $env(DRIVE_CELL) [all_inputs]
+    set_load [expr {4.0 * [load_of $env(STD_LIB)/$env(DRIVE_CELL)/$env(DRIVE_PIN)]}] [all_outputs]
+    puts "FAST_PARTITION_BEGIN $name"
+    if {![compile -map_effort medium]} {exit 1}
+    redirect $report_dir/${name}_qor.rpt {report_qor}
+    redirect $report_dir/${name}_timing.rpt {report_timing -delay max -max_paths 1 -significant_digits 6}
+    ungroup -all -flatten
+    reset_design
+    set_dont_touch [current_design] true
+    write -format ddc -hierarchy -output $report_dir/${name}.ddc
+    write -format verilog -hierarchy -output $report_dir/${name}.v
+    puts "FAST_PARTITION_DONE $name"
+}
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:453: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_ratio_phase'.
+
+  Linking design 'tracking_ratio_phase'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  tracking_ratio_phase        /home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/work/tracking_ratio_phase.db
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FAST_PARTITION_BEGIN tracking_ratio_phase
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_ratio_phase'
+Information: Added key list 'DesignWare' to design 'tracking_ratio_phase'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_ratio_phase_DW01_sub_0'
+  Processing 'tracking_ratio_phase_DW01_sub_1'
+  Processing 'tracking_ratio_phase_DW01_sub_2'
+  Processing 'tracking_ratio_phase_DW01_sub_3'
+  Processing 'tracking_ratio_phase_DW01_sub_4'
+  Processing 'tracking_ratio_phase_DW01_sub_5'
+  Processing 'tracking_ratio_phase_DW01_sub_6'
+  Processing 'tracking_ratio_phase_DW01_sub_7'
+  Processing 'tracking_ratio_phase_DW01_sub_8'
+  Processing 'tracking_ratio_phase_DW01_sub_9'
+  Processing 'tracking_ratio_phase_DW01_sub_10'
+  Processing 'tracking_ratio_phase_DW01_sub_11'
+  Processing 'tracking_ratio_phase_DW01_sub_12'
+  Processing 'tracking_ratio_phase_DW01_sub_13'
+  Processing 'tracking_ratio_phase_DW01_sub_14'
+  Processing 'tracking_ratio_phase_DW01_sub_15'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:16   40195.9      4.66      24.5       0.0                          
+    0:00:16   40195.9      4.66      24.5       0.0                          
+    0:00:16   40195.9      4.66      24.5       0.0                          
+    0:00:16   40195.9      4.66      24.5       0.0                          
+    0:00:16   40195.9      4.66      24.5       0.0                          
+    0:00:18   21135.5      5.98      34.2       0.0                          
+    0:00:19   20623.3      5.45      29.1       0.0                          
+    0:00:19   20513.9      5.06      27.5       0.0                          
+    0:00:19   20522.4      5.07      27.8       0.0                          
+    0:00:20   20481.5      4.92      26.7       0.0                          
+    0:00:20   20521.7      4.90      26.5       0.0                          
+    0:00:20   20506.9      4.86      26.1       0.0                          
+    0:00:20   20528.7      4.89      26.5       0.0                          
+    0:00:20   20504.7      4.75      25.8       0.0                          
+    0:00:21   20529.4      4.78      26.1       0.0                          
+    0:00:21   20529.4      4.78      26.1       0.0                          
+    0:00:21   20529.4      4.78      26.1       0.0                          
+    0:00:21   20529.4      4.78      26.1       0.0                          
+    0:00:21   20529.4      4.78      26.1       0.0                          
+    0:00:21   20529.4      4.78      26.1       0.0                          
+    0:00:21   20529.4      4.78      26.1       0.0                          
+    0:00:22   20589.4      4.34      22.7       0.0                          
+    0:00:23   20588.0      4.21      21.9       0.0                          
+    0:00:23   20592.2      4.14      21.3       0.0                          
+    0:00:24   20592.9      4.13      21.3       0.0                          
+    0:00:24   20612.0      4.11      21.2       0.0                          
+    0:00:25   20628.9      4.09      21.1       0.0                          
+    0:00:26   20636.0      4.06      20.9       0.0                          
+    0:00:27   20655.7      4.04      20.9       0.0                          
+    0:00:27   20657.9      4.04      20.8       0.0                          
+    0:00:28   20650.1      4.01      20.5       0.0                          
+    0:00:28   20658.6      3.99      20.4       0.0                          
+    0:00:29   20662.8      3.98      20.3       0.0                          
+    0:00:29   20662.1      3.95      20.1       0.0                          
+    0:00:30   20685.4      3.94      19.9       0.0                          
+    0:00:30   20698.1      3.93      19.9       0.0                          
+    0:00:31   20697.4      3.90      19.7       0.0                          
+    0:00:31   20705.1      3.90      19.7       0.0                          
+    0:00:32   20715.0      3.88      19.5       0.0                          
+    0:00:32   20732.6      3.86      19.4       0.0                          
+    0:00:33   20740.4      3.83      19.2       0.0                          
+    0:00:34   20733.4      3.82      19.1       0.0                          
+    0:00:34   20717.1      3.80      19.0       0.0                          
+    0:00:35   20687.5      3.78      18.8       0.0                          
+    0:00:35   20667.0      3.78      18.8       0.0                          
+    0:00:36   20684.7      3.77      18.7       0.0                          
+    0:00:36   20709.4      3.75      18.6       0.0                          
+    0:00:36   20702.3      3.74      18.5       0.0                          
+    0:00:37   20704.4      3.74      18.5       0.0                          
+    0:00:37   20704.4      3.74      18.5       0.0                          
+    0:00:37   20697.4      3.73      18.4       0.0                          
+    0:00:38   20706.5      3.72      18.3       0.0                          
+    0:00:38   20723.5      3.70      18.2       0.0                          
+    0:00:39   20721.4      3.69      18.1       0.0                          
+    0:00:39   20727.7      3.69      18.1       0.0                          
+    0:00:40   20748.9      3.66      17.8       0.0                          
+    0:00:40   20768.6      3.65      17.7       0.0                          
+    0:00:41   20782.7      3.64      17.7       0.0                          
+    0:00:41   20782.0      3.63      17.6       0.0                          
+    0:00:42   20796.9      3.62      17.6       0.0                          
+    0:00:42   20827.9      3.61      17.5       0.0                          
+    0:00:43   20854.0      3.59      17.4       0.0                          
+    0:00:43   20861.8      3.59      17.4       0.0                          
+    0:00:43   20875.2      3.58      17.3       0.0                          
+    0:00:44   20894.9      3.57      17.3       0.0                          
+    0:00:44   20912.6      3.57      17.2       0.0                          
+    0:00:45   20923.9      3.56      17.2       0.0                          
+    0:00:45   20938.7      3.55      17.1       0.0                          
+    0:00:46   20924.6      3.55      17.0       0.0                          
+    0:00:46   20974.7      3.54      17.0       0.0                          
+    0:00:46   20976.8      3.53      17.0       0.0                          
+    0:00:47   20971.1      3.52      16.9       0.0                          
+    0:00:47   20996.5      3.51      16.8       0.0                          
+    0:00:48   21004.3      3.50      16.7       0.0                          
+    0:00:48   20996.5      3.48      16.6       0.0                          
+    0:00:48   21005.0      3.48      16.6       0.0                          
+    0:00:49   20993.7      3.48      16.5       0.0                          
+    0:00:49   20981.7      3.46      16.4       0.0                          
+    0:00:49   20992.3      3.46      16.4       0.0                          
+    0:00:50   21022.6      3.46      16.4       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:50   21022.6      3.46      16.4       0.0                          
+    0:00:51   21060.0      3.44      16.3       0.0 result[0]                
+    0:00:51   21055.8      3.43      16.2       0.0 result[0]                
+    0:00:52   21089.0      3.41      16.1       0.0 result[0]                
+    0:00:53   21093.2      3.41      16.1       0.0 result[0]                
+    0:00:53   21098.9      3.40      16.1       0.0 result[0]                
+    0:00:53   21098.9      3.38      16.0       0.0 result[0]                
+    0:00:53   21118.6      3.37      16.0       0.0 result[0]                
+    0:00:54   21119.3      3.37      16.0       0.0 result[0]                
+    0:00:54   21134.8      3.36      16.0       0.0 result[0]                
+    0:00:54   21140.5      3.36      15.9       0.0 result[0]                
+    0:00:55   21151.1      3.35      15.9       0.0 result[0]                
+    0:00:55   21159.5      3.35      15.9       0.0 result[0]                
+    0:00:55   21170.8      3.34      15.9       0.0 result[0]                
+    0:00:55   21207.5      3.33      15.9       0.0 result[0]                
+    0:00:56   21218.1      3.33      15.8       0.0 result[0]                
+    0:00:56   21228.7      3.32      15.8       0.0 result[0]                
+    0:00:56   21232.9      3.32      15.8       0.0 result[0]                
+    0:00:56   21238.6      3.32      15.8       0.0 result[0]                
+    0:00:56   21242.8      3.32      15.8       0.0 result[0]                
+    0:00:57   21261.8      3.30      15.7       0.0 result[0]                
+    0:00:57   21266.1      3.30      15.7       0.0 result[0]                
+    0:00:58   21265.4      3.30      15.7       0.0 result[0]                
+    0:00:58   21285.1      3.29      15.6       0.0 result[0]                
+    0:00:58   21292.2      3.29      15.6       0.0 result[0]                
+    0:00:58   21317.6      3.29      15.6       0.0 result[0]                
+    0:00:58   21329.6      3.28      15.6       0.0 result[0]                
+    0:00:59   21350.0      3.28      15.6       0.0 result[0]                
+    0:00:59   21363.5      3.28      15.6       0.0 result[0]                
+    0:00:59   21360.6      3.28      15.6       0.0 result[0]                
+    0:01:00   21391.0      3.27      15.5       0.0 result[0]                
+    0:01:00   21389.6      3.26      15.5       0.0 result[0]                
+    0:01:00   21381.1      3.26      15.5       0.0 result[0]                
+    0:01:01   21385.3      3.26      15.4       0.0 result[0]                
+    0:01:01   21387.4      3.25      15.4       0.0 result[0]                
+    0:01:02   21363.5      3.24      15.3       0.0 result[0]                
+    0:01:02   21379.0      3.24      15.3       0.0 result[0]                
+    0:01:02   21381.1      3.24      15.3       0.0 result[0]                
+    0:01:03   21397.3      3.23      15.2       0.0 result[0]                
+    0:01:03   21401.6      3.23      15.2       0.0 result[0]                
+    0:01:03   21411.4      3.23      15.2       0.0 result[0]                
+    0:01:04   21410.7      3.23      15.2       0.0 result[0]                
+    0:01:04   21408.6      3.23      15.2       0.0 result[0]                
+    0:01:04   21404.4      3.22      15.2       0.0 result[0]                
+    0:01:05   21432.6      3.21      15.1       0.0 result[0]                
+    0:01:06   21417.1      3.21      15.0       0.0 result[0]                
+    0:01:06   21415.0      3.20      15.0       0.0 result[0]                
+    0:01:06   21415.7      3.20      15.0       0.0 result[0]                
+    0:01:06   21427.0      3.20      15.0       0.0 result[0]                
+    0:01:07   21434.7      3.20      14.9       0.0 result[0]                
+    0:01:07   21402.3      3.19      14.9       0.0 result[0]                
+    0:01:08   21414.3      3.19      14.9       0.0 result[0]                
+    0:01:08   21422.0      3.18      14.8       0.0 result[0]                
+    0:01:08   21448.8      3.18      14.8       0.0 result[0]                
+    0:01:09   21441.1      3.18      14.8       0.0 result[0]                
+    0:01:09   21448.8      3.18      14.8       0.0 result[0]                
+    0:01:09   21458.7      3.17      14.8       0.0 result[0]                
+    0:01:09   21462.9      3.17      14.8       0.0 result[0]                
+    0:01:10   21471.4      3.17      14.8       0.0 result[0]                
+    0:01:10   21492.6      3.16      14.7       0.0 result[0]                
+    0:01:11   21496.8      3.16      14.7       0.0 result[0]                
+    0:01:11   21498.9      3.16      14.7       0.0 result[0]                
+    0:01:12   21509.5      3.16      14.7       0.0 result[0]                
+    0:01:13   21547.6      3.16      14.7       0.0 result[0]                
+    0:01:14   21582.9      3.14      14.6       0.0 result[0]                
+    0:01:15   21590.7      3.14      14.6       0.0 result[0]                
+    0:01:15   21606.9      3.14      14.6       0.0 result[0]                
+    0:01:15   21602.7      3.14      14.6       0.0 result[0]                
+    0:01:17   21633.0      3.13      14.6       0.0 result[0]                
+    0:01:17   21675.3      3.13      14.6       0.0 result[0]                
+    0:01:18   21675.3      3.13      14.6       0.0 result[0]                
+    0:01:18   21685.9      3.13      14.6       0.0 result[0]                
+    0:01:18   21682.4      3.13      14.5       0.0 result[0]                
+    0:01:19   21674.6      3.12      14.5       0.0 result[0]                
+    0:01:19   21686.6      3.12      14.5       0.0 result[0]                
+    0:01:20   21688.0      3.12      14.5       0.0 result[0]                
+    0:01:20   21690.1      3.12      14.5       0.0 result[0]                
+    0:01:20   21696.5      3.12      14.5       0.0 result[0]                
+    0:01:20   21709.2      3.12      14.5       0.0 result[0]                
+    0:01:21   21717.7      3.11      14.5       0.0 result[0]                
+    0:01:21   21721.2      3.11      14.5       0.0 result[0]                
+    0:01:21   21724.7      3.11      14.5       0.0 result[0]                
+    0:01:22   21728.2      3.11      14.4       0.0 result[0]                
+    0:01:22   21739.5      3.11      14.4       0.0 result[0]                
+    0:01:22   21743.8      3.11      14.4       0.0 result[0]                
+    0:01:23   21749.4      3.11      14.4       0.0 result[0]                
+    0:01:24   21749.4      3.11      14.4       0.0 result[0]                
+    0:01:24   21761.4      3.11      14.4       0.0 result[0]                
+    0:01:24   21772.7      3.10      14.4       0.0 result[0]                
+    0:01:25   21775.5      3.10      14.4       0.0 result[0]                
+    0:01:25   21781.2      3.10      14.4       0.0 result[0]                
+    0:01:25   21770.6      3.10      14.4       0.0 result[0]                
+    0:01:26   21776.2      3.10      14.4       0.0 result[0]                
+    0:01:26   21780.5      3.10      14.3       0.0 result[0]                
+    0:01:26   21779.1      3.10      14.3       0.0 result[0]                
+    0:01:27   21788.2      3.09      14.3       0.0 result[0]                
+    0:01:27   21808.7      3.09      14.3       0.0 result[0]                
+    0:01:28   21818.6      3.09      14.3       0.0 result[0]                
+    0:01:28   21815.0      3.09      14.3       0.0 result[0]                
+    0:01:28   21804.5      3.08      14.2       0.0 result[0]                
+    0:01:29   21810.8      3.07      14.2       0.0 result[0]                
+    0:01:29   21808.7      3.07      14.2       0.0 result[0]                
+    0:01:29   21814.3      3.07      14.1       0.0 result[0]                
+    0:01:30   21791.0      3.06      14.1       0.0 result[0]                
+    0:01:30   21800.9      3.06      14.1       0.0 result[0]                
+    0:01:31   21803.7      3.06      14.1       0.0 result[0]                
+    0:01:31   21812.9      3.05      14.1       0.0 result[0]                
+    0:01:31   21822.8      3.05      14.0       0.0 result[0]                
+    0:01:32   21826.3      3.04      14.0       0.0 result[0]                
+    0:01:32   21839.7      3.04      13.9       0.0 result[0]                
+    0:01:32   21856.0      3.04      13.9       0.0 result[0]                
+    0:01:32   21865.1      3.04      13.9       0.0 result[0]                
+    0:01:33   21881.4      3.03      13.9       0.0 result[0]                
+    0:01:33   21881.4      3.03      13.9       0.0 result[0]                
+    0:01:34   21885.6      3.03      13.9       0.0 result[0]                
+    0:01:34   21890.5      3.03      13.9       0.0 result[0]                
+    0:01:34   21894.8      3.03      13.9       0.0 result[0]                
+    0:01:34   21901.8      3.03      13.8       0.0 result[0]                
+    0:01:34   21872.2      3.02      13.8       0.0 result[0]                
+    0:01:34   21870.8      3.02      13.8       0.0 result[0]                
+    0:01:35   21872.2      3.02      13.8       0.0 result[0]                
+    0:01:35   21877.1      3.02      13.8       0.0 result[0]                
+    0:01:35   21881.4      3.02      13.8       0.0 result[0]                
+    0:01:36   21891.9      3.02      13.8       0.0 result[0]                
+    0:01:36   21882.8      3.02      13.8       0.0 result[0]                
+    0:01:36   21880.0      3.02      13.8       0.0 result[0]                
+    0:01:36   21879.2      3.02      13.8       0.0 result[0]                
+    0:01:37   21868.0      3.01      13.8       0.0 result[0]                
+    0:01:37   21883.5      3.01      13.7       0.0 result[0]                
+    0:01:37   21878.5      3.01      13.7       0.0 result[0]                
+    0:01:38   21905.4      3.00      13.7       0.0 result[0]                
+    0:01:38   21887.7      3.00      13.6       0.0 result[0]                
+    0:01:38   21894.8      2.99      13.6       0.0 result[0]                
+    0:01:38   21911.0      2.99      13.6       0.0 result[0]                
+    0:01:39   21903.2      2.99      13.6       0.0 result[0]                
+    0:01:39   21912.4      2.99      13.6       0.0 result[0]                
+    0:01:39   21911.7      2.99      13.6       0.0 result[0]                
+    0:01:39   21916.6      2.99      13.6       0.0 result[0]                
+    0:01:40   21919.5      2.99      13.6       0.0 result[0]                
+    0:01:40   21918.8      2.99      13.5       0.0 result[0]                
+    0:01:40   21921.6      2.98      13.5       0.0 result[0]                
+    0:01:40   21924.4      2.98      13.5       0.0 result[0]                
+    0:01:40   21933.6      2.98      13.5       0.0 result[0]                
+    0:01:41   21935.7      2.98      13.5       0.0 result[0]                
+    0:01:41   21940.6      2.98      13.5       0.0 result[0]                
+    0:01:41   21940.6      2.98      13.5       0.0 result[0]                
+    0:01:41   21944.9      2.98      13.5       0.0 result[0]                
+    0:01:41   21948.4      2.98      13.5       0.0 result[0]                
+    0:01:41   21947.7      2.98      13.5       0.0 result[0]                
+    0:01:41   21956.9      2.98      13.5       0.0 result[0]                
+    0:01:42   21969.6      2.97      13.5       0.0 result[0]                
+    0:01:42   21971.7      2.97      13.5       0.0 result[0]                
+    0:01:42   21973.8      2.97      13.5       0.0 result[0]                
+    0:01:42   21974.5      2.97      13.5       0.0 result[0]                
+    0:01:42   21975.2      2.97      13.4       0.0 result[0]                
+    0:01:42   21972.4      2.97      13.4       0.0 result[0]                
+    0:01:42   21977.3      2.97      13.4       0.0 result[0]                
+    0:01:42   21980.1      2.96      13.4       0.0 result[0]                
+    0:01:43   21983.0      2.96      13.4       0.0 result[0]                
+    0:01:43   21999.9      2.96      13.4       0.0 result[0]                
+    0:01:43   22013.3      2.96      13.4       0.0 result[0]                
+    0:01:43   22013.3      2.96      13.4       0.0 result[0]                
+    0:01:43   22015.4      2.96      13.4       0.0 result[0]                
+    0:01:43   22014.7      2.96      13.4       0.0 result[0]                
+    0:01:43   22018.2      2.96      13.4       0.0 result[0]                
+    0:01:44   22022.5      2.96      13.3       0.0 result[0]                
+    0:01:44   22024.6      2.96      13.3       0.0 result[0]                
+    0:01:44   22023.9      2.96      13.3       0.0 result[0]                
+    0:01:44   22025.3      2.95      13.3       0.0 result[0]                
+    0:01:44   22025.3      2.95      13.3       0.0 result[0]                
+    0:01:44   22029.5      2.95      13.3       0.0 result[0]                
+    0:01:45   22029.5      2.95      13.3       0.0 result[0]                
+    0:01:45   22029.5      2.95      13.3       0.0 result[0]                
+    0:01:45   22030.9      2.95      13.3       0.0 result[0]                
+    0:01:45   22044.4      2.95      13.3       0.0 result[0]                
+    0:01:45   22055.6      2.95      13.3       0.0 result[0]                
+    0:01:45   22055.6      2.95      13.3       0.0 result[0]                
+    0:01:46   22057.8      2.95      13.3       0.0 result[0]                
+    0:01:46   22063.4      2.94      13.3       0.0 result[0]                
+    0:01:46   22068.3      2.94      13.2       0.0 result[0]                
+    0:01:46   22071.9      2.94      13.2       0.0 result[0]                
+    0:01:46   22075.4      2.94      13.2       0.0 result[0]                
+    0:01:46   22089.5      2.94      13.2       0.0 result[0]                
+    0:01:47   22127.6      2.94      13.3       0.0 result[0]                
+    0:01:47   22134.7      2.94      13.3       0.0 result[0]                
+    0:01:47   22138.2      2.93      13.3       0.0 result[0]                
+    0:01:47   22140.3      2.93      13.3       0.0 result[0]                
+    0:01:47   22150.9      2.93      13.3       0.0 result[0]                
+    0:01:47   22155.1      2.93      13.3       0.0 result[0]                
+    0:01:48   22157.3      2.93      13.3       0.0 result[0]                
+    0:01:48   22167.1      2.93      13.3       0.0 result[0]                
+    0:01:48   22173.5      2.93      13.3       0.0 result[0]                
+    0:01:48   22176.3      2.93      13.3       0.0 result[0]                
+    0:01:48   22179.1      2.93      13.3       0.0 result[0]                
+    0:01:48   22191.1      2.93      13.3       0.0 result[0]                
+    0:01:49   22198.2      2.93      13.3       0.0 result[0]                
+    0:01:49   22194.6      2.93      13.2       0.0 result[0]                
+    0:01:49   22202.4      2.92      13.2       0.0 result[0]                
+    0:01:49   22204.5      2.92      13.2       0.0 result[0]                
+    0:01:49   22208.1      2.92      13.2       0.0 result[0]                
+    0:01:49   22229.9      2.92      13.2       0.0 result[0]                
+    0:01:49   22232.0      2.92      13.2       0.0 result[0]                
+    0:01:50   22230.6      2.92      13.2       0.0 result[0]                
+    0:01:50   22227.1      2.92      13.2       0.0 result[0]                
+    0:01:50   22226.4      2.92      13.2       0.0 result[0]                
+    0:01:50   22233.5      2.92      13.2       0.0 result[0]                
+    0:01:50   22237.7      2.92      13.2       0.0 result[0]                
+    0:01:51   22237.0      2.91      13.2       0.0 result[0]                
+    0:01:51   22243.3      2.91      13.2       0.0 result[0]                
+    0:01:51   22248.3      2.91      13.2       0.0 result[0]                
+    0:01:51   22256.0      2.91      13.2       0.0 result[0]                
+    0:01:51   22264.5      2.91      13.2       0.0 result[0]                
+    0:01:51   22268.0      2.91      13.2       0.0 result[0]                
+    0:01:52   22265.9      2.91      13.1       0.0 result[0]                
+    0:01:52   22272.3      2.91      13.1       0.0 result[0]                
+    0:01:52   22281.4      2.91      13.1       0.0 result[0]                
+    0:01:52   22286.4      2.91      13.1       0.0 result[0]                
+    0:01:52   22294.8      2.91      13.1       0.0 result[0]                
+    0:01:52   22301.9      2.91      13.1       0.0 result[0]                
+    0:01:52   22316.7      2.91      13.1       0.0 result[0]                
+    0:01:52   22317.4      2.91      13.1       0.0 result[0]                
+    0:01:53   22316.0      2.91      13.1       0.0 result[0]                
+    0:01:53   22310.4      2.91      13.1       0.0 result[0]                
+    0:01:53   22325.2      2.90      13.1       0.0 result[0]                
+    0:01:53   22334.4      2.90      13.1       0.0 result[0]                
+    0:01:53   22342.1      2.90      13.1       0.0 result[0]                
+    0:01:53   22345.6      2.90      13.1       0.0 result[0]                
+    0:01:54   22347.1      2.90      13.1       0.0 result[0]                
+    0:01:54   22352.0      2.90      13.1       0.0 result[0]                
+    0:01:54   22352.0      2.90      13.1       0.0 result[0]                
+    0:01:54   22357.6      2.90      13.1       0.0 result[0]                
+    0:01:55   22364.7      2.90      13.1       0.0 result[0]                
+    0:01:55   22373.2      2.89      13.1       0.0 result[0]                
+    0:01:55   22373.2      2.89      13.1       0.0 result[0]                
+    0:01:55   22377.4      2.89      13.1       0.0 result[0]                
+    0:01:55   22378.8      2.89      13.1       0.0 result[0]                
+    0:01:55   22378.8      2.89      13.1       0.0 result[0]                
+    0:01:56   22392.2      2.89      13.0       0.0 result[0]                
+    0:01:56   22410.6      2.89      13.0       0.0 result[0]                
+    0:01:56   22406.3      2.89      13.0       0.0 result[0]                
+    0:01:56   22408.4      2.89      13.0       0.0 result[0]                
+    0:01:57   22402.1      2.89      13.0       0.0 result[0]                
+    0:01:57   22400.7      2.89      13.0       0.0 result[0]                
+    0:01:57   22398.6      2.89      13.0       0.0 result[0]                
+    0:01:57   22398.6      2.89      13.0       0.0 result[0]                
+    0:01:57   22396.5      2.89      13.0       0.0 result[0]                
+    0:01:57   22395.7      2.89      13.0       0.0 result[0]                
+    0:01:57   22397.2      2.89      13.0       0.0 result[0]                
+    0:01:57   22395.7      2.88      13.0       0.0 result[0]                
+    0:01:58   22400.0      2.88      13.0       0.0 result[0]                
+    0:01:58   22400.0      2.88      13.0       0.0 result[0]                
+    0:01:58   22390.1      2.88      13.0       0.0 result[0]                
+    0:01:58   22391.5      2.88      13.0       0.0 result[0]                
+    0:01:58   22392.2      2.88      13.0       0.0 result[0]                
+    0:01:58   22399.3      2.88      13.0       0.0 result[0]                
+    0:01:58   22399.3      2.88      13.0       0.0 result[0]                
+    0:01:59   22397.9      2.88      13.0       0.0 result[0]                
+    0:01:59   22407.0      2.88      13.0       0.0 result[0]                
+    0:01:59   22422.6      2.88      13.0       0.0 result[0]                
+    0:01:59   22428.2      2.88      13.0       0.0 result[0]                
+    0:01:59   22434.6      2.88      13.0       0.0 result[0]                
+    0:01:59   22434.6      2.88      13.0       0.0 result[0]                
+    0:01:59   22431.7      2.88      13.0       0.0 result[0]                
+    0:01:59   22431.7      2.88      13.0       0.0 result[0]                
+    0:02:00   22434.6      2.88      13.0       0.0 result[0]                
+    0:02:00   22432.4      2.88      13.0       0.0 result[0]                
+    0:02:00   22437.4      2.88      13.0       0.0 result[0]                
+    0:02:00   22431.0      2.88      13.0       0.0 result[0]                
+    0:02:00   22432.4      2.88      13.0       0.0 result[0]                
+    0:02:00   22431.7      2.88      13.0       0.0 result[0]                
+    0:02:00   22430.3      2.88      13.0       0.0 result[0]                
+    0:02:01   22429.6      2.87      13.0       0.0 result[0]                
+    0:02:01   22437.4      2.87      12.9       0.0 result[0]                
+    0:02:01   22437.4      2.87      12.9       0.0 result[0]                
+    0:02:01   22439.5      2.87      12.9       0.0 result[0]                
+    0:02:01   22452.9      2.87      12.9       0.0 result[0]                
+    0:02:01   22457.1      2.87      12.9       0.0 result[0]                
+    0:02:02   22460.7      2.87      12.9       0.0 result[0]                
+    0:02:02   22474.8      2.87      12.9       0.0 result[0]                
+    0:02:02   22476.9      2.87      12.9       0.0 result[0]                
+    0:02:03   22475.5      2.87      12.9       0.0 result[0]                
+    0:02:03   22477.6      2.87      12.9       0.0 result[0]                
+    0:02:03   22479.7      2.87      12.9       0.0 result[0]                
+    0:02:03   22486.1      2.87      12.9       0.0 result[0]                
+    0:02:03   22493.1      2.87      12.9       0.0 result[0]                
+    0:02:03   22495.9      2.87      12.9       0.0 result[0]                
+    0:02:03   22488.9      2.87      12.9       0.0 result[0]                
+    0:02:04   22493.1      2.87      12.9       0.0 result[0]                
+    0:02:04   22500.9      2.87      12.9       0.0 result[0]                
+    0:02:04   22506.5      2.87      12.9       0.0 result[0]                
+    0:02:04   22509.3      2.87      12.9       0.0 result[0]                
+    0:02:05   22506.5      2.87      12.9       0.0 result[0]                
+    0:02:05   22507.2      2.87      12.9       0.0 result[0]                
+    0:02:05   22517.8      2.87      12.9       0.0 result[0]                
+    0:02:05   22530.5      2.87      12.9       0.0 result[0]                
+    0:02:05   22535.5      2.86      12.9       0.0 result[0]                
+    0:02:05   22556.6      2.86      12.9       0.0 result[0]                
+    0:02:05   22556.6      2.86      12.9       0.0 result[0]                
+    0:02:06   22556.6      2.86      12.9       0.0 result[0]                
+    0:02:06   22556.6      2.86      12.9       0.0 result[0]                
+    0:02:06   22557.3      2.86      12.9       0.0 result[0]                
+    0:02:06   22561.6      2.86      12.9       0.0 result[0]                
+    0:02:06   22551.0      2.86      12.9       0.0 result[0]                
+    0:02:07   22558.0      2.86      12.8       0.0 result[0]                
+    0:02:07   22570.0      2.86      12.8       0.0 result[0]                
+    0:02:07   22577.8      2.86      12.8       0.0 result[0]                
+    0:02:07   22583.4      2.86      12.8       0.0 result[0]                
+    0:02:07   22581.3      2.85      12.8       0.0 result[0]                
+    0:02:08   22588.4      2.85      12.8       0.0 result[0]                
+    0:02:08   22592.6      2.85      12.8       0.0 result[0]                
+    0:02:08   22596.8      2.85      12.8       0.0 result[0]                
+    0:02:08   22602.5      2.85      12.8       0.0 result[0]                
+    0:02:08   22605.3      2.85      12.8       0.0 result[0]                
+    0:02:08   22605.3      2.85      12.8       0.0 result[0]                
+    0:02:08   22604.6      2.85      12.8       0.0 result[0]                
+    0:02:09   22602.5      2.85      12.8       0.0 result[0]                
+    0:02:09   22605.3      2.85      12.8       0.0 result[0]                
+    0:02:09   22608.1      2.85      12.8       0.0 result[0]                
+    0:02:09   22611.7      2.85      12.8       0.0 result[0]                
+    0:02:09   22616.6      2.85      12.8       0.0 result[0]                
+    0:02:09   22618.7      2.85      12.8       0.0 result[0]                
+    0:02:10   22618.7      2.85      12.8       0.0 result[0]                
+    0:02:10   22620.1      2.85      12.8       0.0 result[0]                
+    0:02:10   22620.8      2.85      12.7       0.0 result[0]                
+    0:02:10   22620.1      2.85      12.7       0.0 result[0]                
+    0:02:10   22621.5      2.84      12.7       0.0 result[0]                
+    0:02:10   22625.1      2.84      12.7       0.0 result[0]                
+    0:02:11   22625.1      2.84      12.7       0.0 result[0]                
+    0:02:11   22625.1      2.84      12.7       0.0 result[0]                
+    0:02:11   22623.7      2.84      12.7       0.0 result[0]                
+    0:02:11   22630.0      2.84      12.7       0.0 result[0]                
+    0:02:11   22630.0      2.84      12.7       0.0 result[0]                
+    0:02:12   22630.0      2.84      12.7       0.0 result[0]                
+    0:02:12   22640.6      2.84      12.7       0.0 result[0]                
+    0:02:12   22639.2      2.84      12.7       0.0 result[0]                
+    0:02:12   22637.8      2.84      12.7       0.0 result[0]                
+    0:02:13   22643.4      2.84      12.7       0.0 result[0]                
+    0:02:13   22644.8      2.84      12.7       0.0 result[0]                
+    0:02:13   22636.4      2.84      12.7       0.0 result[0]                
+    0:02:13   22637.1      2.84      12.7       0.0 result[0]                
+    0:02:13   22637.1      2.84      12.7       0.0 result[0]                
+    0:02:13   22641.3      2.84      12.7       0.0 result[0]                
+    0:02:13   22644.8      2.84      12.7       0.0 result[0]                
+    0:02:14   22647.6      2.84      12.7       0.0 result[0]                
+    0:02:14   22662.5      2.84      12.7       0.0 result[0]                
+    0:02:14   22666.7      2.84      12.7       0.0 result[0]                
+    0:02:14   22668.8      2.84      12.7       0.0 result[0]                
+    0:02:15   22670.2      2.84      12.7       0.0 result[0]                
+    0:02:15   22670.2      2.84      12.7       0.0 result[0]                
+    0:02:15   22671.6      2.84      12.7       0.0 result[0]                
+    0:02:15   22671.6      2.84      12.7       0.0 result[0]                
+    0:02:15   22671.6      2.84      12.7       0.0 result[0]                
+    0:02:15   22670.2      2.84      12.7       0.0 result[0]                
+    0:02:16   22670.9      2.84      12.7       0.0 result[0]                
+    0:02:16   22680.1      2.84      12.7       0.0 result[0]                
+    0:02:16   22680.1      2.83      12.7       0.0 result[0]                
+    0:02:16   22679.4      2.83      12.7       0.0 result[0]                
+    0:02:16   22686.5      2.83      12.7       0.0 result[0]                
+    0:02:16   22680.1      2.83      12.7       0.0 result[0]                
+    0:02:16   22682.9      2.83      12.7       0.0 result[0]                
+    0:02:17   22687.2      2.83      12.7       0.0 result[0]                
+    0:02:17   22689.3      2.83      12.7       0.0 result[0]                
+    0:02:17   22689.3      2.83      12.7       0.0 result[0]                
+    0:02:17   22700.6      2.83      12.6       0.0 result[0]                
+    0:02:18   22696.3      2.83      12.6       0.0 result[0]                
+    0:02:18   22694.2      2.83      12.6       0.0 result[0]                
+    0:02:18   22698.4      2.83      12.6       0.0 result[0]                
+    0:02:18   22697.7      2.83      12.6       0.0 result[0]                
+    0:02:18   22699.9      2.83      12.6       0.0 result[0]                
+    0:02:19   22699.9      2.83      12.6       0.0 result[0]                
+    0:02:19   22713.3      2.83      12.6       0.0 result[0]                
+    0:02:19   22714.0      2.83      12.6       0.0 result[0]                
+    0:02:19   22732.3      2.83      12.6       0.0 result[0]                
+    0:02:20   22731.6      2.83      12.6       0.0 result[0]                
+    0:02:20   22740.1      2.83      12.7       0.0 result[0]                
+    0:02:20   22743.6      2.83      12.7       0.0 result[0]                
+    0:02:20   22747.8      2.83      12.7       0.0 result[0]                
+    0:02:20   22754.2      2.83      12.7       0.0 result[0]                
+    0:02:20   22748.5      2.83      12.7       0.0 result[0]                
+    0:02:20   22759.1      2.83      12.7       0.0 result[0]                
+    0:02:21   22762.0      2.83      12.7       0.0 result[0]                
+    0:02:21   22755.6      2.83      12.7       0.0 result[0]                
+    0:02:21   22757.0      2.83      12.7       0.0 result[0]                
+    0:02:21   22756.3      2.83      12.7       0.0 result[0]                
+    0:02:22   22756.3      2.83      12.6       0.0 result[0]                
+    0:02:22   22756.3      2.83      12.6       0.0 result[0]                
+    0:02:22   22756.3      2.83      12.6       0.0 result[0]                
+    0:02:22   22756.3      2.83      12.6       0.0 result[0]                
+    0:02:22   22759.1      2.83      12.6       0.0 result[0]                
+    0:02:22   22759.1      2.83      12.6       0.0 result[0]                
+    0:02:22   22762.7      2.83      12.6       0.0 result[0]                
+    0:02:22   22766.2      2.83      12.6       0.0 result[0]                
+    0:02:23   22766.9      2.83      12.6       0.0 result[0]                
+    0:02:23   22769.0      2.83      12.6       0.0 result[0]                
+    0:02:23   22773.9      2.83      12.6       0.0 result[0]                
+    0:02:23   22772.5      2.83      12.6       0.0 result[0]                
+    0:02:23   22771.1      2.83      12.6       0.0 result[0]                
+    0:02:24   22778.2      2.82      12.6       0.0 result[0]                
+    0:02:24   22776.8      2.82      12.6       0.0 result[0]                
+    0:02:25   22781.7      2.82      12.6       0.0 result[0]                
+    0:02:25   22778.9      2.82      12.6       0.0 result[0]                
+    0:02:25   22783.1      2.82      12.6       0.0 result[0]                
+    0:02:25   22783.1      2.82      12.6       0.0 result[0]                
+    0:02:25   22783.1      2.82      12.6       0.0 result[0]                
+    0:02:25   22783.1      2.82      12.6       0.0 result[0]                
+    0:02:25   22785.2      2.82      12.6       0.0 result[0]                
+    0:02:26   22787.4      2.82      12.6       0.0 result[0]                
+    0:02:26   22793.7      2.82      12.6       0.0 result[0]                
+    0:02:26   22795.8      2.82      12.6       0.0 result[0]                
+    0:02:26   22797.2      2.82      12.6       0.0 result[0]                
+    0:02:26   22796.5      2.82      12.6       0.0 result[0]                
+    0:02:26   22802.2      2.82      12.6       0.0 result[0]                
+    0:02:27   22800.8      2.82      12.6       0.0 result[0]                
+    0:02:27   22809.2      2.82      12.6       0.0 result[0]                
+    0:02:29   22811.3      2.82      12.6       0.0 result[0]                
+    0:02:29   22814.2      2.82      12.6       0.0 result[0]                
+    0:02:29   22812.0      2.82      12.6       0.0 result[0]                
+    0:02:30   22812.0      2.82      12.6       0.0 result[0]                
+    0:02:30   22819.8      2.82      12.6       0.0 result[0]                
+    0:02:31   22819.8      2.82      12.6       0.0 result[0]                
+    0:02:31   22819.8      2.82      12.6       0.0 result[0]                
+    0:02:32   22826.2      2.82      12.6       0.0 result[0]                
+    0:02:32   22826.2      2.82      12.6       0.0 result[0]                
+    0:02:33   22825.5      2.82      12.6       0.0 result[0]                
+    0:02:33   22829.7      2.82      12.6       0.0 result[0]                
+    0:02:34   22828.3      2.82      12.6       0.0 result[0]                
+    0:02:35   22830.4      2.82      12.6       0.0 result[0]                
+    0:02:35   22833.9      2.82      12.6       0.0 result[0]                
+    0:02:35   22838.2      2.82      12.6       0.0 result[0]                
+    0:02:35   22838.2      2.82      12.6       0.0 result[0]                
+    0:02:36   22838.2      2.82      12.6       0.0 result[0]                
+    0:02:36   22837.5      2.82      12.6       0.0 result[0]                
+    0:02:37   22836.0      2.82      12.6       0.0 result[0]                
+    0:02:37   22839.6      2.82      12.6       0.0 result[0]                
+    0:02:37   22844.5      2.82      12.6       0.0 result[0]                
+    0:02:37   22838.2      2.82      12.6       0.0 result[0]                
+    0:02:38   22838.2      2.82      12.6       0.0 result[0]                
+    0:02:38   22842.4      2.82      12.6       0.0 result[0]                
+    0:02:39   22844.5      2.82      12.6       0.0 result[0]                
+    0:02:39   22850.2      2.82      12.6       0.0 result[0]                
+    0:02:39   22850.2      2.82      12.6       0.0 result[0]                
+    0:02:39   22850.2      2.82      12.6       0.0 result[0]                
+    0:02:40   22852.3      2.82      12.6       0.0 result[0]                
+    0:02:40   22856.5      2.82      12.6       0.0 result[0]                
+    0:02:40   22856.5      2.82      12.6       0.0 result[0]                
+    0:02:40   22854.4      2.82      12.6       0.0 result[0]                
+    0:02:42   22853.0      2.82      12.6       0.0 result[0]                
+    0:02:42   22848.7      2.82      12.6       0.0 result[0]                
+    0:02:46   22853.0      2.82      12.6       0.0 result[0]                
+    0:02:47   22854.4      2.82      12.6       0.0 result[0]                
+    0:02:47   22863.6      2.81      12.5       0.0 result[0]                
+    0:02:48   22862.9      2.81      12.5       0.0 result[0]                
+    0:02:48   22865.7      2.81      12.5       0.0 result[0]                
+    0:02:49   22865.7      2.81      12.5       0.0 result[0]                
+    0:02:51   22867.1      2.81      12.5       0.0                          
+    0:02:51   22867.1      2.81      12.5       0.0                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:51   22867.1      2.81      12.5       0.0                          
+    0:02:51   22858.6      2.81      12.5       0.0 result[0]                
+    0:02:51   22858.6      2.81      12.5       0.0 result[0]                
+    0:02:52   22872.7      2.81      12.5       0.0 result[0]                
+    0:02:52   22890.4      2.81      12.5       0.0 result[0]                
+    0:02:52   22893.2      2.81      12.5       0.0 result[0]                
+    0:02:52   22913.7      2.80      12.5       0.0 result[0]                
+    0:02:53   22922.8      2.80      12.5       0.0 result[0]                
+    0:02:53   22931.3      2.80      12.5       0.0 result[0]                
+    0:02:53   22933.4      2.80      12.5       0.0 result[0]                
+    0:02:53   22944.7      2.80      12.5       0.0 result[0]                
+    0:02:53   22955.3      2.80      12.5       0.0 result[0]                
+    0:02:54   22961.6      2.80      12.5       0.0 result[0]                
+    0:02:54   22963.0      2.80      12.5       0.0 result[0]                
+    0:02:54   22963.0      2.80      12.5       0.0 result[0]                
+    0:02:54   22963.8      2.80      12.5       0.0 result[0]                
+    0:02:55   22977.2      2.80      12.5       0.0 result[0]                
+    0:02:55   22980.7      2.80      12.5       0.0 result[0]                
+    0:02:55   22987.0      2.79      12.5       0.0 result[0]                
+    0:02:55   22987.7      2.79      12.5       0.0 result[0]                
+    0:02:55   22994.8      2.79      12.5       0.0 result[0]                
+    0:02:56   22989.9      2.79      12.5       0.0 result[0]                
+    0:02:57   23000.4      2.79      12.5       0.0                          
+    0:02:57   22998.3      2.79      12.5       0.0                          
+    0:02:57   22998.3      2.79      12.5       0.0                          
+    0:02:57   22999.7      2.79      12.5       0.0                          
+    0:02:57   22998.3      2.79      12.5       0.0                          
+    0:02:57   23000.4      2.79      12.5       0.0                          
+    0:02:58   23004.0      2.79      12.5       0.0                          
+    0:02:58   23008.9      2.79      12.5       0.0                          
+    0:02:58   23016.7      2.79      12.5       0.0                          
+    0:02:58   23025.1      2.79      12.5       0.0                          
+    0:02:59   23021.6      2.79      12.4       0.0                          
+    0:02:59   23022.3      2.79      12.4       0.0                          
+    0:02:59   23020.9      2.79      12.4       0.0                          
+    0:02:59   23034.3      2.79      12.4       0.0                          
+    0:02:59   23040.0      2.79      12.4       0.0                          
+    0:02:59   23043.5      2.79      12.4       0.0                          
+    0:02:59   23054.1      2.79      12.4       0.0                          
+    0:03:00   23057.6      2.79      12.4       0.0                          
+    0:03:00   23057.6      2.79      12.4       0.0                          
+    0:03:00   23061.8      2.79      12.4       0.0                          
+    0:03:01   23062.5      2.79      12.4       0.0                          
+    0:03:01   23063.9      2.79      12.4       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:01   23063.9      2.79      12.4       0.0                          
+    0:03:01   23063.9      2.79      12.4       0.0                          
+    0:03:01   22879.1      2.81      12.6       0.0                          
+    0:03:01   22874.8      2.80      12.5       0.0                          
+    0:03:01   22874.8      2.80      12.5       0.0                          
+    0:03:01   22874.8      2.80      12.5       0.0                          
+    0:03:01   22874.8      2.80      12.5       0.0                          
+    0:03:01   22874.8      2.80      12.5       0.0                          
+    0:03:01   22773.2      2.81      12.6       0.0                          
+    0:03:01   22683.6      2.83      12.7       0.0                          
+    0:03:01   22661.1      2.82      12.6       0.0                          
+    0:03:01   22653.3      2.82      12.6       0.0                          
+    0:03:01   22653.3      2.82      12.6       0.0                          
+    0:03:01   22653.3      2.82      12.6       0.0                          
+    0:03:01   22653.3      2.82      12.6       0.0                          
+    0:03:01   22653.3      2.82      12.6       0.0                          
+    0:03:02   22685.0      2.81      12.6       0.0 result[0]                
+    0:03:02   22690.7      2.81      12.6       0.0 result[0]                
+    0:03:02   22694.2      2.81      12.6       0.0 result[0]                
+    0:03:03   22697.0      2.81      12.5       0.0 result[0]                
+    0:03:03   22718.9      2.81      12.5       0.0 result[0]                
+    0:03:03   22726.7      2.81      12.5       0.0 result[0]                
+    0:03:03   22741.5      2.81      12.5       0.0 result[0]                
+    0:03:03   22742.9      2.81      12.5       0.0 result[0]                
+    0:03:03   22750.0      2.80      12.5       0.0 result[0]                
+    0:03:04   22750.0      2.80      12.5       0.0 result[0]                
+    0:03:04   22750.7      2.80      12.5       0.0 result[0]                
+    0:03:04   22751.4      2.80      12.5       0.0 result[0]                
+    0:03:04   22752.1      2.80      12.5       0.0 result[0]                
+    0:03:04   22759.1      2.80      12.5       0.0 result[0]                
+    0:03:04   22761.2      2.80      12.5       0.0 result[0]                
+    0:03:04   22760.5      2.80      12.5       0.0 result[0]                
+    0:03:05   22766.9      2.80      12.5       0.0 result[0]                
+    0:03:05   22775.4      2.80      12.4       0.0 result[0]                
+    0:03:05   22774.7      2.80      12.4       0.0 result[0]                
+    0:03:06   22789.5      2.79      12.4       0.0 result[0]                
+    0:03:06   22783.8      2.79      12.4       0.0 result[0]                
+    0:03:06   22792.3      2.79      12.4       0.0 result[0]                
+    0:03:06   22797.9      2.79      12.4       0.0 result[0]                
+    0:03:06   22808.5      2.79      12.4       0.0 result[0]                
+    0:03:06   22803.6      2.79      12.4       0.0 result[0]                
+    0:03:07   22807.1      2.79      12.4       0.0 result[0]                
+    0:03:07   22816.3      2.79      12.4       0.0 result[0]                
+    0:03:07   22823.3      2.79      12.4       0.0 result[0]                
+    0:03:07   22824.7      2.79      12.4       0.0 result[0]                
+    0:03:07   22824.0      2.79      12.4       0.0 result[0]                
+    0:03:08   22826.2      2.79      12.4       0.0 result[0]                
+    0:03:08   22833.2      2.79      12.4       0.0 result[0]                
+    0:03:08   22839.6      2.79      12.4       0.0 result[0]                
+    0:03:08   22841.0      2.79      12.4       0.0 result[0]                
+    0:03:09   22843.1      2.79      12.4       0.0 result[0]                
+    0:03:09   22857.2      2.78      12.4       0.0 result[0]                
+    0:03:10   22855.8      2.78      12.4       0.0 result[0]                
+    0:03:10   22881.2      2.78      12.3       0.0 result[0]                
+    0:03:10   22884.7      2.78      12.3       0.0 result[0]                
+    0:03:11   22897.4      2.78      12.3       0.0 result[0]                
+    0:03:11   22895.3      2.78      12.3       0.0 result[0]                
+    0:03:11   22893.9      2.78      12.3       0.0 result[0]                
+    0:03:12   22897.4      2.78      12.3       0.0 result[0]                
+    0:03:12   22899.5      2.78      12.3       0.0 result[0]                
+    0:03:12   22917.2      2.78      12.3       0.0 result[0]                
+    0:03:13   22930.6      2.78      12.3       0.0 result[0]                
+    0:03:13   22933.4      2.78      12.3       0.0 result[0]                
+    0:03:13   22934.8      2.78      12.3       0.0 result[0]                
+    0:03:13   22934.8      2.78      12.3       0.0 result[0]                
+    0:03:13   22944.0      2.78      12.3       0.0 result[0]                
+    0:03:14   22951.1      2.77      12.3       0.0 result[0]                
+    0:03:14   22956.0      2.77      12.3       0.0 result[0]                
+    0:03:14   22949.6      2.77      12.3       0.0 result[0]                
+    0:03:15   22965.9      2.77      12.3       0.0 result[0]                
+    0:03:15   22983.5      2.77      12.3       0.0 result[0]                
+    0:03:15   22985.6      2.77      12.3       0.0 result[0]                
+    0:03:15   22985.6      2.77      12.3       0.0 result[0]                
+    0:03:15   22984.9      2.77      12.3       0.0 result[0]                
+    0:03:16   22982.8      2.77      12.3       0.0 result[0]                
+    0:03:16   22982.1      2.77      12.3       0.0 result[0]                
+    0:03:16   22982.1      2.77      12.3       0.0 result[0]                
+    0:03:17   22982.1      2.77      12.3       0.0 result[0]                
+    0:03:17   22984.9      2.77      12.3       0.0 result[0]                
+    0:03:17   22994.1      2.77      12.3       0.0 result[0]                
+    0:03:18   22996.9      2.77      12.3       0.0 result[0]                
+    0:03:18   22996.9      2.77      12.3       0.0 result[0]                
+    0:03:18   22995.5      2.77      12.3       0.0 result[0]                
+    0:03:19   22999.7      2.77      12.3       0.0 result[0]                
+    0:03:19   23001.9      2.77      12.3       0.0 result[0]                
+    0:03:19   23006.8      2.77      12.3       0.0 result[0]                
+    0:03:20   23006.8      2.77      12.3       0.0 result[0]                
+    0:03:20   23008.9      2.77      12.2       0.0 result[0]                
+    0:03:20   23013.1      2.77      12.2       0.0 result[0]                
+    0:03:21   23018.1      2.77      12.2       0.0 result[0]                
+    0:03:21   23018.1      2.77      12.2       0.0 result[0]                
+    0:03:21   23016.0      2.77      12.2       0.0 result[0]                
+    0:03:21   23032.9      2.77      12.2       0.0 result[0]                
+    0:03:21   23040.7      2.77      12.2       0.0 result[0]                
+    0:03:21   23043.5      2.77      12.2       0.0 result[0]                
+    0:03:22   23045.6      2.77      12.2       0.0 result[0]                
+    0:03:22   23045.6      2.77      12.2       0.0 result[0]                
+    0:03:22   23056.2      2.77      12.2       0.0 result[0]                
+    0:03:22   23057.6      2.77      12.2       0.0 result[0]                
+    0:03:22   23056.9      2.77      12.2       0.0 result[0]                
+    0:03:23   23056.9      2.76      12.2       0.0 result[0]                
+    0:03:23   23055.5      2.76      12.2       0.0 result[0]                
+    0:03:23   23061.8      2.76      12.2       0.0 result[0]                
+    0:03:23   23073.8      2.76      12.2       0.0 result[0]                
+    0:03:23   23078.1      2.76      12.2       0.0 result[0]                
+    0:03:24   23079.5      2.76      12.2       0.0 result[0]                
+    0:03:24   23085.1      2.76      12.2       0.0 result[0]                
+    0:03:24   23087.2      2.76      12.2       0.0 result[0]                
+    0:03:25   23087.2      2.76      12.2       0.0 result[0]                
+    0:03:25   23101.3      2.76      12.2       0.0 result[0]                
+    0:03:25   23108.4      2.76      12.2       0.0 result[0]                
+    0:03:25   23102.1      2.76      12.2       0.0 result[0]                
+    0:03:26   23106.3      2.76      12.2       0.0 result[0]                
+    0:03:26   23107.7      2.76      12.2       0.0 result[0]                
+    0:03:26   23114.8      2.76      12.2       0.0 result[0]                
+    0:03:26   23114.8      2.76      12.2       0.0 result[0]                
+    0:03:26   23128.2      2.76      12.2       0.0 result[0]                
+    0:03:27   23126.7      2.76      12.2       0.0 result[0]                
+    0:03:27   23138.7      2.75      12.2       0.0 result[0]                
+    0:03:27   23145.1      2.75      12.2       0.0 result[0]                
+    0:03:28   23158.5      2.75      12.2       0.0 result[0]                
+    0:03:28   23166.3      2.75      12.2       0.0 result[0]                
+    0:03:28   23165.6      2.75      12.2       0.0 result[0]                
+    0:03:28   23165.6      2.75      12.2       0.0 result[0]                
+    0:03:29   23186.7      2.75      12.2       0.0 result[0]                
+    0:03:29   23184.6      2.75      12.2       0.0 result[0]                
+    0:03:30   23183.9      2.75      12.2       0.0 result[0]                
+    0:03:30   23183.2      2.75      12.2       0.0 result[0]                
+    0:03:30   23181.8      2.75      12.2       0.0 result[0]                
+    0:03:31   23186.0      2.75      12.1       0.0 result[0]                
+    0:03:31   23192.4      2.75      12.1       0.0 result[0]                
+    0:03:31   23190.3      2.75      12.1       0.0 result[0]                
+    0:03:31   23192.4      2.75      12.1       0.0 result[0]                
+    0:03:31   23190.3      2.75      12.1       0.0 result[0]                
+    0:03:31   23191.0      2.75      12.1       0.0 result[0]                
+    0:03:31   23205.8      2.75      12.1       0.0 result[0]                
+    0:03:32   23210.0      2.75      12.1       0.0 result[0]                
+    0:03:32   23212.1      2.75      12.1       0.0 result[0]                
+    0:03:32   23212.8      2.75      12.1       0.0 result[0]                
+    0:03:32   23209.3      2.75      12.1       0.0 result[0]                
+    0:03:32   23211.4      2.75      12.1       0.0 result[0]                
+    0:03:33   23217.1      2.75      12.1       0.0 result[0]                
+    0:03:33   23217.1      2.75      12.1       0.0 result[0]                
+    0:03:33   23217.1      2.75      12.1       0.0 result[0]                
+    0:03:33   23214.2      2.75      12.1       0.0 result[0]                
+    0:03:33   23214.2      2.75      12.1       0.0 result[0]                
+    0:03:34   23232.6      2.75      12.1       0.0 result[0]                
+    0:03:34   23233.3      2.75      12.1       0.0 result[0]                
+    0:03:34   23237.5      2.75      12.1       0.0 result[0]                
+    0:03:34   23237.5      2.75      12.1       0.0 result[0]                
+    0:03:34   23238.2      2.75      12.1       0.0 result[0]                
+    0:03:34   23241.1      2.75      12.1       0.0 result[0]                
+    0:03:35   23258.0      2.75      12.1       0.0 result[0]                
+    0:03:35   23259.4      2.75      12.1       0.0 result[0]                
+    0:03:35   23267.9      2.74      12.1       0.0 result[0]                
+    0:03:35   23273.5      2.74      12.1       0.0 result[0]                
+    0:03:35   23277.7      2.74      12.1       0.0 result[0]                
+    0:03:35   23276.3      2.74      12.1       0.0 result[0]                
+    0:03:36   23285.5      2.74      12.1       0.0 result[0]                
+    0:03:36   23286.9      2.74      12.1       0.0 result[0]                
+    0:03:36   23286.2      2.74      12.1       0.0 result[0]                
+    0:03:36   23288.3      2.74      12.1       0.0 result[0]                
+    0:03:37   23288.3      2.74      12.1       0.0 result[0]                
+    0:03:37   23288.3      2.74      12.1       0.0                          
+    0:03:37   23279.9      2.74      12.1       0.0                          
+    0:03:37   23261.5      2.74      12.1       0.0                          
+    0:03:37   23250.2      2.74      12.1       0.0                          
+    0:03:37   23238.9      2.74      12.1       0.0                          
+    0:03:37   23210.0      2.74      12.1       0.0                          
+    0:03:38   23200.1      2.74      12.1       0.0                          
+    0:03:38   23185.3      2.74      12.1       0.0                          
+    0:03:38   23170.5      2.74      12.1       0.0                          
+    0:03:38   23162.0      2.74      12.1       0.0                          
+    0:03:38   23149.3      2.74      12.1       0.0                          
+    0:03:38   23149.3      2.74      12.1       0.0                          
+    0:03:38   23147.2      2.74      12.1       0.0                          
+    0:03:38   23148.6      2.74      12.1       0.0                          
+    0:03:39   23148.6      2.74      12.1       0.0                          
+    0:03:39   23154.3      2.74      12.1       0.0                          
+    0:03:39   23156.4      2.74      12.0       0.0                          
+    0:03:39   23156.4      2.74      12.0       0.0                          
+    0:03:39   23153.6      2.74      12.0       0.0                          
+    0:03:39   23155.0      2.74      12.0       0.0                          
+    0:03:40   23152.1      2.74      12.0       0.0                          
+    0:03:40   23158.5      2.74      12.0       0.0                          
+    0:03:40   23158.5      2.74      12.0       0.0                          
+    0:03:40   23162.7      2.74      12.0       0.0                          
+    0:03:40   23161.3      2.74      12.0       0.0                          
+    0:03:40   23165.6      2.74      12.0       0.0                          
+    0:03:40   23167.7      2.74      12.0       0.0                          
+    0:03:41   23172.6      2.74      12.0       0.0                          
+    0:03:41   23175.4      2.74      12.0       0.0 result[0]                
+    0:03:41   23175.4      2.74      12.0       0.0 result[0]                
+    0:03:41   23175.4      2.74      12.0       0.0 result[0]                
+    0:03:41   23175.4      2.74      12.0       0.0 result[0]                
+    0:03:42   23184.6      2.74      12.0       0.0 result[0]                
+    0:03:42   23191.7      2.73      12.0       0.0 result[0]                
+    0:03:42   23194.5      2.73      12.0       0.0 result[0]                
+    0:03:42   23197.3      2.73      12.0       0.0 result[0]                
+    0:03:43   23199.4      2.73      12.0       0.0 result[0]                
+    0:03:43   23210.0      2.73      12.0       0.0 result[0]                
+    0:03:43   23217.1      2.73      12.0       0.0 result[0]                
+    0:03:44   23231.2      2.73      12.0       0.0 result[0]                
+    0:03:44   23222.0      2.73      12.0       0.0 result[0]                
+    0:03:44   23219.9      2.73      12.0       0.0 result[0]                
+    0:03:44   23222.7      2.73      12.0       0.0 result[0]                
+    0:03:45   23221.3      2.73      12.0       0.0 result[0]                
+    0:03:45   23225.5      2.73      12.0       0.0 result[0]                
+    0:03:45   23225.5      2.73      12.0       0.0 result[0]                
+    0:03:45   23223.4      2.73      12.0       0.0 result[0]                
+    0:03:45   23224.1      2.73      12.0       0.0 result[0]                
+    0:03:46   23219.2      2.73      12.0       0.0 result[0]                
+    0:03:46   23223.4      2.73      12.0       0.0 result[0]                
+    0:03:46   23231.2      2.73      12.0       0.0 result[0]                
+    0:03:46   23237.5      2.73      12.0       0.0 result[0]                
+    0:03:46   23241.1      2.73      12.0       0.0 result[0]                
+    0:03:46   23243.2      2.73      12.0       0.0 result[0]                
+    0:03:47   23243.2      2.73      12.0       0.0 result[0]                
+    0:03:47   23243.2      2.73      12.0       0.0 result[0]                
+    0:03:47   23249.5      2.73      12.0       0.0 result[0]                
+    0:03:47   23255.2      2.72      12.0       0.0 result[0]                
+    0:03:47   23256.6      2.72      12.0       0.0 result[0]                
+    0:03:47   23257.3      2.72      12.0       0.0 result[0]                
+    0:03:48   23254.5      2.72      12.0       0.0 result[0]                
+    0:03:48   23261.5      2.72      12.0       0.0 result[0]                
+    0:03:48   23264.3      2.72      12.0       0.0 result[0]                
+    0:03:48   23263.6      2.72      12.0       0.0 result[0]                
+    0:03:48   23263.6      2.72      12.0       0.0 result[0]                
+    0:03:48   23263.6      2.72      12.0       0.0 result[0]                
+    0:03:49   23267.9      2.72      12.0       0.0 result[0]                
+    0:03:49   23273.5      2.72      12.0       0.0 result[0]                
+    0:03:49   23270.0      2.72      12.0       0.0 result[0]                
+    0:03:49   23267.2      2.72      12.0       0.0 result[0]                
+    0:03:49   23267.2      2.72      12.0       0.0 result[0]                
+    0:03:50   23265.0      2.72      12.0       0.0 result[0]                
+    0:03:50   23265.0      2.72      12.0       0.0 result[0]                
+    0:03:50   23264.3      2.72      12.0       0.0 result[0]                
+    0:03:50   23264.3      2.72      12.0       0.0 result[0]                
+    0:03:50   23268.6      2.72      12.0       0.0 result[0]                
+    0:03:51   23270.0      2.72      12.0       0.0 result[0]                
+    0:03:51   23267.9      2.72      12.0       0.0 result[0]                
+    0:03:51   23266.5      2.72      12.0       0.0 result[0]                
+    0:03:51   23266.5      2.72      12.0       0.0 result[0]                
+    0:03:52   23267.9      2.72      12.0       0.0 result[0]                
+    0:03:52   23275.6      2.72      12.0       0.0 result[0]                
+    0:03:52   23277.0      2.72      12.0       0.0 result[0]                
+    0:03:52   23273.5      2.72      12.0       0.0 result[0]                
+    0:03:52   23280.6      2.72      12.0       0.0 result[0]                
+    0:03:52   23281.3      2.72      12.0       0.0 result[0]                
+    0:03:52   23284.1      2.72      12.0       0.0 result[0]                
+    0:03:53   23291.2      2.72      12.0       0.0 result[0]                
+    0:03:53   23291.2      2.72      12.0       0.0 result[0]                
+    0:03:53   23289.7      2.72      12.0       0.0 result[0]                
+    0:03:53   23289.0      2.72      12.0       0.0 result[0]                
+    0:03:54   23289.0      2.72      12.0       0.0 result[0]                
+    0:03:54   23289.0      2.72      12.0       0.0 result[0]                
+    0:03:54   23290.4      2.72      12.0       0.0 result[0]                
+    0:03:55   23291.9      2.72      12.0       0.0 result[0]                
+    0:03:55   23291.9      2.72      12.0       0.0 result[0]                
+    0:03:55   23296.1      2.72      12.0       0.0 result[0]                
+    0:03:56   23300.3      2.72      12.0       0.0 result[0]                
+    0:03:56   23308.8      2.72      12.0       0.0 result[0]                
+    0:03:56   23313.7      2.72      12.0       0.0 result[0]                
+    0:03:56   23320.8      2.72      12.0       0.0 result[0]                
+    0:03:56   23320.1      2.72      12.0       0.0 result[0]                
+    0:03:58   23316.6      2.72      12.0       0.0 result[0]                
+    0:03:58   23317.3      2.72      12.0       0.0 result[0]                
+    0:04:01   23320.1      2.72      12.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Current design is 'tracking_ratio_phase'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/reports/tracking_ratio_phase.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/reports/tracking_ratio_phase.v'.
+FAST_PARTITION_DONE tracking_ratio_phase
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:494: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_divide_step'.
+
+  Linking design 'tracking_divide_step'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/work/tracking_divide_step.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FAST_PARTITION_BEGIN tracking_divide_step
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_divide_step'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_divide_step_DW01_add_0'
+  Mapping 'tracking_divide_step_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 3)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   14072.5      0.00       0.0       0.0 *cell*39809/*cell*39938/Y
+    0:00:02   14072.5      0.00       0.0       0.0 *cell*39809/*cell*39938/Y
+    0:00:02   13939.1      0.00       0.0       0.0 *cell*39809/*cell*39988/Y
+    0:00:02   13886.2      0.00       0.0       0.0 *cell*39809/*cell*40003/S
+    0:00:02   13831.9      0.00       0.0       0.0 *cell*39809/*cell*40020/Y
+    0:00:02   13684.4      0.00       0.0       0.0 *cell*39809/U737/Y       
+    0:00:02   13606.8      0.00       0.0       0.0 *cell*39809/*cell*40102/Y
+    0:00:02   13483.3      0.00       0.0       0.0 *cell*39809/U207/Y       
+    0:00:03   13376.1      0.00       0.0       0.0 *cell*39809/*cell*40034/Y
+    0:00:03   13321.0      0.00       0.0       0.0 *cell*39809/*cell*40188/Y
+    0:00:03   13153.1      0.00       0.0       0.0 *cell*39809/*cell*40223/Y
+    0:00:03   13025.4      0.00       0.0       0.0 *cell*39809/*cell*40247/Y
+    0:00:03   12978.1      0.00       0.0       0.0 *cell*39809/U561/CO      
+    0:00:04   12877.2      0.00       0.0       0.0 *cell*39809/U293/Y       
+    0:00:04   12754.4      0.00       0.0       0.0 *cell*39809/*cell*40351/Y
+    0:00:04   12719.1      0.00       0.0       0.0 *cell*39809/U765/Y       
+    0:00:04   12621.8      0.00       0.0       0.0 *cell*39809/U314/Y       
+    0:00:04   12577.3      0.00       0.0       0.0 *cell*39809/*cell*40269/S
+    0:00:05   12530.0      0.00       0.0       0.0 *cell*39809/*cell*40241/Y
+    0:00:05   12434.8      0.00       0.0       0.0 *cell*39809/U751/Y       
+    0:00:05   12403.7      0.00       0.0       0.0 *cell*39809/*cell*40446/Y
+    0:00:05   12378.3      0.00       0.0       0.0 *cell*39809/U694/Y       
+    0:00:05   12330.4      0.00       0.0       0.0 *cell*39809/U755/Y       
+    0:00:06   12286.6      0.00       0.0       0.0 *cell*39809/*cell*39952/S
+    0:00:06   12234.4      0.00       0.0       0.0 *cell*39809/*cell*39904/S
+    0:00:06   12196.3      0.00       0.0       0.0 *cell*39809/*cell*40270/Y
+    0:00:06   12139.1      0.00       0.0       0.0 *cell*39809/U740/Y       
+    0:00:06   12062.9      0.00       0.0       0.0 *cell*39809/U693/Y       
+    0:00:06   12037.5      0.00       0.0       0.0 *cell*39809/U770/Y       
+    0:00:06   11977.6      0.00       0.0       0.0 *cell*39809/U133/Y       
+    0:00:07   11905.6      0.00       0.0       0.0 *cell*39809/U105/Y       
+    0:00:07   11833.6      0.00       0.0       0.0 *cell*39809/U77/Y        
+    0:00:07   11755.3      0.00       0.0       0.0 *cell*39809/U39/Y        
+    0:00:07   11708.7      0.00       0.0       0.0 *cell*39809/*cell*40502/Y
+    0:00:07   10954.4      0.00       0.0       0.0                          
+    0:00:07   10954.4      0.00       0.0       0.0                          
+    0:00:07   10954.4      0.00       0.0       0.0                          
+    0:00:07   10954.4      0.00       0.0       0.0                          
+    0:00:07   10954.4      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10591.8      0.00       0.0       0.0                          
+    0:00:07   10551.5      0.00       0.0       0.0                          
+    0:00:07   10531.1      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+    0:00:07   10526.8      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'tracking_divide_step' inherited license information from design 'tracking_divide_step_DW_mult_tc_2'. (DDB-74)
+Information: Added key list 'DesignWare' to design 'tracking_divide_step'. (DDB-72)
+Current design is 'tracking_divide_step'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/reports/tracking_divide_step.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/reports/tracking_divide_step.v'.
+FAST_PARTITION_DONE tracking_divide_step
+Running PRESTO HDLC
+Warning:  ./rtl/tracking_channel_minimal.sv:507: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_divide_aid'.
+
+  Linking design 'tracking_divide_aid'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/work/tracking_divide_aid.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library)
+                              /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Creating virtual clock named 'module_clk' with no sources. (UID-348)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+FAST_PARTITION_BEGIN tracking_divide_aid
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'tracking_divide_aid'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'tracking_divide_aid_DW01_add_0'
+  Mapping 'tracking_divide_aid_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 4)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    9702.7      0.00       0.0       0.0 *cell*41361/*cell*41410/CO
+    0:00:02    9702.7      0.00       0.0       0.0 *cell*41361/*cell*41410/CO
+    0:00:02    9468.4      0.00       0.0       0.0 *cell*41361/*cell*41432/Y
+    0:00:02    9296.3      0.00       0.0       0.0 *cell*41361/U226/Y       
+    0:00:02    9062.0      0.00       0.0       0.0 *cell*41361/U532/Y       
+    0:00:02    8755.8      0.00       0.0       0.0 *cell*41361/*cell*41576/Y
+    0:00:02    8655.6      0.00       0.0       0.0 *cell*41361/*cell*41600/Y
+    0:00:02    8506.0      0.00       0.0       0.0 *cell*41361/*cell*41625/Y
+    0:00:03    8376.2      0.00       0.0       0.0 *cell*41361/U522/Y       
+    0:00:03    8266.1      0.00       0.0       0.0 *cell*41361/U492/Y       
+    0:00:03    8134.9      0.00       0.0       0.0 *cell*41361/*cell*41638/Y
+    0:00:03    8055.1      0.00       0.0       0.0 *cell*41361/U509/Y       
+    0:00:03    7956.3      0.00       0.0       0.0 *cell*41361/U486/Y       
+    0:00:03    7885.1      0.00       0.0       0.0 *cell*41361/*cell*41780/Y
+    0:00:04    7751.0      0.00       0.0       0.0 *cell*41361/*cell*41738/S
+    0:00:04    7696.7      0.00       0.0       0.0 *cell*41361/*cell*41665/S
+    0:00:04    7633.2      0.00       0.0       0.0 *cell*41361/U130/Y       
+    0:00:04    7561.9      0.00       0.0       0.0 *cell*41361/*cell*41709/S
+    0:00:04    7500.5      0.00       0.0       0.0 *cell*41361/*cell*41806/S
+    0:00:04    7430.7      0.00       0.0       0.0 *cell*41361/*cell*41897/Y
+    0:00:04    7356.6      0.00       0.0       0.0 *cell*41361/*cell*41917/Y
+    0:00:04    7284.6      0.00       0.0       0.0 *cell*41361/*cell*41937/Y
+    0:00:04    6480.9      0.00       0.0       0.0                          
+    0:00:04    6480.9      0.00       0.0       0.0                          
+    0:00:04    6480.9      0.00       0.0       0.0                          
+    0:00:04    6480.9      0.00       0.0       0.0                          
+    0:00:04    6480.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6099.9      0.00       0.0       0.0                          
+    0:00:05    6053.3      0.00       0.0       0.0                          
+    0:00:05    6026.5      0.00       0.0       0.0                          
+    0:00:05    6014.5      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+    0:00:05    6008.9      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'tracking_divide_aid' inherited license information from design 'tracking_divide_aid_DW_mult_tc_2'. (DDB-74)
+Information: Added key list 'DesignWare' to design 'tracking_divide_aid'. (DDB-72)
+Current design is 'tracking_divide_aid'.
+Writing ddc file '/home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/reports/tracking_divide_aid.ddc'.
+Writing verilog file '/home/ICer/ic_eda_backend_20261111/runs/fast_v6_parts/reports/tracking_divide_aid.v'.
+FAST_PARTITION_DONE tracking_divide_aid
+puts "BACKEND_PARTITIONS_PASS"
+BACKEND_PARTITIONS_PASS
+exit 0
+
+Memory usage for main task 184 Mbytes.
+Memory usage for this session 184 Mbytes.
+CPU usage for this session 256 seconds ( 0.07 hours ).
+
+Thank you...

@@ -1,0 +1,199 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+set stage $env(LAB_STAGE)
+power
+set report_dir $env(REPORT_DIR)
+/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/reports/power
+file mkdir $report_dir
+source $env(LAB_DIR)/library.tcl
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loaded 0 designs.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db'
+Loaded 0 designs.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast.db'
+Loaded 0 designs.
+source $env(EXPERIMENT_ROOT)/scripts/reports.tcl
+if {$stage == "preflight"} {
+    redirect $report_dir/libraries.rpt {list_libs}
+    foreach name [list $env(STD_TT_LIB) $env(STD_SS_LIB) $env(STD_FF_LIB)] {
+        if {[sizeof_collection [get_libs $name]] != 1} {error "Standard library name mismatch: $name"}
+    }
+    if {$env(LOCAL_PROBE) == 0} {
+        foreach name [list $env(PAD_TT_LIB) $env(PAD_SS_LIB) $env(PAD_FF_LIB)] {
+            foreach cell {PDDW08DGZ_H_G PDUW08DGZ_H_G PVDD1DGZ_H_G PVSS1DGZ_H_G PVDD2POC_H_G} {
+                if {[sizeof_collection [get_lib_cells $name/$cell]] != 1} {error "PAD cell missing: $name/$cell"}
+            }
+        }
+    }
+    puts "LAB_PREFLIGHT_DC_PASS"
+    exit 0
+}
+if {$stage == "synth"} {
+    define_design_lib WORK -path ./WORK
+    set rtl $env(REPO_ROOT)/student_release/student_release/rtl
+    set_app_var search_path [concat [list $rtl $env(REPO_ROOT)] $search_path]
+    if {$env(LOCAL_PROBE) == 1} {
+        if {![analyze -format sverilog -define SYNTHESIS $env(LAB_DIR)/smoke.sv] || ![elaborate backend_smoke]} {exit 1}
+    } else {
+        set filelist [open $env(EXPERIMENT_ROOT)/work/stage/filelists/B1.txt r]
+        foreach path [split [string trim [read $filelist]] \n] {
+            set path [string trim $path]
+            if {[string match *acquisition_pcps_blackbox.sv $path]} {
+                if {$env(SYNTH_MODE) == "full"} {continue}
+                set path $env(REPO_ROOT)/synth/m2_isolate/acquisition_pcps_blackbox.sv
+            } elseif {$path == "rtl/tracking_channel_minimal.sv"} {
+                set path $env(EXPERIMENT_ROOT)/work/stage/rtl/tracking_channel_minimal.sv
+            } else {
+                set path $rtl/[file tail $path]
+            }
+            if {![analyze -format sverilog -define SYNTHESIS $path]} {exit 1}
+        }
+        close $filelist
+        if {$env(SYNTH_MODE) == "full"} {
+            set filelist [open $env(PCPS_IMPL_F) r]
+            foreach path [split [string trim [read $filelist]] \n] {
+                set path [string trim $path]
+                if {$path ne "" && ![string match {#*} $path]} {
+                    if {![analyze -format sverilog -define SYNTHESIS $path]} {exit 1}
+                }
+            }
+            close $filelist
+        }
+        if {![analyze -format sverilog $env(REPO_ROOT)/rtl/bds_bb_6ch_pad_top.sv]} {exit 1}
+        if {![elaborate $env(TOP)] || ![link]} {exit 1}
+        set top_design [get_object_name [current_design]]
+        # Re-elaborate and map V6 arithmetic in the selected TSMC28 libraries.
+        # No external arithmetic DDC is ever read in this flow.
+        foreach name {tracking_atan tracking_divide_aid tracking_divide_step tracking_ratio_code tracking_ratio_phase} {
+            current_design $name
+            apply_corners
+            set period 4
+            if {$name == "tracking_atan" || $name == "tracking_ratio_code"} {set period $env(CLOCK_NS)}
+            create_clock -name module_clk -period $period
+            set_clock_uncertainty $env(UNCERTAINTY_NS) [get_clocks module_clk]
+            set_input_delay -clock module_clk -max 0 [all_inputs]
+            set_input_delay -clock module_clk -min 0 [all_inputs]
+            set_output_delay -clock module_clk -max 0 [all_outputs]
+            set_output_delay -clock module_clk -min 0 [all_outputs]
+            set_driving_cell -library $env(STD_SS_LIB) -lib_cell $env(BLOCK_DRIVE_CELL) [all_inputs]
+            set_load [expr {4 * [load_of $env(STD_SS_LIB)/$env(BLOCK_DRIVE_CELL)/$env(BLOCK_DRIVE_PIN)]}] [all_outputs]
+            if {![compile -map_effort medium]} {exit 1}
+            ungroup -all -flatten
+            reset_design
+            set_dont_touch [current_design] true
+        }
+        current_design $top_design
+        if {![link]} {exit 1}
+        set arithmetic [get_cells -hier -filter {ref_name =~ tracking_ratio_* || ref_name =~ tracking_atan* || ref_name =~ tracking_divide_*}]
+        if {[sizeof_collection $arithmetic] != 42} {error "Expected 42 arithmetic instances for six channels"}
+        set_dont_touch $arithmetic true
+        set_boundary_optimization $arithmetic false
+        set pads [get_cells -hier -filter {ref_name =~ PD* || ref_name =~ PV*}]
+        set_dont_touch $pads true
+        set_dont_use [get_lib_cells $env(PAD_SS_LIB)/*]
+        if {$env(SYNTH_MODE) == "isolated"} {
+            set acq [get_cells core/acquisition]
+            set_dont_touch $acq true
+            set_boundary_optimization $acq false
+            puts "LAB_PCPS_ISOLATED_STORAGE_NOT_SYNTHESIZED"
+        }
+    }
+    if {![link]} {exit 1}
+    apply_corners
+    if {$env(LOCAL_PROBE) == 1} {
+        create_clock -name clk -period $env(CLOCK_NS) [get_ports clk]
+        # The smoke TB drives these signals 0.01 ns after the falling edge.
+        set_input_delay -clock clk -clock_fall -max 0.01 [get_ports {reset_n enable}]
+        set_input_delay -clock clk -clock_fall -min 0.01 [get_ports {reset_n enable}]
+        set_output_delay -clock clk -max 1 [all_outputs]
+        set_output_delay -clock clk -min 0 [all_outputs]
+        set_input_transition 0.1 [get_ports {reset_n enable}]
+        set_load 0.01 [all_outputs]
+    } else {source $env(LAB_DIR)/pad.sdc}
+    redirect $report_dir/check_pre.rpt {check_design}
+    if {![compile -map_effort medium]} {exit 1}
+    change_names -rules verilog -hierarchy
+    write -format verilog -hierarchy -output output/final.v
+    write -format ddc -hierarchy -output output/final.ddc
+    write_sdc output/final.sdc
+    backend_reports ""
+    puts "LAB_SYNTH_EXPORTED"
+    exit 0
+}
+read_ddc output/final.ddc
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+  Loading link library 'slow'
+  Loading link library 'fast'
+Reading ddc file '/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/output/final.ddc'.
+Loaded 1 design.
+Current design is 'backend_smoke'.
+backend_smoke
+current_design $env(TOP)
+Current design is 'backend_smoke'.
+{backend_smoke}
+if {![link]} {exit 1}
+
+  Linking design 'backend_smoke'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  backend_smoke               /home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/output/final.ddc
+  slow (library)              /home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db
+  fast (library)              /home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+read_sdc output/final.sdc
+
+Reading SDC version 2.1...
+Using operating conditions 'slow' found in library 'slow'.
+Using operating conditions 'fast' found in library 'fast'.
+1
+apply_corners
+Using operating conditions 'slow' found in library 'slow'.
+Using operating conditions 'fast' found in library 'fast'.
+if {$stage == "export"} {
+    backend_reports ""
+    # bc_wc + explicit SS/FF min-library pairs produce real corner triplets.
+    write_sdf -version 2.1 -significant_digits 6 output/final_max.sdf
+    file copy output/final_max.sdf output/final_min.sdf
+    puts "LAB_SDF_EXPORTED MAXIMUM=SS MINIMUM=FF"
+} elseif {$stage == "power"} {
+    redirect $report_dir/check_design.rpt {check_design}
+    redirect $report_dir/check_timing.rpt {check_timing}
+    read_saif -input activity/run.saif -instance_name tb/dut
+    redirect $report_dir/activity.rpt {report_saif}
+    redirect $report_dir/power.rpt {report_power}
+    redirect $report_dir/power_hierarchy.rpt {report_power -hierarchy}
+    puts "LAB_POWER_REPORTED"
+} else {error "Unknown stage: $stage"}
+Warning: There are 80 objects not found during annotation. (PWR-452)
+LAB_POWER_REPORTED
+exit 0
+
+Memory usage for main task 233 Mbytes.
+Memory usage for this session 233 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+
+Thank you...

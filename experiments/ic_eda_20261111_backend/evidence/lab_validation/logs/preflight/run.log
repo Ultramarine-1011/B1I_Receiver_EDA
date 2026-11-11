@@ -1,0 +1,61 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+set stage $env(LAB_STAGE)
+preflight
+set report_dir $env(REPORT_DIR)
+/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/reports/preflight
+file mkdir $report_dir
+source $env(LAB_DIR)/library.tcl
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loaded 0 designs.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db'
+Loaded 0 designs.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast.db'
+Loaded 0 designs.
+source $env(EXPERIMENT_ROOT)/scripts/reports.tcl
+if {$stage == "preflight"} {
+    redirect $report_dir/libraries.rpt {list_libs}
+    foreach name [list $env(STD_TT_LIB) $env(STD_SS_LIB) $env(STD_FF_LIB)] {
+        if {[sizeof_collection [get_libs $name]] != 1} {error "Standard library name mismatch: $name"}
+    }
+    if {$env(LOCAL_PROBE) == 0} {
+        foreach name [list $env(PAD_TT_LIB) $env(PAD_SS_LIB) $env(PAD_FF_LIB)] {
+            foreach cell {PDDW08DGZ_H_G PDUW08DGZ_H_G PVDD1DGZ_H_G PVSS1DGZ_H_G PVDD2POC_H_G} {
+                if {[sizeof_collection [get_lib_cells $name/$cell]] != 1} {error "PAD cell missing: $name/$cell"}
+            }
+        }
+    }
+    puts "LAB_PREFLIGHT_DC_PASS"
+    exit 0
+}
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+LAB_PREFLIGHT_DC_PASS
+
+Memory usage for main task 233 Mbytes.
+Memory usage for this session 233 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+
+Thank you...

@@ -1,0 +1,22 @@
+ 
+****************************************
+Report : resources
+Design : memory_sync_DEPTH64_WIDTH16
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:11:50 2026
+****************************************
+
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+
+No implementations to report
+
+Multiplexor Report
+
+================================================================================
+| Cell                  | Width  | Data  | Select |         Reference          |
+================================================================================
+| C2151                 | 16     | 64    | 6      | *MUX_OP_64_6_16            |
+================================================================================
+1

@@ -1,0 +1,94 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : tracking_divide_step
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:23:41 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: value[36] (input port clocked by module_clk)
+  Endpoint: result[23] (output port clocked by module_clk)
+  Path Group: module_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock module_clk (rise edge)                        0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  value[36] (in)                                      0.134486   0.134486 f
+  mult_492_C497/a[36] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   0.134486 f
+  mult_492_C497/U1051/Y (INVX2)                       0.220259   0.354745 r
+  mult_492_C497/U1069/CO (CMPR42X1)                   0.322388   0.677133 f
+  mult_492_C497/U1175/ICO (CMPR42X1)                  0.082744   0.759877 f
+  mult_492_C497/U1244/S (CMPR42X1)                    0.219940   0.979817 f
+  mult_492_C497/U1252/S (CMPR42X1)                    0.257305   1.237122 f
+  mult_492_C497/U1229/Y (NOR2X2)                      0.046919   1.284040 r
+  mult_492_C497/U218/Y (OAI21X1)                      0.034843   1.318884 f
+  mult_492_C497/U1218/Y (AOI21X1)                     0.039336   1.358220 r
+  mult_492_C497/U200/Y (OAI21X1)                      0.033840   1.392060 f
+  mult_492_C497/U1356/Y (AOI21X1)                     0.039582   1.431642 r
+  mult_492_C497/U175/Y (OAI21X1)                      0.033391   1.465033 f
+  mult_492_C497/U1316/Y (AOI21X1)                     0.044429   1.509462 r
+  mult_492_C497/U167/Y (OAI21X1)                      0.033388   1.542850 f
+  mult_492_C497/U1312/Y (AOI21X1)                     0.044239   1.587089 r
+  mult_492_C497/U159/Y (OAI21X1)                      0.033388   1.620477 f
+  mult_492_C497/U1311/Y (AOI21X1)                     0.044239   1.664716 r
+  mult_492_C497/U151/Y (OAI21X1)                      0.033388   1.698104 f
+  mult_492_C497/U1310/Y (AOI21X1)                     0.044239   1.742344 r
+  mult_492_C497/U143/Y (OAI21X1)                      0.042749   1.785092 f
+  mult_492_C497/U1396/Y (AOI21X1)                     0.060841   1.845934 r
+  mult_492_C497/U130/Y (OAI21X1)                      0.046437   1.892370 f
+  mult_492_C497/U1398/Y (AOI21X1)                     0.061000   1.953370 r
+  mult_492_C497/U116/Y (OAI21X1)                      0.046437   1.999807 f
+  mult_492_C497/U1400/Y (AOI21X1)                     0.060999   2.060805 r
+  mult_492_C497/U101/Y (XOR2X1)                       0.058966   2.119772 f
+  mult_492_C497/product[61] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   2.119772 f
+  add_494_C497/A[5] (tracking_divide_step_DW01_add_2) 0.000000   2.119772 f
+  add_494_C497/U48/Y (INVX2)                          0.026716   2.146487 r
+  add_494_C497/U43/Y (NAND2BX2)                       0.037085   2.183572 r
+  add_494_C497/U55/Y (NOR2X2)                         0.016433   2.200004 f
+  add_494_C497/U54/CO (ADDHX1)                        0.059886   2.259890 f
+  add_494_C497/U57/CO (ADDHX1)                        0.063312   2.323202 f
+  add_494_C497/U56/CO (ADDHX1)                        0.063311   2.386513 f
+  add_494_C497/U58/CO (ADDHX1)                        0.063312   2.449824 f
+  add_494_C497/U51/CO (ADDHX1)                        0.065055   2.514879 f
+  add_494_C497/U60/CO (ADDHX1)                        0.068460   2.583338 f
+  add_494_C497/U52/CO (ADDHX1)                        0.065050   2.648388 f
+  add_494_C497/U61/CO (ADDHX1)                        0.068460   2.716848 f
+  add_494_C497/U53/CO (ADDHX1)                        0.065050   2.781897 f
+  add_494_C497/U69/CO (ADDHX1)                        0.068460   2.850357 f
+  add_494_C497/U62/CO (ADDHX1)                        0.065050   2.915406 f
+  add_494_C497/U59/CO (ADDHX1)                        0.068460   2.983866 f
+  add_494_C497/U66/CO (ADDHX1)                        0.063305   3.047171 f
+  add_494_C497/U63/CO (ADDHX1)                        0.065056   3.112227 f
+  add_494_C497/U64/CO (ADDHX1)                        0.070242   3.182469 f
+  add_494_C497/U65/CO (ADDHX1)                        0.070227   3.252696 f
+  add_494_C497/U72/CO (ADDHX1)                        0.065940   3.318636 f
+  add_494_C497/U70/Y (XOR2X1)                         0.068733   3.387368 r
+  add_494_C497/SUM[23] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   3.387368 r
+  result[23] (out)                                    0.000000   3.387368 r
+  data arrival time                                              3.387368
+
+  clock module_clk (rise edge)                        4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.200000  3.800000
+  output external delay                               0.000000   3.800000
+  data required time                                             3.800000
+  --------------------------------------------------------------------------
+  data required time                                             3.800000
+  data arrival time                                              -3.387368
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.412632
+
+
+1

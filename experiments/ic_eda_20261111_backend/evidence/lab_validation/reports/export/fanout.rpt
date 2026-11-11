@@ -1,0 +1,28 @@
+Warning: '-threshold' option is ignored when '-high_fanout' argument is present. (UID-451)
+ 
+****************************************
+Report : net fanout
+        -high_fanout
+Design : backend_smoke
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 12:06:49 2026
+****************************************
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Attributes:
+   dr - drc disabled
+    c - annotated capacitance
+    d - dont_touch
+    i - ideal_net
+    I - ideal_network
+    p - includes pin load
+    r - annotated resistance
+    h - high fanout
+
+Net                 Fanout   Attributes   Capacitance   Driver
+--------------------------------------------------------------------------------
+1

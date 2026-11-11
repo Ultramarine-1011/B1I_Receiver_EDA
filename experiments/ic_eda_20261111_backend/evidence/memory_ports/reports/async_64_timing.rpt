@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : memory_async_DEPTH64_WIDTH16
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:11:47 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: a[3] (input port clocked by clk)
+  Endpoint: qa[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 r
+  a[3] (in)                            0.004002   1.004002 r
+  U3433/Y (BUFX2)                      0.063073   1.067075 r
+  U3228/Y (INVX2)                      0.042103   1.109178 f
+  U3001/Y (AND2X2)                     0.065000   1.174178 f
+  U5573/Y (AND2X1)                     0.062594   1.236772 f
+  U2610/Y (BUFX2)                      0.051846   1.288619 f
+  U2540/Y (BUFX2)                      0.069631   1.358249 f
+  U5618/Y (AOI22XL)                    0.075605   1.433855 r
+  U5620/Y (NAND4X1)                    0.065896   1.499751 f
+  U5626/Y (OAI21X1)                    0.051307   1.551058 r
+  U5627/Y (NAND4X1)                    0.109144   1.660202 f
+  qa[0] (out)                          0.000000   1.660202 f
+  data arrival time                               1.660202
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  output external delay                -1.000000  9.000000
+  data required time                              9.000000
+  -----------------------------------------------------------
+  data required time                              9.000000
+  data arrival time                               -1.660202
+  -----------------------------------------------------------
+  slack (MET)                                     7.339798
+
+
+1

@@ -297,3 +297,9 @@ G0–G7当前可执行评价均在既有本机WSL2 Ubuntu/Verilator及Windows bu
 - 同一台 `IC` / `7901_15@192.168.159.128`。`free -m`：内存 1991 MB，可用约 1603 MB，swap 0。第一次 SSH 在 ARP 出现客体地址前超时；随后 ping 与 SSH 退出 0。未改网卡、bashrc、许可证或系统安装。
 - `vcs -ID` 退出 0，版本 I-2014.03。`dc_shell` K-2015.06：`-version` 退出 1 但打印版本，空脚本退出 0。PATH 上的 `vcd2saif` 为 ICC L-2016.03-SP1，合法小 VCD 转换退出 0。`report_power` 可执行，无设计时为 UID-4。
 - `/home/share/libs/tsmc28` 含 `tcbn28hpcplusbwp40p140` 的 TT/SS/FF `.db/.lib`，以及 `tphn28hpcpgv18` PAD 时序库和两份 Verilog。标准单元 Verilog 与 SRAM 宏未找到。16 项 `$readmemh` 探针被 VER-281 忽略。细节只维护在 `reports/m1_tsmc28_20261106/REPORT.md`。
+
+## 2026-11-11 个人 IC_EDA 后端预演
+
+执行环境为个人Windows和VMware IC_EDA，用户ICer，9818MB RAM、10235MB swap。客体当前无IP，经已认证VMware Tools执行与传输。DC O-2018.06-SP1，VCS O-2018.09-SP2，目标库TSMC90 typical，另用slow/fast验证小型SDF流程。没有更改网络、系统时间或许可证。
+
+六通道隔离预演30分钟超时，GNU time峰值RSS6602496KiB，CPU99%，采样swap峰值264KiB。结束前进程检查没有DC或仿真进程。TSMC90八位移位寄存器MAX/MIN SDF、VCS、vcd2saif与Power Compiler实跑通过。TSMC28实际执行仍以实验室资源预检为准。证据见 `experiments/ic_eda_20261111_backend`。

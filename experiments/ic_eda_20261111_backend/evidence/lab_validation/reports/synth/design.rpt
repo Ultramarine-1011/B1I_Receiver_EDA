@@ -1,0 +1,77 @@
+ 
+****************************************
+Report : design
+Design : backend_smoke
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 12:06:46 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    slow (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db)
+
+Local Link Library:
+
+    {/home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : slow
+    Library : slow
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   0.90
+    Interconnect Model : balanced_tree
+
+Min Operating Conditions:
+
+
+    Operating Condition Name : fast
+    Library : fast
+    Process :   1.00
+    Temperature : -40.00
+    Voltage :   1.10
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1

@@ -1,0 +1,257 @@
+{
+  "runs": {
+    "clean_v6_parts_retry1": {
+      "process": {
+        "stop_reason": null,
+        "monotonic_elapsed_s": 971.8599999999999,
+        "time_report_nonempty": true,
+        "return_code": 0
+      },
+      "errors": [],
+      "peak_rss_kib": 458208,
+      "cpu_percent": 99,
+      "aggregate_peak_rss_kib": 515788,
+      "minimum_available_kib": 7182988,
+      "maximum_swap_used_kib": 0,
+      "mapped_files_present": false
+    },
+    "clean_v6_channel": {
+      "process": {
+        "stop_reason": null,
+        "monotonic_elapsed_s": 433.94000000000005,
+        "time_report_nonempty": true,
+        "return_code": 0
+      },
+      "errors": [],
+      "peak_rss_kib": 643716,
+      "cpu_percent": 99,
+      "aggregate_peak_rss_kib": 627960,
+      "minimum_available_kib": 7881124,
+      "maximum_swap_used_kib": 0,
+      "mapped_files_present": true,
+      "area_um2": 486269.185663,
+      "leaf_cells": 95123,
+      "sequential_cells": 2338,
+      "logic_levels": 420.0,
+      "hold_violating_endpoints": 1917.0,
+      "setup_wns_ns": -18.646854,
+      "setup_tns_reported_endpoint_sum_ns": -3179.539771,
+      "setup_violating_endpoints": 414,
+      "worst_hold_ns": -0.162817,
+      "critical_path": {
+        "start": "frontend/correlator/qp_reg[11]",
+        "end": "code_step_q_reg[27]",
+        "arrival_ns": 28.38139,
+        "blocks": {
+          "pll_ratio": {
+            "input_ns": 0.797988,
+            "output_ns": 10.582711,
+            "delay_ns": 9.784723
+          },
+          "carrier_conversion": {
+            "input_ns": 14.34798,
+            "output_ns": 19.993448,
+            "delay_ns": 5.645468000000001
+          },
+          "feedback_aid": {
+            "input_ns": 20.125681,
+            "output_ns": 28.046709,
+            "delay_ns": 7.921028
+          }
+        }
+      },
+      "clock": "create_clock [get_ports clk]  -period 10  -waveform {0 5}",
+      "exceptions": [
+        "set_false_path   -from [get_ports reset_n]"
+      ]
+    },
+    "fast_v6_parts": {
+      "process": {
+        "stop_reason": null,
+        "monotonic_elapsed_s": 258.47,
+        "time_report_nonempty": true,
+        "return_code": 0
+      },
+      "errors": [],
+      "peak_rss_kib": 304884,
+      "cpu_percent": 99,
+      "aggregate_peak_rss_kib": 301752,
+      "minimum_available_kib": 7881124,
+      "maximum_swap_used_kib": 0,
+      "mapped_files_present": false
+    },
+    "fast_v6_channel": {
+      "process": {
+        "stop_reason": null,
+        "monotonic_elapsed_s": 979.8499999999999,
+        "time_report_nonempty": true,
+        "return_code": 0
+      },
+      "errors": [],
+      "runner_exit": 0,
+      "peak_rss_kib": 652304,
+      "cpu_percent": 99,
+      "aggregate_peak_rss_kib": 635528,
+      "minimum_available_kib": 5807444,
+      "maximum_swap_used_kib": 0,
+      "mapped_files_present": true,
+      "area_um2": 499790.599561,
+      "leaf_cells": 97975,
+      "sequential_cells": 2338,
+      "logic_levels": 352.0,
+      "hold_violating_endpoints": 1987.0,
+      "setup_wns_ns": -10.948725,
+      "setup_tns_reported_endpoint_sum_ns": -2019.864519,
+      "setup_violating_endpoints": 414,
+      "worst_hold_ns": -0.162817,
+      "critical_path": {
+        "start": "previous_qp_reg[22]",
+        "end": "code_step_q_reg[30]",
+        "arrival_ns": 20.683758,
+        "blocks": {
+          "fll_phase": {
+            "input_ns": 1.767215,
+            "output_ns": 11.524923,
+            "delay_ns": 9.757708
+          },
+          "carrier_conversion": {
+            "input_ns": 13.882044,
+            "output_ns": 17.104589,
+            "delay_ns": 3.222545
+          },
+          "feedback_aid": {
+            "input_ns": 17.4013,
+            "output_ns": 20.348373,
+            "delay_ns": 2.9470729999999996
+          }
+        }
+      },
+      "clock": "create_clock [get_ports clk]  -period 10  -waveform {0 5}",
+      "exceptions": [
+        "set_false_path   -from [get_ports reset_n]"
+      ]
+    },
+    "core6_v6_isolated": {
+      "process": {
+        "stop_reason": "TIMEOUT",
+        "monotonic_elapsed_s": 1800.5700000000002,
+        "time_report_nonempty": true,
+        "return_code": 1
+      },
+      "errors": [],
+      "runner_exit": 1,
+      "peak_rss_kib": 6602496,
+      "cpu_percent": 99,
+      "aggregate_peak_rss_kib": 6600652,
+      "minimum_available_kib": 1641368,
+      "maximum_swap_used_kib": 264,
+      "mapped_files_present": false
+    },
+    "memory_ports": {
+      "process": {
+        "stop_reason": null,
+        "monotonic_elapsed_s": 21.34999999999991,
+        "time_report_nonempty": true,
+        "return_code": 0
+      },
+      "errors": [],
+      "peak_rss_kib": 296868,
+      "cpu_percent": 95,
+      "aggregate_peak_rss_kib": 296128,
+      "minimum_available_kib": 8008904,
+      "maximum_swap_used_kib": 0,
+      "mapped_files_present": false
+    }
+  },
+  "fresh_v6_netlist_identical_modules": 96,
+  "fresh_v6_netlist_different_modules": [
+    "code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16"
+  ],
+  "netlist_comparison": "Exact module headers and concurrent statements, allowing wire-declaration/instance ordering. Code NCO is checked by mapped cycle equivalence.",
+  "optimization": {
+    "setup_wns_improvement_ns": 7.6981290000000016,
+    "area_increase_percent": 2.780643786746295,
+    "rtl_sha256": "ad3766423995a8ee7d8d2da0c4c87e271df794d25aea277517ed1994e3abee88"
+  },
+  "memory": {
+    "arrays": [
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "raw",
+        "width": 3,
+        "depth": 65472,
+        "bits": 196416
+      },
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "base_r",
+        "width": 16,
+        "depth": 16368,
+        "bits": 261888
+      },
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "base_i",
+        "width": 16,
+        "depth": 16368,
+        "bits": 261888
+      },
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "code_r",
+        "width": 32,
+        "depth": 4096,
+        "bits": 131072
+      },
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "code_i",
+        "width": 32,
+        "depth": 4096,
+        "bits": 131072
+      },
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "signal_r",
+        "width": 32,
+        "depth": 4096,
+        "bits": 131072
+      },
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "signal_i",
+        "width": 32,
+        "depth": 4096,
+        "bits": 131072
+      },
+      {
+        "module_file": "acquisition_pcps.sv",
+        "array": "accumulated_power",
+        "width": 64,
+        "depth": 4096,
+        "bits": 262144
+      },
+      {
+        "module_file": "fft4096_serial.sv",
+        "array": "re",
+        "width": 32,
+        "depth": 4096,
+        "bits": 131072
+      },
+      {
+        "module_file": "fft4096_serial.sv",
+        "array": "im",
+        "width": 32,
+        "depth": 4096,
+        "bits": 131072
+      }
+    ],
+    "state_bits": 1768768,
+    "constant_table_bits_across_two_modules": 524288
+  },
+  "functional_verification": {
+    "mapped_nco_cycles": 200000,
+    "mapped_arithmetic_cases": 20007,
+    "status": "PASS"
+  }
+}

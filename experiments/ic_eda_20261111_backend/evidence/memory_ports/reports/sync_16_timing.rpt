@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : memory_sync_DEPTH16_WIDTH16
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:11:49 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: read_address[2]
+              (input port clocked by clk)
+  Endpoint: result_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  read_address[2] (in)                 0.014184   1.014184 f
+  U291/Y (AND2X1)                      0.081952   1.096136 f
+  U165/Y (AND2X2)                      0.084487   1.180623 f
+  U292/Y (AO22X1)                      0.141256   1.321879 f
+  U293/Y (AOI221XL)                    0.077201   1.399080 r
+  U295/Y (NAND4BX1)                    0.062629   1.461709 f
+  result_reg[0]/D (DFFQXL)             0.000000   1.461709 f
+  data arrival time                               1.461709
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  result_reg[0]/CK (DFFQXL)            0.000000   10.000000 r
+  library setup time                   -0.055895  9.944105
+  data required time                              9.944105
+  -----------------------------------------------------------
+  data required time                              9.944105
+  data arrival time                               -1.461709
+  -----------------------------------------------------------
+  slack (MET)                                     8.482396
+
+
+1

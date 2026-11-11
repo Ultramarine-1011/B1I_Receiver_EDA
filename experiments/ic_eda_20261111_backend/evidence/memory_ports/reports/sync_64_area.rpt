@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : memory_sync_DEPTH64_WIDTH16
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:11:54 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'memory_sync_DEPTH64_WIDTH16' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    typical (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db)
+
+Number of ports:                           46
+Number of nets:                          2141
+Number of cells:                         2111
+Number of combinational cells:           1071
+Number of sequential cells:              1040
+Number of macros/black boxes:               0
+Number of buf/inv:                        243
+Number of references:                      14
+
+Combinational area:               4174.329703
+Buf/Inv area:                      678.787222
+Noncombinational area:           19722.932083
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 23897.261786
+Total area:                 undefined
+1

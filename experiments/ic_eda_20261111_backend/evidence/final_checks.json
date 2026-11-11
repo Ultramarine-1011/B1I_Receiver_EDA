@@ -1,0 +1,13 @@
+{
+  "protected_files": 36,
+  "python_ast": "PASS",
+  "document_links": "PASS",
+  "mapped_nco_cycles": 200000,
+  "mapped_arithmetic_cases": 20007,
+  "lab_package_sha256": "8922bd51f757df2905a2499de645a043006419c2ab89a3415bedffad295072a0",
+  "packaged_lab_sources_match": "PASS",
+  "std_model_sdf_max_min": "PASS",
+  "clock_parameter_20ns": "PASS",
+  "processes_clean": true,
+  "artifact_archive_sha256": "7a74faa9bf9e7fbde835e233f1c73386c892ca43a930c8938d35a19481a551d7"
+}

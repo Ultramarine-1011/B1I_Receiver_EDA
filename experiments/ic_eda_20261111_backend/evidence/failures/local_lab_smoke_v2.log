@@ -1,0 +1,85 @@
+LOCAL_TSMC90_STAGE preflight
+{"stop_reason": null, "monotonic_elapsed_s": 3.049999999999727, "time_report_nonempty": true, "return_code": 0}
+LOG_CHECK_PASS
+LAB_PREFLIGHT_COMPLETE
+LOCAL_TSMC90_STAGE synth-isolated
+{"stop_reason": null, "monotonic_elapsed_s": 6.079999999999927, "time_report_nonempty": true, "return_code": 0}
+LOG_CHECK_PASS
+SYNTHESIS_STRUCTURE_PASS isolated=False
+LOCAL_TSMC90_STAGE export
+output/final.v: OK
+output/final.ddc: OK
+output/final.sdc: OK
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db: OK
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db: OK
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast.db: OK
+/home/ICer/ic_eda_backend_20261111/lab/check.py: OK
+/home/ICer/ic_eda_backend_20261111/lab/config.sh: OK
+/home/ICer/ic_eda_backend_20261111/lab/flow.tcl: OK
+/home/ICer/ic_eda_backend_20261111/lab/library.tcl: OK
+/home/ICer/ic_eda_backend_20261111/lab/local_smoke.sh: OK
+/home/ICer/ic_eda_backend_20261111/lab/pad.sdc: OK
+/home/ICer/ic_eda_backend_20261111/lab/run_lab.sh: OK
+/home/ICer/ic_eda_backend_20261111/lab/smoke.sv: OK
+/home/ICer/ic_eda_backend_20261111/lab/tb.sv: OK
+/home/ICer/ic_eda_backend_20261111/scripts/reports.tcl: OK
+{"stop_reason": null, "monotonic_elapsed_s": 3.049999999999727, "time_report_nonempty": true, "return_code": 0}
+LOG_CHECK_PASS
+SDF_TRIPLETS_PASS distinct_min_max=300
+LOCAL_TSMC90_STAGE gls-max
+output/final.v: OK
+output/final.ddc: OK
+output/final.sdc: OK
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db: OK
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db: OK
+/home/ic_libs/TSMC.90/aci/sc-x/synopsys/fast.db: OK
+/home/ICer/ic_eda_backend_20261111/lab/check.py: OK
+/home/ICer/ic_eda_backend_20261111/lab/config.sh: OK
+/home/ICer/ic_eda_backend_20261111/lab/flow.tcl: OK
+/home/ICer/ic_eda_backend_20261111/lab/library.tcl: OK
+/home/ICer/ic_eda_backend_20261111/lab/local_smoke.sh: OK
+/home/ICer/ic_eda_backend_20261111/lab/pad.sdc: OK
+/home/ICer/ic_eda_backend_20261111/lab/run_lab.sh: OK
+/home/ICer/ic_eda_backend_20261111/lab/smoke.sv: OK
+/home/ICer/ic_eda_backend_20261111/lab/tb.sv: OK
+/home/ICer/ic_eda_backend_20261111/scripts/reports.tcl: OK
+output/final_max.sdf: OK
+output/final_min.sdf: OK
+GATE_MODEL_COVERAGE_PASS external_cell_types=5
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Wed Nov 11 10:36:15 2026
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '/home/ic_libs/TSMC.90/aci/sc-x/verilog/tsmc090.v'
+Parsing design file '/home/ICer/ic_eda_backend_20261111/work/lab_smoke_v2/output/final.v'
+Parsing design file '/home/ICer/ic_eda_backend_20261111/lab/smoke.sv'
+Top Level Modules:
+       tb
+TimeScale is 1 ns / 1 ps
+
+Error-[STASKEC_IFNSDFA] Illegal FileName for $sdf_annotate Task
+/home/ICer/ic_eda_backend_20261111/lab/smoke.sv, 20
+"$sdf_annotate(sdf, tb.dut, , "logs/sdf.log", "MAXIMUM");"
+  The SDF filename passed for back annotation is illegal. It is not 
+  initialized with a non-empty character string.
+  Argument no.1 for system task '$sdf_annotate' must be a character string or 
+  a reg containing a character string naming the file to be opened, and it 
+  must be initialized only once before simulation.
+
+
+Error-[STASKEC_IFNSDFA] Illegal FileName for $sdf_annotate Task
+/home/ICer/ic_eda_backend_20261111/lab/smoke.sv, 21
+"$sdf_annotate(sdf, tb.dut, , "logs/sdf.log", "MINIMUM");"
+  The SDF filename passed for back annotation is illegal. It is not 
+  initialized with a non-empty character string.
+  Argument no.1 for system task '$sdf_annotate' must be a character string or 
+  a reg containing a character string naming the file to be opened, and it 
+  must be initialized only once before simulation.
+
+2 errors
+CPU time: .195 seconds to compile

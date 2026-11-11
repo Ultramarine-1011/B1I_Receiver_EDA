@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : memory_async_DEPTH16_WIDTH16
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:11:38 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: a[2] (input port clocked by clk)
+  Endpoint: qa[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  a[2] (in)                            0.002472   1.002472 f
+  U804/Y (BUFX2)                       0.057215   1.059687 f
+  U1373/Y (AND2X1)                     0.083336   1.143023 f
+  U753/Y (AND2X2)                      0.084487   1.227510 f
+  U1374/Y (AO22X1)                     0.141256   1.368767 f
+  U1375/Y (AOI221XL)                   0.077201   1.445968 r
+  U1377/Y (NAND4BX1)                   0.113657   1.559624 f
+  qa[0] (out)                          0.000000   1.559624 f
+  data arrival time                               1.559624
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  output external delay                -1.000000  9.000000
+  data required time                              9.000000
+  -----------------------------------------------------------
+  data required time                              9.000000
+  data arrival time                               -1.559624
+  -----------------------------------------------------------
+  slack (MET)                                     7.440376
+
+
+1

@@ -1,0 +1,11 @@
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 11 11:19 2026
+MAPPED_NCO_EQUIVALENCE_PASS cycles=200000 seed=b1a12026
+$finish called from file "tb_mapped_nco.sv", line 83.
+$finish at simulation time           2000030010
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2000030010 ps
+CPU Time:      3.860 seconds;       Data structure size:   0.2Mb
+Wed Nov 11 11:19:33 2026

@@ -1,0 +1,6 @@
+{
+  "experiments\\ic_eda_20261110\\night_opt\\evidence\\full_v6_cached_10ns\\mapped.v": "04f597ddcde36724c30ec845112488c2837a37e155ae599fa6b5af889150d285",
+  "experiments\\ic_eda_20261111_backend\\evidence\\clean_v6_channel\\reports\\mapped.v": "880fc63ab26f08c11c76da9aad4f2e69a3dd51b56e7bc388a5040d362c31715e",
+  "experiments\\ic_eda_20261111_backend\\work\\mapped_nco.sv": "b88ca4bf1af542d2f6b3e468c5cfa2487145fd3a17876153d824c56912cef552",
+  "experiments\\ic_eda_20261111_backend\\work\\tb_mapped_nco.sv": "946f9fb429d794f46a4941946a75822e7b8eb579594859a46185c4f7b7ab6c65"
+}

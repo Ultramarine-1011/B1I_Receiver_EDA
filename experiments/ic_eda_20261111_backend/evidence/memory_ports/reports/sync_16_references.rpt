@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : reference
+Design : memory_sync_DEPTH16_WIDTH16
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:11:49 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             typical        3.528000       2      7.056000  
+AND2X2             typical        3.528000      33    116.424004  
+AO22X1             typical        5.644800      16     90.316803  
+AOI22XL            typical        4.233600      96    406.425613  
+AOI221XL           typical        5.644800      16     90.316803  
+BUFX2              typical        2.822400      26     73.382402  
+DFFQXL             typical       13.406400      80   1072.511978  n
+EDFFX2             typical       19.051201     192   3657.830566  n
+INVX2              typical        2.116800      22     46.569602  
+NAND2X2            typical        2.822400       4     11.289600  
+NAND4BX1           typical        5.644800      16     90.316803  
+NAND4X1            typical        4.939200      16     79.027199  
+NOR2BX1            typical        3.528000       1      3.528000  
+NOR2X1             typical        2.822400       6     16.934401  
+NOR2X2             typical        2.822400       4     11.289600  
+OAI2BB2X2          typical        5.644800      64    361.267212  
+-----------------------------------------------------------------------------
+Total 16 references                                  6134.486587
+1

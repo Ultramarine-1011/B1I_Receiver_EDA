@@ -1,0 +1,97 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : tracking_divide_aid
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:23:46 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: value[13] (input port clocked by module_clk)
+  Endpoint: result[23] (output port clocked by module_clk)
+  Path Group: module_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock module_clk (rise edge)                        0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 r
+  value[13] (in)                                      0.138816   0.138816 r
+  mult_505_C510/a[13] (tracking_divide_aid_DW_mult_tc_2)
+                                                      0.000000   0.138816 r
+  mult_505_C510/U845/S (ADDFX1)                       0.226362   0.365178 f
+  mult_505_C510/U941/ICO (CMPR42X1)                   0.096713   0.461891 f
+  mult_505_C510/U880/CO (CMPR42X1)                    0.087183   0.549074 f
+  mult_505_C510/U932/S (CMPR42X1)                     0.257245   0.806318 f
+  mult_505_C510/U904/Y (NOR2X2)                       0.047417   0.853736 r
+  mult_505_C510/U209/Y (OAI21X1)                      0.033908   0.887644 f
+  mult_505_C510/U922/Y (AOI21X1)                      0.048543   0.936186 r
+  mult_505_C510/U201/Y (OAI21X1)                      0.035614   0.971800 f
+  mult_505_C510/U940/Y (AOI21X1)                      0.044430   1.016230 r
+  mult_505_C510/U191/Y (OAI21X1)                      0.033388   1.049618 f
+  mult_505_C510/U939/Y (AOI21X1)                      0.044239   1.093857 r
+  mult_505_C510/U183/Y (OAI21X1)                      0.033388   1.127245 f
+  mult_505_C510/U938/Y (AOI21X1)                      0.044239   1.171484 r
+  mult_505_C510/U175/Y (OAI21X1)                      0.033388   1.204872 f
+  mult_505_C510/U936/Y (AOI21X1)                      0.044239   1.249112 r
+  mult_505_C510/U167/Y (OAI21X1)                      0.033388   1.282500 f
+  mult_505_C510/U935/Y (AOI21X1)                      0.044239   1.326739 r
+  mult_505_C510/U159/Y (OAI21X1)                      0.033388   1.360127 f
+  mult_505_C510/U925/Y (AOI21X1)                      0.044239   1.404366 r
+  mult_505_C510/U151/Y (OAI21X1)                      0.033388   1.437754 f
+  mult_505_C510/U919/Y (AOI21X1)                      0.044239   1.481994 r
+  mult_505_C510/U143/Y (OAI21X1)                      0.033388   1.515382 f
+  mult_505_C510/U944/Y (AOI21X1)                      0.057737   1.573118 r
+  mult_505_C510/U132/Y (XOR2X1)                       0.066113   1.639232 f
+  mult_505_C510/product[42] (tracking_divide_aid_DW_mult_tc_2)
+                                                      0.000000   1.639232 f
+  add_507_C510/A[0] (tracking_divide_aid_DW01_add_2)  0.000000   1.639232 f
+  add_507_C510/U59/Y (NAND2X2)                        0.033401   1.672633 r
+  add_507_C510/U56/Y (INVX2)                          0.015933   1.688566 f
+  add_507_C510/U55/CO (ADDHX1)                        0.066297   1.754863 f
+  add_507_C510/U43/CO (ADDHX1)                        0.068451   1.823314 f
+  add_507_C510/U35/CO (ADDHX1)                        0.065050   1.888364 f
+  add_507_C510/U44/CO (ADDHX1)                        0.068460   1.956824 f
+  add_507_C510/U36/CO (ADDHX1)                        0.065050   2.021873 f
+  add_507_C510/U45/CO (ADDHX1)                        0.068460   2.090333 f
+  add_507_C510/U37/CO (ADDHX1)                        0.065050   2.155382 f
+  add_507_C510/U46/CO (ADDHX1)                        0.068460   2.223842 f
+  add_507_C510/U38/CO (ADDHX1)                        0.065050   2.288892 f
+  add_507_C510/U47/CO (ADDHX1)                        0.068460   2.357351 f
+  add_507_C510/U39/CO (ADDHX1)                        0.065050   2.422401 f
+  add_507_C510/U48/CO (ADDHX1)                        0.068460   2.490860 f
+  add_507_C510/U40/CO (ADDHX1)                        0.065050   2.555910 f
+  add_507_C510/U49/CO (ADDHX1)                        0.068460   2.624369 f
+  add_507_C510/U41/CO (ADDHX1)                        0.065050   2.689419 f
+  add_507_C510/U50/CO (ADDHX1)                        0.068460   2.757879 f
+  add_507_C510/U42/CO (ADDHX1)                        0.065050   2.822928 f
+  add_507_C510/U57/CO (ADDHX1)                        0.068460   2.891388 f
+  add_507_C510/U52/CO (ADDHX1)                        0.065050   2.956437 f
+  add_507_C510/U53/CO (ADDHX1)                        0.070240   3.026678 f
+  add_507_C510/U54/CO (ADDHX1)                        0.070227   3.096904 f
+  add_507_C510/U58/CO (ADDHX1)                        0.065940   3.162844 f
+  add_507_C510/U51/Y (XOR2X1)                         0.068733   3.231576 r
+  add_507_C510/SUM[23] (tracking_divide_aid_DW01_add_2)
+                                                      0.000000   3.231576 r
+  result[23] (out)                                    0.000000   3.231576 r
+  data arrival time                                              3.231576
+
+  clock module_clk (rise edge)                        4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.200000  3.800000
+  output external delay                               0.000000   3.800000
+  data required time                                             3.800000
+  --------------------------------------------------------------------------
+  data required time                                             3.800000
+  data arrival time                                              -3.231576
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.568424
+
+
+1

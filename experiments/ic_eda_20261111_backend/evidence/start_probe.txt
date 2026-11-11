@@ -1,0 +1,30 @@
+IC_EDA
+uid=1000(ICer) gid=1000(ICer) 组=1000(ICer),18(dialout),1001(plugdev) 环境=system_u:system_r:vmtools_unconfined_t:s0
+              total        used        free      shared  buff/cache   available
+Mem:           9818        1003        7885          38         929        8529
+Swap:         10235           0       10235
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-home  309G   45G  265G   15% /home
+NIGHT_ROOT_EXISTS
+-rw-rw-r--. 1 ICer ICer 1285376 11月 11 00:06 /home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_atan.ddc
+-rw-rw-r--. 1 ICer ICer   39936 11月 11 00:06 /home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_divide_aid.ddc
+-rw-rw-r--. 1 ICer ICer   47616 11月 11 00:06 /home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_divide_step.ddc
+-rw-rw-r--. 1 ICer ICer  457728 11月 11 00:08 /home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_ratio_code.ddc
+-rw-rw-r--. 1 ICer ICer  179200 11月 11 00:08 /home/ICer/ic_eda_night_20261110/runs/full_v6_hier_10ns/reports/tracking_ratio_phase.ddc
+1.cell_list
+astro
+cell_list
+celtic
+doc
+lef
+libsi
+libspm
+magma
+primetime
+signalstorm
+symbols
+synopsys
+tlf
+verilog
+vhdl
+GUEST_PROBE_DONE

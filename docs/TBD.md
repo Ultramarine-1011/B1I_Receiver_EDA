@@ -69,3 +69,10 @@ E0单星真实记录与移交、E1真实单星捕获/FLL拉入、E2真实导航�
 ## 旧阶段后移事项（不驱动当前F范围）
 
 目标ASIC时钟/PPA、工艺角、SRAM、12通道、复杂失锁/冷启动、高灵敏度、正式DC/ICC/PT和远端SSH修复均后移。完整100s/隐藏动态场景尚未覆盖；不以短仿真代替。WindowsApps的python仅为占位入口，自有runner使用WSL python3，不改教师公共脚本或系统PATH。
+
+## 本地后端预演后的实际缺口（2026-11-11）
+
+- 本次个人 IC_EDA 为9818MB RAM、10235MB swap，六通道隔离预演达到30分钟上限，峰值6.30GiB。当前结果及单通道WNS改善见[本轮报告](../experiments/ic_eda_20261111_backend/REPORT.md)。历史M2的2GB环境事实保留对应日期。
+- 当前PCPS/FFT可变数组为1768768bit，另有524288bit逻辑常量表。尚需经过回归的RAM接口/银行方案、实际宏库及模型。剩余64位宽运算的映射成本也需要模块级诊断。
+- 实验室还需取得匹配的标准单元时序Verilog。个人TSMC90计数器曾出现28条条件弧IOPATH不匹配，已被入口检查拦截。TSMC28完整PAD/六通道SDF及功耗属于待实跑项。
+- 下一次命令和明确前置条件见[LAB_RUNBOOK](../experiments/ic_eda_20261111_backend/LAB_RUNBOOK.md)。10ns及M2 IO参数继续标为候选，正式接口规格发布后统一更新与重跑。

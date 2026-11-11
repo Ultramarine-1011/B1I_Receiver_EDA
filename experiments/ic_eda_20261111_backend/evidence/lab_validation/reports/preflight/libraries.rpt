@@ -1,0 +1,10 @@
+Logical Libraries:
+-------------------------------------------------------------------------
+Library		File			Path
+-------		----			----
+  gtech		gtech.db		/home/synopsys/syn/O-2018.06-SP1/libraries/syn
+  standard.sldb	standard.sldb		/home/synopsys/syn/O-2018.06-SP1/libraries/syn
+  typical	typical.db		/home/ic_libs/TSMC.90/aci/sc-x/synopsys
+M slow		slow.db			/home/ic_libs/TSMC.90/aci/sc-x/synopsys
+m fast		fast.db			/home/ic_libs/TSMC.90/aci/sc-x/synopsys
+1

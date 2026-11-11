@@ -1,0 +1,145 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : tracking_divide_aid
+Version: O-2018.06-SP1
+Date   : Wed Nov 11 10:16:41 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: value[6] (input port clocked by module_clk)
+  Endpoint: result[23] (output port clocked by module_clk)
+  Path Group: module_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock module_clk (rise edge)                        0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  value[6] (in)                                       0.002472   0.002472 f
+  mult_505_C510/a[6] (tracking_divide_aid_DW_mult_tc_0)
+                                                      0.000000   0.002472 f
+  mult_505_C510/U411/Y (BUFX2)                        0.097222   0.099694 f
+  mult_505_C510/U370/Y (AND2X2)                       0.076136   0.175830 f
+  mult_505_C510/U368/Y (AOI222XL)                     0.129139   0.304969 r
+  mult_505_C510/U459/Y (INVX2)                        0.023134   0.328104 f
+  mult_505_C510/U367/Y (AOI222XL)                     0.129441   0.457545 r
+  mult_505_C510/U366/Y (INVX2)                        0.023134   0.480679 f
+  mult_505_C510/U365/Y (AOI222XL)                     0.129441   0.610120 r
+  mult_505_C510/U364/Y (INVX2)                        0.023134   0.633255 f
+  mult_505_C510/U363/Y (AOI222XL)                     0.129440   0.762695 r
+  mult_505_C510/U457/Y (INVX2)                        0.023134   0.785829 f
+  mult_505_C510/U338/Y (AOI222XL)                     0.129440   0.915269 r
+  mult_505_C510/U458/Y (INVX2)                        0.023134   0.938403 f
+  mult_505_C510/U337/Y (AOI222XL)                     0.129440   1.067843 r
+  mult_505_C510/U351/Y (INVX2)                        0.023134   1.090977 f
+  mult_505_C510/U481/Y (AOI222XL)                     0.129440   1.220417 r
+  mult_505_C510/U444/Y (INVX2)                        0.023134   1.243551 f
+  mult_505_C510/U350/Y (AOI222XL)                     0.129440   1.372991 r
+  mult_505_C510/U438/Y (INVX2)                        0.023134   1.396125 f
+  mult_505_C510/U340/Y (AOI222XL)                     0.129440   1.525565 r
+  mult_505_C510/U455/Y (INVX2)                        0.023134   1.548699 f
+  mult_505_C510/U339/Y (AOI222XL)                     0.129440   1.678139 r
+  mult_505_C510/U456/Y (INVX2)                        0.023134   1.701273 f
+  mult_505_C510/U349/Y (AOI222XL)                     0.129440   1.830713 r
+  mult_505_C510/U348/Y (INVX2)                        0.023134   1.853848 f
+  mult_505_C510/U480/Y (AOI222XL)                     0.129440   1.983287 r
+  mult_505_C510/U443/Y (INVX2)                        0.023134   2.006422 f
+  mult_505_C510/U342/Y (AOI222XL)                     0.129440   2.135861 r
+  mult_505_C510/U437/Y (INVX2)                        0.023134   2.158996 f
+  mult_505_C510/U341/Y (AOI222XL)                     0.129440   2.288435 r
+  mult_505_C510/U453/Y (INVX2)                        0.023134   2.311570 f
+  mult_505_C510/U344/Y (AOI222XL)                     0.129440   2.441010 r
+  mult_505_C510/U454/Y (INVX2)                        0.023134   2.464144 f
+  mult_505_C510/U343/Y (AOI222XL)                     0.129440   2.593584 r
+  mult_505_C510/U347/Y (INVX2)                        0.023134   2.616718 f
+  mult_505_C510/U346/Y (AOI222XL)                     0.129440   2.746158 r
+  mult_505_C510/U442/Y (INVX2)                        0.023134   2.769292 f
+  mult_505_C510/U345/Y (AOI222XL)                     0.129440   2.898732 r
+  mult_505_C510/U353/Y (INVX2)                        0.023134   2.921866 f
+  mult_505_C510/U479/Y (AOI222XL)                     0.129440   3.051306 r
+  mult_505_C510/U451/Y (INVX2)                        0.023134   3.074440 f
+  mult_505_C510/U352/Y (AOI222XL)                     0.129440   3.203880 r
+  mult_505_C510/U452/Y (INVX2)                        0.023134   3.227014 f
+  mult_505_C510/U331/Y (AOI222XL)                     0.129440   3.356454 r
+  mult_505_C510/U330/Y (INVX2)                        0.023134   3.379588 f
+  mult_505_C510/U478/Y (AOI222XL)                     0.129440   3.509028 r
+  mult_505_C510/U441/Y (INVX2)                        0.023134   3.532162 f
+  mult_505_C510/U323/Y (AOI222XL)                     0.129440   3.661602 r
+  mult_505_C510/U436/Y (INVX2)                        0.023134   3.684736 f
+  mult_505_C510/U322/Y (AOI222XL)                     0.129440   3.814176 r
+  mult_505_C510/U449/Y (INVX2)                        0.023134   3.837310 f
+  mult_505_C510/U325/Y (AOI222XL)                     0.129440   3.966750 r
+  mult_505_C510/U450/Y (INVX2)                        0.023134   3.989884 f
+  mult_505_C510/U324/Y (AOI222XL)                     0.129440   4.119324 r
+  mult_505_C510/U333/Y (INVX2)                        0.023134   4.142458 f
+  mult_505_C510/U477/Y (AOI222XL)                     0.129440   4.271898 r
+  mult_505_C510/U440/Y (INVX2)                        0.023134   4.295033 f
+  mult_505_C510/U332/Y (AOI222XL)                     0.129440   4.424472 r
+  mult_505_C510/U435/Y (INVX2)                        0.023134   4.447607 f
+  mult_505_C510/U327/Y (AOI222XL)                     0.129440   4.577046 r
+  mult_505_C510/U447/Y (INVX2)                        0.023134   4.600181 f
+  mult_505_C510/U326/Y (AOI222XL)                     0.129440   4.729620 r
+  mult_505_C510/U448/Y (INVX2)                        0.023134   4.752755 f
+  mult_505_C510/U321/Y (AOI222XL)                     0.129440   4.882195 r
+  mult_505_C510/U320/Y (INVX2)                        0.023134   4.905329 f
+  mult_505_C510/U476/Y (AOI222XL)                     0.129440   5.034769 r
+  mult_505_C510/U439/Y (INVX2)                        0.023134   5.057903 f
+  mult_505_C510/U329/Y (AOI222XL)                     0.129440   5.187343 r
+  mult_505_C510/U434/Y (INVX2)                        0.023134   5.210477 f
+  mult_505_C510/U328/Y (AOI222XL)                     0.129440   5.339917 r
+  mult_505_C510/U446/Y (INVX2)                        0.023134   5.363051 f
+  mult_505_C510/U335/Y (AOI222XL)                     0.129440   5.492491 r
+  mult_505_C510/U445/Y (INVX2)                        0.022810   5.515301 f
+  mult_505_C510/U334/CO (ADDFX1)                      0.103398   5.618699 f
+  mult_505_C510/U336/CO (ADDFX1)                      0.105454   5.724153 f
+  mult_505_C510/U22/CO (ADDFX1)                       0.105454   5.829607 f
+  mult_505_C510/U21/CO (ADDFX1)                       0.105454   5.935061 f
+  mult_505_C510/U20/CO (ADDFX1)                       0.105454   6.040515 f
+  mult_505_C510/U19/CO (ADDFX1)                       0.105454   6.145969 f
+  mult_505_C510/U18/CO (ADDFX1)                       0.105454   6.251423 f
+  mult_505_C510/U17/CO (ADDFX1)                       0.105454   6.356877 f
+  mult_505_C510/U16/CO (ADDFX1)                       0.105454   6.462331 f
+  mult_505_C510/U15/CO (ADDFX1)                       0.105454   6.567785 f
+  mult_505_C510/U14/CO (ADDFX1)                       0.105454   6.673239 f
+  mult_505_C510/U13/CO (ADDFX1)                       0.105454   6.778693 f
+  mult_505_C510/U12/CO (ADDFX1)                       0.105454   6.884147 f
+  mult_505_C510/U11/CO (ADDFX1)                       0.105454   6.989601 f
+  mult_505_C510/U354/CO (ADDFX1)                      0.105454   7.095055 f
+  mult_505_C510/U355/CO (ADDFX1)                      0.105454   7.200509 f
+  mult_505_C510/U356/CO (ADDFX1)                      0.105454   7.305963 f
+  mult_505_C510/U357/CO (ADDFX1)                      0.105454   7.411417 f
+  mult_505_C510/U358/CO (ADDFX1)                      0.105454   7.516870 f
+  mult_505_C510/U359/CO (ADDFX1)                      0.105454   7.622325 f
+  mult_505_C510/U360/CO (ADDFX1)                      0.105536   7.727860 f
+  mult_505_C510/U361/CO (ADDFX1)                      0.105534   7.833394 f
+  mult_505_C510/U369/S (ADDFX1)                       0.108842   7.942236 r
+  mult_505_C510/product[64] (tracking_divide_aid_DW_mult_tc_0)
+                                                      0.000000   7.942236 r
+  add_507_C510/A[22] (tracking_divide_aid_DW01_add_0) 0.000000   7.942236 r
+  add_507_C510/U42/Y (NAND2X2)                        0.022102   7.964338 f
+  add_507_C510/U43/Y (XNOR2X1)                        0.082571   8.046909 r
+  add_507_C510/SUM[23] (tracking_divide_aid_DW01_add_0)
+                                                      0.000000   8.046909 r
+  result[23] (out)                                    0.000000   8.046909 r
+  data arrival time                                              8.046909
+
+  clock module_clk (rise edge)                        10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               0.000000   9.800000
+  data required time                                             9.800000
+  --------------------------------------------------------------------------
+  data required time                                             9.800000
+  data arrival time                                              -8.046909
+  --------------------------------------------------------------------------
+  slack (MET)                                                    1.753091
+
+
+1

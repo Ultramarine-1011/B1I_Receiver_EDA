@@ -1,0 +1,20 @@
+
+Warning-[MXIR-W] VCS-MX build is required
+  Please make sure that vlogan is from the intended build.
+
+Command: vlogan -full64 -sverilog +incdir+/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/sim \
+/home/ICer/ic_eda_backend_20261111/work/portable_handoff/experiments/ic_eda_20261111_backend/lab/tb.sv \
+-l logs/six_tb_analysis.log
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Wed Nov 11 12:07:12 2026
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '/home/ICer/ic_eda_backend_20261111/work/portable_handoff/experiments/ic_eda_20261111_backend/lab/tb.sv'
+Parsing included file '/home/ICer/ic_eda_backend_20261111/work/portable_handoff/work/validated_tsmc90/sim/dut_pg.svh'.
+Back to file '/home/ICer/ic_eda_backend_20261111/work/portable_handoff/experiments/ic_eda_20261111_backend/lab/tb.sv'.
+CPU time: .089 seconds to compile

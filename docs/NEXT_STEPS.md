@@ -1,9 +1,9 @@
 # 交接入口
 
-唯一当前状态及下一任务见 [STATUS](../STATUS.md)，当次授权范围见 [GOAL](../GOAL.md)，真实运行/提交事件见 [WORKLOG](../WORKLOG.md)，协作纪律见 [AGENTS](../AGENTS.md)。
+当前状态见 [STATUS](../STATUS.md)，授权与停止条件见 [GOAL](../GOAL.md)，实际命令与退出码见 [WORKLOG](../WORKLOG.md)。
 
-2026-11-06 M2 已完成：[M2 报告](../reports/m2_tsmc28_20261106/REPORT.md)。PAD 顶层和可综合旋转因子已经落地。隔离捕获存储后的六通道顶层能够 link，但这台 1991 MB 虚拟机没有给出六通道面积/时序，进入 M3 为 NO-GO。
+2026-11-11，本地 TSMC90 预演与实验室准备已结束。[本轮报告](../experiments/ic_eda_20261111_backend/REPORT.md) 保存 V6 源码重建、WNS 改善、单次六通道超时、存储探针及实际验证范围。
 
-**当前 M0–M5 规划：** 见[六通道后端里程碑路线图](COURSE_MASTER_PLAN.md#后续里程碑路线图2026-11-02)。下一候选必须另行授权，并且先换到至少 8 GB、带 swap 的主机。不要把 10 ns 候选周期当成签核周期，也不要在这台虚拟机上展开 2,293,056 bit 捕获存储。
+唯一下一执行任务为按 [实验室清单](../experiments/ic_eda_20261111_backend/LAB_RUNBOOK.md) 执行 preflight 和八位标准单元探针。准备匹配的 TSMC28 库/门级模型、至少8GB主机及可用swap。真实全量六通道还需已验证的PCPS/FFT存储实现，六通道正式SDF与功耗等待这些前置条件。
 
-六通道功能证据仍是 [最终报告](../reports/six_channel_20261102/FINAL_REPORT.md)。H0/H1 的 SAED90nm 与部分前端综合不等于本次 TSMC28 结果。
+课程 M0–M5 规划仍见 [COURSE_MASTER_PLAN](COURSE_MASTER_PLAN.md)。M1/M2 与本轮个人 TSMC90 的资源、工艺和证据各有对应日期。

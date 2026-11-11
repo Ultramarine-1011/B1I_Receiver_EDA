@@ -1,0 +1,29 @@
+filelists/B0.txt: FAILED open or read
+filelists/B1.txt: FAILED open or read
+rtl/tracking_channel_minimal.sv: FAILED open or read
+scripts/baseline.sdc: FAILED open or read
+scripts/guest.py: FAILED open or read
+scripts/guest_probe.sh: FAILED open or read
+scripts/launch_partitions.sh: FAILED open or read
+scripts/library.tcl: FAILED open or read
+scripts/monitor_job.py: FAILED open or read
+scripts/partitions.tcl: FAILED open or read
+scripts/prepare.py: FAILED open or read
+scripts/run.sh: FAILED open or read
+sources/student_release/student_release/rtl/acquisition_refine.sv: FAILED open or read
+sources/student_release/student_release/rtl/b1i_prn_gen.sv: FAILED open or read
+sources/student_release/student_release/rtl/bds_bb_6ch_core.sv: FAILED open or read
+sources/student_release/student_release/rtl/carrier_nco_mixer.sv: FAILED open or read
+sources/student_release/student_release/rtl/carrier_quarter_lut.svh: FAILED open or read
+sources/student_release/student_release/rtl/code_nco.sv: FAILED open or read
+sources/student_release/student_release/rtl/d1_word_sync.sv: FAILED open or read
+sources/student_release/student_release/rtl/epl_correlator.sv: FAILED open or read
+sources/student_release/student_release/rtl/navigation_d1.sv: FAILED open or read
+sources/student_release/student_release/rtl/nh20_sync.sv: FAILED open or read
+sources/student_release/student_release/rtl/receiver_channel.sv: FAILED open or read
+sources/student_release/student_release/rtl/receiver_contract_pkg.sv: FAILED open or read
+sources/student_release/student_release/rtl/tracking_channel_minimal.sv: FAILED open or read
+sources/student_release/student_release/rtl/tracking_frontend.sv: FAILED open or read
+sources/student_release/student_release/rtl/tracking_frontend_spaced.sv: FAILED open or read
+sources/student_release/student_release/rtl/tracking_record_framer.sv: FAILED open or read
+sources/synth/m2_isolate/acquisition_pcps_blackbox.sv: FAILED open or read

@@ -1,0 +1,6 @@
+{
+  "stop_reason": "TIMEOUT", 
+  "monotonic_elapsed_s": 180.80000000000007, 
+  "time_report_nonempty": true, 
+  "return_code": 1
+}
