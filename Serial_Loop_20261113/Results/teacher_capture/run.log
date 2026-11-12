@@ -1,0 +1,279 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+proc teacher_probe {} {
+    global env report_dir
+    set_app_var sh_enable_page_mode false
+    set_host_options -max_cores 1
+    set_app_var target_library /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+    set_app_var link_library [list * /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db dw_foundation.sldb]
+    define_design_lib WORK -path ./WORK
+    analyze -format sverilog ../teacher/bdi_b1i_prn_pkg.sv
+    analyze -format sverilog ../teacher/bdi_capture_channel_6sat.sv
+    elaborate bdi_capture_channel_6sat
+    if {![link]} {error "Teacher capture link failed"}
+    create_clock -name clk -period 10 [get_ports clk_16m368]
+    set_clock_uncertainty -setup 0.2 [get_clocks clk]
+    set_clock_uncertainty -hold 0.2 [get_clocks clk]
+    set_clock_transition 0.1 [get_clocks clk]
+    set data [remove_from_collection [all_inputs] [get_ports {clk_16m368 rst_n}]]
+    set_input_delay -clock clk -max 1 $data
+    set_input_delay -clock clk -min 0 $data
+    set_driving_cell -lib_cell INVX1 -library typical $data
+    set_output_delay -clock clk -max 1 [all_outputs]
+    set_output_delay -clock clk -min 0 [all_outputs]
+    set_load [expr {4*[load_of typical/INVX1/A]}] [all_outputs]
+    set_false_path -from [get_ports rst_n]
+    set_operating_conditions typical -library typical
+    if {![compile -map_effort medium]} {error "Teacher capture mapping failed"}
+    set report_dir $env(REPORT_DIR)
+    write -format verilog -hierarchy -output $report_dir/mapped.v
+    write -format ddc -hierarchy -output $report_dir/mapped.ddc
+    write_sdc $report_dir/mapped.sdc
+    redirect $report_dir/area.rpt {report_area -hierarchy}
+    redirect $report_dir/timing_max.rpt {report_timing -delay max -max_paths 1 -significant_digits 6}
+    redirect $report_dir/timing_min.rpt {report_timing -delay min -max_paths 1 -significant_digits 6}
+    puts "TEACHER_CAPTURE_PROBE_PASS SEARCH_PHASES=2046 FREQUENCY_BINS=1 SV_ID=6"
+}
+if {[catch {teacher_probe} failure]} {
+    puts stderr "TEACHER_CAPTURE_PROBE_FAILED $failure"
+    exit 1
+}
+Running PRESTO HDLC
+Compiling source file ../teacher/bdi_b1i_prn_pkg.sv
+Warning:  ../teacher/bdi_b1i_prn_pkg.sv:55: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_b1i_prn_pkg.sv:56: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_b1i_prn_pkg.sv:57: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_b1i_prn_pkg.sv:58: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_b1i_prn_pkg.sv:59: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_b1i_prn_pkg.sv:60: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file ../teacher/bdi_capture_channel_6sat.sv
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:91: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:84: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:85: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:86: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:87: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:135: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:127: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../teacher/bdi_capture_channel_6sat.sv:162: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 55 in file
+	'../teacher/bdi_capture_channel_6sat.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            70            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine bdi_capture_channel_6sat line 96 in file
+		'../teacher/bdi_capture_channel_6sat.sv'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+|     metric_debug_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      sample_cnt_reg       | Flip-flop |  15   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    chip_sample_cnt_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       chip_idx_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     search_phase_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     carrier_phase_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         i_acc_reg         | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         q_acc_reg         | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         dump_reg          | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        capture_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     capture_event_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     capture_rise_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     handoff_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  handoff_code_phase_reg   | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+| accepted_sample_count_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| handoff_sample_epoch_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   handoff_ms_count_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  completed_ms_count_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+Statistics for MUX_OPs
+=================================================================
+|      block name/line        | Inputs | Outputs | # sel inputs |
+=================================================================
+| bdi_capture_channel_6sat/55 |  2048  |    1    |      11      |
+=================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'bdi_capture_channel_6sat'.
+
+  Linking design 'bdi_capture_channel_6sat'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  bdi_capture_channel_6sat    /home/ICer/six_tile_asic_v2_20261113/teacher_capture/bdi_capture_channel_6sat.db
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Using operating conditions 'typical' found in library 'typical'.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'bdi_capture_channel_6sat'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'bdi_capture_channel_6sat_DW01_inc_0'
+  Processing 'bdi_capture_channel_6sat_DW01_inc_1'
+  Processing 'bdi_capture_channel_6sat_DW01_inc_2'
+  Processing 'bdi_capture_channel_6sat_DW01_inc_3'
+  Processing 'bdi_capture_channel_6sat_DW01_inc_4'
+  Processing 'bdi_capture_channel_6sat_DW01_add_0'
+  Processing 'bdi_capture_channel_6sat_DW01_sub_0'
+  Processing 'bdi_capture_channel_6sat_DW01_add_1'
+  Processing 'bdi_capture_channel_6sat_DW01_sub_1'
+  Processing 'bdi_capture_channel_6sat_DW01_sub_2'
+  Processing 'bdi_capture_channel_6sat_DW01_add_2'
+  Processing 'bdi_capture_channel_6sat_DW01_sub_3'
+  Mapping 'bdi_capture_channel_6sat_DW_cmp_0'
+  Processing 'bdi_capture_channel_6sat_DW01_add_3'
+  Building model 'DW01_NAND2'
+  Processing 'DW01_NAND2'
+  Building model 'DW01_sub_width11' (rpl)
+  Processing 'DW01_sub_width11'
+  Mapping 'bdi_capture_channel_6sat_DW_mult_tc_0'
+  Mapping 'bdi_capture_channel_6sat_DW_mult_tc_1'
+  Processing 'bdi_capture_channel_6sat_DW01_add_4'
+  Processing 'bdi_capture_channel_6sat_DW01_sub_4'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'bdi_capture_channel_6sat'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   21778.3      0.00       0.0       0.0                          
+    0:00:03   21778.3      0.00       0.0       0.0                          
+    0:00:03   21778.3      0.00       0.0       0.0                          
+    0:00:03   21778.3      0.00       0.0       0.0                          
+    0:00:03   21778.3      0.00       0.0       0.0                          
+    0:00:04   10767.5      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10765.3      0.00       0.0       0.0                          
+    0:00:04   10756.9      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   10756.9      0.00       0.0       0.0                          
+    0:00:04   10756.9      0.00       0.0       0.0                          
+    0:00:04   10735.0      0.00       0.0       0.0                          
+    0:00:04   10723.7      0.00       0.0       0.0                          
+    0:00:04   10715.2      0.00       0.0       0.0                          
+    0:00:04   10711.0      0.00       0.0       0.0                          
+    0:00:04   10706.8      0.00       0.0       0.0                          
+    0:00:04   10706.8      0.00       0.0       0.0                          
+    0:00:04   10706.8      0.00       0.0       0.0                          
+    0:00:04   10700.4      0.00       0.0       0.0                          
+    0:00:04   10700.4      0.00       0.0       0.0                          
+    0:00:04   10700.4      0.00       0.0       0.0                          
+    0:00:04   10700.4      0.00       0.0       0.0                          
+    0:00:04   10700.4      0.00       0.0       0.0                          
+    0:00:04   10700.4      0.00       0.0       0.0                          
+    0:00:04   10700.4      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Writing verilog file '/home/ICer/six_tile_asic_v2_20261113/teacher_capture/reports/mapped.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 2 nets to module bdi_capture_channel_6sat using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Writing ddc file '/home/ICer/six_tile_asic_v2_20261113/teacher_capture/reports/mapped.ddc'.
+TEACHER_CAPTURE_PROBE_PASS SEARCH_PHASES=2046 FREQUENCY_BINS=1 SV_ID=6
+exit 0
+
+Memory usage for main task 160 Mbytes.
+Memory usage for this session 160 Mbytes.
+CPU usage for this session 7 seconds ( 0.00 hours ).
+
+Thank you...

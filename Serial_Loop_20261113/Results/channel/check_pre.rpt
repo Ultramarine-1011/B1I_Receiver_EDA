@@ -1,0 +1,99 @@
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Fri Nov 13 00:29:04 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              63
+    Cells do not drive (LINT-1)                                    53
+    Connected to power or ground (LINT-32)                          9
+    Nets connected to multiple pins on same cell (LINT-33)          1
+
+Nets                                                                7
+    Unloaded nets (LINT-2)                                          7
+--------------------------------------------------------------------------------
+
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'B_39' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'B_42' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'B_43' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'B_44' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'B_45' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7802' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7805' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'B_48' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'B_49' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7854' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7858' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7868' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7878' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7885' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7890' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7898' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', cell 'C7899' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_normalize_iterative_ENABLE_FLL1', cell 'B_26' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_normalize_iterative_ENABLE_FLL1', cell 'C3240' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_normalize_iterative_ENABLE_FLL1', cell 'C3259' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_normalize_iterative_ENABLE_FLL1', cell 'C3262' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_normalize_iterative_ENABLE_FLL1', cell 'C3272' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_aid_iterative', cell 'B_6' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_aid_iterative', cell 'C625' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_aid_iterative', cell 'C629' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_aid_iterative', cell 'C640' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_aid_iterative', cell 'C648' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_aid_iterative', cell 'C649' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'C5357' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'C5358' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_11' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_12' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_13' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_15' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_16' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_20' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'B_21' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'C1026' does not drive any nets. (LINT-1)
+Warning: In design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16', cell 'C1030' does not drive any nets. (LINT-1)
+Warning: In design 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64', cell 'B_522' does not drive any nets. (LINT-1)
+Warning: In design 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64', cell 'B_523' does not drive any nets. (LINT-1)
+Warning: In design 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64', cell 'B_524' does not drive any nets. (LINT-1)
+Warning: In design 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64', cell 'B_525' does not drive any nets. (LINT-1)
+Warning: In design 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64', cell 'C9732' does not drive any nets. (LINT-1)
+Warning: In design 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28', cell 'B_11' does not drive any nets. (LINT-1)
+Warning: In design 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28', cell 'B_12' does not drive any nets. (LINT-1)
+Warning: In design 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28', cell 'B_13' does not drive any nets. (LINT-1)
+Warning: In design 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28', cell 'C3102' does not drive any nets. (LINT-1)
+Warning: In design 'b1i_prn_gen', cell 'C888' does not drive any nets. (LINT-1)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', net 'accepted' driven by pin 'frontend/sample_accepted' has no loads. (LINT-2)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', net 'conversion_result[23]' driven by pin 'conversion/result[23]' has no loads. (LINT-2)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', net 'frontend/carrier_accepted' driven by pin 'frontend/carrier/sample_accepted' has no loads. (LINT-2)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', net 'frontend/carrier_valid' driven by pin 'frontend/carrier/carrier_valid' has no loads. (LINT-2)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', net 'frontend/code_source/early_generator_epoch' driven by pin 'frontend/code_source/early_prn/epoch' has no loads. (LINT-2)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', net 'frontend/code_source/late_generator_epoch' driven by pin 'frontend/code_source/late_prn/epoch' has no loads. (LINT-2)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', net 'frontend/code_source/prompt_generator_epoch' driven by pin 'frontend/code_source/prompt_prn/epoch' has no loads. (LINT-2)
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[8]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[7]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[6]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[5]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[4]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[3]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[2]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[1]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', a pin on submodule 'conversion' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'value[0]' is connected to logic 0. 
+Warning: In design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1', the same net is connected to more than one pin on submodule 'conversion'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'value[8]', 'value[7]'', 'value[6]', 'value[5]', 'value[4]', 'value[3]', 'value[2]', 'value[1]', 'value[0]'.
+1

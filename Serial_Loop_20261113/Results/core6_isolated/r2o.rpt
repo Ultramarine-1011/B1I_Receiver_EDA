@@ -1,0 +1,896 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : bds_bb_6ch_core
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:40:38 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: engine/assigned_ref_reg[3][8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: nav_valid[3]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  engine/assigned_ref_reg[3][8]/CK (DFFRQX1)          0.000000 # 0.000000 r
+  engine/assigned_ref_reg[3][8]/Q (DFFRQX1)           0.162777   0.162777 r
+  engine/add_84_I4/A[8] (bds_bb_6ch_core_DW01_add_8)  0.000000   0.162777 r
+  engine/add_84_I4/U20/Y (INVX2)                      0.022045   0.184823 f
+  engine/add_84_I4/U18/Y (NAND2X2)                    0.029713   0.214536 r
+  engine/add_84_I4/U69/Y (NAND2X2)                    0.027436   0.241972 f
+  engine/add_84_I4/U68/Y (INVX2)                      0.020866   0.262838 r
+  engine/add_84_I4/U71/Y (NAND2X2)                    0.024671   0.287509 f
+  engine/add_84_I4/U70/Y (INVX2)                      0.020866   0.308375 r
+  engine/add_84_I4/U30/Y (NAND2X2)                    0.024671   0.333046 f
+  engine/add_84_I4/U29/Y (INVX2)                      0.020866   0.353912 r
+  engine/add_84_I4/U73/Y (NAND2X2)                    0.024671   0.378583 f
+  engine/add_84_I4/U72/Y (INVX2)                      0.018280   0.396863 r
+  engine/add_84_I4/U5/Y (AND2X2)                      0.047138   0.444000 r
+  engine/add_84_I4/U112/Y (OR2X2)                     0.042716   0.486716 r
+  engine/add_84_I4/U21/Y (OR2X2)                      0.044157   0.530873 r
+  engine/add_84_I4/U14/Y (INVX2)                      0.014272   0.545145 f
+  engine/add_84_I4/U12/Y (NAND2X2)                    0.027261   0.572406 r
+  engine/add_84_I4/U75/Y (NAND2X2)                    0.027436   0.599842 f
+  engine/add_84_I4/U74/Y (INVX2)                      0.018280   0.618122 r
+  engine/add_84_I4/U4/Y (AND2X2)                      0.047138   0.665259 r
+  engine/add_84_I4/U113/Y (OR2X2)                     0.044769   0.710029 r
+  engine/add_84_I4/U24/Y (INVX2)                      0.014272   0.724301 f
+  engine/add_84_I4/U22/Y (NAND2X2)                    0.025342   0.749643 r
+  engine/add_84_I4/U27/Y (INVX2)                      0.014781   0.764424 f
+  engine/add_84_I4/U25/Y (NAND2X2)                    0.023602   0.788026 r
+  engine/add_84_I4/U28/Y (OR2X2)                      0.045022   0.833049 r
+  engine/add_84_I4/U17/Y (INVX2)                      0.014273   0.847321 f
+  engine/add_84_I4/U15/Y (NAND2X2)                    0.027262   0.874583 r
+  engine/add_84_I4/U32/Y (NAND2X2)                    0.027436   0.902019 f
+  engine/add_84_I4/U31/Y (INVX2)                      0.020866   0.922885 r
+  engine/add_84_I4/U77/Y (NAND2X2)                    0.024671   0.947556 f
+  engine/add_84_I4/U76/Y (INVX2)                      0.020866   0.968422 r
+  engine/add_84_I4/U79/Y (NAND2X2)                    0.024671   0.993093 f
+  engine/add_84_I4/U78/Y (INVX2)                      0.020866   1.013959 r
+  engine/add_84_I4/U34/Y (NAND2X2)                    0.024671   1.038630 f
+  engine/add_84_I4/U33/Y (INVX2)                      0.020866   1.059495 r
+  engine/add_84_I4/U36/Y (NAND2X2)                    0.024671   1.084166 f
+  engine/add_84_I4/U35/Y (INVX2)                      0.020866   1.105032 r
+  engine/add_84_I4/U81/Y (NAND2X2)                    0.024671   1.129703 f
+  engine/add_84_I4/U80/Y (INVX2)                      0.020866   1.150569 r
+  engine/add_84_I4/U38/Y (NAND2X2)                    0.024671   1.175240 f
+  engine/add_84_I4/U37/Y (INVX2)                      0.020866   1.196106 r
+  engine/add_84_I4/U40/Y (NAND2X2)                    0.024671   1.220777 f
+  engine/add_84_I4/U39/Y (INVX2)                      0.020866   1.241643 r
+  engine/add_84_I4/U83/Y (NAND2X2)                    0.024671   1.266314 f
+  engine/add_84_I4/U82/Y (INVX2)                      0.020866   1.287180 r
+  engine/add_84_I4/U85/Y (NAND2X2)                    0.024671   1.311851 f
+  engine/add_84_I4/U84/Y (INVX2)                      0.020866   1.332717 r
+  engine/add_84_I4/U87/Y (NAND2X2)                    0.024671   1.357388 f
+  engine/add_84_I4/U86/Y (INVX2)                      0.020866   1.378254 r
+  engine/add_84_I4/U42/Y (NAND2X2)                    0.024671   1.402925 f
+  engine/add_84_I4/U41/Y (INVX2)                      0.020866   1.423790 r
+  engine/add_84_I4/U44/Y (NAND2X2)                    0.024671   1.448461 f
+  engine/add_84_I4/U43/Y (INVX2)                      0.020866   1.469327 r
+  engine/add_84_I4/U89/Y (NAND2X2)                    0.024671   1.493998 f
+  engine/add_84_I4/U88/Y (INVX2)                      0.020866   1.514864 r
+  engine/add_84_I4/U46/Y (NAND2X2)                    0.024671   1.539535 f
+  engine/add_84_I4/U45/Y (INVX2)                      0.020866   1.560401 r
+  engine/add_84_I4/U48/Y (NAND2X2)                    0.024671   1.585072 f
+  engine/add_84_I4/U47/Y (INVX2)                      0.020866   1.605938 r
+  engine/add_84_I4/U91/Y (NAND2X2)                    0.024671   1.630609 f
+  engine/add_84_I4/U90/Y (INVX2)                      0.020866   1.651475 r
+  engine/add_84_I4/U93/Y (NAND2X2)                    0.024671   1.676146 f
+  engine/add_84_I4/U92/Y (INVX2)                      0.020866   1.697012 r
+  engine/add_84_I4/U95/Y (NAND2X2)                    0.024671   1.721683 f
+  engine/add_84_I4/U94/Y (INVX2)                      0.020866   1.742549 r
+  engine/add_84_I4/U50/Y (NAND2X2)                    0.024671   1.767220 f
+  engine/add_84_I4/U49/Y (INVX2)                      0.020866   1.788085 r
+  engine/add_84_I4/U52/Y (NAND2X2)                    0.024671   1.812756 f
+  engine/add_84_I4/U51/Y (INVX2)                      0.020866   1.833622 r
+  engine/add_84_I4/U97/Y (NAND2X2)                    0.024671   1.858293 f
+  engine/add_84_I4/U96/Y (INVX2)                      0.020866   1.879159 r
+  engine/add_84_I4/U54/Y (NAND2X2)                    0.024671   1.903830 f
+  engine/add_84_I4/U53/Y (INVX2)                      0.020866   1.924696 r
+  engine/add_84_I4/U56/Y (NAND2X2)                    0.024671   1.949367 f
+  engine/add_84_I4/U55/Y (INVX2)                      0.020866   1.970233 r
+  engine/add_84_I4/U99/Y (NAND2X2)                    0.024671   1.994904 f
+  engine/add_84_I4/U98/Y (INVX2)                      0.020866   2.015770 r
+  engine/add_84_I4/U101/Y (NAND2X2)                   0.024671   2.040441 f
+  engine/add_84_I4/U100/Y (INVX2)                     0.018280   2.058721 r
+  engine/add_84_I4/U3/Y (AND2X2)                      0.046593   2.105313 r
+  engine/add_84_I4/U2/Y (AND2X2)                      0.050995   2.156308 r
+  engine/add_84_I4/U103/Y (NAND2X2)                   0.026611   2.182919 f
+  engine/add_84_I4/U102/Y (INVX2)                     0.020869   2.203789 r
+  engine/add_84_I4/U105/Y (NAND2X2)                   0.024672   2.228460 f
+  engine/add_84_I4/U104/Y (INVX2)                     0.020866   2.249326 r
+  engine/add_84_I4/U58/Y (NAND2X2)                    0.024671   2.273997 f
+  engine/add_84_I4/U57/Y (INVX2)                      0.020866   2.294863 r
+  engine/add_84_I4/U60/Y (NAND2X2)                    0.024671   2.319534 f
+  engine/add_84_I4/U59/Y (INVX2)                      0.020866   2.340400 r
+  engine/add_84_I4/U107/Y (NAND2X2)                   0.024671   2.365071 f
+  engine/add_84_I4/U106/Y (INVX2)                     0.020866   2.385937 r
+  engine/add_84_I4/U109/Y (NAND2X2)                   0.024671   2.410608 f
+  engine/add_84_I4/U108/Y (INVX2)                     0.018280   2.428888 r
+  engine/add_84_I4/U1/Y (AND2X2)                      0.049271   2.478159 r
+  engine/add_84_I4/U62/Y (NAND2X2)                    0.026611   2.504770 f
+  engine/add_84_I4/U61/Y (INVX2)                      0.020869   2.525639 r
+  engine/add_84_I4/U111/Y (NAND2X2)                   0.024672   2.550310 f
+  engine/add_84_I4/U110/Y (INVX2)                     0.020866   2.571176 r
+  engine/add_84_I4/U8/Y (NAND2X2)                     0.018513   2.589689 f
+  engine/add_84_I4/U7/Y (XNOR2X1)                     0.067442   2.657131 r
+  engine/add_84_I4/SUM[63] (bds_bb_6ch_core_DW01_add_8)
+                                                      0.000000   2.657131 r
+  engine/gte_84_I4/B[63] (bds_bb_6ch_core_DW_cmp_2)   0.000000   2.657131 r
+  engine/gte_84_I4/U516/Y (NOR2BX1)                   0.037325   2.694456 f
+  engine/gte_84_I4/U515/Y (AOI21X1)                   0.053905   2.748360 r
+  engine/gte_84_I4/U514/Y (OAI2B11X1)                 0.069503   2.817863 f
+  engine/gte_84_I4/U511/Y (NOR3BX1)                   0.076119   2.893982 r
+  engine/gte_84_I4/U505/Y (NAND3XL)                   0.079984   2.973967 f
+  engine/gte_84_I4/U326/Y (INVX2)                     0.027937   3.001904 r
+  engine/gte_84_I4/U399/Y (OAI211XL)                  0.058271   3.060175 f
+  engine/gte_84_I4/U398/Y (NOR4X1)                    0.066510   3.126686 r
+  engine/gte_84_I4/U397/Y (OAI32XL)                   0.054440   3.181126 f
+  engine/gte_84_I4/GE_LT_GT_LE (bds_bb_6ch_core_DW_cmp_2)
+                                                      0.000000   3.181126 f
+  engine/U8462/Y (MX2X1)                              0.071178   3.252304 f
+  engine/U8461/Y (OAI2BB1X1)                          0.096761   3.349065 f
+  engine/U8507/Y (NAND4BX2)                           0.086891   3.435955 f
+  engine/U8506/Y (INVX2)                              0.041416   3.477371 r
+  engine/U8514/Y (AND2X2)                             0.061419   3.538790 r
+  engine/nav_valid[3] (bds_bb_6ch_engine)             0.000000   3.538790 r
+  nav_valid[3] (out)                                  0.000000   3.538790 r
+  data arrival time                                              3.538790
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -3.538790
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.261209
+
+
+  Startpoint: engine/assigned_ref_reg[0][8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: nav_valid[0]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  engine/assigned_ref_reg[0][8]/CK (DFFRQX1)          0.000000 # 0.000000 r
+  engine/assigned_ref_reg[0][8]/Q (DFFRQX1)           0.162777   0.162777 r
+  engine/add_84/A[8] (bds_bb_6ch_core_DW01_add_11)    0.000000   0.162777 r
+  engine/add_84/U20/Y (INVX2)                         0.022045   0.184823 f
+  engine/add_84/U18/Y (NAND2X2)                       0.029713   0.214536 r
+  engine/add_84/U69/Y (NAND2X2)                       0.027436   0.241972 f
+  engine/add_84/U68/Y (INVX2)                         0.020866   0.262838 r
+  engine/add_84/U71/Y (NAND2X2)                       0.024671   0.287509 f
+  engine/add_84/U70/Y (INVX2)                         0.020866   0.308375 r
+  engine/add_84/U30/Y (NAND2X2)                       0.024671   0.333046 f
+  engine/add_84/U29/Y (INVX2)                         0.020866   0.353912 r
+  engine/add_84/U73/Y (NAND2X2)                       0.024671   0.378583 f
+  engine/add_84/U72/Y (INVX2)                         0.018280   0.396863 r
+  engine/add_84/U5/Y (AND2X2)                         0.047138   0.444000 r
+  engine/add_84/U112/Y (OR2X2)                        0.042716   0.486716 r
+  engine/add_84/U21/Y (OR2X2)                         0.044157   0.530873 r
+  engine/add_84/U14/Y (INVX2)                         0.014272   0.545145 f
+  engine/add_84/U12/Y (NAND2X2)                       0.027261   0.572406 r
+  engine/add_84/U75/Y (NAND2X2)                       0.027436   0.599842 f
+  engine/add_84/U74/Y (INVX2)                         0.018280   0.618122 r
+  engine/add_84/U4/Y (AND2X2)                         0.047138   0.665259 r
+  engine/add_84/U113/Y (OR2X2)                        0.044769   0.710029 r
+  engine/add_84/U24/Y (INVX2)                         0.014272   0.724301 f
+  engine/add_84/U22/Y (NAND2X2)                       0.025342   0.749643 r
+  engine/add_84/U27/Y (INVX2)                         0.014781   0.764424 f
+  engine/add_84/U25/Y (NAND2X2)                       0.023602   0.788026 r
+  engine/add_84/U28/Y (OR2X2)                         0.045022   0.833049 r
+  engine/add_84/U17/Y (INVX2)                         0.014273   0.847321 f
+  engine/add_84/U15/Y (NAND2X2)                       0.027262   0.874583 r
+  engine/add_84/U32/Y (NAND2X2)                       0.027436   0.902019 f
+  engine/add_84/U31/Y (INVX2)                         0.020866   0.922885 r
+  engine/add_84/U77/Y (NAND2X2)                       0.024671   0.947556 f
+  engine/add_84/U76/Y (INVX2)                         0.020866   0.968422 r
+  engine/add_84/U79/Y (NAND2X2)                       0.024671   0.993093 f
+  engine/add_84/U78/Y (INVX2)                         0.020866   1.013959 r
+  engine/add_84/U34/Y (NAND2X2)                       0.024671   1.038630 f
+  engine/add_84/U33/Y (INVX2)                         0.020866   1.059495 r
+  engine/add_84/U36/Y (NAND2X2)                       0.024671   1.084166 f
+  engine/add_84/U35/Y (INVX2)                         0.020866   1.105032 r
+  engine/add_84/U81/Y (NAND2X2)                       0.024671   1.129703 f
+  engine/add_84/U80/Y (INVX2)                         0.020866   1.150569 r
+  engine/add_84/U38/Y (NAND2X2)                       0.024671   1.175240 f
+  engine/add_84/U37/Y (INVX2)                         0.020866   1.196106 r
+  engine/add_84/U40/Y (NAND2X2)                       0.024671   1.220777 f
+  engine/add_84/U39/Y (INVX2)                         0.020866   1.241643 r
+  engine/add_84/U83/Y (NAND2X2)                       0.024671   1.266314 f
+  engine/add_84/U82/Y (INVX2)                         0.020866   1.287180 r
+  engine/add_84/U85/Y (NAND2X2)                       0.024671   1.311851 f
+  engine/add_84/U84/Y (INVX2)                         0.020866   1.332717 r
+  engine/add_84/U87/Y (NAND2X2)                       0.024671   1.357388 f
+  engine/add_84/U86/Y (INVX2)                         0.020866   1.378254 r
+  engine/add_84/U42/Y (NAND2X2)                       0.024671   1.402925 f
+  engine/add_84/U41/Y (INVX2)                         0.020866   1.423790 r
+  engine/add_84/U44/Y (NAND2X2)                       0.024671   1.448461 f
+  engine/add_84/U43/Y (INVX2)                         0.020866   1.469327 r
+  engine/add_84/U89/Y (NAND2X2)                       0.024671   1.493998 f
+  engine/add_84/U88/Y (INVX2)                         0.020866   1.514864 r
+  engine/add_84/U46/Y (NAND2X2)                       0.024671   1.539535 f
+  engine/add_84/U45/Y (INVX2)                         0.020866   1.560401 r
+  engine/add_84/U48/Y (NAND2X2)                       0.024671   1.585072 f
+  engine/add_84/U47/Y (INVX2)                         0.020866   1.605938 r
+  engine/add_84/U91/Y (NAND2X2)                       0.024671   1.630609 f
+  engine/add_84/U90/Y (INVX2)                         0.020866   1.651475 r
+  engine/add_84/U93/Y (NAND2X2)                       0.024671   1.676146 f
+  engine/add_84/U92/Y (INVX2)                         0.020866   1.697012 r
+  engine/add_84/U95/Y (NAND2X2)                       0.024671   1.721683 f
+  engine/add_84/U94/Y (INVX2)                         0.020866   1.742549 r
+  engine/add_84/U50/Y (NAND2X2)                       0.024671   1.767220 f
+  engine/add_84/U49/Y (INVX2)                         0.020866   1.788085 r
+  engine/add_84/U52/Y (NAND2X2)                       0.024671   1.812756 f
+  engine/add_84/U51/Y (INVX2)                         0.020866   1.833622 r
+  engine/add_84/U97/Y (NAND2X2)                       0.024671   1.858293 f
+  engine/add_84/U96/Y (INVX2)                         0.020866   1.879159 r
+  engine/add_84/U54/Y (NAND2X2)                       0.024671   1.903830 f
+  engine/add_84/U53/Y (INVX2)                         0.020866   1.924696 r
+  engine/add_84/U56/Y (NAND2X2)                       0.024671   1.949367 f
+  engine/add_84/U55/Y (INVX2)                         0.020866   1.970233 r
+  engine/add_84/U99/Y (NAND2X2)                       0.024671   1.994904 f
+  engine/add_84/U98/Y (INVX2)                         0.020866   2.015770 r
+  engine/add_84/U101/Y (NAND2X2)                      0.024671   2.040441 f
+  engine/add_84/U100/Y (INVX2)                        0.018280   2.058721 r
+  engine/add_84/U3/Y (AND2X2)                         0.046593   2.105313 r
+  engine/add_84/U2/Y (AND2X2)                         0.050995   2.156308 r
+  engine/add_84/U103/Y (NAND2X2)                      0.026611   2.182919 f
+  engine/add_84/U102/Y (INVX2)                        0.020869   2.203789 r
+  engine/add_84/U105/Y (NAND2X2)                      0.024672   2.228460 f
+  engine/add_84/U104/Y (INVX2)                        0.020866   2.249326 r
+  engine/add_84/U58/Y (NAND2X2)                       0.024671   2.273997 f
+  engine/add_84/U57/Y (INVX2)                         0.020866   2.294863 r
+  engine/add_84/U60/Y (NAND2X2)                       0.024671   2.319534 f
+  engine/add_84/U59/Y (INVX2)                         0.020866   2.340400 r
+  engine/add_84/U107/Y (NAND2X2)                      0.024671   2.365071 f
+  engine/add_84/U106/Y (INVX2)                        0.020866   2.385937 r
+  engine/add_84/U109/Y (NAND2X2)                      0.024671   2.410608 f
+  engine/add_84/U108/Y (INVX2)                        0.018280   2.428888 r
+  engine/add_84/U1/Y (AND2X2)                         0.049271   2.478159 r
+  engine/add_84/U62/Y (NAND2X2)                       0.026611   2.504770 f
+  engine/add_84/U61/Y (INVX2)                         0.020869   2.525639 r
+  engine/add_84/U111/Y (NAND2X2)                      0.024672   2.550310 f
+  engine/add_84/U110/Y (INVX2)                        0.020866   2.571176 r
+  engine/add_84/U8/Y (NAND2X2)                        0.018513   2.589689 f
+  engine/add_84/U7/Y (XNOR2X1)                        0.067442   2.657131 r
+  engine/add_84/SUM[63] (bds_bb_6ch_core_DW01_add_11) 0.000000   2.657131 r
+  engine/gte_84/B[63] (bds_bb_6ch_core_DW_cmp_5)      0.000000   2.657131 r
+  engine/gte_84/U516/Y (NOR2BX1)                      0.037325   2.694456 f
+  engine/gte_84/U515/Y (AOI21X1)                      0.053905   2.748360 r
+  engine/gte_84/U514/Y (OAI2B11X1)                    0.069503   2.817863 f
+  engine/gte_84/U511/Y (NOR3BX1)                      0.076119   2.893982 r
+  engine/gte_84/U505/Y (NAND3XL)                      0.079984   2.973967 f
+  engine/gte_84/U324/Y (INVX2)                        0.027937   3.001904 r
+  engine/gte_84/U399/Y (OAI211XL)                     0.058271   3.060175 f
+  engine/gte_84/U398/Y (NOR4X1)                       0.066510   3.126686 r
+  engine/gte_84/U397/Y (OAI32XL)                      0.054440   3.181126 f
+  engine/gte_84/GE_LT_GT_LE (bds_bb_6ch_core_DW_cmp_5)
+                                                      0.000000   3.181126 f
+  engine/U8465/Y (MX2X1)                              0.071178   3.252304 f
+  engine/U8464/Y (OAI2BB1X1)                          0.096761   3.349065 f
+  engine/U8505/Y (NAND4BX2)                           0.086891   3.435955 f
+  engine/U8504/Y (INVX2)                              0.041416   3.477371 r
+  engine/U8511/Y (AND2X2)                             0.061419   3.538790 r
+  engine/nav_valid[0] (bds_bb_6ch_engine)             0.000000   3.538790 r
+  nav_valid[0] (out)                                  0.000000   3.538790 r
+  data arrival time                                              3.538790
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -3.538790
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.261209
+
+
+  Startpoint: engine/assigned_ref_reg[5][8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: nav_valid[5]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  engine/assigned_ref_reg[5][8]/CK (DFFRQX1)          0.000000 # 0.000000 r
+  engine/assigned_ref_reg[5][8]/Q (DFFRQX1)           0.162777   0.162777 r
+  engine/add_84_I6/A[8] (bds_bb_6ch_core_DW01_add_6)  0.000000   0.162777 r
+  engine/add_84_I6/U20/Y (INVX2)                      0.022045   0.184823 f
+  engine/add_84_I6/U18/Y (NAND2X2)                    0.029713   0.214536 r
+  engine/add_84_I6/U74/Y (NAND2X2)                    0.027436   0.241972 f
+  engine/add_84_I6/U73/Y (INVX2)                      0.020866   0.262838 r
+  engine/add_84_I6/U32/Y (NAND2X2)                    0.024671   0.287509 f
+  engine/add_84_I6/U31/Y (INVX2)                      0.020866   0.308375 r
+  engine/add_84_I6/U34/Y (NAND2X2)                    0.024671   0.333046 f
+  engine/add_84_I6/U33/Y (INVX2)                      0.020866   0.353912 r
+  engine/add_84_I6/U76/Y (NAND2X2)                    0.024671   0.378583 f
+  engine/add_84_I6/U75/Y (INVX2)                      0.018280   0.396863 r
+  engine/add_84_I6/U6/Y (AND2X2)                      0.047138   0.444000 r
+  engine/add_84_I6/U115/Y (OR2X2)                     0.042716   0.486716 r
+  engine/add_84_I6/U23/Y (OR2X2)                      0.044157   0.530873 r
+  engine/add_84_I6/U14/Y (INVX2)                      0.014272   0.545145 f
+  engine/add_84_I6/U12/Y (NAND2X2)                    0.027261   0.572406 r
+  engine/add_84_I6/U78/Y (NAND2X2)                    0.027436   0.599842 f
+  engine/add_84_I6/U77/Y (INVX2)                      0.020866   0.620708 r
+  engine/add_84_I6/U112/Y (NAND2X2)                   0.026482   0.647190 f
+  engine/add_84_I6/U21/Y (NAND2X2)                    0.030543   0.677733 r
+  engine/add_84_I6/U26/Y (INVX2)                      0.014849   0.692582 f
+  engine/add_84_I6/U24/Y (NAND2X2)                    0.025628   0.718210 r
+  engine/add_84_I6/U29/Y (INVX2)                      0.014781   0.732991 f
+  engine/add_84_I6/U27/Y (NAND2X2)                    0.023602   0.756593 r
+  engine/add_84_I6/U30/Y (OR2X2)                      0.045022   0.801615 r
+  engine/add_84_I6/U17/Y (INVX2)                      0.014273   0.815888 f
+  engine/add_84_I6/U15/Y (NAND2X2)                    0.027262   0.843150 r
+  engine/add_84_I6/U36/Y (NAND2X2)                    0.027436   0.870586 f
+  engine/add_84_I6/U35/Y (INVX2)                      0.020866   0.891452 r
+  engine/add_84_I6/U80/Y (NAND2X2)                    0.024671   0.916123 f
+  engine/add_84_I6/U79/Y (INVX2)                      0.020866   0.936989 r
+  engine/add_84_I6/U38/Y (NAND2X2)                    0.024671   0.961660 f
+  engine/add_84_I6/U37/Y (INVX2)                      0.020866   0.982525 r
+  engine/add_84_I6/U40/Y (NAND2X2)                    0.024671   1.007196 f
+  engine/add_84_I6/U39/Y (INVX2)                      0.020866   1.028062 r
+  engine/add_84_I6/U82/Y (NAND2X2)                    0.024671   1.052733 f
+  engine/add_84_I6/U81/Y (INVX2)                      0.020866   1.073599 r
+  engine/add_84_I6/U84/Y (NAND2X2)                    0.024671   1.098270 f
+  engine/add_84_I6/U83/Y (INVX2)                      0.020866   1.119136 r
+  engine/add_84_I6/U86/Y (NAND2X2)                    0.024671   1.143807 f
+  engine/add_84_I6/U85/Y (INVX2)                      0.020866   1.164673 r
+  engine/add_84_I6/U42/Y (NAND2X2)                    0.024671   1.189344 f
+  engine/add_84_I6/U41/Y (INVX2)                      0.020866   1.210210 r
+  engine/add_84_I6/U44/Y (NAND2X2)                    0.024671   1.234881 f
+  engine/add_84_I6/U43/Y (INVX2)                      0.020866   1.255747 r
+  engine/add_84_I6/U88/Y (NAND2X2)                    0.024671   1.280418 f
+  engine/add_84_I6/U87/Y (INVX2)                      0.020866   1.301284 r
+  engine/add_84_I6/U46/Y (NAND2X2)                    0.024671   1.325955 f
+  engine/add_84_I6/U45/Y (INVX2)                      0.020866   1.346820 r
+  engine/add_84_I6/U48/Y (NAND2X2)                    0.024671   1.371491 f
+  engine/add_84_I6/U47/Y (INVX2)                      0.020866   1.392357 r
+  engine/add_84_I6/U90/Y (NAND2X2)                    0.024671   1.417028 f
+  engine/add_84_I6/U89/Y (INVX2)                      0.020866   1.437894 r
+  engine/add_84_I6/U92/Y (NAND2X2)                    0.024671   1.462565 f
+  engine/add_84_I6/U91/Y (INVX2)                      0.020866   1.483431 r
+  engine/add_84_I6/U94/Y (NAND2X2)                    0.024671   1.508102 f
+  engine/add_84_I6/U93/Y (INVX2)                      0.020866   1.528968 r
+  engine/add_84_I6/U50/Y (NAND2X2)                    0.024671   1.553639 f
+  engine/add_84_I6/U49/Y (INVX2)                      0.020866   1.574505 r
+  engine/add_84_I6/U52/Y (NAND2X2)                    0.024671   1.599176 f
+  engine/add_84_I6/U51/Y (INVX2)                      0.020866   1.620042 r
+  engine/add_84_I6/U96/Y (NAND2X2)                    0.024671   1.644713 f
+  engine/add_84_I6/U95/Y (INVX2)                      0.020866   1.665579 r
+  engine/add_84_I6/U54/Y (NAND2X2)                    0.024671   1.690250 f
+  engine/add_84_I6/U53/Y (INVX2)                      0.020866   1.711115 r
+  engine/add_84_I6/U56/Y (NAND2X2)                    0.024671   1.735786 f
+  engine/add_84_I6/U55/Y (INVX2)                      0.020866   1.756652 r
+  engine/add_84_I6/U98/Y (NAND2X2)                    0.024671   1.781323 f
+  engine/add_84_I6/U97/Y (INVX2)                      0.020866   1.802189 r
+  engine/add_84_I6/U100/Y (NAND2X2)                   0.024671   1.826860 f
+  engine/add_84_I6/U99/Y (INVX2)                      0.020866   1.847726 r
+  engine/add_84_I6/U102/Y (NAND2X2)                   0.024671   1.872397 f
+  engine/add_84_I6/U101/Y (INVX2)                     0.020866   1.893263 r
+  engine/add_84_I6/U58/Y (NAND2X2)                    0.024671   1.917934 f
+  engine/add_84_I6/U57/Y (INVX2)                      0.020866   1.938800 r
+  engine/add_84_I6/U60/Y (NAND2X2)                    0.024671   1.963471 f
+  engine/add_84_I6/U59/Y (INVX2)                      0.018280   1.981751 r
+  engine/add_84_I6/U4/Y (AND2X2)                      0.046593   2.028343 r
+  engine/add_84_I6/U1/Y (AND2X2)                      0.050995   2.079339 r
+  engine/add_84_I6/U104/Y (NAND2X2)                   0.026611   2.105949 f
+  engine/add_84_I6/U103/Y (INVX2)                     0.020869   2.126819 r
+  engine/add_84_I6/U62/Y (NAND2X2)                    0.024672   2.151490 f
+  engine/add_84_I6/U61/Y (INVX2)                      0.018280   2.169770 r
+  engine/add_84_I6/U2/Y (AND2X2)                      0.049271   2.219041 r
+  engine/add_84_I6/U106/Y (NAND2X2)                   0.026611   2.245652 f
+  engine/add_84_I6/U105/Y (INVX2)                     0.020869   2.266521 r
+  engine/add_84_I6/U108/Y (NAND2X2)                   0.024672   2.291193 f
+  engine/add_84_I6/U107/Y (INVX2)                     0.020866   2.312058 r
+  engine/add_84_I6/U64/Y (NAND2X2)                    0.024671   2.336730 f
+  engine/add_84_I6/U63/Y (INVX2)                      0.018280   2.355009 r
+  engine/add_84_I6/U5/Y (AND2X2)                      0.046593   2.401602 r
+  engine/add_84_I6/U3/Y (AND2X2)                      0.050995   2.452597 r
+  engine/add_84_I6/U110/Y (NAND2X2)                   0.026611   2.479208 f
+  engine/add_84_I6/U109/Y (INVX2)                     0.020869   2.500077 r
+  engine/add_84_I6/U66/Y (NAND2X2)                    0.024672   2.524749 f
+  engine/add_84_I6/U65/Y (INVX2)                      0.020866   2.545615 r
+  engine/add_84_I6/U114/Y (NAND2X2)                   0.018513   2.564128 f
+  engine/add_84_I6/U113/Y (XNOR2X1)                   0.067442   2.631570 r
+  engine/add_84_I6/SUM[63] (bds_bb_6ch_core_DW01_add_6)
+                                                      0.000000   2.631570 r
+  engine/gte_84_I6/B[63] (bds_bb_6ch_core_DW_cmp_0)   0.000000   2.631570 r
+  engine/gte_84_I6/U516/Y (NOR2BX1)                   0.037325   2.668894 f
+  engine/gte_84_I6/U515/Y (AOI21X1)                   0.053905   2.722799 r
+  engine/gte_84_I6/U514/Y (OAI2B11X1)                 0.069503   2.792301 f
+  engine/gte_84_I6/U511/Y (NOR3BX1)                   0.076119   2.868421 r
+  engine/gte_84_I6/U505/Y (NAND3XL)                   0.079984   2.948405 f
+  engine/gte_84_I6/U326/Y (INVX2)                     0.027937   2.976342 r
+  engine/gte_84_I6/U399/Y (OAI211XL)                  0.058271   3.034614 f
+  engine/gte_84_I6/U398/Y (NOR4X1)                    0.066510   3.101124 r
+  engine/gte_84_I6/U397/Y (OAI32XL)                   0.054440   3.155565 f
+  engine/gte_84_I6/GE_LT_GT_LE (bds_bb_6ch_core_DW_cmp_0)
+                                                      0.000000   3.155565 f
+  engine/U8446/Y (MX2X1)                              0.071178   3.226743 f
+  engine/U8445/Y (OAI2BB1X1)                          0.096761   3.323503 f
+  engine/U8509/Y (NAND4BX2)                           0.086896   3.410399 f
+  engine/U8508/Y (INVX2)                              0.041416   3.451815 r
+  engine/U8516/Y (AND2X2)                             0.061419   3.513234 r
+  engine/nav_valid[5] (bds_bb_6ch_engine)             0.000000   3.513234 r
+  nav_valid[5] (out)                                  0.000000   3.513234 r
+  data arrival time                                              3.513234
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -3.513234
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.286766
+
+
+  Startpoint: engine/assigned_ref_reg[1][8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: nav_valid[1]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  engine/assigned_ref_reg[1][8]/CK (DFFRQX1)          0.000000 # 0.000000 r
+  engine/assigned_ref_reg[1][8]/Q (DFFRQX1)           0.162777   0.162777 r
+  engine/add_84_I2/A[8] (bds_bb_6ch_core_DW01_add_10) 0.000000   0.162777 r
+  engine/add_84_I2/U20/Y (INVX2)                      0.022045   0.184823 f
+  engine/add_84_I2/U18/Y (NAND2X2)                    0.029713   0.214536 r
+  engine/add_84_I2/U74/Y (NAND2X2)                    0.027436   0.241972 f
+  engine/add_84_I2/U73/Y (INVX2)                      0.020866   0.262838 r
+  engine/add_84_I2/U32/Y (NAND2X2)                    0.024671   0.287509 f
+  engine/add_84_I2/U31/Y (INVX2)                      0.020866   0.308375 r
+  engine/add_84_I2/U34/Y (NAND2X2)                    0.024671   0.333046 f
+  engine/add_84_I2/U33/Y (INVX2)                      0.020866   0.353912 r
+  engine/add_84_I2/U76/Y (NAND2X2)                    0.024671   0.378583 f
+  engine/add_84_I2/U75/Y (INVX2)                      0.018280   0.396863 r
+  engine/add_84_I2/U6/Y (AND2X2)                      0.047138   0.444000 r
+  engine/add_84_I2/U115/Y (OR2X2)                     0.042716   0.486716 r
+  engine/add_84_I2/U23/Y (OR2X2)                      0.044157   0.530873 r
+  engine/add_84_I2/U14/Y (INVX2)                      0.014272   0.545145 f
+  engine/add_84_I2/U12/Y (NAND2X2)                    0.027261   0.572406 r
+  engine/add_84_I2/U78/Y (NAND2X2)                    0.027436   0.599842 f
+  engine/add_84_I2/U77/Y (INVX2)                      0.020866   0.620708 r
+  engine/add_84_I2/U112/Y (NAND2X2)                   0.026482   0.647190 f
+  engine/add_84_I2/U21/Y (NAND2X2)                    0.030543   0.677733 r
+  engine/add_84_I2/U26/Y (INVX2)                      0.014849   0.692582 f
+  engine/add_84_I2/U24/Y (NAND2X2)                    0.025628   0.718210 r
+  engine/add_84_I2/U29/Y (INVX2)                      0.014781   0.732991 f
+  engine/add_84_I2/U27/Y (NAND2X2)                    0.023602   0.756593 r
+  engine/add_84_I2/U30/Y (OR2X2)                      0.045022   0.801615 r
+  engine/add_84_I2/U17/Y (INVX2)                      0.014273   0.815888 f
+  engine/add_84_I2/U15/Y (NAND2X2)                    0.027262   0.843150 r
+  engine/add_84_I2/U36/Y (NAND2X2)                    0.027436   0.870586 f
+  engine/add_84_I2/U35/Y (INVX2)                      0.020866   0.891452 r
+  engine/add_84_I2/U80/Y (NAND2X2)                    0.024671   0.916123 f
+  engine/add_84_I2/U79/Y (INVX2)                      0.020866   0.936989 r
+  engine/add_84_I2/U38/Y (NAND2X2)                    0.024671   0.961660 f
+  engine/add_84_I2/U37/Y (INVX2)                      0.020866   0.982525 r
+  engine/add_84_I2/U40/Y (NAND2X2)                    0.024671   1.007196 f
+  engine/add_84_I2/U39/Y (INVX2)                      0.020866   1.028062 r
+  engine/add_84_I2/U82/Y (NAND2X2)                    0.024671   1.052733 f
+  engine/add_84_I2/U81/Y (INVX2)                      0.020866   1.073599 r
+  engine/add_84_I2/U84/Y (NAND2X2)                    0.024671   1.098270 f
+  engine/add_84_I2/U83/Y (INVX2)                      0.020866   1.119136 r
+  engine/add_84_I2/U86/Y (NAND2X2)                    0.024671   1.143807 f
+  engine/add_84_I2/U85/Y (INVX2)                      0.020866   1.164673 r
+  engine/add_84_I2/U42/Y (NAND2X2)                    0.024671   1.189344 f
+  engine/add_84_I2/U41/Y (INVX2)                      0.020866   1.210210 r
+  engine/add_84_I2/U44/Y (NAND2X2)                    0.024671   1.234881 f
+  engine/add_84_I2/U43/Y (INVX2)                      0.020866   1.255747 r
+  engine/add_84_I2/U88/Y (NAND2X2)                    0.024671   1.280418 f
+  engine/add_84_I2/U87/Y (INVX2)                      0.020866   1.301284 r
+  engine/add_84_I2/U46/Y (NAND2X2)                    0.024671   1.325955 f
+  engine/add_84_I2/U45/Y (INVX2)                      0.020866   1.346820 r
+  engine/add_84_I2/U48/Y (NAND2X2)                    0.024671   1.371491 f
+  engine/add_84_I2/U47/Y (INVX2)                      0.020866   1.392357 r
+  engine/add_84_I2/U90/Y (NAND2X2)                    0.024671   1.417028 f
+  engine/add_84_I2/U89/Y (INVX2)                      0.020866   1.437894 r
+  engine/add_84_I2/U92/Y (NAND2X2)                    0.024671   1.462565 f
+  engine/add_84_I2/U91/Y (INVX2)                      0.020866   1.483431 r
+  engine/add_84_I2/U94/Y (NAND2X2)                    0.024671   1.508102 f
+  engine/add_84_I2/U93/Y (INVX2)                      0.020866   1.528968 r
+  engine/add_84_I2/U50/Y (NAND2X2)                    0.024671   1.553639 f
+  engine/add_84_I2/U49/Y (INVX2)                      0.020866   1.574505 r
+  engine/add_84_I2/U52/Y (NAND2X2)                    0.024671   1.599176 f
+  engine/add_84_I2/U51/Y (INVX2)                      0.020866   1.620042 r
+  engine/add_84_I2/U96/Y (NAND2X2)                    0.024671   1.644713 f
+  engine/add_84_I2/U95/Y (INVX2)                      0.020866   1.665579 r
+  engine/add_84_I2/U54/Y (NAND2X2)                    0.024671   1.690250 f
+  engine/add_84_I2/U53/Y (INVX2)                      0.020866   1.711115 r
+  engine/add_84_I2/U56/Y (NAND2X2)                    0.024671   1.735786 f
+  engine/add_84_I2/U55/Y (INVX2)                      0.020866   1.756652 r
+  engine/add_84_I2/U98/Y (NAND2X2)                    0.024671   1.781323 f
+  engine/add_84_I2/U97/Y (INVX2)                      0.020866   1.802189 r
+  engine/add_84_I2/U100/Y (NAND2X2)                   0.024671   1.826860 f
+  engine/add_84_I2/U99/Y (INVX2)                      0.020866   1.847726 r
+  engine/add_84_I2/U102/Y (NAND2X2)                   0.024671   1.872397 f
+  engine/add_84_I2/U101/Y (INVX2)                     0.020866   1.893263 r
+  engine/add_84_I2/U58/Y (NAND2X2)                    0.024671   1.917934 f
+  engine/add_84_I2/U57/Y (INVX2)                      0.020866   1.938800 r
+  engine/add_84_I2/U60/Y (NAND2X2)                    0.024671   1.963471 f
+  engine/add_84_I2/U59/Y (INVX2)                      0.018280   1.981751 r
+  engine/add_84_I2/U4/Y (AND2X2)                      0.046593   2.028343 r
+  engine/add_84_I2/U1/Y (AND2X2)                      0.050995   2.079339 r
+  engine/add_84_I2/U104/Y (NAND2X2)                   0.026611   2.105949 f
+  engine/add_84_I2/U103/Y (INVX2)                     0.020869   2.126819 r
+  engine/add_84_I2/U62/Y (NAND2X2)                    0.024672   2.151490 f
+  engine/add_84_I2/U61/Y (INVX2)                      0.018280   2.169770 r
+  engine/add_84_I2/U2/Y (AND2X2)                      0.049271   2.219041 r
+  engine/add_84_I2/U106/Y (NAND2X2)                   0.026611   2.245652 f
+  engine/add_84_I2/U105/Y (INVX2)                     0.020869   2.266521 r
+  engine/add_84_I2/U108/Y (NAND2X2)                   0.024672   2.291193 f
+  engine/add_84_I2/U107/Y (INVX2)                     0.020866   2.312058 r
+  engine/add_84_I2/U64/Y (NAND2X2)                    0.024671   2.336730 f
+  engine/add_84_I2/U63/Y (INVX2)                      0.018280   2.355009 r
+  engine/add_84_I2/U5/Y (AND2X2)                      0.046593   2.401602 r
+  engine/add_84_I2/U3/Y (AND2X2)                      0.050995   2.452597 r
+  engine/add_84_I2/U110/Y (NAND2X2)                   0.026611   2.479208 f
+  engine/add_84_I2/U109/Y (INVX2)                     0.020869   2.500077 r
+  engine/add_84_I2/U66/Y (NAND2X2)                    0.024672   2.524749 f
+  engine/add_84_I2/U65/Y (INVX2)                      0.020866   2.545615 r
+  engine/add_84_I2/U114/Y (NAND2X2)                   0.018513   2.564128 f
+  engine/add_84_I2/U113/Y (XNOR2X1)                   0.067442   2.631570 r
+  engine/add_84_I2/SUM[63] (bds_bb_6ch_core_DW01_add_10)
+                                                      0.000000   2.631570 r
+  engine/gte_84_I2/B[63] (bds_bb_6ch_core_DW_cmp_4)   0.000000   2.631570 r
+  engine/gte_84_I2/U516/Y (NOR2BX1)                   0.037325   2.668894 f
+  engine/gte_84_I2/U515/Y (AOI21X1)                   0.053905   2.722799 r
+  engine/gte_84_I2/U514/Y (OAI2B11X1)                 0.069503   2.792301 f
+  engine/gte_84_I2/U511/Y (NOR3BX1)                   0.076119   2.868421 r
+  engine/gte_84_I2/U505/Y (NAND3XL)                   0.079984   2.948405 f
+  engine/gte_84_I2/U326/Y (INVX2)                     0.027937   2.976342 r
+  engine/gte_84_I2/U399/Y (OAI211XL)                  0.058271   3.034614 f
+  engine/gte_84_I2/U398/Y (NOR4X1)                    0.066510   3.101124 r
+  engine/gte_84_I2/U397/Y (OAI32XL)                   0.054440   3.155565 f
+  engine/gte_84_I2/GE_LT_GT_LE (bds_bb_6ch_core_DW_cmp_4)
+                                                      0.000000   3.155565 f
+  engine/U8449/Y (MX2X1)                              0.071178   3.226743 f
+  engine/U8448/Y (OAI2BB1X1)                          0.096761   3.323503 f
+  engine/U8472/Y (NAND4BX2)                           0.086895   3.410398 f
+  engine/U8471/Y (INVX2)                              0.041416   3.451814 r
+  engine/U8512/Y (AND2X2)                             0.061419   3.513233 r
+  engine/nav_valid[1] (bds_bb_6ch_engine)             0.000000   3.513233 r
+  nav_valid[1] (out)                                  0.000000   3.513233 r
+  data arrival time                                              3.513233
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -3.513233
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.286767
+
+
+  Startpoint: engine/assigned_ref_reg[4][8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: nav_valid[4]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  engine/assigned_ref_reg[4][8]/CK (DFFRQX1)          0.000000 # 0.000000 r
+  engine/assigned_ref_reg[4][8]/Q (DFFRQX1)           0.162777   0.162777 r
+  engine/add_84_I5/A[8] (bds_bb_6ch_core_DW01_add_7)  0.000000   0.162777 r
+  engine/add_84_I5/U20/Y (INVX2)                      0.022045   0.184823 f
+  engine/add_84_I5/U18/Y (NAND2X2)                    0.029713   0.214536 r
+  engine/add_84_I5/U74/Y (NAND2X2)                    0.027436   0.241972 f
+  engine/add_84_I5/U73/Y (INVX2)                      0.020866   0.262838 r
+  engine/add_84_I5/U32/Y (NAND2X2)                    0.024671   0.287509 f
+  engine/add_84_I5/U31/Y (INVX2)                      0.020866   0.308375 r
+  engine/add_84_I5/U34/Y (NAND2X2)                    0.024671   0.333046 f
+  engine/add_84_I5/U33/Y (INVX2)                      0.020866   0.353912 r
+  engine/add_84_I5/U76/Y (NAND2X2)                    0.024671   0.378583 f
+  engine/add_84_I5/U75/Y (INVX2)                      0.018280   0.396863 r
+  engine/add_84_I5/U6/Y (AND2X2)                      0.047138   0.444000 r
+  engine/add_84_I5/U115/Y (OR2X2)                     0.042716   0.486716 r
+  engine/add_84_I5/U23/Y (OR2X2)                      0.044157   0.530873 r
+  engine/add_84_I5/U14/Y (INVX2)                      0.014272   0.545145 f
+  engine/add_84_I5/U12/Y (NAND2X2)                    0.027261   0.572406 r
+  engine/add_84_I5/U78/Y (NAND2X2)                    0.027436   0.599842 f
+  engine/add_84_I5/U77/Y (INVX2)                      0.020866   0.620708 r
+  engine/add_84_I5/U112/Y (NAND2X2)                   0.026482   0.647190 f
+  engine/add_84_I5/U21/Y (NAND2X2)                    0.030543   0.677733 r
+  engine/add_84_I5/U26/Y (INVX2)                      0.014849   0.692582 f
+  engine/add_84_I5/U24/Y (NAND2X2)                    0.025628   0.718210 r
+  engine/add_84_I5/U29/Y (INVX2)                      0.014781   0.732991 f
+  engine/add_84_I5/U27/Y (NAND2X2)                    0.023602   0.756593 r
+  engine/add_84_I5/U30/Y (OR2X2)                      0.045022   0.801615 r
+  engine/add_84_I5/U17/Y (INVX2)                      0.014273   0.815888 f
+  engine/add_84_I5/U15/Y (NAND2X2)                    0.027262   0.843150 r
+  engine/add_84_I5/U36/Y (NAND2X2)                    0.027436   0.870586 f
+  engine/add_84_I5/U35/Y (INVX2)                      0.020866   0.891452 r
+  engine/add_84_I5/U80/Y (NAND2X2)                    0.024671   0.916123 f
+  engine/add_84_I5/U79/Y (INVX2)                      0.020866   0.936989 r
+  engine/add_84_I5/U38/Y (NAND2X2)                    0.024671   0.961660 f
+  engine/add_84_I5/U37/Y (INVX2)                      0.020866   0.982525 r
+  engine/add_84_I5/U40/Y (NAND2X2)                    0.024671   1.007196 f
+  engine/add_84_I5/U39/Y (INVX2)                      0.020866   1.028062 r
+  engine/add_84_I5/U82/Y (NAND2X2)                    0.024671   1.052733 f
+  engine/add_84_I5/U81/Y (INVX2)                      0.020866   1.073599 r
+  engine/add_84_I5/U84/Y (NAND2X2)                    0.024671   1.098270 f
+  engine/add_84_I5/U83/Y (INVX2)                      0.020866   1.119136 r
+  engine/add_84_I5/U86/Y (NAND2X2)                    0.024671   1.143807 f
+  engine/add_84_I5/U85/Y (INVX2)                      0.020866   1.164673 r
+  engine/add_84_I5/U42/Y (NAND2X2)                    0.024671   1.189344 f
+  engine/add_84_I5/U41/Y (INVX2)                      0.020866   1.210210 r
+  engine/add_84_I5/U44/Y (NAND2X2)                    0.024671   1.234881 f
+  engine/add_84_I5/U43/Y (INVX2)                      0.020866   1.255747 r
+  engine/add_84_I5/U88/Y (NAND2X2)                    0.024671   1.280418 f
+  engine/add_84_I5/U87/Y (INVX2)                      0.020866   1.301284 r
+  engine/add_84_I5/U46/Y (NAND2X2)                    0.024671   1.325955 f
+  engine/add_84_I5/U45/Y (INVX2)                      0.020866   1.346820 r
+  engine/add_84_I5/U48/Y (NAND2X2)                    0.024671   1.371491 f
+  engine/add_84_I5/U47/Y (INVX2)                      0.020866   1.392357 r
+  engine/add_84_I5/U90/Y (NAND2X2)                    0.024671   1.417028 f
+  engine/add_84_I5/U89/Y (INVX2)                      0.020866   1.437894 r
+  engine/add_84_I5/U92/Y (NAND2X2)                    0.024671   1.462565 f
+  engine/add_84_I5/U91/Y (INVX2)                      0.020866   1.483431 r
+  engine/add_84_I5/U94/Y (NAND2X2)                    0.024671   1.508102 f
+  engine/add_84_I5/U93/Y (INVX2)                      0.020866   1.528968 r
+  engine/add_84_I5/U50/Y (NAND2X2)                    0.024671   1.553639 f
+  engine/add_84_I5/U49/Y (INVX2)                      0.020866   1.574505 r
+  engine/add_84_I5/U52/Y (NAND2X2)                    0.024671   1.599176 f
+  engine/add_84_I5/U51/Y (INVX2)                      0.020866   1.620042 r
+  engine/add_84_I5/U96/Y (NAND2X2)                    0.024671   1.644713 f
+  engine/add_84_I5/U95/Y (INVX2)                      0.020866   1.665579 r
+  engine/add_84_I5/U54/Y (NAND2X2)                    0.024671   1.690250 f
+  engine/add_84_I5/U53/Y (INVX2)                      0.020866   1.711115 r
+  engine/add_84_I5/U56/Y (NAND2X2)                    0.024671   1.735786 f
+  engine/add_84_I5/U55/Y (INVX2)                      0.020866   1.756652 r
+  engine/add_84_I5/U98/Y (NAND2X2)                    0.024671   1.781323 f
+  engine/add_84_I5/U97/Y (INVX2)                      0.020866   1.802189 r
+  engine/add_84_I5/U100/Y (NAND2X2)                   0.024671   1.826860 f
+  engine/add_84_I5/U99/Y (INVX2)                      0.020866   1.847726 r
+  engine/add_84_I5/U102/Y (NAND2X2)                   0.024671   1.872397 f
+  engine/add_84_I5/U101/Y (INVX2)                     0.020866   1.893263 r
+  engine/add_84_I5/U58/Y (NAND2X2)                    0.024671   1.917934 f
+  engine/add_84_I5/U57/Y (INVX2)                      0.020866   1.938800 r
+  engine/add_84_I5/U60/Y (NAND2X2)                    0.024671   1.963471 f
+  engine/add_84_I5/U59/Y (INVX2)                      0.018280   1.981751 r
+  engine/add_84_I5/U4/Y (AND2X2)                      0.046593   2.028343 r
+  engine/add_84_I5/U1/Y (AND2X2)                      0.050995   2.079339 r
+  engine/add_84_I5/U104/Y (NAND2X2)                   0.026611   2.105949 f
+  engine/add_84_I5/U103/Y (INVX2)                     0.020869   2.126819 r
+  engine/add_84_I5/U62/Y (NAND2X2)                    0.024672   2.151490 f
+  engine/add_84_I5/U61/Y (INVX2)                      0.018280   2.169770 r
+  engine/add_84_I5/U2/Y (AND2X2)                      0.049271   2.219041 r
+  engine/add_84_I5/U106/Y (NAND2X2)                   0.026611   2.245652 f
+  engine/add_84_I5/U105/Y (INVX2)                     0.020869   2.266521 r
+  engine/add_84_I5/U108/Y (NAND2X2)                   0.024672   2.291193 f
+  engine/add_84_I5/U107/Y (INVX2)                     0.020866   2.312058 r
+  engine/add_84_I5/U64/Y (NAND2X2)                    0.024671   2.336730 f
+  engine/add_84_I5/U63/Y (INVX2)                      0.018280   2.355009 r
+  engine/add_84_I5/U5/Y (AND2X2)                      0.046593   2.401602 r
+  engine/add_84_I5/U3/Y (AND2X2)                      0.050995   2.452597 r
+  engine/add_84_I5/U110/Y (NAND2X2)                   0.026611   2.479208 f
+  engine/add_84_I5/U109/Y (INVX2)                     0.020869   2.500077 r
+  engine/add_84_I5/U66/Y (NAND2X2)                    0.024672   2.524749 f
+  engine/add_84_I5/U65/Y (INVX2)                      0.020866   2.545615 r
+  engine/add_84_I5/U114/Y (NAND2X2)                   0.018513   2.564128 f
+  engine/add_84_I5/U113/Y (XNOR2X1)                   0.067442   2.631570 r
+  engine/add_84_I5/SUM[63] (bds_bb_6ch_core_DW01_add_7)
+                                                      0.000000   2.631570 r
+  engine/gte_84_I5/B[63] (bds_bb_6ch_core_DW_cmp_1)   0.000000   2.631570 r
+  engine/gte_84_I5/U516/Y (NOR2BX1)                   0.037325   2.668894 f
+  engine/gte_84_I5/U515/Y (AOI21X1)                   0.053905   2.722799 r
+  engine/gte_84_I5/U514/Y (OAI2B11X1)                 0.069503   2.792301 f
+  engine/gte_84_I5/U511/Y (NOR3BX1)                   0.076119   2.868421 r
+  engine/gte_84_I5/U505/Y (NAND3XL)                   0.079984   2.948405 f
+  engine/gte_84_I5/U326/Y (INVX2)                     0.027937   2.976342 r
+  engine/gte_84_I5/U399/Y (OAI211XL)                  0.058271   3.034614 f
+  engine/gte_84_I5/U398/Y (NOR4X1)                    0.066510   3.101124 r
+  engine/gte_84_I5/U397/Y (OAI32XL)                   0.054440   3.155565 f
+  engine/gte_84_I5/GE_LT_GT_LE (bds_bb_6ch_core_DW_cmp_1)
+                                                      0.000000   3.155565 f
+  engine/U8455/Y (MX2X1)                              0.071178   3.226743 f
+  engine/U8454/Y (OAI2BB1X1)                          0.096761   3.323503 f
+  engine/U8476/Y (NAND4BX2)                           0.086891   3.410394 f
+  engine/U8475/Y (INVX2)                              0.041416   3.451809 r
+  engine/U8515/Y (AND2X2)                             0.061419   3.513229 r
+  engine/nav_valid[4] (bds_bb_6ch_engine)             0.000000   3.513229 r
+  nav_valid[4] (out)                                  0.000000   3.513229 r
+  data arrival time                                              3.513229
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -3.513229
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.286771
+
+
+  Startpoint: engine/assigned_ref_reg[2][8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: nav_valid[2]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  engine/assigned_ref_reg[2][8]/CK (DFFRQX1)          0.000000 # 0.000000 r
+  engine/assigned_ref_reg[2][8]/Q (DFFRQX1)           0.162777   0.162777 r
+  engine/add_84_I3/A[8] (bds_bb_6ch_core_DW01_add_9)  0.000000   0.162777 r
+  engine/add_84_I3/U20/Y (INVX2)                      0.022045   0.184823 f
+  engine/add_84_I3/U18/Y (NAND2X2)                    0.029713   0.214536 r
+  engine/add_84_I3/U74/Y (NAND2X2)                    0.027436   0.241972 f
+  engine/add_84_I3/U73/Y (INVX2)                      0.020866   0.262838 r
+  engine/add_84_I3/U32/Y (NAND2X2)                    0.024671   0.287509 f
+  engine/add_84_I3/U31/Y (INVX2)                      0.020866   0.308375 r
+  engine/add_84_I3/U34/Y (NAND2X2)                    0.024671   0.333046 f
+  engine/add_84_I3/U33/Y (INVX2)                      0.020866   0.353912 r
+  engine/add_84_I3/U76/Y (NAND2X2)                    0.024671   0.378583 f
+  engine/add_84_I3/U75/Y (INVX2)                      0.018280   0.396863 r
+  engine/add_84_I3/U6/Y (AND2X2)                      0.047138   0.444000 r
+  engine/add_84_I3/U115/Y (OR2X2)                     0.042716   0.486716 r
+  engine/add_84_I3/U23/Y (OR2X2)                      0.044157   0.530873 r
+  engine/add_84_I3/U14/Y (INVX2)                      0.014272   0.545145 f
+  engine/add_84_I3/U12/Y (NAND2X2)                    0.027261   0.572406 r
+  engine/add_84_I3/U78/Y (NAND2X2)                    0.027436   0.599842 f
+  engine/add_84_I3/U77/Y (INVX2)                      0.020866   0.620708 r
+  engine/add_84_I3/U112/Y (NAND2X2)                   0.026482   0.647190 f
+  engine/add_84_I3/U21/Y (NAND2X2)                    0.030543   0.677733 r
+  engine/add_84_I3/U26/Y (INVX2)                      0.014849   0.692582 f
+  engine/add_84_I3/U24/Y (NAND2X2)                    0.025628   0.718210 r
+  engine/add_84_I3/U29/Y (INVX2)                      0.014781   0.732991 f
+  engine/add_84_I3/U27/Y (NAND2X2)                    0.023602   0.756593 r
+  engine/add_84_I3/U30/Y (OR2X2)                      0.045022   0.801615 r
+  engine/add_84_I3/U17/Y (INVX2)                      0.014273   0.815888 f
+  engine/add_84_I3/U15/Y (NAND2X2)                    0.027262   0.843150 r
+  engine/add_84_I3/U36/Y (NAND2X2)                    0.027436   0.870586 f
+  engine/add_84_I3/U35/Y (INVX2)                      0.020866   0.891452 r
+  engine/add_84_I3/U80/Y (NAND2X2)                    0.024671   0.916123 f
+  engine/add_84_I3/U79/Y (INVX2)                      0.020866   0.936989 r
+  engine/add_84_I3/U38/Y (NAND2X2)                    0.024671   0.961660 f
+  engine/add_84_I3/U37/Y (INVX2)                      0.020866   0.982525 r
+  engine/add_84_I3/U40/Y (NAND2X2)                    0.024671   1.007196 f
+  engine/add_84_I3/U39/Y (INVX2)                      0.020866   1.028062 r
+  engine/add_84_I3/U82/Y (NAND2X2)                    0.024671   1.052733 f
+  engine/add_84_I3/U81/Y (INVX2)                      0.020866   1.073599 r
+  engine/add_84_I3/U84/Y (NAND2X2)                    0.024671   1.098270 f
+  engine/add_84_I3/U83/Y (INVX2)                      0.020866   1.119136 r
+  engine/add_84_I3/U86/Y (NAND2X2)                    0.024671   1.143807 f
+  engine/add_84_I3/U85/Y (INVX2)                      0.020866   1.164673 r
+  engine/add_84_I3/U42/Y (NAND2X2)                    0.024671   1.189344 f
+  engine/add_84_I3/U41/Y (INVX2)                      0.020866   1.210210 r
+  engine/add_84_I3/U44/Y (NAND2X2)                    0.024671   1.234881 f
+  engine/add_84_I3/U43/Y (INVX2)                      0.020866   1.255747 r
+  engine/add_84_I3/U88/Y (NAND2X2)                    0.024671   1.280418 f
+  engine/add_84_I3/U87/Y (INVX2)                      0.020866   1.301284 r
+  engine/add_84_I3/U46/Y (NAND2X2)                    0.024671   1.325955 f
+  engine/add_84_I3/U45/Y (INVX2)                      0.020866   1.346820 r
+  engine/add_84_I3/U48/Y (NAND2X2)                    0.024671   1.371491 f
+  engine/add_84_I3/U47/Y (INVX2)                      0.020866   1.392357 r
+  engine/add_84_I3/U90/Y (NAND2X2)                    0.024671   1.417028 f
+  engine/add_84_I3/U89/Y (INVX2)                      0.020866   1.437894 r
+  engine/add_84_I3/U92/Y (NAND2X2)                    0.024671   1.462565 f
+  engine/add_84_I3/U91/Y (INVX2)                      0.020866   1.483431 r
+  engine/add_84_I3/U94/Y (NAND2X2)                    0.024671   1.508102 f
+  engine/add_84_I3/U93/Y (INVX2)                      0.020866   1.528968 r
+  engine/add_84_I3/U50/Y (NAND2X2)                    0.024671   1.553639 f
+  engine/add_84_I3/U49/Y (INVX2)                      0.020866   1.574505 r
+  engine/add_84_I3/U52/Y (NAND2X2)                    0.024671   1.599176 f
+  engine/add_84_I3/U51/Y (INVX2)                      0.020866   1.620042 r
+  engine/add_84_I3/U96/Y (NAND2X2)                    0.024671   1.644713 f
+  engine/add_84_I3/U95/Y (INVX2)                      0.020866   1.665579 r
+  engine/add_84_I3/U54/Y (NAND2X2)                    0.024671   1.690250 f
+  engine/add_84_I3/U53/Y (INVX2)                      0.020866   1.711115 r
+  engine/add_84_I3/U56/Y (NAND2X2)                    0.024671   1.735786 f
+  engine/add_84_I3/U55/Y (INVX2)                      0.020866   1.756652 r
+  engine/add_84_I3/U98/Y (NAND2X2)                    0.024671   1.781323 f
+  engine/add_84_I3/U97/Y (INVX2)                      0.020866   1.802189 r
+  engine/add_84_I3/U100/Y (NAND2X2)                   0.024671   1.826860 f
+  engine/add_84_I3/U99/Y (INVX2)                      0.020866   1.847726 r
+  engine/add_84_I3/U102/Y (NAND2X2)                   0.024671   1.872397 f
+  engine/add_84_I3/U101/Y (INVX2)                     0.020866   1.893263 r
+  engine/add_84_I3/U58/Y (NAND2X2)                    0.024671   1.917934 f
+  engine/add_84_I3/U57/Y (INVX2)                      0.020866   1.938800 r
+  engine/add_84_I3/U60/Y (NAND2X2)                    0.024671   1.963471 f
+  engine/add_84_I3/U59/Y (INVX2)                      0.018280   1.981751 r
+  engine/add_84_I3/U4/Y (AND2X2)                      0.046593   2.028343 r
+  engine/add_84_I3/U1/Y (AND2X2)                      0.050995   2.079339 r
+  engine/add_84_I3/U104/Y (NAND2X2)                   0.026611   2.105949 f
+  engine/add_84_I3/U103/Y (INVX2)                     0.020869   2.126819 r
+  engine/add_84_I3/U62/Y (NAND2X2)                    0.024672   2.151490 f
+  engine/add_84_I3/U61/Y (INVX2)                      0.018280   2.169770 r
+  engine/add_84_I3/U2/Y (AND2X2)                      0.049271   2.219041 r
+  engine/add_84_I3/U106/Y (NAND2X2)                   0.026611   2.245652 f
+  engine/add_84_I3/U105/Y (INVX2)                     0.020869   2.266521 r
+  engine/add_84_I3/U108/Y (NAND2X2)                   0.024672   2.291193 f
+  engine/add_84_I3/U107/Y (INVX2)                     0.020866   2.312058 r
+  engine/add_84_I3/U64/Y (NAND2X2)                    0.024671   2.336730 f
+  engine/add_84_I3/U63/Y (INVX2)                      0.018280   2.355009 r
+  engine/add_84_I3/U5/Y (AND2X2)                      0.046593   2.401602 r
+  engine/add_84_I3/U3/Y (AND2X2)                      0.050995   2.452597 r
+  engine/add_84_I3/U110/Y (NAND2X2)                   0.026611   2.479208 f
+  engine/add_84_I3/U109/Y (INVX2)                     0.020869   2.500077 r
+  engine/add_84_I3/U66/Y (NAND2X2)                    0.024672   2.524749 f
+  engine/add_84_I3/U65/Y (INVX2)                      0.020866   2.545615 r
+  engine/add_84_I3/U114/Y (NAND2X2)                   0.018513   2.564128 f
+  engine/add_84_I3/U113/Y (XNOR2X1)                   0.067442   2.631570 r
+  engine/add_84_I3/SUM[63] (bds_bb_6ch_core_DW01_add_9)
+                                                      0.000000   2.631570 r
+  engine/gte_84_I3/B[63] (bds_bb_6ch_core_DW_cmp_3)   0.000000   2.631570 r
+  engine/gte_84_I3/U516/Y (NOR2BX1)                   0.037325   2.668894 f
+  engine/gte_84_I3/U515/Y (AOI21X1)                   0.053905   2.722799 r
+  engine/gte_84_I3/U514/Y (OAI2B11X1)                 0.069503   2.792301 f
+  engine/gte_84_I3/U511/Y (NOR3BX1)                   0.076119   2.868421 r
+  engine/gte_84_I3/U505/Y (NAND3XL)                   0.079984   2.948405 f
+  engine/gte_84_I3/U326/Y (INVX2)                     0.027937   2.976342 r
+  engine/gte_84_I3/U399/Y (OAI211XL)                  0.058271   3.034614 f
+  engine/gte_84_I3/U398/Y (NOR4X1)                    0.066510   3.101124 r
+  engine/gte_84_I3/U397/Y (OAI32XL)                   0.054440   3.155565 f
+  engine/gte_84_I3/GE_LT_GT_LE (bds_bb_6ch_core_DW_cmp_3)
+                                                      0.000000   3.155565 f
+  engine/U8452/Y (MX2X1)                              0.071178   3.226743 f
+  engine/U8451/Y (OAI2BB1X1)                          0.096761   3.323503 f
+  engine/U8474/Y (NAND4BX2)                           0.086891   3.410394 f
+  engine/U8473/Y (INVX2)                              0.041416   3.451809 r
+  engine/U8513/Y (AND2X2)                             0.061419   3.513229 r
+  engine/nav_valid[2] (bds_bb_6ch_engine)             0.000000   3.513229 r
+  nav_valid[2] (out)                                  0.000000   3.513229 r
+  data arrival time                                              3.513229
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -3.513229
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.286771
+
+
+1

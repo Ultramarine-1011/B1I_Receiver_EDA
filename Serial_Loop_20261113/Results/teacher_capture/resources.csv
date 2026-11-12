@@ -1,0 +1,3 @@
+monotonic_elapsed_s,rss_kib,hwm_kib,mem_available_kib,swap_used_kib,cpu_ticks,cpu_percent_one_core
+0.0,0,0,8705264,0,0,0.0
+5.089999999999918,272684,272684,8482440,0,503,98.82121807465778

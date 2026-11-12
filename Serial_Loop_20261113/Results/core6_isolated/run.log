@@ -1,0 +1,451 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+proc iterative_integration {} {
+global env report_dir
+set_app_var sh_enable_page_mode false
+set_host_options -max_cores 1
+set_app_var target_library /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set_app_var link_library [list * /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db dw_foundation.sldb]
+define_design_lib WORK -path ./WORK
+source ../scripts/channel_cache.tcl
+set channel_reports ../channel/reports
+if {[info exists env(ITERATIVE_CHANNEL_REPORTS)]} {set channel_reports $env(ITERATIVE_CHANNEL_REPORTS)}
+read_ddc $channel_reports/mapped.ddc
+set channel [freeze_mapped_channel ITERATIVE_]
+set report_dir $env(REPORT_DIR)
+source ../scripts/reports.tcl
+if {$env(SCOPE) eq "bank"} {
+    set loaded [read_verilog ../rtl/tracking_bank6.v]
+    if {[llength $loaded]!=1} {error "Bank wrapper was not read"}
+    current_design tracking_bank6
+    if {![link]} {exit 1}
+    set channels [get_cells -filter "ref_name == $channel"]
+    if {[sizeof_collection $channels]!=6} {error "Expected six iterative trackers"}
+    set_dont_touch $channels true
+    set reset_port reset_n
+} else {
+    read_ddc /home/ICer/ic_eda_resume_tree_20261112/final_core/reports/mapped.ddc
+    current_design bds_bb_6ch_core
+    set channels [get_cells -hier -filter {ref_name =~ *tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1}]
+    if {[sizeof_collection $channels]!=6} {error "Expected six baseline trackers"}
+    set old_reference [lsort -unique [get_attribute $channels ref_name]]
+    set old_interface [channel_interface [lindex $old_reference 0]]
+    if {[channel_interface $channel] ne $old_interface} {error "Cached tracker interface mismatch"}
+    current_design bds_bb_6ch_core
+    change_link $channels $channel
+    if {![link]} {exit 1}
+    reset_design
+    rename_design bds_bb_6ch_core bds_bb_6ch_engine
+    set_dont_touch [current_design] true
+    if {![analyze -format sverilog ../rtl/mapped_core_wrapper.sv]} {exit 1}
+    if {![elaborate bds_bb_6ch_core] || ![link]} {exit 1}
+    set_dont_touch [get_cells engine] true
+    set_boundary_optimization [get_cells engine] false
+    set reset_port rst_n
+}
+set_operating_conditions typical -library typical
+source ../scripts/baseline.sdc
+if {$env(SCOPE) eq "core" && ![compile -map_effort medium]} {exit 1}
+write -format verilog -hierarchy -output $report_dir/mapped.v
+write -format ddc -hierarchy -output $report_dir/mapped.ddc
+write_sdc $report_dir/mapped.sdc
+backend_reports ""
+set channels [get_cells -hier -filter "ref_name == $channel"]
+if {[sizeof_collection $channels]!=6} {error "Final hierarchy must contain six iterative trackers"}
+if {[sizeof_collection [get_cells -hier -filter {is_hierarchical == false && is_unmapped == true}]]} {exit 1}
+puts "ITERATIVE_INTEGRATION_PASS SCOPE=$env(SCOPE) CHANNELS=6"
+}
+if {[catch {iterative_integration} failure]} {
+    puts stderr "ITERATIVE_INTEGRATION_FAILED $failure"
+    exit 1
+}
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Reading ddc file '/home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc'.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Loaded 109 designs.
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+Current design is 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+
+  Linking design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (109 designs)             /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Information: Using the '-update_links' option is not recommended. This option will be removed in a future release.  See the man page for more information.  (INFO-109)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_divide_step to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_divide_step. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_aid_iterative to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_aid_iterative. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:b1i_prn_gen_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_b1i_prn_gen_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:b1i_prn_gen_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_b1i_prn_gen_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:b1i_prn_gen_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_b1i_prn_gen_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:b1i_prn_gen_1_DW01_inc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_b1i_prn_gen_1_DW01_inc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:b1i_prn_gen_2_DW01_inc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_b1i_prn_gen_2_DW01_inc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:b1i_prn_gen_0_DW01_inc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_b1i_prn_gen_0_DW01_inc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_aid_iterative_DW01_sub_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_aid_iterative_DW01_sub_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_aid_iterative_DW01_sub_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_aid_iterative_DW01_sub_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_divide_step_DW_mult_tc_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_divide_step_DW_mult_tc_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_divide_step_DW01_add_2 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_divide_step_DW01_add_2. (UIMG-45)
+Information: Renaming design /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 to /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc:ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1. (UIMG-45)
+Current design is 'ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+Current design is 'ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+
+  Linking design 'ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (109 designs)             /home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+CHANNEL_CACHE_FROZEN REFERENCE=ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 LEAVES_WITH_CONSTANTS=32331 UNMAPPED=0 PORTS=1139
+Reading ddc file '/home/ICer/ic_eda_resume_tree_20261112/final_core/reports/mapped.ddc'.
+Loaded 425 designs.
+Current design is 'bds_bb_6ch_core'.
+Current design is 'bds_bb_6ch_core'.
+Current design is 'CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+Current design is 'ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+Current design is 'bds_bb_6ch_core'.
+
+  Linking design 'bds_bb_6ch_core'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (534 designs)             /home/ICer/ic_eda_resume_tree_20261112/final_core/reports/mapped.ddc, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Information: Renaming design /home/ICer/ic_eda_resume_tree_20261112/final_core/reports/mapped.ddc:bds_bb_6ch_core to /home/ICer/ic_eda_resume_tree_20261112/final_core/reports/mapped.ddc:bds_bb_6ch_engine. (UIMG-45)
+Current design is 'bds_bb_6ch_engine'.
+Current design is 'bds_bb_6ch_engine'.
+Running PRESTO HDLC
+Compiling source file ../rtl/mapped_core_wrapper.sv
+Presto compilation completed successfully.
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 26 in file
+	'../rtl/mapped_core_wrapper.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine bds_bb_6ch_core line 26 in file
+		'../rtl/mapped_core_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     samples_reg     | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|  read_pointer_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  write_pointer_reg  | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    occupancy_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+========================================================
+|  block name/line   | Inputs | Outputs | # sel inputs |
+========================================================
+| bds_bb_6ch_core/42 |   64   |    2    |      6       |
+========================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'bds_bb_6ch_core'.
+
+  Linking design 'bds_bb_6ch_core'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (535 designs)             /home/ICer/six_tile_asic_v2_20261113/core_retry1/bds_bb_6ch_core.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+BASELINE_OUTPUT_LOAD_PF 0.006604
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 15627 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'bds_bb_6ch_core'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'bds_bb_6ch_core_DW01_dec_0'
+  Processing 'bds_bb_6ch_core_DW01_inc_7'
+  Processing 'bds_bb_6ch_core_DW01_inc_8'
+  Processing 'bds_bb_6ch_core_DW01_inc_10'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:14 2656140.2      6.92   84436.3       2.8                          
+    0:02:15 2655953.9      6.92   84436.6       2.8                          
+    0:02:15 2655953.9      6.92   84436.6       2.8                          
+    0:02:15 2655953.9      6.92   84436.6       2.8                          
+    0:02:16 2655953.9      6.92   84436.6       2.8                          
+    0:02:17 2653998.0      6.92   84433.2       2.8                          
+    0:02:18 2653987.4      6.92   84433.1       2.8                          
+    0:02:19 2653986.7      6.92   84433.0       2.8                          
+    0:02:20 2653986.7      6.92   84433.0       2.8                          
+    0:02:21 2653986.7      6.92   84433.0       2.8                          
+    0:02:21 2653986.7      6.92   84433.0       2.8                          
+    0:02:22 2653986.7      6.92   84433.0       2.8                          
+    0:02:23 2653986.7      6.92   84433.0       2.8                          
+    0:02:24 2653986.7      6.92   84433.0       2.8                          
+    0:02:25 2653986.7      6.92   84433.0       2.8                          
+    0:02:25 2653986.7      6.92   84433.0       2.8                          
+    0:02:26 2653986.7      6.92   84433.0       2.8                          
+    0:02:26 2653986.7      6.92   84433.0       2.8                          
+    0:02:26 2653986.7      6.92   84433.0       2.8                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:26 2653986.7      6.92   84433.0       2.8                          
+    0:02:26 2653986.7      6.92   84433.0       2.8                          
+    0:02:27 2653984.6      6.92   84433.0       2.8                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:27 2653984.6      6.92   84433.0       2.8                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:32 2653984.6      6.92   84433.0       2.8                          
+    0:02:33 2653984.6      6.92   84433.0       2.8                          
+    0:02:34 2653982.5      6.92   84433.0       2.8                          
+    0:02:34 2653980.4      6.92   84433.0       2.8                          
+    0:02:34 2653980.4      6.92   84433.0       2.8                          
+    0:02:34 2653980.4      6.92   84433.0       2.8                          
+    0:02:35 2653980.4      6.92   84433.0       2.8                          
+    0:02:35 2653980.4      6.92   84433.0       2.8                          
+    0:02:35 2653980.4      6.92   84433.0       2.8                          
+    0:02:37 2653980.4      6.92   84433.0       2.8                          
+    0:02:37 2653980.4      6.92   84433.0       2.8                          
+    0:02:37 2653980.4      6.92   84433.0       2.8                          
+    0:02:43 2653980.4      6.92   84433.0       2.8                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'bds_bb_6ch_core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'engine/refine/correlator/code_source/late_prn/clk': 34434 load(s), 1 driver(s)
+Writing verilog file '/home/ICer/six_tile_asic_v2_20261113/core_retry1/reports/mapped.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 21 nets to module nh20_sync using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 23 nets to module navigation_d1_EXPORT_RECORDS0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 2 nets to module ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 57 nets to module ITERATIVE_tracking_divide_step using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 96 nets to module ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 2 nets to module ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 15 nets to module ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 158 nets to module ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 1 nets to module b1i_period_reduce_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 96 nets to module code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 2 nets to module carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 15 nets to module tracking_frontend_ALIGN_FIRST_WINDOW0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 54 nets to module acquisition_refine_LAG_RADIUS16_FREQUENCY_RADIUS5_DW_div_uns_5 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 4 nets to module acquisition_refine_LAG_RADIUS16_FREQUENCY_RADIUS5_DW_div_tc_5 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 12 nets to module acquisition_refine_LAG_RADIUS16_FREQUENCY_RADIUS5 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 142 nets to module bds_bb_6ch_core_DW_div_tc_2 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 21 nets to module bds_bb_6ch_core_DW_div_tc_7 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 153 nets to module bds_bb_6ch_engine using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Writing ddc file '/home/ICer/six_tile_asic_v2_20261113/core_retry1/reports/mapped.ddc'.
+BACKEND_LEAF 409659 UNMAPPED 0 BLACKBOX 1 CONSTANT_PSEUDO 2263
+BACKEND_BLACKBOX engine/acquisition acquisition_pcps_FIRST_DOPPLERn2624000_LAST_DOPPLER2624000_DOPPLER_STEP131200_CONFIGURED_PRN1
+ITERATIVE_INTEGRATION_PASS SCOPE=core CHANNELS=6
+exit 0
+
+Memory usage for main task 1878 Mbytes.
+Memory usage for this session 1878 Mbytes.
+CPU usage for this session 262 seconds ( 0.07 hours ).
+
+Thank you...

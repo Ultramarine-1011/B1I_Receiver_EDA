@@ -1,0 +1,239 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : bds_bb_6ch_core
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:40:38 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: nav_valid[5]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  cfg_channel[1] (in)                                 0.024891   1.024891 r
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.024891 r
+  engine/U8467/Y (INVX2)                              0.029073   1.053964 f
+  engine/U8534/Y (NAND3BX2)                           0.030727   1.084691 r
+  engine/U8533/Y (INVX2)                              0.019618   1.104309 f
+  engine/U5429/Y (NAND2BX2)                           0.029019   1.133328 r
+  engine/U8445/Y (OAI2BB1X1)                          0.056959   1.190287 f
+  engine/U8509/Y (NAND4BX2)                           0.086896   1.277183 f
+  engine/U8508/Y (INVX2)                              0.041416   1.318599 r
+  engine/U8516/Y (AND2X2)                             0.061419   1.380018 r
+  engine/nav_valid[5] (bds_bb_6ch_engine)             0.000000   1.380018 r
+  nav_valid[5] (out)                                  0.000000   1.380018 r
+  data arrival time                                              1.380018
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.380018
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.419982
+
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: nav_valid[4]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  cfg_channel[1] (in)                                 0.024891   1.024891 r
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.024891 r
+  engine/U8467/Y (INVX2)                              0.029073   1.053964 f
+  engine/U8534/Y (NAND3BX2)                           0.030727   1.084691 r
+  engine/U8533/Y (INVX2)                              0.019618   1.104309 f
+  engine/U8532/Y (NAND2BX2)                           0.029019   1.133328 r
+  engine/U8454/Y (OAI2BB1X1)                          0.056959   1.190287 f
+  engine/U8476/Y (NAND4BX2)                           0.086891   1.277178 f
+  engine/U8475/Y (INVX2)                              0.041416   1.318594 r
+  engine/U8515/Y (AND2X2)                             0.061419   1.380013 r
+  engine/nav_valid[4] (bds_bb_6ch_engine)             0.000000   1.380013 r
+  nav_valid[4] (out)                                  0.000000   1.380013 r
+  data arrival time                                              1.380013
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.380013
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.419987
+
+
+  Startpoint: cfg_channel[2]
+              (input port clocked by clk)
+  Endpoint: nav_valid[3]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  cfg_channel[2] (in)                                 0.021200   1.021200 r
+  engine/cfg_channel[2] (bds_bb_6ch_engine)           0.000000   1.021200 r
+  engine/U8531/Y (NAND2BX2)                           0.048242   1.069442 r
+  engine/U5436/Y (INVX2)                              0.020292   1.089734 f
+  engine/U8522/Y (NAND3BX2)                           0.035016   1.124750 r
+  engine/U8461/Y (OAI2BB1X1)                          0.058510   1.183260 f
+  engine/U8507/Y (NAND4BX2)                           0.086891   1.270151 f
+  engine/U8506/Y (INVX2)                              0.041416   1.311566 r
+  engine/U8514/Y (AND2X2)                             0.061419   1.372986 r
+  engine/nav_valid[3] (bds_bb_6ch_engine)             0.000000   1.372986 r
+  nav_valid[3] (out)                                  0.000000   1.372986 r
+  data arrival time                                              1.372986
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.372986
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.427014
+
+
+  Startpoint: cfg_channel[2]
+              (input port clocked by clk)
+  Endpoint: nav_valid[0]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  cfg_channel[2] (in)                                 0.021200   1.021200 r
+  engine/cfg_channel[2] (bds_bb_6ch_engine)           0.000000   1.021200 r
+  engine/U8531/Y (NAND2BX2)                           0.048242   1.069442 r
+  engine/U5436/Y (INVX2)                              0.020292   1.089734 f
+  engine/U8524/Y (NAND3BX2)                           0.032789   1.122524 r
+  engine/U8464/Y (OAI2BB1X1)                          0.058510   1.181033 f
+  engine/U8505/Y (NAND4BX2)                           0.086891   1.267924 f
+  engine/U8504/Y (INVX2)                              0.041416   1.309340 r
+  engine/U8511/Y (AND2X2)                             0.061419   1.370759 r
+  engine/nav_valid[0] (bds_bb_6ch_engine)             0.000000   1.370759 r
+  nav_valid[0] (out)                                  0.000000   1.370759 r
+  data arrival time                                              1.370759
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.370759
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.429241
+
+
+  Startpoint: cfg_channel[2]
+              (input port clocked by clk)
+  Endpoint: nav_valid[1]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  cfg_channel[2] (in)                                 0.021200   1.021200 r
+  engine/cfg_channel[2] (bds_bb_6ch_engine)           0.000000   1.021200 r
+  engine/U8531/Y (NAND2BX2)                           0.048242   1.069442 r
+  engine/U8523/Y (NAND3BX2)                           0.048862   1.118304 r
+  engine/U8448/Y (OAI2BB1X1)                          0.058510   1.176814 f
+  engine/U8472/Y (NAND4BX2)                           0.086895   1.263709 f
+  engine/U8471/Y (INVX2)                              0.041416   1.305125 r
+  engine/U8512/Y (AND2X2)                             0.061419   1.366544 r
+  engine/nav_valid[1] (bds_bb_6ch_engine)             0.000000   1.366544 r
+  nav_valid[1] (out)                                  0.000000   1.366544 r
+  data arrival time                                              1.366544
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.366544
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.433456
+
+
+  Startpoint: cfg_channel[2]
+              (input port clocked by clk)
+  Endpoint: nav_valid[2]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  cfg_channel[2] (in)                                 0.021200   1.021200 r
+  engine/cfg_channel[2] (bds_bb_6ch_engine)           0.000000   1.021200 r
+  engine/U8531/Y (NAND2BX2)                           0.048242   1.069442 r
+  engine/U8521/Y (NAND3BX2)                           0.048862   1.118304 r
+  engine/U8451/Y (OAI2BB1X1)                          0.058506   1.176811 f
+  engine/U8474/Y (NAND4BX2)                           0.086891   1.263701 f
+  engine/U8473/Y (INVX2)                              0.041416   1.305117 r
+  engine/U8513/Y (AND2X2)                             0.061419   1.366536 r
+  engine/nav_valid[2] (bds_bb_6ch_engine)             0.000000   1.366536 r
+  nav_valid[2] (out)                                  0.000000   1.366536 r
+  data arrival time                                              1.366536
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.366536
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.433464
+
+
+1

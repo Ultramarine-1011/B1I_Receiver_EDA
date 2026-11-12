@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : area
+Design : bdi_capture_channel_6sat
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:28:12 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    typical (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db)
+
+Number of ports:                          761
+Number of nets:                          2309
+Number of cells:                         1588
+Number of combinational cells:           1342
+Number of sequential cells:               233
+Number of macros/black boxes:               0
+Number of buf/inv:                        350
+Number of references:                      67
+
+Combinational area:               7185.124857
+Buf/Inv area:                      766.281625
+Noncombinational area:            3515.299211
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 10700.424068
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area           Local cell area
+                                  -------------------  ---------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
+                                  Total       Total    national   national   boxes   Design
+--------------------------------  ----------  -------  ---------  ---------  ------  -------------------------------------
+bdi_capture_channel_6sat          10700.4241    100.0  3907.6129  3515.2992  0.0000  bdi_capture_channel_6sat
+add_128                             145.3536      1.4   145.3536     0.0000  0.0000  bdi_capture_channel_6sat_DW01_inc_2
+add_136                             103.0176      1.0   103.0176     0.0000  0.0000  bdi_capture_channel_6sat_DW01_inc_1
+add_165                             103.0176      1.0   103.0176     0.0000  0.0000  bdi_capture_channel_6sat_DW01_inc_0
+add_62                              187.6896      1.8   187.6896     0.0000  0.0000  bdi_capture_channel_6sat_DW01_add_3
+add_84                              409.2480      3.8   409.2480     0.0000  0.0000  bdi_capture_channel_6sat_DW01_add_2
+add_85                              409.2480      3.8   409.2480     0.0000  0.0000  bdi_capture_channel_6sat_DW01_add_1
+add_88                              414.8928      3.9   414.8928     0.0000  0.0000  bdi_capture_channel_6sat_DW01_add_0
+mult_77                             234.9648      2.2   234.9648     0.0000  0.0000  bdi_capture_channel_6sat_DW_mult_tc_0
+mult_78                             234.9648      2.2   234.9648     0.0000  0.0000  bdi_capture_channel_6sat_DW_mult_tc_1
+r416                                323.1648      3.0   323.1648     0.0000  0.0000  bdi_capture_channel_6sat_DW01_inc_4
+r421                                153.8208      1.4   153.8208     0.0000  0.0000  bdi_capture_channel_6sat_DW01_inc_3
+sub_86                              256.1328      2.4   256.1328     0.0000  0.0000  bdi_capture_channel_6sat_DW01_sub_2
+sub_87                              301.9968      2.8   301.9968     0.0000  0.0000  bdi_capture_channel_6sat_DW01_sub_0
+--------------------------------  ----------  -------  ---------  ---------  ------  -------------------------------------
+Total                                                  7185.1249  3515.2992  0.0000
+
+1

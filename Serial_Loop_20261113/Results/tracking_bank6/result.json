@@ -1,0 +1,7 @@
+{
+  "stop_reason": null, 
+  "monotonic_elapsed_s": 26.920000000000073, 
+  "time_report_nonempty": true, 
+  "return_code": 0, 
+  "peak_sampled_rss_kib": 877164
+}

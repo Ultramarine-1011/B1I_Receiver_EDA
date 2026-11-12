@@ -1,0 +1,1015 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : bds_bb_6ch_core
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:40:26 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: engine/channels[0].slot/tracking/frontend/code_source/target_late_index_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  cfg_channel[1] (in)                                 0.019969   1.019969 f
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.019969 f
+  engine/U8467/Y (INVX2)                              0.039689   1.059659 r
+  engine/U8460/Y (XNOR2XL)                            0.070230   1.129889 r
+  engine/U8457/Y (OR4X2)                              0.094789   1.224678 r
+  engine/U3901/Y (NAND3X4)                            0.043441   1.268118 f
+  engine/U4795/Y (OR4X1)                              0.140503   1.408621 f
+  engine/U4794/Y (CLKINVX2)                           0.034897   1.443518 r
+  engine/U5246/Y (BUFX2)                              0.041347   1.484865 r
+  engine/U5067/Y (BUFX2)                              0.118841   1.603706 r
+  engine/U5744/Y (MXI2XL)                             0.087940   1.691647 f
+  engine/U5743/Y (INVX2)                              0.052434   1.744081 r
+  engine/channels[0].slot/tracking/init_code_phase_q[38] (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.744081 r
+  engine/channels[0].slot/tracking/frontend/init_code_phase_q[38] (ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.744081 r
+  engine/channels[0].slot/tracking/frontend/code_source/init_code_phase_q[38] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.744081 r
+  engine/channels[0].slot/tracking/frontend/code_source/U361/Y (NAND3XL)
+                                                      0.050792   1.794873 f
+  engine/channels[0].slot/tracking/frontend/code_source/U363/Y (NOR4X1)
+                                                      0.090917   1.885790 r
+  engine/channels[0].slot/tracking/frontend/code_source/U53/Y (BUFX2)
+                                                      0.045250   1.931039 r
+  engine/channels[0].slot/tracking/frontend/code_source/U44/Y (BUFX2)
+                                                      0.030816   1.961856 r
+  engine/channels[0].slot/tracking/frontend/code_source/U43/Y (BUFX2)
+                                                      0.123163   2.085018 r
+  engine/channels[0].slot/tracking/frontend/code_source/U765/Y (MXI2X1)
+                                                      0.092719   2.177738 f
+  engine/channels[0].slot/tracking/frontend/code_source/U764/Y (CLKINVX1)
+                                                      0.046254   2.223991 r
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/B[0] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   2.223991 r
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U46/Y (INVX2)
+                                                      0.014190   2.238182 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U78/Y (AND2X2)
+                                                      0.056612   2.294794 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U79/Y (AND2X2)
+                                                      0.058845   2.353639 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U80/Y (AND2X2)
+                                                      0.058850   2.412489 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U81/Y (AND2X2)
+                                                      0.058850   2.471339 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U82/Y (AND2X2)
+                                                      0.058850   2.530189 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U83/Y (AND2X2)
+                                                      0.058850   2.589039 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U84/Y (AND2X2)
+                                                      0.058850   2.647889 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U85/Y (AND2X2)
+                                                      0.057258   2.705147 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U86/Y (AND2X2)
+                                                      0.056837   2.761985 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U87/Y (AND2X2)
+                                                      0.056836   2.818821 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U88/Y (AND2X2)
+                                                      0.056836   2.875657 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U89/Y (AND2X2)
+                                                      0.058429   2.934085 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U90/Y (AND2X2)
+                                                      0.058849   2.992934 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U60/Y (AND2X2)
+                                                      0.058850   3.051785 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U61/Y (AND2X2)
+                                                      0.057258   3.109042 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U62/Y (AND2X2)
+                                                      0.058430   3.167472 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U63/Y (AND2X2)
+                                                      0.058849   3.226321 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U64/Y (AND2X2)
+                                                      0.057258   3.283579 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U65/Y (AND2X2)
+                                                      0.058430   3.342009 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U66/Y (AND2X2)
+                                                      0.058849   3.400858 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U67/Y (AND2X2)
+                                                      0.058850   3.459708 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U68/Y (AND2X2)
+                                                      0.057258   3.516966 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U69/Y (AND2X2)
+                                                      0.058430   3.575396 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U70/Y (AND2X2)
+                                                      0.058849   3.634245 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U71/Y (AND2X2)
+                                                      0.058850   3.693095 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U72/Y (AND2X2)
+                                                      0.057258   3.750353 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U91/Y (AND2X2)
+                                                      0.057247   3.807600 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U6/Y (OR2X2)
+                                                      0.063915   3.871514 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U10/Y (AND2X2)
+                                                      0.057986   3.929500 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U7/Y (OR2X2)
+                                                      0.062213   3.991713 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U9/Y (AND2X2)
+                                                      0.058714   4.050427 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U59/Y (AND2X2)
+                                                      0.058850   4.109277 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U4/Y (INVX2)
+                                                      0.017596   4.126873 r
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)
+                                                      0.055984   4.182857 r
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_C141/DIFF[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   4.182857 r
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/B[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.182857 r
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U2/Y (INVX2)
+                                                      0.022381   4.205238 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)
+                                                      0.058306   4.263545 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)
+                                                      0.062871   4.326416 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)
+                                                      0.062871   4.389287 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)
+                                                      0.062871   4.452157 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)
+                                                      0.062871   4.515028 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)
+                                                      0.062871   4.577899 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)
+                                                      0.062871   4.640770 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)
+                                                      0.062871   4.703641 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U11/Y (OR2X2)
+                                                      0.058409   4.762051 f
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/U24/Y (XNOR2X1)
+                                                      0.050417   4.812468 r
+  engine/channels[0].slot/tracking/frontend/code_source/sub_109_2_C141/DIFF[42] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.812468 r
+  engine/channels[0].slot/tracking/frontend/code_source/U597/Y (AOI22XL)
+                                                      0.052640   4.865108 f
+  engine/channels[0].slot/tracking/frontend/code_source/U596/Y (OAI2BB1X1)
+                                                      0.028826   4.893934 r
+  engine/channels[0].slot/tracking/frontend/code_source/target_late_index_reg[10]/D (DFFRQX2)
+                                                      0.000000   4.893934 r
+  data arrival time                                              4.893934
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  engine/channels[0].slot/tracking/frontend/code_source/target_late_index_reg[10]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.893934
+  --------------------------------------------------------------------------
+  slack (MET)                                                    4.838017
+
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: engine/channels[1].slot/tracking/frontend/code_source/target_late_index_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  cfg_channel[1] (in)                                 0.019969   1.019969 f
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.019969 f
+  engine/U8467/Y (INVX2)                              0.039689   1.059659 r
+  engine/U8460/Y (XNOR2XL)                            0.070230   1.129889 r
+  engine/U8457/Y (OR4X2)                              0.094789   1.224678 r
+  engine/U3901/Y (NAND3X4)                            0.043441   1.268118 f
+  engine/U4793/Y (OR4X1)                              0.140503   1.408621 f
+  engine/U4792/Y (CLKINVX2)                           0.034897   1.443518 r
+  engine/U5245/Y (BUFX2)                              0.041347   1.484865 r
+  engine/U5066/Y (BUFX2)                              0.118841   1.603706 r
+  engine/U5742/Y (MXI2XL)                             0.087940   1.691647 f
+  engine/U5741/Y (INVX2)                              0.052434   1.744081 r
+  engine/channels[1].slot/tracking/init_code_phase_q[38] (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.744081 r
+  engine/channels[1].slot/tracking/frontend/init_code_phase_q[38] (ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.744081 r
+  engine/channels[1].slot/tracking/frontend/code_source/init_code_phase_q[38] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.744081 r
+  engine/channels[1].slot/tracking/frontend/code_source/U361/Y (NAND3XL)
+                                                      0.050792   1.794873 f
+  engine/channels[1].slot/tracking/frontend/code_source/U363/Y (NOR4X1)
+                                                      0.090917   1.885790 r
+  engine/channels[1].slot/tracking/frontend/code_source/U53/Y (BUFX2)
+                                                      0.045250   1.931039 r
+  engine/channels[1].slot/tracking/frontend/code_source/U44/Y (BUFX2)
+                                                      0.030816   1.961856 r
+  engine/channels[1].slot/tracking/frontend/code_source/U43/Y (BUFX2)
+                                                      0.123163   2.085018 r
+  engine/channels[1].slot/tracking/frontend/code_source/U765/Y (MXI2X1)
+                                                      0.092719   2.177738 f
+  engine/channels[1].slot/tracking/frontend/code_source/U764/Y (CLKINVX1)
+                                                      0.046254   2.223991 r
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/B[0] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   2.223991 r
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U46/Y (INVX2)
+                                                      0.014190   2.238182 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U78/Y (AND2X2)
+                                                      0.056612   2.294794 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U79/Y (AND2X2)
+                                                      0.058845   2.353639 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U80/Y (AND2X2)
+                                                      0.058850   2.412489 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U81/Y (AND2X2)
+                                                      0.058850   2.471339 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U82/Y (AND2X2)
+                                                      0.058850   2.530189 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U83/Y (AND2X2)
+                                                      0.058850   2.589039 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U84/Y (AND2X2)
+                                                      0.058850   2.647889 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U85/Y (AND2X2)
+                                                      0.057258   2.705147 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U86/Y (AND2X2)
+                                                      0.056837   2.761985 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U87/Y (AND2X2)
+                                                      0.056836   2.818821 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U88/Y (AND2X2)
+                                                      0.056836   2.875657 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U89/Y (AND2X2)
+                                                      0.058429   2.934085 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U90/Y (AND2X2)
+                                                      0.058849   2.992934 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U60/Y (AND2X2)
+                                                      0.058850   3.051785 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U61/Y (AND2X2)
+                                                      0.057258   3.109042 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U62/Y (AND2X2)
+                                                      0.058430   3.167472 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U63/Y (AND2X2)
+                                                      0.058849   3.226321 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U64/Y (AND2X2)
+                                                      0.057258   3.283579 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U65/Y (AND2X2)
+                                                      0.058430   3.342009 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U66/Y (AND2X2)
+                                                      0.058849   3.400858 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U67/Y (AND2X2)
+                                                      0.058850   3.459708 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U68/Y (AND2X2)
+                                                      0.057258   3.516966 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U69/Y (AND2X2)
+                                                      0.058430   3.575396 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U70/Y (AND2X2)
+                                                      0.058849   3.634245 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U71/Y (AND2X2)
+                                                      0.058850   3.693095 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U72/Y (AND2X2)
+                                                      0.057258   3.750353 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U91/Y (AND2X2)
+                                                      0.057247   3.807600 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U6/Y (OR2X2)
+                                                      0.063915   3.871514 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U10/Y (AND2X2)
+                                                      0.057986   3.929500 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U7/Y (OR2X2)
+                                                      0.062213   3.991713 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U9/Y (AND2X2)
+                                                      0.058714   4.050427 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U59/Y (AND2X2)
+                                                      0.058850   4.109277 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U4/Y (INVX2)
+                                                      0.017596   4.126873 r
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)
+                                                      0.055984   4.182857 r
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_C141/DIFF[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   4.182857 r
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/B[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.182857 r
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U2/Y (INVX2)
+                                                      0.022381   4.205238 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)
+                                                      0.058306   4.263545 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)
+                                                      0.062871   4.326416 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)
+                                                      0.062871   4.389287 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)
+                                                      0.062871   4.452157 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)
+                                                      0.062871   4.515028 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)
+                                                      0.062871   4.577899 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)
+                                                      0.062871   4.640770 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)
+                                                      0.062871   4.703641 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U11/Y (OR2X2)
+                                                      0.058409   4.762051 f
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/U24/Y (XNOR2X1)
+                                                      0.050417   4.812468 r
+  engine/channels[1].slot/tracking/frontend/code_source/sub_109_2_C141/DIFF[42] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.812468 r
+  engine/channels[1].slot/tracking/frontend/code_source/U597/Y (AOI22XL)
+                                                      0.052640   4.865108 f
+  engine/channels[1].slot/tracking/frontend/code_source/U596/Y (OAI2BB1X1)
+                                                      0.028826   4.893934 r
+  engine/channels[1].slot/tracking/frontend/code_source/target_late_index_reg[10]/D (DFFRQX2)
+                                                      0.000000   4.893934 r
+  data arrival time                                              4.893934
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  engine/channels[1].slot/tracking/frontend/code_source/target_late_index_reg[10]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.893934
+  --------------------------------------------------------------------------
+  slack (MET)                                                    4.838017
+
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: engine/channels[2].slot/tracking/frontend/code_source/target_late_index_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  cfg_channel[1] (in)                                 0.019969   1.019969 f
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.019969 f
+  engine/U8467/Y (INVX2)                              0.039689   1.059659 r
+  engine/U8460/Y (XNOR2XL)                            0.070230   1.129889 r
+  engine/U8457/Y (OR4X2)                              0.094789   1.224678 r
+  engine/U3901/Y (NAND3X4)                            0.043441   1.268118 f
+  engine/U5691/Y (NOR4BX2)                            0.091490   1.359608 r
+  engine/U5689/Y (NAND4BX2)                           0.050370   1.409978 f
+  engine/U4787/Y (CLKINVX2)                           0.037052   1.447029 r
+  engine/U5235/Y (BUFX2)                              0.041701   1.488731 r
+  engine/U5064/Y (BUFX2)                              0.118844   1.607575 r
+  engine/U4571/Y (MXI2XL)                             0.085653   1.693228 f
+  engine/U5739/Y (CLKINVX2)                           0.049731   1.742960 r
+  engine/channels[2].slot/tracking/init_code_phase_q[38] (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.742960 r
+  engine/channels[2].slot/tracking/frontend/init_code_phase_q[38] (ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.742960 r
+  engine/channels[2].slot/tracking/frontend/code_source/init_code_phase_q[38] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.742960 r
+  engine/channels[2].slot/tracking/frontend/code_source/U361/Y (NAND3XL)
+                                                      0.050556   1.793516 f
+  engine/channels[2].slot/tracking/frontend/code_source/U363/Y (NOR4X1)
+                                                      0.090917   1.884433 r
+  engine/channels[2].slot/tracking/frontend/code_source/U53/Y (BUFX2)
+                                                      0.045250   1.929682 r
+  engine/channels[2].slot/tracking/frontend/code_source/U44/Y (BUFX2)
+                                                      0.030816   1.960498 r
+  engine/channels[2].slot/tracking/frontend/code_source/U43/Y (BUFX2)
+                                                      0.123163   2.083661 r
+  engine/channels[2].slot/tracking/frontend/code_source/U765/Y (MXI2X1)
+                                                      0.092719   2.176380 f
+  engine/channels[2].slot/tracking/frontend/code_source/U764/Y (CLKINVX1)
+                                                      0.046254   2.222634 r
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/B[0] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   2.222634 r
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U46/Y (INVX2)
+                                                      0.014190   2.236825 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U78/Y (AND2X2)
+                                                      0.056612   2.293437 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U79/Y (AND2X2)
+                                                      0.058845   2.352282 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U80/Y (AND2X2)
+                                                      0.058850   2.411132 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U81/Y (AND2X2)
+                                                      0.058850   2.469982 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U82/Y (AND2X2)
+                                                      0.058850   2.528832 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U83/Y (AND2X2)
+                                                      0.058850   2.587682 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U84/Y (AND2X2)
+                                                      0.058850   2.646532 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U85/Y (AND2X2)
+                                                      0.057258   2.703790 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U86/Y (AND2X2)
+                                                      0.056837   2.760627 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U87/Y (AND2X2)
+                                                      0.056836   2.817463 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U88/Y (AND2X2)
+                                                      0.056836   2.874300 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U89/Y (AND2X2)
+                                                      0.058429   2.932728 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U90/Y (AND2X2)
+                                                      0.058849   2.991577 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U60/Y (AND2X2)
+                                                      0.058850   3.050427 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U61/Y (AND2X2)
+                                                      0.057258   3.107685 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U62/Y (AND2X2)
+                                                      0.058430   3.166115 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U63/Y (AND2X2)
+                                                      0.058849   3.224964 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U64/Y (AND2X2)
+                                                      0.057258   3.282222 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U65/Y (AND2X2)
+                                                      0.058430   3.340652 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U66/Y (AND2X2)
+                                                      0.058849   3.399501 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U67/Y (AND2X2)
+                                                      0.058850   3.458351 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U68/Y (AND2X2)
+                                                      0.057258   3.515609 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U69/Y (AND2X2)
+                                                      0.058430   3.574038 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U70/Y (AND2X2)
+                                                      0.058849   3.632887 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U71/Y (AND2X2)
+                                                      0.058850   3.691737 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U72/Y (AND2X2)
+                                                      0.057258   3.748995 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U91/Y (AND2X2)
+                                                      0.057247   3.806242 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U6/Y (OR2X2)
+                                                      0.063915   3.870157 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U10/Y (AND2X2)
+                                                      0.057986   3.928143 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U7/Y (OR2X2)
+                                                      0.062213   3.990355 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U9/Y (AND2X2)
+                                                      0.058714   4.049069 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U59/Y (AND2X2)
+                                                      0.058850   4.107919 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U4/Y (INVX2)
+                                                      0.017596   4.125515 r
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)
+                                                      0.055984   4.181499 r
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_C141/DIFF[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   4.181499 r
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/B[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.181499 r
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U2/Y (INVX2)
+                                                      0.022381   4.203881 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)
+                                                      0.058306   4.262187 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)
+                                                      0.062871   4.325058 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)
+                                                      0.062871   4.387929 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)
+                                                      0.062871   4.450800 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)
+                                                      0.062871   4.513671 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)
+                                                      0.062871   4.576542 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)
+                                                      0.062871   4.639413 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)
+                                                      0.062871   4.702284 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U11/Y (OR2X2)
+                                                      0.058409   4.760693 f
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/U24/Y (XNOR2X1)
+                                                      0.050417   4.811110 r
+  engine/channels[2].slot/tracking/frontend/code_source/sub_109_2_C141/DIFF[42] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.811110 r
+  engine/channels[2].slot/tracking/frontend/code_source/U597/Y (AOI22XL)
+                                                      0.052640   4.863750 f
+  engine/channels[2].slot/tracking/frontend/code_source/U596/Y (OAI2BB1X1)
+                                                      0.028826   4.892577 r
+  engine/channels[2].slot/tracking/frontend/code_source/target_late_index_reg[10]/D (DFFRQX2)
+                                                      0.000000   4.892577 r
+  data arrival time                                              4.892577
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  engine/channels[2].slot/tracking/frontend/code_source/target_late_index_reg[10]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.892577
+  --------------------------------------------------------------------------
+  slack (MET)                                                    4.839375
+
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: engine/channels[4].slot/tracking/frontend/code_source/target_late_index_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  cfg_channel[1] (in)                                 0.019969   1.019969 f
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.019969 f
+  engine/U8467/Y (INVX2)                              0.039689   1.059659 r
+  engine/U8460/Y (XNOR2XL)                            0.070230   1.129889 r
+  engine/U8457/Y (OR4X2)                              0.094789   1.224678 r
+  engine/U3901/Y (NAND3X4)                            0.043441   1.268118 f
+  engine/U5688/Y (NOR4BX2)                            0.091490   1.359608 r
+  engine/U5686/Y (NAND4BX2)                           0.050367   1.409975 f
+  engine/U4786/Y (CLKINVX2)                           0.037052   1.447026 r
+  engine/U5236/Y (BUFX2)                              0.041701   1.488728 r
+  engine/U5065/Y (BUFX2)                              0.118844   1.607572 r
+  engine/U4572/Y (MXI2XL)                             0.085653   1.693225 f
+  engine/U5740/Y (CLKINVX2)                           0.049731   1.742957 r
+  engine/channels[4].slot/tracking/init_code_phase_q[38] (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.742957 r
+  engine/channels[4].slot/tracking/frontend/init_code_phase_q[38] (ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.742957 r
+  engine/channels[4].slot/tracking/frontend/code_source/init_code_phase_q[38] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.742957 r
+  engine/channels[4].slot/tracking/frontend/code_source/U361/Y (NAND3XL)
+                                                      0.050556   1.793513 f
+  engine/channels[4].slot/tracking/frontend/code_source/U363/Y (NOR4X1)
+                                                      0.090917   1.884430 r
+  engine/channels[4].slot/tracking/frontend/code_source/U53/Y (BUFX2)
+                                                      0.045250   1.929679 r
+  engine/channels[4].slot/tracking/frontend/code_source/U44/Y (BUFX2)
+                                                      0.030816   1.960495 r
+  engine/channels[4].slot/tracking/frontend/code_source/U43/Y (BUFX2)
+                                                      0.123163   2.083658 r
+  engine/channels[4].slot/tracking/frontend/code_source/U765/Y (MXI2X1)
+                                                      0.092719   2.176377 f
+  engine/channels[4].slot/tracking/frontend/code_source/U764/Y (CLKINVX1)
+                                                      0.046254   2.222631 r
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/B[0] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   2.222631 r
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U46/Y (INVX2)
+                                                      0.014190   2.236821 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U78/Y (AND2X2)
+                                                      0.056612   2.293433 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U79/Y (AND2X2)
+                                                      0.058845   2.352279 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U80/Y (AND2X2)
+                                                      0.058850   2.411129 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U81/Y (AND2X2)
+                                                      0.058850   2.469979 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U82/Y (AND2X2)
+                                                      0.058850   2.528829 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U83/Y (AND2X2)
+                                                      0.058850   2.587679 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U84/Y (AND2X2)
+                                                      0.058850   2.646529 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U85/Y (AND2X2)
+                                                      0.057258   2.703787 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U86/Y (AND2X2)
+                                                      0.056837   2.760624 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U87/Y (AND2X2)
+                                                      0.056836   2.817460 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U88/Y (AND2X2)
+                                                      0.056836   2.874296 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U89/Y (AND2X2)
+                                                      0.058429   2.932725 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U90/Y (AND2X2)
+                                                      0.058849   2.991574 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U60/Y (AND2X2)
+                                                      0.058850   3.050424 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U61/Y (AND2X2)
+                                                      0.057258   3.107682 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U62/Y (AND2X2)
+                                                      0.058430   3.166112 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U63/Y (AND2X2)
+                                                      0.058849   3.224961 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U64/Y (AND2X2)
+                                                      0.057258   3.282219 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U65/Y (AND2X2)
+                                                      0.058430   3.340648 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U66/Y (AND2X2)
+                                                      0.058849   3.399498 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U67/Y (AND2X2)
+                                                      0.058850   3.458348 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U68/Y (AND2X2)
+                                                      0.057258   3.515605 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U69/Y (AND2X2)
+                                                      0.058430   3.574035 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U70/Y (AND2X2)
+                                                      0.058849   3.632884 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U71/Y (AND2X2)
+                                                      0.058850   3.691734 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U72/Y (AND2X2)
+                                                      0.057258   3.748992 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U91/Y (AND2X2)
+                                                      0.057247   3.806239 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U6/Y (OR2X2)
+                                                      0.063915   3.870154 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U10/Y (AND2X2)
+                                                      0.057986   3.928139 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U7/Y (OR2X2)
+                                                      0.062213   3.990352 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U9/Y (AND2X2)
+                                                      0.058714   4.049067 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U59/Y (AND2X2)
+                                                      0.058850   4.107916 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U4/Y (INVX2)
+                                                      0.017596   4.125513 r
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)
+                                                      0.055984   4.181497 r
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_C141/DIFF[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   4.181497 r
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/B[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.181497 r
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U2/Y (INVX2)
+                                                      0.022381   4.203878 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)
+                                                      0.058306   4.262184 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)
+                                                      0.062871   4.325055 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)
+                                                      0.062871   4.387926 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)
+                                                      0.062871   4.450797 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)
+                                                      0.062871   4.513668 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)
+                                                      0.062871   4.576539 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)
+                                                      0.062871   4.639410 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)
+                                                      0.062871   4.702281 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U11/Y (OR2X2)
+                                                      0.058409   4.760690 f
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/U24/Y (XNOR2X1)
+                                                      0.050417   4.811107 r
+  engine/channels[4].slot/tracking/frontend/code_source/sub_109_2_C141/DIFF[42] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.811107 r
+  engine/channels[4].slot/tracking/frontend/code_source/U597/Y (AOI22XL)
+                                                      0.052640   4.863748 f
+  engine/channels[4].slot/tracking/frontend/code_source/U596/Y (OAI2BB1X1)
+                                                      0.028826   4.892574 r
+  engine/channels[4].slot/tracking/frontend/code_source/target_late_index_reg[10]/D (DFFRQX2)
+                                                      0.000000   4.892574 r
+  data arrival time                                              4.892574
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  engine/channels[4].slot/tracking/frontend/code_source/target_late_index_reg[10]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.892574
+  --------------------------------------------------------------------------
+  slack (MET)                                                    4.839378
+
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: engine/channels[5].slot/tracking/frontend/code_source/target_late_index_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  cfg_channel[1] (in)                                 0.019969   1.019969 f
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.019969 f
+  engine/U8467/Y (INVX2)                              0.039689   1.059659 r
+  engine/U8460/Y (XNOR2XL)                            0.070230   1.129889 r
+  engine/U8457/Y (OR4X2)                              0.094789   1.224678 r
+  engine/U3901/Y (NAND3X4)                            0.043441   1.268118 f
+  engine/U4789/Y (OR4XL)                              0.131357   1.399475 f
+  engine/U4788/Y (CLKINVX2)                           0.037545   1.437020 r
+  engine/U5247/Y (BUFX2)                              0.041798   1.478817 r
+  engine/U5069/Y (BUFX2)                              0.118845   1.597663 r
+  engine/U5748/Y (MXI2XL)                             0.087940   1.685603 f
+  engine/U5747/Y (INVX2)                              0.052434   1.738037 r
+  engine/channels[5].slot/tracking/init_code_phase_q[38] (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.738037 r
+  engine/channels[5].slot/tracking/frontend/init_code_phase_q[38] (ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.738037 r
+  engine/channels[5].slot/tracking/frontend/code_source/init_code_phase_q[38] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.738037 r
+  engine/channels[5].slot/tracking/frontend/code_source/U361/Y (NAND3XL)
+                                                      0.050792   1.788829 f
+  engine/channels[5].slot/tracking/frontend/code_source/U363/Y (NOR4X1)
+                                                      0.090917   1.879746 r
+  engine/channels[5].slot/tracking/frontend/code_source/U53/Y (BUFX2)
+                                                      0.045250   1.924996 r
+  engine/channels[5].slot/tracking/frontend/code_source/U44/Y (BUFX2)
+                                                      0.030816   1.955812 r
+  engine/channels[5].slot/tracking/frontend/code_source/U43/Y (BUFX2)
+                                                      0.123163   2.078975 r
+  engine/channels[5].slot/tracking/frontend/code_source/U765/Y (MXI2X1)
+                                                      0.092719   2.171694 f
+  engine/channels[5].slot/tracking/frontend/code_source/U764/Y (CLKINVX1)
+                                                      0.046254   2.217948 r
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/B[0] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   2.217948 r
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U46/Y (INVX2)
+                                                      0.014190   2.232138 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U78/Y (AND2X2)
+                                                      0.056612   2.288750 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U79/Y (AND2X2)
+                                                      0.058845   2.347596 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U80/Y (AND2X2)
+                                                      0.058850   2.406446 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U81/Y (AND2X2)
+                                                      0.058850   2.465296 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U82/Y (AND2X2)
+                                                      0.058850   2.524146 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U83/Y (AND2X2)
+                                                      0.058850   2.582996 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U84/Y (AND2X2)
+                                                      0.058850   2.641846 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U85/Y (AND2X2)
+                                                      0.057258   2.699104 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U86/Y (AND2X2)
+                                                      0.056837   2.755941 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U87/Y (AND2X2)
+                                                      0.056836   2.812777 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U88/Y (AND2X2)
+                                                      0.056836   2.869613 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U89/Y (AND2X2)
+                                                      0.058429   2.928042 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U90/Y (AND2X2)
+                                                      0.058849   2.986891 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U60/Y (AND2X2)
+                                                      0.058850   3.045741 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U61/Y (AND2X2)
+                                                      0.057258   3.102999 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U62/Y (AND2X2)
+                                                      0.058430   3.161429 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U63/Y (AND2X2)
+                                                      0.058849   3.220278 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U64/Y (AND2X2)
+                                                      0.057258   3.277536 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U65/Y (AND2X2)
+                                                      0.058430   3.335965 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U66/Y (AND2X2)
+                                                      0.058849   3.394814 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U67/Y (AND2X2)
+                                                      0.058850   3.453665 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U68/Y (AND2X2)
+                                                      0.057258   3.510922 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U69/Y (AND2X2)
+                                                      0.058430   3.569352 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U70/Y (AND2X2)
+                                                      0.058849   3.628201 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U71/Y (AND2X2)
+                                                      0.058850   3.687051 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U72/Y (AND2X2)
+                                                      0.057258   3.744309 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U91/Y (AND2X2)
+                                                      0.057247   3.801556 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U6/Y (OR2X2)
+                                                      0.063915   3.865471 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U10/Y (AND2X2)
+                                                      0.057986   3.923456 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U7/Y (OR2X2)
+                                                      0.062213   3.985669 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U9/Y (AND2X2)
+                                                      0.058714   4.044384 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U59/Y (AND2X2)
+                                                      0.058850   4.103233 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U4/Y (INVX2)
+                                                      0.017596   4.120830 r
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)
+                                                      0.055984   4.176814 r
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_C141/DIFF[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   4.176814 r
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/B[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.176814 r
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U2/Y (INVX2)
+                                                      0.022381   4.199195 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)
+                                                      0.058306   4.257501 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)
+                                                      0.062871   4.320372 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)
+                                                      0.062871   4.383243 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)
+                                                      0.062871   4.446114 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)
+                                                      0.062871   4.508985 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)
+                                                      0.062871   4.571856 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)
+                                                      0.062871   4.634727 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)
+                                                      0.062871   4.697598 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U11/Y (OR2X2)
+                                                      0.058409   4.756007 f
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/U24/Y (XNOR2X1)
+                                                      0.050417   4.806424 r
+  engine/channels[5].slot/tracking/frontend/code_source/sub_109_2_C141/DIFF[42] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.806424 r
+  engine/channels[5].slot/tracking/frontend/code_source/U597/Y (AOI22XL)
+                                                      0.052640   4.859065 f
+  engine/channels[5].slot/tracking/frontend/code_source/U596/Y (OAI2BB1X1)
+                                                      0.028826   4.887891 r
+  engine/channels[5].slot/tracking/frontend/code_source/target_late_index_reg[10]/D (DFFRQX2)
+                                                      0.000000   4.887891 r
+  data arrival time                                              4.887891
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  engine/channels[5].slot/tracking/frontend/code_source/target_late_index_reg[10]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.887891
+  --------------------------------------------------------------------------
+  slack (MET)                                                    4.844061
+
+
+  Startpoint: cfg_channel[1]
+              (input port clocked by clk)
+  Endpoint: engine/channels[3].slot/tracking/frontend/code_source/target_late_index_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  cfg_channel[1] (in)                                 0.019969   1.019969 f
+  engine/cfg_channel[1] (bds_bb_6ch_engine)           0.000000   1.019969 f
+  engine/U8467/Y (INVX2)                              0.039689   1.059659 r
+  engine/U8460/Y (XNOR2XL)                            0.070230   1.129889 r
+  engine/U8457/Y (OR4X2)                              0.094789   1.224678 r
+  engine/U3901/Y (NAND3X4)                            0.043441   1.268118 f
+  engine/U4521/Y (OR4X1)                              0.123034   1.391152 f
+  engine/U4790/Y (CLKINVX2)                           0.034894   1.426046 r
+  engine/U5248/Y (BUFX2)                              0.041347   1.467393 r
+  engine/U5068/Y (BUFX2)                              0.118841   1.586234 r
+  engine/U5746/Y (MXI2XL)                             0.087940   1.674174 f
+  engine/U5745/Y (INVX2)                              0.052434   1.726608 r
+  engine/channels[3].slot/tracking/init_code_phase_q[38] (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.726608 r
+  engine/channels[3].slot/tracking/frontend/init_code_phase_q[38] (ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.726608 r
+  engine/channels[3].slot/tracking/frontend/code_source/init_code_phase_q[38] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.726608 r
+  engine/channels[3].slot/tracking/frontend/code_source/U361/Y (NAND3XL)
+                                                      0.050792   1.777400 f
+  engine/channels[3].slot/tracking/frontend/code_source/U363/Y (NOR4X1)
+                                                      0.090917   1.868317 r
+  engine/channels[3].slot/tracking/frontend/code_source/U53/Y (BUFX2)
+                                                      0.045250   1.913567 r
+  engine/channels[3].slot/tracking/frontend/code_source/U44/Y (BUFX2)
+                                                      0.030816   1.944383 r
+  engine/channels[3].slot/tracking/frontend/code_source/U43/Y (BUFX2)
+                                                      0.123163   2.067546 r
+  engine/channels[3].slot/tracking/frontend/code_source/U765/Y (MXI2X1)
+                                                      0.092719   2.160265 f
+  engine/channels[3].slot/tracking/frontend/code_source/U764/Y (CLKINVX1)
+                                                      0.046254   2.206519 r
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/B[0] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   2.206519 r
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U46/Y (INVX2)
+                                                      0.014190   2.220709 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U78/Y (AND2X2)
+                                                      0.056612   2.277321 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U79/Y (AND2X2)
+                                                      0.058845   2.336167 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U80/Y (AND2X2)
+                                                      0.058850   2.395017 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U81/Y (AND2X2)
+                                                      0.058850   2.453867 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U82/Y (AND2X2)
+                                                      0.058850   2.512717 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U83/Y (AND2X2)
+                                                      0.058850   2.571567 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U84/Y (AND2X2)
+                                                      0.058850   2.630417 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U85/Y (AND2X2)
+                                                      0.057258   2.687675 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U86/Y (AND2X2)
+                                                      0.056837   2.744512 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U87/Y (AND2X2)
+                                                      0.056836   2.801348 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U88/Y (AND2X2)
+                                                      0.056836   2.858184 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U89/Y (AND2X2)
+                                                      0.058429   2.916613 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U90/Y (AND2X2)
+                                                      0.058849   2.975462 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U60/Y (AND2X2)
+                                                      0.058850   3.034312 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U61/Y (AND2X2)
+                                                      0.057258   3.091570 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U62/Y (AND2X2)
+                                                      0.058430   3.150000 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U63/Y (AND2X2)
+                                                      0.058849   3.208849 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U64/Y (AND2X2)
+                                                      0.057258   3.266107 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U65/Y (AND2X2)
+                                                      0.058430   3.324536 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U66/Y (AND2X2)
+                                                      0.058849   3.383385 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U67/Y (AND2X2)
+                                                      0.058850   3.442235 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U68/Y (AND2X2)
+                                                      0.057258   3.499493 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U69/Y (AND2X2)
+                                                      0.058430   3.557923 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U70/Y (AND2X2)
+                                                      0.058849   3.616772 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U71/Y (AND2X2)
+                                                      0.058850   3.675622 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U72/Y (AND2X2)
+                                                      0.057258   3.732880 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U91/Y (AND2X2)
+                                                      0.057247   3.790127 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U6/Y (OR2X2)
+                                                      0.063915   3.854042 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U10/Y (AND2X2)
+                                                      0.057986   3.912027 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U7/Y (OR2X2)
+                                                      0.062213   3.974240 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U9/Y (AND2X2)
+                                                      0.058714   4.032954 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U59/Y (AND2X2)
+                                                      0.058850   4.091804 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U4/Y (INVX2)
+                                                      0.017596   4.109400 r
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)
+                                                      0.055984   4.165384 r
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_C141/DIFF[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   4.165384 r
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/B[33] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.165384 r
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U2/Y (INVX2)
+                                                      0.022381   4.187766 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)
+                                                      0.058306   4.246072 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)
+                                                      0.062871   4.308943 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)
+                                                      0.062871   4.371814 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)
+                                                      0.062871   4.434685 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)
+                                                      0.062871   4.497556 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)
+                                                      0.062871   4.560427 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)
+                                                      0.062871   4.623298 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)
+                                                      0.062871   4.686169 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U11/Y (OR2X2)
+                                                      0.058409   4.744578 f
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/U24/Y (XNOR2X1)
+                                                      0.050417   4.794995 r
+  engine/channels[3].slot/tracking/frontend/code_source/sub_109_2_C141/DIFF[42] (ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.794995 r
+  engine/channels[3].slot/tracking/frontend/code_source/U597/Y (AOI22XL)
+                                                      0.052640   4.847635 f
+  engine/channels[3].slot/tracking/frontend/code_source/U596/Y (OAI2BB1X1)
+                                                      0.028826   4.876462 r
+  engine/channels[3].slot/tracking/frontend/code_source/target_late_index_reg[10]/D (DFFRQX2)
+                                                      0.000000   4.876462 r
+  data arrival time                                              4.876462
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  engine/channels[3].slot/tracking/frontend/code_source/target_late_index_reg[10]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.876462
+  --------------------------------------------------------------------------
+  slack (MET)                                                    4.855490
+
+
+1

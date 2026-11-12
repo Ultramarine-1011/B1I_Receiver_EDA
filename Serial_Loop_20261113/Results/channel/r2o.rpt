@@ -1,0 +1,206 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:32:05 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: init_valid (input port clocked by clk)
+  Endpoint: sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  init_valid (in)                      0.023788   1.023788 f
+  U3931/Y (BUFX2)                      0.056132   1.079919 f
+  U3930/Y (INVX2)                      0.030487   1.110406 r
+  U2988/Y (BUFX2)                      0.045797   1.156204 r
+  U2917/Y (INVX4)                      0.156645   1.312848 f
+  U3933/Y (NOR2BX1)                    0.096055   1.408904 r
+  U3989/Y (NAND3BX2)                   0.036433   1.445337 f
+  U2616/Y (NOR4XL)                     0.244156   1.689493 r
+  sample_ready (out)                   0.000000   1.689493 r
+  data arrival time                               1.689493
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  output external delay                -1.000000  8.800000
+  data required time                              8.800000
+  -----------------------------------------------------------
+  data required time                              8.800000
+  data arrival time                               -1.689493
+  -----------------------------------------------------------
+  slack (MET)                                     7.110507
+
+
+  Startpoint: frontend/correlator/ip_reg[27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ip[27] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ip_reg[27]/CK (DFFRQX2)         0.000000 # 0.000000 r
+  frontend/correlator/ip_reg[27]/Q (DFFRQX2)          0.421274   0.421274 r
+  frontend/correlator/ip[27] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.421274 r
+  frontend/ip[27] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.421274 r
+  ip[27] (out)                                        0.000000   0.421274 r
+  data arrival time                                              0.421274
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -0.421274
+  --------------------------------------------------------------------------
+  slack (MET)                                                    8.378726
+
+
+  Startpoint: frontend/correlator/qp_reg[27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: qp[27] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/qp_reg[27]/CK (DFFRQX2)         0.000000 # 0.000000 r
+  frontend/correlator/qp_reg[27]/Q (DFFRQX2)          0.413922   0.413922 r
+  frontend/correlator/qp[27] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.413922 r
+  frontend/qp[27] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.413922 r
+  qp[27] (out)                                        0.000000   0.413922 r
+  data arrival time                                              0.413922
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -0.413922
+  --------------------------------------------------------------------------
+  slack (MET)                                                    8.386078
+
+
+  Startpoint: frontend/correlator/ip_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ip[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ip_reg[1]/CK (DFFRQX2)          0.000000 # 0.000000 r
+  frontend/correlator/ip_reg[1]/Q (DFFRQX2)           0.368907   0.368907 r
+  frontend/correlator/ip[1] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.368907 r
+  frontend/ip[1] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.368907 r
+  ip[1] (out)                                         0.000000   0.368907 r
+  data arrival time                                              0.368907
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -0.368907
+  --------------------------------------------------------------------------
+  slack (MET)                                                    8.431093
+
+
+  Startpoint: frontend/correlator/qp_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: qp[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/qp_reg[1]/CK (DFFRQX2)          0.000000 # 0.000000 r
+  frontend/correlator/qp_reg[1]/Q (DFFRQX2)           0.368907   0.368907 r
+  frontend/correlator/qp[1] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.368907 r
+  frontend/qp[1] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.368907 r
+  qp[1] (out)                                         0.000000   0.368907 r
+  data arrival time                                              0.368907
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -0.368907
+  --------------------------------------------------------------------------
+  slack (MET)                                                    8.431093
+
+
+  Startpoint: frontend/correlator/ip_reg[15]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ip[15] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ip_reg[15]/CK (DFFRQX2)         0.000000 # 0.000000 r
+  frontend/correlator/ip_reg[15]/Q (DFFRQX2)          0.367374   0.367374 r
+  frontend/correlator/ip[15] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.367374 r
+  frontend/ip[15] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.367374 r
+  ip[15] (out)                                        0.000000   0.367374 r
+  data arrival time                                              0.367374
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -0.367374
+  --------------------------------------------------------------------------
+  slack (MET)                                                    8.432626
+
+
+1

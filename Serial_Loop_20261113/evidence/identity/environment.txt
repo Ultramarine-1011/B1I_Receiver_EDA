@@ -1,0 +1,18 @@
+IC_EDA
+Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+8
+              total        used        free      shared  buff/cache   available
+Mem:           9818        1002        7034          27        1782        8536
+Swap:         10235           0       10235
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-home  309G   47G  263G  16% /home
+
+dc_shell version    -  O-2018.06-SP1
+dc_shell build date -  Jul 19, 2018
+Site Identification Number: 000
+Local Administrator: ICer
+Contact: ICer@(none)
+DC_VERSION_COMMAND_EXIT=1
+TSMC.90
+TSMC_013
+TSMC28_KNOWN_ROOT_ABSENT

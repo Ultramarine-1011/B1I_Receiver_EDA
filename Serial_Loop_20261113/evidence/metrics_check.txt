@@ -1,0 +1,137 @@
+{
+  "runs": {
+    "channel": {
+      "area_um2": 252571.638011,
+      "setup_wns_ns": 2.7e-05,
+      "hold_wns_ns": -0.162817,
+      "dc_wall_s": 184.03,
+      "supervised_wall_s": 184.17000000000007,
+      "peak_rss_kib": 532528,
+      "return_code": 0,
+      "stop_reason": null,
+      "errors": [],
+      "files": {
+        "mapped.v": "2b404b783374ec44dfd719d2f5b0d127bc93364da0f573417fa5825f9851d9dc",
+        "mapped.ddc": "95e32c315d6997d3da1dae21dc7cbe418ee36b8f5ca2c9cb2c3b1da74042beed",
+        "mapped.sdc": "de0807550938e3477ecd77e67e968d900e0a5f6d929064b519f8fd84df39e9e5"
+      },
+      "leaf_cells": 32200,
+      "unmapped": 0,
+      "blackboxes": 0,
+      "logic_levels": 139.0,
+      "sequential_cells": 2975,
+      "setup_violations": 0.0,
+      "hold_violations": 2031.0
+    },
+    "tracking_bank6": {
+      "area_um2": 1515429.828066,
+      "setup_wns_ns": 2.7e-05,
+      "hold_wns_ns": -0.162817,
+      "dc_wall_s": 26.82,
+      "supervised_wall_s": 26.920000000000073,
+      "peak_rss_kib": 895104,
+      "return_code": 0,
+      "stop_reason": null,
+      "errors": [],
+      "files": {
+        "mapped.v": "6d4bc1ed449b6a7d29300a3afe293aaedf6fc7e4355d08987bfcad265f30f592",
+        "mapped.ddc": "dc37e432ddc9b6b516a3c2646fe944045bb6fa32983fd0c7240403e8093d59d8",
+        "mapped.sdc": "a137b227a61c5dd65832a886be0154207739bba4baa962e6eb2c3c541ddfeede"
+      },
+      "leaf_cells": 193200,
+      "unmapped": 0,
+      "blackboxes": 0,
+      "logic_levels": 139.0,
+      "sequential_cells": 17850,
+      "setup_violations": 0.0,
+      "hold_violations": 12186.0
+    },
+    "core6_isolated": {
+      "area_um2": 2653980.367333,
+      "setup_wns_ns": -6.916986,
+      "hold_wns_ns": -0.127656,
+      "dc_wall_s": 266.45,
+      "supervised_wall_s": 266.53999999999974,
+      "peak_rss_kib": 2038304,
+      "return_code": 0,
+      "stop_reason": null,
+      "errors": [],
+      "files": {
+        "mapped.v": "3eff6e56d120c71703918d9172fd8b462ebf34313a20de8dfd599ac6c77cd416",
+        "mapped.ddc": "2b5b6f47d3a214c7853b7e439bd014225cb8c70037400101979f37092502480b",
+        "mapped.sdc": "3cdca3516b90b0dbcc5a6414a14e101c00dc84528d8d3d43b2340fd41942cf44"
+      },
+      "leaf_cells": 409659,
+      "unmapped": 0,
+      "blackboxes": 1,
+      "logic_levels": 300.0,
+      "sequential_cells": 34433,
+      "setup_violations": 18017.0,
+      "hold_violations": 8641.0
+    },
+    "teacher_capture": {
+      "area_um2": 10700.424068,
+      "setup_wns_ns": 0.839757,
+      "hold_wns_ns": -0.04933,
+      "dc_wall_s": 8.16,
+      "supervised_wall_s": 8.639999999999873,
+      "peak_rss_kib": 279096,
+      "return_code": 0,
+      "stop_reason": null,
+      "errors": [],
+      "files": {
+        "mapped.v": "6b8dd8d51bf3c65ad893dc4ca5df9f50372cb2ccfd27f27d94a8d6c781c4a964",
+        "mapped.ddc": "aef80d6575b4cc2bee575c2127cc078adc504b27f4661ade795fabef3c58d2a7",
+        "mapped.sdc": "13da905c339b03ba496a46fd94e208d0674a54d6ca0c1abf7996d83ad67acf98"
+      }
+    }
+  },
+  "comparisons": {
+    "single_channel_area_reduction_percent": 48.0592960735044,
+    "single_channel_logic_depth_reduction_percent": 66.90476190476191,
+    "single_channel_peak_rss_reduction_percent": 17.272834604080057,
+    "single_channel_setup_improvement_ns": 18.646881,
+    "bank_area_reduction_percent": 49.46450808946824,
+    "isolated_core_area_reduction_percent": 35.7918430548989,
+    "isolated_core_setup_improvement_ns": 4.031645000000001
+  },
+  "test_pass_lines": {
+    "if_fifo": [
+      "IF_FIFO_PASS randomized_cycles=10000 high_water=64 reset_nonempty=1"
+    ],
+    "mapped_aid": [
+      "MAPPED_AID_ITERATIVE_PASS vectors=1024 latency=17 signed33=1"
+    ],
+    "mapped_normalize": [
+      "MAPPED_NORMALIZE_ITERATIVE_PASS vectors=1024 latency=16 reset_cancel=1"
+    ],
+    "six_nominal": [
+      "SIX_IF_ITERATIVE_PASS paced=0 recovery=0 samples=49104000 cycles=50646784 fifo_high_water=64"
+    ],
+    "six_paced": [
+      "SIX_IF_ITERATIVE_PASS paced=1 recovery=0 samples=6547200 cycles=40000539 fifo_high_water=7"
+    ],
+    "six_recovery": [
+      "SIX_IF_ITERATIVE_PASS paced=0 recovery=1 samples=49104000 cycles=50637889 fifo_high_water=64"
+    ],
+    "tracking_equivalence": [
+      "TRACKING_ITERATIVE_EQUIVALENCE_PASS accepted=32736000 feedbacks=1998 stalls=84012 max_feedback_stall=40"
+    ],
+    "tracking_legacy": [
+      "TRACKING_CASE_PASS case=0",
+      "TRACKING_CASE_PASS case=1",
+      "TRACKING_MINIMAL_PASS cases=2 seconds_per_case=1 NH20_flips=1 FLL_TEST=0"
+    ],
+    "tracking_minimal": [
+      "TRACKING_CASE_PASS case=0",
+      "TRACKING_CASE_PASS case=1",
+      "TRACKING_MINIMAL_PASS cases=2 seconds_per_case=1 NH20_flips=1 FLL_TEST=1"
+    ],
+    "unit_aid": [
+      "AID_ITERATIVE_PASS vectors=20016 latency=17 signed33=1"
+    ],
+    "unit_normalize": [
+      "NORMALIZE_ITERATIVE_PASS vectors=20016 latency=16 reset_cancel=1"
+    ]
+  }
+}

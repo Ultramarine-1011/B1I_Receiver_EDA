@@ -1,0 +1,142 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : bdi_capture_channel_6sat
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:28:12 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: search_phase_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: search_phase_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  search_phase_reg[0]/CK (DFFRQX2)                    0.000000   0.000000 r
+  search_phase_reg[0]/Q (DFFRQX2)                     0.211389   0.211389 f
+  add_62/A[0] (bdi_capture_channel_6sat_DW01_add_3)   0.000000   0.211389 f
+  add_62/U1/Y (AND2X2)                                0.068801   0.280190 f
+  add_62/U1_1/CO (ADDFX1)                             0.099062   0.379252 f
+  add_62/U1_2/CO (ADDFX1)                             0.105508   0.484760 f
+  add_62/U1_3/CO (ADDFX1)                             0.105502   0.590262 f
+  add_62/U1_4/CO (ADDFX1)                             0.105492   0.695754 f
+  add_62/U1_5/CO (ADDFX1)                             0.105492   0.801245 f
+  add_62/U1_6/CO (ADDFX1)                             0.105492   0.906737 f
+  add_62/U1_7/CO (ADDFX1)                             0.105492   1.012229 f
+  add_62/U1_8/CO (ADDFX1)                             0.105492   1.117720 f
+  add_62/U1_9/CO (ADDFX1)                             0.105492   1.223212 f
+  add_62/U1_10/S (ADDFX1)                             0.091852   1.315064 f
+  add_62/SUM[10] (bdi_capture_channel_6sat_DW01_add_3)
+                                                      0.000000   1.315064 f
+  U1414/Y (AND3X1)                                    0.079769   1.394833 f
+  U1415/Y (NAND3XL)                                   0.032676   1.427508 r
+  U638/Y (OAI21BX1)                                   0.034038   1.461547 f
+  U482/Y (BUFX2)                                      0.089297   1.550843 f
+  U1386/Y (AND2X1)                                    0.081605   1.632448 f
+  U643/CO (ADDFX1)                                    0.101204   1.733652 f
+  U600/CO (ADDFX1)                                    0.105585   1.839237 f
+  U580/CO (ADDFX1)                                    0.105585   1.944821 f
+  U579/S (ADDFX1)                                     0.135773   2.080594 f
+  U560/Y (INVX2)                                      0.047739   2.128333 r
+  U627/Y (OR2X2)                                      0.126163   2.254496 r
+  U599/Y (INVX2)                                      0.114093   2.368589 f
+  U1142/Y (AOI222XL)                                  0.142831   2.511420 r
+  U1149/Y (OAI22X1)                                   0.055398   2.566817 f
+  U1164/Y (NAND4BBX1)                                 0.100109   2.666927 f
+  U1204/Y (AOI222XL)                                  0.084228   2.751155 r
+  U1270/Y (AOI32XL)                                   0.079199   2.830353 f
+  U1374/Y (OAI2B2X1)                                  0.050885   2.881239 r
+  U596/Y (BUFX2)                                      0.119356   3.000595 r
+  U554/Y (INVX2)                                      0.070934   3.071529 f
+  U904/Y (AO22X2)                                     0.112524   3.184053 f
+  add_84/B[1] (bdi_capture_channel_6sat_DW01_add_2)   0.000000   3.184053 f
+  add_84/U1_1/CO (ADDFX1)                             0.154849   3.338902 f
+  add_84/U1_2/CO (ADDFX1)                             0.105444   3.444346 f
+  add_84/U1_3/CO (ADDFX1)                             0.105444   3.549789 f
+  add_84/U1_4/CO (ADDFX1)                             0.105444   3.655233 f
+  add_84/U1_5/CO (ADDFX1)                             0.105444   3.760677 f
+  add_84/U1_6/CO (ADDFX1)                             0.105444   3.866121 f
+  add_84/U1_7/CO (ADDFX1)                             0.105444   3.971564 f
+  add_84/U1_8/CO (ADDFX1)                             0.105561   4.077126 f
+  add_84/U1_9/CO (ADDFX1)                             0.105545   4.182671 f
+  add_84/U1_10/CO (ADDFX1)                            0.105561   4.288232 f
+  add_84/U1_11/CO (ADDFX1)                            0.105545   4.393777 f
+  add_84/U1_12/CO (ADDFX1)                            0.105561   4.499338 f
+  add_84/U1_13/CO (ADDFX1)                            0.105545   4.604883 f
+  add_84/U1_14/CO (ADDFX1)                            0.105561   4.710444 f
+  add_84/U1_15/CO (ADDFX1)                            0.105545   4.815989 f
+  add_84/U1_16/CO (ADDFX1)                            0.105561   4.921551 f
+  add_84/U1_17/CO (ADDFX1)                            0.105545   5.027096 f
+  add_84/U1_18/CO (ADDFX1)                            0.105561   5.132657 f
+  add_84/U1_19/CO (ADDFX1)                            0.105545   5.238202 f
+  add_84/U1_20/CO (ADDFX1)                            0.105561   5.343763 f
+  add_84/U1_21/CO (ADDFX1)                            0.105545   5.449308 f
+  add_84/U1_22/CO (ADDFX1)                            0.106496   5.555804 f
+  add_84/U1_23/Y (XOR3XL)                             0.096589   5.652393 r
+  add_84/SUM[23] (bdi_capture_channel_6sat_DW01_add_2)
+                                                      0.000000   5.652393 r
+  U883/Y (INVX2)                                      0.016358   5.668752 f
+  U484/Y (INVX2)                                      0.248683   5.917435 r
+  U625/Y (OAI2BB2X2)                                  0.035215   5.952650 f
+  add_88/A[0] (bdi_capture_channel_6sat_DW01_add_0)   0.000000   5.952650 f
+  add_88/U1/Y (AND2X2)                                0.071259   6.023910 f
+  add_88/U1_1/CO (ADDFX1)                             0.099076   6.122985 f
+  add_88/U1_2/CO (ADDFX1)                             0.105600   6.228585 f
+  add_88/U1_3/CO (ADDFX1)                             0.105600   6.334185 f
+  add_88/U1_4/CO (ADDFX1)                             0.105600   6.439785 f
+  add_88/U1_5/CO (ADDFX1)                             0.105600   6.545385 f
+  add_88/U1_6/CO (ADDFX1)                             0.105600   6.650985 f
+  add_88/U1_7/CO (ADDFX1)                             0.105600   6.756585 f
+  add_88/U1_8/CO (ADDFX1)                             0.105600   6.862185 f
+  add_88/U1_9/CO (ADDFX1)                             0.105600   6.967784 f
+  add_88/U1_10/CO (ADDFX1)                            0.105600   7.073384 f
+  add_88/U1_11/CO (ADDFX1)                            0.105600   7.178984 f
+  add_88/U1_12/CO (ADDFX1)                            0.105600   7.284584 f
+  add_88/U1_13/CO (ADDFX1)                            0.105600   7.390184 f
+  add_88/U1_14/CO (ADDFX1)                            0.105600   7.495784 f
+  add_88/U1_15/CO (ADDFX1)                            0.105600   7.601384 f
+  add_88/U1_16/CO (ADDFX1)                            0.105600   7.706984 f
+  add_88/U1_17/CO (ADDFX1)                            0.105600   7.812583 f
+  add_88/U1_18/CO (ADDFX1)                            0.105600   7.918183 f
+  add_88/U1_19/CO (ADDFX1)                            0.105600   8.023784 f
+  add_88/U1_20/CO (ADDFX1)                            0.105600   8.129384 f
+  add_88/U1_21/CO (ADDFX1)                            0.105600   8.234984 f
+  add_88/U1_22/CO (ADDFX1)                            0.105600   8.340585 f
+  add_88/U1_23/CO (ADDFX1)                            0.101496   8.442080 f
+  add_88/SUM[24] (bdi_capture_channel_6sat_DW01_add_0)
+                                                      0.000000   8.442080 f
+  U587/Y (NOR4X2)                                     0.086701   8.528782 r
+  U585/Y (NAND2X2)                                    0.035192   8.563974 f
+  U907/Y (NOR3X1)                                     0.061863   8.625837 r
+  U906/Y (BUFX2)                                      0.089996   8.715834 r
+  U891/Y (OAI31X1)                                    0.048131   8.763965 f
+  U890/Y (BUFX2)                                      0.081789   8.845754 f
+  U835/Y (OAI2B2X1)                                   0.039940   8.885694 r
+  search_phase_reg[0]/D (DFFRQX2)                     0.000000   8.885694 r
+  data arrival time                                              8.885694
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  search_phase_reg[0]/CK (DFFRQX2)                    0.000000   9.800000 r
+  library setup time                                  -0.074549  9.725451
+  data required time                                             9.725451
+  --------------------------------------------------------------------------
+  data required time                                             9.725451
+  data arrival time                                              -8.885694
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.839757
+
+
+1

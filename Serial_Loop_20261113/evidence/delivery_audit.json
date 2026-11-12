@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "interfaces": [
+    "tracking_channel_minimal",
+    "bds_bb_6ch_core"
+  ],
+  "rtl_semantics_match_synthesis_input": true,
+  "synthesis_source_sha256": "9adff9ea0a12a8ab4dd6ec0df43de972aa2e435460799bcc9d3282c1ee19fef5",
+  "delivered_tracking_sha256": "208421aab555da53d27dc7784ab587681657d68d2061a1b7f0792d7597b7fb0e",
+  "source_matches": {
+    "rtl/acquisition_pcps.sv": {
+      "tested_sha256": "ee5d3c8f94040924b3ace3230b8a5765430632c2a532415b8ddfe16cb0d5c0d6",
+      "delivered_sha256": "ee5d3c8f94040924b3ace3230b8a5765430632c2a532415b8ddfe16cb0d5c0d6"
+    },
+    "rtl/acquisition_refine.sv": {
+      "tested_sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25",
+      "delivered_sha256": "3226e10a8dceecfeb9339c9ac8744188ddc87bac057bf18f0fe8aa2552118b25"
+    },
+    "rtl/b1i_period_reduce.sv": {
+      "tested_sha256": "afe99e6164cae5691d9094407706c5b98661da99815eda3035850155ba13899e",
+      "delivered_sha256": "afe99e6164cae5691d9094407706c5b98661da99815eda3035850155ba13899e"
+    },
+    "rtl/b1i_prn_gen.sv": {
+      "tested_sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475",
+      "delivered_sha256": "0bbede9a3ec59a6c9d6165a3a12157f698cb7f32d8a63ba26d9b01e01de36475"
+    },
+    "rtl/bds_bb_6ch_core.sv": {
+      "tested_sha256": "40bdfca6786c6871ead3e057534847d826217b1315e4f20227f1c152d539e651",
+      "delivered_sha256": "40bdfca6786c6871ead3e057534847d826217b1315e4f20227f1c152d539e651"
+    },
+    "rtl/bds_bb_6ch_engine.sv": {
+      "tested_sha256": "9c1a064ca478c9785951d7dfc6f2ab450ef688e856474e8ce6eacff5e31790b4",
+      "delivered_sha256": "9c1a064ca478c9785951d7dfc6f2ab450ef688e856474e8ce6eacff5e31790b4"
+    },
+    "rtl/carrier_nco_mixer.sv": {
+      "tested_sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc",
+      "delivered_sha256": "ce6cb5a0af6965439559093676f32a6a96c99eeb14e2b09ca7eee8e1f8c452cc"
+    },
+    "rtl/code_nco.sv": {
+      "tested_sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1",
+      "delivered_sha256": "415251d62dea188086aa3c1655f634854464f69edc3419b48494f4a8a1f79ef1"
+    },
+    "rtl/d1_word_sync.sv": {
+      "tested_sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af",
+      "delivered_sha256": "1ec33691e6830a2cbb4b3ac2e47d5e6bd5665da1b738cfeddd7fb71a409e93af"
+    },
+    "rtl/epl_correlator.sv": {
+      "tested_sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786",
+      "delivered_sha256": "8ff439c4a40b5a5888b6787443a8ca9bb5be69781934efc017de27504db3a786"
+    },
+    "rtl/fft4096_serial.sv": {
+      "tested_sha256": "1e3cda5195cbc0bec9a27188ab4dba190928ec6cb588a44f76642f542a790fa7",
+      "delivered_sha256": "1e3cda5195cbc0bec9a27188ab4dba190928ec6cb588a44f76642f542a790fa7"
+    },
+    "rtl/mapped_core_wrapper.sv": {
+      "tested_sha256": "f06b57f2311257877ee93022997bae2eb57d3f107c3255a84b18fea8eda56c03",
+      "delivered_sha256": "f06b57f2311257877ee93022997bae2eb57d3f107c3255a84b18fea8eda56c03"
+    },
+    "rtl/navigation_d1.sv": {
+      "tested_sha256": "94c70c51733d062b64ecb893df3c3c552600e10253f88206d69aac1778b83b98",
+      "delivered_sha256": "94c70c51733d062b64ecb893df3c3c552600e10253f88206d69aac1778b83b98"
+    },
+    "rtl/nh20_sync.sv": {
+      "tested_sha256": "0e96f6da87701f1577075b0988c751529472ca7c769b89433471a2a1dd53756e",
+      "delivered_sha256": "0e96f6da87701f1577075b0988c751529472ca7c769b89433471a2a1dd53756e"
+    },
+    "rtl/receiver_channel.sv": {
+      "tested_sha256": "19bdb3ccec2087fc89db4949e54309f68d1afc2e515df04b2b4f601c86416462",
+      "delivered_sha256": "19bdb3ccec2087fc89db4949e54309f68d1afc2e515df04b2b4f601c86416462"
+    },
+    "rtl/receiver_contract_pkg.sv": {
+      "tested_sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303",
+      "delivered_sha256": "a178180332e9fec6e5e5e6ec38255c730ea68be4c2206166c1cf03f95dac2303"
+    },
+    "rtl/reference_tracking.sv": {
+      "tested_sha256": "5f9f5fa196214911ad3a54b0cff2dd05e27cded3cc1801aa828806ff9ae3129d",
+      "delivered_sha256": "5f9f5fa196214911ad3a54b0cff2dd05e27cded3cc1801aa828806ff9ae3129d"
+    },
+    "rtl/tracking_aid_iterative.sv": {
+      "tested_sha256": "c3d26cbe89e355761ae3369b8482a130fe9ae71f428f924d2f975b5d4676e010",
+      "delivered_sha256": "c3d26cbe89e355761ae3369b8482a130fe9ae71f428f924d2f975b5d4676e010"
+    },
+    "rtl/tracking_channel_minimal.sv": {
+      "tested_sha256": "9adff9ea0a12a8ab4dd6ec0df43de972aa2e435460799bcc9d3282c1ee19fef5",
+      "delivered_sha256": "208421aab555da53d27dc7784ab587681657d68d2061a1b7f0792d7597b7fb0e"
+    },
+    "rtl/tracking_frontend.sv": {
+      "tested_sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4",
+      "delivered_sha256": "5f1ebdcd6869fa63af6e14b223155f4f7677dd51348780d7c035850b15c18bd4"
+    },
+    "rtl/tracking_frontend_spaced.sv": {
+      "tested_sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b",
+      "delivered_sha256": "34fe7ab1ab76f65542817e37e25ab8679d2a07c7202b94fc7d0a28fb2c20ab0b"
+    },
+    "rtl/tracking_normalize_iterative.sv": {
+      "tested_sha256": "7c4c7b6bf9c42eb73df3dc1401d919776936820f293e85c7f96aa86c3fca7152",
+      "delivered_sha256": "7c4c7b6bf9c42eb73df3dc1401d919776936820f293e85c7f96aa86c3fca7152"
+    },
+    "rtl/tracking_record_framer.sv": {
+      "tested_sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94",
+      "delivered_sha256": "e173fd4ea453c040049797f72d319a811532e71a0d04c981f8a3adabceb16a94"
+    },
+    "rtl/carrier_quarter_lut.svh": {
+      "tested_sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c",
+      "delivered_sha256": "b7e8595471e7ebc01de0b0476d48bf5b48d5c27931091690ae6edd56679a7d0c"
+    },
+    "rtl/fft_twiddle_rom.svh": {
+      "tested_sha256": "dff2e2f79a01588b642e2467eea33cf3832ebae6aa2bb7c0541304f99690b159",
+      "delivered_sha256": "dff2e2f79a01588b642e2467eea33cf3832ebae6aa2bb7c0541304f99690b159"
+    }
+  },
+  "mapped_outputs_verified": 12,
+  "test_groups_passed": 11,
+  "report_links_checked": 24
+}

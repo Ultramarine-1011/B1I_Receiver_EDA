@@ -1,0 +1,8 @@
+8022bc0d744d01fcc93b8c7387d9de6d33d674c29c81beba0e0496d2dde1702a  /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+5599afd106b93137c430d0f8f88f3b3b5ce21235824458e4fd72fd420a384732  /home/ic_libs/TSMC.90/aci/sc-x/verilog/tsmc090.v
+39f25799c524d8c15f5e0e6dcc9100137db860edfed2147640420ce750637038  /home/synopsys/syn/O-2018.06-SP1/linux64/syn/bin/common_shell_exec
+6e8b2e24d9f502a070be8876923fa9e006d98cd12a531c52656beab1f2767d70  /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+e59deb20a880941ef4f3e4f019b626221d6aa92d67273bc5040191493b7f51c0  /home/ICer/ic_eda_resume_tree_20261112/final_core/reports/mapped.ddc
+95e32c315d6997d3da1dae21dc7cbe418ee36b8f5ca2c9cb2c3b1da74042beed  channel_retry1/reports/mapped.ddc
+dc37e432ddc9b6b516a3c2646fe944045bb6fa32983fd0c7240403e8093d59d8  bank_retry1/reports/mapped.ddc
+2b5b6f47d3a214c7853b7e439bd014225cb8c70037400101979f37092502480b  core_retry1/reports/mapped.ddc

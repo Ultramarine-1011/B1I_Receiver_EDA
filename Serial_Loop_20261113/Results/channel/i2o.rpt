@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:32:05 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: init_valid (input port clocked by clk)
+  Endpoint: sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  input external delay                 1.000000   1.000000 f
+  init_valid (in)                      0.023788   1.023788 f
+  U3931/Y (BUFX2)                      0.056132   1.079919 f
+  U3930/Y (INVX2)                      0.030487   1.110406 r
+  U2988/Y (BUFX2)                      0.045797   1.156204 r
+  U2917/Y (INVX4)                      0.156645   1.312848 f
+  U3933/Y (NOR2BX1)                    0.096055   1.408904 r
+  U3989/Y (NAND3BX2)                   0.036433   1.445337 f
+  U2616/Y (NOR4XL)                     0.244156   1.689493 r
+  sample_ready (out)                   0.000000   1.689493 r
+  data arrival time                               1.689493
+
+  clock clk (rise edge)                10.000000  10.000000
+  clock network delay (ideal)          0.000000   10.000000
+  clock uncertainty                    -0.200000  9.800000
+  output external delay                -1.000000  8.800000
+  data required time                              8.800000
+  -----------------------------------------------------------
+  data required time                              8.800000
+  data arrival time                               -1.689493
+  -----------------------------------------------------------
+  slack (MET)                                     7.110507
+
+
+1

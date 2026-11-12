@@ -1,0 +1,1248 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:32:04 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: frontend/correlator/ie_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: carrier_delta_full_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ie_reg[0]/CK (DFFRHQX4)         0.000000 # 0.000000 r
+  frontend/correlator/ie_reg[0]/Q (DFFRHQX4)          0.112462   0.112462 r
+  frontend/correlator/ie[0] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.112462 r
+  frontend/ie[0] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.112462 r
+  mult_157/a[0] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.112462 r
+  mult_157/U1198/Y (INVX8)                            0.041238   0.153700 f
+  mult_157/U1201/Y (NOR2X4)                           0.039893   0.193593 r
+  mult_157/U1205/Y (OR2X2)                            0.037244   0.230837 r
+  mult_157/U1386/Y (CLKAND2X2)                        0.049253   0.280090 r
+  mult_157/product[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.280090 r
+  add_160/A[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.280090 r
+  add_160/U557/Y (NAND2XL)                            0.050166   0.330257 f
+  add_160/U452/Y (OA21X1)                             0.141210   0.471467 f
+  add_160/U475/Y (OAI21X1)                            0.064543   0.536010 r
+  add_160/U483/Y (AOI21BX2)                           0.079852   0.615862 f
+  add_160/U478/Y (OAI21X1)                            0.057323   0.673184 r
+  add_160/U522/Y (AOI21BX1)                           0.097417   0.770602 f
+  add_160/U509/Y (XOR2X1)                             0.054632   0.825234 f
+  add_160/U460/Y (BUFX2)                              0.071035   0.896268 f
+  add_160/SUM[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.896268 f
+  add_161/A[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   0.896268 f
+  add_161/U1_8/CO (ADDFX1)                            0.141025   1.037293 f
+  add_161/U1_9/CO (ADDFHX2)                           0.075856   1.113149 f
+  add_161/U1_10/CO (ADDFX1)                           0.100974   1.214123 f
+  add_161/U1_11/CO (ADDFX1)                           0.105625   1.319748 f
+  add_161/U1_12/CO (ADDFX1)                           0.105626   1.425374 f
+  add_161/U1_13/CO (ADDFX1)                           0.105619   1.530993 f
+  add_161/U1_14/CO (ADDFX1)                           0.105626   1.636619 f
+  add_161/U1_15/CO (ADDFX1)                           0.105626   1.742246 f
+  add_161/U1_16/CO (ADDFX1)                           0.105626   1.847872 f
+  add_161/U1_17/CO (ADDFX1)                           0.105618   1.953490 f
+  add_161/U1_18/CO (ADDFX1)                           0.104697   2.058187 f
+  add_161/U1_19/CO (ADDFHX2)                          0.075848   2.134035 f
+  add_161/U1_20/CO (ADDFX1)                           0.100974   2.235009 f
+  add_161/U1_21/CO (ADDFX1)                           0.105600   2.340609 f
+  add_161/U1_22/CO (ADDFX1)                           0.105626   2.446236 f
+  add_161/U1_23/CO (ADDFX1)                           0.105626   2.551862 f
+  add_161/U1_24/CO (ADDFX1)                           0.105626   2.657488 f
+  add_161/U1_25/CO (ADDFX1)                           0.104703   2.762191 f
+  add_161/U1_26/CO (ADDFHX2)                          0.081494   2.843685 f
+  add_161/U1_27/CO (ADDFHX4)                          0.067224   2.910909 f
+  add_161/U1_28/CO (ADDFHX4)                          0.065103   2.976012 f
+  add_161/U1_29/CO (ADDFHX4)                          0.065098   3.041110 f
+  add_161/U1_30/CO (ADDFHX4)                          0.065098   3.106207 f
+  add_161/U1_31/CO (ADDFHX4)                          0.065098   3.171305 f
+  add_161/U1_32/CO (ADDFHX4)                          0.065098   3.236402 f
+  add_161/U1_33/CO (ADDFHX4)                          0.061550   3.297953 f
+  add_161/U1_34/CO (ADDFX1)                           0.099467   3.397420 f
+  add_161/U1_35/CO (ADDFX1)                           0.105618   3.503038 f
+  add_161/U1_36/CO (ADDFX1)                           0.115072   3.618110 f
+  add_161/U1_37/CO (ADDFHX4)                          0.072454   3.690563 f
+  add_161/U1_38/CO (ADDFHX4)                          0.065141   3.755705 f
+  add_161/U1_39/CO (ADDFHX4)                          0.065098   3.820803 f
+  add_161/U1_40/CO (ADDFHX4)                          0.065098   3.885900 f
+  add_161/U1_41/CO (ADDFHX4)                          0.065098   3.950998 f
+  add_161/U1_42/CO (ADDFHX4)                          0.065098   4.016096 f
+  add_161/U1_43/CO (ADDFHX4)                          0.065098   4.081193 f
+  add_161/U1_44/CO (ADDFHX4)                          0.061550   4.142744 f
+  add_161/U1_45/CO (ADDFX1)                           0.099467   4.242211 f
+  add_161/U1_46/CO (ADDFX1)                           0.105620   4.347831 f
+  add_161/U1_47/CO (ADDFX1)                           0.105607   4.453437 f
+  add_161/U1_48/CO (ADDFX1)                           0.104683   4.558120 f
+  add_161/U1_49/CO (ADDFHX2)                          0.081457   4.639577 f
+  add_161/U1_50/CO (ADDFHX4)                          0.067224   4.706800 f
+  add_161/U1_51/CO (ADDFHX4)                          0.065103   4.771904 f
+  add_161/U1_52/CO (ADDFHX4)                          0.061550   4.833454 f
+  add_161/U1_53/CO (ADDFX1)                           0.099467   4.932921 f
+  add_161/U1_54/CO (ADDFX1)                           0.105613   5.038534 f
+  add_161/U1_55/CO (ADDFX1)                           0.105604   5.144137 f
+  add_161/U1_56/S (ADDFX1)                            0.108345   5.252482 f
+  add_161/SUM[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   5.252482 f
+  gt_179_2/A[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.252482 f
+  gt_179_2/U247/Y (OR3X2)                             0.086750   5.339232 f
+  gt_179_2/U244/Y (NOR3X4)                            0.068610   5.407842 r
+  gt_179_2/U243/Y (OAI211X2)                          0.049770   5.457613 f
+  gt_179_2/U242/Y (NOR4BX4)                           0.065880   5.523492 r
+  gt_179_2/U245/Y (OAI32X2)                           0.036473   5.559966 f
+  gt_179_2/GE_LT_GT_LE (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.559966 f
+  U2080/Y (NAND2X2)                                   0.036007   5.595973 r
+  U2139/Y (CLKINVX4)                                  0.027705   5.623678 f
+  U3316/Y (NAND3BX2)                                  0.028372   5.652050 r
+  U3021/Y (NOR4BX2)                                   0.027929   5.679979 f
+  U2141/Y (AND4X2)                                    0.061598   5.741577 f
+  U2073/Y (NAND2BX2)                                  0.033077   5.774654 r
+  U2126/Y (INVX4)                                     0.036182   5.810837 f
+  U2900/Y (AND2X2)                                    0.065414   5.876251 f
+  add_0_root_add_192_2/A[1] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   5.876251 f
+  add_0_root_add_192_2/U354/Y (NOR2X2)                0.036563   5.912814 r
+  add_0_root_add_192_2/U255/Y (OAI21X1)               0.045107   5.957921 f
+  add_0_root_add_192_2/U457/Y (AOI21X1)               0.070538   6.028459 r
+  add_0_root_add_192_2/U207/Y (OAI21X1)               0.047912   6.076371 f
+  add_0_root_add_192_2/U279/Y (AOI21X2)               0.062289   6.138660 r
+  add_0_root_add_192_2/U278/Y (OAI21X2)               0.032057   6.170717 f
+  add_0_root_add_192_2/U281/Y (AOI21BX4)              0.086779   6.257496 r
+  add_0_root_add_192_2/U362/Y (OAI21X1)               0.035336   6.292832 f
+  add_0_root_add_192_2/U273/Y (AOI21BX2)              0.090586   6.383419 r
+  add_0_root_add_192_2/U27/Y (OAI21X1)                0.039443   6.422862 f
+  add_0_root_add_192_2/U442/Y (AOI21X1)               0.061238   6.484100 r
+  add_0_root_add_192_2/U441/Y (OAI21X1)               0.046305   6.530405 f
+  add_0_root_add_192_2/U439/Y (AOI21X1)               0.050319   6.580724 r
+  add_0_root_add_192_2/U283/Y (CLKINVX2)              0.032736   6.613460 f
+  add_0_root_add_192_2/U270/S (ADDFHX4)               0.083043   6.696503 f
+  add_0_root_add_192_2/SUM[32] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   6.696503 f
+  U2159/Y (NOR3BX4)                                   0.041218   6.737721 f
+  U2259/Y (OAI2BB1X4)                                 0.063723   6.801445 f
+  U2050/Y (INVX4)                                     0.021908   6.823353 r
+  U2164/Y (NAND2BX4)                                  0.045433   6.868785 r
+  U2800/Y (INVX2)                                     0.026475   6.895260 f
+  U4399/Y (OAI2BB1XL)                                 0.100060   6.995320 f
+  add_194/A[21] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   6.995320 f
+  add_194/U239/Y (OR2X2)                              0.077073   7.072392 f
+  add_194/U248/Y (AOI21BX4)                           0.088551   7.160944 r
+  add_194/U50/Y (OAI21X1)                             0.038139   7.199083 f
+  add_194/U413/Y (AOI21X1)                            0.047353   7.246436 r
+  add_194/U412/Y (OAI21X1)                            0.048464   7.294899 f
+  add_194/U236/Y (AOI21X2)                            0.059774   7.354674 r
+  add_194/U271/Y (OAI21X2)                            0.030962   7.385635 f
+  add_194/U302/Y (AOI21BX2)                           0.093195   7.478831 r
+  add_194/U245/Y (OAI21X4)                            0.021839   7.500669 f
+  add_194/U237/S (ADDFX2)                             0.087470   7.588139 f
+  add_194/SUM[30] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   7.588139 f
+  U2784/Y (NOR3BX1)                                   0.061625   7.649764 r
+  U2123/Y (NOR4BX4)                                   0.071752   7.721515 r
+  U2783/Y (NAND4BX2)                                  0.045625   7.767140 f
+  U2780/Y (OAI211XL)                                  0.039661   7.806802 r
+  U2122/Y (INVX2)                                     0.029542   7.836344 f
+  U2084/Y (NAND2BX2)                                  0.057933   7.894278 f
+  U2708/Y (INVX2)                                     0.031889   7.926167 r
+  U2283/Y (NAND2BX4)                                  0.038649   7.964816 f
+  U2064/Y (CLKINVX12)                                 0.028956   7.993772 r
+  U2063/Y (AOI22X1)                                   0.050806   8.044578 f
+  U2056/Y (INVX3)                                     0.035311   8.079888 r
+  U2055/Y (BUFX16)                                    0.050316   8.130204 r
+  conversion/value[25] (tracking_divide_step)         0.000000   8.130204 r
+  conversion/mult_420_C425/a[25] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   8.130204 r
+  conversion/mult_420_C425/U1034/CO (CMPR42X1)        0.168134   8.298338 r
+  conversion/mult_420_C425/U1004/S (CMPR42X2)         0.196236   8.494574 f
+  conversion/mult_420_C425/U1259/CO (CMPR42X1)        0.257883   8.752457 f
+  conversion/mult_420_C425/U1051/S (CMPR42X1)         0.257244   9.009701 f
+  conversion/mult_420_C425/U1668/Y (NOR2X2)           0.041472   9.051173 r
+  conversion/mult_420_C425/U398/Y (OAI21X1)           0.032681   9.083854 f
+  conversion/mult_420_C425/U1666/Y (AOI21X1)          0.048543   9.132397 r
+  conversion/mult_420_C425/U388/Y (OAI21X1)           0.049014   9.181411 f
+  conversion/mult_420_C425/U1132/Y (AOI21X4)          0.055617   9.237028 r
+  conversion/mult_420_C425/U1097/Y (INVX4)            0.018279   9.255307 f
+  conversion/mult_420_C425/U1062/Y (CLKINVX8)         0.026954   9.282261 r
+  conversion/mult_420_C425/U1112/Y (OAI21XL)          0.040764   9.323025 f
+  conversion/mult_420_C425/U1090/Y (XNOR2X2)          0.042174   9.365199 r
+  conversion/mult_420_C425/product[56] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/A[0] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/U168/Y (NAND2X2)            0.045610   9.410810 f
+  conversion/add_422_C425/U167/Y (NOR2X2)             0.048210   9.459020 r
+  conversion/add_422_C425/U166/Y (NAND2X2)            0.030661   9.489680 f
+  conversion/add_422_C425/U165/Y (NOR2X2)             0.050843   9.540524 r
+  conversion/add_422_C425/U187/Y (NAND2X2)            0.036973   9.577497 f
+  conversion/add_422_C425/U141/Y (CLKINVX4)           0.033168   9.610664 r
+  conversion/add_422_C425/U149/Y (CLKNAND2X2)         0.024943   9.635608 f
+  conversion/add_422_C425/U12/Y (XOR2X1)              0.034992   9.670600 r
+  conversion/add_422_C425/SUM[20] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.670600 r
+  conversion/result[20] (tracking_divide_step)        0.000000   9.670600 r
+  U3311/Y (AO2B2X2)                                   0.062336   9.732936 r
+  carrier_delta_full_reg[20]/D (DFFRQX2)              0.000000   9.732936 r
+  data arrival time                                              9.732936
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  carrier_delta_full_reg[20]/CK (DFFRQX2)             0.000000   9.800000 r
+  library setup time                                  -0.067038  9.732963
+  data required time                                             9.732963
+  --------------------------------------------------------------------------
+  data required time                                             9.732963
+  data arrival time                                              -9.732936
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.000027
+
+
+  Startpoint: frontend/correlator/ie_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: carrier_delta_full_reg[17]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ie_reg[0]/CK (DFFRHQX4)         0.000000 # 0.000000 r
+  frontend/correlator/ie_reg[0]/Q (DFFRHQX4)          0.112462   0.112462 r
+  frontend/correlator/ie[0] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.112462 r
+  frontend/ie[0] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.112462 r
+  mult_157/a[0] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.112462 r
+  mult_157/U1198/Y (INVX8)                            0.041238   0.153700 f
+  mult_157/U1201/Y (NOR2X4)                           0.039893   0.193593 r
+  mult_157/U1205/Y (OR2X2)                            0.037244   0.230837 r
+  mult_157/U1386/Y (CLKAND2X2)                        0.049253   0.280090 r
+  mult_157/product[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.280090 r
+  add_160/A[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.280090 r
+  add_160/U557/Y (NAND2XL)                            0.050166   0.330257 f
+  add_160/U452/Y (OA21X1)                             0.141210   0.471467 f
+  add_160/U475/Y (OAI21X1)                            0.064543   0.536010 r
+  add_160/U483/Y (AOI21BX2)                           0.079852   0.615862 f
+  add_160/U478/Y (OAI21X1)                            0.057323   0.673184 r
+  add_160/U522/Y (AOI21BX1)                           0.097417   0.770602 f
+  add_160/U509/Y (XOR2X1)                             0.054632   0.825234 f
+  add_160/U460/Y (BUFX2)                              0.071035   0.896268 f
+  add_160/SUM[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.896268 f
+  add_161/A[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   0.896268 f
+  add_161/U1_8/CO (ADDFX1)                            0.141025   1.037293 f
+  add_161/U1_9/CO (ADDFHX2)                           0.075856   1.113149 f
+  add_161/U1_10/CO (ADDFX1)                           0.100974   1.214123 f
+  add_161/U1_11/CO (ADDFX1)                           0.105625   1.319748 f
+  add_161/U1_12/CO (ADDFX1)                           0.105626   1.425374 f
+  add_161/U1_13/CO (ADDFX1)                           0.105619   1.530993 f
+  add_161/U1_14/CO (ADDFX1)                           0.105626   1.636619 f
+  add_161/U1_15/CO (ADDFX1)                           0.105626   1.742246 f
+  add_161/U1_16/CO (ADDFX1)                           0.105626   1.847872 f
+  add_161/U1_17/CO (ADDFX1)                           0.105618   1.953490 f
+  add_161/U1_18/CO (ADDFX1)                           0.104697   2.058187 f
+  add_161/U1_19/CO (ADDFHX2)                          0.075848   2.134035 f
+  add_161/U1_20/CO (ADDFX1)                           0.100974   2.235009 f
+  add_161/U1_21/CO (ADDFX1)                           0.105600   2.340609 f
+  add_161/U1_22/CO (ADDFX1)                           0.105626   2.446236 f
+  add_161/U1_23/CO (ADDFX1)                           0.105626   2.551862 f
+  add_161/U1_24/CO (ADDFX1)                           0.105626   2.657488 f
+  add_161/U1_25/CO (ADDFX1)                           0.104703   2.762191 f
+  add_161/U1_26/CO (ADDFHX2)                          0.081494   2.843685 f
+  add_161/U1_27/CO (ADDFHX4)                          0.067224   2.910909 f
+  add_161/U1_28/CO (ADDFHX4)                          0.065103   2.976012 f
+  add_161/U1_29/CO (ADDFHX4)                          0.065098   3.041110 f
+  add_161/U1_30/CO (ADDFHX4)                          0.065098   3.106207 f
+  add_161/U1_31/CO (ADDFHX4)                          0.065098   3.171305 f
+  add_161/U1_32/CO (ADDFHX4)                          0.065098   3.236402 f
+  add_161/U1_33/CO (ADDFHX4)                          0.061550   3.297953 f
+  add_161/U1_34/CO (ADDFX1)                           0.099467   3.397420 f
+  add_161/U1_35/CO (ADDFX1)                           0.105618   3.503038 f
+  add_161/U1_36/CO (ADDFX1)                           0.115072   3.618110 f
+  add_161/U1_37/CO (ADDFHX4)                          0.072454   3.690563 f
+  add_161/U1_38/CO (ADDFHX4)                          0.065141   3.755705 f
+  add_161/U1_39/CO (ADDFHX4)                          0.065098   3.820803 f
+  add_161/U1_40/CO (ADDFHX4)                          0.065098   3.885900 f
+  add_161/U1_41/CO (ADDFHX4)                          0.065098   3.950998 f
+  add_161/U1_42/CO (ADDFHX4)                          0.065098   4.016096 f
+  add_161/U1_43/CO (ADDFHX4)                          0.065098   4.081193 f
+  add_161/U1_44/CO (ADDFHX4)                          0.061550   4.142744 f
+  add_161/U1_45/CO (ADDFX1)                           0.099467   4.242211 f
+  add_161/U1_46/CO (ADDFX1)                           0.105620   4.347831 f
+  add_161/U1_47/CO (ADDFX1)                           0.105607   4.453437 f
+  add_161/U1_48/CO (ADDFX1)                           0.104683   4.558120 f
+  add_161/U1_49/CO (ADDFHX2)                          0.081457   4.639577 f
+  add_161/U1_50/CO (ADDFHX4)                          0.067224   4.706800 f
+  add_161/U1_51/CO (ADDFHX4)                          0.065103   4.771904 f
+  add_161/U1_52/CO (ADDFHX4)                          0.061550   4.833454 f
+  add_161/U1_53/CO (ADDFX1)                           0.099467   4.932921 f
+  add_161/U1_54/CO (ADDFX1)                           0.105613   5.038534 f
+  add_161/U1_55/CO (ADDFX1)                           0.105604   5.144137 f
+  add_161/U1_56/S (ADDFX1)                            0.108345   5.252482 f
+  add_161/SUM[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   5.252482 f
+  gt_179_2/A[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.252482 f
+  gt_179_2/U247/Y (OR3X2)                             0.086750   5.339232 f
+  gt_179_2/U244/Y (NOR3X4)                            0.068610   5.407842 r
+  gt_179_2/U243/Y (OAI211X2)                          0.049770   5.457613 f
+  gt_179_2/U242/Y (NOR4BX4)                           0.065880   5.523492 r
+  gt_179_2/U245/Y (OAI32X2)                           0.036473   5.559966 f
+  gt_179_2/GE_LT_GT_LE (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.559966 f
+  U2080/Y (NAND2X2)                                   0.036007   5.595973 r
+  U2139/Y (CLKINVX4)                                  0.027705   5.623678 f
+  U3316/Y (NAND3BX2)                                  0.028372   5.652050 r
+  U3021/Y (NOR4BX2)                                   0.027929   5.679979 f
+  U2141/Y (AND4X2)                                    0.061598   5.741577 f
+  U2073/Y (NAND2BX2)                                  0.033077   5.774654 r
+  U2126/Y (INVX4)                                     0.036182   5.810837 f
+  U2900/Y (AND2X2)                                    0.065414   5.876251 f
+  add_0_root_add_192_2/A[1] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   5.876251 f
+  add_0_root_add_192_2/U354/Y (NOR2X2)                0.036563   5.912814 r
+  add_0_root_add_192_2/U255/Y (OAI21X1)               0.045107   5.957921 f
+  add_0_root_add_192_2/U457/Y (AOI21X1)               0.070538   6.028459 r
+  add_0_root_add_192_2/U207/Y (OAI21X1)               0.047912   6.076371 f
+  add_0_root_add_192_2/U279/Y (AOI21X2)               0.062289   6.138660 r
+  add_0_root_add_192_2/U278/Y (OAI21X2)               0.032057   6.170717 f
+  add_0_root_add_192_2/U281/Y (AOI21BX4)              0.086779   6.257496 r
+  add_0_root_add_192_2/U362/Y (OAI21X1)               0.035336   6.292832 f
+  add_0_root_add_192_2/U273/Y (AOI21BX2)              0.090586   6.383419 r
+  add_0_root_add_192_2/U27/Y (OAI21X1)                0.039443   6.422862 f
+  add_0_root_add_192_2/U442/Y (AOI21X1)               0.061238   6.484100 r
+  add_0_root_add_192_2/U441/Y (OAI21X1)               0.046305   6.530405 f
+  add_0_root_add_192_2/U439/Y (AOI21X1)               0.050319   6.580724 r
+  add_0_root_add_192_2/U283/Y (CLKINVX2)              0.032736   6.613460 f
+  add_0_root_add_192_2/U270/S (ADDFHX4)               0.083043   6.696503 f
+  add_0_root_add_192_2/SUM[32] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   6.696503 f
+  U2159/Y (NOR3BX4)                                   0.041218   6.737721 f
+  U2259/Y (OAI2BB1X4)                                 0.063723   6.801445 f
+  U2050/Y (INVX4)                                     0.021908   6.823353 r
+  U2164/Y (NAND2BX4)                                  0.045433   6.868785 r
+  U2800/Y (INVX2)                                     0.026475   6.895260 f
+  U4399/Y (OAI2BB1XL)                                 0.100060   6.995320 f
+  add_194/A[21] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   6.995320 f
+  add_194/U239/Y (OR2X2)                              0.077073   7.072392 f
+  add_194/U248/Y (AOI21BX4)                           0.088551   7.160944 r
+  add_194/U50/Y (OAI21X1)                             0.038139   7.199083 f
+  add_194/U413/Y (AOI21X1)                            0.047353   7.246436 r
+  add_194/U412/Y (OAI21X1)                            0.048464   7.294899 f
+  add_194/U236/Y (AOI21X2)                            0.059774   7.354674 r
+  add_194/U271/Y (OAI21X2)                            0.030962   7.385635 f
+  add_194/U302/Y (AOI21BX2)                           0.093195   7.478831 r
+  add_194/U245/Y (OAI21X4)                            0.021839   7.500669 f
+  add_194/U237/S (ADDFX2)                             0.087470   7.588139 f
+  add_194/SUM[30] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   7.588139 f
+  U2784/Y (NOR3BX1)                                   0.061625   7.649764 r
+  U2123/Y (NOR4BX4)                                   0.071752   7.721515 r
+  U2783/Y (NAND4BX2)                                  0.045625   7.767140 f
+  U2780/Y (OAI211XL)                                  0.039661   7.806802 r
+  U2122/Y (INVX2)                                     0.029542   7.836344 f
+  U2084/Y (NAND2BX2)                                  0.057933   7.894278 f
+  U2708/Y (INVX2)                                     0.031889   7.926167 r
+  U2283/Y (NAND2BX4)                                  0.038649   7.964816 f
+  U2064/Y (CLKINVX12)                                 0.028956   7.993772 r
+  U2063/Y (AOI22X1)                                   0.050806   8.044578 f
+  U2056/Y (INVX3)                                     0.035311   8.079888 r
+  U2055/Y (BUFX16)                                    0.050316   8.130204 r
+  conversion/value[25] (tracking_divide_step)         0.000000   8.130204 r
+  conversion/mult_420_C425/a[25] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   8.130204 r
+  conversion/mult_420_C425/U1034/CO (CMPR42X1)        0.168134   8.298338 r
+  conversion/mult_420_C425/U1004/S (CMPR42X2)         0.196236   8.494574 f
+  conversion/mult_420_C425/U1259/CO (CMPR42X1)        0.257883   8.752457 f
+  conversion/mult_420_C425/U1051/S (CMPR42X1)         0.257244   9.009701 f
+  conversion/mult_420_C425/U1668/Y (NOR2X2)           0.041472   9.051173 r
+  conversion/mult_420_C425/U398/Y (OAI21X1)           0.032681   9.083854 f
+  conversion/mult_420_C425/U1666/Y (AOI21X1)          0.048543   9.132397 r
+  conversion/mult_420_C425/U388/Y (OAI21X1)           0.049014   9.181411 f
+  conversion/mult_420_C425/U1132/Y (AOI21X4)          0.055617   9.237028 r
+  conversion/mult_420_C425/U1097/Y (INVX4)            0.018279   9.255307 f
+  conversion/mult_420_C425/U1062/Y (CLKINVX8)         0.026954   9.282261 r
+  conversion/mult_420_C425/U1112/Y (OAI21XL)          0.040764   9.323025 f
+  conversion/mult_420_C425/U1090/Y (XNOR2X2)          0.042174   9.365199 r
+  conversion/mult_420_C425/product[56] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/A[0] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/U168/Y (NAND2X2)            0.045610   9.410810 f
+  conversion/add_422_C425/U167/Y (NOR2X2)             0.048210   9.459020 r
+  conversion/add_422_C425/U166/Y (NAND2X2)            0.030661   9.489680 f
+  conversion/add_422_C425/U165/Y (NOR2X2)             0.050843   9.540524 r
+  conversion/add_422_C425/U187/Y (NAND2X2)            0.036973   9.577497 f
+  conversion/add_422_C425/U141/Y (CLKINVX4)           0.033168   9.610664 r
+  conversion/add_422_C425/U194/Y (NAND2X2)            0.020799   9.631463 f
+  conversion/add_422_C425/U156/Y (XNOR2X1)            0.033767   9.665230 r
+  conversion/add_422_C425/SUM[17] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.665230 r
+  conversion/result[17] (tracking_divide_step)        0.000000   9.665230 r
+  U2106/Y (AO2B2X2)                                   0.065022   9.730251 r
+  carrier_delta_full_reg[17]/D (DFFRQX2)              0.000000   9.730251 r
+  data arrival time                                              9.730251
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  carrier_delta_full_reg[17]/CK (DFFRQX2)             0.000000   9.800000 r
+  library setup time                                  -0.067038  9.732963
+  data required time                                             9.732963
+  --------------------------------------------------------------------------
+  data required time                                             9.732963
+  data arrival time                                              -9.730251
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.002711
+
+
+  Startpoint: frontend/correlator/ie_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: carrier_delta_full_reg[22]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ie_reg[0]/CK (DFFRHQX4)         0.000000 # 0.000000 r
+  frontend/correlator/ie_reg[0]/Q (DFFRHQX4)          0.112462   0.112462 r
+  frontend/correlator/ie[0] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.112462 r
+  frontend/ie[0] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.112462 r
+  mult_157/a[0] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.112462 r
+  mult_157/U1198/Y (INVX8)                            0.041238   0.153700 f
+  mult_157/U1201/Y (NOR2X4)                           0.039893   0.193593 r
+  mult_157/U1205/Y (OR2X2)                            0.037244   0.230837 r
+  mult_157/U1386/Y (CLKAND2X2)                        0.049253   0.280090 r
+  mult_157/product[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.280090 r
+  add_160/A[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.280090 r
+  add_160/U557/Y (NAND2XL)                            0.050166   0.330257 f
+  add_160/U452/Y (OA21X1)                             0.141210   0.471467 f
+  add_160/U475/Y (OAI21X1)                            0.064543   0.536010 r
+  add_160/U483/Y (AOI21BX2)                           0.079852   0.615862 f
+  add_160/U478/Y (OAI21X1)                            0.057323   0.673184 r
+  add_160/U522/Y (AOI21BX1)                           0.097417   0.770602 f
+  add_160/U509/Y (XOR2X1)                             0.054632   0.825234 f
+  add_160/U460/Y (BUFX2)                              0.071035   0.896268 f
+  add_160/SUM[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.896268 f
+  add_161/A[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   0.896268 f
+  add_161/U1_8/CO (ADDFX1)                            0.141025   1.037293 f
+  add_161/U1_9/CO (ADDFHX2)                           0.075856   1.113149 f
+  add_161/U1_10/CO (ADDFX1)                           0.100974   1.214123 f
+  add_161/U1_11/CO (ADDFX1)                           0.105625   1.319748 f
+  add_161/U1_12/CO (ADDFX1)                           0.105626   1.425374 f
+  add_161/U1_13/CO (ADDFX1)                           0.105619   1.530993 f
+  add_161/U1_14/CO (ADDFX1)                           0.105626   1.636619 f
+  add_161/U1_15/CO (ADDFX1)                           0.105626   1.742246 f
+  add_161/U1_16/CO (ADDFX1)                           0.105626   1.847872 f
+  add_161/U1_17/CO (ADDFX1)                           0.105618   1.953490 f
+  add_161/U1_18/CO (ADDFX1)                           0.104697   2.058187 f
+  add_161/U1_19/CO (ADDFHX2)                          0.075848   2.134035 f
+  add_161/U1_20/CO (ADDFX1)                           0.100974   2.235009 f
+  add_161/U1_21/CO (ADDFX1)                           0.105600   2.340609 f
+  add_161/U1_22/CO (ADDFX1)                           0.105626   2.446236 f
+  add_161/U1_23/CO (ADDFX1)                           0.105626   2.551862 f
+  add_161/U1_24/CO (ADDFX1)                           0.105626   2.657488 f
+  add_161/U1_25/CO (ADDFX1)                           0.104703   2.762191 f
+  add_161/U1_26/CO (ADDFHX2)                          0.081494   2.843685 f
+  add_161/U1_27/CO (ADDFHX4)                          0.067224   2.910909 f
+  add_161/U1_28/CO (ADDFHX4)                          0.065103   2.976012 f
+  add_161/U1_29/CO (ADDFHX4)                          0.065098   3.041110 f
+  add_161/U1_30/CO (ADDFHX4)                          0.065098   3.106207 f
+  add_161/U1_31/CO (ADDFHX4)                          0.065098   3.171305 f
+  add_161/U1_32/CO (ADDFHX4)                          0.065098   3.236402 f
+  add_161/U1_33/CO (ADDFHX4)                          0.061550   3.297953 f
+  add_161/U1_34/CO (ADDFX1)                           0.099467   3.397420 f
+  add_161/U1_35/CO (ADDFX1)                           0.105618   3.503038 f
+  add_161/U1_36/CO (ADDFX1)                           0.115072   3.618110 f
+  add_161/U1_37/CO (ADDFHX4)                          0.072454   3.690563 f
+  add_161/U1_38/CO (ADDFHX4)                          0.065141   3.755705 f
+  add_161/U1_39/CO (ADDFHX4)                          0.065098   3.820803 f
+  add_161/U1_40/CO (ADDFHX4)                          0.065098   3.885900 f
+  add_161/U1_41/CO (ADDFHX4)                          0.065098   3.950998 f
+  add_161/U1_42/CO (ADDFHX4)                          0.065098   4.016096 f
+  add_161/U1_43/CO (ADDFHX4)                          0.065098   4.081193 f
+  add_161/U1_44/CO (ADDFHX4)                          0.061550   4.142744 f
+  add_161/U1_45/CO (ADDFX1)                           0.099467   4.242211 f
+  add_161/U1_46/CO (ADDFX1)                           0.105620   4.347831 f
+  add_161/U1_47/CO (ADDFX1)                           0.105607   4.453437 f
+  add_161/U1_48/CO (ADDFX1)                           0.104683   4.558120 f
+  add_161/U1_49/CO (ADDFHX2)                          0.081457   4.639577 f
+  add_161/U1_50/CO (ADDFHX4)                          0.067224   4.706800 f
+  add_161/U1_51/CO (ADDFHX4)                          0.065103   4.771904 f
+  add_161/U1_52/CO (ADDFHX4)                          0.061550   4.833454 f
+  add_161/U1_53/CO (ADDFX1)                           0.099467   4.932921 f
+  add_161/U1_54/CO (ADDFX1)                           0.105613   5.038534 f
+  add_161/U1_55/CO (ADDFX1)                           0.105604   5.144137 f
+  add_161/U1_56/S (ADDFX1)                            0.108345   5.252482 f
+  add_161/SUM[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   5.252482 f
+  gt_179_2/A[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.252482 f
+  gt_179_2/U247/Y (OR3X2)                             0.086750   5.339232 f
+  gt_179_2/U244/Y (NOR3X4)                            0.068610   5.407842 r
+  gt_179_2/U243/Y (OAI211X2)                          0.049770   5.457613 f
+  gt_179_2/U242/Y (NOR4BX4)                           0.065880   5.523492 r
+  gt_179_2/U245/Y (OAI32X2)                           0.036473   5.559966 f
+  gt_179_2/GE_LT_GT_LE (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.559966 f
+  U2080/Y (NAND2X2)                                   0.036007   5.595973 r
+  U2139/Y (CLKINVX4)                                  0.027705   5.623678 f
+  U3316/Y (NAND3BX2)                                  0.028372   5.652050 r
+  U3021/Y (NOR4BX2)                                   0.027929   5.679979 f
+  U2141/Y (AND4X2)                                    0.061598   5.741577 f
+  U2073/Y (NAND2BX2)                                  0.033077   5.774654 r
+  U2126/Y (INVX4)                                     0.036182   5.810837 f
+  U2900/Y (AND2X2)                                    0.065414   5.876251 f
+  add_0_root_add_192_2/A[1] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   5.876251 f
+  add_0_root_add_192_2/U354/Y (NOR2X2)                0.036563   5.912814 r
+  add_0_root_add_192_2/U255/Y (OAI21X1)               0.045107   5.957921 f
+  add_0_root_add_192_2/U457/Y (AOI21X1)               0.070538   6.028459 r
+  add_0_root_add_192_2/U207/Y (OAI21X1)               0.047912   6.076371 f
+  add_0_root_add_192_2/U279/Y (AOI21X2)               0.062289   6.138660 r
+  add_0_root_add_192_2/U278/Y (OAI21X2)               0.032057   6.170717 f
+  add_0_root_add_192_2/U281/Y (AOI21BX4)              0.086779   6.257496 r
+  add_0_root_add_192_2/U362/Y (OAI21X1)               0.035336   6.292832 f
+  add_0_root_add_192_2/U273/Y (AOI21BX2)              0.090586   6.383419 r
+  add_0_root_add_192_2/U27/Y (OAI21X1)                0.039443   6.422862 f
+  add_0_root_add_192_2/U442/Y (AOI21X1)               0.061238   6.484100 r
+  add_0_root_add_192_2/U441/Y (OAI21X1)               0.046305   6.530405 f
+  add_0_root_add_192_2/U439/Y (AOI21X1)               0.050319   6.580724 r
+  add_0_root_add_192_2/U283/Y (CLKINVX2)              0.032736   6.613460 f
+  add_0_root_add_192_2/U270/S (ADDFHX4)               0.083043   6.696503 f
+  add_0_root_add_192_2/SUM[32] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   6.696503 f
+  U2159/Y (NOR3BX4)                                   0.041218   6.737721 f
+  U2259/Y (OAI2BB1X4)                                 0.063723   6.801445 f
+  U2050/Y (INVX4)                                     0.021908   6.823353 r
+  U2164/Y (NAND2BX4)                                  0.045433   6.868785 r
+  U2800/Y (INVX2)                                     0.026475   6.895260 f
+  U4399/Y (OAI2BB1XL)                                 0.100060   6.995320 f
+  add_194/A[21] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   6.995320 f
+  add_194/U239/Y (OR2X2)                              0.077073   7.072392 f
+  add_194/U248/Y (AOI21BX4)                           0.088551   7.160944 r
+  add_194/U50/Y (OAI21X1)                             0.038139   7.199083 f
+  add_194/U413/Y (AOI21X1)                            0.047353   7.246436 r
+  add_194/U412/Y (OAI21X1)                            0.048464   7.294899 f
+  add_194/U236/Y (AOI21X2)                            0.059774   7.354674 r
+  add_194/U271/Y (OAI21X2)                            0.030962   7.385635 f
+  add_194/U302/Y (AOI21BX2)                           0.093195   7.478831 r
+  add_194/U245/Y (OAI21X4)                            0.021839   7.500669 f
+  add_194/U237/S (ADDFX2)                             0.108486   7.609155 r
+  add_194/SUM[30] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   7.609155 r
+  U2784/Y (NOR3BX1)                                   0.025098   7.634254 f
+  U2123/Y (NOR4BX4)                                   0.060809   7.695062 f
+  U2783/Y (NAND4BX2)                                  0.037008   7.732070 r
+  U2780/Y (OAI211XL)                                  0.062071   7.794142 f
+  U2122/Y (INVX2)                                     0.041866   7.836008 r
+  U2084/Y (NAND2BX2)                                  0.040409   7.876417 r
+  U2708/Y (INVX2)                                     0.023064   7.899481 f
+  U2283/Y (NAND2BX4)                                  0.039072   7.938553 r
+  U2064/Y (CLKINVX12)                                 0.030001   7.968554 f
+  U2077/Y (OAI2BB1X1)                                 0.104129   8.072683 f
+  conversion/value[35] (tracking_divide_step)         0.000000   8.072683 f
+  conversion/mult_420_C425/a[35] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   8.072683 f
+  conversion/mult_420_C425/U1061/Y (INVX2)            0.060808   8.133492 r
+  conversion/mult_420_C425/U1030/Y (INVX12)           0.031916   8.165407 f
+  conversion/mult_420_C425/U1029/Y (INVX6)            0.046078   8.211485 r
+  conversion/mult_420_C425/U1657/CO (CMPR42X1)        0.292156   8.503641 f
+  conversion/mult_420_C425/U1695/S (CMPR42X1)         0.307837   8.811479 f
+  conversion/mult_420_C425/U1644/S (CMPR42X1)         0.222170   9.033648 f
+  conversion/mult_420_C425/U1643/Y (NOR2X2)           0.041128   9.074777 r
+  conversion/mult_420_C425/U352/Y (OAI21X1)           0.049219   9.123996 f
+  conversion/mult_420_C425/U1086/Y (AOI21X4)          0.056201   9.180197 r
+  conversion/mult_420_C425/U1114/Y (OAI21X4)          0.045016   9.225213 f
+  conversion/mult_420_C425/U1102/Y (AOI21XL)          0.055593   9.280806 r
+  conversion/mult_420_C425/U1136/Y (OAI21XL)          0.051460   9.332266 f
+  conversion/mult_420_C425/U1152/Y (AOI21BX2)         0.093233   9.425499 r
+  conversion/mult_420_C425/U1454/Y (OAI21X1)          0.039496   9.464995 f
+  conversion/mult_420_C425/U1246/Y (XNOR2X1)          0.047429   9.512424 r
+  conversion/mult_420_C425/product[77] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   9.512424 r
+  conversion/add_422_C425/A[21] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.512424 r
+  conversion/add_422_C425/U196/Y (INVX2)              0.024098   9.536523 f
+  conversion/add_422_C425/U195/Y (NOR2X2)             0.034408   9.570930 r
+  conversion/add_422_C425/U199/Y (NAND2X2)            0.023445   9.594376 f
+  conversion/add_422_C425/U198/Y (NOR2X2)             0.036485   9.630860 r
+  conversion/add_422_C425/U204/Y (XNOR2X1)            0.038749   9.669609 r
+  conversion/add_422_C425/SUM[22] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.669609 r
+  conversion/result[22] (tracking_divide_step)        0.000000   9.669609 r
+  U2963/Y (AO2B2X2)                                   0.062469   9.732079 r
+  carrier_delta_full_reg[22]/D (DFFRQX1)              0.000000   9.732079 r
+  data arrival time                                              9.732079
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  carrier_delta_full_reg[22]/CK (DFFRQX1)             0.000000   9.800000 r
+  library setup time                                  -0.065128  9.734873
+  data required time                                             9.734873
+  --------------------------------------------------------------------------
+  data required time                                             9.734873
+  data arrival time                                              -9.732079
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.002794
+
+
+  Startpoint: frontend/correlator/ie_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: carrier_delta_full_reg[13]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ie_reg[0]/CK (DFFRHQX4)         0.000000 # 0.000000 r
+  frontend/correlator/ie_reg[0]/Q (DFFRHQX4)          0.112462   0.112462 r
+  frontend/correlator/ie[0] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.112462 r
+  frontend/ie[0] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.112462 r
+  mult_157/a[0] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.112462 r
+  mult_157/U1198/Y (INVX8)                            0.041238   0.153700 f
+  mult_157/U1201/Y (NOR2X4)                           0.039893   0.193593 r
+  mult_157/U1205/Y (OR2X2)                            0.037244   0.230837 r
+  mult_157/U1386/Y (CLKAND2X2)                        0.049253   0.280090 r
+  mult_157/product[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.280090 r
+  add_160/A[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.280090 r
+  add_160/U557/Y (NAND2XL)                            0.050166   0.330257 f
+  add_160/U452/Y (OA21X1)                             0.141210   0.471467 f
+  add_160/U475/Y (OAI21X1)                            0.064543   0.536010 r
+  add_160/U483/Y (AOI21BX2)                           0.079852   0.615862 f
+  add_160/U478/Y (OAI21X1)                            0.057323   0.673184 r
+  add_160/U522/Y (AOI21BX1)                           0.097417   0.770602 f
+  add_160/U509/Y (XOR2X1)                             0.054632   0.825234 f
+  add_160/U460/Y (BUFX2)                              0.071035   0.896268 f
+  add_160/SUM[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.896268 f
+  add_161/A[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   0.896268 f
+  add_161/U1_8/CO (ADDFX1)                            0.141025   1.037293 f
+  add_161/U1_9/CO (ADDFHX2)                           0.075856   1.113149 f
+  add_161/U1_10/CO (ADDFX1)                           0.100974   1.214123 f
+  add_161/U1_11/CO (ADDFX1)                           0.105625   1.319748 f
+  add_161/U1_12/CO (ADDFX1)                           0.105626   1.425374 f
+  add_161/U1_13/CO (ADDFX1)                           0.105619   1.530993 f
+  add_161/U1_14/CO (ADDFX1)                           0.105626   1.636619 f
+  add_161/U1_15/CO (ADDFX1)                           0.105626   1.742246 f
+  add_161/U1_16/CO (ADDFX1)                           0.105626   1.847872 f
+  add_161/U1_17/CO (ADDFX1)                           0.105618   1.953490 f
+  add_161/U1_18/CO (ADDFX1)                           0.104697   2.058187 f
+  add_161/U1_19/CO (ADDFHX2)                          0.075848   2.134035 f
+  add_161/U1_20/CO (ADDFX1)                           0.100974   2.235009 f
+  add_161/U1_21/CO (ADDFX1)                           0.105600   2.340609 f
+  add_161/U1_22/CO (ADDFX1)                           0.105626   2.446236 f
+  add_161/U1_23/CO (ADDFX1)                           0.105626   2.551862 f
+  add_161/U1_24/CO (ADDFX1)                           0.105626   2.657488 f
+  add_161/U1_25/CO (ADDFX1)                           0.104703   2.762191 f
+  add_161/U1_26/CO (ADDFHX2)                          0.081494   2.843685 f
+  add_161/U1_27/CO (ADDFHX4)                          0.067224   2.910909 f
+  add_161/U1_28/CO (ADDFHX4)                          0.065103   2.976012 f
+  add_161/U1_29/CO (ADDFHX4)                          0.065098   3.041110 f
+  add_161/U1_30/CO (ADDFHX4)                          0.065098   3.106207 f
+  add_161/U1_31/CO (ADDFHX4)                          0.065098   3.171305 f
+  add_161/U1_32/CO (ADDFHX4)                          0.065098   3.236402 f
+  add_161/U1_33/CO (ADDFHX4)                          0.061550   3.297953 f
+  add_161/U1_34/CO (ADDFX1)                           0.099467   3.397420 f
+  add_161/U1_35/CO (ADDFX1)                           0.105618   3.503038 f
+  add_161/U1_36/CO (ADDFX1)                           0.115072   3.618110 f
+  add_161/U1_37/CO (ADDFHX4)                          0.072454   3.690563 f
+  add_161/U1_38/CO (ADDFHX4)                          0.065141   3.755705 f
+  add_161/U1_39/CO (ADDFHX4)                          0.065098   3.820803 f
+  add_161/U1_40/CO (ADDFHX4)                          0.065098   3.885900 f
+  add_161/U1_41/CO (ADDFHX4)                          0.065098   3.950998 f
+  add_161/U1_42/CO (ADDFHX4)                          0.065098   4.016096 f
+  add_161/U1_43/CO (ADDFHX4)                          0.065098   4.081193 f
+  add_161/U1_44/CO (ADDFHX4)                          0.061550   4.142744 f
+  add_161/U1_45/CO (ADDFX1)                           0.099467   4.242211 f
+  add_161/U1_46/CO (ADDFX1)                           0.105620   4.347831 f
+  add_161/U1_47/CO (ADDFX1)                           0.105607   4.453437 f
+  add_161/U1_48/CO (ADDFX1)                           0.104683   4.558120 f
+  add_161/U1_49/CO (ADDFHX2)                          0.081457   4.639577 f
+  add_161/U1_50/CO (ADDFHX4)                          0.067224   4.706800 f
+  add_161/U1_51/CO (ADDFHX4)                          0.065103   4.771904 f
+  add_161/U1_52/CO (ADDFHX4)                          0.061550   4.833454 f
+  add_161/U1_53/CO (ADDFX1)                           0.099467   4.932921 f
+  add_161/U1_54/CO (ADDFX1)                           0.105613   5.038534 f
+  add_161/U1_55/CO (ADDFX1)                           0.105604   5.144137 f
+  add_161/U1_56/S (ADDFX1)                            0.108345   5.252482 f
+  add_161/SUM[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   5.252482 f
+  gt_179_2/A[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.252482 f
+  gt_179_2/U247/Y (OR3X2)                             0.086750   5.339232 f
+  gt_179_2/U244/Y (NOR3X4)                            0.068610   5.407842 r
+  gt_179_2/U243/Y (OAI211X2)                          0.049770   5.457613 f
+  gt_179_2/U242/Y (NOR4BX4)                           0.065880   5.523492 r
+  gt_179_2/U245/Y (OAI32X2)                           0.036473   5.559966 f
+  gt_179_2/GE_LT_GT_LE (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.559966 f
+  U2080/Y (NAND2X2)                                   0.036007   5.595973 r
+  U2139/Y (CLKINVX4)                                  0.027705   5.623678 f
+  U3316/Y (NAND3BX2)                                  0.028372   5.652050 r
+  U3021/Y (NOR4BX2)                                   0.027929   5.679979 f
+  U2141/Y (AND4X2)                                    0.061598   5.741577 f
+  U2073/Y (NAND2BX2)                                  0.033077   5.774654 r
+  U2126/Y (INVX4)                                     0.036182   5.810837 f
+  U2900/Y (AND2X2)                                    0.065414   5.876251 f
+  add_0_root_add_192_2/A[1] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   5.876251 f
+  add_0_root_add_192_2/U354/Y (NOR2X2)                0.036563   5.912814 r
+  add_0_root_add_192_2/U255/Y (OAI21X1)               0.045107   5.957921 f
+  add_0_root_add_192_2/U457/Y (AOI21X1)               0.070538   6.028459 r
+  add_0_root_add_192_2/U207/Y (OAI21X1)               0.047912   6.076371 f
+  add_0_root_add_192_2/U279/Y (AOI21X2)               0.062289   6.138660 r
+  add_0_root_add_192_2/U278/Y (OAI21X2)               0.032057   6.170717 f
+  add_0_root_add_192_2/U281/Y (AOI21BX4)              0.086779   6.257496 r
+  add_0_root_add_192_2/U362/Y (OAI21X1)               0.035336   6.292832 f
+  add_0_root_add_192_2/U273/Y (AOI21BX2)              0.090586   6.383419 r
+  add_0_root_add_192_2/U27/Y (OAI21X1)                0.039443   6.422862 f
+  add_0_root_add_192_2/U442/Y (AOI21X1)               0.061238   6.484100 r
+  add_0_root_add_192_2/U441/Y (OAI21X1)               0.046305   6.530405 f
+  add_0_root_add_192_2/U439/Y (AOI21X1)               0.050319   6.580724 r
+  add_0_root_add_192_2/U283/Y (CLKINVX2)              0.032736   6.613460 f
+  add_0_root_add_192_2/U270/S (ADDFHX4)               0.083043   6.696503 f
+  add_0_root_add_192_2/SUM[32] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   6.696503 f
+  U2159/Y (NOR3BX4)                                   0.041218   6.737721 f
+  U2259/Y (OAI2BB1X4)                                 0.063723   6.801445 f
+  U2050/Y (INVX4)                                     0.021908   6.823353 r
+  U2164/Y (NAND2BX4)                                  0.045433   6.868785 r
+  U2800/Y (INVX2)                                     0.026475   6.895260 f
+  U4399/Y (OAI2BB1XL)                                 0.100060   6.995320 f
+  add_194/A[21] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   6.995320 f
+  add_194/U239/Y (OR2X2)                              0.077073   7.072392 f
+  add_194/U248/Y (AOI21BX4)                           0.088551   7.160944 r
+  add_194/U50/Y (OAI21X1)                             0.038139   7.199083 f
+  add_194/U413/Y (AOI21X1)                            0.047353   7.246436 r
+  add_194/U412/Y (OAI21X1)                            0.048464   7.294899 f
+  add_194/U236/Y (AOI21X2)                            0.059774   7.354674 r
+  add_194/U271/Y (OAI21X2)                            0.030962   7.385635 f
+  add_194/U302/Y (AOI21BX2)                           0.093195   7.478831 r
+  add_194/U245/Y (OAI21X4)                            0.021839   7.500669 f
+  add_194/U237/S (ADDFX2)                             0.087470   7.588139 f
+  add_194/SUM[30] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   7.588139 f
+  U2784/Y (NOR3BX1)                                   0.061625   7.649764 r
+  U2123/Y (NOR4BX4)                                   0.071752   7.721515 r
+  U2783/Y (NAND4BX2)                                  0.045625   7.767140 f
+  U2780/Y (OAI211XL)                                  0.039661   7.806802 r
+  U2122/Y (INVX2)                                     0.029542   7.836344 f
+  U2084/Y (NAND2BX2)                                  0.057933   7.894278 f
+  U2708/Y (INVX2)                                     0.031889   7.926167 r
+  U2283/Y (NAND2BX4)                                  0.038649   7.964816 f
+  U2064/Y (CLKINVX12)                                 0.028956   7.993772 r
+  U2063/Y (AOI22X1)                                   0.050806   8.044578 f
+  U2056/Y (INVX3)                                     0.035311   8.079888 r
+  U2055/Y (BUFX16)                                    0.050316   8.130204 r
+  conversion/value[25] (tracking_divide_step)         0.000000   8.130204 r
+  conversion/mult_420_C425/a[25] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   8.130204 r
+  conversion/mult_420_C425/U1034/CO (CMPR42X1)        0.168134   8.298338 r
+  conversion/mult_420_C425/U1004/S (CMPR42X2)         0.196236   8.494574 f
+  conversion/mult_420_C425/U1259/CO (CMPR42X1)        0.257883   8.752457 f
+  conversion/mult_420_C425/U1051/S (CMPR42X1)         0.257244   9.009701 f
+  conversion/mult_420_C425/U1668/Y (NOR2X2)           0.041472   9.051173 r
+  conversion/mult_420_C425/U398/Y (OAI21X1)           0.032681   9.083854 f
+  conversion/mult_420_C425/U1666/Y (AOI21X1)          0.048543   9.132397 r
+  conversion/mult_420_C425/U388/Y (OAI21X1)           0.049014   9.181411 f
+  conversion/mult_420_C425/U1132/Y (AOI21X4)          0.055617   9.237028 r
+  conversion/mult_420_C425/U1097/Y (INVX4)            0.018279   9.255307 f
+  conversion/mult_420_C425/U1062/Y (CLKINVX8)         0.026954   9.282261 r
+  conversion/mult_420_C425/U1112/Y (OAI21XL)          0.040764   9.323025 f
+  conversion/mult_420_C425/U1090/Y (XNOR2X2)          0.042174   9.365199 r
+  conversion/mult_420_C425/product[56] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/A[0] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/U168/Y (NAND2X2)            0.045610   9.410810 f
+  conversion/add_422_C425/U167/Y (NOR2X2)             0.048210   9.459020 r
+  conversion/add_422_C425/U166/Y (NAND2X2)            0.030661   9.489680 f
+  conversion/add_422_C425/U165/Y (NOR2X2)             0.050843   9.540524 r
+  conversion/add_422_C425/U221/Y (INVX2)              0.031008   9.571531 f
+  conversion/add_422_C425/U140/Y (NOR2XL)             0.044518   9.616049 r
+  conversion/add_422_C425/U189/Y (XNOR2X1)            0.048681   9.664730 r
+  conversion/add_422_C425/SUM[13] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.664730 r
+  conversion/result[13] (tracking_divide_step)        0.000000   9.664730 r
+  U3321/Y (AO2B2X2)                                   0.064104   9.728834 r
+  carrier_delta_full_reg[13]/D (DFFRQX2)              0.000000   9.728834 r
+  data arrival time                                              9.728834
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  carrier_delta_full_reg[13]/CK (DFFRQX2)             0.000000   9.800000 r
+  library setup time                                  -0.067152  9.732848
+  data required time                                             9.732848
+  --------------------------------------------------------------------------
+  data required time                                             9.732848
+  data arrival time                                              -9.728834
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.004014
+
+
+  Startpoint: frontend/correlator/ie_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: carrier_delta_full_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ie_reg[0]/CK (DFFRHQX4)         0.000000 # 0.000000 r
+  frontend/correlator/ie_reg[0]/Q (DFFRHQX4)          0.112462   0.112462 r
+  frontend/correlator/ie[0] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.112462 r
+  frontend/ie[0] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.112462 r
+  mult_157/a[0] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.112462 r
+  mult_157/U1198/Y (INVX8)                            0.041238   0.153700 f
+  mult_157/U1201/Y (NOR2X4)                           0.039893   0.193593 r
+  mult_157/U1205/Y (OR2X2)                            0.037244   0.230837 r
+  mult_157/U1386/Y (CLKAND2X2)                        0.049253   0.280090 r
+  mult_157/product[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.280090 r
+  add_160/A[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.280090 r
+  add_160/U557/Y (NAND2XL)                            0.050166   0.330257 f
+  add_160/U452/Y (OA21X1)                             0.141210   0.471467 f
+  add_160/U475/Y (OAI21X1)                            0.064543   0.536010 r
+  add_160/U483/Y (AOI21BX2)                           0.079852   0.615862 f
+  add_160/U478/Y (OAI21X1)                            0.057323   0.673184 r
+  add_160/U522/Y (AOI21BX1)                           0.097417   0.770602 f
+  add_160/U509/Y (XOR2X1)                             0.054632   0.825234 f
+  add_160/U460/Y (BUFX2)                              0.071035   0.896268 f
+  add_160/SUM[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.896268 f
+  add_161/A[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   0.896268 f
+  add_161/U1_8/CO (ADDFX1)                            0.141025   1.037293 f
+  add_161/U1_9/CO (ADDFHX2)                           0.075856   1.113149 f
+  add_161/U1_10/CO (ADDFX1)                           0.100974   1.214123 f
+  add_161/U1_11/CO (ADDFX1)                           0.105625   1.319748 f
+  add_161/U1_12/CO (ADDFX1)                           0.105626   1.425374 f
+  add_161/U1_13/CO (ADDFX1)                           0.105619   1.530993 f
+  add_161/U1_14/CO (ADDFX1)                           0.105626   1.636619 f
+  add_161/U1_15/CO (ADDFX1)                           0.105626   1.742246 f
+  add_161/U1_16/CO (ADDFX1)                           0.105626   1.847872 f
+  add_161/U1_17/CO (ADDFX1)                           0.105618   1.953490 f
+  add_161/U1_18/CO (ADDFX1)                           0.104697   2.058187 f
+  add_161/U1_19/CO (ADDFHX2)                          0.075848   2.134035 f
+  add_161/U1_20/CO (ADDFX1)                           0.100974   2.235009 f
+  add_161/U1_21/CO (ADDFX1)                           0.105600   2.340609 f
+  add_161/U1_22/CO (ADDFX1)                           0.105626   2.446236 f
+  add_161/U1_23/CO (ADDFX1)                           0.105626   2.551862 f
+  add_161/U1_24/CO (ADDFX1)                           0.105626   2.657488 f
+  add_161/U1_25/CO (ADDFX1)                           0.104703   2.762191 f
+  add_161/U1_26/CO (ADDFHX2)                          0.081494   2.843685 f
+  add_161/U1_27/CO (ADDFHX4)                          0.067224   2.910909 f
+  add_161/U1_28/CO (ADDFHX4)                          0.065103   2.976012 f
+  add_161/U1_29/CO (ADDFHX4)                          0.065098   3.041110 f
+  add_161/U1_30/CO (ADDFHX4)                          0.065098   3.106207 f
+  add_161/U1_31/CO (ADDFHX4)                          0.065098   3.171305 f
+  add_161/U1_32/CO (ADDFHX4)                          0.065098   3.236402 f
+  add_161/U1_33/CO (ADDFHX4)                          0.061550   3.297953 f
+  add_161/U1_34/CO (ADDFX1)                           0.099467   3.397420 f
+  add_161/U1_35/CO (ADDFX1)                           0.105618   3.503038 f
+  add_161/U1_36/CO (ADDFX1)                           0.115072   3.618110 f
+  add_161/U1_37/CO (ADDFHX4)                          0.072454   3.690563 f
+  add_161/U1_38/CO (ADDFHX4)                          0.065141   3.755705 f
+  add_161/U1_39/CO (ADDFHX4)                          0.065098   3.820803 f
+  add_161/U1_40/CO (ADDFHX4)                          0.065098   3.885900 f
+  add_161/U1_41/CO (ADDFHX4)                          0.065098   3.950998 f
+  add_161/U1_42/CO (ADDFHX4)                          0.065098   4.016096 f
+  add_161/U1_43/CO (ADDFHX4)                          0.065098   4.081193 f
+  add_161/U1_44/CO (ADDFHX4)                          0.061550   4.142744 f
+  add_161/U1_45/CO (ADDFX1)                           0.099467   4.242211 f
+  add_161/U1_46/CO (ADDFX1)                           0.105620   4.347831 f
+  add_161/U1_47/CO (ADDFX1)                           0.105607   4.453437 f
+  add_161/U1_48/CO (ADDFX1)                           0.104683   4.558120 f
+  add_161/U1_49/CO (ADDFHX2)                          0.081457   4.639577 f
+  add_161/U1_50/CO (ADDFHX4)                          0.067224   4.706800 f
+  add_161/U1_51/CO (ADDFHX4)                          0.065103   4.771904 f
+  add_161/U1_52/CO (ADDFHX4)                          0.061550   4.833454 f
+  add_161/U1_53/CO (ADDFX1)                           0.099467   4.932921 f
+  add_161/U1_54/CO (ADDFX1)                           0.105613   5.038534 f
+  add_161/U1_55/CO (ADDFX1)                           0.105604   5.144137 f
+  add_161/U1_56/S (ADDFX1)                            0.108345   5.252482 f
+  add_161/SUM[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   5.252482 f
+  gt_179_2/A[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.252482 f
+  gt_179_2/U247/Y (OR3X2)                             0.086750   5.339232 f
+  gt_179_2/U244/Y (NOR3X4)                            0.068610   5.407842 r
+  gt_179_2/U243/Y (OAI211X2)                          0.049770   5.457613 f
+  gt_179_2/U242/Y (NOR4BX4)                           0.065880   5.523492 r
+  gt_179_2/U245/Y (OAI32X2)                           0.036473   5.559966 f
+  gt_179_2/GE_LT_GT_LE (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.559966 f
+  U2080/Y (NAND2X2)                                   0.036007   5.595973 r
+  U2139/Y (CLKINVX4)                                  0.027705   5.623678 f
+  U3316/Y (NAND3BX2)                                  0.028372   5.652050 r
+  U3021/Y (NOR4BX2)                                   0.027929   5.679979 f
+  U2141/Y (AND4X2)                                    0.061598   5.741577 f
+  U2073/Y (NAND2BX2)                                  0.033077   5.774654 r
+  U2126/Y (INVX4)                                     0.036182   5.810837 f
+  U2900/Y (AND2X2)                                    0.065414   5.876251 f
+  add_0_root_add_192_2/A[1] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   5.876251 f
+  add_0_root_add_192_2/U354/Y (NOR2X2)                0.036563   5.912814 r
+  add_0_root_add_192_2/U255/Y (OAI21X1)               0.045107   5.957921 f
+  add_0_root_add_192_2/U457/Y (AOI21X1)               0.070538   6.028459 r
+  add_0_root_add_192_2/U207/Y (OAI21X1)               0.047912   6.076371 f
+  add_0_root_add_192_2/U279/Y (AOI21X2)               0.062289   6.138660 r
+  add_0_root_add_192_2/U278/Y (OAI21X2)               0.032057   6.170717 f
+  add_0_root_add_192_2/U281/Y (AOI21BX4)              0.086779   6.257496 r
+  add_0_root_add_192_2/U362/Y (OAI21X1)               0.035336   6.292832 f
+  add_0_root_add_192_2/U273/Y (AOI21BX2)              0.090586   6.383419 r
+  add_0_root_add_192_2/U27/Y (OAI21X1)                0.039443   6.422862 f
+  add_0_root_add_192_2/U442/Y (AOI21X1)               0.061238   6.484100 r
+  add_0_root_add_192_2/U441/Y (OAI21X1)               0.046305   6.530405 f
+  add_0_root_add_192_2/U439/Y (AOI21X1)               0.050319   6.580724 r
+  add_0_root_add_192_2/U283/Y (CLKINVX2)              0.032736   6.613460 f
+  add_0_root_add_192_2/U270/S (ADDFHX4)               0.083043   6.696503 f
+  add_0_root_add_192_2/SUM[32] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   6.696503 f
+  U2159/Y (NOR3BX4)                                   0.041218   6.737721 f
+  U2259/Y (OAI2BB1X4)                                 0.063723   6.801445 f
+  U2050/Y (INVX4)                                     0.021908   6.823353 r
+  U2164/Y (NAND2BX4)                                  0.045433   6.868785 r
+  U2800/Y (INVX2)                                     0.026475   6.895260 f
+  U4399/Y (OAI2BB1XL)                                 0.100060   6.995320 f
+  add_194/A[21] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   6.995320 f
+  add_194/U239/Y (OR2X2)                              0.077073   7.072392 f
+  add_194/U248/Y (AOI21BX4)                           0.088551   7.160944 r
+  add_194/U50/Y (OAI21X1)                             0.038139   7.199083 f
+  add_194/U413/Y (AOI21X1)                            0.047353   7.246436 r
+  add_194/U412/Y (OAI21X1)                            0.048464   7.294899 f
+  add_194/U236/Y (AOI21X2)                            0.059774   7.354674 r
+  add_194/U271/Y (OAI21X2)                            0.030962   7.385635 f
+  add_194/U302/Y (AOI21BX2)                           0.093195   7.478831 r
+  add_194/U245/Y (OAI21X4)                            0.021839   7.500669 f
+  add_194/U237/S (ADDFX2)                             0.087470   7.588139 f
+  add_194/SUM[30] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   7.588139 f
+  U2784/Y (NOR3BX1)                                   0.061625   7.649764 r
+  U2123/Y (NOR4BX4)                                   0.071752   7.721515 r
+  U2783/Y (NAND4BX2)                                  0.045625   7.767140 f
+  U2780/Y (OAI211XL)                                  0.039661   7.806802 r
+  U2122/Y (INVX2)                                     0.029542   7.836344 f
+  U2084/Y (NAND2BX2)                                  0.057933   7.894278 f
+  U2708/Y (INVX2)                                     0.031889   7.926167 r
+  U2283/Y (NAND2BX4)                                  0.038649   7.964816 f
+  U2064/Y (CLKINVX12)                                 0.028956   7.993772 r
+  U2063/Y (AOI22X1)                                   0.050806   8.044578 f
+  U2056/Y (INVX3)                                     0.035311   8.079888 r
+  U2055/Y (BUFX16)                                    0.050316   8.130204 r
+  conversion/value[25] (tracking_divide_step)         0.000000   8.130204 r
+  conversion/mult_420_C425/a[25] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   8.130204 r
+  conversion/mult_420_C425/U1034/CO (CMPR42X1)        0.168134   8.298338 r
+  conversion/mult_420_C425/U1004/S (CMPR42X2)         0.196236   8.494574 f
+  conversion/mult_420_C425/U1259/CO (CMPR42X1)        0.257883   8.752457 f
+  conversion/mult_420_C425/U1051/S (CMPR42X1)         0.257244   9.009701 f
+  conversion/mult_420_C425/U1668/Y (NOR2X2)           0.041472   9.051173 r
+  conversion/mult_420_C425/U398/Y (OAI21X1)           0.032681   9.083854 f
+  conversion/mult_420_C425/U1666/Y (AOI21X1)          0.048543   9.132397 r
+  conversion/mult_420_C425/U388/Y (OAI21X1)           0.049014   9.181411 f
+  conversion/mult_420_C425/U1132/Y (AOI21X4)          0.055617   9.237028 r
+  conversion/mult_420_C425/U1097/Y (INVX4)            0.018279   9.255307 f
+  conversion/mult_420_C425/U1062/Y (CLKINVX8)         0.026954   9.282261 r
+  conversion/mult_420_C425/U1112/Y (OAI21XL)          0.040764   9.323025 f
+  conversion/mult_420_C425/U1090/Y (XNOR2X2)          0.042174   9.365199 r
+  conversion/mult_420_C425/product[56] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/A[0] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/U168/Y (NAND2X2)            0.045610   9.410810 f
+  conversion/add_422_C425/U167/Y (NOR2X2)             0.048210   9.459020 r
+  conversion/add_422_C425/U166/Y (NAND2X2)            0.030661   9.489680 f
+  conversion/add_422_C425/U165/Y (NOR2X2)             0.050843   9.540524 r
+  conversion/add_422_C425/U187/Y (NAND2X2)            0.036973   9.577497 f
+  conversion/add_422_C425/U141/Y (CLKINVX4)           0.033168   9.610664 r
+  conversion/add_422_C425/U186/Y (NAND2X2)            0.020799   9.631463 f
+  conversion/add_422_C425/U155/Y (XNOR2X1)            0.032176   9.663639 r
+  conversion/add_422_C425/SUM[19] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.663639 r
+  conversion/result[19] (tracking_divide_step)        0.000000   9.663639 r
+  U2105/Y (AO2B2X2)                                   0.065129   9.728768 r
+  carrier_delta_full_reg[19]/D (DFFRQX2)              0.000000   9.728768 r
+  data arrival time                                              9.728768
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  carrier_delta_full_reg[19]/CK (DFFRQX2)             0.000000   9.800000 r
+  library setup time                                  -0.067038  9.732963
+  data required time                                             9.732963
+  --------------------------------------------------------------------------
+  data required time                                             9.732963
+  data arrival time                                              -9.728768
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.004194
+
+
+  Startpoint: frontend/correlator/ie_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: code_delta_full_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  frontend/correlator/ie_reg[0]/CK (DFFRHQX4)         0.000000 # 0.000000 r
+  frontend/correlator/ie_reg[0]/Q (DFFRHQX4)          0.112462   0.112462 r
+  frontend/correlator/ie[0] (epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28)
+                                                      0.000000   0.112462 r
+  frontend/ie[0] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.112462 r
+  mult_157/a[0] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.112462 r
+  mult_157/U1198/Y (INVX8)                            0.041238   0.153700 f
+  mult_157/U1201/Y (NOR2X4)                           0.039893   0.193593 r
+  mult_157/U1205/Y (OR2X2)                            0.037244   0.230837 r
+  mult_157/U1386/Y (CLKAND2X2)                        0.049253   0.280090 r
+  mult_157/product[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38)
+                                                      0.000000   0.280090 r
+  add_160/A[2] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.280090 r
+  add_160/U557/Y (NAND2XL)                            0.050166   0.330257 f
+  add_160/U452/Y (OA21X1)                             0.141210   0.471467 f
+  add_160/U475/Y (OAI21X1)                            0.064543   0.536010 r
+  add_160/U483/Y (AOI21BX2)                           0.079852   0.615862 f
+  add_160/U478/Y (OAI21X1)                            0.057323   0.673184 r
+  add_160/U522/Y (AOI21BX1)                           0.097417   0.770602 f
+  add_160/U509/Y (XOR2X1)                             0.054632   0.825234 f
+  add_160/U460/Y (BUFX2)                              0.071035   0.896268 f
+  add_160/SUM[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36)
+                                                      0.000000   0.896268 f
+  add_161/A[8] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   0.896268 f
+  add_161/U1_8/CO (ADDFX1)                            0.141025   1.037293 f
+  add_161/U1_9/CO (ADDFHX2)                           0.075856   1.113149 f
+  add_161/U1_10/CO (ADDFX1)                           0.100974   1.214123 f
+  add_161/U1_11/CO (ADDFX1)                           0.105625   1.319748 f
+  add_161/U1_12/CO (ADDFX1)                           0.105626   1.425374 f
+  add_161/U1_13/CO (ADDFX1)                           0.105619   1.530993 f
+  add_161/U1_14/CO (ADDFX1)                           0.105626   1.636619 f
+  add_161/U1_15/CO (ADDFX1)                           0.105626   1.742246 f
+  add_161/U1_16/CO (ADDFX1)                           0.105626   1.847872 f
+  add_161/U1_17/CO (ADDFX1)                           0.105618   1.953490 f
+  add_161/U1_18/CO (ADDFX1)                           0.104697   2.058187 f
+  add_161/U1_19/CO (ADDFHX2)                          0.075848   2.134035 f
+  add_161/U1_20/CO (ADDFX1)                           0.100974   2.235009 f
+  add_161/U1_21/CO (ADDFX1)                           0.105600   2.340609 f
+  add_161/U1_22/CO (ADDFX1)                           0.105626   2.446236 f
+  add_161/U1_23/CO (ADDFX1)                           0.105626   2.551862 f
+  add_161/U1_24/CO (ADDFX1)                           0.105626   2.657488 f
+  add_161/U1_25/CO (ADDFX1)                           0.104703   2.762191 f
+  add_161/U1_26/CO (ADDFHX2)                          0.081494   2.843685 f
+  add_161/U1_27/CO (ADDFHX4)                          0.067224   2.910909 f
+  add_161/U1_28/CO (ADDFHX4)                          0.065103   2.976012 f
+  add_161/U1_29/CO (ADDFHX4)                          0.065098   3.041110 f
+  add_161/U1_30/CO (ADDFHX4)                          0.065098   3.106207 f
+  add_161/U1_31/CO (ADDFHX4)                          0.065098   3.171305 f
+  add_161/U1_32/CO (ADDFHX4)                          0.065098   3.236402 f
+  add_161/U1_33/CO (ADDFHX4)                          0.061550   3.297953 f
+  add_161/U1_34/CO (ADDFX1)                           0.099467   3.397420 f
+  add_161/U1_35/CO (ADDFX1)                           0.105618   3.503038 f
+  add_161/U1_36/CO (ADDFX1)                           0.115072   3.618110 f
+  add_161/U1_37/CO (ADDFHX4)                          0.072454   3.690563 f
+  add_161/U1_38/CO (ADDFHX4)                          0.065141   3.755705 f
+  add_161/U1_39/CO (ADDFHX4)                          0.065098   3.820803 f
+  add_161/U1_40/CO (ADDFHX4)                          0.065098   3.885900 f
+  add_161/U1_41/CO (ADDFHX4)                          0.065098   3.950998 f
+  add_161/U1_42/CO (ADDFHX4)                          0.065098   4.016096 f
+  add_161/U1_43/CO (ADDFHX4)                          0.065098   4.081193 f
+  add_161/U1_44/CO (ADDFHX4)                          0.061550   4.142744 f
+  add_161/U1_45/CO (ADDFX1)                           0.099467   4.242211 f
+  add_161/U1_46/CO (ADDFX1)                           0.105620   4.347831 f
+  add_161/U1_47/CO (ADDFX1)                           0.105607   4.453437 f
+  add_161/U1_48/CO (ADDFX1)                           0.104683   4.558120 f
+  add_161/U1_49/CO (ADDFHX2)                          0.081457   4.639577 f
+  add_161/U1_50/CO (ADDFHX4)                          0.067224   4.706800 f
+  add_161/U1_51/CO (ADDFHX4)                          0.065103   4.771904 f
+  add_161/U1_52/CO (ADDFHX4)                          0.061550   4.833454 f
+  add_161/U1_53/CO (ADDFX1)                           0.099467   4.932921 f
+  add_161/U1_54/CO (ADDFX1)                           0.105613   5.038534 f
+  add_161/U1_55/CO (ADDFX1)                           0.105604   5.144137 f
+  add_161/U1_56/S (ADDFX1)                            0.108345   5.252482 f
+  add_161/SUM[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5)
+                                                      0.000000   5.252482 f
+  gt_179_2/A[56] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.252482 f
+  gt_179_2/U247/Y (OR3X2)                             0.086750   5.339232 f
+  gt_179_2/U244/Y (NOR3X4)                            0.068610   5.407842 r
+  gt_179_2/U243/Y (OAI211X2)                          0.049770   5.457613 f
+  gt_179_2/U242/Y (NOR4BX4)                           0.065880   5.523492 r
+  gt_179_2/U245/Y (OAI32X2)                           0.036473   5.559966 f
+  gt_179_2/GE_LT_GT_LE (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15)
+                                                      0.000000   5.559966 f
+  U2080/Y (NAND2X2)                                   0.036007   5.595973 r
+  U2139/Y (CLKINVX4)                                  0.027705   5.623678 f
+  U3316/Y (NAND3BX2)                                  0.028372   5.652050 r
+  U3021/Y (NOR4BX2)                                   0.027929   5.679979 f
+  U2141/Y (AND4X2)                                    0.061598   5.741577 f
+  U2073/Y (NAND2BX2)                                  0.033077   5.774654 r
+  U2126/Y (INVX4)                                     0.036182   5.810837 f
+  U2900/Y (AND2X2)                                    0.065414   5.876251 f
+  add_0_root_add_192_2/A[1] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   5.876251 f
+  add_0_root_add_192_2/U354/Y (NOR2X2)                0.036563   5.912814 r
+  add_0_root_add_192_2/U255/Y (OAI21X1)               0.045107   5.957921 f
+  add_0_root_add_192_2/U457/Y (AOI21X1)               0.070538   6.028459 r
+  add_0_root_add_192_2/U207/Y (OAI21X1)               0.047912   6.076371 f
+  add_0_root_add_192_2/U279/Y (AOI21X2)               0.062289   6.138660 r
+  add_0_root_add_192_2/U278/Y (OAI21X2)               0.032057   6.170717 f
+  add_0_root_add_192_2/U281/Y (AOI21BX4)              0.086779   6.257496 r
+  add_0_root_add_192_2/U362/Y (OAI21X1)               0.035336   6.292832 f
+  add_0_root_add_192_2/U273/Y (AOI21BX2)              0.090586   6.383419 r
+  add_0_root_add_192_2/U27/Y (OAI21X1)                0.039443   6.422862 f
+  add_0_root_add_192_2/U442/Y (AOI21X1)               0.061238   6.484100 r
+  add_0_root_add_192_2/U441/Y (OAI21X1)               0.046305   6.530405 f
+  add_0_root_add_192_2/U439/Y (AOI21X1)               0.050319   6.580724 r
+  add_0_root_add_192_2/U283/Y (CLKINVX2)              0.032736   6.613460 f
+  add_0_root_add_192_2/U270/S (ADDFHX4)               0.083043   6.696503 f
+  add_0_root_add_192_2/SUM[32] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34)
+                                                      0.000000   6.696503 f
+  U2159/Y (NOR3BX4)                                   0.041218   6.737721 f
+  U2259/Y (OAI2BB1X4)                                 0.063723   6.801445 f
+  U2050/Y (INVX4)                                     0.021908   6.823353 r
+  U2164/Y (NAND2BX4)                                  0.045433   6.868785 r
+  U2800/Y (INVX2)                                     0.026475   6.895260 f
+  U4399/Y (OAI2BB1XL)                                 0.100060   6.995320 f
+  add_194/A[21] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   6.995320 f
+  add_194/U239/Y (OR2X2)                              0.077073   7.072392 f
+  add_194/U248/Y (AOI21BX4)                           0.088551   7.160944 r
+  add_194/U50/Y (OAI21X1)                             0.038139   7.199083 f
+  add_194/U413/Y (AOI21X1)                            0.047353   7.246436 r
+  add_194/U412/Y (OAI21X1)                            0.048464   7.294899 f
+  add_194/U236/Y (AOI21X2)                            0.059774   7.354674 r
+  add_194/U271/Y (OAI21X2)                            0.030962   7.385635 f
+  add_194/U302/Y (AOI21BX2)                           0.093195   7.478831 r
+  add_194/U245/Y (OAI21X4)                            0.021839   7.500669 f
+  add_194/U237/S (ADDFX2)                             0.087470   7.588139 f
+  add_194/SUM[30] (tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35)
+                                                      0.000000   7.588139 f
+  U2784/Y (NOR3BX1)                                   0.061625   7.649764 r
+  U2123/Y (NOR4BX4)                                   0.071752   7.721515 r
+  U2783/Y (NAND4BX2)                                  0.045625   7.767140 f
+  U2780/Y (OAI211XL)                                  0.039661   7.806802 r
+  U2122/Y (INVX2)                                     0.029542   7.836344 f
+  U2084/Y (NAND2BX2)                                  0.057933   7.894278 f
+  U2708/Y (INVX2)                                     0.031889   7.926167 r
+  U2283/Y (NAND2BX4)                                  0.038649   7.964816 f
+  U2064/Y (CLKINVX12)                                 0.028956   7.993772 r
+  U2063/Y (AOI22X1)                                   0.050806   8.044578 f
+  U2056/Y (INVX3)                                     0.035311   8.079888 r
+  U2055/Y (BUFX16)                                    0.050316   8.130204 r
+  conversion/value[25] (tracking_divide_step)         0.000000   8.130204 r
+  conversion/mult_420_C425/a[25] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   8.130204 r
+  conversion/mult_420_C425/U1034/CO (CMPR42X1)        0.168134   8.298338 r
+  conversion/mult_420_C425/U1004/S (CMPR42X2)         0.196236   8.494574 f
+  conversion/mult_420_C425/U1259/CO (CMPR42X1)        0.257883   8.752457 f
+  conversion/mult_420_C425/U1051/S (CMPR42X1)         0.257244   9.009701 f
+  conversion/mult_420_C425/U1668/Y (NOR2X2)           0.041472   9.051173 r
+  conversion/mult_420_C425/U398/Y (OAI21X1)           0.032681   9.083854 f
+  conversion/mult_420_C425/U1666/Y (AOI21X1)          0.048543   9.132397 r
+  conversion/mult_420_C425/U388/Y (OAI21X1)           0.049014   9.181411 f
+  conversion/mult_420_C425/U1132/Y (AOI21X4)          0.055617   9.237028 r
+  conversion/mult_420_C425/U1097/Y (INVX4)            0.018279   9.255307 f
+  conversion/mult_420_C425/U1062/Y (CLKINVX8)         0.026954   9.282261 r
+  conversion/mult_420_C425/U1112/Y (OAI21XL)          0.040764   9.323025 f
+  conversion/mult_420_C425/U1090/Y (XNOR2X2)          0.042174   9.365199 r
+  conversion/mult_420_C425/product[56] (tracking_divide_step_DW_mult_tc_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/A[0] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.365199 r
+  conversion/add_422_C425/U168/Y (NAND2X2)            0.045610   9.410810 f
+  conversion/add_422_C425/U167/Y (NOR2X2)             0.048210   9.459020 r
+  conversion/add_422_C425/U166/Y (NAND2X2)            0.030661   9.489680 f
+  conversion/add_422_C425/U165/Y (NOR2X2)             0.050843   9.540524 r
+  conversion/add_422_C425/U221/Y (INVX2)              0.031008   9.571531 f
+  conversion/add_422_C425/U153/Y (OR2X2)              0.057148   9.628679 f
+  conversion/add_422_C425/U138/Y (XNOR2X2)            0.032305   9.660984 r
+  conversion/add_422_C425/SUM[12] (tracking_divide_step_DW01_add_2)
+                                                      0.000000   9.660984 r
+  conversion/result[12] (tracking_divide_step)        0.000000   9.660984 r
+  U3333/Y (AO2B2X2)                                   0.066811   9.727795 r
+  code_delta_full_reg[12]/D (DFFRQX2)                 0.000000   9.727795 r
+  data arrival time                                              9.727795
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  code_delta_full_reg[12]/CK (DFFRQX2)                0.000000   9.800000 r
+  library setup time                                  -0.066804  9.733196
+  data required time                                             9.733196
+  --------------------------------------------------------------------------
+  data required time                                             9.733196
+  data arrival time                                              -9.727795
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005402
+
+
+1

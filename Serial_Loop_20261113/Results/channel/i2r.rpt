@@ -1,0 +1,590 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:32:04 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: init_code_phase_q[40]
+              (input port clocked by clk)
+  Endpoint: frontend/code_source/target_late_index_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_code_phase_q[40] (in)                          0.032123   1.032123 r
+  frontend/init_code_phase_q[40] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/init_code_phase_q[40] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/U361/Y (NAND3XL)               0.051875   1.083997 f
+  frontend/code_source/U363/Y (NOR4X1)                0.090963   1.174960 r
+  frontend/code_source/U53/Y (BUFX2)                  0.045250   1.220210 r
+  frontend/code_source/U44/Y (BUFX2)                  0.030816   1.251026 r
+  frontend/code_source/U43/Y (BUFX2)                  0.123163   1.374189 r
+  frontend/code_source/U765/Y (MXI2X1)                0.092719   1.466908 f
+  frontend/code_source/U764/Y (CLKINVX1)              0.046254   1.513162 r
+  frontend/code_source/sub_109_C141/B[0] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   1.513162 r
+  frontend/code_source/sub_109_C141/U46/Y (INVX2)     0.014190   1.527352 f
+  frontend/code_source/sub_109_C141/U78/Y (AND2X2)    0.056612   1.583964 f
+  frontend/code_source/sub_109_C141/U79/Y (AND2X2)    0.058845   1.642809 f
+  frontend/code_source/sub_109_C141/U80/Y (AND2X2)    0.058850   1.701659 f
+  frontend/code_source/sub_109_C141/U81/Y (AND2X2)    0.058850   1.760509 f
+  frontend/code_source/sub_109_C141/U82/Y (AND2X2)    0.058850   1.819359 f
+  frontend/code_source/sub_109_C141/U83/Y (AND2X2)    0.058850   1.878209 f
+  frontend/code_source/sub_109_C141/U84/Y (AND2X2)    0.058850   1.937059 f
+  frontend/code_source/sub_109_C141/U85/Y (AND2X2)    0.057258   1.994317 f
+  frontend/code_source/sub_109_C141/U86/Y (AND2X2)    0.056837   2.051154 f
+  frontend/code_source/sub_109_C141/U87/Y (AND2X2)    0.056836   2.107991 f
+  frontend/code_source/sub_109_C141/U88/Y (AND2X2)    0.056836   2.164827 f
+  frontend/code_source/sub_109_C141/U89/Y (AND2X2)    0.058429   2.223255 f
+  frontend/code_source/sub_109_C141/U90/Y (AND2X2)    0.058849   2.282104 f
+  frontend/code_source/sub_109_C141/U60/Y (AND2X2)    0.058850   2.340954 f
+  frontend/code_source/sub_109_C141/U61/Y (AND2X2)    0.057258   2.398212 f
+  frontend/code_source/sub_109_C141/U62/Y (AND2X2)    0.058430   2.456642 f
+  frontend/code_source/sub_109_C141/U63/Y (AND2X2)    0.058849   2.515491 f
+  frontend/code_source/sub_109_C141/U64/Y (AND2X2)    0.057258   2.572749 f
+  frontend/code_source/sub_109_C141/U65/Y (AND2X2)    0.058430   2.631179 f
+  frontend/code_source/sub_109_C141/U66/Y (AND2X2)    0.058849   2.690028 f
+  frontend/code_source/sub_109_C141/U67/Y (AND2X2)    0.058850   2.748878 f
+  frontend/code_source/sub_109_C141/U68/Y (AND2X2)    0.057258   2.806136 f
+  frontend/code_source/sub_109_C141/U69/Y (AND2X2)    0.058430   2.864565 f
+  frontend/code_source/sub_109_C141/U70/Y (AND2X2)    0.058849   2.923414 f
+  frontend/code_source/sub_109_C141/U71/Y (AND2X2)    0.058850   2.982265 f
+  frontend/code_source/sub_109_C141/U72/Y (AND2X2)    0.057258   3.039522 f
+  frontend/code_source/sub_109_C141/U91/Y (AND2X2)    0.057247   3.096769 f
+  frontend/code_source/sub_109_C141/U6/Y (OR2X2)      0.063915   3.160684 f
+  frontend/code_source/sub_109_C141/U10/Y (AND2X2)    0.057986   3.218670 f
+  frontend/code_source/sub_109_C141/U7/Y (OR2X2)      0.062213   3.280883 f
+  frontend/code_source/sub_109_C141/U9/Y (AND2X2)     0.058714   3.339597 f
+  frontend/code_source/sub_109_C141/U59/Y (AND2X2)    0.058850   3.398447 f
+  frontend/code_source/sub_109_C141/U4/Y (INVX2)      0.017596   3.416043 r
+  frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)    0.055984   3.472027 r
+  frontend/code_source/sub_109_C141/DIFF[33] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   3.472027 r
+  frontend/code_source/sub_109_2_C141/B[33] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.472027 r
+  frontend/code_source/sub_109_2_C141/U2/Y (INVX2)    0.022381   3.494408 f
+  frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)    0.058306   3.552714 f
+  frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)    0.062871   3.615585 f
+  frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)    0.062871   3.678456 f
+  frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)    0.062871   3.741326 f
+  frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)    0.062871   3.804197 f
+  frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)    0.062871   3.867068 f
+  frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)    0.062871   3.929939 f
+  frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)    0.062871   3.992809 f
+  frontend/code_source/sub_109_2_C141/U11/Y (OR2X2)   0.058409   4.051219 f
+  frontend/code_source/sub_109_2_C141/U24/Y (XNOR2X1) 0.050417   4.101635 r
+  frontend/code_source/sub_109_2_C141/DIFF[42] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.101635 r
+  frontend/code_source/U597/Y (AOI22XL)               0.052640   4.154276 f
+  frontend/code_source/U596/Y (OAI2BB1X1)             0.028826   4.183102 r
+  frontend/code_source/target_late_index_reg[10]/D (DFFRQX2)
+                                                      0.000000   4.183102 r
+  data arrival time                                              4.183102
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  frontend/code_source/target_late_index_reg[10]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.183102
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.548850
+
+
+  Startpoint: init_code_phase_q[40]
+              (input port clocked by clk)
+  Endpoint: frontend/code_source/target_late_index_reg[9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_code_phase_q[40] (in)                          0.032123   1.032123 r
+  frontend/init_code_phase_q[40] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/init_code_phase_q[40] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/U361/Y (NAND3XL)               0.051875   1.083997 f
+  frontend/code_source/U363/Y (NOR4X1)                0.090963   1.174960 r
+  frontend/code_source/U53/Y (BUFX2)                  0.045250   1.220210 r
+  frontend/code_source/U44/Y (BUFX2)                  0.030816   1.251026 r
+  frontend/code_source/U43/Y (BUFX2)                  0.123163   1.374189 r
+  frontend/code_source/U765/Y (MXI2X1)                0.092719   1.466908 f
+  frontend/code_source/U764/Y (CLKINVX1)              0.046254   1.513162 r
+  frontend/code_source/sub_109_C141/B[0] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   1.513162 r
+  frontend/code_source/sub_109_C141/U46/Y (INVX2)     0.014190   1.527352 f
+  frontend/code_source/sub_109_C141/U78/Y (AND2X2)    0.056612   1.583964 f
+  frontend/code_source/sub_109_C141/U79/Y (AND2X2)    0.058845   1.642809 f
+  frontend/code_source/sub_109_C141/U80/Y (AND2X2)    0.058850   1.701659 f
+  frontend/code_source/sub_109_C141/U81/Y (AND2X2)    0.058850   1.760509 f
+  frontend/code_source/sub_109_C141/U82/Y (AND2X2)    0.058850   1.819359 f
+  frontend/code_source/sub_109_C141/U83/Y (AND2X2)    0.058850   1.878209 f
+  frontend/code_source/sub_109_C141/U84/Y (AND2X2)    0.058850   1.937059 f
+  frontend/code_source/sub_109_C141/U85/Y (AND2X2)    0.057258   1.994317 f
+  frontend/code_source/sub_109_C141/U86/Y (AND2X2)    0.056837   2.051154 f
+  frontend/code_source/sub_109_C141/U87/Y (AND2X2)    0.056836   2.107991 f
+  frontend/code_source/sub_109_C141/U88/Y (AND2X2)    0.056836   2.164827 f
+  frontend/code_source/sub_109_C141/U89/Y (AND2X2)    0.058429   2.223255 f
+  frontend/code_source/sub_109_C141/U90/Y (AND2X2)    0.058849   2.282104 f
+  frontend/code_source/sub_109_C141/U60/Y (AND2X2)    0.058850   2.340954 f
+  frontend/code_source/sub_109_C141/U61/Y (AND2X2)    0.057258   2.398212 f
+  frontend/code_source/sub_109_C141/U62/Y (AND2X2)    0.058430   2.456642 f
+  frontend/code_source/sub_109_C141/U63/Y (AND2X2)    0.058849   2.515491 f
+  frontend/code_source/sub_109_C141/U64/Y (AND2X2)    0.057258   2.572749 f
+  frontend/code_source/sub_109_C141/U65/Y (AND2X2)    0.058430   2.631179 f
+  frontend/code_source/sub_109_C141/U66/Y (AND2X2)    0.058849   2.690028 f
+  frontend/code_source/sub_109_C141/U67/Y (AND2X2)    0.058850   2.748878 f
+  frontend/code_source/sub_109_C141/U68/Y (AND2X2)    0.057258   2.806136 f
+  frontend/code_source/sub_109_C141/U69/Y (AND2X2)    0.058430   2.864565 f
+  frontend/code_source/sub_109_C141/U70/Y (AND2X2)    0.058849   2.923414 f
+  frontend/code_source/sub_109_C141/U71/Y (AND2X2)    0.058850   2.982265 f
+  frontend/code_source/sub_109_C141/U72/Y (AND2X2)    0.057258   3.039522 f
+  frontend/code_source/sub_109_C141/U91/Y (AND2X2)    0.057247   3.096769 f
+  frontend/code_source/sub_109_C141/U6/Y (OR2X2)      0.063915   3.160684 f
+  frontend/code_source/sub_109_C141/U10/Y (AND2X2)    0.057986   3.218670 f
+  frontend/code_source/sub_109_C141/U7/Y (OR2X2)      0.062213   3.280883 f
+  frontend/code_source/sub_109_C141/U9/Y (AND2X2)     0.058714   3.339597 f
+  frontend/code_source/sub_109_C141/U59/Y (AND2X2)    0.058850   3.398447 f
+  frontend/code_source/sub_109_C141/U4/Y (INVX2)      0.017596   3.416043 r
+  frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)    0.055984   3.472027 r
+  frontend/code_source/sub_109_C141/DIFF[33] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   3.472027 r
+  frontend/code_source/sub_109_2_C141/B[33] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.472027 r
+  frontend/code_source/sub_109_2_C141/U2/Y (INVX2)    0.022381   3.494408 f
+  frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)    0.058306   3.552714 f
+  frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)    0.062871   3.615585 f
+  frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)    0.062871   3.678456 f
+  frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)    0.062871   3.741326 f
+  frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)    0.062871   3.804197 f
+  frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)    0.062871   3.867068 f
+  frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)    0.062871   3.929939 f
+  frontend/code_source/sub_109_2_C141/U9/Y (OR2X2)    0.062871   3.992809 f
+  frontend/code_source/sub_109_2_C141/U28/Y (XNOR2X1) 0.051434   4.044243 r
+  frontend/code_source/sub_109_2_C141/DIFF[41] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   4.044243 r
+  frontend/code_source/U599/Y (AOI22XL)               0.052662   4.096905 f
+  frontend/code_source/U598/Y (OAI2BB1X1)             0.028826   4.125731 r
+  frontend/code_source/target_late_index_reg[9]/D (DFFRQX2)
+                                                      0.000000   4.125731 r
+  data arrival time                                              4.125731
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  frontend/code_source/target_late_index_reg[9]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.125731
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.606220
+
+
+  Startpoint: init_code_phase_q[40]
+              (input port clocked by clk)
+  Endpoint: frontend/code_source/target_late_index_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_code_phase_q[40] (in)                          0.032123   1.032123 r
+  frontend/init_code_phase_q[40] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/init_code_phase_q[40] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/U361/Y (NAND3XL)               0.051875   1.083997 f
+  frontend/code_source/U363/Y (NOR4X1)                0.090963   1.174960 r
+  frontend/code_source/U53/Y (BUFX2)                  0.045250   1.220210 r
+  frontend/code_source/U44/Y (BUFX2)                  0.030816   1.251026 r
+  frontend/code_source/U43/Y (BUFX2)                  0.123163   1.374189 r
+  frontend/code_source/U765/Y (MXI2X1)                0.092719   1.466908 f
+  frontend/code_source/U764/Y (CLKINVX1)              0.046254   1.513162 r
+  frontend/code_source/sub_109_C141/B[0] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   1.513162 r
+  frontend/code_source/sub_109_C141/U46/Y (INVX2)     0.014190   1.527352 f
+  frontend/code_source/sub_109_C141/U78/Y (AND2X2)    0.056612   1.583964 f
+  frontend/code_source/sub_109_C141/U79/Y (AND2X2)    0.058845   1.642809 f
+  frontend/code_source/sub_109_C141/U80/Y (AND2X2)    0.058850   1.701659 f
+  frontend/code_source/sub_109_C141/U81/Y (AND2X2)    0.058850   1.760509 f
+  frontend/code_source/sub_109_C141/U82/Y (AND2X2)    0.058850   1.819359 f
+  frontend/code_source/sub_109_C141/U83/Y (AND2X2)    0.058850   1.878209 f
+  frontend/code_source/sub_109_C141/U84/Y (AND2X2)    0.058850   1.937059 f
+  frontend/code_source/sub_109_C141/U85/Y (AND2X2)    0.057258   1.994317 f
+  frontend/code_source/sub_109_C141/U86/Y (AND2X2)    0.056837   2.051154 f
+  frontend/code_source/sub_109_C141/U87/Y (AND2X2)    0.056836   2.107991 f
+  frontend/code_source/sub_109_C141/U88/Y (AND2X2)    0.056836   2.164827 f
+  frontend/code_source/sub_109_C141/U89/Y (AND2X2)    0.058429   2.223255 f
+  frontend/code_source/sub_109_C141/U90/Y (AND2X2)    0.058849   2.282104 f
+  frontend/code_source/sub_109_C141/U60/Y (AND2X2)    0.058850   2.340954 f
+  frontend/code_source/sub_109_C141/U61/Y (AND2X2)    0.057258   2.398212 f
+  frontend/code_source/sub_109_C141/U62/Y (AND2X2)    0.058430   2.456642 f
+  frontend/code_source/sub_109_C141/U63/Y (AND2X2)    0.058849   2.515491 f
+  frontend/code_source/sub_109_C141/U64/Y (AND2X2)    0.057258   2.572749 f
+  frontend/code_source/sub_109_C141/U65/Y (AND2X2)    0.058430   2.631179 f
+  frontend/code_source/sub_109_C141/U66/Y (AND2X2)    0.058849   2.690028 f
+  frontend/code_source/sub_109_C141/U67/Y (AND2X2)    0.058850   2.748878 f
+  frontend/code_source/sub_109_C141/U68/Y (AND2X2)    0.057258   2.806136 f
+  frontend/code_source/sub_109_C141/U69/Y (AND2X2)    0.058430   2.864565 f
+  frontend/code_source/sub_109_C141/U70/Y (AND2X2)    0.058849   2.923414 f
+  frontend/code_source/sub_109_C141/U71/Y (AND2X2)    0.058850   2.982265 f
+  frontend/code_source/sub_109_C141/U72/Y (AND2X2)    0.057258   3.039522 f
+  frontend/code_source/sub_109_C141/U91/Y (AND2X2)    0.057247   3.096769 f
+  frontend/code_source/sub_109_C141/U6/Y (OR2X2)      0.063915   3.160684 f
+  frontend/code_source/sub_109_C141/U10/Y (AND2X2)    0.057986   3.218670 f
+  frontend/code_source/sub_109_C141/U7/Y (OR2X2)      0.062213   3.280883 f
+  frontend/code_source/sub_109_C141/U9/Y (AND2X2)     0.058714   3.339597 f
+  frontend/code_source/sub_109_C141/U59/Y (AND2X2)    0.058850   3.398447 f
+  frontend/code_source/sub_109_C141/U4/Y (INVX2)      0.017596   3.416043 r
+  frontend/code_source/sub_109_C141/U3/Y (XNOR2X1)    0.055984   3.472027 r
+  frontend/code_source/sub_109_C141/DIFF[33] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   3.472027 r
+  frontend/code_source/sub_109_2_C141/B[33] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.472027 r
+  frontend/code_source/sub_109_2_C141/U2/Y (INVX2)    0.022381   3.494408 f
+  frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)    0.058306   3.552714 f
+  frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)    0.062871   3.615585 f
+  frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)    0.062871   3.678456 f
+  frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)    0.062871   3.741326 f
+  frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)    0.062871   3.804197 f
+  frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)    0.062871   3.867068 f
+  frontend/code_source/sub_109_2_C141/U8/Y (OR2X2)    0.062871   3.929939 f
+  frontend/code_source/sub_109_2_C141/U27/Y (XNOR2X1) 0.051434   3.981372 r
+  frontend/code_source/sub_109_2_C141/DIFF[40] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.981372 r
+  frontend/code_source/U601/Y (AOI22XL)               0.052662   4.034034 f
+  frontend/code_source/U600/Y (OAI2BB1X1)             0.028826   4.062860 r
+  frontend/code_source/target_late_index_reg[8]/D (DFFRQX2)
+                                                      0.000000   4.062860 r
+  data arrival time                                              4.062860
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  frontend/code_source/target_late_index_reg[8]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.062860
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.669091
+
+
+  Startpoint: init_code_phase_q[40]
+              (input port clocked by clk)
+  Endpoint: frontend/code_source/target_late_index_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_code_phase_q[40] (in)                          0.032123   1.032123 r
+  frontend/init_code_phase_q[40] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/init_code_phase_q[40] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/U361/Y (NAND3XL)               0.051875   1.083997 f
+  frontend/code_source/U363/Y (NOR4X1)                0.090963   1.174960 r
+  frontend/code_source/U53/Y (BUFX2)                  0.045250   1.220210 r
+  frontend/code_source/U44/Y (BUFX2)                  0.030816   1.251026 r
+  frontend/code_source/U43/Y (BUFX2)                  0.123163   1.374189 r
+  frontend/code_source/U765/Y (MXI2X1)                0.092719   1.466908 f
+  frontend/code_source/U764/Y (CLKINVX1)              0.046254   1.513162 r
+  frontend/code_source/sub_109_C141/B[0] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   1.513162 r
+  frontend/code_source/sub_109_C141/U46/Y (INVX2)     0.014190   1.527352 f
+  frontend/code_source/sub_109_C141/U78/Y (AND2X2)    0.056612   1.583964 f
+  frontend/code_source/sub_109_C141/U79/Y (AND2X2)    0.058845   1.642809 f
+  frontend/code_source/sub_109_C141/U80/Y (AND2X2)    0.058850   1.701659 f
+  frontend/code_source/sub_109_C141/U81/Y (AND2X2)    0.058850   1.760509 f
+  frontend/code_source/sub_109_C141/U82/Y (AND2X2)    0.058850   1.819359 f
+  frontend/code_source/sub_109_C141/U83/Y (AND2X2)    0.058850   1.878209 f
+  frontend/code_source/sub_109_C141/U84/Y (AND2X2)    0.058850   1.937059 f
+  frontend/code_source/sub_109_C141/U85/Y (AND2X2)    0.057258   1.994317 f
+  frontend/code_source/sub_109_C141/U86/Y (AND2X2)    0.056837   2.051154 f
+  frontend/code_source/sub_109_C141/U87/Y (AND2X2)    0.056836   2.107991 f
+  frontend/code_source/sub_109_C141/U88/Y (AND2X2)    0.056836   2.164827 f
+  frontend/code_source/sub_109_C141/U89/Y (AND2X2)    0.058429   2.223255 f
+  frontend/code_source/sub_109_C141/U90/Y (AND2X2)    0.058849   2.282104 f
+  frontend/code_source/sub_109_C141/U60/Y (AND2X2)    0.058850   2.340954 f
+  frontend/code_source/sub_109_C141/U61/Y (AND2X2)    0.057258   2.398212 f
+  frontend/code_source/sub_109_C141/U62/Y (AND2X2)    0.058430   2.456642 f
+  frontend/code_source/sub_109_C141/U63/Y (AND2X2)    0.058849   2.515491 f
+  frontend/code_source/sub_109_C141/U64/Y (AND2X2)    0.057258   2.572749 f
+  frontend/code_source/sub_109_C141/U65/Y (AND2X2)    0.058430   2.631179 f
+  frontend/code_source/sub_109_C141/U66/Y (AND2X2)    0.058849   2.690028 f
+  frontend/code_source/sub_109_C141/U67/Y (AND2X2)    0.058850   2.748878 f
+  frontend/code_source/sub_109_C141/U68/Y (AND2X2)    0.057258   2.806136 f
+  frontend/code_source/sub_109_C141/U69/Y (AND2X2)    0.058430   2.864565 f
+  frontend/code_source/sub_109_C141/U70/Y (AND2X2)    0.058849   2.923414 f
+  frontend/code_source/sub_109_C141/U71/Y (AND2X2)    0.058850   2.982265 f
+  frontend/code_source/sub_109_C141/U72/Y (AND2X2)    0.057258   3.039522 f
+  frontend/code_source/sub_109_C141/U91/Y (AND2X2)    0.057247   3.096769 f
+  frontend/code_source/sub_109_C141/U6/Y (OR2X2)      0.063915   3.160684 f
+  frontend/code_source/sub_109_C141/U10/Y (AND2X2)    0.057986   3.218670 f
+  frontend/code_source/sub_109_C141/U7/Y (OR2X2)      0.062213   3.280883 f
+  frontend/code_source/sub_109_C141/U11/Y (XOR2X1)    0.053677   3.334560 f
+  frontend/code_source/sub_109_C141/DIFF[31] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   3.334560 f
+  frontend/code_source/sub_109_2_C141/B[31] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.334560 f
+  frontend/code_source/sub_109_2_C141/U42/Y (NOR4X1)  0.097681   3.432240 r
+  frontend/code_source/sub_109_2_C141/U40/Y (NAND4X1) 0.069387   3.501627 f
+  frontend/code_source/sub_109_2_C141/U34/Y (NOR2X1)  0.060287   3.561914 r
+  frontend/code_source/sub_109_2_C141/U10/Y (AND2X2)  0.054832   3.616746 r
+  frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)    0.042850   3.659596 r
+  frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)    0.042102   3.701699 r
+  frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)    0.042100   3.743799 r
+  frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)    0.042100   3.785899 r
+  frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)    0.042100   3.827999 r
+  frontend/code_source/sub_109_2_C141/U7/Y (OR2X2)    0.042100   3.870100 r
+  frontend/code_source/sub_109_2_C141/U30/Y (XNOR2X1) 0.051590   3.921690 r
+  frontend/code_source/sub_109_2_C141/DIFF[39] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.921690 r
+  frontend/code_source/U603/Y (AOI22XL)               0.052662   3.974352 f
+  frontend/code_source/U602/Y (OAI2BB1X1)             0.028826   4.003178 r
+  frontend/code_source/target_late_index_reg[7]/D (DFFRQX2)
+                                                      0.000000   4.003178 r
+  data arrival time                                              4.003178
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  frontend/code_source/target_late_index_reg[7]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -4.003178
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.728774
+
+
+  Startpoint: init_code_phase_q[40]
+              (input port clocked by clk)
+  Endpoint: frontend/code_source/target_late_index_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_code_phase_q[40] (in)                          0.032123   1.032123 r
+  frontend/init_code_phase_q[40] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/init_code_phase_q[40] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/U361/Y (NAND3XL)               0.051875   1.083997 f
+  frontend/code_source/U363/Y (NOR4X1)                0.090963   1.174960 r
+  frontend/code_source/U53/Y (BUFX2)                  0.045250   1.220210 r
+  frontend/code_source/U44/Y (BUFX2)                  0.030816   1.251026 r
+  frontend/code_source/U43/Y (BUFX2)                  0.123163   1.374189 r
+  frontend/code_source/U765/Y (MXI2X1)                0.092719   1.466908 f
+  frontend/code_source/U764/Y (CLKINVX1)              0.046254   1.513162 r
+  frontend/code_source/sub_109_C141/B[0] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   1.513162 r
+  frontend/code_source/sub_109_C141/U46/Y (INVX2)     0.014190   1.527352 f
+  frontend/code_source/sub_109_C141/U78/Y (AND2X2)    0.056612   1.583964 f
+  frontend/code_source/sub_109_C141/U79/Y (AND2X2)    0.058845   1.642809 f
+  frontend/code_source/sub_109_C141/U80/Y (AND2X2)    0.058850   1.701659 f
+  frontend/code_source/sub_109_C141/U81/Y (AND2X2)    0.058850   1.760509 f
+  frontend/code_source/sub_109_C141/U82/Y (AND2X2)    0.058850   1.819359 f
+  frontend/code_source/sub_109_C141/U83/Y (AND2X2)    0.058850   1.878209 f
+  frontend/code_source/sub_109_C141/U84/Y (AND2X2)    0.058850   1.937059 f
+  frontend/code_source/sub_109_C141/U85/Y (AND2X2)    0.057258   1.994317 f
+  frontend/code_source/sub_109_C141/U86/Y (AND2X2)    0.056837   2.051154 f
+  frontend/code_source/sub_109_C141/U87/Y (AND2X2)    0.056836   2.107991 f
+  frontend/code_source/sub_109_C141/U88/Y (AND2X2)    0.056836   2.164827 f
+  frontend/code_source/sub_109_C141/U89/Y (AND2X2)    0.058429   2.223255 f
+  frontend/code_source/sub_109_C141/U90/Y (AND2X2)    0.058849   2.282104 f
+  frontend/code_source/sub_109_C141/U60/Y (AND2X2)    0.058850   2.340954 f
+  frontend/code_source/sub_109_C141/U61/Y (AND2X2)    0.057258   2.398212 f
+  frontend/code_source/sub_109_C141/U62/Y (AND2X2)    0.058430   2.456642 f
+  frontend/code_source/sub_109_C141/U63/Y (AND2X2)    0.058849   2.515491 f
+  frontend/code_source/sub_109_C141/U64/Y (AND2X2)    0.057258   2.572749 f
+  frontend/code_source/sub_109_C141/U65/Y (AND2X2)    0.058430   2.631179 f
+  frontend/code_source/sub_109_C141/U66/Y (AND2X2)    0.058849   2.690028 f
+  frontend/code_source/sub_109_C141/U67/Y (AND2X2)    0.058850   2.748878 f
+  frontend/code_source/sub_109_C141/U68/Y (AND2X2)    0.057258   2.806136 f
+  frontend/code_source/sub_109_C141/U69/Y (AND2X2)    0.058430   2.864565 f
+  frontend/code_source/sub_109_C141/U70/Y (AND2X2)    0.058849   2.923414 f
+  frontend/code_source/sub_109_C141/U71/Y (AND2X2)    0.058850   2.982265 f
+  frontend/code_source/sub_109_C141/U72/Y (AND2X2)    0.057258   3.039522 f
+  frontend/code_source/sub_109_C141/U91/Y (AND2X2)    0.057247   3.096769 f
+  frontend/code_source/sub_109_C141/U6/Y (OR2X2)      0.063915   3.160684 f
+  frontend/code_source/sub_109_C141/U10/Y (AND2X2)    0.057986   3.218670 f
+  frontend/code_source/sub_109_C141/U7/Y (OR2X2)      0.062213   3.280883 f
+  frontend/code_source/sub_109_C141/U11/Y (XOR2X1)    0.053677   3.334560 f
+  frontend/code_source/sub_109_C141/DIFF[31] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   3.334560 f
+  frontend/code_source/sub_109_2_C141/B[31] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.334560 f
+  frontend/code_source/sub_109_2_C141/U42/Y (NOR4X1)  0.097681   3.432240 r
+  frontend/code_source/sub_109_2_C141/U40/Y (NAND4X1) 0.069387   3.501627 f
+  frontend/code_source/sub_109_2_C141/U34/Y (NOR2X1)  0.060287   3.561914 r
+  frontend/code_source/sub_109_2_C141/U10/Y (AND2X2)  0.054832   3.616746 r
+  frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)    0.042850   3.659596 r
+  frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)    0.042102   3.701699 r
+  frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)    0.042100   3.743799 r
+  frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)    0.042100   3.785899 r
+  frontend/code_source/sub_109_2_C141/U6/Y (OR2X2)    0.042100   3.827999 r
+  frontend/code_source/sub_109_2_C141/U23/Y (XNOR2X1) 0.051590   3.879590 r
+  frontend/code_source/sub_109_2_C141/DIFF[38] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.879590 r
+  frontend/code_source/U605/Y (AOI22XL)               0.052662   3.932251 f
+  frontend/code_source/U604/Y (OAI2BB1X1)             0.028826   3.961078 r
+  frontend/code_source/target_late_index_reg[6]/D (DFFRQX2)
+                                                      0.000000   3.961078 r
+  data arrival time                                              3.961078
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  frontend/code_source/target_late_index_reg[6]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -3.961078
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.770874
+
+
+  Startpoint: init_code_phase_q[40]
+              (input port clocked by clk)
+  Endpoint: frontend/code_source/target_late_index_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 r
+  init_code_phase_q[40] (in)                          0.032123   1.032123 r
+  frontend/init_code_phase_q[40] (tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/init_code_phase_q[40] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   1.032123 r
+  frontend/code_source/U361/Y (NAND3XL)               0.051875   1.083997 f
+  frontend/code_source/U363/Y (NOR4X1)                0.090963   1.174960 r
+  frontend/code_source/U53/Y (BUFX2)                  0.045250   1.220210 r
+  frontend/code_source/U44/Y (BUFX2)                  0.030816   1.251026 r
+  frontend/code_source/U43/Y (BUFX2)                  0.123163   1.374189 r
+  frontend/code_source/U765/Y (MXI2X1)                0.092719   1.466908 f
+  frontend/code_source/U764/Y (CLKINVX1)              0.046254   1.513162 r
+  frontend/code_source/sub_109_C141/B[0] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   1.513162 r
+  frontend/code_source/sub_109_C141/U46/Y (INVX2)     0.014190   1.527352 f
+  frontend/code_source/sub_109_C141/U78/Y (AND2X2)    0.056612   1.583964 f
+  frontend/code_source/sub_109_C141/U79/Y (AND2X2)    0.058845   1.642809 f
+  frontend/code_source/sub_109_C141/U80/Y (AND2X2)    0.058850   1.701659 f
+  frontend/code_source/sub_109_C141/U81/Y (AND2X2)    0.058850   1.760509 f
+  frontend/code_source/sub_109_C141/U82/Y (AND2X2)    0.058850   1.819359 f
+  frontend/code_source/sub_109_C141/U83/Y (AND2X2)    0.058850   1.878209 f
+  frontend/code_source/sub_109_C141/U84/Y (AND2X2)    0.058850   1.937059 f
+  frontend/code_source/sub_109_C141/U85/Y (AND2X2)    0.057258   1.994317 f
+  frontend/code_source/sub_109_C141/U86/Y (AND2X2)    0.056837   2.051154 f
+  frontend/code_source/sub_109_C141/U87/Y (AND2X2)    0.056836   2.107991 f
+  frontend/code_source/sub_109_C141/U88/Y (AND2X2)    0.056836   2.164827 f
+  frontend/code_source/sub_109_C141/U89/Y (AND2X2)    0.058429   2.223255 f
+  frontend/code_source/sub_109_C141/U90/Y (AND2X2)    0.058849   2.282104 f
+  frontend/code_source/sub_109_C141/U60/Y (AND2X2)    0.058850   2.340954 f
+  frontend/code_source/sub_109_C141/U61/Y (AND2X2)    0.057258   2.398212 f
+  frontend/code_source/sub_109_C141/U62/Y (AND2X2)    0.058430   2.456642 f
+  frontend/code_source/sub_109_C141/U63/Y (AND2X2)    0.058849   2.515491 f
+  frontend/code_source/sub_109_C141/U64/Y (AND2X2)    0.057258   2.572749 f
+  frontend/code_source/sub_109_C141/U65/Y (AND2X2)    0.058430   2.631179 f
+  frontend/code_source/sub_109_C141/U66/Y (AND2X2)    0.058849   2.690028 f
+  frontend/code_source/sub_109_C141/U67/Y (AND2X2)    0.058850   2.748878 f
+  frontend/code_source/sub_109_C141/U68/Y (AND2X2)    0.057258   2.806136 f
+  frontend/code_source/sub_109_C141/U69/Y (AND2X2)    0.058430   2.864565 f
+  frontend/code_source/sub_109_C141/U70/Y (AND2X2)    0.058849   2.923414 f
+  frontend/code_source/sub_109_C141/U71/Y (AND2X2)    0.058850   2.982265 f
+  frontend/code_source/sub_109_C141/U72/Y (AND2X2)    0.057258   3.039522 f
+  frontend/code_source/sub_109_C141/U91/Y (AND2X2)    0.057247   3.096769 f
+  frontend/code_source/sub_109_C141/U6/Y (OR2X2)      0.063915   3.160684 f
+  frontend/code_source/sub_109_C141/U10/Y (AND2X2)    0.057986   3.218670 f
+  frontend/code_source/sub_109_C141/U7/Y (OR2X2)      0.062213   3.280883 f
+  frontend/code_source/sub_109_C141/U11/Y (XOR2X1)    0.053677   3.334560 f
+  frontend/code_source/sub_109_C141/DIFF[31] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11)
+                                                      0.000000   3.334560 f
+  frontend/code_source/sub_109_2_C141/B[31] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.334560 f
+  frontend/code_source/sub_109_2_C141/U42/Y (NOR4X1)  0.097681   3.432240 r
+  frontend/code_source/sub_109_2_C141/U40/Y (NAND4X1) 0.069387   3.501627 f
+  frontend/code_source/sub_109_2_C141/U34/Y (NOR2X1)  0.060287   3.561914 r
+  frontend/code_source/sub_109_2_C141/U10/Y (AND2X2)  0.054832   3.616746 r
+  frontend/code_source/sub_109_2_C141/U1/Y (OR2X2)    0.042850   3.659596 r
+  frontend/code_source/sub_109_2_C141/U3/Y (OR2X2)    0.042102   3.701699 r
+  frontend/code_source/sub_109_2_C141/U4/Y (OR2X2)    0.042100   3.743799 r
+  frontend/code_source/sub_109_2_C141/U5/Y (OR2X2)    0.042100   3.785899 r
+  frontend/code_source/sub_109_2_C141/U26/Y (XNOR2X1) 0.051590   3.837490 r
+  frontend/code_source/sub_109_2_C141/DIFF[37] (code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10)
+                                                      0.000000   3.837490 r
+  frontend/code_source/U607/Y (AOI22XL)               0.052662   3.890151 f
+  frontend/code_source/U606/Y (OAI2BB1X1)             0.028826   3.918977 r
+  frontend/code_source/target_late_index_reg[5]/D (DFFRQX2)
+                                                      0.000000   3.918977 r
+  data arrival time                                              3.918977
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  frontend/code_source/target_late_index_reg[5]/CK (DFFRQX2)
+                                                      0.000000   9.800000 r
+  library setup time                                  -0.068048  9.731952
+  data required time                                             9.731952
+  --------------------------------------------------------------------------
+  data required time                                             9.731952
+  data arrival time                                              -3.918977
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.812974
+
+
+1

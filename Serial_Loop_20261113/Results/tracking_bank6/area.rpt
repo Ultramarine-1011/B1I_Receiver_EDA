@@ -1,0 +1,841 @@
+ 
+****************************************
+Report : area
+Design : tracking_bank6
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:36:02 2026
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db)
+
+Number of ports:                        89276
+Number of nets:                        308102
+Number of cells:                       194640
+Number of combinational cells:         175350
+Number of sequential cells:             18636
+Number of macros/black boxes:               0
+Number of buf/inv:                      31296
+Number of references:                       1
+
+Combinational area:            1231748.990095
+Buf/Inv area:                    70845.064713
+Noncombinational area:          283680.837971
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1515429.828066
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                Local cell area
+                                  ---------------------  --------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-        Noncombi-    Black-
+                                  Total         Total    national      national     boxes   Design
+--------------------------------  ------------  -------  ------------  -----------  ------  ---------------------------------------------------------------------------------------------------------------------------
+tracking_bank6                    1515429.8281    100.0        0.0000       0.0000  0.0000  tracking_bank6
+channel0                           252571.6380     16.7    11145.6579   14600.2753  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel0/add_0_root_add_0_root_add_272_2
+                                      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel0/add_0_root_add_192_2         836.1360      0.1      836.1360       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel0/add_0_root_add_270_2         550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10
+channel0/add_119                      570.1248      0.0      570.1248       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel0/add_160                     1287.7200      0.1     1287.7200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36
+channel0/add_160_S2                  1092.2688      0.1     1092.2688       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel0/add_160_S3                  1311.0048      0.1     1311.0048       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37
+channel0/add_161                     1602.4176      0.1     1602.4176       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel0/add_166                      497.4480      0.0      497.4480       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4
+channel0/add_180                      706.3056      0.0      706.3056       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38
+channel0/add_181                      991.3680      0.1      991.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14
+channel0/add_190                      596.2320      0.0      596.2320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3
+channel0/add_193                      528.4944      0.0      528.4944       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39
+channel0/add_194                      699.2496      0.0      699.2496       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35
+channel0/add_1_root_add_192_2         625.8672      0.0      625.8672       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32
+channel0/add_200                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel0/add_201                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel0/add_204_aco                  550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel0/add_263_S2                    71.2656      0.0       71.2656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel0/aid                         3549.8737      0.2     1360.3968    1565.0208  0.0000  ITERATIVE_tracking_aid_iterative
+channel0/aid/sub_401                  369.0288      0.0      369.0288       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_1
+channel0/aid/sub_408                  255.4272      0.0      255.4272       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_0
+channel0/conversion                 11234.5632      0.7        0.0000       0.0000  0.0000  ITERATIVE_tracking_divide_step
+channel0/conversion/add_422_C425      318.9312      0.0      318.9312       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW01_add_2
+channel0/conversion/mult_420_C425   10915.6320      0.7    10915.6320       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW_mult_tc_2
+channel0/frontend                   59297.2135      3.9     4847.4721   11289.6002  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel0/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel0/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel0/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel0/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel0/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel0/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel0/frontend/carrier            8686.6417      0.6     5122.6561    1955.9232  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel0/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel0/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel0/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel0/frontend/code_source       12719.8514      0.8     3673.3537    1738.5984  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel0/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel0/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel0/frontend/code_source/early_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_2
+channel0/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_2_DW01_inc_0
+channel0/frontend/code_source/late_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_1
+channel0/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_1_DW01_inc_0
+channel0/frontend/code_source/prompt_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_0
+channel0/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_0_DW01_inc_0
+channel0/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel0/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel0/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel0/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel0/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel0/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel0/frontend/correlator        15578.9425      1.0     4791.7298    7773.5953  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel0/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel0/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel0/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel0/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel0/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel0/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel0/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel0/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel0/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel0/gt_179                       632.9232      0.0      632.9232       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22
+channel0/gt_179_2                     510.8544      0.0      510.8544       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15
+channel0/gte_165                      621.6336      0.0      621.6336       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel0/lt_175                       772.6320      0.1      772.6320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24
+channel0/mult_157                    7621.8912      0.5     7621.8912       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38
+channel0/mult_157_S2                 7611.3072      0.5     7611.3072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel0/mult_158                    7367.1696      0.5     7367.1696       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel0/mult_158_S2                 7369.2864      0.5     7369.2864       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel0/mult_159                    7628.9472      0.5     7628.9472       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel0/mult_159_S2                 7612.0128      0.5     7612.0128       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39
+channel0/mult_176                     765.5760      0.1      765.5760       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel0/mult_178                    1237.6224      0.1     1237.6224       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33
+channel0/mult_180                     789.5664      0.1      789.5664       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41
+channel0/mult_181                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7
+channel0/mult_181_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6
+channel0/mult_182                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2
+channel0/mult_182_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3
+channel0/mult_187                     573.6528      0.0      573.6528       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20
+channel0/mult_191                    2311.5456      0.2     2311.5456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19
+channel0/mult_192                    1687.7952      0.1     1687.7952       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34
+channel0/mult_193                    2171.8368      0.1     2171.8368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16
+channel0/mult_199                    2003.1984      0.1     2003.1984       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel0/mult_200                    1665.9216      0.1     1665.9216       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel0/mult_201                    1613.7072      0.1     1613.7072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel0/mult_204                    1217.8656      0.1     1217.8656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel0/mult_204_2                  3885.7391      0.3     3885.7391       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel0/mult_add_204_aco             112.8960      0.0      112.8960       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel0/normalize                  23685.5809      1.6     8556.8114    6443.5392  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1
+channel0/normalize/add_330           1028.7648      0.1     1028.7648       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2
+channel0/normalize/add_330_S3         539.0784      0.0      539.0784       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1
+channel0/normalize/add_332_S2        1026.6480      0.1     1026.6480       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0
+channel0/normalize/sub_316           1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6
+channel0/normalize/sub_317            558.1296      0.0      558.1296       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5
+channel0/normalize/sub_330_S2        1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4
+channel0/normalize/sub_332           1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3
+channel0/normalize/sub_332_S3         603.9936      0.0      603.9936       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2
+channel0/normalize/sub_350            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1
+channel0/normalize/sub_351            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0
+channel0/sub_162                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5
+channel0/sub_163                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4
+channel0/sub_165                     1115.5536      0.1     1115.5536       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3
+channel0/sub_165_2                   1113.4368      0.1     1113.4368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2
+channel0/sub_182                     1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6
+channel0/sub_200                      633.6288      0.0      633.6288       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7
+channel0/sub_201                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel0/sub_204                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel0/sub_204_2                    821.3184      0.1      821.3184       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel1                           252571.6380     16.7    11145.6579   14600.2753  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel1/add_0_root_add_0_root_add_272_2
+                                      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel1/add_0_root_add_192_2         836.1360      0.1      836.1360       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel1/add_0_root_add_270_2         550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10
+channel1/add_119                      570.1248      0.0      570.1248       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel1/add_160                     1287.7200      0.1     1287.7200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36
+channel1/add_160_S2                  1092.2688      0.1     1092.2688       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel1/add_160_S3                  1311.0048      0.1     1311.0048       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37
+channel1/add_161                     1602.4176      0.1     1602.4176       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel1/add_166                      497.4480      0.0      497.4480       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4
+channel1/add_180                      706.3056      0.0      706.3056       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38
+channel1/add_181                      991.3680      0.1      991.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14
+channel1/add_190                      596.2320      0.0      596.2320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3
+channel1/add_193                      528.4944      0.0      528.4944       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39
+channel1/add_194                      699.2496      0.0      699.2496       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35
+channel1/add_1_root_add_192_2         625.8672      0.0      625.8672       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32
+channel1/add_200                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel1/add_201                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel1/add_204_aco                  550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel1/add_263_S2                    71.2656      0.0       71.2656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel1/aid                         3549.8737      0.2     1360.3968    1565.0208  0.0000  ITERATIVE_tracking_aid_iterative
+channel1/aid/sub_401                  369.0288      0.0      369.0288       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_1
+channel1/aid/sub_408                  255.4272      0.0      255.4272       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_0
+channel1/conversion                 11234.5632      0.7        0.0000       0.0000  0.0000  ITERATIVE_tracking_divide_step
+channel1/conversion/add_422_C425      318.9312      0.0      318.9312       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW01_add_2
+channel1/conversion/mult_420_C425   10915.6320      0.7    10915.6320       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW_mult_tc_2
+channel1/frontend                   59297.2135      3.9     4847.4721   11289.6002  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel1/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel1/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel1/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel1/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel1/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel1/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel1/frontend/carrier            8686.6417      0.6     5122.6561    1955.9232  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel1/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel1/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel1/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel1/frontend/code_source       12719.8514      0.8     3673.3537    1738.5984  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel1/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel1/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel1/frontend/code_source/early_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_2
+channel1/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_2_DW01_inc_0
+channel1/frontend/code_source/late_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_1
+channel1/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_1_DW01_inc_0
+channel1/frontend/code_source/prompt_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_0
+channel1/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_0_DW01_inc_0
+channel1/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel1/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel1/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel1/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel1/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel1/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel1/frontend/correlator        15578.9425      1.0     4791.7298    7773.5953  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel1/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel1/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel1/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel1/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel1/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel1/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel1/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel1/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel1/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel1/gt_179                       632.9232      0.0      632.9232       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22
+channel1/gt_179_2                     510.8544      0.0      510.8544       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15
+channel1/gte_165                      621.6336      0.0      621.6336       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel1/lt_175                       772.6320      0.1      772.6320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24
+channel1/mult_157                    7621.8912      0.5     7621.8912       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38
+channel1/mult_157_S2                 7611.3072      0.5     7611.3072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel1/mult_158                    7367.1696      0.5     7367.1696       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel1/mult_158_S2                 7369.2864      0.5     7369.2864       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel1/mult_159                    7628.9472      0.5     7628.9472       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel1/mult_159_S2                 7612.0128      0.5     7612.0128       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39
+channel1/mult_176                     765.5760      0.1      765.5760       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel1/mult_178                    1237.6224      0.1     1237.6224       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33
+channel1/mult_180                     789.5664      0.1      789.5664       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41
+channel1/mult_181                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7
+channel1/mult_181_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6
+channel1/mult_182                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2
+channel1/mult_182_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3
+channel1/mult_187                     573.6528      0.0      573.6528       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20
+channel1/mult_191                    2311.5456      0.2     2311.5456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19
+channel1/mult_192                    1687.7952      0.1     1687.7952       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34
+channel1/mult_193                    2171.8368      0.1     2171.8368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16
+channel1/mult_199                    2003.1984      0.1     2003.1984       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel1/mult_200                    1665.9216      0.1     1665.9216       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel1/mult_201                    1613.7072      0.1     1613.7072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel1/mult_204                    1217.8656      0.1     1217.8656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel1/mult_204_2                  3885.7391      0.3     3885.7391       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel1/mult_add_204_aco             112.8960      0.0      112.8960       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel1/normalize                  23685.5809      1.6     8556.8114    6443.5392  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1
+channel1/normalize/add_330           1028.7648      0.1     1028.7648       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2
+channel1/normalize/add_330_S3         539.0784      0.0      539.0784       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1
+channel1/normalize/add_332_S2        1026.6480      0.1     1026.6480       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0
+channel1/normalize/sub_316           1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6
+channel1/normalize/sub_317            558.1296      0.0      558.1296       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5
+channel1/normalize/sub_330_S2        1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4
+channel1/normalize/sub_332           1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3
+channel1/normalize/sub_332_S3         603.9936      0.0      603.9936       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2
+channel1/normalize/sub_350            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1
+channel1/normalize/sub_351            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0
+channel1/sub_162                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5
+channel1/sub_163                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4
+channel1/sub_165                     1115.5536      0.1     1115.5536       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3
+channel1/sub_165_2                   1113.4368      0.1     1113.4368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2
+channel1/sub_182                     1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6
+channel1/sub_200                      633.6288      0.0      633.6288       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7
+channel1/sub_201                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel1/sub_204                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel1/sub_204_2                    821.3184      0.1      821.3184       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel2                           252571.6380     16.7    11145.6579   14600.2753  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel2/add_0_root_add_0_root_add_272_2
+                                      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel2/add_0_root_add_192_2         836.1360      0.1      836.1360       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel2/add_0_root_add_270_2         550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10
+channel2/add_119                      570.1248      0.0      570.1248       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel2/add_160                     1287.7200      0.1     1287.7200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36
+channel2/add_160_S2                  1092.2688      0.1     1092.2688       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel2/add_160_S3                  1311.0048      0.1     1311.0048       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37
+channel2/add_161                     1602.4176      0.1     1602.4176       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel2/add_166                      497.4480      0.0      497.4480       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4
+channel2/add_180                      706.3056      0.0      706.3056       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38
+channel2/add_181                      991.3680      0.1      991.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14
+channel2/add_190                      596.2320      0.0      596.2320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3
+channel2/add_193                      528.4944      0.0      528.4944       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39
+channel2/add_194                      699.2496      0.0      699.2496       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35
+channel2/add_1_root_add_192_2         625.8672      0.0      625.8672       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32
+channel2/add_200                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel2/add_201                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel2/add_204_aco                  550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel2/add_263_S2                    71.2656      0.0       71.2656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel2/aid                         3549.8737      0.2     1360.3968    1565.0208  0.0000  ITERATIVE_tracking_aid_iterative
+channel2/aid/sub_401                  369.0288      0.0      369.0288       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_1
+channel2/aid/sub_408                  255.4272      0.0      255.4272       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_0
+channel2/conversion                 11234.5632      0.7        0.0000       0.0000  0.0000  ITERATIVE_tracking_divide_step
+channel2/conversion/add_422_C425      318.9312      0.0      318.9312       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW01_add_2
+channel2/conversion/mult_420_C425   10915.6320      0.7    10915.6320       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW_mult_tc_2
+channel2/frontend                   59297.2135      3.9     4847.4721   11289.6002  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel2/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel2/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel2/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel2/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel2/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel2/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel2/frontend/carrier            8686.6417      0.6     5122.6561    1955.9232  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel2/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel2/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel2/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel2/frontend/code_source       12719.8514      0.8     3673.3537    1738.5984  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel2/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel2/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel2/frontend/code_source/early_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_2
+channel2/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_2_DW01_inc_0
+channel2/frontend/code_source/late_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_1
+channel2/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_1_DW01_inc_0
+channel2/frontend/code_source/prompt_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_0
+channel2/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_0_DW01_inc_0
+channel2/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel2/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel2/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel2/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel2/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel2/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel2/frontend/correlator        15578.9425      1.0     4791.7298    7773.5953  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel2/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel2/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel2/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel2/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel2/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel2/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel2/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel2/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel2/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel2/gt_179                       632.9232      0.0      632.9232       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22
+channel2/gt_179_2                     510.8544      0.0      510.8544       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15
+channel2/gte_165                      621.6336      0.0      621.6336       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel2/lt_175                       772.6320      0.1      772.6320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24
+channel2/mult_157                    7621.8912      0.5     7621.8912       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38
+channel2/mult_157_S2                 7611.3072      0.5     7611.3072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel2/mult_158                    7367.1696      0.5     7367.1696       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel2/mult_158_S2                 7369.2864      0.5     7369.2864       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel2/mult_159                    7628.9472      0.5     7628.9472       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel2/mult_159_S2                 7612.0128      0.5     7612.0128       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39
+channel2/mult_176                     765.5760      0.1      765.5760       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel2/mult_178                    1237.6224      0.1     1237.6224       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33
+channel2/mult_180                     789.5664      0.1      789.5664       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41
+channel2/mult_181                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7
+channel2/mult_181_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6
+channel2/mult_182                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2
+channel2/mult_182_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3
+channel2/mult_187                     573.6528      0.0      573.6528       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20
+channel2/mult_191                    2311.5456      0.2     2311.5456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19
+channel2/mult_192                    1687.7952      0.1     1687.7952       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34
+channel2/mult_193                    2171.8368      0.1     2171.8368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16
+channel2/mult_199                    2003.1984      0.1     2003.1984       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel2/mult_200                    1665.9216      0.1     1665.9216       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel2/mult_201                    1613.7072      0.1     1613.7072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel2/mult_204                    1217.8656      0.1     1217.8656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel2/mult_204_2                  3885.7391      0.3     3885.7391       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel2/mult_add_204_aco             112.8960      0.0      112.8960       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel2/normalize                  23685.5809      1.6     8556.8114    6443.5392  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1
+channel2/normalize/add_330           1028.7648      0.1     1028.7648       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2
+channel2/normalize/add_330_S3         539.0784      0.0      539.0784       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1
+channel2/normalize/add_332_S2        1026.6480      0.1     1026.6480       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0
+channel2/normalize/sub_316           1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6
+channel2/normalize/sub_317            558.1296      0.0      558.1296       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5
+channel2/normalize/sub_330_S2        1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4
+channel2/normalize/sub_332           1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3
+channel2/normalize/sub_332_S3         603.9936      0.0      603.9936       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2
+channel2/normalize/sub_350            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1
+channel2/normalize/sub_351            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0
+channel2/sub_162                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5
+channel2/sub_163                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4
+channel2/sub_165                     1115.5536      0.1     1115.5536       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3
+channel2/sub_165_2                   1113.4368      0.1     1113.4368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2
+channel2/sub_182                     1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6
+channel2/sub_200                      633.6288      0.0      633.6288       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7
+channel2/sub_201                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel2/sub_204                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel2/sub_204_2                    821.3184      0.1      821.3184       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel3                           252571.6380     16.7    11145.6579   14600.2753  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel3/add_0_root_add_0_root_add_272_2
+                                      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel3/add_0_root_add_192_2         836.1360      0.1      836.1360       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel3/add_0_root_add_270_2         550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10
+channel3/add_119                      570.1248      0.0      570.1248       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel3/add_160                     1287.7200      0.1     1287.7200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36
+channel3/add_160_S2                  1092.2688      0.1     1092.2688       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel3/add_160_S3                  1311.0048      0.1     1311.0048       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37
+channel3/add_161                     1602.4176      0.1     1602.4176       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel3/add_166                      497.4480      0.0      497.4480       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4
+channel3/add_180                      706.3056      0.0      706.3056       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38
+channel3/add_181                      991.3680      0.1      991.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14
+channel3/add_190                      596.2320      0.0      596.2320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3
+channel3/add_193                      528.4944      0.0      528.4944       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39
+channel3/add_194                      699.2496      0.0      699.2496       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35
+channel3/add_1_root_add_192_2         625.8672      0.0      625.8672       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32
+channel3/add_200                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel3/add_201                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel3/add_204_aco                  550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel3/add_263_S2                    71.2656      0.0       71.2656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel3/aid                         3549.8737      0.2     1360.3968    1565.0208  0.0000  ITERATIVE_tracking_aid_iterative
+channel3/aid/sub_401                  369.0288      0.0      369.0288       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_1
+channel3/aid/sub_408                  255.4272      0.0      255.4272       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_0
+channel3/conversion                 11234.5632      0.7        0.0000       0.0000  0.0000  ITERATIVE_tracking_divide_step
+channel3/conversion/add_422_C425      318.9312      0.0      318.9312       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW01_add_2
+channel3/conversion/mult_420_C425   10915.6320      0.7    10915.6320       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW_mult_tc_2
+channel3/frontend                   59297.2135      3.9     4847.4721   11289.6002  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel3/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel3/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel3/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel3/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel3/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel3/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel3/frontend/carrier            8686.6417      0.6     5122.6561    1955.9232  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel3/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel3/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel3/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel3/frontend/code_source       12719.8514      0.8     3673.3537    1738.5984  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel3/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel3/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel3/frontend/code_source/early_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_2
+channel3/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_2_DW01_inc_0
+channel3/frontend/code_source/late_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_1
+channel3/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_1_DW01_inc_0
+channel3/frontend/code_source/prompt_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_0
+channel3/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_0_DW01_inc_0
+channel3/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel3/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel3/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel3/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel3/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel3/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel3/frontend/correlator        15578.9425      1.0     4791.7298    7773.5953  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel3/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel3/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel3/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel3/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel3/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel3/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel3/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel3/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel3/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel3/gt_179                       632.9232      0.0      632.9232       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22
+channel3/gt_179_2                     510.8544      0.0      510.8544       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15
+channel3/gte_165                      621.6336      0.0      621.6336       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel3/lt_175                       772.6320      0.1      772.6320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24
+channel3/mult_157                    7621.8912      0.5     7621.8912       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38
+channel3/mult_157_S2                 7611.3072      0.5     7611.3072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel3/mult_158                    7367.1696      0.5     7367.1696       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel3/mult_158_S2                 7369.2864      0.5     7369.2864       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel3/mult_159                    7628.9472      0.5     7628.9472       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel3/mult_159_S2                 7612.0128      0.5     7612.0128       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39
+channel3/mult_176                     765.5760      0.1      765.5760       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel3/mult_178                    1237.6224      0.1     1237.6224       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33
+channel3/mult_180                     789.5664      0.1      789.5664       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41
+channel3/mult_181                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7
+channel3/mult_181_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6
+channel3/mult_182                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2
+channel3/mult_182_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3
+channel3/mult_187                     573.6528      0.0      573.6528       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20
+channel3/mult_191                    2311.5456      0.2     2311.5456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19
+channel3/mult_192                    1687.7952      0.1     1687.7952       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34
+channel3/mult_193                    2171.8368      0.1     2171.8368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16
+channel3/mult_199                    2003.1984      0.1     2003.1984       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel3/mult_200                    1665.9216      0.1     1665.9216       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel3/mult_201                    1613.7072      0.1     1613.7072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel3/mult_204                    1217.8656      0.1     1217.8656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel3/mult_204_2                  3885.7391      0.3     3885.7391       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel3/mult_add_204_aco             112.8960      0.0      112.8960       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel3/normalize                  23685.5809      1.6     8556.8114    6443.5392  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1
+channel3/normalize/add_330           1028.7648      0.1     1028.7648       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2
+channel3/normalize/add_330_S3         539.0784      0.0      539.0784       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1
+channel3/normalize/add_332_S2        1026.6480      0.1     1026.6480       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0
+channel3/normalize/sub_316           1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6
+channel3/normalize/sub_317            558.1296      0.0      558.1296       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5
+channel3/normalize/sub_330_S2        1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4
+channel3/normalize/sub_332           1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3
+channel3/normalize/sub_332_S3         603.9936      0.0      603.9936       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2
+channel3/normalize/sub_350            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1
+channel3/normalize/sub_351            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0
+channel3/sub_162                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5
+channel3/sub_163                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4
+channel3/sub_165                     1115.5536      0.1     1115.5536       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3
+channel3/sub_165_2                   1113.4368      0.1     1113.4368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2
+channel3/sub_182                     1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6
+channel3/sub_200                      633.6288      0.0      633.6288       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7
+channel3/sub_201                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel3/sub_204                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel3/sub_204_2                    821.3184      0.1      821.3184       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel4                           252571.6380     16.7    11145.6579   14600.2753  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel4/add_0_root_add_0_root_add_272_2
+                                      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel4/add_0_root_add_192_2         836.1360      0.1      836.1360       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel4/add_0_root_add_270_2         550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10
+channel4/add_119                      570.1248      0.0      570.1248       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel4/add_160                     1287.7200      0.1     1287.7200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36
+channel4/add_160_S2                  1092.2688      0.1     1092.2688       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel4/add_160_S3                  1311.0048      0.1     1311.0048       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37
+channel4/add_161                     1602.4176      0.1     1602.4176       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel4/add_166                      497.4480      0.0      497.4480       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4
+channel4/add_180                      706.3056      0.0      706.3056       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38
+channel4/add_181                      991.3680      0.1      991.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14
+channel4/add_190                      596.2320      0.0      596.2320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3
+channel4/add_193                      528.4944      0.0      528.4944       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39
+channel4/add_194                      699.2496      0.0      699.2496       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35
+channel4/add_1_root_add_192_2         625.8672      0.0      625.8672       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32
+channel4/add_200                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel4/add_201                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel4/add_204_aco                  550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel4/add_263_S2                    71.2656      0.0       71.2656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel4/aid                         3549.8737      0.2     1360.3968    1565.0208  0.0000  ITERATIVE_tracking_aid_iterative
+channel4/aid/sub_401                  369.0288      0.0      369.0288       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_1
+channel4/aid/sub_408                  255.4272      0.0      255.4272       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_0
+channel4/conversion                 11234.5632      0.7        0.0000       0.0000  0.0000  ITERATIVE_tracking_divide_step
+channel4/conversion/add_422_C425      318.9312      0.0      318.9312       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW01_add_2
+channel4/conversion/mult_420_C425   10915.6320      0.7    10915.6320       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW_mult_tc_2
+channel4/frontend                   59297.2135      3.9     4847.4721   11289.6002  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel4/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel4/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel4/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel4/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel4/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel4/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel4/frontend/carrier            8686.6417      0.6     5122.6561    1955.9232  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel4/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel4/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel4/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel4/frontend/code_source       12719.8514      0.8     3673.3537    1738.5984  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel4/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel4/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel4/frontend/code_source/early_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_2
+channel4/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_2_DW01_inc_0
+channel4/frontend/code_source/late_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_1
+channel4/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_1_DW01_inc_0
+channel4/frontend/code_source/prompt_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_0
+channel4/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_0_DW01_inc_0
+channel4/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel4/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel4/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel4/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel4/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel4/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel4/frontend/correlator        15578.9425      1.0     4791.7298    7773.5953  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel4/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel4/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel4/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel4/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel4/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel4/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel4/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel4/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel4/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel4/gt_179                       632.9232      0.0      632.9232       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22
+channel4/gt_179_2                     510.8544      0.0      510.8544       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15
+channel4/gte_165                      621.6336      0.0      621.6336       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel4/lt_175                       772.6320      0.1      772.6320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24
+channel4/mult_157                    7621.8912      0.5     7621.8912       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38
+channel4/mult_157_S2                 7611.3072      0.5     7611.3072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel4/mult_158                    7367.1696      0.5     7367.1696       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel4/mult_158_S2                 7369.2864      0.5     7369.2864       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel4/mult_159                    7628.9472      0.5     7628.9472       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel4/mult_159_S2                 7612.0128      0.5     7612.0128       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39
+channel4/mult_176                     765.5760      0.1      765.5760       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel4/mult_178                    1237.6224      0.1     1237.6224       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33
+channel4/mult_180                     789.5664      0.1      789.5664       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41
+channel4/mult_181                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7
+channel4/mult_181_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6
+channel4/mult_182                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2
+channel4/mult_182_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3
+channel4/mult_187                     573.6528      0.0      573.6528       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20
+channel4/mult_191                    2311.5456      0.2     2311.5456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19
+channel4/mult_192                    1687.7952      0.1     1687.7952       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34
+channel4/mult_193                    2171.8368      0.1     2171.8368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16
+channel4/mult_199                    2003.1984      0.1     2003.1984       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel4/mult_200                    1665.9216      0.1     1665.9216       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel4/mult_201                    1613.7072      0.1     1613.7072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel4/mult_204                    1217.8656      0.1     1217.8656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel4/mult_204_2                  3885.7391      0.3     3885.7391       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel4/mult_add_204_aco             112.8960      0.0      112.8960       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel4/normalize                  23685.5809      1.6     8556.8114    6443.5392  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1
+channel4/normalize/add_330           1028.7648      0.1     1028.7648       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2
+channel4/normalize/add_330_S3         539.0784      0.0      539.0784       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1
+channel4/normalize/add_332_S2        1026.6480      0.1     1026.6480       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0
+channel4/normalize/sub_316           1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6
+channel4/normalize/sub_317            558.1296      0.0      558.1296       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5
+channel4/normalize/sub_330_S2        1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4
+channel4/normalize/sub_332           1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3
+channel4/normalize/sub_332_S3         603.9936      0.0      603.9936       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2
+channel4/normalize/sub_350            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1
+channel4/normalize/sub_351            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0
+channel4/sub_162                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5
+channel4/sub_163                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4
+channel4/sub_165                     1115.5536      0.1     1115.5536       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3
+channel4/sub_165_2                   1113.4368      0.1     1113.4368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2
+channel4/sub_182                     1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6
+channel4/sub_200                      633.6288      0.0      633.6288       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7
+channel4/sub_201                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel4/sub_204                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel4/sub_204_2                    821.3184      0.1      821.3184       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel5                           252571.6380     16.7    11145.6579   14600.2753  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel5/add_0_root_add_0_root_add_272_2
+                                      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel5/add_0_root_add_192_2         836.1360      0.1      836.1360       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel5/add_0_root_add_270_2         550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10
+channel5/add_119                      570.1248      0.0      570.1248       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel5/add_160                     1287.7200      0.1     1287.7200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36
+channel5/add_160_S2                  1092.2688      0.1     1092.2688       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel5/add_160_S3                  1311.0048      0.1     1311.0048       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37
+channel5/add_161                     1602.4176      0.1     1602.4176       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel5/add_166                      497.4480      0.0      497.4480       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4
+channel5/add_180                      706.3056      0.0      706.3056       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38
+channel5/add_181                      991.3680      0.1      991.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14
+channel5/add_190                      596.2320      0.0      596.2320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3
+channel5/add_193                      528.4944      0.0      528.4944       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39
+channel5/add_194                      699.2496      0.0      699.2496       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35
+channel5/add_1_root_add_192_2         625.8672      0.0      625.8672       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32
+channel5/add_200                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel5/add_201                      550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel5/add_204_aco                  550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel5/add_263_S2                    71.2656      0.0       71.2656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel5/aid                         3549.8737      0.2     1360.3968    1565.0208  0.0000  ITERATIVE_tracking_aid_iterative
+channel5/aid/sub_401                  369.0288      0.0      369.0288       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_1
+channel5/aid/sub_408                  255.4272      0.0      255.4272       0.0000  0.0000  ITERATIVE_tracking_aid_iterative_DW01_sub_0
+channel5/conversion                 11234.5632      0.7        0.0000       0.0000  0.0000  ITERATIVE_tracking_divide_step
+channel5/conversion/add_422_C425      318.9312      0.0      318.9312       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW01_add_2
+channel5/conversion/mult_420_C425   10915.6320      0.7    10915.6320       0.0000  0.0000  ITERATIVE_tracking_divide_step_DW_mult_tc_2
+channel5/frontend                   59297.2135      3.9     4847.4721   11289.6002  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel5/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel5/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel5/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel5/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel5/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel5/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel5/frontend/carrier            8686.6417      0.6     5122.6561    1955.9232  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel5/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel5/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel5/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  ITERATIVE_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel5/frontend/code_source       12719.8514      0.8     3673.3537    1738.5984  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel5/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel5/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel5/frontend/code_source/early_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_2
+channel5/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_2_DW01_inc_0
+channel5/frontend/code_source/late_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_1
+channel5/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_1_DW01_inc_0
+channel5/frontend/code_source/prompt_prn
+                                     1404.8496      0.1      663.9696     637.8624  0.0000  ITERATIVE_b1i_prn_gen_0
+channel5/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  ITERATIVE_b1i_prn_gen_0_DW01_inc_0
+channel5/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel5/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel5/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel5/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel5/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel5/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  ITERATIVE_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel5/frontend/correlator        15578.9425      1.0     4791.7298    7773.5953  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel5/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel5/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel5/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel5/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel5/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel5/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel5/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  ITERATIVE_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel5/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel5/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  ITERATIVE_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel5/gt_179                       632.9232      0.0      632.9232       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22
+channel5/gt_179_2                     510.8544      0.0      510.8544       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15
+channel5/gte_165                      621.6336      0.0      621.6336       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel5/lt_175                       772.6320      0.1      772.6320       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24
+channel5/mult_157                    7621.8912      0.5     7621.8912       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38
+channel5/mult_157_S2                 7611.3072      0.5     7611.3072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel5/mult_158                    7367.1696      0.5     7367.1696       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel5/mult_158_S2                 7369.2864      0.5     7369.2864       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel5/mult_159                    7628.9472      0.5     7628.9472       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel5/mult_159_S2                 7612.0128      0.5     7612.0128       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39
+channel5/mult_176                     765.5760      0.1      765.5760       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel5/mult_178                    1237.6224      0.1     1237.6224       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33
+channel5/mult_180                     789.5664      0.1      789.5664       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41
+channel5/mult_181                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7
+channel5/mult_181_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6
+channel5/mult_182                   10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2
+channel5/mult_182_2                 10073.1456      0.7    10073.1456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3
+channel5/mult_187                     573.6528      0.0      573.6528       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20
+channel5/mult_191                    2311.5456      0.2     2311.5456       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19
+channel5/mult_192                    1687.7952      0.1     1687.7952       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34
+channel5/mult_193                    2171.8368      0.1     2171.8368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16
+channel5/mult_199                    2003.1984      0.1     2003.1984       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel5/mult_200                    1665.9216      0.1     1665.9216       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel5/mult_201                    1613.7072      0.1     1613.7072       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel5/mult_204                    1217.8656      0.1     1217.8656       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel5/mult_204_2                  3885.7391      0.3     3885.7391       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel5/mult_add_204_aco             112.8960      0.0      112.8960       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel5/normalize                  23685.5809      1.6     8556.8114    6443.5392  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1
+channel5/normalize/add_330           1028.7648      0.1     1028.7648       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2
+channel5/normalize/add_330_S3         539.0784      0.0      539.0784       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1
+channel5/normalize/add_332_S2        1026.6480      0.1     1026.6480       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0
+channel5/normalize/sub_316           1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6
+channel5/normalize/sub_317            558.1296      0.0      558.1296       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5
+channel5/normalize/sub_330_S2        1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4
+channel5/normalize/sub_332           1152.9504      0.1     1152.9504       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3
+channel5/normalize/sub_332_S3         603.9936      0.0      603.9936       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2
+channel5/normalize/sub_350            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1
+channel5/normalize/sub_351            755.6976      0.0      755.6976       0.0000  0.0000  ITERATIVE_tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0
+channel5/sub_162                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5
+channel5/sub_163                      369.7344      0.0      369.7344       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4
+channel5/sub_165                     1115.5536      0.1     1115.5536       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3
+channel5/sub_165_2                   1113.4368      0.1     1113.4368       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2
+channel5/sub_182                     1111.3200      0.1     1111.3200       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6
+channel5/sub_200                      633.6288      0.0      633.6288       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7
+channel5/sub_201                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel5/sub_204                      637.8624      0.0      637.8624       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel5/sub_204_2                    821.3184      0.1      821.3184       0.0000  0.0000  ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+--------------------------------  ------------  -------  ------------  -----------  ------  ---------------------------------------------------------------------------------------------------------------------------
+Total                                                    1231748.9901  283680.8380  0.0000
+
+1

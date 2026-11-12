@@ -1,0 +1,16 @@
+{
+  "budget_s": 300.0, 
+  "rss_limit_kib": 1048576, 
+  "cwd": "/home/ICer/six_tile_asic_v2_20261113/teacher_capture", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/six_tile_asic_v2_20261113/teacher_capture/reports/time.txt", 
+    "setsid", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "../scripts/teacher_probe.tcl"
+  ]
+}

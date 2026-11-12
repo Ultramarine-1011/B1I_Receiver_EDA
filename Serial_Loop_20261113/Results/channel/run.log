@@ -1,0 +1,1410 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+proc iterative_synthesis {} {
+global env report_dir search_path
+set_app_var sh_enable_page_mode false
+set_host_options -max_cores 1
+set_app_var target_library /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+set_app_var synthetic_library dw_foundation.sldb
+set_app_var link_library [list * /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db dw_foundation.sldb]
+set_app_var search_path [concat [list ../rtl] $search_path]
+define_design_lib WORK -path ./WORK
+foreach name {b1i_prn_gen code_nco carrier_nco_mixer epl_correlator tracking_frontend_spaced tracking_channel_minimal} {
+    if {![analyze -format sverilog -define SYNTHESIS ../rtl/${name}.sv]} {exit 1}
+}
+if {![elaborate tracking_channel_minimal -parameters "ENABLE_FLL=1,ENABLE_CARRIER_AID=1"] || ![link]} {exit 1}
+set_operating_conditions typical -library typical
+set reset_port reset_n
+source ../scripts/baseline.sdc
+redirect $env(REPORT_DIR)/check_pre.rpt {check_design}
+if {![compile -map_effort medium]} {exit 1}
+write -format verilog -hierarchy -output $env(REPORT_DIR)/mapped.v
+write -format ddc -hierarchy -output $env(REPORT_DIR)/mapped.ddc
+write_sdc $env(REPORT_DIR)/mapped.sdc
+set report_dir $env(REPORT_DIR)
+source ../scripts/reports.tcl
+backend_reports ""
+if {[sizeof_collection [get_cells -hier -filter {is_unmapped == true && is_hierarchical == false}]]} {exit 1}
+puts "ITERATIVE_TRACKING_DC_PASS"
+}
+if {[catch {iterative_synthesis} failure]} {
+    puts stderr "ITERATIVE_TRACKING_DC_FAILED $failure"
+    exit 1
+}
+Running PRESTO HDLC
+Compiling source file ../rtl/b1i_prn_gen.sv
+Presto compilation completed successfully.
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Running PRESTO HDLC
+Compiling source file ../rtl/code_nco.sv
+Warning:  ../rtl/code_nco.sv:241: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../rtl/carrier_nco_mixer.sv
+Opening include file ../rtl/carrier_quarter_lut.svh
+Warning:  ../rtl/carrier_nco_mixer.sv:95: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../rtl/epl_correlator.sv
+Warning:  ../rtl/epl_correlator.sv:152: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../rtl/tracking_frontend_spaced.sv
+Warning:  ../rtl/tracking_frontend_spaced.sv:181: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../rtl/tracking_channel_minimal.sv
+Presto compilation completed successfully.
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../rtl/tracking_channel_minimal.sv:162: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:163: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:243: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:254: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:258: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:270: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:272: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:273: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:274: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 131 in file
+	'../rtl/tracking_channel_minimal.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           140            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 line 124 in file
+		'../rtl/tracking_channel_minimal.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| initial_aid_pending_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 line 131 in file
+		'../rtl/tracking_channel_minimal.sv'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| pending_feedback_ref_reg | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    feedback_state_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   code_delta_full_reg    | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  carrier_delta_full_reg  | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  feedback_aid_word_reg   | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 line 228 in file
+		'../rtl/tracking_channel_minimal.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|      feedback_ref_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        enabled_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      base_doppler_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     code_integral_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    carrier_integral_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_step_q_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_step_q_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   carrier_step_word_reg    | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   carrier_step_word_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| previous_prompt_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      previous_ip_reg       | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      previous_qp_reg       | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  previous_prompt_ref_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     fll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     feedback_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         usable_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         locked_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      good_windows_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      bad_windows_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      invalid_run_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    validity_history_reg    | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|       population_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|          seen_reg          | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     code_mean_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   frequency_mean_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   previous_phase_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_mean_square_q32_reg  | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_mean_square_q32_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  previous_phase_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     dll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     pll_error_q16_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_correction_q16_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| carrier_correction_q16_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'.
+Information: Building the design 'tracking_normalize_iterative' instantiated from design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1' with
+	the parameters "ENABLE_FLL=1". (HDL-193)
+Warning:  ../rtl/tracking_channel_minimal.sv:354: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../rtl/tracking_channel_minimal.sv:355: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 315 in file
+	'../rtl/tracking_channel_minimal.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           320            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine tracking_normalize_iterative_ENABLE_FLL1 line 335 in file
+		'../rtl/tracking_channel_minimal.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      angle_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     running_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    iteration_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      done_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| code_remainder_reg  | Flip-flop |  57   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_divisor_reg   | Flip-flop |  57   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_remainder_reg | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  phase_divisor_reg  | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_quotient_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+| phase_quotient_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   code_ratio_reg    | Flip-flop |  17   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   phase_ratio_reg   | Flip-flop |  17   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        x_reg        | Flip-flop |  59   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        y_reg        | Flip-flop |  59   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        z_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tracking_divide_step'. (HDL-193)
+Warning:  ../rtl/tracking_channel_minimal.sv:422: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'tracking_aid_iterative'. (HDL-193)
+Warning:  ../rtl/tracking_channel_minimal.sv:401: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine tracking_aid_iterative line 393 in file
+		'../rtl/tracking_channel_minimal.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      done_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     running_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    negative_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    iteration_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    dividend_reg     | Flip-flop |  34   |  Y  | N  | Y  | N  | N  | N  | N  |
+| remainder_value_reg | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    quotient_reg     | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     result_reg      | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tracking_frontend_spaced' instantiated from design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1' with
+	the parameters "EPL_HALF_SPACING_NUMERATOR=5,EPL_HALF_SPACING_DENOMINATOR=16". (HDL-193)
+Warning:  ../rtl/tracking_frontend_spaced.sv:91: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../rtl/tracking_frontend_spaced.sv:92: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../rtl/tracking_frontend_spaced.sv:162: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 line 107 in file
+		'../rtl/tracking_frontend_spaced.sv'.
+=============================================================================================
+|           Register Name           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================
+| window_end_carrier_phase_word_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         early_delayed_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        prompt_delayed_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         late_delayed_reg          | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       integrate_delayed_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      integration_started_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|          energy_acc_reg           | Flip-flop |  42   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         energy_count_reg          | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         window_energy_reg         | Flip-flop |  42   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      code_phase_delayed_reg       | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        period_delayed_reg         | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     carrier_phase_delayed_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       first_code_phase_reg        | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         first_period_reg          | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      first_carrier_phase_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      window_code_phase_q_reg      | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   window_code_period_count_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   window_carrier_phase_word_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       end_phase_delayed_reg       | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      end_period_delayed_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       end_step_delayed_reg        | Flip-flop |  33   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    window_end_code_phase_q_reg    | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+| window_end_code_period_count_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    window_end_code_step_q_reg     | Flip-flop |  33   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      end_carrier_delayed_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+=============================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'code_nco' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "PHASE_FRAC=32,PERIOD_COUNT_WIDTH=32,EPL_HALF_SPACING_NUMERATOR=5,EPL_HALF_SPACING_DENOMINATOR=16". (HDL-193)
+
+Inferred memory devices in process
+	in routine code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 line 199 in file
+		'../rtl/code_nco.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|     code_epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      phase_acc_reg      | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  code_period_count_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| target_prompt_index_reg | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+| target_early_index_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  target_late_index_reg  | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      init_busy_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     code_valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      init_done_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'carrier_nco_mixer' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "PHASE_WIDTH=32,INPUT_WIDTH=3,SAMPLE_REF_WIDTH=64". (HDL-193)
+Warning:  ../rtl/carrier_nco_mixer.sv:88: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../rtl/carrier_nco_mixer.sv:89: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 56 in file
+	'../rtl/carrier_nco_mixer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            5             |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 line 67 in file
+		'../rtl/carrier_nco_mixer.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|       iq_ref_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+| carrier_phase_word_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   carrier_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      iq_valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      i_sample_reg      | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      q_sample_reg      | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'epl_correlator' instantiated from design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16' with
+	the parameters "IQ_WIDTH=14,WINDOW_SAMPLES=16368,SAMPLE_REF_WIDTH=64,ACC_WIDTH=28". (HDL-193)
+Warning:  ../rtl/epl_correlator.sv:63: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../rtl/epl_correlator.sv:64: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../rtl/epl_correlator.sv:122: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28 line 81 in file
+		'../rtl/epl_correlator.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|     window_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       ie_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       qe_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ip_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       qp_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       il_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ql_acc_reg        | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ie_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         qe_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ip_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         qp_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         il_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         ql_reg          | Flip-flop |  28   |  Y  | N  | Y  | N  | N  | N  | N  |
+| window_sample_count_reg | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  window_start_ref_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     window_ref_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'b1i_prn_gen'. (HDL-193)
+
+Statistics for case statements in always block at line 82 in file
+	'../rtl/b1i_prn_gen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine b1i_prn_gen line 98 in file
+		'../rtl/b1i_prn_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      epoch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g1_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    g2_state_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   active_prn_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   chip_index_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   configured_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+
+  Linking design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /home/ICer/six_tile_asic_v2_20261113/channel_retry1/tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1.db, etc
+  typical (library)           /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+Using operating conditions 'typical' found in library 'typical'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+BASELINE_OUTPUT_LOAD_PF 0.006604
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 70 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64'
+  Processing 'b1i_prn_gen_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'
+Information: Added key list 'DesignWare' to design 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'. (DDB-72)
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'
+  Processing 'tracking_aid_iterative'
+  Processing 'tracking_divide_step'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1'
+Information: Added key list 'DesignWare' to design 'tracking_normalize_iterative_ENABLE_FLL1'. (DDB-72)
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'
+Information: Added key list 'DesignWare' to design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_0'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_1'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_2'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_3'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_4'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_5'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_6'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_7'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_8'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_9'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_10'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_12'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_13'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_14'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_1'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_6'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_7'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_8'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_0'
+  Mapping 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_0'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_sub_0'
+  Processing 'epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_sub_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_0'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_2'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_0'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_0'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_1'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_2'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_4'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_3'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_5'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_4'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_6'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_5'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_7'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_6'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_8'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_7'
+  Mapping 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_cmp_9'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_0'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_cmp6_2'
+  Processing 'b1i_prn_gen_1_DW01_inc_0'
+  Mapping 'b1i_prn_gen_1_DW_cmp_0'
+  Mapping 'b1i_prn_gen_1_DW_cmp_1'
+  Processing 'b1i_prn_gen_2_DW01_inc_0'
+  Mapping 'b1i_prn_gen_2_DW_cmp_0'
+  Mapping 'b1i_prn_gen_2_DW_cmp_1'
+  Processing 'b1i_prn_gen_0_DW01_inc_0'
+  Mapping 'b1i_prn_gen_0_DW_cmp_0'
+  Mapping 'b1i_prn_gen_0_DW_cmp_1'
+  Processing 'tracking_aid_iterative_DW01_inc_0'
+  Processing 'tracking_aid_iterative_DW01_sub_0'
+  Processing 'tracking_aid_iterative_DW01_sub_1'
+  Processing 'tracking_aid_iterative_DW01_sub_2'
+  Processing 'tracking_aid_iterative_DW01_sub_3'
+  Processing 'tracking_aid_iterative_DW01_sub_4'
+  Mapping 'tracking_aid_iterative_DW_cmp_0'
+  Mapping 'tracking_aid_iterative_DW_cmp_1'
+  Mapping 'tracking_aid_iterative_DW_cmp_2'
+  Processing 'tracking_divide_step_DW01_add_0'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6'
+  Mapping 'DW_rightsh'
+  Mapping 'DW_rightsh'
+  Processing 'tracking_normalize_iterative_ENABLE_FLL1_DW01_cmp6_0'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_13'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_1'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_2'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9'
+  Mapping 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0'
+  Mapping 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_0'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_1'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_8'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_9'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3'
+  Processing 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_10'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12'
+  Processing 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_sub_4'
+  Mapping 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0'
+  Mapping 'carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12'
+  Processing 'code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_16'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_17'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_13'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_19'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_15'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_20'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_21'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_22'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_21'
+  Processing 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_23'
+  Mapping 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_22'
+  Mapping 'tracking_divide_step_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'b1i_prn_gen_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'tracking_aid_iterative'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:48  514932.1      3.99     225.2      75.4                          
+    0:00:48  514932.1      3.99     225.2      75.4                          
+    0:00:50  526814.4      4.05     229.9      45.6                          
+    0:00:50  535410.7      4.05     229.9      26.0                          
+    0:00:55  533502.0      0.00       0.0      18.0 *cell*81784/U109/Y       
+    0:00:55  533382.8      0.00       0.0      18.0 *cell*81784/U124/Y       
+    0:00:55  533274.8      0.00       0.0      18.0 *cell*81784/U39/Y        
+    0:00:55  533152.1      0.00       0.0      18.0 *cell*81784/U57/Y        
+    0:00:56  508112.4      0.15       2.7      18.0 *cell*82126/*cell*82128/S
+    0:00:57  507852.1      0.00       0.0      18.0 *cell*82126/*cell*82203/Y
+    0:00:58  507749.8      0.00       0.0      18.0 *cell*82126/U121/Y       
+    0:00:58  507662.3      0.00       0.0      18.0 *cell*82126/*cell*82250/Y
+    0:00:58  507570.5      0.00       0.0      18.0 *cell*82126/U168/Y       
+    0:00:58  507502.8      0.00       0.0      18.0 *cell*82126/U204/Y       
+    0:00:58  507403.3      0.00       0.0      18.0 *cell*82126/*cell*82288/Y
+    0:00:58  507320.8      0.00       0.0      18.0 *cell*82126/*cell*82421/Y
+    0:00:59  507169.1      0.00       0.0      18.0 *cell*82126/*cell*82414/Y
+    0:00:59  507142.9      0.00       0.0      18.0 *cell*82126/*cell*82334/Y
+    0:00:59  506601.0      0.02       0.1      18.0 *cell*82506/*cell*82557/Y
+    0:01:00  506447.2      0.00       0.0      18.0 *cell*82506/U211/Y       
+    0:01:01  506318.1      0.00       0.0      18.0 *cell*82506/*cell*82655/Y
+    0:01:01  506221.4      0.00       0.0      18.0 *cell*82506/U80/Y        
+    0:01:01  506148.1      0.00       0.0      18.0 *cell*82506/U154/Y       
+    0:01:01  506066.2      0.00       0.0      18.0 *cell*82506/*cell*82670/Y
+    0:01:01  505954.0      0.00       0.0      18.0 *cell*82506/U46/Y        
+    0:01:01  505860.9      0.00       0.0      18.0 *cell*82506/U7/Y         
+    0:01:02  505819.9      0.00       0.0      18.0 *cell*82506/U231/Y       
+    0:01:03  497020.4      0.00       0.0      18.0 *cell*82856/*cell*82960/Y
+    0:01:03  496815.1      0.00       0.0      18.0 *cell*82856/*cell*82960/Y
+    0:01:04  496588.6      0.00       0.0      18.0 *cell*82856/*cell*83107/S
+    0:01:04  496199.1      0.00       0.0      18.0 *cell*82856/*cell*83176/Y
+    0:01:05  496074.9      0.00       0.0      18.0 *cell*82856/*cell*82918/Y
+    0:01:05  495810.3      0.00       0.0      18.0 *cell*82856/U309/Y       
+    0:01:06  495723.5      0.00       0.0      18.0 *cell*82856/*cell*83313/Y
+    0:01:06  495654.4      0.00       0.0      18.0 *cell*82856/*cell*83120/Y
+    0:01:06  495458.9      0.00       0.0      18.0 *cell*82856/U1109/Y      
+    0:01:07  495192.9      0.00       0.0      18.0 *cell*82856/*cell*83478/Y
+    0:01:07  494969.2      0.00       0.0      18.0 *cell*82856/*cell*83612/Y
+    0:01:08  494864.8      0.00       0.0      18.0 *cell*82856/*cell*83485/Y
+    0:01:08  494698.3      0.00       0.0      18.0 *cell*82856/U401/Y       
+    0:01:08  494508.5      0.00       0.0      18.0 *cell*82856/*cell*83786/Y
+    0:01:09  494423.8      0.00       0.0      18.0 *cell*82856/*cell*83815/Y
+    0:01:09  494263.6      0.00       0.0      18.0 *cell*82856/*cell*83856/Y
+    0:01:09  494107.7      0.00       0.0      18.0 *cell*82856/*cell*83890/Y
+    0:01:10  494088.6      0.00       0.0      18.0 *cell*82856/*cell*82983/Y
+    0:01:10  494020.9      0.00       0.0      18.0 *cell*82856/*cell*83683/Y
+    0:01:10  493951.0      0.00       0.0      18.0 *cell*82856/*cell*83705/Y
+    0:01:11  493888.3      0.00       0.0      18.0 *cell*82856/U320/Y       
+    0:01:11  493795.1      0.00       0.0      18.0 *cell*82856/*cell*83109/Y
+    0:01:11  493721.0      0.00       0.0      18.0 *cell*82856/U460/Y       
+    0:01:11  493676.6      0.00       0.0      18.0 *cell*82856/*cell*83685/Y
+    0:01:11  493581.3      0.00       0.0      18.0 *cell*82856/U496/Y       
+    0:01:12  493481.8      0.00       0.0      18.0 *cell*82856/*cell*84080/Y
+    0:01:12  493438.8      0.00       0.0      18.0 *cell*82856/*cell*83987/Y
+    0:01:12  493370.3      0.00       0.0      18.0 *cell*82856/*cell*84078/Y
+    0:01:12  493354.1      0.00       0.0      18.0 *cell*82856/U215/Y       
+    0:01:12  493302.6      0.00       0.0      18.0 *cell*82856/*cell*83589/Y
+    0:01:13  493262.4      0.00       0.0      18.0 *cell*82856/U412/Y       
+    0:01:13  493195.4      0.00       0.0      18.0 *cell*82856/U120/Y       
+    0:01:13  493163.6      0.00       0.0      18.0 *cell*82856/U180/Y       
+    0:01:13  493144.5      0.00       0.0      18.0 *cell*82856/*cell*84039/Y
+    0:01:13  493123.4      0.00       0.0      18.0 *cell*82856/U181/Y       
+    0:01:14  493091.6      0.00       0.0      18.0 *cell*82856/U323/Y       
+    0:01:14  493032.4      0.00       0.0      18.0 *cell*82856/U149/Y       
+    0:01:14  492991.4      0.00       0.0      18.0 *cell*82856/U123/Y       
+    0:01:14  492915.2      0.00       0.0      18.0 *cell*82856/*cell*83808/Y
+    0:01:14  492851.7      0.00       0.0      18.0 *cell*82856/*cell*84442/Y
+    0:01:15  484104.4      0.04       0.3      18.0 *cell*84453/U254/Y       
+    0:01:16  483882.8      0.00       0.0      18.0 *cell*84453/*cell*84618/Y
+    0:01:16  483690.9      0.00       0.0      18.0 *cell*84453/U596/CO      
+    0:01:17  483379.0      0.00       0.0      18.0 *cell*84453/*cell*84816/Y
+    0:01:17  483247.8      0.00       0.0      18.0 *cell*84453/*cell*84857/Y
+    0:01:18  482941.6      0.00       0.0      18.0 *cell*84453/*cell*84944/S
+    0:01:18  482756.0      0.00       0.0      18.0 *cell*84453/*cell*85014/Y
+    0:01:18  482624.8      0.00       0.0      18.0 *cell*84453/*cell*85105/Y
+    0:01:19  482576.8      0.00       0.0      18.0 *cell*84453/*cell*84828/Y
+    0:01:19  482310.8      0.00       0.0      18.0 *cell*84453/U389/Y       
+    0:01:19  482178.1      0.00       0.0      18.0 *cell*84453/*cell*84985/Y
+    0:01:20  481998.2      0.00       0.0      18.0 *cell*84453/*cell*85348/Y
+    0:01:20  481807.0      0.00       0.0      18.0 *cell*84453/*cell*85392/Y
+    0:01:20  481738.5      0.00       0.0      18.0 *cell*84453/*cell*85422/Y
+    0:01:20  481641.9      0.00       0.0      18.0 *cell*84453/*cell*85443/Y
+    0:01:21  481504.3      0.00       0.0      18.0 *cell*84453/U404/Y       
+    0:01:21  481423.8      0.00       0.0      18.0 *cell*84453/*cell*85511/Y
+    0:01:21  481305.3      0.00       0.0      18.0 *cell*84453/*cell*85501/Y
+    0:01:21  481228.4      0.00       0.0      18.0 *cell*84453/*cell*84675/Y
+    0:01:22  481141.6      0.00       0.0      18.0 *cell*84453/*cell*85544/Y
+    0:01:22  481042.1      0.00       0.0      18.0 *cell*84453/*cell*85606/Y
+    0:01:22  480987.1      0.00       0.0      18.0 *cell*84453/U65/Y        
+    0:01:22  480934.8      0.00       0.0      18.0 *cell*84453/U64/Y        
+    0:01:22  480881.2      0.00       0.0      18.0 *cell*84453/U252/Y       
+    0:01:23  480770.4      0.00       0.0      18.0 *cell*84453/*cell*85678/Y
+    0:01:23  480670.2      0.00       0.0      18.0 *cell*84453/*cell*84532/Y
+    0:01:23  480615.9      0.00       0.0      18.0 *cell*84453/*cell*85596/Y
+    0:01:23  480539.0      0.00       0.0      18.0 *cell*84453/*cell*85642/Y
+    0:01:23  480462.8      0.00       0.0      18.0 *cell*84453/*cell*84994/Y
+    0:01:23  480427.5      0.00       0.0      18.0 *cell*84453/*cell*85813/Y
+    0:01:23  480370.4      0.00       0.0      18.0 *cell*84453/U164/Y       
+    0:01:23  480325.2      0.00       0.0      18.0 *cell*84453/U174/Y       
+    0:01:24  480238.4      0.00       0.0      18.0 *cell*84453/U357/Y       
+    0:01:24  480204.6      0.00       0.0      18.0 *cell*84453/*cell*85763/Y
+    0:01:24  480187.6      0.00       0.0      18.0 *cell*84453/U156/Y       
+    0:01:24  480155.2      0.00       0.0      18.0 *cell*84453/*cell*85487/Y
+    0:01:24  480134.0      0.00       0.0      18.0 *cell*84453/*cell*84667/Y
+    0:01:24  480114.9      0.00       0.0      18.0 *cell*84453/U163/Y       
+    0:01:24  480043.0      0.00       0.0      18.0 *cell*84453/*cell*85724/Y
+    0:01:24  480013.3      0.00       0.0      18.0 *cell*84453/U123/Y       
+    0:01:25  479947.7      0.00       0.0      18.0 *cell*84453/*cell*85499/Y
+    0:01:25  479890.6      0.00       0.0      18.0 *cell*84453/U77/Y        
+    0:01:26  478538.6      0.03       0.2      13.4 *cell*86075/U163/Y       
+    0:01:26  478310.7      0.00       0.0      13.2 *cell*86075/*cell*86209/Y
+    0:01:27  478140.0      0.00       0.0      13.2 *cell*86075/*cell*86271/Y
+    0:01:27  478014.4      0.00       0.0      13.2 *cell*86075/*cell*86289/Y
+    0:01:27  477917.7      0.00       0.0      13.2 *cell*86075/*cell*86299/Y
+    0:01:27  477859.8      0.00       0.0      13.2 *cell*86075/U199/Y       
+    0:01:27  477747.7      0.00       0.0      13.2 *cell*86075/*cell*86238/Y
+    0:01:27  477636.2      0.00       0.0      13.2 *cell*86075/U258/Y       
+    0:01:27  477543.7      0.00       0.0      13.2 *cell*86075/U148/Y       
+    0:01:27  477437.9      0.00       0.0      13.2 *cell*86075/U420/Y       
+    0:01:27  477308.8      0.00       0.0      13.2 *cell*86075/U407/Y       
+    0:01:27  477217.7      0.00       0.0      13.2 *cell*86075/U413/Y       
+    0:01:28  477166.9      0.00       0.0      13.2 *cell*86075/U35/Y        
+    0:01:28  477096.4      0.00       0.0      13.2 *cell*86075/U22/Y        
+    0:01:28  477073.1      0.00       0.0      13.2 *cell*86075/*cell*86522/Y
+    0:01:28  477035.0      0.00       0.0      13.2 *cell*86075/*cell*86452/Y
+    0:01:29  468272.1      0.06       0.4      13.2 *cell*86742/U431/Y       
+    0:01:29  468043.5      0.00       0.0      13.2 *cell*86742/*cell*86801/Y
+    0:01:30  467793.0      0.00       0.0      13.2 *cell*86742/*cell*86964/Y
+    0:01:31  467617.4      0.00       0.0      13.2 *cell*86742/*cell*86952/Y
+    0:01:32  467296.3      0.00       0.0      13.2 *cell*86742/*cell*87120/Y
+    0:01:32  467214.5      0.00       0.0      13.2 *cell*86742/*cell*86957/Y
+    0:01:33  467059.2      0.00       0.0      13.2 *cell*86742/*cell*87062/Y
+    0:01:33  466511.7      0.00       0.0      13.2 *cell*86742/*cell*87351/Y
+    0:01:34  466424.2      0.00       0.0      13.2 *cell*86742/*cell*86992/Y
+    0:01:34  466170.2      0.00       0.0      13.2 *cell*86742/*cell*86946/Y
+    0:01:35  466110.9      0.00       0.0      13.2 *cell*86742/*cell*87345/Y
+    0:01:35  465990.2      0.00       0.0      13.2 *cell*86742/*cell*87603/Y
+    0:01:35  465891.5      0.00       0.0      13.2 *cell*86742/*cell*87644/Y
+    0:01:36  465808.2      0.00       0.0      13.2 *cell*86742/*cell*87696/Y
+    0:01:36  465642.4      0.00       0.0      13.2 *cell*86742/*cell*87039/Y
+    0:01:36  465514.7      0.00       0.0      13.2 *cell*86742/*cell*87076/Y
+    0:01:37  465434.2      0.00       0.0      13.2 *cell*86742/U39/Y        
+    0:01:37  465358.7      0.00       0.0      13.2 *cell*86742/*cell*87825/Y
+    0:01:37  465300.9      0.00       0.0      13.2 *cell*86742/U660/S       
+    0:01:37  465164.0      0.00       0.0      13.2 *cell*86742/*cell*87147/Y
+    0:01:37  465063.8      0.00       0.0      13.2 *cell*86742/U64/Y        
+    0:01:38  465028.5      0.00       0.0      13.2 *cell*86742/*cell*86937/Y
+    0:01:38  464943.1      0.00       0.0      13.2 *cell*86742/*cell*87163/S
+    0:01:38  464886.0      0.00       0.0      13.2 *cell*86742/*cell*87052/Y
+    0:01:38  464787.9      0.00       0.0      13.2 *cell*86742/*cell*87947/Y
+    0:01:39  464738.5      0.00       0.0      13.2 *cell*86742/*cell*87811/Y
+    0:01:39  464687.0      0.00       0.0      13.2 *cell*86742/U378/Y       
+    0:01:39  464642.5      0.00       0.0      13.2 *cell*86742/U343/Y       
+    0:01:39  464584.7      0.00       0.0      13.2 *cell*86742/*cell*87131/ICO
+    0:01:40  464536.7      0.00       0.0      13.2 *cell*86742/*cell*87223/Y
+    0:01:40  464485.9      0.00       0.0      13.2 *cell*86742/*cell*88121/Y
+    0:01:40  464451.3      0.00       0.0      13.2 *cell*86742/*cell*86947/Y
+    0:01:40  464419.6      0.00       0.0      13.2 *cell*86742/*cell*87398/S
+    0:01:40  464394.2      0.00       0.0      13.2 *cell*86742/U381/Y       
+    0:01:41  464334.9      0.00       0.0      13.2 *cell*86742/*cell*88297/Y
+    0:01:41  464290.4      0.00       0.0      13.2 *cell*86742/*cell*87893/Y
+    0:01:41  464224.8      0.00       0.0      13.2 *cell*86742/U172/Y       
+    0:01:41  464155.7      0.00       0.0      13.2 *cell*86742/U88/Y        
+    0:01:42  455518.4      0.42      11.2      13.2 *cell*88423/U98/Y        
+    0:01:42  455265.8      0.03       0.2      13.2 *cell*88423/U1113/Y      
+    0:01:43  455108.5      0.00       0.0      13.2 *cell*88423/U406/Y       
+    0:01:43  454920.1      0.00       0.0      13.2 *cell*88423/U311/Y       
+    0:01:43  454584.2      0.00       0.0      13.2 *cell*88423/U1134/Y      
+    0:01:44  454423.3      0.00       0.0      13.2 *cell*88423/*cell*88619/Y
+    0:01:44  454269.5      0.00       0.0      13.2 *cell*88423/U45/Y        
+    0:01:44  453949.2      0.00       0.0      13.2 *cell*88423/*cell*88748/Y
+    0:01:45  453767.1      0.00       0.0      13.2 *cell*88423/*cell*88832/Y
+    0:01:45  453552.6      0.00       0.0      13.2 *cell*88423/*cell*89128/Y
+    0:01:45  453412.9      0.00       0.0      13.2 *cell*88423/*cell*88692/Y
+    0:01:45  453172.3      0.00       0.0      13.2 *cell*88423/*cell*89231/Y
+    0:01:46  453034.0      0.00       0.0      13.2 *cell*88423/*cell*89268/Y
+    0:01:46  452921.1      0.00       0.0      13.2 *cell*88423/*cell*88649/Y
+    0:01:46  452784.2      0.00       0.0      13.2 *cell*88423/*cell*89338/Y
+    0:01:46  452744.0      0.00       0.0      13.2 *cell*88423/*cell*88846/Y
+    0:01:46  452680.5      0.00       0.0      13.2 *cell*88423/*cell*89175/Y
+    0:01:47  452562.7      0.00       0.0      13.2 *cell*88423/*cell*89411/Y
+    0:01:47  452532.3      0.00       0.0      13.2 *cell*88423/U442/Y       
+    0:01:47  452436.4      0.00       0.0      13.2 *cell*88423/*cell*89444/Y
+    0:01:47  452375.7      0.00       0.0      13.2 *cell*88423/*cell*88545/Y
+    0:01:48  452291.0      0.00       0.0      13.2 *cell*88423/*cell*88834/Y
+    0:01:48  452214.8      0.00       0.0      13.2 *cell*88423/U387/Y       
+    0:01:48  452040.5      0.00       0.0      13.2 *cell*88423/*cell*89545/Y
+    0:01:48  452002.4      0.00       0.0      13.2 *cell*88423/U281/Y       
+    0:01:49  451940.3      0.00       0.0      13.2 *cell*88423/U367/Y       
+    0:01:49  451878.9      0.00       0.0      13.2 *cell*88423/*cell*89627/S
+    0:01:49  451819.0      0.00       0.0      13.2 *cell*88423/*cell*89509/Y
+    0:01:49  451735.7      0.00       0.0      13.2 *cell*88423/U204/Y       
+    0:01:50  451706.1      0.00       0.0      13.2 *cell*88423/*cell*89514/Y
+    0:01:50  451651.7      0.00       0.0      13.2 *cell*88423/*cell*89718/Y
+    0:01:50  451617.9      0.00       0.0      13.2 *cell*88423/*cell*89673/Y
+    0:01:50  451561.4      0.00       0.0      13.2 *cell*88423/U655/S       
+    0:01:50  451527.6      0.00       0.0      13.2 *cell*88423/U182/Y       
+    0:01:51  451502.2      0.00       0.0      13.2 *cell*88423/*cell*89170/S
+    0:01:51  451466.2      0.00       0.0      13.2 *cell*88423/U174/Y       
+    0:01:51  451445.0      0.00       0.0      13.2 *cell*88423/*cell*89585/Y
+    0:01:51  451394.2      0.00       0.0      13.2 *cell*88423/U134/Y       
+    0:01:52  451360.3      0.00       0.0      13.2 *cell*88423/*cell*89009/Y
+    0:01:52  451298.9      0.00       0.0      13.2 *cell*88423/*cell*89934/Y
+    0:01:52  451233.3      0.00       0.0      13.2 *cell*88423/U80/Y        
+    0:01:53  450069.1      0.19       3.7       3.7 *cell*90010/U283/Y       
+    0:01:54  449773.4      0.00       0.0       0.9 *cell*90010/U177/Y       
+    0:01:54  449669.0      0.00       0.0       0.9 *cell*90010/U83/Y        
+    0:01:54  449512.4      0.00       0.0       0.9 *cell*90010/*cell*90167/Y
+    0:01:54  449413.6      0.00       0.0       0.5 *cell*90010/U233/Y       
+    0:01:55  449264.0      0.00       0.0       0.5 *cell*90010/*cell*90267/Y
+    0:01:55  449134.2      0.00       0.0       0.1 *cell*90010/*cell*90284/Y
+    0:01:55  449024.8      0.00       0.0       0.1 *cell*90010/U253/Y       
+    0:01:55  448872.4      0.00       0.0       0.1 *cell*90010/U196/Y       
+    0:01:55  448788.4      0.00       0.0       0.1 *cell*90010/U265/Y       
+    0:01:55  448689.6      0.00       0.0       0.1 *cell*90010/U273/Y       
+    0:01:55  448605.0      0.00       0.0       0.1 *cell*90010/*cell*90455/Y
+    0:01:56  448550.6      0.00       0.0       0.1 *cell*90010/*cell*90035/Y
+    0:01:56  448468.8      0.00       0.0       0.1 *cell*90010/U21/Y        
+    0:01:57  448437.0      0.00       0.0       0.1 *cell*90010/U443/Y       
+    0:01:57  448422.2      0.00       0.0       0.1 *cell*90010/U87/Y        
+    0:01:57  448640.2      0.00       0.0       0.1 *cell*90694/U10/Y        
+    0:01:58  448532.3      0.00       0.0       0.1 *cell*90694/U69/Y        
+    0:01:58  448407.4      0.00       0.0       0.1 *cell*90694/*cell*90805/Y
+    0:01:58  448288.9      0.00       0.0       0.1 *cell*90694/U282/Y       
+    0:01:58  448176.7      0.00       0.0       0.1 *cell*90694/U295/Y       
+    0:01:58  448056.0      0.00       0.0       0.1 *cell*90694/U278/Y       
+    0:01:58  447949.5      0.00       0.0       0.1 *cell*90694/U195/Y       
+    0:01:58  447843.6      0.00       0.0       0.1 *cell*90694/U205/Y       
+    0:01:58  447739.9      0.00       0.0       0.1 *cell*90694/U316/Y       
+    0:01:58  445656.3      0.23       4.8       0.1 *cell*91158/U12/Y        
+    0:01:59  445423.4      0.00       0.0       0.1 *cell*91158/U103/Y       
+    0:02:00  445345.8      0.00       0.0       0.1 *cell*91158/U129/Y       
+    0:02:00  445235.7      0.00       0.0       0.1 *cell*91158/U176/Y       
+    0:02:00  445129.9      0.00       0.0       0.1 *cell*91158/U234/Y       
+    0:02:01  445007.1      0.00       0.0       0.1 *cell*91158/U235/Y       
+    0:02:01  444913.3      0.00       0.0       0.1 *cell*91158/U38/Y        
+    0:02:02  444782.0      0.00       0.0       0.1 *cell*91158/*cell*91465/Y
+    0:02:02  444493.4      0.11       1.6       0.1 *cell*91481/*cell*91490/Y
+    0:02:03  444281.7      0.00       0.0       0.1 *cell*91481/*cell*91548/Y
+    0:02:03  444144.9      0.00       0.0       0.1 *cell*91481/U155/Y       
+    0:02:03  444074.3      0.00       0.0       0.1 *cell*91481/U146/Y       
+    0:02:03  443993.9      0.00       0.0       0.1 *cell*91481/U16/Y        
+    0:02:03  443905.0      0.00       0.0       0.1 *cell*91481/U125/Y       
+    0:02:03  443846.4      0.00       0.0       0.1 *cell*91481/*cell*91660/Y
+    0:02:05  428670.3      0.00       0.0       0.1 conversion/*cell*91780/U890/Y
+    0:02:05  428311.9      0.00       0.0       0.1 conversion/*cell*91780/U880/Y
+    0:02:06  428084.0      0.00       0.0       0.1 conversion/*cell*91780/U5/Y
+    0:02:07  427903.4      0.00       0.0       0.1 conversion/*cell*91780/*cell*92117/Y
+    0:02:07  427798.9      0.00       0.0       0.1 conversion/*cell*91780/U900/Y
+    0:02:07  427654.3      0.00       0.0       0.1 conversion/*cell*91780/U891/Y
+    0:02:08  427583.0      0.00       0.0       0.1 conversion/*cell*91780/U615/S
+    0:02:08  427465.2      0.00       0.0       0.1 conversion/*cell*91780/U882/Y
+    0:02:08  427426.4      0.00       0.0       0.1 conversion/*cell*91780/*cell*92053/Y
+    0:02:08  427335.4      0.00       0.0       0.1 conversion/*cell*91780/U930/Y
+    0:02:09  427263.4      0.00       0.0       0.1 conversion/*cell*91780/*cell*92445/Y
+    0:02:09  427202.7      0.00       0.0       0.1 conversion/*cell*91780/U426/Y
+    0:02:09  427143.4      0.00       0.0       0.1 conversion/*cell*91780/U731/CO
+    0:02:09  427063.0      0.00       0.0       0.1 conversion/*cell*91780/*cell*92212/Y
+    0:02:09  427020.7      0.00       0.0       0.1 conversion/*cell*91780/U741/S
+    0:02:09  426941.6      0.00       0.0       0.1 conversion/*cell*91780/U336/Y
+    0:02:10  426894.4      0.00       0.0       0.1 conversion/*cell*91780/U912/Y
+    0:02:10  426806.9      0.00       0.0       0.1 conversion/*cell*91780/*cell*91895/Y
+    0:02:10  426740.5      0.00       0.0       0.1 conversion/*cell*91780/U223/Y
+    0:02:10  426696.8      0.00       0.0       0.1 conversion/*cell*91780/U439/Y
+    0:02:10  426642.5      0.00       0.0       0.1 conversion/*cell*91780/U61/Y
+    0:02:10  426568.4      0.00       0.0       0.1 conversion/*cell*91780/U210/Y
+    0:02:11  426485.1      0.00       0.0       0.1 conversion/*cell*91780/*cell*92857/Y
+    0:02:11  426462.5      0.00       0.0       0.1 conversion/*cell*91780/U921/Y
+    0:02:11  426346.1      0.00       0.0       0.1 conversion/*cell*91780/*cell*92587/Y
+    0:02:11  426233.2      0.00       0.0       0.1 conversion/*cell*91780/*cell*92967/Y
+    0:02:11  426125.2      0.00       0.0       0.1 conversion/*cell*91780/U183/Y
+    0:02:11  426034.2      0.00       0.0       0.1 conversion/*cell*91780/*cell*93003/Y
+    0:02:11  425963.7      0.00       0.0       0.1 conversion/*cell*91780/U76/Y
+    0:02:11  425860.6      0.00       0.0       0.1 conversion/*cell*91780/*cell*91980/Y
+    0:02:11  425757.6      0.00       0.0       0.1 conversion/*cell*91780/*cell*92097/Y
+    0:02:13  425427.4      0.00       0.0       0.1 conversion/*cell*93172/*cell*93251/Y
+    0:02:14  425049.2      0.00       0.0       0.1 conversion/*cell*93172/U109/Y
+    0:02:14  424985.7      0.00       0.0       0.1 conversion/*cell*93172/U33/Y
+    0:02:14  424932.8      0.00       0.0       0.1 conversion/*cell*93172/*cell*93363/Y
+Information: The register 'fll_error_q16_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'fll_error_q16_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'fll_error_q16_reg[1]' is a constant and will be removed. (OPT-1206)
+    0:02:18  422027.1      0.00       0.0       0.1                          
+    0:02:18  422027.1      0.00       0.0       0.1                          
+    0:02:18  422027.1      0.00       0.0       0.1                          
+    0:02:18  422027.1      0.00       0.0       0.1                          
+    0:02:18  422027.1      0.00       0.0       0.1                          
+    0:02:29  254366.0      1.96      69.3       0.0                          
+    0:02:31  255209.2      1.88      66.9       0.0                          
+    0:02:34  255461.1      1.47      51.3       0.0                          
+    0:02:35  255242.3      1.42      49.5       0.0                          
+    0:02:36  255311.5      1.40      48.9       0.0                          
+    0:02:37  255283.3      1.39      48.5       0.0                          
+    0:02:37  255291.7      1.39      48.6       0.0                          
+    0:02:38  255274.1      1.39      48.4       0.0                          
+    0:02:38  255283.3      1.39      48.6       0.0                          
+    0:02:39  255274.1      1.39      48.4       0.0                          
+    0:02:39  255274.1      1.39      48.4       0.0                          
+    0:02:39  255274.1      1.39      48.4       0.0                          
+    0:02:39  255274.1      1.39      48.4       0.0                          
+    0:02:39  255274.1      1.39      48.4       0.0                          
+    0:02:39  255274.1      1.39      48.4       0.0                          
+    0:02:39  255274.1      1.39      48.4       0.0                          
+    0:02:41  255445.5      1.21      42.2       0.0 code_delta_full_reg[12]/D
+    0:02:42  255816.0      0.77      25.9       0.0 code_delta_full_reg[12]/D
+    0:02:43  255935.2      0.64      21.0       0.0 code_delta_full_reg[12]/D
+    0:02:44  256408.0      0.08       0.7       0.0 carrier_delta_full_reg[20]/D
+    0:02:44  256412.2      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:44  256412.2      0.00       0.0       0.0                          
+    0:02:44  256412.2      0.00       0.0       0.0                          
+    0:02:45  256364.9      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:45  256364.9      0.00       0.0       0.0                          
+    0:02:45  256364.9      0.00       0.0       0.0                          
+    0:02:47  255216.9      0.04       0.4       0.0                          
+    0:02:48  254701.8      0.04       0.4       0.0                          
+    0:02:48  254427.4      0.04       0.4       0.0                          
+    0:02:49  254198.0      0.04       0.4       0.0                          
+    0:02:49  254024.5      0.04       0.4       0.0                          
+    0:02:49  253915.8      0.04       0.4       0.0                          
+    0:02:50  253848.8      0.04       0.4       0.0                          
+    0:02:50  253809.3      0.04       0.4       0.0                          
+    0:02:50  253786.7      0.04       0.4       0.0                          
+    0:02:50  253786.7      0.04       0.4       0.0                          
+    0:02:50  253766.2      0.00       0.0       0.0                          
+    0:02:51  252326.8      0.25       6.7       0.0                          
+    0:02:51  252283.0      0.25       6.7       0.0                          
+    0:02:51  252283.0      0.25       6.7       0.0                          
+    0:02:51  252283.0      0.25       6.7       0.0                          
+    0:02:51  252283.0      0.25       6.7       0.0                          
+    0:02:51  252283.0      0.25       6.7       0.0                          
+    0:02:51  252283.0      0.25       6.7       0.0                          
+    0:02:53  252482.7      0.06       0.9       0.0 carrier_delta_full_reg[20]/D
+    0:02:54  252566.0      0.02       0.2       0.0                          
+    0:02:55  252571.6      0.00       0.0       0.0                          
+Loading db file '/home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'frontend/code_source/early_prn/clk': 2975 load(s), 1 driver(s)
+Writing verilog file '/home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 2 nets to module tracking_normalize_iterative_ENABLE_FLL1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 57 nets to module tracking_divide_step using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 96 nets to module code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 2 nets to module carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 15 nets to module tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 158 nets to module tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Writing ddc file '/home/ICer/six_tile_asic_v2_20261113/channel_retry1/reports/mapped.ddc'.
+BACKEND_LEAF 32200 UNMAPPED 0 BLACKBOX 0 CONSTANT_PSEUDO 131
+ITERATIVE_TRACKING_DC_PASS
+exit 0
+
+Memory usage for main task 405 Mbytes.
+Memory usage for this session 405 Mbytes.
+CPU usage for this session 182 seconds ( 0.05 hours ).
+
+Thank you...

@@ -1,0 +1,2593 @@
+ 
+****************************************
+Report : reference
+Design : tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:32:04 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000       7     74.087997  r
+AND2X2             typical        3.528000      23     81.144003  
+AND4X1             typical        5.644800       3     16.934401  
+AND4X2             typical        5.644800       2     11.289600  
+AO2B2X1            typical        7.056000     120    846.720028  
+AO2B2X2            typical        7.056000     253   1785.168059  
+AO2B2X4            typical        7.761600       1      7.761600  
+AO2B2XL            typical        7.056000      23    162.288005  
+AO21X1             typical        4.939200       1      4.939200  
+AO21X2             typical        4.939200       6     29.635200  
+AO22X2             typical        5.644800      37    208.857607  
+AO22XL             typical        5.644800       8     45.158401  
+AOI2BB1X1          typical        4.233600       1      4.233600  
+AOI2BB2X1          typical        5.644800       1      5.644800  
+AOI21BX1           typical        5.644800       1      5.644800  
+AOI21BX2           typical        5.644800       1      5.644800  
+AOI21BX4           typical        6.350400       1      6.350400  
+AOI21X1            typical        3.528000       4     14.112000  
+AOI22X1            typical        4.939200       1      4.939200  
+AOI22XL            typical        4.233600      55    232.848008  
+AOI31X1            typical        4.233600       3     12.700800  
+AOI31XL            typical        4.233600       1      4.233600  
+AOI211X1           typical        4.233600       1      4.233600  
+AOI211X2           typical        4.233600       5     21.168001  
+AOI211XL           typical        4.233600       1      4.233600  
+BUFX2              typical        2.822400     108    304.819210  
+BUFX4              typical        4.233600       2      8.467200  
+BUFX8              typical        6.350400       1      6.350400  
+BUFX16             typical       11.289600       1     11.289600  
+CLKINVX1           typical        2.116800       1      2.116800  
+CLKINVX2           typical        2.116800      50    105.840003  
+CLKINVX4           typical        2.822400       4     11.289600  
+CLKINVX12          typical        6.350400       1      6.350400  
+CLKNAND2X2         typical        2.822400       2      5.644800  
+CLKXOR2X2          typical        7.056000       6     42.336001  
+CLKXOR2X4          typical       10.584000       1     10.584000  
+DFFRQX1            typical       15.523200      31    481.219201  n
+DFFRQX2            typical       15.523200     693  10757.577624  n
+DFFRX1             typical       16.934401     195   3302.208109  n
+DFFRXL             typical       16.934401       1     16.934401  n
+DFFSQXL            typical       14.112000       3     42.336001  n
+INVX2              typical        2.116800     398    842.486428  
+INVX3              typical        2.822400       1      2.822400  
+INVX4              typical        2.822400       7     19.756801  
+INVXL              typical        2.116800      20     42.336001  
+MX2X1              typical        6.350400      59    374.673598  
+MX2XL              typical        6.350400       2     12.700800  
+MXI2X1             typical        5.644800       2     11.289600  
+NAND2BX1           typical        3.528000      89    313.992010  
+NAND2BX2           typical        3.528000      80    282.240009  
+NAND2BX4           typical        5.644800       4     22.579201  
+NAND2BXL           typical        3.528000      11     38.808001  
+NAND2X2            typical        2.822400      12     33.868801  
+NAND2XL            typical        2.822400       3      8.467200  
+NAND3BX1           typical        4.939200       1      4.939200  
+NAND3BX2           typical        4.939200      16     79.027199  
+NAND3BXL           typical        4.939200       9     44.452799  
+NAND3XL            typical        3.528000       4     14.112000  
+NAND4BX1           typical        5.644800       1      5.644800  
+NAND4BX2           typical        5.644800       5     28.224001  
+NAND4X1            typical        4.939200       2      9.878400  
+NOR2BX1            typical        3.528000       3     10.584000  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR2X2             typical        2.822400       8     22.579201  
+NOR3BX1            typical        4.233600       4     16.934401  
+NOR3BX4            typical        7.761600       1      7.761600  
+NOR3BXL            typical        4.233600       1      4.233600  
+NOR3X1             typical        3.528000       3     10.584000  
+NOR4BX1            typical        5.644800       1      5.644800  
+NOR4BX2            typical        5.644800      21    118.540804  
+NOR4BX4            typical        8.467200       1      8.467200  
+NOR4BXL            typical        5.644800       2     11.289600  
+NOR4X1             typical        4.233600       7     29.635201  
+NOR4X2             typical        4.233600       6     25.401601  
+NOR4XL             typical        4.233600       2      8.467200  
+OA21X1             typical        4.939200       5     24.696000  
+OA21XL             typical        4.939200       5     24.696000  
+OAI2B1X1           typical        4.939200       3     14.817600  
+OAI2B1XL           typical        4.939200       2      9.878400  
+OAI2B2X1           typical        5.644800      64    361.267212  
+OAI2B2XL           typical        5.644800       1      5.644800  
+OAI2BB1X1          typical        4.233600     197    834.019228  
+OAI2BB1X2          typical        4.939200       2      9.878400  
+OAI2BB1X4          typical        6.350400       3     19.051200  
+OAI2BB1XL          typical        4.233600      29    122.774404  
+OAI2BB2X1          typical        5.644800       1      5.644800  
+OAI2BB2X2          typical        5.644800     190   1072.512035  
+OAI2BB2XL          typical        5.644800      57    321.753611  
+OAI21X1            typical        3.528000       1      3.528000  
+OAI22X1            typical        4.233600     133    563.068819  
+OAI31X1            typical        4.233600       4     16.934401  
+OAI31X4            typical        8.467200       1      8.467200  
+OAI31XL            typical        4.233600       2      8.467200  
+OAI32XL            typical        4.939200       3     14.817600  
+OAI211XL           typical        4.233600       4     16.934401  
+OAI221X2           typical        6.350400       3     19.051200  
+OAI221XL           typical        6.350400      13     82.555200  
+OAI222XL           typical        7.056000       1      7.056000  
+OR2X1              typical        3.528000       1      3.528000  
+OR2X2              typical        3.528000       5     17.640001  
+OR2XL              typical        3.528000       2      7.056000  
+OR3X1              typical        4.233600       2      8.467200  
+OR3X2              typical        4.233600       2      8.467200  
+OR4X2              typical        5.644800       8     45.158401  
+XNOR2X1            typical        5.644800      96    541.900818  
+XNOR2X2            typical        7.761600       5     38.808000  
+XNOR2XL            typical        5.644800       3     16.934401  
+XNOR3XL            typical       11.995200       1     11.995200  
+XOR2X1             typical        5.644800       7     39.513601  
+XOR2X8             typical       20.462400       1     20.462400  
+XOR3XL             typical       11.995200      19    227.908803  
+tracking_aid_iterative         3549.873675       1   3549.873675  h, n
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+                                550.367982       1    550.367982  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3
+                                596.232020       1    596.232020  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4
+                                497.447984       1    497.447984  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+                               1602.417599       1   1602.417599  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+                                570.124782       1    570.124782  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10
+                                550.367984       1    550.367984  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+                                552.484782       1    552.484782  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14
+                                991.367967       1    991.367967  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+                                550.367982       1    550.367982  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+                                550.367982       1    550.367982  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32
+                                625.867211       1    625.867211  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+                               1092.268824       1   1092.268824  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+                                836.136026       1    836.136026  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35
+                                699.249622       1    699.249622  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36
+                               1287.720040       1   1287.720040  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37
+                               1311.004841       1   1311.004841  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38
+                                706.305622       1    706.305622  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39
+                                528.494416       1    528.494416  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+                                 71.265598       1     71.265598  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2
+                               1113.436771       1   1113.436771  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3
+                               1115.553571       1   1115.553571  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4
+                                369.734412       1    369.734412  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5
+                                369.734412       1    369.734412  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6
+                               1111.319971       1   1111.319971  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7
+                                633.628785       1    633.628785  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+                                637.862384       1    637.862384  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+                                821.318378       1    821.318378  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+                                637.862384       1    637.862384  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15
+                                510.854410       1    510.854410  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+                                621.633613       1    621.633613  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22
+                                632.923221       1    632.923221  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24
+                                772.632022       1    772.632022  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2
+                              10073.145650       1  10073.145650  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3
+                              10073.145650       1  10073.145650  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6
+                              10073.145650       1  10073.145650  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7
+                              10073.145650       1  10073.145650  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+                               1665.921572       1   1665.921572  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+                               2003.198374       1   2003.198374  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+                               1613.707173       1   1613.707173  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16
+                               2171.836780       1   2171.836780  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+                               3885.739131       1   3885.739131  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+                               1217.865563       1   1217.865563  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19
+                               2311.545575       1   2311.545575  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20
+                                573.652784       1    573.652784  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+                                765.576007       1    765.576007  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33
+                               1237.622381       1   1237.622381  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34
+                               1687.795182       1   1687.795182  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+                               7369.286383       1   7369.286383  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+                               7367.169582       1   7367.169582  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+                               7611.307205       1   7611.307205  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38
+                               7621.891204       1   7621.891204  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39
+                               7612.012806       1   7612.012806  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+                               7628.947205       1   7628.947205  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41
+                                789.566401       1    789.566401  h
+tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+                                112.896004       1    112.896004  h
+tracking_divide_step          11234.563195       1  11234.563195  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+                              59297.213456       1  59297.213456  h, n
+tracking_normalize_iterative_ENABLE_FLL1
+                              23685.580921       1  23685.580921  h, n
+-----------------------------------------------------------------------------
+Total 170 references                                252571.638011
+
+****************************************
+Design: tracking_aid_iterative 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000       3     31.751999  r
+AND2X1             typical        3.528000      16     56.448002  
+AND2X2             typical        3.528000       6     21.168001  
+AND3X1             typical        4.233600       1      4.233600  
+AO21X1             typical        4.939200       1      4.939200  
+AOI21X1            typical        3.528000       2      7.056000  
+AOI22XL            typical        4.233600      58    245.548808  
+AOI31X1            typical        4.233600       1      4.233600  
+AOI32XL            typical        4.939200       1      4.939200  
+AOI221XL           typical        5.644800      10     56.448002  
+BUFX2              typical        2.822400      21     59.270402  
+CLKINVX1           typical        2.116800      39     82.555203  
+CLKNAND2X2         typical        2.822400       3      8.467200  
+DFFRQX2            typical       15.523200      67   1040.054402  n
+DFFRX1             typical       16.934401      31    524.966417  n
+INVX2              typical        2.116800       4      8.467200  
+NAND2X2            typical        2.822400       2      5.644800  
+NAND3XL            typical        3.528000       1      3.528000  
+NOR2BX1            typical        3.528000       1      3.528000  
+NOR2X1             typical        2.822400       4     11.289600  
+NOR3X1             typical        3.528000       2      7.056000  
+NOR4X1             typical        4.233600       1      4.233600  
+OAI2B2X1           typical        5.644800      16     90.316803  
+OAI2BB1X1          typical        4.233600      25    105.840003  
+OAI2BB2X1          typical        5.644800       2     11.289600  
+OAI21X1            typical        3.528000       5     17.640001  
+OAI22X1            typical        4.233600      29    122.774404  
+OAI31X1            typical        4.233600       2      8.467200  
+OAI221X1           typical        6.350400      30    190.511999  
+OR2X1              typical        3.528000       7     24.696001  
+OR4X1              typical        5.644800       1      5.644800  
+XNOR2X1            typical        5.644800       9     50.803202  
+XOR2X1             typical        5.644800      18    101.606403  
+tracking_aid_iterative_DW01_sub_0
+                                255.427208       1    255.427208  h
+tracking_aid_iterative_DW01_sub_1
+                                369.028812       1    369.028812  h
+-----------------------------------------------------------------------------
+Total 35 references                                  3549.873675
+
+****************************************
+Design: tracking_aid_iterative_DW01_sub_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      21     74.088002  
+INVX2              typical        2.116800      23     48.686402  
+NAND2X2            typical        2.822400       1      2.822400  
+XOR2X1             typical        5.644800      23    129.830404  
+-----------------------------------------------------------------------------
+Total 4 references                                    255.427208
+
+****************************************
+Design: tracking_aid_iterative_DW01_sub_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      32    112.896004  
+INVX2              typical        2.116800      33     69.854402  
+XOR2X1             typical        5.644800      33    186.278406  
+-----------------------------------------------------------------------------
+Total 3 references                                    369.028812
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      30    529.199982  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    550.367982
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      48    169.344006  
+INVX2              typical        2.116800      28     59.270402  
+NAND2X2            typical        2.822400       1      2.822400  
+OR2X2              typical        3.528000       9     31.752001  
+XNOR2X1            typical        5.644800      37    208.857607  
+XOR2X1             typical        5.644800      22    124.185604  
+-----------------------------------------------------------------------------
+Total 6 references                                    596.232020
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      27    476.279984  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    497.447984
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHX2            typical       27.518400       7    192.628801  r
+ADDFHX4            typical       44.452801      20    889.056015  r
+ADDFX1             typical       17.639999      29    511.559982  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2XL             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 5 references                                   1602.417599
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      31    546.839981  r
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800       1      2.116800  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                    570.124782
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      29    511.559982  r
+AND2X2             typical        3.528000       2      7.056000  
+INVX2              typical        2.116800       3      6.350400  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800       4     22.579201  
+-----------------------------------------------------------------------------
+Total 5 references                                    550.367984
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      30    529.199982  r
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800       1      2.116800  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                    552.484782
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      55    970.199966  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    991.367967
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      30    529.199982  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    550.367982
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      30    529.199982  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    550.367982
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999       8    141.119995  r
+AOI21BX1           typical        5.644800       1      5.644800  
+AOI21BX2           typical        5.644800       3     16.934401  
+AOI21X1            typical        3.528000       5     17.640001  
+CLKINVX16          typical        8.467200       1      8.467200  
+CLKNAND2X2         typical        2.822400       2      5.644800  
+INVX2              typical        2.116800      11     23.284801  
+INVX4              typical        2.822400       1      2.822400  
+INVXL              typical        2.116800       6     12.700800  
+NAND2BX1           typical        3.528000       3     10.584000  
+NAND2BX2           typical        3.528000       2      7.056000  
+NAND2BXL           typical        3.528000       1      3.528000  
+NAND2X1            typical        2.822400       2      5.644800  
+NAND2X2            typical        2.822400      20     56.448002  
+NAND2XL            typical        2.822400      18     50.803202  
+NOR2X2             typical        2.822400       5     14.112000  
+NOR2XL             typical        2.822400       8     22.579201  
+OA21X1             typical        4.939200       1      4.939200  
+OAI2BB1X1          typical        4.233600       2      8.467200  
+OAI21X1            typical        3.528000      11     38.808001  
+OR2X2              typical        3.528000       3     10.584000  
+OR2XL              typical        3.528000       8     28.224001  
+XNOR2X1            typical        5.644800       1      5.644800  
+XNOR2XL            typical        5.644800      11     62.092802  
+XOR2X1             typical        5.644800       5     28.224001  
+XOR2XL             typical        5.644800       6     33.868801  
+-----------------------------------------------------------------------------
+Total 26 references                                   625.867211
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999       6    105.839996  r
+AND2X2             typical        3.528000       2      7.056000  
+AOI2B1X1           typical        4.939200      17     83.966399  
+AOI21X1            typical        3.528000       4     14.112000  
+INVX2              typical        2.116800      41     86.788803  
+NAND2BX2           typical        3.528000      25     88.200003  
+NAND2X2            typical        2.822400      71    200.390407  
+NOR2X2             typical        2.822400      42    118.540804  
+OA21X1             typical        4.939200       2      9.878400  
+OAI2B1X1           typical        4.939200       1      4.939200  
+OAI2BB1X1          typical        4.233600       2      8.467200  
+OAI21X1            typical        3.528000      21     74.088002  
+OR2X2              typical        3.528000       7     24.696001  
+XNOR2X1            typical        5.644800      24    135.475204  
+XOR2X1             typical        5.644800      23    129.830404  
+-----------------------------------------------------------------------------
+Total 15 references                                  1092.268824
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHX4            typical       44.452801       1     44.452801  r
+AND2X2             typical        3.528000       1      3.528000  
+AOI21BX2           typical        5.644800       1      5.644800  
+AOI21BX4           typical        6.350400       1      6.350400  
+AOI21BXL           typical        5.644800       2     11.289600  
+AOI21X1            typical        3.528000      17     59.976002  
+AOI21X2            typical        4.233600       1      4.233600  
+CLKINVX2           typical        2.116800       2      4.233600  
+CLKNAND2X2         typical        2.822400       2      5.644800  
+INVX2              typical        2.116800      29     61.387202  
+INVXL              typical        2.116800      15     31.752001  
+NAND2X1            typical        2.822400       1      2.822400  
+NAND2X2            typical        2.822400      49    138.297605  
+NAND2XL            typical        2.822400      17     47.980802  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400      27     76.204803  
+NOR2XL             typical        2.822400       9     25.401601  
+OAI21BXL           typical        4.939200       2      9.878400  
+OAI21X1            typical        3.528000      20     70.560002  
+OAI21X2            typical        4.233600       1      4.233600  
+OAI21XL            typical        3.528000       5     17.640001  
+OR2XL              typical        3.528000       6     21.168001  
+XNOR2X1            typical        5.644800      14     79.027203  
+XNOR2XL            typical        5.644800       1      5.644800  
+XOR2X1             typical        5.644800      13     73.382402  
+XOR2XL             typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 26 references                                   836.136026
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_35 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX2             typical       18.345600       1     18.345600  r
+AOI21BX2           typical        5.644800       1      5.644800  
+AOI21BX4           typical        6.350400       1      6.350400  
+AOI21X1            typical        3.528000      13     45.864002  
+AOI21X2            typical        4.233600       2      8.467200  
+AOI21XL            typical        3.528000       2      7.056000  
+CLKINVX2           typical        2.116800       1      2.116800  
+CLKNAND2X2         typical        2.822400       1      2.822400  
+INVX1              typical        2.116800       1      2.116800  
+INVX2              typical        2.116800      23     48.686402  
+INVXL              typical        2.116800      17     35.985601  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND2BXL           typical        3.528000       1      3.528000  
+NAND2X2            typical        2.822400      44    124.185604  
+NAND2XL            typical        2.822400      13     36.691201  
+NOR2X1             typical        2.822400       2      5.644800  
+NOR2X2             typical        2.822400      32     90.316803  
+OAI21BXL           typical        4.939200       2      9.878400  
+OAI21X1            typical        3.528000      16     56.448002  
+OAI21X2            typical        4.233600       1      4.233600  
+OAI21X4            typical        6.350400       1      6.350400  
+OAI21XL            typical        3.528000       4     14.112000  
+OR2X2              typical        3.528000       4     14.112000  
+XNOR2X1            typical        5.644800       8     45.158401  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      12     67.737602  
+XOR2XL             typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 27 references                                   699.249622
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_36 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999       1     17.639999  r
+AOI21BX1           typical        5.644800       2     11.289600  
+AOI21BX2           typical        5.644800       4     22.579201  
+AOI21BX4           typical        6.350400       1      6.350400  
+AOI21X1            typical        3.528000      21     74.088002  
+AOI21XL            typical        3.528000       7     24.696001  
+BUFX2              typical        2.822400       2      5.644800  
+BUFX3              typical        3.528000       1      3.528000  
+CLKNAND2X2         typical        2.822400       8     22.579201  
+INVX2              typical        2.116800      49    103.723203  
+INVXL              typical        2.116800      18     38.102401  
+NAND2BX1           typical        3.528000       1      3.528000  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND2X1            typical        2.822400       5     14.112000  
+NAND2X2            typical        2.822400      94    265.305609  
+NAND2XL            typical        2.822400      10     28.224001  
+NOR2X1             typical        2.822400       4     11.289600  
+NOR2X2             typical        2.822400      37    104.428803  
+NOR2XL             typical        2.822400       2      5.644800  
+OA21X1             typical        4.939200       1      4.939200  
+OAI21X1            typical        3.528000      32    112.896004  
+OAI21XL            typical        3.528000       6     21.168001  
+OR2X2              typical        3.528000      21     74.088002  
+OR2X4              typical        6.350400       1      6.350400  
+XNOR2X1            typical        5.644800      18    101.606403  
+XNOR2X2            typical        7.761600       3     23.284800  
+XNOR2XL            typical        5.644800       6     33.868801  
+XOR2X1             typical        5.644800      23    129.830404  
+XOR2X2             typical        7.761600       1      7.761600  
+XOR2XL             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 30 references                                  1287.720040
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_37 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHX4            typical       44.452801       1     44.452801  r
+AND2X2             typical        3.528000       1      3.528000  
+AO21X2             typical        4.939200       1      4.939200  
+AOI21BX2           typical        5.644800       6     33.868801  
+AOI21X1            typical        3.528000      27     95.256003  
+AOI21X2            typical        4.233600       1      4.233600  
+AOI21XL            typical        3.528000       5     17.640001  
+CLKINVX2           typical        2.116800       1      2.116800  
+CLKNAND2X2         typical        2.822400       5     14.112000  
+INVX2              typical        2.116800      48    101.606403  
+INVXL              typical        2.116800      19     40.219201  
+NAND2BXL           typical        3.528000       1      3.528000  
+NAND2X1            typical        2.822400       3      8.467200  
+NAND2X2            typical        2.822400     101    285.062409  
+NAND2XL            typical        2.822400       9     25.401601  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR2X2             typical        2.822400      33     93.139203  
+NOR2XL             typical        2.822400       2      5.644800  
+OAI21X1            typical        3.528000      29    102.312003  
+OAI21XL            typical        3.528000       5     17.640001  
+OR2X1              typical        3.528000       2      7.056000  
+OR2X2              typical        3.528000      22     77.616003  
+OR2X4              typical        6.350400       3     19.051200  
+OR2XL              typical        3.528000       1      3.528000  
+XNOR2X1            typical        5.644800      22    124.185604  
+XNOR2X2            typical        7.761600       2     15.523200  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      22    124.185604  
+XOR2XL             typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 29 references                                  1311.004841
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_38 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFXL             typical       17.639999       1     17.639999  r
+AND2X2             typical        3.528000       1      3.528000  
+AO21X2             typical        4.939200       1      4.939200  
+AOI21BX2           typical        5.644800       2     11.289600  
+AOI21X1            typical        3.528000      13     45.864002  
+CLKINVX2           typical        2.116800       1      2.116800  
+CLKNAND2X2         typical        2.822400       1      2.822400  
+INVX2              typical        2.116800      29     61.387202  
+INVXL              typical        2.116800       6     12.700800  
+NAND2X2            typical        2.822400      62    174.988806  
+NAND2XL            typical        2.822400       1      2.822400  
+NOR2X2             typical        2.822400      24     67.737602  
+NOR2XL             typical        2.822400       1      2.822400  
+OA21XL             typical        4.939200       1      4.939200  
+OAI2BB1X1          typical        4.233600       2      8.467200  
+OAI21X1            typical        3.528000      20     70.560002  
+OR2X2              typical        3.528000       5     17.640001  
+OR2XL              typical        3.528000       7     24.696001  
+XNOR2X1            typical        5.644800      12     67.737602  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      12     67.737602  
+XOR2XL             typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 22 references                                   706.305622
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_39 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999       1     17.639999  r
+AOI21BX2           typical        5.644800       2     11.289600  
+AOI21X1            typical        3.528000       9     31.752001  
+AOI21XL            typical        3.528000       2      7.056000  
+CLKINVX1           typical        2.116800       1      2.116800  
+CLKINVX2           typical        2.116800       1      2.116800  
+CLKNAND2X2         typical        2.822400       2      5.644800  
+INVX2              typical        2.116800      13     27.518401  
+INVXL              typical        2.116800      18     38.102401  
+NAND2BXL           typical        3.528000       1      3.528000  
+NAND2X1            typical        2.822400       1      2.822400  
+NAND2X2            typical        2.822400      27     76.204803  
+NAND2XL            typical        2.822400      15     42.336001  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR2X2             typical        2.822400      20     56.448002  
+NOR2XL             typical        2.822400       2      5.644800  
+OAI21BXL           typical        4.939200       1      4.939200  
+OAI21X1            typical        3.528000      12     42.336001  
+OAI21XL            typical        3.528000       5     17.640001  
+OR2X2              typical        3.528000       4     14.112000  
+OR2XL              typical        3.528000       1      3.528000  
+XNOR2X1            typical        5.644800       6     33.868801  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      10     56.448002  
+XOR2XL             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 25 references                                   528.494416
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000       6     63.503998  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                     71.265598
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      54    952.559967  r
+ADDFX4             typical       19.756800       1     19.756800  r
+INVX2              typical        2.116800      17     35.985601  
+INVXL              typical        2.116800      40     84.672003  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2XL            typical        5.644800       1      5.644800  
+XNOR3XL            typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 7 references                                   1113.436771
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      54    952.559967  r
+ADDFX4             typical       19.756800       1     19.756800  r
+INVX2              typical        2.116800      14     29.635201  
+INVXL              typical        2.116800      44     93.139203  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2XL            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 7 references                                   1115.553571
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      26     91.728003  
+BUFX2              typical        2.822400       1      2.822400  
+INVX2              typical        2.116800      54    114.307204  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800      28    158.054405  
+-----------------------------------------------------------------------------
+Total 5 references                                    369.734412
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      26     91.728003  
+BUFX2              typical        2.822400       1      2.822400  
+INVX2              typical        2.116800      54    114.307204  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800      27    152.409605  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 6 references                                    369.734412
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      55    970.199966  r
+INVX2              typical        2.116800      57    120.657604  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                   1111.319971
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      30    529.199982  r
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800      34     71.971202  
+NAND2X2            typical        2.822400       1      2.822400  
+OR2XL              typical        3.528000       1      3.528000  
+XNOR2X1            typical        5.644800       2     11.289600  
+XNOR2XL            typical        5.644800       1      5.644800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 8 references                                    633.628785
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      31    546.839981  r
+INVX2              typical        2.116800      32     67.737602  
+INVXL              typical        2.116800       1      2.116800  
+NAND2BX2           typical        3.528000       1      3.528000  
+XNOR2XL            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 6 references                                    637.862384
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      41    723.239975  r
+AND2X2             typical        3.528000       2      7.056000  
+INVX2              typical        2.116800      32     67.737602  
+XOR2X1             typical        5.644800       2     11.289600  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                    821.318378
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      31    546.839981  r
+INVX2              typical        2.116800      33     69.854402  
+NAND2BX2           typical        3.528000       1      3.528000  
+XNOR2XL            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                    637.862384
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             typical        3.528000       7     24.696001  
+AND2X2             typical        3.528000       3     10.584000  
+AND4X1             typical        5.644800       1      5.644800  
+AOI21X1            typical        3.528000      10     35.280001  
+AOI21XL            typical        3.528000       1      3.528000  
+AOI22XL            typical        4.233600       1      4.233600  
+AOI32XL            typical        4.939200       6     29.635200  
+AOI211X1           typical        4.233600       3     12.700800  
+AOI211X4           typical        7.761600       1      7.761600  
+CLKAND2X2          typical        3.528000       1      3.528000  
+CLKINVX1           typical        2.116800       1      2.116800  
+CLKINVX3           typical        2.822400       1      2.822400  
+CLKNAND2X2         typical        2.822400       2      5.644800  
+INVX2              typical        2.116800      49    103.723203  
+NAND2BX1           typical        3.528000       4     14.112000  
+NAND2X2            typical        2.822400       1      2.822400  
+NAND3BX1           typical        4.939200       1      4.939200  
+NAND3XL            typical        3.528000       1      3.528000  
+NOR2BX1            typical        3.528000       3     10.584000  
+NOR3X4             typical        6.350400       1      6.350400  
+NOR4BX4            typical        8.467200       1      8.467200  
+NOR4X1             typical        4.233600       2      8.467200  
+OA21X1             typical        4.939200       1      4.939200  
+OAI2B2X1           typical        5.644800       2     11.289600  
+OAI2B11X1          typical        5.644800       3     16.934401  
+OAI21X1            typical        3.528000       4     14.112000  
+OAI22X1            typical        4.233600       5     21.168001  
+OAI31X1            typical        4.233600       3     12.700800  
+OAI32X2            typical        5.644800       1      5.644800  
+OAI32XL            typical        4.939200      16     79.027199  
+OAI211X2           typical        4.939200       1      4.939200  
+OAI211XL           typical        4.233600       2      8.467200  
+OAI221X1           typical        6.350400       2     12.700800  
+OR2X1              typical        3.528000       1      3.528000  
+OR3X2              typical        4.233600       1      4.233600  
+-----------------------------------------------------------------------------
+Total 35 references                                   510.854410
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             typical        3.528000       4     14.112000  
+AND2XL             typical        3.528000       5     17.640001  
+AOI2BB1XL          typical        4.233600       1      4.233600  
+AOI21X1            typical        3.528000       5     17.640001  
+AOI21XL            typical        3.528000       7     24.696001  
+AOI22XL            typical        4.233600       3     12.700800  
+AOI31X1            typical        4.233600       2      8.467200  
+AOI32XL            typical        4.939200      10     49.391999  
+AOI211X1           typical        4.233600       1      4.233600  
+AOI211XL           typical        4.233600       1      4.233600  
+AOI221XL           typical        5.644800       4     22.579201  
+CLKNAND2X2         typical        2.822400       1      2.822400  
+INVX2              typical        2.116800      27     57.153602  
+INVXL              typical        2.116800      41     86.788803  
+NAND2BX1           typical        3.528000       3     10.584000  
+NAND2BXL           typical        3.528000       3     10.584000  
+NAND2XL            typical        2.822400       3      8.467200  
+NAND3BX1           typical        4.939200       2      9.878400  
+NOR2BX1            typical        3.528000       1      3.528000  
+NOR2BXL            typical        3.528000       4     14.112000  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR3BX1            typical        4.233600       1      4.233600  
+NOR4X1             typical        4.233600       2      8.467200  
+OA21X1             typical        4.939200       1      4.939200  
+OAI2B2X1           typical        5.644800       1      5.644800  
+OAI2B11X1          typical        5.644800       1      5.644800  
+OAI2B11XL          typical        5.644800       3     16.934401  
+OAI21X1            typical        3.528000       5     17.640001  
+OAI21XL            typical        3.528000       2      7.056000  
+OAI22X1            typical        4.233600       8     33.868801  
+OAI32XL            typical        4.939200      20     98.783998  
+OAI211XL           typical        4.233600       5     21.168001  
+OR2X1              typical        3.528000       1      3.528000  
+OR2XL              typical        3.528000       2      7.056000  
+-----------------------------------------------------------------------------
+Total 34 references                                   621.633613
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_22 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21X1            typical        3.528000      15     52.920002  
+INVX2              typical        2.116800      44     93.139203  
+NAND2X2            typical        2.822400      56    158.054405  
+NOR2X2             typical        2.822400      74    208.857607  
+OAI21X1            typical        3.528000      27     95.256003  
+OR2X2              typical        3.528000       7     24.696001  
+-----------------------------------------------------------------------------
+Total 6 references                                    632.923221
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_24 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      17     59.976002  
+AND2XL             typical        3.528000       2      7.056000  
+AOI2B1X1           typical        4.939200       1      4.939200  
+AOI2B1XL           typical        4.939200       1      4.939200  
+AOI21BX2           typical        5.644800       4     22.579201  
+AOI21X1            typical        3.528000      15     52.920002  
+AOI21XL            typical        3.528000       1      3.528000  
+CLKINVX2           typical        2.116800       1      2.116800  
+CLKNAND2X2         typical        2.822400       2      5.644800  
+INVX2              typical        2.116800      29     61.387202  
+INVXL              typical        2.116800      27     57.153602  
+NAND2BX1           typical        3.528000       2      7.056000  
+NAND2BX2           typical        3.528000       2      7.056000  
+NAND2BXL           typical        3.528000       1      3.528000  
+NAND2X1            typical        2.822400       1      2.822400  
+NAND2X2            typical        2.822400      18     50.803202  
+NAND2XL            typical        2.822400      26     73.382402  
+NOR2X1             typical        2.822400       2      5.644800  
+NOR2X2             typical        2.822400      27     76.204803  
+NOR2XL             typical        2.822400      20     56.448002  
+OA21X1             typical        4.939200       1      4.939200  
+OA21X2             typical        5.644800       1      5.644800  
+OA21XL             typical        4.939200      12     59.270399  
+OAI21X1            typical        3.528000      19     67.032002  
+OAI21XL            typical        3.528000       1      3.528000  
+OR2X1              typical        3.528000       1      3.528000  
+OR2X2              typical        3.528000      12     42.336001  
+OR2XL              typical        3.528000       6     21.168001  
+-----------------------------------------------------------------------------
+Total 28 references                                   772.632022
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999     102   1799.279938  r
+ADDHX1             typical       10.584000      30    317.519989  r
+AOI21X1            typical        3.528000      18     63.504002  
+AOI221XL           typical        5.644800     252   1422.489647  
+AOI222XL           typical        6.350400       9     57.153600  
+BUFX2              typical        2.822400       7     19.756801  
+CLKNAND2X2         typical        2.822400      39    110.073604  
+CMPR42X1           typical       32.457600      96   3115.929565  r
+INVX2              typical        2.116800      98    207.446407  
+NAND3XL            typical        3.528000       9     31.752001  
+NOR2X1             typical        2.822400      17     47.980802  
+OAI22X1            typical        4.233600     243   1028.764834  
+XNOR2X1            typical        5.644800      10     56.448002  
+XOR2X1             typical        5.644800     318   1795.046459  
+-----------------------------------------------------------------------------
+Total 14 references                                 10073.145650
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999     102   1799.279938  r
+ADDHX1             typical       10.584000      30    317.519989  r
+AOI21X1            typical        3.528000      18     63.504002  
+AOI221XL           typical        5.644800     252   1422.489647  
+AOI222XL           typical        6.350400       9     57.153600  
+BUFX2              typical        2.822400       7     19.756801  
+CLKNAND2X2         typical        2.822400      39    110.073604  
+CMPR42X1           typical       32.457600      96   3115.929565  r
+INVX2              typical        2.116800      98    207.446407  
+NAND3XL            typical        3.528000       9     31.752001  
+NOR2X1             typical        2.822400      17     47.980802  
+OAI22X1            typical        4.233600     243   1028.764834  
+XNOR2X1            typical        5.644800      10     56.448002  
+XOR2X1             typical        5.644800     318   1795.046459  
+-----------------------------------------------------------------------------
+Total 14 references                                 10073.145650
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999     102   1799.279938  r
+ADDHX1             typical       10.584000      30    317.519989  r
+AOI21X1            typical        3.528000      18     63.504002  
+AOI221XL           typical        5.644800     252   1422.489647  
+AOI222XL           typical        6.350400       9     57.153600  
+BUFX2              typical        2.822400       7     19.756801  
+CLKNAND2X2         typical        2.822400      39    110.073604  
+CMPR42X1           typical       32.457600      96   3115.929565  r
+INVX2              typical        2.116800      98    207.446407  
+NAND3XL            typical        3.528000       9     31.752001  
+NOR2X1             typical        2.822400      17     47.980802  
+OAI22X1            typical        4.233600     243   1028.764834  
+XNOR2X1            typical        5.644800      10     56.448002  
+XOR2X1             typical        5.644800     318   1795.046459  
+-----------------------------------------------------------------------------
+Total 14 references                                 10073.145650
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999     102   1799.279938  r
+ADDHX1             typical       10.584000      30    317.519989  r
+AOI21X1            typical        3.528000      18     63.504002  
+AOI221XL           typical        5.644800     252   1422.489647  
+AOI222XL           typical        6.350400       9     57.153600  
+BUFX2              typical        2.822400       7     19.756801  
+CLKNAND2X2         typical        2.822400      39    110.073604  
+CMPR42X1           typical       32.457600      96   3115.929565  r
+INVX2              typical        2.116800      98    207.446407  
+NAND3XL            typical        3.528000       9     31.752001  
+NOR2X1             typical        2.822400      17     47.980802  
+OAI22X1            typical        4.233600     243   1028.764834  
+XNOR2X1            typical        5.644800      10     56.448002  
+XOR2X1             typical        5.644800     318   1795.046459  
+-----------------------------------------------------------------------------
+Total 14 references                                 10073.145650
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      33    582.119980  r
+ADDHX1             typical       10.584000       2     21.167999  r
+AOI222XL           typical        6.350400       9     57.153600  
+CMPR42X1           typical       32.457600      28    908.812790  r
+INVX2              typical        2.116800      38     80.438403  
+OAI32XL            typical        4.939200       1      4.939200  
+OAI222X1           typical        7.056000       1      7.056000  
+OR3X1              typical        4.233600       1      4.233600  
+-----------------------------------------------------------------------------
+Total 8 references                                   1665.921572
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      37    652.679977  r
+ADDHX1             typical       10.584000      12    127.007996  r
+ADDHXL             typical       10.584000       1     10.584000  r
+CLKNAND2X2         typical        2.822400       7     19.756801  
+CMPR42X1           typical       32.457600      27    876.355190  r
+INVX2              typical        2.116800      13     27.518401  
+INVXL              typical        2.116800       2      4.233600  
+NAND2XL            typical        2.822400      10     28.224001  
+NOR2X1             typical        2.822400      89    251.193608  
+XNOR2X1            typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 10 references                                  2003.198374
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      32    564.479980  r
+ADDHX1             typical       10.584000       2     21.167999  r
+AOI222XL           typical        6.350400       9     57.153600  
+CMPR42X1           typical       32.457600      27    876.355190  r
+INVX2              typical        2.116800      34     71.971202  
+INVXL              typical        2.116800       3      6.350400  
+OAI32XL            typical        4.939200       1      4.939200  
+OAI222X1           typical        7.056000       1      7.056000  
+OR3X1              typical        4.233600       1      4.233600  
+-----------------------------------------------------------------------------
+Total 9 references                                   1613.707173
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHX1            typical       20.462400       9    184.161604  r
+ADDFHX2            typical       27.518400       1     27.518400  r
+ADDFX1             typical       17.639999      18    317.519989  r
+ADDHX1             typical       10.584000       2     21.167999  r
+ADDHXL             typical       10.584000       1     10.584000  r
+AOI222X1           typical        7.056000       9     63.504002  
+AOI222XL           typical        6.350400       4     25.401600  
+BUFX2              typical        2.822400       1      2.822400  
+CLKAND2X2          typical        3.528000       1      3.528000  
+CLKNAND2X2         typical        2.822400       2      5.644800  
+CMPR42X1           typical       32.457600      45   1460.591984  r
+INVX2              typical        2.116800      15     31.752001  
+INVXL              typical        2.116800       3      6.350400  
+XOR2X1             typical        5.644800       2     11.289600  
+-----------------------------------------------------------------------------
+Total 14 references                                  2171.836780
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      70   1234.799957  r
+ADDHX1             typical       10.584000       3     31.751999  r
+AO22X1             typical        5.644800       1      5.644800  
+AOI222XL           typical        6.350400      12     76.204800  
+CMPR42X1           typical       32.457600      76   2466.777573  r
+INVX2              typical        2.116800      11     23.284801  
+INVXL              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       8     45.158401  
+-----------------------------------------------------------------------------
+Total 8 references                                   3885.739131
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      64   1128.959961  r
+ADDHX1             typical       10.584000       1     10.584000  r
+CLKNAND2X2         typical        2.822400       1      2.822400  
+INVX2              typical        2.116800      33     69.854402  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 5 references                                   1217.865563
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      41    723.239975  r
+AND2X1             typical        3.528000       3     10.584000  
+AND2X2             typical        3.528000       1      3.528000  
+AOI222XL           typical        6.350400       9     57.153600  
+CLKNAND2X2         typical        2.822400       5     14.112000  
+CMPR42X1           typical       32.457600      35   1136.015987  r
+INVX2              typical        2.116800      22     46.569602  
+MXI2X1             typical        5.644800      12     67.737602  
+NAND2BX2           typical        3.528000       1      3.528000  
+NOR2BX1            typical        3.528000       1      3.528000  
+NOR2X1             typical        2.822400       4     11.289600  
+NOR3X1             typical        3.528000      20     70.560002  
+OAI211XL           typical        4.233600       1      4.233600  
+OAI222X1           typical        7.056000       5     35.280001  
+XNOR2X1            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      19    107.251204  
+-----------------------------------------------------------------------------
+Total 16 references                                  2311.545575
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_20 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      29    511.559982  r
+ADDHX1             typical       10.584000       1     10.584000  r
+CLKNAND2X2         typical        2.822400       1      2.822400  
+INVX2              typical        2.116800      15     31.752001  
+XOR2X1             typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 5 references                                    573.652784
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHXL            typical       19.051201       1     19.051201  r
+ADDFX1             typical       17.639999      15    264.599991  r
+ADDHXL             typical       10.584000       1     10.584000  r
+AND2X2             typical        3.528000       1      3.528000  
+AOI21BX1           typical        5.644800       1      5.644800  
+AOI21BX2           typical        5.644800       1      5.644800  
+AOI21X1            typical        3.528000       7     24.696001  
+AOI21X2            typical        4.233600       1      4.233600  
+AOI21XL            typical        3.528000       3     10.584000  
+CLKINVX2           typical        2.116800       1      2.116800  
+CLKINVX4           typical        2.822400       1      2.822400  
+CLKNAND2X2         typical        2.822400       6     16.934401  
+INVX2              typical        2.116800      18     38.102401  
+INVXL              typical        2.116800       4      8.467200  
+NAND2BX1           typical        3.528000       1      3.528000  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND2BXL           typical        3.528000       1      3.528000  
+NAND2X1            typical        2.822400       2      5.644800  
+NAND2X2            typical        2.822400      27     76.204803  
+NAND2XL            typical        2.822400       3      8.467200  
+NOR2BX1            typical        3.528000       2      7.056000  
+NOR2X2             typical        2.822400      16     45.158401  
+NOR2X4             typical        4.939200       1      4.939200  
+NOR2XL             typical        2.822400       6     16.934401  
+OAI2B1X2           typical        5.644800       1      5.644800  
+OAI21X1            typical        3.528000      18     63.504002  
+OAI21XL            typical        3.528000       2      7.056000  
+OR2X2              typical        3.528000       1      3.528000  
+OR2XL              typical        3.528000       1      3.528000  
+XNOR2X1            typical        5.644800      10     56.448002  
+XNOR2XL            typical        5.644800       1      5.644800  
+XOR2X1             typical        5.644800       5     28.224001  
+-----------------------------------------------------------------------------
+Total 32 references                                   765.576007
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_33 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      31    546.839981  r
+ADDHX1             typical       10.584000       1     10.584000  r
+ADDHXL             typical       10.584000       2     21.167999  r
+BUFX2              typical        2.822400      18     50.803202  
+CLKINVX2           typical        2.116800       2      4.233600  
+CMPR42X1           typical       32.457600      13    421.948795  r
+INVX2              typical        2.116800      12     25.401601  
+INVXL              typical        2.116800       1      2.116800  
+NAND2X2            typical        2.822400       1      2.822400  
+NAND2XL            typical        2.822400      12     33.868801  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR2X2             typical        2.822400      11     31.046401  
+OA21X4             typical        6.350400       5     31.752000  
+OA21XL             typical        4.939200       5     24.696000  
+OAI21X1            typical        3.528000       1      3.528000  
+OR2X2              typical        3.528000       2      7.056000  
+XOR2X1             typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 17 references                                  1237.622381
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_34 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      22    388.079987  r
+ADDFXL             typical       17.639999       1     17.639999  r
+ADDHX1             typical       10.584000       1     10.584000  r
+ADDHXL             typical       10.584000       2     21.167999  r
+AND2XL             typical        3.528000       3     10.584000  
+AOI21X1            typical        3.528000       5     17.640001  
+BUFX2              typical        2.822400      14     39.513601  
+CLKINVX3           typical        2.822400       1      2.822400  
+CMPR42X1           typical       32.457600      30    973.727989  r
+INVX2              typical        2.116800       5     10.584000  
+INVXL              typical        2.116800       2      4.233600  
+NAND2BX1           typical        3.528000       2      7.056000  
+NAND2X2            typical        2.822400       4     11.289600  
+NAND2XL            typical        2.822400      13     36.691201  
+NOR2X1             typical        2.822400       2      5.644800  
+NOR2X2             typical        2.822400       2      5.644800  
+NOR2XL             typical        2.822400       5     14.112000  
+OA21X1             typical        4.939200       4     19.756800  
+OAI2B1X1           typical        4.939200       1      4.939200  
+OAI2BB1X1          typical        4.233600       2      8.467200  
+OAI21X1            typical        3.528000       5     17.640001  
+OR2X2              typical        3.528000       6     21.168001  
+OR2XL              typical        3.528000       3     10.584000  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800       2     11.289600  
+-----------------------------------------------------------------------------
+Total 25 references                                  1687.795182
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      38    670.319977  r
+ADDHX1             typical       10.584000      24    254.015991  r
+AOI21X1            typical        3.528000      18     63.504002  
+BUFX2              typical        2.822400      24     67.737602  
+CMPR42X1           typical       32.457600     138   4479.148750  r
+INVX2              typical        2.116800      50    105.840003  
+NAND2BX2           typical        3.528000      20     70.560002  
+NAND2X2            typical        2.822400      57    160.876805  
+NOR2X2             typical        2.822400     370   1044.288034  
+OAI21X1            typical        3.528000      19     67.032002  
+OR2X2              typical        3.528000      47    165.816005  
+XNOR2X1            typical        5.644800      20    112.896004  
+XOR2X1             typical        5.644800      19    107.251204  
+-----------------------------------------------------------------------------
+Total 13 references                                  7369.286383
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      39    687.959976  r
+ADDHX1             typical       10.584000      24    254.015991  r
+AOI21X1            typical        3.528000      17     59.976002  
+BUFX2              typical        2.822400      24     67.737602  
+CMPR42X1           typical       32.457600     138   4479.148750  r
+INVX2              typical        2.116800      49    103.723203  
+NAND2BX2           typical        3.528000      19     67.032002  
+NAND2X2            typical        2.822400      56    158.054405  
+NOR2X2             typical        2.822400     369   1041.465634  
+OAI2BB1X1          typical        4.233600       1      4.233600  
+OAI21X1            typical        3.528000      18     63.504002  
+OR2X2              typical        3.528000      47    165.816005  
+XNOR2X1            typical        5.644800      20    112.896004  
+XOR2X1             typical        5.644800      18    101.606403  
+-----------------------------------------------------------------------------
+Total 14 references                                  7367.169582
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      12    211.679993  r
+ADDFXL             typical       17.639999      14    246.959991  r
+ADDHX1             typical       10.584000      24    254.015991  r
+AND2X2             typical        3.528000       1      3.528000  
+AO21X2             typical        4.939200       1      4.939200  
+AOI21BX1           typical        5.644800       1      5.644800  
+AOI21BX2           typical        5.644800       3     16.934401  
+AOI21X1            typical        3.528000      33    116.424004  
+AOI21XL            typical        3.528000       4     14.112000  
+BUFX2              typical        2.822400       1      2.822400  
+CLKNAND2X2         typical        2.822400      14     39.513601  
+CMPR42X1           typical       32.457600     138   4479.148750  r
+INVX2              typical        2.116800      73    154.526405  
+INVX4              typical        2.822400       8     22.579201  
+INVX6              typical        4.233600       1      4.233600  
+INVXL              typical        2.116800      14     29.635201  
+NAND2BX1           typical        3.528000       2      7.056000  
+NAND2BX2           typical        3.528000       3     10.584000  
+NAND2X1            typical        2.822400       1      2.822400  
+NAND2X2            typical        2.822400      84    237.081608  
+NAND2XL            typical        2.822400      10     28.224001  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400     236    666.086422  
+NOR2X4             typical        4.939200       1      4.939200  
+NOR2XL             typical        2.822400     155    437.472014  
+OAI21BXL           typical        4.939200       1      4.939200  
+OAI21X1            typical        3.528000      32    112.896004  
+OAI21XL            typical        3.528000       4     14.112000  
+OR2X1              typical        3.528000       1      3.528000  
+OR2X2              typical        3.528000      43    151.704005  
+OR2XL              typical        3.528000       6     21.168001  
+XNOR2X1            typical        5.644800      22    124.185604  
+XNOR2X4            typical       11.289600       1     11.289600  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      21    118.540804  
+XOR2XL             typical        5.644800       4     22.579201  
+-----------------------------------------------------------------------------
+Total 36 references                                  7611.307205
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_38 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      13    229.319992  r
+ADDFXL             typical       17.639999      13    229.319992  r
+ADDHX1             typical       10.584000      23    243.431992  r
+ADDHXL             typical       10.584000       1     10.584000  r
+AO21X2             typical        4.939200       1      4.939200  
+AOI21BX1           typical        5.644800       1      5.644800  
+AOI21BX2           typical        5.644800       4     22.579201  
+AOI21X1            typical        3.528000      29    102.312003  
+AOI21XL            typical        3.528000       7     24.696001  
+BUFX2              typical        2.822400       2      5.644800  
+CLKAND2X2          typical        3.528000       1      3.528000  
+CLKINVX2           typical        2.116800       2      4.233600  
+CLKNAND2X2         typical        2.822400      14     39.513601  
+CMPR42X1           typical       32.457600     138   4479.148750  r
+INVX2              typical        2.116800      67    141.825605  
+INVX4              typical        2.822400       8     22.579201  
+INVX8              typical        4.939200       1      4.939200  
+INVXL              typical        2.116800      14     29.635201  
+NAND2BX1           typical        3.528000       5     17.640001  
+NAND2BX2           typical        3.528000       3     10.584000  
+NAND2X2            typical        2.822400      84    237.081608  
+NAND2XL            typical        2.822400       8     22.579201  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400     249    702.777623  
+NOR2X4             typical        4.939200       1      4.939200  
+NOR2XL             typical        2.822400     142    400.780813  
+OAI21BX1           typical        4.939200       1      4.939200  
+OAI21X1            typical        3.528000      30    105.840003  
+OAI21X3            typical        6.350400       1      6.350400  
+OAI21XL            typical        3.528000       5     17.640001  
+OR2X1              typical        3.528000       1      3.528000  
+OR2X2              typical        3.528000      40    141.120005  
+OR2X4              typical        6.350400       1      6.350400  
+OR2XL              typical        3.528000       8     28.224001  
+XNOR2X1            typical        5.644800      21    118.540804  
+XNOR2X4            typical       11.289600       2     22.579201  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      21    118.540804  
+XOR2XL             typical        5.644800       4     22.579201  
+-----------------------------------------------------------------------------
+Total 39 references                                  7621.891204
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_39 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHXL            typical       19.051201       1     19.051201  r
+ADDFX1             typical       17.639999       8    141.119995  r
+ADDFXL             typical       17.639999      17    299.879990  r
+ADDHX1             typical       10.584000      24    254.015991  r
+AOI21BX1           typical        5.644800       2     11.289600  
+AOI21BX2           typical        5.644800       7     39.513601  
+AOI21X1            typical        3.528000      22     77.616003  
+AOI21X4            typical        6.350400       1      6.350400  
+AOI21XL            typical        3.528000       8     28.224001  
+BUFX2              typical        2.822400       5     14.112000  
+CLKINVX2           typical        2.116800       3      6.350400  
+CLKNAND2X2         typical        2.822400      14     39.513601  
+CMPR42X1           typical       32.457600     138   4479.148750  r
+INVX1              typical        2.116800       1      2.116800  
+INVX2              typical        2.116800      63    133.358404  
+INVX4              typical        2.822400      11     31.046401  
+INVXL              typical        2.116800      16     33.868801  
+NAND2BX1           typical        3.528000       6     21.168001  
+NAND2BX2           typical        3.528000       4     14.112000  
+NAND2X1            typical        2.822400       2      5.644800  
+NAND2X2            typical        2.822400      78    220.147207  
+NAND2XL            typical        2.822400      10     28.224001  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400     231    651.974422  
+NOR2XL             typical        2.822400     165    465.696015  
+OAI21BXL           typical        4.939200       2      9.878400  
+OAI21X1            typical        3.528000      30    105.840003  
+OAI21XL            typical        3.528000       5     17.640001  
+OR2X2              typical        3.528000      38    134.064004  
+OR2XL              typical        3.528000       7     24.696001  
+XNOR2X1            typical        5.644800      22    124.185604  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      24    135.475204  
+XOR2XL             typical        5.644800       2     11.289600  
+-----------------------------------------------------------------------------
+Total 34 references                                  7612.012806
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      12    211.679993  r
+ADDFXL             typical       17.639999      14    246.959991  r
+ADDHX1             typical       10.584000      24    254.015991  r
+AOI21BX2           typical        5.644800       5     28.224001  
+AOI21X1            typical        3.528000      29    102.312003  
+AOI21XL            typical        3.528000       6     21.168001  
+BUFX2              typical        2.822400       4     11.289600  
+BUFX8              typical        6.350400       1      6.350400  
+CLKINVX2           typical        2.116800       2      4.233600  
+CLKNAND2X2         typical        2.822400      19     53.625602  
+CMPR42X1           typical       32.457600     138   4479.148750  r
+INVX2              typical        2.116800      78    165.110405  
+INVX4              typical        2.822400       6     16.934401  
+INVX6              typical        4.233600       1      4.233600  
+INVX10             typical        5.644800       1      5.644800  
+INVXL              typical        2.116800      17     35.985601  
+NAND2BX1           typical        3.528000       3     10.584000  
+NAND2BX2           typical        3.528000       2      7.056000  
+NAND2X1            typical        2.822400       3      8.467200  
+NAND2X2            typical        2.822400      75    211.680007  
+NAND2XL            typical        2.822400      12     33.868801  
+NOR2X1             typical        2.822400      10     28.224001  
+NOR2X2             typical        2.822400     250    705.600023  
+NOR2X4             typical        4.939200       1      4.939200  
+NOR2XL             typical        2.822400     138    389.491213  
+OAI21X1            typical        3.528000      34    119.952004  
+OAI21XL            typical        3.528000       3     10.584000  
+OR2X2              typical        3.528000      38    134.064004  
+OR2X4              typical        6.350400       1      6.350400  
+OR2XL              typical        3.528000       6     21.168001  
+XNOR2X1            typical        5.644800      19    107.251204  
+XNOR2XL            typical        5.644800       6     33.868801  
+XOR2X1             typical        5.644800      21    118.540804  
+XOR2X2             typical        7.761600       1      7.761600  
+XOR2XL             typical        5.644800       4     22.579201  
+-----------------------------------------------------------------------------
+Total 35 references                                  7628.947205
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_41 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999       9    158.759995  r
+ADDFXL             typical       17.639999       1     17.639999  r
+ADDHXL             typical       10.584000       1     10.584000  r
+AND2X2             typical        3.528000       2      7.056000  
+AND2XL             typical        3.528000       4     14.112000  
+AOI21X1            typical        3.528000       6     21.168001  
+AOI21X2            typical        4.233600       1      4.233600  
+BUFX2              typical        2.822400      11     31.046401  
+CMPR42X1           typical       32.457600       9    292.118397  r
+CMPR42X2           typical       33.868801       1     33.868801  r
+INVX2              typical        2.116800       8     16.934401  
+INVX4              typical        2.822400       1      2.822400  
+INVXL              typical        2.116800      10     21.168001  
+NAND2BX1           typical        3.528000       2      7.056000  
+NAND2X2            typical        2.822400       5     14.112000  
+NAND2XL            typical        2.822400       8     22.579201  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400       3      8.467200  
+NOR2XL             typical        2.822400       1      2.822400  
+OAI2BB1X1          typical        4.233600       1      4.233600  
+OAI21X1            typical        3.528000       7     24.696001  
+OR2X2              typical        3.528000       6     21.168001  
+OR2XL              typical        3.528000       3     10.584000  
+XNOR2X1            typical        5.644800       2     11.289600  
+XNOR2XL            typical        5.644800       2     11.289600  
+XOR2X1             typical        5.644800       2     11.289600  
+-----------------------------------------------------------------------------
+Total 26 references                                   789.566401
+
+****************************************
+Design: tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             typical        3.528000      32    112.896004  
+-----------------------------------------------------------------------------
+Total 1 references                                    112.896004
+
+****************************************
+Design: tracking_divide_step 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+tracking_divide_step_DW01_add_2
+                                318.931210       1    318.931210  h
+tracking_divide_step_DW_mult_tc_2
+                              10915.631985       1  10915.631985  h
+-----------------------------------------------------------------------------
+Total 2 references                                  11234.563195
+
+****************************************
+Design: tracking_divide_step_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2XL             typical        3.528000       1      3.528000  
+CLKINVX2           typical        2.116800       1      2.116800  
+CLKINVX4           typical        2.822400       1      2.822400  
+CLKNAND2X2         typical        2.822400       3      8.467200  
+INVX2              typical        2.116800      19     40.219201  
+INVXL              typical        2.116800       3      6.350400  
+NAND2X2            typical        2.822400      20     56.448002  
+NAND2XL            typical        2.822400       1      2.822400  
+NOR2BXL            typical        3.528000       1      3.528000  
+NOR2X2             typical        2.822400      16     45.158401  
+NOR2XL             typical        2.822400       3      8.467200  
+OR2X2              typical        3.528000       1      3.528000  
+OR2XL              typical        3.528000       1      3.528000  
+XNOR2X1            typical        5.644800       6     33.868801  
+XNOR2X2            typical        7.761600       1      7.761600  
+XNOR2XL            typical        5.644800       2     11.289600  
+XOR2X1             typical        5.644800      10     56.448002  
+XOR2XL             typical        5.644800       4     22.579201  
+-----------------------------------------------------------------------------
+Total 18 references                                   318.931210
+
+****************************************
+Design: tracking_divide_step_DW_mult_tc_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHX1            typical       20.462400       1     20.462400  r
+ADDFHX2            typical       27.518400       1     27.518400  r
+ADDFHXL            typical       19.051201       3     57.153603  r
+ADDFX1             typical       17.639999      21    370.439987  r
+ADDFX2             typical       18.345600       1     18.345600  r
+ADDFX4             typical       19.756800       2     39.513599  r
+ADDHX1             typical       10.584000      11    116.423996  r
+AND2X2             typical        3.528000      12     42.336001  
+AND2XL             typical        3.528000       1      3.528000  
+AOI2B1XL           typical        4.939200       1      4.939200  
+AOI21BX1           typical        5.644800       2     11.289600  
+AOI21BX2           typical        5.644800       7     39.513601  
+AOI21X1            typical        3.528000      35    123.480004  
+AOI21X2            typical        4.233600       1      4.233600  
+AOI21X4            typical        6.350400       3     19.051200  
+AOI21XL            typical        3.528000       5     17.640001  
+BUFX2              typical        2.822400      12     33.868801  
+BUFX3              typical        3.528000       2      7.056000  
+BUFX4              typical        4.233600       1      4.233600  
+BUFX5              typical        4.939200       3     14.817600  
+BUFX6              typical        5.644800       1      5.644800  
+BUFX8              typical        6.350400       2     12.700800  
+BUFX12             typical        8.467200       1      8.467200  
+CLKAND2X2          typical        3.528000       5     17.640001  
+CLKBUFX4           typical        3.528000       2      7.056000  
+CLKINVX2           typical        2.116800       2      4.233600  
+CLKINVX4           typical        2.822400       1      2.822400  
+CLKINVX6           typical        4.233600       3     12.700800  
+CLKINVX8           typical        4.939200       1      4.939200  
+CLKINVX12          typical        6.350400       1      6.350400  
+CLKINVX16          typical        8.467200       1      8.467200  
+CLKNAND2X2         typical        2.822400       6     16.934401  
+CMPR42X1           typical       32.457600     233   7562.620716  r
+CMPR42X2           typical       33.868801      28    948.326431  r
+INVX1              typical        2.116800       1      2.116800  
+INVX2              typical        2.116800      69    146.059205  
+INVX4              typical        2.822400      13     36.691201  
+INVX5              typical        3.528000       1      3.528000  
+INVX6              typical        4.233600       3     12.700800  
+INVX10             typical        5.644800       1      5.644800  
+INVX12             typical        6.350400       2     12.700800  
+INVXL              typical        2.116800      11     23.284801  
+NAND2BX2           typical        3.528000       2      7.056000  
+NAND2BXL           typical        3.528000       1      3.528000  
+NAND2X2            typical        2.822400      86    242.726408  
+NAND2XL            typical        2.822400      24     67.737602  
+NOR2BX1            typical        3.528000       1      3.528000  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400      61    172.166406  
+NOR2X4             typical        4.939200       1      4.939200  
+NOR2XL             typical        2.822400      17     47.980802  
+OA21XL             typical        4.939200       5     24.696000  
+OAI2B1X1           typical        4.939200       1      4.939200  
+OAI21BX1           typical        4.939200       1      4.939200  
+OAI21X1            typical        3.528000      40    141.120005  
+OAI21X2            typical        4.233600       2      8.467200  
+OAI21X4            typical        6.350400       1      6.350400  
+OAI21XL            typical        3.528000      13     45.864002  
+OR2X2              typical        3.528000      25     88.200003  
+OR2XL              typical        3.528000       4     14.112000  
+XNOR2X1            typical        5.644800      19    107.251204  
+XNOR2X2            typical        7.761600       3     23.284800  
+XNOR2X4            typical       11.289600       1     11.289600  
+XOR2X1             typical        5.644800       5     28.224001  
+XOR2X3             typical       11.289600       1     11.289600  
+-----------------------------------------------------------------------------
+Total 65 references                                 10915.631985
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999       8    141.119995  r
+AND3X1             typical        4.233600       2      8.467200  
+AND3X2             typical        4.233600       4     16.934401  
+AO2B2X2            typical        7.056000      42    296.352010  
+AO22X2             typical        5.644800     250   1411.200047  
+AOI2BB1X2          typical        4.233600       1      4.233600  
+AOI22XL            typical        4.233600       1      4.233600  
+BUFX2              typical        2.822400     109    307.641610  
+BUFX12             typical        8.467200       2     16.934401  
+CLKBUFX16          typical        9.878400       1      9.878400  
+DFFRQX2            typical       15.523200     448   6954.393616  n
+DFFRX1             typical       16.934401     256   4335.206543  n
+INVX2              typical        2.116800      64    135.475204  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND2X2            typical        2.822400       3      8.467200  
+NAND3XL            typical        3.528000       3     10.584000  
+NAND4X2            typical        4.939200       6     29.635200  
+NOR2X2             typical        2.822400       3      8.467200  
+NOR3BX1            typical        4.233600       2      8.467200  
+NOR3X1             typical        3.528000       4     14.112000  
+NOR4X2             typical        4.233600      11     46.569602  
+OAI2B2X1           typical        5.644800     410   2314.368076  
+OAI2BB2X2          typical        5.644800       1      5.644800  
+OAI21BX1           typical        4.939200       1      4.939200  
+OAI21X1            typical        3.528000       1      3.528000  
+OAI31X1            typical        4.233600       1      4.233600  
+OAI211XL           typical        4.233600       1      4.233600  
+OR2X1              typical        3.528000       1      3.528000  
+OR2X2              typical        3.528000       2      7.056000  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+                               8686.641713       1   8686.641713  h, n
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+                              12719.851410       1  12719.851410  h, n
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+                              15578.942530       1  15578.942530  h, n
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+                                550.367982       1    550.367982  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+                                290.001610       1    290.001610  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+                                665.380784       1    665.380784  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+                                618.105587       1    618.105587  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+                                461.462385       1    461.462385  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+                                134.769596       1    134.769596  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+                               1727.308776       1   1727.308776  h
+tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+                               1727.308776       1   1727.308776  h
+-----------------------------------------------------------------------------
+Total 42 references                                 59297.213456
+
+****************************************
+Design: carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             typical        3.528000      52    183.456006  
+AND2X2             typical        3.528000       2      7.056000  
+AND4X2             typical        5.644800       4     22.579201  
+AO21X2             typical        4.939200       2      9.878400  
+AO22X2             typical        5.644800     114    643.507221  
+AOI2B1X1           typical        4.939200       2      9.878400  
+AOI2BB1X2          typical        4.233600       6     25.401601  
+AOI2BB2X2          typical        5.644800       6     33.868801  
+AOI21X1            typical        3.528000      46    162.288005  
+AOI22XL            typical        4.233600      88    372.556812  
+AOI31X1            typical        4.233600       6     25.401601  
+AOI211X2           typical        4.233600      32    135.475204  
+AOI221XL           typical        5.644800      24    135.475204  
+AOI222XL           typical        6.350400      48    304.819199  
+BUFX2              typical        2.822400      73    206.035207  
+DFFRQX2            typical       15.523200     126   1955.923204  n
+INVX2              typical        2.116800     159    336.571211  
+NAND2BX2           typical        3.528000       2      7.056000  
+NAND2X2            typical        2.822400      99    279.417609  
+NAND3BX2           typical        4.939200       2      9.878400  
+NAND3XL            typical        3.528000      68    239.904008  
+NAND4BBX2          typical        7.056000       4     28.224001  
+NAND4BX2           typical        5.644800       7     39.513601  
+NAND4X2            typical        4.939200      22    108.662398  
+NOR2BX1            typical        3.528000       6     21.168001  
+NOR2X2             typical        2.822400      66    186.278406  
+NOR3BX1            typical        4.233600       6     25.401601  
+NOR3X1             typical        3.528000      24     84.672003  
+NOR4BBX2           typical        7.056000       4     28.224001  
+NOR4BX2            typical        5.644800      10     56.448002  
+NOR4X2             typical        4.233600      28    118.540804  
+OA21X1             typical        4.939200       2      9.878400  
+OA22X2             typical        6.350400       4     25.401600  
+OAI2B2X1           typical        5.644800       6     33.868801  
+OAI2B11X2          typical        5.644800       2     11.289600  
+OAI2BB1X1          typical        4.233600      36    152.409605  
+OAI2BB2X2          typical        5.644800       6     33.868801  
+OAI21BX1           typical        4.939200       2      9.878400  
+OAI21X1            typical        3.528000      26     91.728003  
+OAI22X1            typical        4.233600      48    203.212807  
+OAI211XL           typical        4.233600      26    110.073604  
+OAI221X2           typical        6.350400      24    152.409599  
+OAI222X1           typical        7.056000      12     84.672003  
+OR2X2              typical        3.528000       1      3.528000  
+OR3X2              typical        4.233600       6     25.401601  
+XOR2X1             typical        5.644800      58    327.398411  
+carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+                                552.484782       1    552.484782  h
+carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+                                527.788792       1    527.788792  h
+carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+                                527.788792       1    527.788792  h
+-----------------------------------------------------------------------------
+Total 49 references                                  8686.641713
+
+****************************************
+Design: carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      30    529.199982  r
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800       1      2.116800  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                    552.484782
+
+****************************************
+Design: carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      21    370.439987  r
+ADDHX1             typical       10.584000       1     10.584000  r
+AND2X1             typical        3.528000       3     10.584000  
+CLKNAND2X2         typical        2.822400      18     50.803202  
+INVX2              typical        2.116800      11     23.284801  
+NOR2X1             typical        2.822400      16     45.158401  
+XNOR2X1            typical        5.644800       2     11.289600  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 8 references                                    527.788792
+
+****************************************
+Design: carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      21    370.439987  r
+ADDHX1             typical       10.584000       1     10.584000  r
+AND2X1             typical        3.528000       3     10.584000  
+CLKNAND2X2         typical        2.822400      18     50.803202  
+INVX2              typical        2.116800      11     23.284801  
+NOR2X1             typical        2.822400      16     45.158401  
+XNOR2X1            typical        5.644800       2     11.289600  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 8 references                                    527.788792
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             typical        3.528000      75    264.600009  
+AND3X1             typical        4.233600       8     33.868801  
+AND4X1             typical        5.644800       1      5.644800  
+AND4X2             typical        5.644800       3     16.934401  
+AOI21X1            typical        3.528000       3     10.584000  
+AOI22XL            typical        4.233600      86    364.089612  
+AOI222XL           typical        6.350400      11     69.854400  
+BUFX2              typical        2.822400      37    104.428803  
+CLKBUFX6           typical        4.939200       1      4.939200  
+CLKINVX1           typical        2.116800      45     95.256003  
+CLKNAND2X2         typical        2.822400       3      8.467200  
+DFFRQX2            typical       15.523200     112   1738.598404  n
+INVX2              typical        2.116800       7     14.817600  
+MX2X1              typical        6.350400      76    482.630398  
+MXI2X1             typical        5.644800      47    265.305609  
+NAND2BX1           typical        3.528000       3     10.584000  
+NAND3XL            typical        3.528000      18     63.504002  
+NAND4X1            typical        4.939200       9     44.452799  
+NAND4X2            typical        4.939200       1      4.939200  
+NOR2BX1            typical        3.528000      12     42.336001  
+NOR2X1             typical        2.822400       4     11.289600  
+NOR2X2             typical        2.822400       2      5.644800  
+NOR3BX1            typical        4.233600       3     12.700800  
+NOR3X1             typical        3.528000      15     52.920002  
+NOR4X1             typical        4.233600      12     50.803202  
+OAI2B2X1           typical        5.644800       6     33.868801  
+OAI2BB1X1          typical        4.233600      54    228.614408  
+OAI21BX1           typical        4.939200       4     19.756800  
+OAI21X1            typical        3.528000      38    134.064004  
+OAI22X1            typical        4.233600       4     16.934401  
+OR2X1              typical        3.528000      30    105.840003  
+OR3X1              typical        4.233600       1      4.233600  
+XNOR2X1            typical        5.644800      48    270.950409  
+XOR2X1             typical        5.644800     145    818.496027  
+b1i_prn_gen_0                  1404.849623       1   1404.849623  h, n
+b1i_prn_gen_1                  1404.849623       1   1404.849623  h, n
+b1i_prn_gen_2                  1404.849623       1   1404.849623  h, n
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+                                665.380784       1    665.380784  h
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+                                325.281589       1    325.281589  h
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+                                167.227205       1    167.227205  h
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+                                532.022418       1    532.022418  h
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+                                169.344005       1    169.344005  h
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+                                533.433618       1    533.433618  h
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+                                167.227205       1    167.227205  h
+code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+                                533.433618       1    533.433618  h
+-----------------------------------------------------------------------------
+Total 45 references                                 12719.851410
+
+****************************************
+Design: b1i_prn_gen_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21X1            typical        3.528000       2      7.056000  
+AOI22XL            typical        4.233600      10     42.336001  
+AOI211X1           typical        4.233600       1      4.233600  
+AOI221XL           typical        5.644800       2     11.289600  
+BMXIX2             typical       16.934401       1     16.934401  
+BUFX2              typical        2.822400       9     25.401601  
+CLKINVX1           typical        2.116800      30     63.504002  
+CLKNAND2X2         typical        2.822400       7     19.756801  
+DFFRQX2            typical       15.523200      23    357.033601  n
+DFFRX1             typical       16.934401       8    135.475204  n
+DFFSQXL            typical       14.112000       7     98.784003  n
+DFFSX2             typical       15.523200       3     46.569600  n
+INVX2              typical        2.116800       1      2.116800  
+MX2X1              typical        6.350400       7     44.452800  
+MX4XL              typical       16.934401       1     16.934401  
+MXI2X1             typical        5.644800      12     67.737602  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND3XL            typical        3.528000       1      3.528000  
+NAND4X1            typical        4.939200       1      4.939200  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400       2      5.644800  
+NOR3X1             typical        3.528000       2      7.056000  
+NOR4X1             typical        4.233600       1      4.233600  
+OAI2B2X1           typical        5.644800      11     62.092802  
+OAI21X1            typical        3.528000       2      7.056000  
+OAI22X1            typical        4.233600      12     50.803202  
+OAI211XL           typical        4.233600       2      8.467200  
+OAI221X1           typical        6.350400      12     76.204800  
+OR3X1              typical        4.233600       1      4.233600  
+XOR2X1             typical        5.644800      17     95.961603  
+b1i_prn_gen_0_DW01_inc_0        103.017597       1    103.017597  h
+-----------------------------------------------------------------------------
+Total 31 references                                  1404.849623
+
+****************************************
+Design: b1i_prn_gen_0_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000       9     95.255997  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                    103.017597
+
+****************************************
+Design: b1i_prn_gen_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21X1            typical        3.528000       2      7.056000  
+AOI22XL            typical        4.233600      10     42.336001  
+AOI211X1           typical        4.233600       1      4.233600  
+AOI221XL           typical        5.644800       2     11.289600  
+BMXIX2             typical       16.934401       1     16.934401  
+BUFX2              typical        2.822400       9     25.401601  
+CLKINVX1           typical        2.116800      30     63.504002  
+CLKNAND2X2         typical        2.822400       7     19.756801  
+DFFRQX2            typical       15.523200      23    357.033601  n
+DFFRX1             typical       16.934401       8    135.475204  n
+DFFSQXL            typical       14.112000       7     98.784003  n
+DFFSX2             typical       15.523200       3     46.569600  n
+INVX2              typical        2.116800       1      2.116800  
+MX2X1              typical        6.350400       7     44.452800  
+MX4XL              typical       16.934401       1     16.934401  
+MXI2X1             typical        5.644800      12     67.737602  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND3XL            typical        3.528000       1      3.528000  
+NAND4X1            typical        4.939200       1      4.939200  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400       2      5.644800  
+NOR3X1             typical        3.528000       2      7.056000  
+NOR4X1             typical        4.233600       1      4.233600  
+OAI2B2X1           typical        5.644800      11     62.092802  
+OAI21X1            typical        3.528000       2      7.056000  
+OAI22X1            typical        4.233600      12     50.803202  
+OAI211XL           typical        4.233600       2      8.467200  
+OAI221X1           typical        6.350400      12     76.204800  
+OR3X1              typical        4.233600       1      4.233600  
+XOR2X1             typical        5.644800      17     95.961603  
+b1i_prn_gen_1_DW01_inc_0        103.017597       1    103.017597  h
+-----------------------------------------------------------------------------
+Total 31 references                                  1404.849623
+
+****************************************
+Design: b1i_prn_gen_1_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000       9     95.255997  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                    103.017597
+
+****************************************
+Design: b1i_prn_gen_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21X1            typical        3.528000       2      7.056000  
+AOI22XL            typical        4.233600      10     42.336001  
+AOI211X1           typical        4.233600       1      4.233600  
+AOI221XL           typical        5.644800       2     11.289600  
+BMXIX2             typical       16.934401       1     16.934401  
+BUFX2              typical        2.822400       9     25.401601  
+CLKINVX1           typical        2.116800      30     63.504002  
+CLKNAND2X2         typical        2.822400       7     19.756801  
+DFFRQX2            typical       15.523200      23    357.033601  n
+DFFRX1             typical       16.934401       8    135.475204  n
+DFFSQXL            typical       14.112000       7     98.784003  n
+DFFSX2             typical       15.523200       3     46.569600  n
+INVX2              typical        2.116800       1      2.116800  
+MX2X1              typical        6.350400       7     44.452800  
+MX4XL              typical       16.934401       1     16.934401  
+MXI2X1             typical        5.644800      12     67.737602  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND3XL            typical        3.528000       1      3.528000  
+NAND4X1            typical        4.939200       1      4.939200  
+NOR2X1             typical        2.822400       3      8.467200  
+NOR2X2             typical        2.822400       2      5.644800  
+NOR3X1             typical        3.528000       2      7.056000  
+NOR4X1             typical        4.233600       1      4.233600  
+OAI2B2X1           typical        5.644800      11     62.092802  
+OAI21X1            typical        3.528000       2      7.056000  
+OAI22X1            typical        4.233600      12     50.803202  
+OAI211XL           typical        4.233600       2      8.467200  
+OAI221X1           typical        6.350400      12     76.204800  
+OR3X1              typical        4.233600       1      4.233600  
+XOR2X1             typical        5.644800      17     95.961603  
+b1i_prn_gen_2_DW01_inc_0        103.017597       1    103.017597  h
+-----------------------------------------------------------------------------
+Total 31 references                                  1404.849623
+
+****************************************
+Design: b1i_prn_gen_2_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000       9     95.255997  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                    103.017597
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      32    564.479980  r
+AND2X2             typical        3.528000      11     38.808001  
+XOR2X1             typical        5.644800      11     62.092802  
+-----------------------------------------------------------------------------
+Total 3 references                                    665.380784
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000      30    317.519989  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                    325.281589
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000       2      7.056000  
+INVX2              typical        2.116800      11     23.284801  
+NAND4X1            typical        4.939200       2      9.878400  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR4X1             typical        4.233600       8     33.868801  
+OR2X2              typical        3.528000       8     28.224001  
+XNOR2X1            typical        5.644800      10     56.448002  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 8 references                                    167.227205
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      39    137.592005  
+INVX2              typical        2.116800      71    150.292805  
+OR2X2              typical        3.528000       2      7.056000  
+XNOR2X1            typical        5.644800      33    186.278406  
+XOR2X1             typical        5.644800       9     50.803202  
+-----------------------------------------------------------------------------
+Total 5 references                                    532.022418
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800      12     25.401601  
+NAND4X1            typical        4.939200       2      9.878400  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR4X1             typical        4.233600       8     33.868801  
+OR2X2              typical        3.528000       9     31.752001  
+XNOR2X1            typical        5.644800      11     62.092802  
+-----------------------------------------------------------------------------
+Total 7 references                                    169.344005
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      38    134.064004  
+INVX2              typical        2.116800      72    152.409605  
+NAND2X2            typical        2.822400       1      2.822400  
+OR2X2              typical        3.528000       2      7.056000  
+XNOR2X1            typical        5.644800      33    186.278406  
+XOR2X1             typical        5.644800       9     50.803202  
+-----------------------------------------------------------------------------
+Total 6 references                                    533.433618
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800      11     23.284801  
+NAND4X1            typical        4.939200       2      9.878400  
+NOR2X1             typical        2.822400       1      2.822400  
+NOR4X1             typical        4.233600       8     33.868801  
+OR2X2              typical        3.528000       9     31.752001  
+XNOR2X1            typical        5.644800      10     56.448002  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 8 references                                    167.227205
+
+****************************************
+Design: code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      38    134.064004  
+INVX2              typical        2.116800      72    152.409605  
+NAND2X2            typical        2.822400       1      2.822400  
+OR2X2              typical        3.528000       2      7.056000  
+XNOR2X1            typical        5.644800      33    186.278406  
+XOR2X1             typical        5.644800       9     50.803202  
+-----------------------------------------------------------------------------
+Total 6 references                                    533.433618
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             typical        3.528000      24     84.672003  
+AND2X2             typical        3.528000       1      3.528000  
+AO2B2BX2           typical        8.467200      64    541.900818  
+AO2B2X1            typical        7.056000     114    804.384027  
+AO2B2X2            typical        7.056000     119    839.664028  
+BUFX2              typical        2.822400     159    448.761615  
+DFFRHQX2           typical       19.051201       9    171.460808  n
+DFFRHQX4           typical       23.990400      24    575.769608  n
+DFFRQX2            typical       15.523200     373   5790.153613  n
+DFFRX1             typical       16.934401      73   1236.211241  n
+INVX2              typical        2.116800     208    440.294415  
+NAND2BX2           typical        3.528000       2      7.056000  
+NAND2X2            typical        2.822400       5     14.112000  
+NAND4X2            typical        4.939200       4     19.756800  
+NOR2X2             typical        2.822400       1      2.822400  
+NOR3X1             typical        3.528000       2      7.056000  
+NOR4X2             typical        4.233600       3     12.700800  
+OAI2B2X1           typical        5.644800     181   1021.708834  
+OAI22X1            typical        4.233600      90    381.024013  
+OAI31X1            typical        4.233600       1      4.233600  
+XNOR2X1            typical        5.644800      26    146.764805  
+XOR2X1             typical        5.644800       2     11.289600  
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+                                479.807985       1    479.807985  h
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+                                479.807985       1    479.807985  h
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+                                479.807985       1    479.807985  h
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+                                479.807985       1    479.807985  h
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+                                479.807985       1    479.807985  h
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+                                479.807985       1    479.807985  h
+epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+                                134.769596       1    134.769596  h
+-----------------------------------------------------------------------------
+Total 29 references                                 15578.942530
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      26    458.639984  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    479.807985
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      26    458.639984  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    479.807985
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      26    458.639984  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    479.807985
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      26    458.639984  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    479.807985
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      26    458.639984  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    479.807985
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      26    458.639984  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    479.807985
+
+****************************************
+Design: epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000      12    127.007996  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                    134.769596
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      30    529.199982  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                    550.367982
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      31    109.368004  
+XOR2X1             typical        5.644800      32    180.633606  
+-----------------------------------------------------------------------------
+Total 2 references                                    290.001610
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      32    564.479980  r
+AND2X2             typical        3.528000      11     38.808001  
+XOR2X1             typical        5.644800      11     62.092802  
+-----------------------------------------------------------------------------
+Total 3 references                                    665.380784
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      28    493.919983  r
+AND2X2             typical        3.528000      12     42.336001  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR2X1             typical        5.644800      13     73.382402  
+-----------------------------------------------------------------------------
+Total 5 references                                    618.105587
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      25    440.999985  r
+AND2X2             typical        3.528000       2      7.056000  
+INVX2              typical        2.116800       1      2.116800  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 5 references                                    461.462385
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1             typical       10.584000      12    127.007996  r
+INVX2              typical        2.116800       1      2.116800  
+XOR2X1             typical        5.644800       1      5.644800  
+-----------------------------------------------------------------------------
+Total 3 references                                    134.769596
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      34    599.759979  r
+ADDHX1             typical       10.584000      12    127.007996  r
+CLKNAND2X2         typical        2.822400      14     39.513601  
+CMPR42X1           typical       32.457600      22    714.067192  r
+INVX2              typical        2.116800      14     29.635201  
+NOR2X1             typical        2.822400      77    217.324807  
+-----------------------------------------------------------------------------
+Total 6 references                                   1727.308776
+
+****************************************
+Design: tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      34    599.759979  r
+ADDHX1             typical       10.584000      12    127.007996  r
+CLKNAND2X2         typical        2.822400      14     39.513601  
+CMPR42X1           typical       32.457600      22    714.067192  r
+INVX2              typical        2.116800      14     29.635201  
+NOR2X1             typical        2.822400      77    217.324807  
+-----------------------------------------------------------------------------
+Total 6 references                                   1727.308776
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000       4     14.112000  
+AND4X2             typical        5.644800       4     22.579201  
+AO2B2X2            typical        7.056000      46    324.576011  
+AO21X2             typical        4.939200       3     14.817600  
+AO22X1             typical        5.644800       9     50.803202  
+AO22X2             typical        5.644800     129    728.179224  
+AOI21X1            typical        3.528000       1      3.528000  
+AOI22XL            typical        4.233600     154    651.974422  
+AOI31X1            typical        4.233600       1      4.233600  
+AOI221XL           typical        5.644800      82    462.873615  
+AOI222XL           typical        6.350400     114    723.945597  
+BUFX2              typical        2.822400     138    389.491213  
+DFFRQX2            typical       15.523200     354   5495.212812  n
+DFFRX1             typical       16.934401      56    948.326431  n
+INVX2              typical        2.116800     151    319.636811  
+INVXL              typical        2.116800       7     14.817600  
+MX2X1              typical        6.350400      41    260.366399  
+MX2XL              typical        6.350400       9     57.153600  
+MXI2X1             typical        5.644800     464   2619.187286  
+NAND2BX2           typical        3.528000       1      3.528000  
+NAND2X2            typical        2.822400     130    366.912012  
+NAND3XL            typical        3.528000      15     52.920002  
+NAND4BX2           typical        5.644800       4     22.579201  
+NAND4X1            typical        4.939200       4     19.756800  
+NAND4X2            typical        4.939200      33    162.993598  
+NOR2BX1            typical        3.528000       4     14.112000  
+NOR2X2             typical        2.822400      23     64.915202  
+NOR3BX1            typical        4.233600       1      4.233600  
+NOR3X1             typical        3.528000      17     59.976002  
+NOR3XL             typical        3.528000       1      3.528000  
+NOR4X1             typical        4.233600      11     46.569602  
+NOR4X2             typical        4.233600      42    177.811206  
+NOR4XL             typical        4.233600       4     16.934401  
+OA21X1             typical        4.939200       1      4.939200  
+OAI2B2X1           typical        5.644800       8     45.158401  
+OAI2B11X2          typical        5.644800       6     33.868801  
+OAI2BB1X1          typical        4.233600      33    139.708805  
+OAI2BB2X1          typical        5.644800       5     28.224001  
+OAI2BB2X2          typical        5.644800       1      5.644800  
+OAI21X1            typical        3.528000       1      3.528000  
+OAI22X1            typical        4.233600      19     80.438403  
+OAI31X1            typical        4.233600       2      8.467200  
+OAI32XL            typical        4.939200       1      4.939200  
+OAI221X2           typical        6.350400       1      6.350400  
+OAI222X1           typical        7.056000       2     14.112000  
+OR2X2              typical        3.528000       2      7.056000  
+OR3X2              typical        4.233600       1      4.233600  
+OR4X2              typical        5.644800       1      5.644800  
+XNOR2X1            typical        5.644800      41    231.436808  
+XNOR2XL            typical        5.644800       3     16.934401  
+XOR2X1             typical        5.644800      33    186.278406  
+XOR2XL             typical        5.644800       9     50.803202  
+tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0
+                               1026.647966       1   1026.647966  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1
+                                539.078383       1    539.078383  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2
+                               1028.764766       1   1028.764766  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0
+                                755.697625       1    755.697625  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1
+                                755.697625       1    755.697625  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2
+                                603.993585       1    603.993585  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3
+                               1152.950370       1   1152.950370  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4
+                               1152.950370       1   1152.950370  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5
+                                558.129585       1    558.129585  h
+tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6
+                               1111.319970       1   1111.319970  h
+-----------------------------------------------------------------------------
+Total 62 references                                 23685.580921
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_add_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      57   1005.479965  r
+AND2X2             typical        3.528000       1      3.528000  
+XOR2X1             typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 4 references                                   1026.647966
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_add_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      29    511.559982  r
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800       2      4.233600  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 5 references                                    539.078383
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      57   1005.479965  r
+AND2X2             typical        3.528000       1      3.528000  
+INVX2              typical        2.116800       1      2.116800  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                   1028.764766
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      55    194.040006  
+INVX2              typical        2.116800     112    237.081608  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800      57    321.753611  
+-----------------------------------------------------------------------------
+Total 4 references                                    755.697625
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             typical        3.528000      55    194.040006  
+INVX2              typical        2.116800     112    237.081608  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800      57    321.753611  
+-----------------------------------------------------------------------------
+Total 4 references                                    755.697625
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      29    511.559982  r
+INVX2              typical        2.116800      33     69.854402  
+NAND2X2            typical        2.822400       2      5.644800  
+XNOR2X1            typical        5.644800       3     16.934401  
+-----------------------------------------------------------------------------
+Total 4 references                                    603.993585
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      57   1005.479965  r
+INVX2              typical        2.116800      60    127.008004  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                   1152.950370
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      57   1005.479965  r
+INVX2              typical        2.116800      60    127.008004  
+NAND2X2            typical        2.822400       1      2.822400  
+XNOR2X1            typical        5.644800       1      5.644800  
+XOR3XL             typical       11.995200       1     11.995200  
+-----------------------------------------------------------------------------
+Total 5 references                                   1152.950370
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      28    493.919983  r
+INVX2              typical        2.116800      29     61.387202  
+NOR2X1             typical        2.822400       1      2.822400  
+-----------------------------------------------------------------------------
+Total 3 references                                    558.129585
+
+****************************************
+Design: tracking_normalize_iterative_ENABLE_FLL1_DW01_sub_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX1             typical       17.639999      56    987.839966  r
+INVX2              typical        2.116800      57    120.657604  
+NOR2X1             typical        2.822400       1      2.822400  
+-----------------------------------------------------------------------------
+Total 3 references                                   1111.319970
+1

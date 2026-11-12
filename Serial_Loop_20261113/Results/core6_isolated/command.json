@@ -1,0 +1,16 @@
+{
+  "budget_s": 600.0, 
+  "rss_limit_kib": 6291456, 
+  "cwd": "/home/ICer/six_tile_asic_v2_20261113/core_retry1", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/six_tile_asic_v2_20261113/core_retry1/reports/time.txt", 
+    "setsid", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "../scripts/integrate.tcl"
+  ]
+}

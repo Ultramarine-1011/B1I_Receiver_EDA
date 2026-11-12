@@ -1,0 +1,4 @@
+inputs.tar.gz
+tb/*.if2
+*.pyc
+__pycache__/

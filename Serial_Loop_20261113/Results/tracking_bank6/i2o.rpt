@@ -1,0 +1,251 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 6
+Design : tracking_bank6
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:36:13 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: c0_init_valid
+              (input port clocked by clk)
+  Endpoint: c0_sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  c0_init_valid (in)                                  0.023788   1.023788 f
+  channel0/init_valid (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.023788 f
+  channel0/U3931/Y (BUFX2)                            0.056132   1.079919 f
+  channel0/U3930/Y (INVX2)                            0.030487   1.110406 r
+  channel0/U2988/Y (BUFX2)                            0.045797   1.156204 r
+  channel0/U2917/Y (INVX4)                            0.156645   1.312848 f
+  channel0/U3933/Y (NOR2BX1)                          0.096055   1.408904 r
+  channel0/U3989/Y (NAND3BX2)                         0.036433   1.445337 f
+  channel0/U2616/Y (NOR4XL)                           0.244156   1.689493 r
+  channel0/sample_ready (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.689493 r
+  c0_sample_ready (out)                               0.000000   1.689493 r
+  data arrival time                                              1.689493
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.689493
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.110507
+
+
+  Startpoint: c1_init_valid
+              (input port clocked by clk)
+  Endpoint: c1_sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  c1_init_valid (in)                                  0.023788   1.023788 f
+  channel1/init_valid (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.023788 f
+  channel1/U3931/Y (BUFX2)                            0.056132   1.079919 f
+  channel1/U3930/Y (INVX2)                            0.030487   1.110406 r
+  channel1/U2988/Y (BUFX2)                            0.045797   1.156204 r
+  channel1/U2917/Y (INVX4)                            0.156645   1.312848 f
+  channel1/U3933/Y (NOR2BX1)                          0.096055   1.408904 r
+  channel1/U3989/Y (NAND3BX2)                         0.036433   1.445337 f
+  channel1/U2616/Y (NOR4XL)                           0.244156   1.689493 r
+  channel1/sample_ready (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.689493 r
+  c1_sample_ready (out)                               0.000000   1.689493 r
+  data arrival time                                              1.689493
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.689493
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.110507
+
+
+  Startpoint: c2_init_valid
+              (input port clocked by clk)
+  Endpoint: c2_sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  c2_init_valid (in)                                  0.023788   1.023788 f
+  channel2/init_valid (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.023788 f
+  channel2/U3931/Y (BUFX2)                            0.056132   1.079919 f
+  channel2/U3930/Y (INVX2)                            0.030487   1.110406 r
+  channel2/U2988/Y (BUFX2)                            0.045797   1.156204 r
+  channel2/U2917/Y (INVX4)                            0.156645   1.312848 f
+  channel2/U3933/Y (NOR2BX1)                          0.096055   1.408904 r
+  channel2/U3989/Y (NAND3BX2)                         0.036433   1.445337 f
+  channel2/U2616/Y (NOR4XL)                           0.244156   1.689493 r
+  channel2/sample_ready (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.689493 r
+  c2_sample_ready (out)                               0.000000   1.689493 r
+  data arrival time                                              1.689493
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.689493
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.110507
+
+
+  Startpoint: c3_init_valid
+              (input port clocked by clk)
+  Endpoint: c3_sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  c3_init_valid (in)                                  0.023788   1.023788 f
+  channel3/init_valid (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.023788 f
+  channel3/U3931/Y (BUFX2)                            0.056132   1.079919 f
+  channel3/U3930/Y (INVX2)                            0.030487   1.110406 r
+  channel3/U2988/Y (BUFX2)                            0.045797   1.156204 r
+  channel3/U2917/Y (INVX4)                            0.156645   1.312848 f
+  channel3/U3933/Y (NOR2BX1)                          0.096055   1.408904 r
+  channel3/U3989/Y (NAND3BX2)                         0.036433   1.445337 f
+  channel3/U2616/Y (NOR4XL)                           0.244156   1.689493 r
+  channel3/sample_ready (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.689493 r
+  c3_sample_ready (out)                               0.000000   1.689493 r
+  data arrival time                                              1.689493
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.689493
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.110507
+
+
+  Startpoint: c4_init_valid
+              (input port clocked by clk)
+  Endpoint: c4_sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  c4_init_valid (in)                                  0.023788   1.023788 f
+  channel4/init_valid (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.023788 f
+  channel4/U3931/Y (BUFX2)                            0.056132   1.079919 f
+  channel4/U3930/Y (INVX2)                            0.030487   1.110406 r
+  channel4/U2988/Y (BUFX2)                            0.045797   1.156204 r
+  channel4/U2917/Y (INVX4)                            0.156645   1.312848 f
+  channel4/U3933/Y (NOR2BX1)                          0.096055   1.408904 r
+  channel4/U3989/Y (NAND3BX2)                         0.036433   1.445337 f
+  channel4/U2616/Y (NOR4XL)                           0.244156   1.689493 r
+  channel4/sample_ready (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.689493 r
+  c4_sample_ready (out)                               0.000000   1.689493 r
+  data arrival time                                              1.689493
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.689493
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.110507
+
+
+  Startpoint: c5_init_valid
+              (input port clocked by clk)
+  Endpoint: c5_sample_ready
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                1.000000   1.000000 f
+  c5_init_valid (in)                                  0.023788   1.023788 f
+  channel5/init_valid (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.023788 f
+  channel5/U3931/Y (BUFX2)                            0.056132   1.079919 f
+  channel5/U3930/Y (INVX2)                            0.030487   1.110406 r
+  channel5/U2988/Y (BUFX2)                            0.045797   1.156204 r
+  channel5/U2917/Y (INVX4)                            0.156645   1.312848 f
+  channel5/U3933/Y (NOR2BX1)                          0.096055   1.408904 r
+  channel5/U3989/Y (NAND3BX2)                         0.036433   1.445337 f
+  channel5/U2616/Y (NOR4XL)                           0.244156   1.689493 r
+  channel5/sample_ready (ITERATIVE_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   1.689493 r
+  c5_sample_ready (out)                               0.000000   1.689493 r
+  data arrival time                                              1.689493
+
+  clock clk (rise edge)                               10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               -1.000000  8.800000
+  data required time                                             8.800000
+  --------------------------------------------------------------------------
+  data required time                                             8.800000
+  data arrival time                                              -1.689493
+  --------------------------------------------------------------------------
+  slack (MET)                                                    7.110507
+
+
+1

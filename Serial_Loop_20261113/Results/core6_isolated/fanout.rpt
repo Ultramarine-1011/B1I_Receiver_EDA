@@ -1,0 +1,38 @@
+Warning: '-threshold' option is ignored when '-high_fanout' argument is present. (UID-451)
+ 
+****************************************
+Report : net fanout
+        -high_fanout
+Design : bds_bb_6ch_core
+Version: O-2018.06-SP1
+Date   : Fri Nov 13 00:40:26 2026
+****************************************
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+
+
+Attributes:
+   dr - drc disabled
+    c - annotated capacitance
+    d - dont_touch
+    i - ideal_net
+    I - ideal_network
+    p - includes pin load
+    r - annotated resistance
+    h - high fanout
+
+Net                 Fanout   Attributes   Capacitance   Driver
+--------------------------------------------------------------------------------
+clk                  34434   dr, h         1001.00      clk
+engine/channels[0].slot/channel_reset_n    926 d     2.62 engine/U4381/Y
+engine/channels[1].slot/channel_reset_n    926 d     2.62 engine/U4382/Y
+engine/channels[2].slot/channel_reset_n    926 d     2.62 engine/U4383/Y
+engine/channels[3].slot/channel_reset_n    926 d     2.62 engine/U4384/Y
+engine/channels[4].slot/channel_reset_n    926 d     2.62 engine/U4385/Y
+engine/channels[5].slot/channel_reset_n    926 d     2.62 engine/U4386/Y
+1

@@ -1,0 +1,43 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/receiver_contract_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/b1i_prn_gen.sv" into library work
+INFO: [VRFC 10-311] analyzing module b1i_prn_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/code_nco.sv" into library work
+INFO: [VRFC 10-311] analyzing module code_nco
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/carrier_nco_mixer.sv" into library work
+INFO: [VRFC 10-311] analyzing module carrier_nco_mixer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/epl_correlator.sv" into library work
+INFO: [VRFC 10-311] analyzing module epl_correlator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/tracking_frontend.sv" into library work
+INFO: [VRFC 10-311] analyzing module tracking_frontend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/tracking_frontend_spaced.sv" into library work
+INFO: [VRFC 10-311] analyzing module tracking_frontend_spaced
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/tracking_channel_minimal.sv" into library work
+INFO: [VRFC 10-311] analyzing module tracking_channel_minimal
+INFO: [VRFC 10-311] analyzing module tracking_normalize_iterative
+INFO: [VRFC 10-311] analyzing module tracking_aid_iterative
+INFO: [VRFC 10-311] analyzing module tracking_divide_step
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/nh20_sync.sv" into library work
+INFO: [VRFC 10-311] analyzing module nh20_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/d1_word_sync.sv" into library work
+INFO: [VRFC 10-311] analyzing module d1_word_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/navigation_d1.sv" into library work
+INFO: [VRFC 10-311] analyzing module navigation_d1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/tracking_record_framer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tracking_record_framer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/receiver_channel.sv" into library work
+INFO: [VRFC 10-311] analyzing module receiver_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/acquisition_refine.sv" into library work
+INFO: [VRFC 10-311] analyzing module acquisition_refine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/fft4096_serial.sv" into library work
+INFO: [VRFC 10-311] analyzing module fft4096_serial
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/acquisition_pcps.sv" into library work
+INFO: [VRFC 10-311] analyzing module acquisition_pcps
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/b1i_period_reduce.sv" into library work
+INFO: [VRFC 10-311] analyzing module b1i_period_reduce
+INFO: [VRFC 10-311] analyzing module b1i_period_reference
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/bds_bb_6ch_engine.sv" into library work
+INFO: [VRFC 10-311] analyzing module bds_bb_6ch_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/rtl/bds_bb_6ch_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module bds_bb_6ch_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/26255/Desktop/DIC_EDA/Experiments/Serial_Loop_20261113/tb/tb_six_if.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_six_if
