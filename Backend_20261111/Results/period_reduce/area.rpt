@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : b1i_period_reduce
+Version: O-2018.06-SP1
+Date   : Thu Nov 12 00:58:49 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    typical (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db)
+
+Number of ports:                          360
+Number of nets:                           515
+Number of cells:                          258
+Number of combinational cells:            235
+Number of sequential cells:                19
+Number of macros/black boxes:               0
+Number of buf/inv:                         28
+Number of references:                      23
+
+Combinational area:               1402.732809
+Buf/Inv area:                       67.737602
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1402.732809
+Total area:                 undefined
+1

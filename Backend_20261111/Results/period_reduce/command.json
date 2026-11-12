@@ -1,0 +1,16 @@
+{
+  "budget_s": 180.0, 
+  "rss_limit_kib": 524288, 
+  "cwd": "/home/ICer/ic_eda_period_20261112/b1i_period_reduce/work", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_period_20261112/b1i_period_reduce/reports/time.txt", 
+    "setsid", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "/home/ICer/ic_eda_period_20261112/period_probe.tcl"
+  ]
+}

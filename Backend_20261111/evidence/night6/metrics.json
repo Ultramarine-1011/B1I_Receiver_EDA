@@ -1,0 +1,20 @@
+{
+  "scope": "six complete mapped tracking channels, excluding receiver controller, navigation, acquisition and PAD",
+  "area_um2": 2998743.597369,
+  "setup_wns_ns": -10.948725,
+  "hold_wns_ns": -0.162817,
+  "physical_leaf_cells": 587850,
+  "sequential_cells": 14028,
+  "unmapped": 0,
+  "blackboxes": 0,
+  "monitor_wall_s": 51.85,
+  "gnu_time_wall_s": 51.43,
+  "peak_rss_kib": 1798248,
+  "full_core_round2": {
+    "elapsed_s": 3009.2,
+    "stop_reason": "RSS_LIMIT",
+    "peak_sampled_rss_kib": 8416268
+  },
+  "wall_clock_limit_met": false,
+  "goal_start_unix": 1794411985
+}

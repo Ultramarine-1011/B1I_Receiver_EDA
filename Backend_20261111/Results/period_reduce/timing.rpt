@@ -1,0 +1,92 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : b1i_period_reduce
+Version: O-2018.06-SP1
+Date   : Thu Nov 12 00:58:49 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: value[43] (input port clocked by module_clk)
+  Endpoint: quotient[21]
+            (output port clocked by module_clk)
+  Path Group: module_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock module_clk (rise edge)                        0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  value[43] (in)                                      0.014729   0.014729 f
+  add_2_root_add_13_3/B[0] (b1i_period_reduce_DW01_add_1)
+                                                      0.000000   0.014729 f
+  add_2_root_add_13_3/U1_0/CO (ADDFX1)                0.154925   0.169654 f
+  add_2_root_add_13_3/U1_1/CO (ADDFX1)                0.105445   0.275099 f
+  add_2_root_add_13_3/U1_2/CO (ADDFX1)                0.105415   0.380514 f
+  add_2_root_add_13_3/U1_3/CO (ADDFX1)                0.105445   0.485959 f
+  add_2_root_add_13_3/U1_4/CO (ADDFX1)                0.105445   0.591404 f
+  add_2_root_add_13_3/U1_5/CO (ADDFX1)                0.105445   0.696849 f
+  add_2_root_add_13_3/U1_6/CO (ADDFX1)                0.105445   0.802294 f
+  add_2_root_add_13_3/U1_7/CO (ADDFX1)                0.105445   0.907738 f
+  add_2_root_add_13_3/U1_8/CO (ADDFX1)                0.105445   1.013183 f
+  add_2_root_add_13_3/U1_9/S (ADDFX1)                 0.100573   1.113757 r
+  add_2_root_add_13_3/SUM[9] (b1i_period_reduce_DW01_add_1)
+                                                      0.000000   1.113757 r
+  add_1_root_add_13_3/B[9] (b1i_period_reduce_DW01_add_0)
+                                                      0.000000   1.113757 r
+  add_1_root_add_13_3/U1_9/CO (ADDFX1)                0.167720   1.281477 r
+  add_1_root_add_13_3/U4/Y (AND2X2)                   0.051750   1.333226 r
+  add_1_root_add_13_3/SUM[11] (b1i_period_reduce_DW01_add_0)
+                                                      0.000000   1.333226 r
+  U181/Y (CLKINVX1)                                   0.031019   1.364245 f
+  U61/Y (OAI32XL)                                     0.368749   1.732994 r
+  U62/Y (NOR2X2)                                      0.101411   1.834405 f
+  U175/Y (OR2X1)                                      0.104316   1.938722 f
+  U68/S (ADDFX1)                                      0.151582   2.090303 f
+  add_0_root_add_0_root_add_30_4/A[1] (b1i_period_reduce_DW01_add_2)
+                                                      0.000000   2.090303 f
+  add_0_root_add_0_root_add_30_4/U1_1/CO (ADDFX1)     0.144275   2.234578 f
+  add_0_root_add_0_root_add_30_4/U1_2/CO (ADDFX1)     0.105497   2.340075 f
+  add_0_root_add_0_root_add_30_4/U1_3/CO (ADDFX1)     0.105497   2.445573 f
+  add_0_root_add_0_root_add_30_4/U1_4/CO (ADDFX1)     0.105497   2.551070 f
+  add_0_root_add_0_root_add_30_4/U1_5/CO (ADDFX1)     0.105497   2.656568 f
+  add_0_root_add_0_root_add_30_4/U1_6/CO (ADDFX1)     0.105497   2.762065 f
+  add_0_root_add_0_root_add_30_4/U1_7/CO (ADDFX1)     0.105497   2.867562 f
+  add_0_root_add_0_root_add_30_4/U1_8/CO (ADDFX1)     0.105497   2.973060 f
+  add_0_root_add_0_root_add_30_4/U1_9/CO (ADDFX1)     0.105497   3.078557 f
+  add_0_root_add_0_root_add_30_4/U1_10/CO (ADDFX1)    0.108147   3.186704 f
+  add_0_root_add_0_root_add_30_4/U23/Y (AND2X2)       0.063832   3.250536 f
+  add_0_root_add_0_root_add_30_4/U11/Y (AND2X2)       0.056849   3.307385 f
+  add_0_root_add_0_root_add_30_4/U12/Y (AND2X2)       0.056836   3.364221 f
+  add_0_root_add_0_root_add_30_4/U13/Y (AND2X2)       0.056836   3.421057 f
+  add_0_root_add_0_root_add_30_4/U14/Y (AND2X2)       0.056836   3.477893 f
+  add_0_root_add_0_root_add_30_4/U15/Y (AND2X2)       0.056836   3.534729 f
+  add_0_root_add_0_root_add_30_4/U16/Y (AND2X2)       0.056836   3.591565 f
+  add_0_root_add_0_root_add_30_4/U17/Y (AND2X2)       0.056836   3.648401 f
+  add_0_root_add_0_root_add_30_4/U18/Y (AND2X2)       0.056836   3.705238 f
+  add_0_root_add_0_root_add_30_4/U19/Y (AND2X2)       0.056836   3.762074 f
+  add_0_root_add_0_root_add_30_4/U10/Y (XOR2X1)       0.081448   3.843522 r
+  add_0_root_add_0_root_add_30_4/SUM[21] (b1i_period_reduce_DW01_add_2)
+                                                      0.000000   3.843522 r
+  quotient[21] (out)                                  0.000000   3.843522 r
+  data arrival time                                              3.843522
+
+  clock module_clk (rise edge)                        10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.200000  9.800000
+  output external delay                               0.000000   9.800000
+  data required time                                             9.800000
+  --------------------------------------------------------------------------
+  data required time                                             9.800000
+  data arrival time                                              -3.843522
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.956479
+
+
+1

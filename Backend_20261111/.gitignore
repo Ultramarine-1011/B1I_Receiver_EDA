@@ -81,3 +81,9 @@
 /Results/fast_v6_parts/reports/tracking_ratio_code.ddc
 /Results/fast_v6_parts/reports/tracking_ratio_phase.ddc
 /Results/fast_v6_parts/reports/tracking_ratio_phase.v
+
+# Raw expanded evidence is preserved in the two night6 archives.
+/evidence/night6/**
+!/evidence/night6/metrics.json
+!/evidence/night6/budget_tests.json
+!/evidence/night6/logical_source_match.json

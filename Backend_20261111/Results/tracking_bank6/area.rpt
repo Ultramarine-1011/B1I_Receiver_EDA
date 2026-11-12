@@ -1,0 +1,781 @@
+ 
+****************************************
+Report : area
+Design : tracking_bank6
+Version: O-2018.06-SP1
+Date   : Thu Nov 12 01:05:37 2026
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/typical.db)
+
+Number of ports:                        78242
+Number of nets:                        698168
+Number of cells:                       589980
+Number of combinational cells:         573822
+Number of sequential cells:             15564
+Number of macros/black boxes:               0
+Number of buf/inv:                     115338
+Number of references:                       1
+
+Combinational area:            2769629.630343
+Buf/Inv area:                   275332.184240
+Noncombinational area:          229113.967026
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               2998743.597369
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                Local cell area
+                                  ---------------------  --------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-        Noncombi-    Black-
+                                  Total         Total    national      national     boxes   Design
+--------------------------------  ------------  -------  ------------  -----------  ------  ------------------------------------------------------------------------------------------------------------------------
+tracking_bank6                    2998743.5974    100.0        0.0000       0.0000  0.0000  tracking_bank6
+channel0                           499790.5996     16.7    11133.6627   13010.5585  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel0/add_0_root_add_0_root_add_222_2
+                                      734.5296      0.0      734.5296       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel0/add_0_root_add_144_2        1305.3600      0.0     1305.3600       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_50
+channel0/add_0_root_add_220_2         710.5392      0.0      710.5392       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24
+channel0/add_104                      884.1168      0.0      884.1168       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_25
+channel0/add_112                     1620.7632      0.1     1620.7632       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_42
+channel0/add_112_S2                   953.2656      0.0      953.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel0/add_112_S3                  1648.9872      0.1     1648.9872       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_43
+channel0/add_113                     1913.5873      0.1     1913.5873       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_41
+channel0/add_118                      561.6576      0.0      561.6576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel0/add_132                     1075.3344      0.0     1075.3344       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_30
+channel0/add_133                     1696.9680      0.1     1696.9680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_74
+channel0/add_142                      596.2320      0.0      596.2320       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel0/add_145                      470.6352      0.0      470.6352       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_40
+channel0/add_146                     1092.2688      0.0     1092.2688       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26
+channel0/add_152                      550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel0/add_153                      689.3712      0.0      689.3712       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel0/add_156_aco                  550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel0/add_1_root_add_144_2        1068.2784      0.0     1068.2784       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel0/add_213_S2                    71.2656      0.0       71.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel0/carrier_conversion         10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel0/code_conversion            10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel0/dll_ratio                  50679.0159      1.7    50679.0159       0.0000  0.0000  CACHED_tracking_ratio_code
+channel0/feedback_aid                6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel0/fll_phase                 151950.9641      5.1   151950.9641       0.0000  0.0000  CACHED_tracking_atan
+channel0/frontend                   59826.4135      2.0     4866.5233   11289.6002  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel0/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel0/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel0/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel0/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel0/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel0/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel0/frontend/carrier            8686.6417      0.3     5122.6561    1955.9232  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel0/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel0/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel0/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel0/frontend/code_source       12719.8514      0.4     3673.3537    1738.5984  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel0/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel0/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel0/frontend/code_source/early_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_2
+channel0/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_2_DW01_inc_0
+channel0/frontend/code_source/late_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_1
+channel0/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_1_DW01_inc_0
+channel0/frontend/code_source/prompt_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_0
+channel0/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_0_DW01_inc_0
+channel0/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel0/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel0/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel0/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel0/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel0/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel0/frontend/correlator        16089.0913      0.5     4798.0802    8277.3937  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel0/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel0/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel0/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel0/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel0/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel0/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel0/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel0/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel0/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel0/gt_131                       499.5648      0.0      499.5648       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel0/gt_131_2                     503.0928      0.0      503.0928       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17
+channel0/gte_117                      783.9216      0.0      783.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_21
+channel0/initial_aid                 6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel0/lt_127                       623.7504      0.0      623.7504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11
+channel0/mult_109                    8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_46
+channel0/mult_109_S2                 8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_45
+channel0/mult_110                    7391.1599      0.2     7391.1599       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5
+channel0/mult_110_S2                 7393.2767      0.2     7393.2767       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4
+channel0/mult_111                    8632.3104      0.3     8632.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_48
+channel0/mult_111_S2                 8562.4560      0.3     8562.4560       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_47
+channel0/mult_128                     743.7024      0.0      743.7024       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_30
+channel0/mult_130                    1490.9328      0.0     1490.9328       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel0/mult_132                    1055.5776      0.0     1055.5776       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_29
+channel0/mult_133                   13797.3026      0.5    13797.3026       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_61
+channel0/mult_133_2                 13535.5250      0.5    13535.5250       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_59
+channel0/mult_134                   13796.5970      0.5    13796.5970       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_83
+channel0/mult_134_2                 13941.2450      0.5    13941.2450       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel0/mult_139                    1052.0496      0.0     1052.0496       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel0/mult_143                    3605.6161      0.1     3605.6161       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel0/mult_144                    2070.9360      0.1     2070.9360       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel0/mult_145                    2320.7184      0.1     2320.7184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_43
+channel0/mult_151                    2003.1984      0.1     2003.1984       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel0/mult_152                    1665.9216      0.1     1665.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel0/mult_153                    1770.3504      0.1     1770.3504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel0/mult_156                    1217.8656      0.0     1217.8656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel0/mult_156_2                  3885.7391      0.1     3885.7391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel0/mult_add_156_aco             112.8960      0.0      112.8960       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel0/pll_ratio                  23320.0805      0.8    23320.0805       0.0000  0.0000  CACHED_tracking_ratio_phase
+channel0/sub_114                      378.2016      0.0      378.2016       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14
+channel0/sub_115                      385.2576      0.0      385.2576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_13
+channel0/sub_117                     2030.7169      0.1     2030.7169       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16
+channel0/sub_117_2                   2022.9553      0.1     2022.9553       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_17
+channel0/sub_134                     1776.7008      0.1     1776.7008       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18
+channel0/sub_152                      633.6288      0.0      633.6288       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8
+channel0/sub_153                      694.3104      0.0      694.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel0/sub_156                      637.8624      0.0      637.8624       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel0/sub_156_2                    821.3184      0.0      821.3184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel1                           499790.5996     16.7    11133.6627   13010.5585  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel1/add_0_root_add_0_root_add_222_2
+                                      734.5296      0.0      734.5296       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel1/add_0_root_add_144_2        1305.3600      0.0     1305.3600       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_50
+channel1/add_0_root_add_220_2         710.5392      0.0      710.5392       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24
+channel1/add_104                      884.1168      0.0      884.1168       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_25
+channel1/add_112                     1620.7632      0.1     1620.7632       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_42
+channel1/add_112_S2                   953.2656      0.0      953.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel1/add_112_S3                  1648.9872      0.1     1648.9872       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_43
+channel1/add_113                     1913.5873      0.1     1913.5873       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_41
+channel1/add_118                      561.6576      0.0      561.6576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel1/add_132                     1075.3344      0.0     1075.3344       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_30
+channel1/add_133                     1696.9680      0.1     1696.9680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_74
+channel1/add_142                      596.2320      0.0      596.2320       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel1/add_145                      470.6352      0.0      470.6352       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_40
+channel1/add_146                     1092.2688      0.0     1092.2688       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26
+channel1/add_152                      550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel1/add_153                      689.3712      0.0      689.3712       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel1/add_156_aco                  550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel1/add_1_root_add_144_2        1068.2784      0.0     1068.2784       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel1/add_213_S2                    71.2656      0.0       71.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel1/carrier_conversion         10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel1/code_conversion            10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel1/dll_ratio                  50679.0159      1.7    50679.0159       0.0000  0.0000  CACHED_tracking_ratio_code
+channel1/feedback_aid                6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel1/fll_phase                 151950.9641      5.1   151950.9641       0.0000  0.0000  CACHED_tracking_atan
+channel1/frontend                   59826.4135      2.0     4866.5233   11289.6002  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel1/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel1/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel1/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel1/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel1/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel1/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel1/frontend/carrier            8686.6417      0.3     5122.6561    1955.9232  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel1/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel1/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel1/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel1/frontend/code_source       12719.8514      0.4     3673.3537    1738.5984  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel1/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel1/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel1/frontend/code_source/early_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_2
+channel1/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_2_DW01_inc_0
+channel1/frontend/code_source/late_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_1
+channel1/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_1_DW01_inc_0
+channel1/frontend/code_source/prompt_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_0
+channel1/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_0_DW01_inc_0
+channel1/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel1/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel1/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel1/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel1/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel1/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel1/frontend/correlator        16089.0913      0.5     4798.0802    8277.3937  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel1/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel1/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel1/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel1/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel1/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel1/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel1/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel1/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel1/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel1/gt_131                       499.5648      0.0      499.5648       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel1/gt_131_2                     503.0928      0.0      503.0928       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17
+channel1/gte_117                      783.9216      0.0      783.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_21
+channel1/initial_aid                 6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel1/lt_127                       623.7504      0.0      623.7504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11
+channel1/mult_109                    8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_46
+channel1/mult_109_S2                 8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_45
+channel1/mult_110                    7391.1599      0.2     7391.1599       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5
+channel1/mult_110_S2                 7393.2767      0.2     7393.2767       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4
+channel1/mult_111                    8632.3104      0.3     8632.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_48
+channel1/mult_111_S2                 8562.4560      0.3     8562.4560       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_47
+channel1/mult_128                     743.7024      0.0      743.7024       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_30
+channel1/mult_130                    1490.9328      0.0     1490.9328       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel1/mult_132                    1055.5776      0.0     1055.5776       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_29
+channel1/mult_133                   13797.3026      0.5    13797.3026       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_61
+channel1/mult_133_2                 13535.5250      0.5    13535.5250       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_59
+channel1/mult_134                   13796.5970      0.5    13796.5970       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_83
+channel1/mult_134_2                 13941.2450      0.5    13941.2450       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel1/mult_139                    1052.0496      0.0     1052.0496       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel1/mult_143                    3605.6161      0.1     3605.6161       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel1/mult_144                    2070.9360      0.1     2070.9360       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel1/mult_145                    2320.7184      0.1     2320.7184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_43
+channel1/mult_151                    2003.1984      0.1     2003.1984       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel1/mult_152                    1665.9216      0.1     1665.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel1/mult_153                    1770.3504      0.1     1770.3504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel1/mult_156                    1217.8656      0.0     1217.8656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel1/mult_156_2                  3885.7391      0.1     3885.7391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel1/mult_add_156_aco             112.8960      0.0      112.8960       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel1/pll_ratio                  23320.0805      0.8    23320.0805       0.0000  0.0000  CACHED_tracking_ratio_phase
+channel1/sub_114                      378.2016      0.0      378.2016       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14
+channel1/sub_115                      385.2576      0.0      385.2576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_13
+channel1/sub_117                     2030.7169      0.1     2030.7169       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16
+channel1/sub_117_2                   2022.9553      0.1     2022.9553       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_17
+channel1/sub_134                     1776.7008      0.1     1776.7008       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18
+channel1/sub_152                      633.6288      0.0      633.6288       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8
+channel1/sub_153                      694.3104      0.0      694.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel1/sub_156                      637.8624      0.0      637.8624       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel1/sub_156_2                    821.3184      0.0      821.3184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel2                           499790.5996     16.7    11133.6627   13010.5585  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel2/add_0_root_add_0_root_add_222_2
+                                      734.5296      0.0      734.5296       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel2/add_0_root_add_144_2        1305.3600      0.0     1305.3600       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_50
+channel2/add_0_root_add_220_2         710.5392      0.0      710.5392       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24
+channel2/add_104                      884.1168      0.0      884.1168       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_25
+channel2/add_112                     1620.7632      0.1     1620.7632       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_42
+channel2/add_112_S2                   953.2656      0.0      953.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel2/add_112_S3                  1648.9872      0.1     1648.9872       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_43
+channel2/add_113                     1913.5873      0.1     1913.5873       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_41
+channel2/add_118                      561.6576      0.0      561.6576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel2/add_132                     1075.3344      0.0     1075.3344       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_30
+channel2/add_133                     1696.9680      0.1     1696.9680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_74
+channel2/add_142                      596.2320      0.0      596.2320       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel2/add_145                      470.6352      0.0      470.6352       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_40
+channel2/add_146                     1092.2688      0.0     1092.2688       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26
+channel2/add_152                      550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel2/add_153                      689.3712      0.0      689.3712       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel2/add_156_aco                  550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel2/add_1_root_add_144_2        1068.2784      0.0     1068.2784       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel2/add_213_S2                    71.2656      0.0       71.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel2/carrier_conversion         10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel2/code_conversion            10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel2/dll_ratio                  50679.0159      1.7    50679.0159       0.0000  0.0000  CACHED_tracking_ratio_code
+channel2/feedback_aid                6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel2/fll_phase                 151950.9641      5.1   151950.9641       0.0000  0.0000  CACHED_tracking_atan
+channel2/frontend                   59826.4135      2.0     4866.5233   11289.6002  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel2/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel2/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel2/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel2/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel2/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel2/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel2/frontend/carrier            8686.6417      0.3     5122.6561    1955.9232  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel2/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel2/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel2/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel2/frontend/code_source       12719.8514      0.4     3673.3537    1738.5984  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel2/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel2/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel2/frontend/code_source/early_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_2
+channel2/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_2_DW01_inc_0
+channel2/frontend/code_source/late_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_1
+channel2/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_1_DW01_inc_0
+channel2/frontend/code_source/prompt_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_0
+channel2/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_0_DW01_inc_0
+channel2/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel2/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel2/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel2/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel2/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel2/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel2/frontend/correlator        16089.0913      0.5     4798.0802    8277.3937  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel2/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel2/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel2/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel2/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel2/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel2/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel2/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel2/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel2/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel2/gt_131                       499.5648      0.0      499.5648       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel2/gt_131_2                     503.0928      0.0      503.0928       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17
+channel2/gte_117                      783.9216      0.0      783.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_21
+channel2/initial_aid                 6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel2/lt_127                       623.7504      0.0      623.7504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11
+channel2/mult_109                    8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_46
+channel2/mult_109_S2                 8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_45
+channel2/mult_110                    7391.1599      0.2     7391.1599       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5
+channel2/mult_110_S2                 7393.2767      0.2     7393.2767       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4
+channel2/mult_111                    8632.3104      0.3     8632.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_48
+channel2/mult_111_S2                 8562.4560      0.3     8562.4560       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_47
+channel2/mult_128                     743.7024      0.0      743.7024       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_30
+channel2/mult_130                    1490.9328      0.0     1490.9328       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel2/mult_132                    1055.5776      0.0     1055.5776       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_29
+channel2/mult_133                   13797.3026      0.5    13797.3026       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_61
+channel2/mult_133_2                 13535.5250      0.5    13535.5250       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_59
+channel2/mult_134                   13796.5970      0.5    13796.5970       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_83
+channel2/mult_134_2                 13941.2450      0.5    13941.2450       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel2/mult_139                    1052.0496      0.0     1052.0496       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel2/mult_143                    3605.6161      0.1     3605.6161       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel2/mult_144                    2070.9360      0.1     2070.9360       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel2/mult_145                    2320.7184      0.1     2320.7184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_43
+channel2/mult_151                    2003.1984      0.1     2003.1984       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel2/mult_152                    1665.9216      0.1     1665.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel2/mult_153                    1770.3504      0.1     1770.3504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel2/mult_156                    1217.8656      0.0     1217.8656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel2/mult_156_2                  3885.7391      0.1     3885.7391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel2/mult_add_156_aco             112.8960      0.0      112.8960       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel2/pll_ratio                  23320.0805      0.8    23320.0805       0.0000  0.0000  CACHED_tracking_ratio_phase
+channel2/sub_114                      378.2016      0.0      378.2016       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14
+channel2/sub_115                      385.2576      0.0      385.2576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_13
+channel2/sub_117                     2030.7169      0.1     2030.7169       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16
+channel2/sub_117_2                   2022.9553      0.1     2022.9553       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_17
+channel2/sub_134                     1776.7008      0.1     1776.7008       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18
+channel2/sub_152                      633.6288      0.0      633.6288       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8
+channel2/sub_153                      694.3104      0.0      694.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel2/sub_156                      637.8624      0.0      637.8624       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel2/sub_156_2                    821.3184      0.0      821.3184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel3                           499790.5996     16.7    11133.6627   13010.5585  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel3/add_0_root_add_0_root_add_222_2
+                                      734.5296      0.0      734.5296       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel3/add_0_root_add_144_2        1305.3600      0.0     1305.3600       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_50
+channel3/add_0_root_add_220_2         710.5392      0.0      710.5392       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24
+channel3/add_104                      884.1168      0.0      884.1168       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_25
+channel3/add_112                     1620.7632      0.1     1620.7632       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_42
+channel3/add_112_S2                   953.2656      0.0      953.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel3/add_112_S3                  1648.9872      0.1     1648.9872       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_43
+channel3/add_113                     1913.5873      0.1     1913.5873       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_41
+channel3/add_118                      561.6576      0.0      561.6576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel3/add_132                     1075.3344      0.0     1075.3344       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_30
+channel3/add_133                     1696.9680      0.1     1696.9680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_74
+channel3/add_142                      596.2320      0.0      596.2320       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel3/add_145                      470.6352      0.0      470.6352       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_40
+channel3/add_146                     1092.2688      0.0     1092.2688       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26
+channel3/add_152                      550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel3/add_153                      689.3712      0.0      689.3712       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel3/add_156_aco                  550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel3/add_1_root_add_144_2        1068.2784      0.0     1068.2784       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel3/add_213_S2                    71.2656      0.0       71.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel3/carrier_conversion         10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel3/code_conversion            10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel3/dll_ratio                  50679.0159      1.7    50679.0159       0.0000  0.0000  CACHED_tracking_ratio_code
+channel3/feedback_aid                6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel3/fll_phase                 151950.9641      5.1   151950.9641       0.0000  0.0000  CACHED_tracking_atan
+channel3/frontend                   59826.4135      2.0     4866.5233   11289.6002  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel3/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel3/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel3/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel3/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel3/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel3/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel3/frontend/carrier            8686.6417      0.3     5122.6561    1955.9232  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel3/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel3/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel3/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel3/frontend/code_source       12719.8514      0.4     3673.3537    1738.5984  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel3/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel3/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel3/frontend/code_source/early_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_2
+channel3/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_2_DW01_inc_0
+channel3/frontend/code_source/late_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_1
+channel3/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_1_DW01_inc_0
+channel3/frontend/code_source/prompt_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_0
+channel3/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_0_DW01_inc_0
+channel3/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel3/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel3/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel3/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel3/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel3/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel3/frontend/correlator        16089.0913      0.5     4798.0802    8277.3937  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel3/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel3/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel3/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel3/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel3/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel3/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel3/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel3/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel3/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel3/gt_131                       499.5648      0.0      499.5648       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel3/gt_131_2                     503.0928      0.0      503.0928       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17
+channel3/gte_117                      783.9216      0.0      783.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_21
+channel3/initial_aid                 6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel3/lt_127                       623.7504      0.0      623.7504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11
+channel3/mult_109                    8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_46
+channel3/mult_109_S2                 8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_45
+channel3/mult_110                    7391.1599      0.2     7391.1599       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5
+channel3/mult_110_S2                 7393.2767      0.2     7393.2767       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4
+channel3/mult_111                    8632.3104      0.3     8632.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_48
+channel3/mult_111_S2                 8562.4560      0.3     8562.4560       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_47
+channel3/mult_128                     743.7024      0.0      743.7024       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_30
+channel3/mult_130                    1490.9328      0.0     1490.9328       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel3/mult_132                    1055.5776      0.0     1055.5776       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_29
+channel3/mult_133                   13797.3026      0.5    13797.3026       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_61
+channel3/mult_133_2                 13535.5250      0.5    13535.5250       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_59
+channel3/mult_134                   13796.5970      0.5    13796.5970       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_83
+channel3/mult_134_2                 13941.2450      0.5    13941.2450       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel3/mult_139                    1052.0496      0.0     1052.0496       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel3/mult_143                    3605.6161      0.1     3605.6161       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel3/mult_144                    2070.9360      0.1     2070.9360       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel3/mult_145                    2320.7184      0.1     2320.7184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_43
+channel3/mult_151                    2003.1984      0.1     2003.1984       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel3/mult_152                    1665.9216      0.1     1665.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel3/mult_153                    1770.3504      0.1     1770.3504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel3/mult_156                    1217.8656      0.0     1217.8656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel3/mult_156_2                  3885.7391      0.1     3885.7391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel3/mult_add_156_aco             112.8960      0.0      112.8960       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel3/pll_ratio                  23320.0805      0.8    23320.0805       0.0000  0.0000  CACHED_tracking_ratio_phase
+channel3/sub_114                      378.2016      0.0      378.2016       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14
+channel3/sub_115                      385.2576      0.0      385.2576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_13
+channel3/sub_117                     2030.7169      0.1     2030.7169       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16
+channel3/sub_117_2                   2022.9553      0.1     2022.9553       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_17
+channel3/sub_134                     1776.7008      0.1     1776.7008       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18
+channel3/sub_152                      633.6288      0.0      633.6288       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8
+channel3/sub_153                      694.3104      0.0      694.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel3/sub_156                      637.8624      0.0      637.8624       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel3/sub_156_2                    821.3184      0.0      821.3184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel4                           499790.5996     16.7    11133.6627   13010.5585  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel4/add_0_root_add_0_root_add_222_2
+                                      734.5296      0.0      734.5296       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel4/add_0_root_add_144_2        1305.3600      0.0     1305.3600       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_50
+channel4/add_0_root_add_220_2         710.5392      0.0      710.5392       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24
+channel4/add_104                      884.1168      0.0      884.1168       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_25
+channel4/add_112                     1620.7632      0.1     1620.7632       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_42
+channel4/add_112_S2                   953.2656      0.0      953.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel4/add_112_S3                  1648.9872      0.1     1648.9872       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_43
+channel4/add_113                     1913.5873      0.1     1913.5873       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_41
+channel4/add_118                      561.6576      0.0      561.6576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel4/add_132                     1075.3344      0.0     1075.3344       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_30
+channel4/add_133                     1696.9680      0.1     1696.9680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_74
+channel4/add_142                      596.2320      0.0      596.2320       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel4/add_145                      470.6352      0.0      470.6352       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_40
+channel4/add_146                     1092.2688      0.0     1092.2688       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26
+channel4/add_152                      550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel4/add_153                      689.3712      0.0      689.3712       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel4/add_156_aco                  550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel4/add_1_root_add_144_2        1068.2784      0.0     1068.2784       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel4/add_213_S2                    71.2656      0.0       71.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel4/carrier_conversion         10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel4/code_conversion            10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel4/dll_ratio                  50679.0159      1.7    50679.0159       0.0000  0.0000  CACHED_tracking_ratio_code
+channel4/feedback_aid                6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel4/fll_phase                 151950.9641      5.1   151950.9641       0.0000  0.0000  CACHED_tracking_atan
+channel4/frontend                   59826.4135      2.0     4866.5233   11289.6002  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel4/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel4/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel4/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel4/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel4/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel4/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel4/frontend/carrier            8686.6417      0.3     5122.6561    1955.9232  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel4/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel4/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel4/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel4/frontend/code_source       12719.8514      0.4     3673.3537    1738.5984  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel4/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel4/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel4/frontend/code_source/early_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_2
+channel4/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_2_DW01_inc_0
+channel4/frontend/code_source/late_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_1
+channel4/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_1_DW01_inc_0
+channel4/frontend/code_source/prompt_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_0
+channel4/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_0_DW01_inc_0
+channel4/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel4/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel4/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel4/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel4/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel4/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel4/frontend/correlator        16089.0913      0.5     4798.0802    8277.3937  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel4/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel4/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel4/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel4/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel4/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel4/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel4/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel4/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel4/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel4/gt_131                       499.5648      0.0      499.5648       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel4/gt_131_2                     503.0928      0.0      503.0928       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17
+channel4/gte_117                      783.9216      0.0      783.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_21
+channel4/initial_aid                 6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel4/lt_127                       623.7504      0.0      623.7504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11
+channel4/mult_109                    8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_46
+channel4/mult_109_S2                 8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_45
+channel4/mult_110                    7391.1599      0.2     7391.1599       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5
+channel4/mult_110_S2                 7393.2767      0.2     7393.2767       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4
+channel4/mult_111                    8632.3104      0.3     8632.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_48
+channel4/mult_111_S2                 8562.4560      0.3     8562.4560       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_47
+channel4/mult_128                     743.7024      0.0      743.7024       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_30
+channel4/mult_130                    1490.9328      0.0     1490.9328       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel4/mult_132                    1055.5776      0.0     1055.5776       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_29
+channel4/mult_133                   13797.3026      0.5    13797.3026       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_61
+channel4/mult_133_2                 13535.5250      0.5    13535.5250       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_59
+channel4/mult_134                   13796.5970      0.5    13796.5970       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_83
+channel4/mult_134_2                 13941.2450      0.5    13941.2450       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel4/mult_139                    1052.0496      0.0     1052.0496       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel4/mult_143                    3605.6161      0.1     3605.6161       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel4/mult_144                    2070.9360      0.1     2070.9360       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel4/mult_145                    2320.7184      0.1     2320.7184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_43
+channel4/mult_151                    2003.1984      0.1     2003.1984       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel4/mult_152                    1665.9216      0.1     1665.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel4/mult_153                    1770.3504      0.1     1770.3504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel4/mult_156                    1217.8656      0.0     1217.8656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel4/mult_156_2                  3885.7391      0.1     3885.7391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel4/mult_add_156_aco             112.8960      0.0      112.8960       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel4/pll_ratio                  23320.0805      0.8    23320.0805       0.0000  0.0000  CACHED_tracking_ratio_phase
+channel4/sub_114                      378.2016      0.0      378.2016       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14
+channel4/sub_115                      385.2576      0.0      385.2576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_13
+channel4/sub_117                     2030.7169      0.1     2030.7169       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16
+channel4/sub_117_2                   2022.9553      0.1     2022.9553       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_17
+channel4/sub_134                     1776.7008      0.1     1776.7008       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18
+channel4/sub_152                      633.6288      0.0      633.6288       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8
+channel4/sub_153                      694.3104      0.0      694.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel4/sub_156                      637.8624      0.0      637.8624       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel4/sub_156_2                    821.3184      0.0      821.3184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+channel5                           499790.5996     16.7    11133.6627   13010.5585  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+channel5/add_0_root_add_0_root_add_222_2
+                                      734.5296      0.0      734.5296       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_15
+channel5/add_0_root_add_144_2        1305.3600      0.0     1305.3600       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_50
+channel5/add_0_root_add_220_2         710.5392      0.0      710.5392       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_24
+channel5/add_104                      884.1168      0.0      884.1168       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_25
+channel5/add_112                     1620.7632      0.1     1620.7632       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_42
+channel5/add_112_S2                   953.2656      0.0      953.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_9
+channel5/add_112_S3                  1648.9872      0.1     1648.9872       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_43
+channel5/add_113                     1913.5873      0.1     1913.5873       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_41
+channel5/add_118                      561.6576      0.0      561.6576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_34
+channel5/add_132                     1075.3344      0.0     1075.3344       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_30
+channel5/add_133                     1696.9680      0.1     1696.9680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_74
+channel5/add_142                      596.2320      0.0      596.2320       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_5
+channel5/add_145                      470.6352      0.0      470.6352       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_40
+channel5/add_146                     1092.2688      0.0     1092.2688       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_26
+channel5/add_152                      550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_12
+channel5/add_153                      689.3712      0.0      689.3712       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_18
+channel5/add_156_aco                  550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_2
+channel5/add_1_root_add_144_2        1068.2784      0.0     1068.2784       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_add_33
+channel5/add_213_S2                    71.2656      0.0       71.2656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_inc_2
+channel5/carrier_conversion         10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel5/code_conversion            10526.8463      0.4    10526.8463       0.0000  0.0000  CACHED_tracking_divide_step
+channel5/dll_ratio                  50679.0159      1.7    50679.0159       0.0000  0.0000  CACHED_tracking_ratio_code
+channel5/feedback_aid                6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel5/fll_phase                 151950.9641      5.1   151950.9641       0.0000  0.0000  CACHED_tracking_atan
+channel5/frontend                   59826.4135      2.0     4866.5233   11289.6002  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel5/frontend/add_0_root_add_0_root_add_94
+                                      618.1056      0.0      618.1056       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel5/frontend/add_149             290.0016      0.0      290.0016       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_1
+channel5/frontend/add_151             550.3680      0.0      550.3680       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_0
+channel5/frontend/add_175             134.7696      0.0      134.7696       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel5/frontend/add_1_root_add_0_root_add_94
+                                      461.4624      0.0      461.4624       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_4
+channel5/frontend/add_95              665.3808      0.0      665.3808       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_2
+channel5/frontend/carrier            8686.6417      0.3     5122.6561    1955.9232  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64
+channel5/frontend/carrier/add_85      552.4848      0.0      552.4848       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW01_add_0
+channel5/frontend/carrier/mult_63     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_0
+channel5/frontend/carrier/mult_64     527.7888      0.0      527.7888       0.0000  0.0000  CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64_DW_mult_tc_1
+channel5/frontend/code_source       12719.8514      0.4     3673.3537    1738.5984  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16
+channel5/frontend/code_source/add_114
+                                      665.3808      0.0      665.3808       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_add_3
+channel5/frontend/code_source/add_234
+                                      325.2816      0.0      325.2816       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_inc_0
+channel5/frontend/code_source/early_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_2
+channel5/frontend/code_source/early_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_2_DW01_inc_0
+channel5/frontend/code_source/late_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_1
+channel5/frontend/code_source/late_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_1_DW01_inc_0
+channel5/frontend/code_source/prompt_prn
+                                     1404.8496      0.0      663.9696     637.8624  0.0000  CACHED_b1i_prn_gen_0
+channel5/frontend/code_source/prompt_prn/add_124
+                                      103.0176      0.0      103.0176       0.0000  0.0000  CACHED_b1i_prn_gen_0_DW01_inc_0
+channel5/frontend/code_source/sub_109_2_C125
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_8
+channel5/frontend/code_source/sub_109_2_C127
+                                      167.2272      0.0      167.2272       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_12
+channel5/frontend/code_source/sub_109_2_C141
+                                      169.3440      0.0      169.3440       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_10
+channel5/frontend/code_source/sub_109_C125
+                                      532.0224      0.0      532.0224       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_9
+channel5/frontend/code_source/sub_109_C127
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_13
+channel5/frontend/code_source/sub_109_C141
+                                      533.4336      0.0      533.4336       0.0000  0.0000  CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW01_sub_11
+channel5/frontend/correlator        16089.0913      0.5     4798.0802    8277.3937  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28
+channel5/frontend/correlator/add_146
+                                      134.7696      0.0      134.7696       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_inc_0
+channel5/frontend/correlator/add_73
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_5
+channel5/frontend/correlator/add_74
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_4
+channel5/frontend/correlator/add_75
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_3
+channel5/frontend/correlator/add_76
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_2
+channel5/frontend/correlator/add_77
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_1
+channel5/frontend/correlator/add_78
+                                      479.8080      0.0      479.8080       0.0000  0.0000  CACHED_epl_correlator_IQ_WIDTH14_WINDOW_SAMPLES16368_SAMPLE_REF_WIDTH64_ACC_WIDTH28_DW01_add_0
+channel5/frontend/mult_91            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_1
+channel5/frontend/mult_92            1727.3088      0.1     1727.3088       0.0000  0.0000  CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16_DW_mult_tc_0
+channel5/gt_131                       499.5648      0.0      499.5648       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_18
+channel5/gt_131_2                     503.0928      0.0      503.0928       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_17
+channel5/gte_117                      783.9216      0.0      783.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_21
+channel5/initial_aid                 6008.8896      0.2     6008.8896       0.0000  0.0000  CACHED_tracking_divide_aid
+channel5/lt_127                       623.7504      0.0      623.7504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_cmp_11
+channel5/mult_109                    8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_46
+channel5/mult_109_S2                 8383.9391      0.3     8383.9391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_45
+channel5/mult_110                    7391.1599      0.2     7391.1599       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_5
+channel5/mult_110_S2                 7393.2767      0.2     7393.2767       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_4
+channel5/mult_111                    8632.3104      0.3     8632.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_48
+channel5/mult_111_S2                 8562.4560      0.3     8562.4560       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_47
+channel5/mult_128                     743.7024      0.0      743.7024       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_30
+channel5/mult_130                    1490.9328      0.0     1490.9328       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_36
+channel5/mult_132                    1055.5776      0.0     1055.5776       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_29
+channel5/mult_133                   13797.3026      0.5    13797.3026       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_61
+channel5/mult_133_2                 13535.5250      0.5    13535.5250       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_59
+channel5/mult_134                   13796.5970      0.5    13796.5970       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_83
+channel5/mult_134_2                 13941.2450      0.5    13941.2450       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_40
+channel5/mult_139                    1052.0496      0.0     1052.0496       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_24
+channel5/mult_143                    3605.6161      0.1     3605.6161       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_37
+channel5/mult_144                    2070.9360      0.1     2070.9360       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_35
+channel5/mult_145                    2320.7184      0.1     2320.7184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_43
+channel5/mult_151                    2003.1984      0.1     2003.1984       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_12
+channel5/mult_152                    1665.9216      0.1     1665.9216       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_11
+channel5/mult_153                    1770.3504      0.1     1770.3504       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_14
+channel5/mult_156                    1217.8656      0.0     1217.8656       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_18
+channel5/mult_156_2                  3885.7391      0.1     3885.7391       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_tc_17
+channel5/mult_add_156_aco             112.8960      0.0      112.8960       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW_mult_uns_0
+channel5/pll_ratio                  23320.0805      0.8    23320.0805       0.0000  0.0000  CACHED_tracking_ratio_phase
+channel5/sub_114                      378.2016      0.0      378.2016       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_14
+channel5/sub_115                      385.2576      0.0      385.2576       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_13
+channel5/sub_117                     2030.7169      0.1     2030.7169       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_16
+channel5/sub_117_2                   2022.9553      0.1     2022.9553       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_17
+channel5/sub_134                     1776.7008      0.1     1776.7008       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_18
+channel5/sub_152                      633.6288      0.0      633.6288       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_8
+channel5/sub_153                      694.3104      0.0      694.3104       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_9
+channel5/sub_156                      637.8624      0.0      637.8624       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_11
+channel5/sub_156_2                    821.3184      0.0      821.3184       0.0000  0.0000  CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1_DW01_sub_10
+--------------------------------  ------------  -------  ------------  -----------  ------  ------------------------------------------------------------------------------------------------------------------------
+Total                                                    2769629.6303  229113.9670  0.0000
+
+1

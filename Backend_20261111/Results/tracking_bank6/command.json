@@ -1,0 +1,16 @@
+{
+  "budget_s": 180.0, 
+  "rss_limit_kib": 8388608, 
+  "cwd": "/home/ICer/ic_eda_bank6_20261112/work", 
+  "argv": [
+    "/usr/bin/time", 
+    "-v", 
+    "-o", 
+    "/home/ICer/ic_eda_bank6_20261112/reports/time.txt", 
+    "setsid", 
+    "/home/synopsys/syn/O-2018.06-SP1/bin/dc_shell", 
+    "-64bit", 
+    "-f", 
+    "/home/ICer/ic_eda_bank6_20261112/bank.tcl"
+  ]
+}

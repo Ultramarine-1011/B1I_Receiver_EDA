@@ -1,0 +1,327 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : tracking_bank6
+Version: O-2018.06-SP1
+Date   : Thu Nov 12 01:05:59 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/g1_state_reg[10]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/g1_state_reg[10]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/g1_state_reg[0]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/g1_state_reg[0]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/g1_state_reg[4]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/g1_state_reg[4]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/g1_state_reg[2]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/g1_state_reg[2]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/active_prn_reg[5]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/active_prn_reg[5]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/active_prn_reg[3]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/active_prn_reg[3]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/active_prn_reg[4]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/active_prn_reg[4]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/g2_state_reg[0]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/g2_state_reg[0]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/chip_index_reg[9]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/chip_index_reg[9]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: reset_n (input port)
+  Endpoint: channel0/frontend/code_source/prompt_prn/chip_index_reg[2]/RN (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                0.000000   0.000000 r
+  reset_n (in)                                        0.000000 # 0.000000 r
+  channel0/reset_n (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/rst_n (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000 # 0.000000 r
+  channel0/frontend/U940/Y (BUFX2)                    0.056295 # 0.056295 r
+  channel0/frontend/U43/Y (BUFX12)                    0.335713   0.392008 r
+  channel0/frontend/code_source/rst_n (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.392008 r
+  channel0/frontend/code_source/U38/Y (CLKBUFX6)      0.340088   0.732096 r
+  channel0/frontend/code_source/prompt_prn/rst_n (CACHED_b1i_prn_gen_0)
+                                                      0.000000   0.732096 r
+  channel0/frontend/code_source/prompt_prn/U8/Y (BUFX2)
+                                                      0.055775   0.787871 r
+  channel0/frontend/code_source/prompt_prn/U6/Y (BUFX2)
+                                                      0.133327   0.921199 r
+  channel0/frontend/code_source/prompt_prn/chip_index_reg[2]/RN (DFFRQX2) <-
+                                                      0.000000   0.921199 r
+  data arrival time                                              0.921199
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

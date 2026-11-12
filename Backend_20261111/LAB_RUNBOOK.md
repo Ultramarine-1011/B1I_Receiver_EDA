@@ -2,6 +2,34 @@
 
 2026-11-11。入口采用 V6 实验 RTL，从源码重新映射算术块。当前全量实现的前置条件为 PCPS/FFT 存储方案及匹配的门级模型。
 
+## 周五两小时综合入口
+
+Git 中的独立携带包为 [LAB_SYNTH_2H_20261112.tar.gz](evidence/LAB_SYNTH_2H_20261112.tar.gz)，配套 [SHA256](evidence/LAB_SYNTH_2H_20261112.tar.gz.sha256)。
+
+夜间更新包为 `Lab_Delivery/2026-11-11_backend_lab/LAB_SYNTH_2H_20261112.tar.gz`，配套同名 `.sha256`。解包后，加载实验室 EDA 环境并执行以下命令。默认 TSMC28 库路径和名称仍由 `lab/config.sh` 提供，实际安装路径可通过 `LAB_CONFIG=/绝对路径/config.sh` 设置。
+
+```bash
+sha256sum -c LAB_SYNTH_2H_20261112.tar.gz.sha256
+mkdir -p ~/b1i_synth_20261113
+tar -xzf LAB_SYNTH_2H_20261112.tar.gz -C ~/b1i_synth_20261113
+cd ~/b1i_synth_20261113
+source ~/eda_env.sh
+export FLOW="$PWD/experiments/ic_eda_20261111_backend/lab/run_lab.sh"
+export LAB_OUT="$PWD/work/tsmc28_2h_run01"
+bash "$FLOW" budgeted
+cat "$LAB_OUT/summary.json"
+```
+
+入口预检 DC、Python、标准单元与真实 PAD 库。先按实验室 SS/FF 库重新映射五个 V6 算术块和一个完整跟踪通道，逐块保存产物。完整通道保存检查点后，隔离其全部设计名称，再在六通道含 PAD 顶层中复用六次。接收包装层与导航记录逻辑在映射前展开，芯片端口未使用的记录时间戳运算可提前裁剪。
+
+单通道检查点使用 `CLOCK_NS`、1/0 ns IO 延迟、0.1 ns 复位边界转换时间和四倍标准反相器输入电容负载。拼接前清除内部约束，六通道最终按原 PAD SDC 重新计时。算术块内部预算为 4/10 ns。
+
+六通道尝试的 DC 上限为 75 分钟。失败后，自动用本次有效检查点恢复并重新报告单通道结果，检查点尚未生成时，从源码执行单通道综合。降级上限取剩余综合预算与 35 分钟中的较小值，主尝试用满 75 分钟后通常余约 22 分钟。外层监督器覆盖预检、尝试、降级及工具子进程，总综合窗口为 5980 秒，终止清理最多约 10 秒，为两小时预算保留约 20 分钟检查和保存结果。工具进程树 RSS 上限默认为 8 GiB，资源采样间隔为 5 秒。
+
+`summary.json` 的 `SUCCESS` 表示隔离捕获存储的六通道含 PAD 映射完成，`PARTIAL_SUCCESS` 表示单通道降级完成，`FAILURE` 附实际阶段退出码、工具停止原因及错误摘要。时序违例分别见对应目录 `reports/synth/constraints.rpt` 和 `timing_max/min.rpt`。最终网表、DDC、SDC 位于 `attempt6/output` 或 `fallback_tracking/output`，五个算术块和单通道检查点保留在尝试目录。该入口的结果范围包含 PCPS/FFT 存储隔离边界。
+
+每次使用新的 `LAB_OUT`。本地已验证部分及实际六通道指标见 [REPORT](REPORT.md)。原有 SDF、后仿与功耗入口继续用于对应后续阶段。
+
 ## 携带与初始化
 
 Windows 工作区内已验证的携带包及校验文件集中在 `Lab_Delivery/2026-11-11_backend_lab/`。包对应 `c3ba596`，包内清单保持原验证版本。包含所需 RTL、脚本和六星 IF/比特真值。工艺库与单元模型从实验室提供。

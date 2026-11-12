@@ -1,0 +1,39 @@
+[
+  {
+    "case": "six_success",
+    "status": "SUCCESS",
+    "exit_code": 0,
+    "stages": [
+      "preflight",
+      "synth-hier"
+    ]
+  },
+  {
+    "case": "fallback_checkpoint",
+    "status": "PARTIAL_SUCCESS",
+    "exit_code": 0,
+    "stages": [
+      "preflight",
+      "synth-hier",
+      "synth-channel"
+    ]
+  },
+  {
+    "case": "fallback_fresh",
+    "status": "PARTIAL_SUCCESS",
+    "exit_code": 0,
+    "stages": [
+      "preflight",
+      "synth-channel"
+    ]
+  },
+  {
+    "case": "both_fail",
+    "status": "FAILURE",
+    "exit_code": 1,
+    "stages": [
+      "preflight",
+      "synth-channel"
+    ]
+  }
+]

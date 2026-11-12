@@ -1,0 +1,777 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : tracking_bank6
+Version: O-2018.06-SP1
+Date   : Thu Nov 12 01:05:48 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+  Startpoint: c0_init_carrier_phase_word[31]
+              (input port clocked by clk)
+  Endpoint: channel0/frontend/carrier/carrier_phase_word_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c0_init_carrier_phase_word[31] (in)                 0.001296   0.001296 f
+  channel0/init_carrier_phase_word[31] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001296 f
+  channel0/frontend/init_carrier_phase_word[31] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001296 f
+  channel0/frontend/carrier/init_phase_word[31] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001296 f
+  channel0/frontend/carrier/U1114/Y (OAI2BB1X1)       0.058741   0.060037 f
+  channel0/frontend/carrier/carrier_phase_word_reg[31]/D (DFFRQX2)
+                                                      0.000000   0.060037 f
+  data arrival time                                              0.060037
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel0/frontend/carrier/carrier_phase_word_reg[31]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022854   0.222854
+  data required time                                             0.222854
+  --------------------------------------------------------------------------
+  data required time                                             0.222854
+  data arrival time                                              -0.060037
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.162817
+
+
+  Startpoint: c1_init_carrier_phase_word[31]
+              (input port clocked by clk)
+  Endpoint: channel1/frontend/carrier/carrier_phase_word_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c1_init_carrier_phase_word[31] (in)                 0.001296   0.001296 f
+  channel1/init_carrier_phase_word[31] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001296 f
+  channel1/frontend/init_carrier_phase_word[31] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001296 f
+  channel1/frontend/carrier/init_phase_word[31] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001296 f
+  channel1/frontend/carrier/U1114/Y (OAI2BB1X1)       0.058741   0.060037 f
+  channel1/frontend/carrier/carrier_phase_word_reg[31]/D (DFFRQX2)
+                                                      0.000000   0.060037 f
+  data arrival time                                              0.060037
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel1/frontend/carrier/carrier_phase_word_reg[31]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022854   0.222854
+  data required time                                             0.222854
+  --------------------------------------------------------------------------
+  data required time                                             0.222854
+  data arrival time                                              -0.060037
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.162817
+
+
+  Startpoint: c2_init_carrier_phase_word[31]
+              (input port clocked by clk)
+  Endpoint: channel2/frontend/carrier/carrier_phase_word_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c2_init_carrier_phase_word[31] (in)                 0.001296   0.001296 f
+  channel2/init_carrier_phase_word[31] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001296 f
+  channel2/frontend/init_carrier_phase_word[31] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001296 f
+  channel2/frontend/carrier/init_phase_word[31] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001296 f
+  channel2/frontend/carrier/U1114/Y (OAI2BB1X1)       0.058741   0.060037 f
+  channel2/frontend/carrier/carrier_phase_word_reg[31]/D (DFFRQX2)
+                                                      0.000000   0.060037 f
+  data arrival time                                              0.060037
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel2/frontend/carrier/carrier_phase_word_reg[31]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022854   0.222854
+  data required time                                             0.222854
+  --------------------------------------------------------------------------
+  data required time                                             0.222854
+  data arrival time                                              -0.060037
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.162817
+
+
+  Startpoint: c3_init_carrier_phase_word[31]
+              (input port clocked by clk)
+  Endpoint: channel3/frontend/carrier/carrier_phase_word_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c3_init_carrier_phase_word[31] (in)                 0.001296   0.001296 f
+  channel3/init_carrier_phase_word[31] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001296 f
+  channel3/frontend/init_carrier_phase_word[31] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001296 f
+  channel3/frontend/carrier/init_phase_word[31] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001296 f
+  channel3/frontend/carrier/U1114/Y (OAI2BB1X1)       0.058741   0.060037 f
+  channel3/frontend/carrier/carrier_phase_word_reg[31]/D (DFFRQX2)
+                                                      0.000000   0.060037 f
+  data arrival time                                              0.060037
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel3/frontend/carrier/carrier_phase_word_reg[31]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022854   0.222854
+  data required time                                             0.222854
+  --------------------------------------------------------------------------
+  data required time                                             0.222854
+  data arrival time                                              -0.060037
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.162817
+
+
+  Startpoint: c4_init_carrier_phase_word[31]
+              (input port clocked by clk)
+  Endpoint: channel4/frontend/carrier/carrier_phase_word_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c4_init_carrier_phase_word[31] (in)                 0.001296   0.001296 f
+  channel4/init_carrier_phase_word[31] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001296 f
+  channel4/frontend/init_carrier_phase_word[31] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001296 f
+  channel4/frontend/carrier/init_phase_word[31] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001296 f
+  channel4/frontend/carrier/U1114/Y (OAI2BB1X1)       0.058741   0.060037 f
+  channel4/frontend/carrier/carrier_phase_word_reg[31]/D (DFFRQX2)
+                                                      0.000000   0.060037 f
+  data arrival time                                              0.060037
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel4/frontend/carrier/carrier_phase_word_reg[31]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022854   0.222854
+  data required time                                             0.222854
+  --------------------------------------------------------------------------
+  data required time                                             0.222854
+  data arrival time                                              -0.060037
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.162817
+
+
+  Startpoint: c5_init_carrier_phase_word[31]
+              (input port clocked by clk)
+  Endpoint: channel5/frontend/carrier/carrier_phase_word_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c5_init_carrier_phase_word[31] (in)                 0.001296   0.001296 f
+  channel5/init_carrier_phase_word[31] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001296 f
+  channel5/frontend/init_carrier_phase_word[31] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001296 f
+  channel5/frontend/carrier/init_phase_word[31] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001296 f
+  channel5/frontend/carrier/U1114/Y (OAI2BB1X1)       0.058741   0.060037 f
+  channel5/frontend/carrier/carrier_phase_word_reg[31]/D (DFFRQX2)
+                                                      0.000000   0.060037 f
+  data arrival time                                              0.060037
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel5/frontend/carrier/carrier_phase_word_reg[31]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022854   0.222854
+  data required time                                             0.222854
+  --------------------------------------------------------------------------
+  data required time                                             0.222854
+  data arrival time                                              -0.060037
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.162817
+
+
+  Startpoint: c0_init_code_period_count[1]
+              (input port clocked by clk)
+  Endpoint: channel0/frontend/code_source/code_period_count_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c0_init_code_period_count[1] (in)                   0.001546   0.001546 f
+  channel0/init_code_period_count[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel0/frontend/init_code_period_count[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel0/frontend/code_source/init_code_period_count[1] (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel0/frontend/code_source/U532/Y (OAI2BB1X1)    0.064890   0.066435 f
+  channel0/frontend/code_source/code_period_count_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel0/frontend/code_source/code_period_count_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022856   0.222856
+  data required time                                             0.222856
+  --------------------------------------------------------------------------
+  data required time                                             0.222856
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156420
+
+
+  Startpoint: c1_init_code_period_count[1]
+              (input port clocked by clk)
+  Endpoint: channel1/frontend/code_source/code_period_count_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c1_init_code_period_count[1] (in)                   0.001546   0.001546 f
+  channel1/init_code_period_count[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel1/frontend/init_code_period_count[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel1/frontend/code_source/init_code_period_count[1] (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel1/frontend/code_source/U532/Y (OAI2BB1X1)    0.064890   0.066435 f
+  channel1/frontend/code_source/code_period_count_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel1/frontend/code_source/code_period_count_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022856   0.222856
+  data required time                                             0.222856
+  --------------------------------------------------------------------------
+  data required time                                             0.222856
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156420
+
+
+  Startpoint: c2_init_code_period_count[1]
+              (input port clocked by clk)
+  Endpoint: channel2/frontend/code_source/code_period_count_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c2_init_code_period_count[1] (in)                   0.001546   0.001546 f
+  channel2/init_code_period_count[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel2/frontend/init_code_period_count[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel2/frontend/code_source/init_code_period_count[1] (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel2/frontend/code_source/U532/Y (OAI2BB1X1)    0.064890   0.066435 f
+  channel2/frontend/code_source/code_period_count_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel2/frontend/code_source/code_period_count_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022856   0.222856
+  data required time                                             0.222856
+  --------------------------------------------------------------------------
+  data required time                                             0.222856
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156420
+
+
+  Startpoint: c3_init_code_period_count[1]
+              (input port clocked by clk)
+  Endpoint: channel3/frontend/code_source/code_period_count_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c3_init_code_period_count[1] (in)                   0.001546   0.001546 f
+  channel3/init_code_period_count[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel3/frontend/init_code_period_count[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel3/frontend/code_source/init_code_period_count[1] (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel3/frontend/code_source/U532/Y (OAI2BB1X1)    0.064890   0.066435 f
+  channel3/frontend/code_source/code_period_count_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel3/frontend/code_source/code_period_count_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022856   0.222856
+  data required time                                             0.222856
+  --------------------------------------------------------------------------
+  data required time                                             0.222856
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156420
+
+
+  Startpoint: c4_init_code_period_count[1]
+              (input port clocked by clk)
+  Endpoint: channel4/frontend/code_source/code_period_count_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c4_init_code_period_count[1] (in)                   0.001546   0.001546 f
+  channel4/init_code_period_count[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel4/frontend/init_code_period_count[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel4/frontend/code_source/init_code_period_count[1] (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel4/frontend/code_source/U532/Y (OAI2BB1X1)    0.064890   0.066435 f
+  channel4/frontend/code_source/code_period_count_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel4/frontend/code_source/code_period_count_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022856   0.222856
+  data required time                                             0.222856
+  --------------------------------------------------------------------------
+  data required time                                             0.222856
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156420
+
+
+  Startpoint: c5_init_code_period_count[1]
+              (input port clocked by clk)
+  Endpoint: channel5/frontend/code_source/code_period_count_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c5_init_code_period_count[1] (in)                   0.001546   0.001546 f
+  channel5/init_code_period_count[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel5/frontend/init_code_period_count[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel5/frontend/code_source/init_code_period_count[1] (CACHED_code_nco_PHASE_FRAC32_PERIOD_COUNT_WIDTH32_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel5/frontend/code_source/U532/Y (OAI2BB1X1)    0.064890   0.066435 f
+  channel5/frontend/code_source/code_period_count_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel5/frontend/code_source/code_period_count_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022856   0.222856
+  data required time                                             0.222856
+  --------------------------------------------------------------------------
+  data required time                                             0.222856
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156420
+
+
+  Startpoint: c0_init_carrier_phase_word[0]
+              (input port clocked by clk)
+  Endpoint: channel0/frontend/carrier/carrier_phase_word_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c0_init_carrier_phase_word[0] (in)                  0.001546   0.001546 f
+  channel0/init_carrier_phase_word[0] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel0/frontend/init_carrier_phase_word[0] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel0/frontend/carrier/init_phase_word[0] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel0/frontend/carrier/U1040/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel0/frontend/carrier/carrier_phase_word_reg[0]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel0/frontend/carrier/carrier_phase_word_reg[0]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022853   0.222853
+  data required time                                             0.222853
+  --------------------------------------------------------------------------
+  data required time                                             0.222853
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156418
+
+
+  Startpoint: c1_init_carrier_phase_word[0]
+              (input port clocked by clk)
+  Endpoint: channel1/frontend/carrier/carrier_phase_word_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c1_init_carrier_phase_word[0] (in)                  0.001546   0.001546 f
+  channel1/init_carrier_phase_word[0] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel1/frontend/init_carrier_phase_word[0] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel1/frontend/carrier/init_phase_word[0] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel1/frontend/carrier/U1040/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel1/frontend/carrier/carrier_phase_word_reg[0]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel1/frontend/carrier/carrier_phase_word_reg[0]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022853   0.222853
+  data required time                                             0.222853
+  --------------------------------------------------------------------------
+  data required time                                             0.222853
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156418
+
+
+  Startpoint: c2_init_carrier_phase_word[0]
+              (input port clocked by clk)
+  Endpoint: channel2/frontend/carrier/carrier_phase_word_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c2_init_carrier_phase_word[0] (in)                  0.001546   0.001546 f
+  channel2/init_carrier_phase_word[0] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel2/frontend/init_carrier_phase_word[0] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel2/frontend/carrier/init_phase_word[0] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel2/frontend/carrier/U1040/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel2/frontend/carrier/carrier_phase_word_reg[0]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel2/frontend/carrier/carrier_phase_word_reg[0]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022853   0.222853
+  data required time                                             0.222853
+  --------------------------------------------------------------------------
+  data required time                                             0.222853
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156418
+
+
+  Startpoint: c3_init_carrier_phase_word[0]
+              (input port clocked by clk)
+  Endpoint: channel3/frontend/carrier/carrier_phase_word_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c3_init_carrier_phase_word[0] (in)                  0.001546   0.001546 f
+  channel3/init_carrier_phase_word[0] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel3/frontend/init_carrier_phase_word[0] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel3/frontend/carrier/init_phase_word[0] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel3/frontend/carrier/U1040/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel3/frontend/carrier/carrier_phase_word_reg[0]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel3/frontend/carrier/carrier_phase_word_reg[0]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022853   0.222853
+  data required time                                             0.222853
+  --------------------------------------------------------------------------
+  data required time                                             0.222853
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156418
+
+
+  Startpoint: c4_init_carrier_phase_word[0]
+              (input port clocked by clk)
+  Endpoint: channel4/frontend/carrier/carrier_phase_word_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c4_init_carrier_phase_word[0] (in)                  0.001546   0.001546 f
+  channel4/init_carrier_phase_word[0] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel4/frontend/init_carrier_phase_word[0] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel4/frontend/carrier/init_phase_word[0] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel4/frontend/carrier/U1040/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel4/frontend/carrier/carrier_phase_word_reg[0]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel4/frontend/carrier/carrier_phase_word_reg[0]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022853   0.222853
+  data required time                                             0.222853
+  --------------------------------------------------------------------------
+  data required time                                             0.222853
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156418
+
+
+  Startpoint: c5_init_carrier_phase_word[0]
+              (input port clocked by clk)
+  Endpoint: channel5/frontend/carrier/carrier_phase_word_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c5_init_carrier_phase_word[0] (in)                  0.001546   0.001546 f
+  channel5/init_carrier_phase_word[0] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel5/frontend/init_carrier_phase_word[0] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel5/frontend/carrier/init_phase_word[0] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel5/frontend/carrier/U1040/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel5/frontend/carrier/carrier_phase_word_reg[0]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel5/frontend/carrier/carrier_phase_word_reg[0]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022853   0.222853
+  data required time                                             0.222853
+  --------------------------------------------------------------------------
+  data required time                                             0.222853
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156418
+
+
+  Startpoint: c0_init_carrier_phase_word[1]
+              (input port clocked by clk)
+  Endpoint: channel0/frontend/carrier/carrier_phase_word_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c0_init_carrier_phase_word[1] (in)                  0.001546   0.001546 f
+  channel0/init_carrier_phase_word[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel0/frontend/init_carrier_phase_word[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel0/frontend/carrier/init_phase_word[1] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel0/frontend/carrier/U1166/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel0/frontend/carrier/carrier_phase_word_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel0/frontend/carrier/carrier_phase_word_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022852   0.222852
+  data required time                                             0.222852
+  --------------------------------------------------------------------------
+  data required time                                             0.222852
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156417
+
+
+  Startpoint: c1_init_carrier_phase_word[1]
+              (input port clocked by clk)
+  Endpoint: channel1/frontend/carrier/carrier_phase_word_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  input external delay                                0.000000   0.000000 f
+  c1_init_carrier_phase_word[1] (in)                  0.001546   0.001546 f
+  channel1/init_carrier_phase_word[1] (CACHED_tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1)
+                                                      0.000000   0.001546 f
+  channel1/frontend/init_carrier_phase_word[1] (CACHED_tracking_frontend_spaced_EPL_HALF_SPACING_NUMERATOR5_EPL_HALF_SPACING_DENOMINATOR16)
+                                                      0.000000   0.001546 f
+  channel1/frontend/carrier/init_phase_word[1] (CACHED_carrier_nco_mixer_PHASE_WIDTH32_INPUT_WIDTH3_SAMPLE_REF_WIDTH64)
+                                                      0.000000   0.001546 f
+  channel1/frontend/carrier/U1166/Y (OAI2BB1X1)       0.064890   0.066435 f
+  channel1/frontend/carrier/carrier_phase_word_reg[1]/D (DFFRQX2)
+                                                      0.000000   0.066435 f
+  data arrival time                                              0.066435
+
+  clock clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clock uncertainty                                   0.200000   0.200000
+  channel1/frontend/carrier/carrier_phase_word_reg[1]/CK (DFFRQX2)
+                                                      0.000000   0.200000 r
+  library hold time                                   0.022852   0.222852
+  data required time                                             0.222852
+  --------------------------------------------------------------------------
+  data required time                                             0.222852
+  data arrival time                                              -0.066435
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                               -0.156417
+
+
+1

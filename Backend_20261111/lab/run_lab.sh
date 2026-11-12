@@ -25,8 +25,12 @@ check_logs() { "$PYTHON" "$LAB_DIR/check.py" logs "$@"; }
 run_dc() {
     export LAB_STAGE="$1"
     export REPORT_DIR="$LAB_OUT/reports/$LAB_STAGE"
-    "$PYTHON" "$MONITOR_SCRIPT" "$LAB_OUT/logs/$LAB_STAGE" "$2" \
-        "$DC_SHELL" -64bit -f "$LAB_DIR/flow.tcl"
+    local tool_budget="$2"
+    if [[ -n "${LAB_JOB_BUDGET_S:-}" ]]; then
+        tool_budget="$("$PYTHON" -c 'import os,sys; print(min(float(sys.argv[1]), float(os.environ["LAB_JOB_BUDGET_S"])))' "$tool_budget")"
+    fi
+    "$PYTHON" "$MONITOR_SCRIPT" "$LAB_OUT/logs/$LAB_STAGE" "$tool_budget" \
+        "$DC_SHELL" -64bit -f "${3:-$LAB_DIR/flow.tcl}"
     check_logs "$LAB_OUT/logs/$LAB_STAGE" "$REPORT_DIR"
 }
 verify_design() {
@@ -38,7 +42,8 @@ verify_design() {
 
 case "$stage" in
 preflight)
-    command -v "$DC_SHELL" "$VCS" "$VCD2SAIF" "$PYTHON" > logs/tool_paths.txt
+    command -v "$DC_SHELL" "$PYTHON" setsid /usr/bin/time > logs/tool_paths.txt
+    command -v "$VCS" "$VCD2SAIF" >> logs/tool_paths.txt || true
     free -m > reports/host_memory.txt
     "$PYTHON" "$LAB_DIR/check.py" config > reports/preflight_config.json
     run_dc preflight 120
@@ -46,6 +51,43 @@ preflight)
         echo 'GLS_BLOCKED missing STD_MODELS_F. Obtain matching standard-cell timing Verilog from the lab.'
     fi
     echo LAB_PREFLIGHT_COMPLETE
+    ;;
+budgeted)
+    export LAB_SYNTH_WINDOW_S="$("$PYTHON" -c 'import os; value=float(os.environ.get("LAB_SYNTH_WINDOW_S", "5980")); assert value>0; print(min(5980, value))')"
+    budget_exit=0
+    "$PYTHON" "$MONITOR_SCRIPT" "$LAB_OUT/logs/budget" "$LAB_SYNTH_WINDOW_S" \
+        "$PYTHON" "$LAB_DIR/budgeted.py" || budget_exit=$?
+    if [[ -s "$LAB_OUT/summary.json" ]]; then cat "$LAB_OUT/summary.json"; fi
+    exit "$budget_exit"
+    ;;
+synth-hier|synth-channel)
+    test ! -e output/final.ddc
+    export SYNTH_MODE=isolated
+    export SYNTH_SCOPE=six
+    if [[ "$stage" == synth-channel ]]; then
+        export SYNTH_SCOPE=channel TOP=tracking_channel_minimal_ENABLE_FLL1_ENABLE_CARRIER_AID1
+
+    fi
+    test -s "$EXPERIMENT_ROOT/work/stage/inputs.sha256"
+    (cd "$EXPERIMENT_ROOT/work/stage" && sha256sum -c inputs.sha256) > logs/staged_inputs_check.txt
+    "$PYTHON" "$LAB_DIR/check.py" config > output/config.json
+    "$PYTHON" "$LAB_DIR/check.py" inputs > output/inputs.sha256
+    sha256sum "$STD_TT" "$STD_SS" "$STD_FF" > output/libraries.sha256
+    if [[ "$SYNTH_SCOPE" == six ]]; then
+        sha256sum "$PAD_TT" "$PAD_SS" "$PAD_FF" >> output/libraries.sha256
+    fi
+    if [[ -n "${CHANNEL_CHECKPOINT:-}" ]]; then
+        [[ "$SYNTH_SCOPE" == channel ]]
+        sha256sum -c "$CHANNEL_CHECKPOINT/checkpoint.sha256" > logs/checkpoint_check.txt
+        sha256sum -c "$CHANNEL_CHECKPOINT/../inputs.sha256" >> logs/checkpoint_check.txt
+        sha256sum -c "$CHANNEL_CHECKPOINT/../libraries.sha256" >> logs/checkpoint_check.txt
+        "$PYTHON" "$LAB_DIR/check.py" checkpoint "$CHANNEL_CHECKPOINT/../config.json" >> logs/checkpoint_check.txt
+
+    fi
+    printf '%s\n' "$SYNTH_MODE" > output/synthesis_mode.txt
+    run_dc synth "$SYNTH_BUDGET" "$LAB_DIR/hierarchical.tcl"
+    sha256sum output/final.v output/final.ddc output/final.sdc output/config.json > output/design.sha256
+    "$PYTHON" "$LAB_DIR/check.py" synthesis
     ;;
 synth-isolated|synth-full)
     test ! -e output/final.ddc

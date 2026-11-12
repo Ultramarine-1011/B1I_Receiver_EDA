@@ -8,6 +8,10 @@ if {$stage == "preflight"} {
     foreach name [list $env(STD_TT_LIB) $env(STD_SS_LIB) $env(STD_FF_LIB)] {
         if {[sizeof_collection [get_libs $name]] != 1} {error "Standard library name mismatch: $name"}
     }
+    if {[sizeof_collection [get_lib_cells -quiet $env(STD_SS_LIB)/$env(BLOCK_DRIVE_CELL)]] != 1 ||
+        [sizeof_collection [get_lib_pins -quiet $env(STD_SS_LIB)/$env(BLOCK_DRIVE_CELL)/$env(BLOCK_DRIVE_PIN)]] != 1} {
+        error "Internal block driver cell or input pin is missing"
+    }
     if {$env(LOCAL_PROBE) == 0} {
         foreach name [list $env(PAD_TT_LIB) $env(PAD_SS_LIB) $env(PAD_FF_LIB)] {
             foreach cell {PDDW08DGZ_H_G PDUW08DGZ_H_G PVDD1DGZ_H_G PVSS1DGZ_H_G PVDD2POC_H_G} {
@@ -31,10 +35,8 @@ if {$stage == "synth"} {
             if {[string match *acquisition_pcps_blackbox.sv $path]} {
                 if {$env(SYNTH_MODE) == "full"} {continue}
                 set path $env(REPO_ROOT)/synth/m2_isolate/acquisition_pcps_blackbox.sv
-            } elseif {$path == "rtl/tracking_channel_minimal.sv"} {
-                set path $env(EXPERIMENT_ROOT)/work/stage/rtl/tracking_channel_minimal.sv
             } else {
-                set path $rtl/[file tail $path]
+                set path $env(EXPERIMENT_ROOT)/work/stage/$path
             }
             if {![analyze -format sverilog -define SYNTHESIS $path]} {exit 1}
         }

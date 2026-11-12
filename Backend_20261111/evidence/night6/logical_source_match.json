@@ -1,0 +1,27 @@
+{
+  "b1i_period_reduce.sv": {
+    "active_sha256": "afe99e6164cae5691d9094407706c5b98661da99815eda3035850155ba13899e",
+    "tested_sha256": "afe99e6164cae5691d9094407706c5b98661da99815eda3035850155ba13899e",
+    "logical_rtl_match": true
+  },
+  "bds_bb_6ch_core.sv": {
+    "active_sha256": "9d6880f2722366e4eeed057badc428bb5d607decac8821bb072e7685e4d8d4bc",
+    "tested_sha256": "9d6880f2722366e4eeed057badc428bb5d607decac8821bb072e7685e4d8d4bc",
+    "logical_rtl_match": true
+  },
+  "navigation_d1.sv": {
+    "active_sha256": "94c70c51733d062b64ecb893df3c3c552600e10253f88206d69aac1778b83b98",
+    "tested_sha256": "0951873cabc22f1b38354e32bbecb53a56d2e836fc0d26d95ca24b6aa6c327b2",
+    "logical_rtl_match": true
+  },
+  "nh20_sync.sv": {
+    "active_sha256": "03045f51f77f833abe1cc9f751c3f2d68c313006d3638f6607a6907a1fe385c1",
+    "tested_sha256": "03045f51f77f833abe1cc9f751c3f2d68c313006d3638f6607a6907a1fe385c1",
+    "logical_rtl_match": true
+  },
+  "receiver_channel.sv": {
+    "active_sha256": "19bdb3ccec2087fc89db4949e54309f68d1afc2e515df04b2b4f601c86416462",
+    "tested_sha256": "19bdb3ccec2087fc89db4949e54309f68d1afc2e515df04b2b4f601c86416462",
+    "logical_rtl_match": true
+  }
+}

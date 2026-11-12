@@ -1,0 +1,33 @@
+Warning: '-threshold' option is ignored when '-high_fanout' argument is present. (UID-451)
+ 
+****************************************
+Report : net fanout
+        -high_fanout
+Design : tracking_bank6
+Version: O-2018.06-SP1
+Date   : Thu Nov 12 01:05:52 2026
+****************************************
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+
+
+Attributes:
+   dr - drc disabled
+    c - annotated capacitance
+    d - dont_touch
+    i - ideal_net
+    I - ideal_network
+    p - includes pin load
+    r - annotated resistance
+    h - high fanout
+
+Net                 Fanout   Attributes   Capacitance   Driver
+--------------------------------------------------------------------------------
+clk                  14028   dr, h         1001.00      clk
+reset_n               4776   h             1001.00      reset_n
+1

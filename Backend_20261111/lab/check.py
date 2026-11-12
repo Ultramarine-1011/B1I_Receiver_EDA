@@ -50,7 +50,7 @@ if stage == "logs":
         raise ValueError(json.dumps(issues, indent=2))
     print("LOG_CHECK_PASS")
 elif stage == "config":
-    names = "STD_TT STD_SS STD_FF PAD_TT PAD_SS PAD_FF TOP LOCAL_PROBE CLOCK_NS IO_MAX_NS IO_MIN_NS INPUT_TRANSITION_NS OUTPUT_LOAD_PF UNCERTAINTY_NS STD_MODELS_F PAD_MODEL GLS_MODE DUMP_BEGIN_SAMPLE DUMP_END_SAMPLE".split()
+    names = "STD_TT STD_SS STD_FF PAD_TT PAD_SS PAD_FF STD_TT_LIB STD_SS_LIB STD_FF_LIB STD_SS_OC STD_FF_OC BLOCK_DRIVE_CELL BLOCK_DRIVE_PIN TOP LOCAL_PROBE CLOCK_NS IO_MAX_NS IO_MIN_NS INPUT_TRANSITION_NS OUTPUT_LOAD_PF UNCERTAINTY_NS STD_MODELS_F PAD_MODEL GLS_MODE DUMP_BEGIN_SAMPLE DUMP_END_SAMPLE SYNTH_SCOPE".split()
     result = dict((name, os.environ.get(name, "")) for name in names)
     for name in "CLOCK_NS IO_MAX_NS IO_MIN_NS INPUT_TRANSITION_NS OUTPUT_LOAD_PF UNCERTAINTY_NS".split():
         value = decimal.Decimal(result[name])
@@ -70,6 +70,10 @@ elif stage == "inputs":
         paths.extend([os.path.join(repo, "rtl/bds_bb_6ch_pad_top.sv"),
                       os.path.join(repo, "synth/m2_isolate/acquisition_pcps_blackbox.sv"),
                       os.path.join(experiment, "work/stage/rtl/tracking_channel_minimal.sv")])
+        paths.extend(files([os.path.join(experiment, "work/stage/sources"),
+                            os.path.join(experiment, "work/stage/scripts"),
+                            os.path.join(experiment, "work/stage/filelists"),
+                            os.path.join(experiment, "work/stage/rtl")]))
         if os.environ["SYNTH_MODE"] == "full":
             listing = os.environ["PCPS_IMPL_F"]
             paths.append(listing)
@@ -88,6 +92,17 @@ elif stage == "environment":
         if expected != actual:
             raise ValueError("Configuration differs from synthesis: " + name)
     print("SYNTHESIS_CONFIGURATION_MATCH")
+elif stage == "checkpoint":
+    original = json.loads(read(sys.argv[2]))
+    numeric = set("CLOCK_NS IO_MAX_NS IO_MIN_NS INPUT_TRANSITION_NS OUTPUT_LOAD_PF UNCERTAINTY_NS".split())
+    names = "STD_TT STD_SS STD_FF STD_TT_LIB STD_SS_LIB STD_FF_LIB STD_SS_OC STD_FF_OC BLOCK_DRIVE_CELL BLOCK_DRIVE_PIN".split()
+    for name in names + sorted(numeric):
+        expected, actual = original[name], os.environ.get(name, "")
+        if name in numeric:
+            expected, actual = decimal.Decimal(expected), decimal.Decimal(actual)
+        if expected != actual:
+            raise ValueError("Channel checkpoint configuration differs: " + name)
+    print("CHANNEL_CHECKPOINT_CONFIGURATION_MATCH")
 elif stage == "synthesis":
     log = read("logs/synth/run.log")
     if "LAB_SYNTH_EXPORTED" not in log:
@@ -98,7 +113,8 @@ elif stage == "synthesis":
     if re.search(r"UNMAPPED [1-9]", log):
         raise ValueError("Unmapped leaf cells remain")
     boxes = re.findall(r"^BACKEND_BLACKBOX (\S+) (\S+)", log, re.M)
-    isolated = read("output/synthesis_mode.txt").strip() == "isolated" and os.environ["LOCAL_PROBE"] == "0"
+    isolated = (read("output/synthesis_mode.txt").strip() == "isolated" and
+                os.environ["LOCAL_PROBE"] == "0" and os.environ.get("SYNTH_SCOPE") not in ("channel", "bank"))
     if isolated:
         if len(boxes) != 1 or not boxes[0][1].startswith("acquisition_pcps"):
             raise ValueError("Isolation must contain exactly the intended PCPS black box")
